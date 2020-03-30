@@ -1,0 +1,88 @@
+﻿1.  How would this be built? Pro suggests that the exit velocity of a space shuttle is 300 mph, or roughly 133 m/s. If we assume a constant acceleration of 1 G (9.8 m/s^2), then the track length will need to be 864 m long (Distance squared divided by 2A). The Chuo Shinkansen line costs 51 billion dollars for 286 km of track. This equates to 178 million dollars per kilometer of track. This is not a maglev bridge, which the final StarTram design needs to be, but instead a maglev track on the ground, which would be way cheaper than building a bridge. 178 million dollars times 864/1000 is 153.8 million dollars. That is the cost if you want to build a flat maglev track carrying 60 tons of train, on flat ground without the need for bridges. Of course, this cost would skyrocket up to build a heavy duty maglev track capable of supporting 605 tons of highly explosive rockets up Mt. Elbert. The magnets would also have to be 100 times stronger to support the weight of the space shuttle. Putting that aside, those strong magnets would also affect all the control systems and computers that allow the shuttle to go into low earth orbit, and the payload cannot be metal or else it would get affected by the super strong magnet that does not exist yet. 
+2. There are also many safety issues that we need to consider. What happens if the engines fail and don’t start past the point of no return? It glides (read: tumbles) down into a national park with 478 tons of fuel. An ecological disaster would be an understatement. What happens if there is an earthquake? Traditional earthquake mechanisms won’t work, as this elevated track stretches almost half a kilometer up the side of a mountain! 
+3. To achieve low earth orbit, we would need 34000 kph of delta-V. A maglev track releasing a space shuttle at a measly 480 kph (300 mph) won’t do anything to make rockets lighter or cheaper. However, it will probably make launching rockets way more complicated than it should be. 
+
+
+
+
+Refutations:
+1. “Your acceleration calculations are incorrect.” 
+Oh yes. I didn’t realized it until I posted it. Sorry :). I will use your calculations for the debate now.
+
+
+
+
+      2. “supported a 50-ton train and 20 tons of cargo.”
+The 1976 rail could support a 50-ton train, the weight we are talking about here is 2200 tons[1]of metal and highly explosive fuel. I will talk about the difficulties of building even a magnet that can support that weight, but first let me talk about the additional cost of the bridge. 
+
+
+Let’s take the golden gate bridge as an example. It can hold a moving load of up to 4000 pounds per foot[2]. The Falcon 9 (latest - generation rocket) weighs 1 210 457 pounds fully fueled,[3] and is 230 ft tall. If we do the calculations, we then realize that the maximum weight of an object 230 ft long is 920 000, which means we cannot transport the Falcon 9 using the Golden Gate Bridge. 
+
+
+For this to be successful, we would need a very strong bridge that doesn’t even exist yet, make it resistant to harsh weather and earthquakes, and build it up a mountainside! Pro’s cost estimates are unreasonable, one because the technology doesn’t even exist yet, and 2 because building a maglev track capable of supporting 50 tons is not the same as building a maglev bridge capable of supporting a 500 ton rocket. 
+
+
+      3. Exiting the maglev track at 480 kph (300 mph) at 23000 ft (7 km) 
+According to the Falcon 9 launch video, the rocket is already travelling at 1070 kph at 23000 ft. If we release a rocket travelling at just 480 kph by that attitude, it would seriously need to have a lot of acceleration and would require more energy to orbit. If it cannot speed up fast enough, the rocket will just go on a suborbital trajectory back to Earth, a few thousand miles away from where it had originally lifted off. For this system to be viable, we would need the rocket to be exiting the maglev track at way higher speeds, which is very hard to engineer, and the track would have to be way longer.
+
+
+     4. “ if something did fall to the ground it shouldn’t hit a highly populated area”
+ I did not talk about it destroying a city (however, there is one nearby: Salt Lake City), but it will be an ecological disaster, as the rocket contains a ton of fuel, and the crash area contains a ton of trees and wood. We all know what happens next.
+
+
+  5. “Obviously, we would need to monitor seismic activity”
+Yes. Monitor it and then what? Do we cancel the launch and rebuild all the maglev systems again after they have been destroyed? 
+
+
+    6. “Again I don’t need 34,000 kph as I’m not launching at sea level.”
+
+
+That is the universal delta-V needed to get into low earth orbit. You say that building this insanely expensive infrastructure will “give it a bit more oomph,” but the “oomph” it provides (480 kph) is not enough to justify the cost of building the infrastructure. If we subtract the delta-V from the maglev track, it gives us 33 520 kph left of delta-V needed to get to orbit. All of that comes from the fuel. It is easier to simply make the rocket 5% bigger than to build a maglev system with technology that doesn’t exist yet.
+
+
+    7. Pro didn’t refute my argument about how the super strong magnets required to lift the rocket will affect the internal computers of the rockets. 
+   Obviously, we would need super strong magnets that would interfere with the metal payload, and the computers allowing the rocket to reach orbit. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*  “If I cut fuel costs by 70%”
+   * You CANNOT cut fuel costs by 70%! You would need 34 000 kph of delta-V, or change in speed, to reach orbit. You are assuming the maglev track can accelerate the rocket 70% of the speed needed to get to orbit, which is 34 000 kph * 70% = 23 800 kph. Therefore, if you want to decrease fuel costs, you would need to launch the rocket from the maglev tube at 23 800 kph, and as you said “1070 kph is not realistic for an open-air maglev system,” I think 23 800 kph is also not realistic.
+* “I am not supporting this with a bridge, I’m supporting it with a mountain”
+   * But how? I hope you realize a mountain is not a straight 30 degree incline towards the top; but it is rather rugged. 
+   * http://checkconnect.net/blog/wp-content/uploads/2014/07/topo_elbert.jpg
+   * From the picture above, the only possible route up is the blue line. Now, how would you put a maglev track on that rugged mountainside? There is a reason why we need to build a bridge to support this massive vehicle, and that is to provide it with a straight incline towards the peak of the mountain. When you have something over 1 million tons travelling at 300mph, you wouldn’t want a track that looked like this (https://i.stack.imgur.com/SrltR.png). Therefore, the track needs to be built on a low bridge that compensates for the bumps and hills in the mountain, which increases the cost even more. 
+* “Also, It should be noted that the Falcon 9 weighs 480 tons at liftoff”
+   * It seems we are using different sources here. The official SpaceX website shows that Falcon 9 weighs 1,207,920 pounds (http://www.spacex.com/falcon9). 
+* “We cancel it”
+   * WHAT? Cancel a 62 million dollar launch excluding expensive payload? Are you serious! 
+* “it won’t destroy the track”
+   * Yep. Totally. Over 1 million pounds of highly explosive fuel and metal travelling at over 300 mph will not destroy the track. 
+
+
+
+
+________________
+[1] http://coolcosmos.ipac.caltech.edu/ask/268-How-much-did-the-Space-Shuttle-weigh-
+[2] http://goldengatebridge.org/research/factsGGBDesign.php#deflection
+[3] https://en.wikipedia.org/wiki/Falcon_9

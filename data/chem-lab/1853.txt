@@ -1,0 +1,144 @@
+﻿Experiment 1: 
+Qualitative Observations
+	Before
+	During
+	After
+	Copper chloride solution
+	Blue, transparent solution
+Room temperature
+Weighs similar to water
+
+
+	Heats up vigorously
+
+
+	Changes to red color
+Less transparent, solids in suspension
+	Aluminum foil
+	Not very heavy
+	Forms a brown solid
+	
+
+	Copper precipitate
+	
+
+	Solid sinks to the bottom of the solution
+	The brown solid seems heavier than the original aluminum foil
+	
+
+
+
+Quantitative Observations
+	Before
+	During
+	After
+	Copper chloride solution
+	0.135 Absorbance at 480 nm
+
+
+25 °C
+
+
+	Heats up vigorously
+
+
+	Changes to red color
+Less transparent, solids in suspension
+	Aluminum foil
+	Not very heavy
+	Forms a brown solid
+	
+
+	Copper precipitate
+	
+
+	Solid sinks to the bottom of the solution
+	The brown solid seems heavier than the original aluminum foil
+	
+
+After 3 days, before stirring:
+* Red
+* Solid
+* Near the base
+* Semi-clear water
+* Dust like
+* Water no longer blue
+* Sediment coming out of water
+
+
+After 3 days, after stirring:
+* Consistent, deeper red colour
+* Milky
+* Some particles undissolved on the bottom
+* Darker after stirring
+* Concentration contour lines from different light refractive indexes of different concentrations. 
+
+
+
+
+Quantitative (After 3 days and after stirring): Temperature, the existence of Cu2+, mass, change in density
+
+
+
+
+Procedure for measuring temperature quantitatively
+1. Record the temperature of the starting blue solution of copper chloride using a thermometer. Make sure that the tip of the thermometer is in the solution rather than touching the walls of the beaker, as this may change the recorded temperature significantly.
+2. Submerge a known amount of aluminum foil into the solution, watching the temperature rise in the thermometer. 
+3. Watch the thermometer carefully as the reaction continues vigorously. 
+4. Watch the thermometer until the temperature begins to drop, again making sure the tip is in the solution and not touching the walls of the beaker.
+5. Record the maximum temperature reached by the reaction.
+
+
+Procedure for measuring absorbance
+1. Pour a sample of the starting copper chloride solution into a beaker.
+2. Pour the solution from the beaker into the cuvette, making sure to only touch the frosted portions of the glass.
+3. Record the absorbance of the starting solution.
+4. Run the reaction using the steps outlined the previous procedure. 
+5. With the resulting mixture, pour into a gravity filtration setup and let the solid brown copper dry.
+6. The filtrate should be poured into a cuvette and the resulting absorbance be measured
+
+
+Procedure for measuring mass
+1. Weigh the filtered solid+filter paper from the procedure for measuring absorbance using an analytical balance.
+2. Subtract the above mass by the mass of the filter paper (determined from an analytical balance), giving us the mass of the brown solid. 
+
+
+
+
+Experiment 2
+
+
+Before:
+Pure water, no discolouration
+Phenolphthalein mixes easily
+Calcium is in chunks
+
+
+After:
+Temperature rises rapidly (condensation on beaker due to evaporation, feels hot to touch)
+Pink colour of solution
+Calcium dissolves into water
+White solid precipitate near the bottom of the beaker
+Hydrogen gas is released
+
+
+
+
+Quantitative: absorbance, mass, temperature, gas evolved
+Procedure for running reaction 2
+1. Measure 100 mL of water in a 150 mL beaker. 
+2. Add ~3 drops of phenolphthalein using the medicine dropper into the 150 mL beaker.
+3. Measure out around 1 g of solid calcium, noting the mass of the calcium solid.
+4. Add the weighed solid to the 150 ml beaker
+
+
+Procedure for measuring temperature, measuring mass of filtered solid, and absorbance
+        Use the same procedure as reaction 1, except with different reactants.
+
+
+Procedure for measuring volume of gas evolved
+1. Fill the eudiometer full with tap water.
+2. Cover the open end of the eudiometer with your finger, and invert the tube so the open end is submerged into the 150 mL water beaker.
+3. Clamp the eudiometer with a burette clamp on a ring stand.
+4. Cap the 150 mL Erlenmeyer with the provided cork cap and submerge the end of the attached hose under the eudiometer tube. Any gas evolved from the reaction should pass through this tube and up the eudiometer, displacing water.
+5. Wait until the reaction is finished (bubbling stops, mixture cools down) and record the total volume of gas shown on the eudiometer.

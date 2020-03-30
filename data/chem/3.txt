@@ -1,0 +1,5 @@
+﻿0) take genchem
+1) read atkins, take ap chem, do all past usnco local
+2) take chemwoot, read klein, do all past usnco nationals, start your home lab
+3) read clayden, skoog, housecroft, do all past prep problems and ichos
+4) read grossman, voet, engel and atkins pchem, do all mendeleev + other international problems
