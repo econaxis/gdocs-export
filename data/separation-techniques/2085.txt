@@ -1,0 +1,58 @@
+﻿Extraction is separation based on the different polarities of different compounds. Polar compounds will dissolve in polar solvents, and nonpolar compounds dissolve in nonpolar solvents. Thus, we can separate two compounds using their different solubilities.
+	Magnetic separation uses the different magnetic properties of components of a mixture to separate them. Ferromagnetic materials are attracted strongly to a magnetic field, whereas others do not respond at all. This method separates components based on their attraction/response to a magnetic field.
+	Reverse osmosis uses an external applied pressure to push unfiltered water through a semipermeable membrane, against the natural osmotic pressure. As only water can pass through the semipermeable membrane, ions and unwanted components are left behind.
+	Sedimentation refers to suspended particles’ tendency to fall out of liquid. If gravity applies a force large enough to overcome drag and buoyancy, then the suspended solid will sink out of solution.
+	Chromatography distinguishes components with different retentions to the mobile phase. A component that “attaches” stronger to the mobile phase will travel much farther along the stationary phase than a component that attaches “weakly” to the mobile phase. 
+	Filtration separates components based on their ability to pass through a filter. Liquids can pass easily through the filter, but solids and suspensions are too large to pass through the filter. While reverse osmosis separates everything, even ions, filtration only removes solids and suspensions, not ions.
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Density separation separates components based on their different densities. Usually, the mixture is submerged in a liquid of appropriate density in a separatory funnel. Denser components will be near the bottom whereas lighter components will be near the top. 
+	Distillation separates liquid mixtures by their volatility, or vapor pressures. The vapour phase of the mixture will be richer in the lowest boiling point component, which can be condensed into a separate beaker. Further distillations will result in a richer and richer mixture of the most volatile component. 
+	Centrifugation uses the different inertial forces of different components in a mixture to separate them. The one with more inertia (more mass) will fall outwards as the centrifuge rotates at a high frequency. Thus, heavier components will be at the end of the centrifuge tube while lighter components will be near the opening.
+	Froth floatation uses chemicals that adhere to specific components in a mixture and make it buoyant in the solvent. Components that do not adhere to the chemicals remain in the solvent and become separated from those who have adhered to the chemical.
+	Electrophoresis is a form of chromatography in which components are separated based on their attraction to a constant applied electric field. Size, polarity, and charge of the components are all factors in the speed that they move through the stationary phase. Different speeds of movement translate to separation of the components.
+	Recrystallization uses the lowered solubility of any solute in a given solvent when cooled. When a heated, saturated solution is cooled, the solutes will crystallize out of solution because of the decreased solubility. Crystallization of solutes will also remove any impurities in the solvent, thus leaving behind the solvent and crystals. The crystals can be filtered using gravity filtration.
