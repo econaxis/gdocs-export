@@ -1,2 +1,3 @@
-data/
+data/*
 credentials.json
+>>>>>>> safe
