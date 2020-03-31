@@ -49,22 +49,31 @@ def main():
 
 
 
-	for (index, f) in enumerate(cols):
+	for (index, f) in enumerate(cols[0:1]):
 		#Iterate through files
-		prevMap = [dates_map[dates[0]], 0]
-
+		prevMap = [dates_map[dates[0]], 0,0]
+		processed.append(f)
 
 		print("D: %d  out of %d"%(index, len(cols)))
 
 		trimmedDates = list(csvdata[f].dropna().index)
 		trimmedDates.append(dates[-1])
-
+		pp.pprint(trimmedDates)
 		for (dat_ind, d) in enumerate(trimmedDates):
 			#Iterate through dates(long)
-			prevMap[1] = max(prevMap[1], csvdata.loc[d,f])
+			changedInIter = False
+
+			if(csvdata.loc[d, f]>prevMap[1]):
+				prevMap[1] = csvdata.loc[d, f]
+				changedInIter = True
+			
 			if(dates_map[d]>prevMap[0]):
 				#If new bucket is reached, then enter max word into cell 
-			
+
+				if (changedInIter == False and d != dates[-1]):
+					prevMap[1] = prevMap[2]
+					continue
+
 				maxWords.loc[timeBuckets[prevMap[0]],f] = prevMap[1]
 				prevD = prevMap[0]
 				curD = dates_map[d]
@@ -79,16 +88,20 @@ def main():
 
 				#Reset prevMap
 				prevMap[0] = dates_map[d]
-
+				prevMap[2] = prevMap[1]
+				prevMap[1] = -1
 
 
 	pickle.dump(maxWords, open('maxwords.pickle', 'wb'))
 	pp.pprint(maxWords)
+	pp.pprint(processed)
 
 	with open('maxwords.pickle', 'wb') as mw:
 		pickle.dump(maxWords, mw)
 	append_df_to_excel('text.xlsx',maxWords, sheet_name = "maxWords", truncate_sheet=True)
 
+	pd.set_option('display.max_colwidth', 10)
+	maxWords.to_html('i.html')
 
 def mwHighlighter(x):
 	#Applies styling to dataframe maxWords
