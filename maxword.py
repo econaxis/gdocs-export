@@ -24,7 +24,6 @@ def main():
 	minDate = dates[0].to_pydatetime()
 	maxDate= dates[-1].to_pydatetime()
 
-
 	increment = (maxDate-minDate)/BINS
 	timeBuckets = [i*increment+minDate for i in list(range(BINS+1))]
 
@@ -33,7 +32,7 @@ def main():
 	for d in dates:
 		if(d>=timeBuckets[currentInd]):
 			#Move on to next bucket
-			while(d>timeBuckets[currentInd]):
+			while(d>timeBuckets[currentInd] and currentInd +1< len(timeBuckets)):
 				currentInd+=1
 			dates_map[d] = currentInd
 		else:
@@ -49,16 +48,16 @@ def main():
 
 
 
-	for (index, f) in enumerate(cols[0:1]):
+	for (index, f) in enumerate(cols[0:]):
 		#Iterate through files
-		prevMap = [dates_map[dates[0]], 0,0]
+		prevMap = [dates_map[dates[0]], -1, -1]
 		processed.append(f)
 
 		print("D: %d  out of %d"%(index, len(cols)))
 
 		trimmedDates = list(csvdata[f].dropna().index)
 		trimmedDates.append(dates[-1])
-		pp.pprint(trimmedDates)
+
 		for (dat_ind, d) in enumerate(trimmedDates):
 			#Iterate through dates(long)
 			changedInIter = False
@@ -70,16 +69,21 @@ def main():
 			if(dates_map[d]>prevMap[0]):
 				#If new bucket is reached, then enter max word into cell 
 
-				if (changedInIter == False and d != dates[-1]):
-					prevMap[1] = prevMap[2]
-					continue
+
+				if (changedInIter == False and dat_ind>0):
+					prevMap[1] = csvdata.loc[trimmedDates[dat_ind-1], f]
+
+					
 
 				maxWords.loc[timeBuckets[prevMap[0]],f] = prevMap[1]
 				prevD = prevMap[0]
 				curD = dates_map[d]
-				maxWords.loc["Highest Word Count", f] = max(
-					maxWords.loc["Highest Word Count", f], prevMap[1])
 
+				if(maxWords.loc["Highest Word Count", f] < prevMap[1]
+					or math.isnan(maxWords.loc["Highest Word Count", f])):
+					
+					maxWords.loc["Highest Word Count", f] = prevMap[1]
+				
 
 			#	Function for filling in cells between
 				for betweenCells in timeBuckets[prevD:curD]:
@@ -90,11 +94,14 @@ def main():
 				prevMap[0] = dates_map[d]
 				prevMap[2] = prevMap[1]
 				prevMap[1] = -1
+				if(d == dates[-1]):
+					#Last date reached, special case
+					maxWords.loc[timeBuckets[prevMap[0]], f] =csvdata.loc[trimmedDates[dat_ind-1], f]
 
 
 	pickle.dump(maxWords, open('maxwords.pickle', 'wb'))
 	pp.pprint(maxWords)
-	pp.pprint(processed)
+
 
 	with open('maxwords.pickle', 'wb') as mw:
 		pickle.dump(maxWords, mw)
@@ -102,6 +109,7 @@ def main():
 
 	pd.set_option('display.max_colwidth', 10)
 	maxWords.to_html('i.html')
+	csvdata.to_html('csv.html')
 
 def mwHighlighter(x):
 	#Applies styling to dataframe maxWords
