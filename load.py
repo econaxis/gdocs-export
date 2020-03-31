@@ -131,7 +131,7 @@ def main():
         print("%d out of %d"%(counter,len(files)))
 
         #TOBE FIXED
-        fileName = f["id"][1:4]
+        fileName = f["name"][0:6]
 
         csvdata[fileName]={}
 
