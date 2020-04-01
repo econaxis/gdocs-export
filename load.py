@@ -28,9 +28,12 @@ SCOPES = ['https://www.googleapis.com/auth/drive.metadata.readonly', 'https://ww
 ITEMPERREQ = 1000
 
 # The ID of a sample document.
-DOCUMENT_ID = '0B4Fujvv5MfqbNGs3NjV6RndYOVk'
+DOCUMENT_ID = '1IF9reVGWQ1fWLLL4x1cUdaHkNDOkm5aJ'
+MAX_FILES = 250
 DIR = 'data/'
 
+
+#Explores directory structure
 def listRevisions (id, drive, folders, files, nextToken = None, callingName = "", filesParents = None):
     print("list %s"%id)
     q = "'" + id + "' in parents";
@@ -99,6 +102,8 @@ def main():
     if(len(files)==0):    
         listRevisions(DOCUMENT_ID, dr, folders, files, callingName = "",filesParents = filesParents)
         while(folders):
+            if(len(files)>MAX_FILES):
+                break;
             newestFolder = folders.pop()
             print("Exploring folder %s"%newestFolder[1])
             listRevisions(newestFolder[0], dr, folders, files, 
@@ -108,8 +113,8 @@ def main():
         counter = 0
         for a in files:
             counter+=1
-            print("Processing %s\nid %s"%(filesParents[a], files[a]["id"]))
-            print("%d out of %d"%(counter, len(files)))
+            print("Processing %s"%(filesParents[a]))
+            print("%d out of %d\n"%(counter, len(files)))
             cur_id = files[a]["id"]
             revision = dr2.revisions().list(fileId = cur_id).execute().get("items", [])
             files[a]["revisions"]=revision
@@ -126,31 +131,35 @@ def main():
     maxDate = datetime(2, 12, 30, 23, 59, 59, 1000)
     counter =0
 
-    if os.path.exists('csvdata.pickle'):
+
+    #Should not run
+    if (os.path.exists('csvdata.pickle') and False):
         with open('csvdata.pickle', 'rb') as cv:
             csvdata = pickle.load(cv)
+            
+    #Should run
     else:
         for f in files:
             f=files[f]
 
-            a0=True
-            while(a0):
+            API_WAIT=True
+            while(API_WAIT):
                 try:
-                    actresponse = None
-                    actresponse=act.activity().query(body={
+                    drActivityResult = None
+                    drActivityResult=act.activity().query(body={
                         'itemName' : "items/"+f["id"], 'pageSize' : 1000,
                      'filter' : "detail.action_detail_case: EDIT"
                      }).execute()
-                    if(actresponse!=None):
-                        a0=False
+                    if(drActivityResult!=None):
+                        API_WAIT=False
                 except:
-                    print("http error")
-                    time.sleep(3)
+                    print("Google Docs API Limit Reached, Waiting...")
+                    time.sleep(2)
 
 
             fActivities = []
 
-            for a in actresponse.get("activities", []):
+            for a in drActivityResult.get("activities", []):
                 fActivities.append(a.get("timestamp"))
 
             counter+=1
@@ -217,10 +226,8 @@ def main():
 
 
 
-    csvdata_df.to_csv('data.csv')
-    print(1)
-    with open("csvdata_df.pickle", "wb") as cv:
-        pickle.dump(csvdata_df, cv)
+    csvdata_df.to_csv('csvdata.csv')
+    csvdata_df.to_pickle('csvdata.pickle')
 
 
 
