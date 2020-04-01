@@ -4,6 +4,7 @@ import pickle
 import tkinter
 import json
 from slugify import slugify
+import time
 import math
 from collections import OrderedDict
 import os.path
@@ -21,15 +22,16 @@ import pandas as pd
 from pathlib import Path
 pp = pprint.PrettyPrinter(indent=4);
 BINS=400
+readPermissions = False
 # If modifying these scopes, delete the file token.pickle.
-SCOPES = ['https://www.googleapis.com/auth/documents.readonly', 'https://www.googleapis.com/auth/drive.readonly', 'https://www.googleapis.com/auth/drive.activity.readonly']
+SCOPES = ['https://www.googleapis.com/auth/drive.metadata.readonly', 'https://www.googleapis.com/auth/drive.activity.readonly']
 ITEMPERREQ = 1000
 
 # The ID of a sample document.
 DOCUMENT_ID = '0B4Fujvv5MfqbNGs3NjV6RndYOVk'
 DIR = 'data/'
 
-def listFiles (id, drive, folders, files, nextToken = None, callingName = "", filesParents = None):
+def listRevisions (id, drive, folders, files, nextToken = None, callingName = "", filesParents = None):
     print("list %s"%id)
     q = "'" + id + "' in parents";
     if nextToken == None:
@@ -51,7 +53,8 @@ def listFiles (id, drive, folders, files, nextToken = None, callingName = "", fi
     print("token %s"%response.get('nextPageToken'))
     if(response.get('nextPageToken')!=("" or None)):
         print("next token %s"%response.get('nextPageToken'))
-        listFiles(id, drive, folders, files, response.get('nextPageToken'))
+        listRevisions(id, drive, folders, files, response.get('nextPageToken'))
+
 
 def main():
     """Shows basic usage of the Docs API.
@@ -84,7 +87,7 @@ def main():
 
     dr = build('drive', 'v3', credentials=creds)
     dr2 = build('drive', 'v2', credentials = creds)
-
+    act = build('driveactivity', 'v2', credentials=creds)
 
     counter=0
     folders = []
@@ -94,15 +97,13 @@ def main():
         with open('files.pickle', 'rb') as _files:
             files = pickle.load(_files)
     if(len(files)==0):    
-        listFiles(DOCUMENT_ID, dr, folders, files, callingName = "",filesParents = filesParents)
+        listRevisions(DOCUMENT_ID, dr, folders, files, callingName = "",filesParents = filesParents)
         while(folders):
             newestFolder = folders.pop()
             print("Exploring folder %s"%newestFolder[1])
-            listFiles(newestFolder[0], dr, folders, files, 
+            listRevisions(newestFolder[0], dr, folders, files, 
                 callingName=newestFolder[1], filesParents = filesParents)
 
-        with open('files.pickle', 'wb') as saved_file:
-            pickle.dump(files, saved_file);
         #Get revision list
         counter = 0
         for a in files:
@@ -124,136 +125,116 @@ def main():
     minDate = datetime(9998, 12, 30, 23, 59, 59, 1000)
     maxDate = datetime(2, 12, 30, 23, 59, 59, 1000)
     counter =0
-    for f in files:
 
-        f=files[f]
-        counter+=1
-        print("%d out of %d"%(counter,len(files)))
+    if os.path.exists('csvdata.pickle'):
+        with open('csvdata.pickle', 'rb') as cv:
+            csvdata = pickle.load(cv)
+    else:
+        for f in files:
+            f=files[f]
 
-        #TOBE FIXED
-        fileName = f["name"]
+            a0=True
+            while(a0):
+                try:
+                    actresponse = None
+                    actresponse=act.activity().query(body={
+                        'itemName' : "items/"+f["id"], 'pageSize' : 1000,
+                     'filter' : "detail.action_detail_case: EDIT"
+                     }).execute()
+                    if(actresponse!=None):
+                        a0=False
+                except:
+                    print("http error")
+                    time.sleep(3)
 
-        csvdata[fileName]={}
+
+            fActivities = []
+
+            for a in actresponse.get("activities", []):
+                fActivities.append(a.get("timestamp"))
+
+            counter+=1
+            print("%d out of %d"%(counter,len(files)))
+
+            #TOBE FIXED
+            fileName = f["name"]
+
+            csvdata[fileName]={}
 
 
-        dir_name =  DIR+slugify(f["name"])
-        print(dir_name)
-        p = Path(dir_name) 
+            dir_name =  DIR+slugify(f["name"])
+            print(dir_name)
+            p = Path(dir_name) 
 
-        p.mkdir(exist_ok=True)
-        for r in f["revisions"]:
-            fname = dir_name+"/"+slugify(r["id"])+".txt"
+            p.mkdir(exist_ok=True)
 
-            text=0
-            if(not os.path.exists(fname)):
-                response = requests.get(r["exportLinks"]["text/plain"], headers=header).content
-                open(fname, 'wb').write(response)
-                text=response.decode('utf-8-sig')
-            else:
-                text = open(fname, "rb").read()
-                text = text.decode('utf-8-sig')
-            text = str(text)
-            flen = text.count(' ')
-            moddate = iso8601.parse_date(r["modifiedDate"]).replace(tzinfo=None)
+            for r in fActivities:
+                moddate = iso8601.parse_date(r).replace(tzinfo=None) - timedelta(hours = 7)
+                csvdata[fileName][moddate] = 2
 
-            #TIME ZONE CONVERSION
-            moddate -= timedelta(hours = 7)
-            csvdata[fileName][moddate]=flen
+            for r in f["revisions"]:
+                
+                text=0
+                if(readPermissions):
+                    fname = dir_name+"/"+slugify(r["id"])+".txt"
+                    if(not os.path.exists(fname)):
+                        response = requests.get(r["exportLinks"]["text/plain"], headers=header).content
+                        open(fname, 'wb').write(response)
+                        text=response.decode('utf-8-sig')
+                    else:
+                        text = open(fname, "rb").read()
+                        text = text.decode('utf-8-sig')
+                    text= str(text)
+                else: 
+                    text = "Permission denied"
+                flen = text.count(' ')
+                moddate = iso8601.parse_date(r["modifiedDate"]).replace(tzinfo=None)
 
-            minDate = min(minDate, moddate)
-            maxDate = max(maxDate, moddate)
+                #TIME ZONE CONVERSION
+                moddate -= timedelta(hours = 7)
+                csvdata[fileName][moddate]=flen
+
+                minDate = min(minDate, moddate)
+                maxDate = max(maxDate, moddate)
 
 
     #Sort dates per file
-    csvdata_ = {}
-    for a in csvdata:
-        csvdata_[a] = OrderedDict()
-        for key in sorted(csvdata[a]):
-            csvdata_[a][key] = csvdata[a][key]
-
-
+    print(1)
     csvdata_df = pd.DataFrame(csvdata)
     csvdata_df["Last Mod"] = 0
     for c in csvdata_df.columns:
         lastModDate=csvdata_df[c].dropna().index.tolist()[-1]
         csvdata_df.loc["Last Mod",c] = lastModDate
+    print(1)
 
     csvdata_df.sort_values("Last Mod", axis = 1, inplace=True)
-    csvdata_df.drop("Last Mod", axis = 0, inplace = True)
-    print(csvdata_df)
+    print(1)
 
     #Sort dates    
-    csvdata_df.sort_index(inplace = True)
-    print(csvdata_df)
+    csvdata_df=csvdata_df.drop("Last Mod", axis = 0).sort_index().append(csvdata_df.loc["Last Mod"])
+    print(1)
     #Sort files according to last modified
 
 
 
-    #pd.DataFrame(csvdata).T.to_excel('data.xlsx', sheet_name="csvdata")
-    with open("csvdata.pickle", "wb") as cv:
-        pickle.dump(csvdata, cv)
+    csvdata_df.to_csv('data.csv')
+    print(1)
+    with open("csvdata_df.pickle", "wb") as cv:
+        pickle.dump(csvdata_df, cv)
+
+
+
+
+#    append_df_to_excel('text.xlsx', csvdata_df, 
+ #       sheet_name = "1Total data", truncate_sheet=True)
+  #  pp.pprint(csvdata_df)
 
 
 
 
 
-    '''
-    ##Generate linspace Time
-    inc = (maxDate-minDate)/BINS
-    times = {}
-    ##Add word count
-    for f in csvdata:
-        prevLen = 0
-        for d in csvdata[f].keys():
-            index_d = math.floor((d-minDate)/inc)*inc + minDate
-            times.setdefault(index_d, {})
-            times[index_d][f] = csvdata[f][d] - prevLen
-           # times[index_d][f] = csvdata[f][d]
-            prevLen = csvdata[f][d]
-
-    stimes_ = OrderedDict()
-
-    for key in sorted(times):
-        stimes_[key] = times[key]
-    times=stimes_
-
-    df = pd.DataFrame(times)
-    df.reindex(columns=df.columns[::-1])
-    col = df.columns
-
-    df.loc["sum of changes"]=0
-    df.loc["total word count"] = 0
-    for c in range(len(df.columns)):
-        df.loc["sum of changes"].iloc[c] = df.iloc[:,c].sum()
-        if(c>0):
-            df.loc["total word count"].iloc[c] = df.loc["total word count"].iloc[c-1] \
-            +df.loc["sum of changes"].iloc[c]
-        else:
-            df.loc["total word count"].iloc[c] = df.loc["sum of changes"].iloc[c]
-
-    append_df_to_excel('text.xlsx', df, sheet_name="Change Data")
-    pp.pprint(df)
-    with open("dataframe.pickle", 'wb') as t:
-        pickle.dump(df, t)
-    print(maxDate, minDate, inc)
-
-    with open("times.pickle", "wb") as t:
-        pickle.dump(times, t)
-    df.to_html('i.html')
-'''
-
-
-
-    append_df_to_excel('text.xlsx', csvdata_df, 
-        sheet_name = "1Total data", truncate_sheet=True)
-    pp.pprint(csvdata_df)
-
-
-
-
-
-    with open("csvdata.pickle", "wb") as cv:
-        pickle.dump(csvdata, cv)
+#    with open("csvdata.pickle", "wb") as cv:
+#        pickle.dump(csvdata, cv)
 
     
 
