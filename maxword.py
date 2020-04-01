@@ -22,7 +22,7 @@ EXCEL_PATH = 'text.xlsx'
 BINS = 400
 
 def main():
-	csvdata = pd.read_excel(EXCEL_PATH).drop("Unnamed: 0",1).set_index("index")
+	csvdata = pd.read_excel(EXCEL_PATH).set_index("Unnamed: 0")
 	cols = list(csvdata.columns)
 	dates = list(csvdata.index)
 	minDate = dates[0].to_pydatetime()
@@ -101,36 +101,25 @@ def main():
 				#if(d == dates[-1]):
 					#Last date reached, special case
 					#maxWords.loc[timeBuckets[prevMap[0]], f] =csvdata.loc[trimmedDates[dat_ind-1], f]
-	idx = pd.IndexSlice
+
 
 	pp.pprint(maxWords)
 	maxWords = maxWords.iloc[:, 0:DBG_LIMIT]
 
 
-	subset = maxWords.index.difference(["Highest Word Count"])
-	mwStyler = maxWords.style \
-	.apply(mwHighlighter, axis=0, subset = idx[subset, :])
-	print("bet")
-	mwStyler = mwStyler \
-	.apply(mwHighlighter,axis = 1,subset=idx["Highest Word Count", :])\
- 	.set_precision(2)\
-	.set_table_styles([{
-		'selector': 'table, th, td',
-		'props': [
-			("table-layout", "fixed"),
-			("border-collapse", "collapse"),
-			("overflow", "hidden"),
-			("max-width", "3px"),
-			("max-height", "4px"),
-			("font-size", "3px")
-		]
-	}])
+
+	csvdata.loc["Highest Word Count"] = maxWords.loc["Highest Word Count"]
 
 
 
 
 
-	open('style.html', 'w').write(mwStyler.render())
+	#open('style.html', 'w').write(applyStyles(maxWords).render())
+
+
+	pickle.dump(maxWords, open('maxwords.pickle', 'wb'))
+
+	#open('csvdata.html', 'w').write(applyStyles(csvdata).render())
 
 #	pickle.dump(maxWords, open('maxwords.pickle', 'wb'))
 #	pp.pprint(maxWords)
@@ -146,6 +135,31 @@ def main():
 #	maxWords.to_html('i.html')
 
 
+def applyStyles(df):
+	idx = pd.IndexSlice
+	subset = df.index.difference(["Highest Word Count"])
+	dfStyler = df.style \
+	.apply(mwHighlighter, axis=0, subset = idx[subset, :])
+
+	dfStyler = dfStyler \
+	.apply(mwHighlighter,axis = 1,subset=idx["Highest Word Count", :])\
+ 	.set_precision(0)\
+	.set_table_styles([{
+		'selector': 'table, th, td',
+		'props': [
+			#("table-layout", "fixed"),
+			("border-collapse", "collapse"),
+			("overflow", "hidden"),
+			("max-width", "3px"),
+		#	("max-height", "4px"),
+			("font-size", "3px")
+		]
+	}])
+
+	return dfStyler
+
+
+
 def mwHighlighter(x):
 	#Applies styling to dataframe maxWords
 	numColors = 300
@@ -159,7 +173,7 @@ def mwHighlighter(x):
 
 	
 	st = x.copy()
-	st[:] = 0
+	st[:] = ""
 	words = sorted(list(x.dropna()))
 	i0 = bisect.bisect_right(words, 0)
 	del words[:i0]
@@ -183,9 +197,8 @@ def mwHighlighter(x):
 
 
 	for (index,val) in enumerate(x):
-		
 		if(math.isnan(val) or val==0):
-			st[index] = 'color: black; opacity: 0.1'
+			st[index] = 'color: black;opacity: 0.1'
 			continue
 
 		if(sameColorMode):
