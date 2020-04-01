@@ -1,3 +1,4 @@
+
 from __future__ import print_function
 import pickle
 import tkinter
@@ -10,7 +11,7 @@ from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 import pprint
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 import iso8601
 import numpy
 import matplotlib.pyplot as plt
@@ -18,7 +19,6 @@ import requests
 import os.path
 import pandas as pd
 from pathlib import Path
-
 pp = pprint.PrettyPrinter(indent=4);
 BINS=400
 # If modifying these scopes, delete the file token.pickle.
@@ -131,7 +131,7 @@ def main():
         print("%d out of %d"%(counter,len(files)))
 
         #TOBE FIXED
-        fileName = f["name"][0:6]
+        fileName = f["name"]
 
         csvdata[fileName]={}
 
@@ -155,19 +155,40 @@ def main():
             text = str(text)
             flen = text.count(' ')
             moddate = iso8601.parse_date(r["modifiedDate"]).replace(tzinfo=None)
+
+            #TIME ZONE CONVERSION
+            moddate -= timedelta(hours = 7)
             csvdata[fileName][moddate]=flen
 
             minDate = min(minDate, moddate)
             maxDate = max(maxDate, moddate)
 
 
+    #Sort dates per file
     csvdata_ = {}
     for a in csvdata:
         csvdata_[a] = OrderedDict()
         for key in sorted(csvdata[a]):
             csvdata_[a][key] = csvdata[a][key]
+
+
     csvdata_df = pd.DataFrame(csvdata)
-    csvdata_df=csvdata_df.reset_index().sort_values('index').reset_index(drop=True)
+    csvdata_df["Last Mod"] = 0
+    for c in csvdata_df.columns:
+        lastModDate=csvdata_df[c].dropna().index.tolist()[-1]
+        csvdata_df.loc["Last Mod",c] = lastModDate
+
+    csvdata_df.sort_values("Last Mod", axis = 1, inplace=True)
+    csvdata_df.drop("Last Mod", axis = 0, inplace = True)
+    print(csvdata_df)
+
+    #Sort dates    
+    csvdata_df.sort_index(inplace = True)
+    print(csvdata_df)
+    #Sort files according to last modified
+
+
+
     #pd.DataFrame(csvdata).T.to_excel('data.xlsx', sheet_name="csvdata")
     with open("csvdata.pickle", "wb") as cv:
         pickle.dump(csvdata, cv)
