@@ -22,7 +22,11 @@ EXCEL_PATH = 'text.xlsx'
 BINS = 400
 
 def main():
-	csvdata = pd.read_excel(EXCEL_PATH).set_index("Unnamed: 0")
+	#csvdata = pd.read_excel(EXCEL_PATH).set_index("Unnamed: 0")
+
+	csvdata = pickle.load(open('csvdata_df.pickle', 'rb')).drop("Last Mod", axis = 0)
+
+
 	cols = list(csvdata.columns)
 	dates = list(csvdata.index)
 	minDate = dates[0].to_pydatetime()
@@ -66,9 +70,18 @@ def main():
 			#Iterate through dates(long)
 			changedInIter = False
 
+
+			#DOWNLOAD mode
+			'''
 			if(csvdata.loc[d, f]>prevMap[1]):
 				prevMap[1] = csvdata.loc[d, f]
 				changedInIter = True
+			'''
+
+			#NO DOWNLOAD MODE
+
+			prevMap[1]+=csvdata.loc[d, f]
+			changedInIter = True
 			
 			if(dates_map[d]>prevMap[0]):
 				#If new bucket is reached, then enter max word into cell 
@@ -77,7 +90,6 @@ def main():
 				if (changedInIter == False and dat_ind>0):
 					prevMap[1] = csvdata.loc[trimmedDates[dat_ind-1], f]
 
-					
 
 				maxWords.loc[timeBuckets[prevMap[0]],f] = prevMap[1]
 				prevD = prevMap[0]
@@ -97,7 +109,7 @@ def main():
 				#Reset prevMap
 				prevMap[0] = dates_map[d]
 				prevMap[2] = prevMap[1]
-				prevMap[1] = -1
+				prevMap[1] = 0
 				#if(d == dates[-1]):
 					#Last date reached, special case
 					#maxWords.loc[timeBuckets[prevMap[0]], f] =csvdata.loc[trimmedDates[dat_ind-1], f]
