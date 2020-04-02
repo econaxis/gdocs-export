@@ -28,8 +28,8 @@ SCOPES = ['https://www.googleapis.com/auth/drive.metadata.readonly', 'https://ww
 ITEMPERREQ = 1000
 
 # The ID of a sample document.
-DOCUMENT_ID = '1IF9reVGWQ1fWLLL4x1cUdaHkNDOkm5aJ'
-MAX_FILES = 250
+DOCUMENT_ID = '0B4Fujvv5MfqbeTVRc3hIbXRfNE0'
+MAX_FILES = 150
 DIR = 'data/'
 
 
@@ -103,7 +103,7 @@ def main():
         listRevisions(DOCUMENT_ID, dr, folders, files, callingName = "",filesParents = filesParents)
         while(folders):
             if(len(files)>MAX_FILES):
-                break;
+                break
             newestFolder = folders.pop()
             print("Exploring folder %s"%newestFolder[1])
             listRevisions(newestFolder[0], dr, folders, files, 
@@ -124,19 +124,20 @@ def main():
             pickle.dump(files, saved_file);
 
 #Download revisions
+
+    #Apply creds to HTTP Header
     header = {}
     creds.apply(header)
-    csvdata = {}
-    minDate = datetime(9998, 12, 30, 23, 59, 59, 1000)
-    maxDate = datetime(2, 12, 30, 23, 59, 59, 1000)
-    counter =0
 
+
+    csvdata = {}
+    counter = 0 
 
     #Should not run
     if (os.path.exists('csvdata.pickle') and False):
         with open('csvdata.pickle', 'rb') as cv:
             csvdata = pickle.load(cv)
-            
+
     #Should run
     else:
         for f in files:
@@ -148,7 +149,7 @@ def main():
                     drActivityResult = None
                     drActivityResult=act.activity().query(body={
                         'itemName' : "items/"+f["id"], 'pageSize' : 1000,
-                     'filter' : "detail.action_detail_case: EDIT"
+                        'filter' : "detail.action_detail_case: EDIT"
                      }).execute()
                     if(drActivityResult!=None):
                         API_WAIT=False
@@ -168,8 +169,6 @@ def main():
             #TOBE FIXED
             fileName = f["name"]
 
-            csvdata[fileName]={}
-
 
             dir_name =  DIR+slugify(f["name"])
             print(dir_name)
@@ -179,10 +178,10 @@ def main():
 
             for r in fActivities:
                 moddate = iso8601.parse_date(r).replace(tzinfo=None) - timedelta(hours = 7)
-                csvdata[fileName][moddate] = 2
+                csvdata[(fileName, moddate)] = 2
+
 
             for r in f["revisions"]:
-                
                 text=0
                 if(readPermissions):
                     fname = dir_name+"/"+slugify(r["id"])+".txt"
@@ -201,11 +200,32 @@ def main():
 
                 #TIME ZONE CONVERSION
                 moddate -= timedelta(hours = 7)
-                csvdata[fileName][moddate]=flen
+                csvdata[(fileName, moddate)] = flen
+            #    csvdata[fileName][moddate]=flen
 
-                minDate = min(minDate, moddate)
-                maxDate = max(maxDate, moddate)
 
+    pickle.dump(csvdata, open('unformatted_csvdata.pickle', 'wb'))
+    MI = pd.MultiIndex.from_tuples(csvdata, names = ["Title", "Dates"])
+    csvdata_df=pd.DataFrame(csvdata.values(),index = MI, columns = ["Type"])
+
+    del csvdata, MI
+
+
+    len_data = len(csvdata_df.index.levels[1])
+    csvdata_df = pd.DataFrame(csvdata_df, columns = ["Type"])
+    sumDatesIndex = pd.MultiIndex.from_product([["sumDates"], csvdata_df.index.levels[1]])
+    sumDatesFrame = pd.DataFrame([1]*len_data, index = sumDatesIndex)
+
+   
+
+    csvdata_df = csvdata_df.append(sumDatesFrame)
+
+    csvdata_df.to_pickle('csvdata.pickle')
+    pickle.dump(csvdata_df, open('csvdata.pickle', 'wb'))
+
+    activity_gen()
+
+'''
 
     #Sort dates per file
     print(1)
@@ -322,5 +342,24 @@ def append_df_to_excel(filename, df, sheet_name='Sheet1', startrow=None,
 
     # save the workbook
     writer.save()
+
+    '''
+
+   
+def activity_gen():
+    csvdata = pd.read_pickle('csvdata.pickle')
+    hists = {}
+    activity = dict(time=[], files=[], marker_size=[])
+    for f in csvdata.index.levels[0]:
+        timesForFile = csvdata.loc[f].index
+        activity["time"].append(csvdata.loc[f].index[-1])
+        activity["files"].append(f)
+        activity["marker_size"].append(log(len(timesForFile), 1.2))
+        hists[f] = [0, 0]
+        hists[f][0], bins = np.histogram([i.timestamp() for i in timesForFile], bins = 'auto')
+        hists[f][1] = [datetime.fromtimestamp(i) for i in bins]
+    pickle.dump(activity, open('activity.pickle', 'wb'))
+    pickle.dump(hists, open('hists.pickle', 'wb'))
+
 if __name__ == '__main__':
     main()
