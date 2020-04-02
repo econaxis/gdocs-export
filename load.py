@@ -225,7 +225,28 @@ def main():
 
     activity_gen()
 
-'''
+
+
+   
+def activity_gen():
+    csvdata = pd.read_pickle('csvdata.pickle')
+    hists = {}
+    activity = dict(time=[], files=[], marker_size=[])
+    for f in csvdata.index.levels[0]:
+        timesForFile = csvdata.loc[f].index
+        activity["time"].append(csvdata.loc[f].index[-1])
+        activity["files"].append(f)
+        activity["marker_size"].append(log(len(timesForFile), 1.2))
+        hists[f] = [0, 0]
+        hists[f][0], bins = np.histogram([i.timestamp() for i in timesForFile], bins = 'auto')
+        hists[f][1] = [datetime.fromtimestamp(i) for i in bins]
+    pickle.dump(activity, open('activity.pickle', 'wb'))
+    pickle.dump(hists, open('hists.pickle', 'wb'))
+
+if __name__ == '__main__':
+    main()
+
+    '''
 
     #Sort dates per file
     print(1)
@@ -344,22 +365,3 @@ def append_df_to_excel(filename, df, sheet_name='Sheet1', startrow=None,
     writer.save()
 
     '''
-
-   
-def activity_gen():
-    csvdata = pd.read_pickle('csvdata.pickle')
-    hists = {}
-    activity = dict(time=[], files=[], marker_size=[])
-    for f in csvdata.index.levels[0]:
-        timesForFile = csvdata.loc[f].index
-        activity["time"].append(csvdata.loc[f].index[-1])
-        activity["files"].append(f)
-        activity["marker_size"].append(log(len(timesForFile), 1.2))
-        hists[f] = [0, 0]
-        hists[f][0], bins = np.histogram([i.timestamp() for i in timesForFile], bins = 'auto')
-        hists[f][1] = [datetime.fromtimestamp(i) for i in bins]
-    pickle.dump(activity, open('activity.pickle', 'wb'))
-    pickle.dump(hists, open('hists.pickle', 'wb'))
-
-if __name__ == '__main__':
-    main()

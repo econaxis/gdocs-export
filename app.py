@@ -3,122 +3,37 @@ import dash
 import dash_core_components as dcc
 import dash_html_components as html
 import plotly.graph_objects as go
-from plotly.subplots import make_subplots
 from pprint import PrettyPrinter
-import plotly.express as px
 import pickle
 import json
 import numpy as np
 import pandas as pd
 from datetime import datetime, timedelta
 from math import log
-from dash.dependencies import Input, Output
+from dash.dependencies import Input, Output, State
 from dash.dash import no_update
+from flask_caching import Cache
 from pprint import PrettyPrinter
-
-HT_BINS = 20
 pp = PrettyPrinter(indent=3)
 
-def gen_margin(l= 50, r=5, b = 50, t = 50):
-    return {
-        'l':l, 'r': r, 'b': b, 't': t
-    }
-
+def serializeDT(d) :
+    return o.__str__()
 
 def genOptList():
     cols=pd.read_pickle('csvdata.pickle').index.levels[0].to_list()
     ret = []
-    ret.append(dict(label="empty", value="empty"))
+    ret.append(dict(label="sumDates", value="sumDates"))
     for c in cols:
         ret.append(dict(label=c, value=c))
     return ret
 
-# Sets up activity bubble graph
 
-#TODO set up activity and hists 
-
-
-def df_json(df):
-    ind = df.index.to_series().to_json(orient = 'values')
-    return [ind, df.reset_index(drop=True).to_json()]
-
-def json_df(js):
-    tups = json.loads(js[0])
- #   for i in tups:
-  #      i[1] = pd.to_datetime(i[1], unit = 'ms')
-    index = pd.MultiIndex.from_tuples(tups)
-    return pd.read_json(js[1]).set_index(index)
-
-def loadcsv ():
-    return pd.read_pickle('csvdata.pickle')
-def loadActivity ():
-    return pd.read_pickle('activity.pickle')
-def loadHists():
-    return pd.read_pickle('hists.pickle')
-
-
-def redo_Histogram(file, minDate, maxDate):
-    csvdata = loadcsv()
-    hists =[]
-    timesForFile = csvdata.loc[file].index
-    hists = [0, 0]
-    hists[0], bins = np.histogram([i.timestamp() for i in timesForFile], 30,
-        range = (minDate.timestamp(), maxDate.timestamp()))
-    hists[1] = [datetime.fromtimestamp(i) for i in bins]
-    return hists
-
-external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
-app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
-
-app.layout = html.Div([
-   
-    html.Div([
-        dcc.Graph(
-            id="fList"
-        ), dcc.Dropdown(
-            id="dropdown",
-            options=genOptList(),
-            value="empty"
-        )
-    ], className = "four columns",
-    style = {
-        'margin': gen_margin(b = 100, l = 20)
+def gen_margin(l= 5, r=5, b = 20, t = 70):
+    return {
+        'l':l, 'r': r, 'b': b, 't': t
     }
-    ),
-    html.Div([
-        dcc.Graph(
-            id="lineWord"
-        )
-    ], className = "four columns"),
-    html.Div([
-        dcc.Graph(
-            id = "histogram"
-        )
-    ], className = "four columns"),
-
-    #Hidden Div for storing information
-    html.Div(
-        id = "csvdata", style = {'display': 'none'}
-    ),
-    html.Div(
-        id = "zoomInfo", style = {'display': 'none'}
-    ),
-    html.Div(
-        id = "activityHistStore", style = {'display': 'none'}
-    )  
-])
-
-
-
-
-@app.callback(
-    Output("fList", "figure"),
-    [Input("csvdata", "children")]
-)
-def gen_fListFig(value):
-    ("flist")
-    activity = loadActivity()
-
+def gen_fListFig():
+    activity = pd.read_pickle('activity.pickle')
     fListFig = go.Figure(data=go.Scatter(
         y=activity["time"],
         x=activity["files"],
@@ -135,25 +50,137 @@ def gen_fListFig(value):
         }
     }
     )
-
     return fListFig
+CACHE_CONFIG = {
+    'DEBUG': True,
+    "CACHE_TYPE": "filesystem", # Flask-Caching related configs.
+    "CACHE_DEFAULT_TIMEOUT": 300,
+    "CACHE_DIR": 'cache_data'
+}
+external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+app.layout = html.Div([
+    html.Div([
+        dcc.Graph(
+            id="fList",
+            figure = gen_fListFig()
+        ), dcc.Dropdown(
+            id="dropdown",
+            options=genOptList(),
+            value="sumDates"
+        )
+        ], className = "four columns",
+        style = {
+        'margin': gen_margin(l = 20)
+        }
+    ),
+    html.Div([
+        dcc.Graph(
+            id="lineWord"
+        )
+    ], className = "four columns"),
+    html.Div([
+        dcc.Graph(
+            id = "histogram"
+        ),
+        html.Button(
+            "Reset Histogram",
+            id = "reset_histogram"
+        )
+    ], className = "four columns"),
+
+    #Hidden Div for storing information
+    html.Div(
+        id = "csvdata", style = {'display': 'none'}
+    ),
+    html.Div(
+        id = "zoomInfo", style = {'display': 'none'}
+    )
+])
+
+cache = Cache()
+cache.init_app(app.server, config = CACHE_CONFIG)
+
+@cache.memoize()
+def loadcsv ():
+    return pd.read_pickle('csvdata.pickle')
+@cache.memoize()
+def loadActivity ():
+    return pd.read_pickle('activity.pickle')
+@cache.memoize()    
+def loadHists():
+    return pd.read_pickle('hists.pickle')
+
+
+
+
+
+
+# Sets up activity bubble graph
+
+
+def redo_Histogram(file, minDate, maxDate):
+    csvdata = loadcsv()
+    hists =[]
+    timesForFile = csvdata.loc[file].index
+    hists = [0, 0]
+    hists[0], bins = np.histogram([i.timestamp() for i in timesForFile], 30,
+        range = (minDate.timestamp(), maxDate.timestamp()))
+    hists[1] = [datetime.fromtimestamp(i) for i in bins]
+    return hists
 
 
 @app.callback(
-    [Output("lineWord", "figure"),Output("histogram", "figure")],
-    [Input("dropdown", "value"), Input('zoomInfo', 'children')])
-def update_figure(value, zinfo):
+    Output("histogram", "figure"),
+    [Input("reset_histogram", "n_clicks"),
+    Input("lineWord", "figure")],
+    [State("histogram", "relayoutData"),
+    State("dropdown", "value")]
+)
+def update_histogram(button, lineWord, zoomData, ddvalue):
     ctx = dash.callback_context
+    fileChanged = False
+
+    for c in ctx.triggered:
+        if(c["prop_id"].split('.')[0] == 'lineWord'):
+            #Value of file changed, not Zoom. Therefore, set
+            #bool fileChanged to True
+            fileChanged = True
+            break
+
+    x_range = [0, 0, False]
+    histData = [0, 0]
+    if(not fileChanged and zoomData != None and "xaxis.range[0]" in zoomData):
+        x_range[0] = zoomData["xaxis.range[0]"]
+        x_range[1] = zoomData["xaxis.range[1]"]
+        histData = redo_Histogram(ddvalue, pd.to_datetime(x_range[0]),
+            pd.to_datetime(x_range[1]))
+    else:
+        histData = loadHists()[ddvalue]
+
+    return go.Figure(
+        go.Bar(
+            y = histData[0],
+            x= histData[1]
+        ),
+        layout = {
+            'title': "Histogram",
+            'margin': gen_margin()
+        }
+    )
+
+
+        
+
+
+
+@app.callback(
+    Output("lineWord", "figure"),
+    [Input("dropdown", "value")])
+def update_lineGraph(value):
     csvdata = loadcsv()
     activity = loadActivity()
     hists = loadHists()
-
-
-    if(zinfo !=None):
-        zinfo = json.loads(zinfo)
-
-    if(value == "empty"):
-        value = activity["files"][0]
 
 
     wordData = csvdata.loc[value, 'Type'].dropna().values.tolist()
@@ -168,40 +195,11 @@ def update_figure(value, zinfo):
         )],
         layout=dict(
             title=value + " Word Graph",
-            margin = gen_margin(l = 50, b=50, t=50, r=0)
+            margin = gen_margin()
         )
     )
-
-
-
-    changedZoom = False
-    if(ctx.triggered):
-        for i in ctx.triggered:
-            if(i["prop_id"].split('.')[0]=="zoomInfo"):
-                changedZoom = True
-                break;
-
-    histData = None
-    #TODO
-    if(changedZoom):
-        histData = redo_Histogram(value, pd.to_datetime(zinfo[0]), pd.to_datetime(zinfo[1]))
-        pp.pprint(histData)
-        if(histData[0].max() ==0):
-            #Reset to original Histogram if no bins (zoom too high)
-            histData = hists[value]
-    else:
-        histData = hists[value]
-    hist = go.Figure(
-        go.Bar(
-            y = histData[0],
-            x= histData[1]
-        ),
-        layout = {
-            'title': "Histogram",
-            'margin': gen_margin()
-        }
-    )
-    return [lineGraph, hist]
+    
+    return lineGraph
 
 
 @app.callback(
@@ -209,7 +207,7 @@ def update_figure(value, zinfo):
     [Input("fList", "hoverData"), Input("fList", "selectedData")])
 def update_from_click(hover, click):
     if(hover == None and click == None):
-        return "empty"
+        return "sumDates"
 
     if(click != None):
         return click["points"][0]["x"]
@@ -219,12 +217,12 @@ def update_from_click(hover, click):
 
 @app.callback(
     Output("zoomInfo", "children"),
-    [Input("histogram", "relayoutData"), ])
+    [Input("histogram", "relayoutData")])
 def update_zoom_params(zoom):
     zoomHist = [0, 0]
     if(zoom == None or "xaxis.range[0]" not in zoom):
-        zoomHist[0] = datetime.now()
-        zoomHist[1] = datetime.now()
+        zoomHist[0] = datetime.now().__str__()
+        zoomHist[1] = datetime.now().__str__()
         return json.dumps(zoomHist)
 
     zoomHist[0] = zoom["xaxis.range[0]"]
