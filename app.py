@@ -57,27 +57,6 @@ def loadHists():
     return pd.read_pickle('hists.pickle')
 
 
-def activity_gen():
-    csvdata = loadcsv()
-    hists = {}
-    activity = dict(time=[], files=[], marker_size=[])
-
-    for f in csvdata.index.levels[0]:
-        timesForFile = csvdata.loc[f].index
-
-        activity["time"].append(csvdata.loc[f].index[-1])
-        activity["files"].append(f)
-        activity["marker_size"].append(log(len(timesForFile), 1.2))
-        hists[f] = [0, 0]
-        hists[f][0], bins = np.histogram([i.timestamp() for i in timesForFile], bins = 'auto')
-        hists[f][1] = [datetime.fromtimestamp(i) for i in bins]
-
-
-    pickle.dump(activity, open('activity.pickle', 'wb'))
-    pickle.dump(hists, open('hists.pickle', 'wb'))
-    #gen_fListFig()
-    
-
 def redo_Histogram(file, minDate, maxDate):
     csvdata = loadcsv()
     hists =[]
@@ -86,7 +65,6 @@ def redo_Histogram(file, minDate, maxDate):
     hists[0], bins = np.histogram([i.timestamp() for i in timesForFile], 30,
         range = (minDate.timestamp(), maxDate.timestamp()))
     hists[1] = [datetime.fromtimestamp(i) for i in bins]
-
     return hists
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
@@ -120,8 +98,7 @@ app.layout = html.Div([
 
     #Hidden Div for storing information
     html.Div(
-        id = "csvdata", style = {'display': 'none'},
-        children = [activity_gen()]
+        id = "csvdata", style = {'display': 'none'}
     ),
     html.Div(
         id = "zoomInfo", style = {'display': 'none'}
