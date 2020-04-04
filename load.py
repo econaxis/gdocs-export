@@ -5,15 +5,16 @@ import tkinter
 import json
 from slugify import slugify
 import time
-import math
-from collections import OrderedDict
+from math import log
 import os.path
+import uuid
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 import pprint
 from datetime import datetime, timezone, timedelta
 import iso8601
+import numpy as np
 import numpy
 import matplotlib.pyplot as plt
 import requests
@@ -21,7 +22,7 @@ import os.path
 import pandas as pd
 from pathlib import Path
 pp = pprint.PrettyPrinter(indent=4);
-BINS=400
+
 readPermissions = False
 # If modifying these scopes, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/drive.metadata.readonly', 'https://www.googleapis.com/auth/drive.activity.readonly']
@@ -29,8 +30,7 @@ ITEMPERREQ = 1000
 
 # The ID of a sample document.
 DOCUMENT_ID = '0B4Fujvv5MfqbeTVRc3hIbXRfNE0'
-MAX_FILES = 150
-DIR = 'data/'
+MAX_FILES = 4
 
 
 #Explores directory structure
@@ -59,7 +59,11 @@ def listRevisions (id, drive, folders, files, nextToken = None, callingName = ""
         listRevisions(id, drive, folders, files, response.get('nextPageToken'))
 
 
-def main():
+def main(DOC_ID = DOCUMENT_ID, USER_ID = str(uuid.uuid4())):
+    DIR = "data/" + USER_ID + "/"
+    curDir = Path(DIR)
+    curDir.mkdir()
+    os.chdir(DIR)
     """Shows basic usage of the Docs API.
     Prints the title of a sample document.
     """
@@ -79,7 +83,7 @@ def main():
             creds.refresh(Request())
         else:
             flow = InstalledAppFlow.from_client_secrets_file(
-                'credentials.json', SCOPES)
+                '../../secret/credentials.json', SCOPES)
             creds = flow.run_local_server(port=0)
         # Save the credentials for the next run
         with open('token.pickle', 'wb') as token:
@@ -100,7 +104,7 @@ def main():
         with open('files.pickle', 'rb') as _files:
             files = pickle.load(_files)
     if(len(files)==0):    
-        listRevisions(DOCUMENT_ID, dr, folders, files, callingName = "",filesParents = filesParents)
+        listRevisions(DOC_ID, dr, folders, files, callingName = "",filesParents = filesParents)
         while(folders):
             if(len(files)>MAX_FILES):
                 break
@@ -155,7 +159,7 @@ def main():
                         API_WAIT=False
                 except:
                     print("Google Docs API Limit Reached, Waiting...")
-                    time.sleep(2)
+                    time.sleep(10)
 
 
             fActivities = []
@@ -171,15 +175,10 @@ def main():
 
 
             dir_name =  DIR+slugify(f["name"])
-            print(dir_name)
-            p = Path(dir_name) 
-
-            p.mkdir(exist_ok=True)
 
             for r in fActivities:
                 moddate = iso8601.parse_date(r).replace(tzinfo=None) - timedelta(hours = 7)
                 csvdata[(fileName, moddate)] = 2
-
 
             for r in f["revisions"]:
                 text=0
@@ -236,7 +235,7 @@ def activity_gen():
         timesForFile = csvdata.loc[f].index
         activity["time"].append(csvdata.loc[f].index[-1])
         activity["files"].append(f)
-        activity["marker_size"].append(log(len(timesForFile), 1.2))
+        activity["marker_size"].append(log(len(timesForFile), 1.3))
         hists[f] = [0, 0]
         hists[f][0], bins = np.histogram([i.timestamp() for i in timesForFile], bins = 'auto')
         hists[f][1] = [datetime.fromtimestamp(i) for i in bins]
