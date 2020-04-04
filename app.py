@@ -20,7 +20,7 @@ def serializeDT(d) :
     return o.__str__()
 
 def genOptList():
-    cols=pd.read_pickle('csvdata.pickle').index.levels[0].to_list()
+    cols=pd.read_pickle('data.pickle').index.levels[0].to_list()
     ret = []
     ret.append(dict(label="sumDates", value="sumDates"))
     for c in cols:
@@ -103,7 +103,7 @@ cache.init_app(app.server, config = CACHE_CONFIG)
 
 @cache.memoize()
 def loadcsv ():
-    return pd.read_pickle('csvdata.pickle')
+    return pd.read_pickle('data.pickle')
 @cache.memoize()
 def loadActivity ():
     return pd.read_pickle('activity.pickle')
@@ -233,4 +233,5 @@ def update_zoom_params(zoom):
 
 
 if __name__ == '__main__':
+    print("rdsjlfdskj")
     app.run_server(debug=True)
