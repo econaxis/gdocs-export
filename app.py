@@ -27,7 +27,6 @@ def genOptList():
         ret.append(dict(label=c, value=c))
     return ret
 
-
 def gen_margin(l= 5, r=5, b = 20, t = 70):
     return {
         'l':l, 'r': r, 'b': b, 't': t

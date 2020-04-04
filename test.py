@@ -3,6 +3,7 @@ import time
 import random
 import json
 import os
+import uuid
 import pickle
 import aiohttp
 import pprint
@@ -12,17 +13,24 @@ import pandas as pd
 import iso8601
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
+from pathlib import Path
 pp = pprint.PrettyPrinter(indent=4);
 
 
-MAX_FILES = 200
+homePath = None
+headers = {}
+lastModFile = {}
+MAX_FILES = 50
+ENABLE_FILESIZE = False
 revData = {}
-
+creds = 0
 consecutiveErrors = 1
 
 SEED_ID = "0B4Fujvv5MfqbeTVRc3hIbXRfNE0"
+g_USER_ID = str(uuid.uuid4())
+USER_ID = "default"
 
-workerInstances = 30
+workerInstances = 3
 
 def API_RESET(seconds = 10):
     global consecutiveErrors
@@ -38,26 +46,31 @@ def dr2_urlbuilder(id: str):
     return "https://www.googleapis.com/drive/v2/files/" + id + "/revisions"
 
 def dractivity_builder(id):
-
+    global headers
     ancName = "items/" + id
     pageSize = 1000
     filter = "detail.action_detail_case: EDIT"
 
+    #Generate random quotaUser
+    quotaUser = str(uuid.uuid4())
+
     params = dict(ancestorName = ancName, pageSize = pageSize, 
-        filter = filter)
+        filter = filter, quotaUser = quotaUser)
     return dict(params = params, headers = headers, url = "https://driveactivity.googleapis.com/v2/activity:query")
 
 async def print_size(folder, file):
     while True:
-        if(not foldersJoined):
-            print("FOLDER SIZE: %d\nFILE SIZE: %d\n"%(folder.qsize(), file.qsize()))
-        else:
-            print("FILE SIZE: %d\n"%(folder.qsize(), file.qsize()))
-        await asyncio.sleep(1.5)
+        outputString = "FLDR SZ: %d FILE SZ: %d\n" %(folder.qsize(), file.qsize())
+
+        streamingFile = open(homePath + "streaming.txt", 'a')
+        streamingFile.write(outputString)
+        print(outputString)
+        
+        await asyncio.sleep(3)
 
 async def getIdsRecursive(drive_url, folders: asyncio.Queue, files: asyncio.Queue, 
     session: aiohttp.ClientSession, headers: dict):
-    global MAX_FILES
+    global MAX_FILES, lastModFile
 
     await asyncio.sleep(0, workerInstances)
     #Query to pass into Drive to find item
@@ -79,25 +92,31 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue, files: asyncio.Queu
                     print(await response.text())
                 API_RESET()
             else:
+                global consecutiveErrors
                 consecutiveErrors = 1
                 DriveResponse = await response.json()
 
+
+                #Classify item type by file or folder
+                #If folder, then add back to folder queue for further processing
                 for resFile in DriveResponse["files"]:
                     if(resFile["mimeType"] == "application/vnd.google-apps.folder"):
                         await folders.put(resFile["id"])
                     elif (resFile["mimeType"] == "application/vnd.google-apps.document"):
                         await files.put((resFile["id"], resFile["name"]))
+
+        #Mark task as done for folders.join() to properly work
         folders.task_done()
-
-
-    #Folder Size exceeded
-    #Therefore, get all and clear all elements out of queue
+    #Folder Size exceeded therefore, get all and clear all elements out of queue
     #Folders for blocking call q.join() to be released
     while (await folders.get()):
         folders.task_done()
 
 async def getRevision(files: asyncio.Queue, session: aiohttp.ClientSession, headers):
+
+    #Await random amount for more staggered requesting (?)
     await asyncio.sleep(0, workerInstances)
+
     while True:
         fileId, fileName = await files.get()
         print(fileId, fileName)
@@ -105,7 +124,6 @@ async def getRevision(files: asyncio.Queue, session: aiohttp.ClientSession, head
         revisions  = {}
         async with session.get(url = dr2_urlbuilder(fileId), headers = headers) as revResponse:
             async with session.post(**dractivity_builder(fileId)) as actResponse:
-                print(1)
                 if(revResponse.status != 200 or actResponse.status != 200):
                     #Checks if passed GDrive limit
                     if(revResponse.status == 403 or actResponse.status == 403):
@@ -114,10 +132,8 @@ async def getRevision(files: asyncio.Queue, session: aiohttp.ClientSession, head
                         await files.put(fileId)
                     else:
                         print("non 403 error")
-
                         #Assuming revResponse does not violate quota
                         print(await actResponse.text())
-
 
                         open("errors.txt", 'a').write(await revResponse.text() + await actResponse.text())                       
                     API_RESET()
@@ -133,9 +149,11 @@ async def getRevision(files: asyncio.Queue, session: aiohttp.ClientSession, head
                     #to revisions, which can be processed all in one by following code
                     for a in act:
                         revisions.append(dict(modifiedDate = a["timestamp"]))
-        print(3)
         for item in revisions:
+            global ENABLE_FILESIZE
+
             modifiedDate = iso8601.parse_date(item["modifiedDate"])
+
             if(ENABLE_FILESIZE and "fileSize" in item):
                 revData[(fileName,  modifiedDate)] = int(item["fileSize"])
             else:
@@ -143,7 +161,6 @@ async def getRevision(files: asyncio.Queue, session: aiohttp.ClientSession, head
 
             lastModFile[fileName] = modifiedDate
         files.task_done()
-        print(4)
 
 
 
@@ -151,11 +168,11 @@ async def getRevision(files: asyncio.Queue, session: aiohttp.ClientSession, head
 
 
 SCOPES = ['https://www.googleapis.com/auth/drive.metadata.readonly', 'https://www.googleapis.com/auth/drive.activity.readonly']
-async def start():
-    global SEED_ID, workerInstances
+
+async def start(creds):
+    global SEED_ID, workerInstances, headers
 
     creds.apply(headers)
-
     async with aiohttp.ClientSession() as session:
         folders = asyncio.Queue()
         files = asyncio.Queue()
@@ -177,9 +194,7 @@ async def start():
 
         #Wait until all folders are properly processed, or until FILE_MAX is reached
         p = await folders.join()
-        open("foldersJoined.txt", "a").write("folder")
-        d = await files.join()
-        open("foldersJoined.txt", "a").write("file")
+        p = await files.join()
 
         #Cancel because Done
         for i in fileExplorers:
@@ -191,33 +206,49 @@ async def start():
         pickle.dump(revData, open('revdata.pickle', 'wb'))
 
 
-def authorization(fileName = 'secrets/token.pickle', APIKeyPath = 'secret/credentials.json'):
-    creds = None
+def main(USER_ID, pydocPath):
+    global creds, homePath
 
-    if os.path.exists(fileName):
-        with open(fileName, 'rb') as token:
-            creds = pickle.load(token)
-    # If there are no (valid) credentials available, let the user log in.
+    homePath = pydocPath
+
+    DIR = pydocPath + "data/" + USER_ID + "/"
+    p = Path(DIR)
+    p.mkdir(exist_ok = True)
+    os.chdir(DIR)
+
+    print("USER ID: %s"%USER_ID)
+
+    #Load pickle file. Should have been made by Flask/App.py
+    #in authorization step
+
+    with open('creds.pickle', 'rb') as cr:
+        creds = pickle.load(cr)
+
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
         else:
-            flow = InstalledAppFlow.from_client_secrets_file(
-                APIKeyPath, SCOPES)
-            creds = flow.run_local_server(port=0)
+            raise "Creds not valid!"
         # Save the credentials for the next run
-        with open(fileName, 'wb') as token:
+        with open('token.pickle', 'wb') as token:
             pickle.dump(creds, token)
-    return creds
 
 
-if __name__ == "__main__":
-    #creds = authorization()
 
-   # asyncio.run(start(), debug = True)
+
+    print("file loaded", USER_ID)
+
+    asyncio.run(start(creds), debug = True)
+
 
     from datutils import formatData, activity_gen
     formatData()
 
     activity_gen()
  #   asyncio.DefaultEventLoopPolicy = asyncio.WindowsSelectorEventLoopPolicy
+
+if __name__ == "__main__":
+    import datutils
+
+
+    main("c4004ebc-ac00-401b-a17b-01f614325b0f", "/mnt/c/users/henry/documents/pydocs/")

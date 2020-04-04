@@ -3,8 +3,36 @@ import numpy as np
 import pickle
 from math import log
 from datetime import datetime
+import google.oauth2.credentials
+import google_auth_oauthlib.flow
 
+SCOPES = ['https://www.googleapis.com/auth/drive.metadata.readonly', 'https://www.googleapis.com/auth/drive.activity.readonly']
 
+def authorization( homePath,scopes = SCOPES, user_id = "default"):
+    creds = None
+    APIKeyPath = homePath + "/secret/credentials.json"
+    fileName = "data/" + user_id + "/secrets/token.pickle"
+    flow = google_auth_oauthlib.flow.Flow.from_client_secrets_file(
+            APIKeyPath, scopes)
+    flow.redirect_uri = 'http://localhost'
+    authorization_url , state = flow.authorization_url(access_type = 'offline', include_granted_scopes = 'true')
+    return authorization_url
+
+    if os.path.exists(fileName):
+        with open(fileName, 'rb') as token:
+            creds = pickle.load(token)
+    # If there are no (valid) credentials available, let the user log in.
+    if not creds or not creds.valid:
+        if creds and creds.expired and creds.refresh_token:
+            creds.refresh(Request())
+        else:
+            flow = InstalledAppFlow.from_client_secrets_file(
+                APIKeyPath, SCOPES)
+            creds = flow.run_local_server(port=0)
+        # Save the credentials for the next run
+        with open(fileName, 'wb') as token:
+            pickle.dump(creds, token)
+    return creds
 
 def formatData():
     rdata = pickle.load(open('revdata.pickle', 'rb'))
