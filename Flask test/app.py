@@ -12,12 +12,14 @@ import google_auth_oauthlib.flow
 import sys
 import os
 
-os.environ["OAUTHLIB_RELAX_TOKEN_SCOPE"] = "1"
 
+#Necessary for non HTTPS OAUTH calls
+os.environ["OAUTHLIB_RELAX_TOKEN_SCOPE"] = "1"
 sys.path.insert(1, '../')
-user_id = str(uuid.uuid4())
+
+
 class Config:
-    SECRET_KEY = user_id
+    SECRET_KEY = "dsfjslkfdsjflkdsa;fsajl;fakj"
 
 CONF = Config()
 
@@ -30,6 +32,10 @@ SCOPES = ['https://www.googleapis.com/auth/drive.metadata.readonly',
 
 @app.route('/authorize/')
 def authorize():
+
+    #Expected point for start of authorization chain
+
+
     print("Starting authorization method")
 
     #Use server secret file
@@ -54,8 +60,6 @@ def authorize():
 def oauth():
     #Second part of authorizatoin cycle
 
-    workingPath = homePath + "data/" + user_id + "/"
-    Path(workingPath).mkdir(exist_ok = True)
 
     state = flask.session['state']
 
@@ -68,21 +72,22 @@ def oauth():
 
     flow.fetch_token(authorization_response=authorization_response)
 
-    credentials = flow.credentials
-    print ("saving creds")
 
+
+    userid = str(uuid.uuid4())
+    workingPath = homePath + "data/" + userid + "/"
+
+
+
+    credentials = flow.credentials
     with open(workingPath + "creds.pickle", 'wb') as c:
       pickle.dump(credentials, c)
 
-    flask.session["workingPath"] = workingPath
-    #Store userId in a session variable for process data method
-    flask.session["userId"] = user_id
 
-    return flask.redirect(flask.url_for('process_data'))
+    return flask.redirect(flask.url_for('process_data', userid = userid))
 
-@app.route("/process/")
 @app.route("/process/<userid>")
-def process_data(userid = None):
+def process_data(userid ):
 
     #function can be called normally from oauth, when user first authenticates
     #or function can be called from URL without authenticate 
@@ -90,13 +95,9 @@ def process_data(userid = None):
 
     #Get working path from session, or create from homePath
     #Gets userId either from flask session or from params
-    workingPath = None
-    if(flask.session.get("workingPath") != None):
-        workingPath = flask.session.get("workingPath")
-        userid = flask.session.get("userId")
-    else:
-        workingPath = homePath + "data/" + userid + "/"
-        #Implicit userid is from params
+
+    workingPath = homePath + "data/" + userid + "/"
+    Path(workingPath).mkdir(exist_ok = True)
 
     print("USERID %s WPATH %s"%(userid, workingPath))
 
@@ -111,8 +112,8 @@ def process_data(userid = None):
 
     import test
     print("processing data...")
-    print("user id is %s"%user_id)
-    #test.main( user_id, homePath)
+    print("user id is %s"%userid)
+    #test.main( userid, homePath)
     return "w"
 
 
