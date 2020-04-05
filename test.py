@@ -17,25 +17,28 @@ from pathlib import Path
 pp = pprint.PrettyPrinter(indent=4);
 
 
-homePath = None
+pydocPath = None
+workingPath = None
+
+
+worksDone = 0
+
 headers = {}
 lastModFile = {}
-MAX_FILES = 50
+MAX_FILES = 20
 ENABLE_FILESIZE = False
 revData = {}
 creds = 0
 consecutiveErrors = 1
 
 SEED_ID = "0B4Fujvv5MfqbeTVRc3hIbXRfNE0"
-g_USER_ID = str(uuid.uuid4())
-USER_ID = "default"
 
-workerInstances = 3
+workerInstances = 5
 
 def API_RESET(seconds = 10):
     global consecutiveErrors
     consecutiveErrors+=1
-    seconds *=(consecutiveErrors+1)
+    seconds *=(consecutiveErrors)
     for i in range(math.ceil(seconds/10)):
         print(consecutiveErrors)
         print("%d/%d"%(i, math.ceil(seconds/10)))
@@ -58,33 +61,52 @@ def dractivity_builder(id):
         filter = filter, quotaUser = quotaUser)
     return dict(params = params, headers = headers, url = "https://driveactivity.googleapis.com/v2/activity:query")
 
+
+async def tryGetQueue(queue: asyncio.Queue, repeatTimes:int = 4, interval:float = 4):
+    output = None
+    timesWaited = 0
+    while(output==None):
+        try:
+            timesWaited+=1
+            output = queue.get_nowait()
+        except:
+            if(timesWaited>repeatTimes):
+                print("returning")
+                return -1
+            print("waiting")
+            await asyncio.sleep(interval)
+    return output
+
 async def print_size(folder, file):
     while True:
         outputString = "FLDR SZ: %d FILE SZ: %d\n" %(folder.qsize(), file.qsize())
 
-        streamingFile = open(homePath + "streaming.txt", 'a')
+        streamingFile = open(pydocPath + "streaming.txt", 'a')
         streamingFile.write(outputString)
         print(outputString)
         
         await asyncio.sleep(3)
 
 async def getIdsRecursive(drive_url, folders: asyncio.Queue, files: asyncio.Queue, 
-    session: aiohttp.ClientSession, headers: dict):
+    session: aiohttp.ClientSession, headers: dict, doneEvent):
     global MAX_FILES, lastModFile
-
-    await asyncio.sleep(0, workerInstances)
+    uu = str(uuid.uuid4())[0:2]
     #Query to pass into Drive to find item
 
-    #files q size for un processed files, lastModFile for processed files
-    while (files.qsize() + len(lastModFile) < MAX_FILES):
-        id = await folders.get()
+    while (files.qsize() + len(lastModFile) < MAX_FILES and not doneEvent.is_set()):
+        id = await tryGetQueue(folders)
+        if(id == -1):
+            return
+
         query = "'" + id + "' in parents"
         data = dict(q=query)
         async with session.get(url = drive_url, params = data, headers = headers) as response:
+
             if(response.status != 200):
                 #Checks if passed GDrive limit
                 if(response.status == 403):
                     print("Waiting for GDrive API Limit...")
+                    pp.pprint(await response.text())
                     #Reset, add ID back to queue as this item will not be processed
                     await folders.put(id)
                 else:
@@ -105,37 +127,50 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue, files: asyncio.Queu
                     elif (resFile["mimeType"] == "application/vnd.google-apps.document"):
                         await files.put((resFile["id"], resFile["name"]))
 
+
         #Mark task as done for folders.join() to properly work
         folders.task_done()
+
+    print("starting done")
+
+    while(not folders.empty()):
+        folders.get_nowait()
+        folders.task_done()
+    print("DONE")
     #Folder Size exceeded therefore, get all and clear all elements out of queue
     #Folders for blocking call q.join() to be released
-    while (await folders.get()):
-        folders.task_done()
 
-async def getRevision(files: asyncio.Queue, session: aiohttp.ClientSession, headers):
 
+async def getRevision(files: asyncio.Queue, session: aiohttp.ClientSession, headers, doneEvent):
+    #Purposeful error
     #Await random amount for more staggered requesting (?)
-    await asyncio.sleep(0, workerInstances)
 
-    while True:
-        fileId, fileName = await files.get()
-        print(fileId, fileName)
+    await asyncio.sleep(5 + random.randint(0, 10))
+    uu = str(uuid.uuid4())[0:3]
+    while (not doneEvent.is_set()):
 
+        fileTuple = await tryGetQueue(files)
+        if(fileTuple==-1):
+            return
+
+        (fileId, fileName) = fileTuple
+
+        print("revisions", fileId, fileName)
         revisions  = {}
         async with session.get(url = dr2_urlbuilder(fileId), headers = headers) as revResponse:
             async with session.post(**dractivity_builder(fileId)) as actResponse:
                 if(revResponse.status != 200 or actResponse.status != 200):
                     #Checks if passed GDrive limit
-                    if(revResponse.status == 403 or actResponse.status == 403):
+                    if(revResponse.status == (403 or 429) or actResponse.status == (403 or 429)):
                         print("Waiting for GDrive API Limit...")
                         #Reset, add ID back to queue
-                        await files.put(fileId)
+                        await files.put((fileId, fileName))
                     else:
                         print("non 403 error")
                         #Assuming revResponse does not violate quota
                         print(await actResponse.text())
 
-                        open("errors.txt", 'a').write(await revResponse.text() + await actResponse.text())                       
+                        open("errors.txt", 'a').write(await revResponse.text() + await actResponse.text())
                     API_RESET()
                 else:
                     consecutiveErrors=1
@@ -160,19 +195,27 @@ async def getRevision(files: asyncio.Queue, session: aiohttp.ClientSession, head
                 revData[(fileName,  modifiedDate)] = 1
 
             lastModFile[fileName] = modifiedDate
+
         files.task_done()
 
+SCOPES = ['https://www.googleapis.com/auth/drive.metadata.readonly', 'https://www.googleapis.com/auth/drive.activity.readonly'] 
 
+async def filesJoin(files, folders, doneEvent):
+    print("starting files join")
+    await folders.join()
 
+    print("awaitng files join")
+    await files.join()
 
-
-
-SCOPES = ['https://www.googleapis.com/auth/drive.metadata.readonly', 'https://www.googleapis.com/auth/drive.activity.readonly']
+    print("done awaiting files join")
+    doneEvent.set()
 
 async def start(creds):
     global SEED_ID, workerInstances, headers
 
     creds.apply(headers)
+
+
     async with aiohttp.ClientSession() as session:
         folders = asyncio.Queue()
         files = asyncio.Queue()
@@ -181,20 +224,29 @@ async def start(creds):
         #Seed ID to start initial folder requests
         await folders.put(SEED_ID)
 
+        loop = asyncio.get_event_loop()
+        loop.set_exception_handler(exceptionHandler)
+
+        doneEvent = asyncio.Event()
 
         #Generate list of Workers to explore folder structure
         fileExplorers = [asyncio.create_task(getIdsRecursive("https://www.googleapis.com/drive/v3/files", 
-            folders, files, session, headers)) for i in range(workerInstances)]
+            folders, files, session, headers, doneEvent)) for i in range(workerInstances)]
 
-        revisionExplorer = [asyncio.create_task(getRevision(files, session, headers)) 
+        revisionExplorer = [asyncio.create_task(getRevision(files, session, headers, doneEvent)) 
             for i in range(workerInstances)]
 
         #Generate Print Task that prints data every X seconds
         printTask = asyncio.create_task(print_size(folders, files))
-
         #Wait until all folders are properly processed, or until FILE_MAX is reached
-        p = await folders.join()
-        p = await files.join()
+
+        jobs = asyncio.gather(*(fileExplorers + revisionExplorer))
+
+        filesJoinWaiter = asyncio.create_task(filesJoin(files, folders, doneEvent))
+
+        print("jobs b")
+        await jobs
+        print("JOBSSDSJLKDFJLKSFDSJLKSJss a")
 
         #Cancel because Done
         for i in fileExplorers:
@@ -203,25 +255,33 @@ async def start(creds):
             i.cancel()
 
         printTask.cancel()
-        pickle.dump(revData, open('revdata.pickle', 'wb'))
+        
+
+def exceptionHandler(loop, context):
+    #loop.default_exception_handler(context)
+    print("="*10)
+    exception = context.get('exception')
+    print("exception: %s"%exception)
+    print("loop %s"%loop)
+    print("=" * 20)
+    loop.stop()
 
 
-def main(USER_ID, pydocPath):
-    global creds, homePath
+def main(USER_ID, _pydocPath):
+    global creds, pydocPath, workingPath
 
-    homePath = pydocPath
+    pydocPath = _pydocPath
 
-    DIR = pydocPath + "data/" + USER_ID + "/"
-    p = Path(DIR)
+    workingPath = pydocPath + "data/" + USER_ID + "/"
+    p = Path(workingPath)
     p.mkdir(exist_ok = True)
-    os.chdir(DIR)
 
     print("USER ID: %s"%USER_ID)
 
     #Load pickle file. Should have been made by Flask/App.py
     #in authorization step
 
-    with open('creds.pickle', 'rb') as cr:
+    with open(workingPath+'creds.pickle', 'rb') as cr:
         creds = pickle.load(cr)
 
     if not creds or not creds.valid:
@@ -230,16 +290,19 @@ def main(USER_ID, pydocPath):
         else:
             raise "Creds not valid!"
         # Save the credentials for the next run
-        with open('token.pickle', 'wb') as token:
+        with open(workingPath + 'token.pickle', 'wb') as token:
             pickle.dump(creds, token)
 
 
+    print("creds loaded", USER_ID)
 
-
-    print("file loaded", USER_ID)
-
+    #loop.run_until_complete(start(creds))
     asyncio.run(start(creds), debug = True)
 
+    pickle.dump(revData, open(workingPath + 'revdata.pickle', 'wb'))
+
+    #DEBUG
+    return
 
     from datutils import formatData, activity_gen
     formatData()
@@ -250,5 +313,5 @@ def main(USER_ID, pydocPath):
 if __name__ == "__main__":
     import datutils
 
-
-    main("c4004ebc-ac00-401b-a17b-01f614325b0f", "/mnt/c/users/henry/documents/pydocs/")
+    #Default settings
+    main("5a80b6d0-07bb-42c2-a023-15894be46026", "/mnt/c/users/henry/documents/pydocs/")
