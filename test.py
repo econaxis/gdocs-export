@@ -114,7 +114,6 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue, files: asyncio.Queu
 async def getRevision(files: asyncio.Queue, session: aiohttp.ClientSession, headers):
     #Purposeful error
     #Await random amount for more staggered requesting (?)
-
     await asyncio.sleep(5 + random.randint(0, 10))
     while True:
 
