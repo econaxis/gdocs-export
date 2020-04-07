@@ -11,6 +11,7 @@ import google.oauth2.credentials
 import google_auth_oauthlib.flow
 import sys
 import os
+#from config import Config
 
 
 #Necessary for non HTTPS OAUTH calls
@@ -32,11 +33,14 @@ SCOPES = ['https://www.googleapis.com/auth/drive.metadata.readonly',
 
 @app.route('/authorize/')
 def authorize():
-
     #Expected point for start of authorization chain
-
-
     print("Starting authorization method")
+
+    #config = Config(homePath = homePath)
+#    config.generate_id()
+    #app.config.from_object(config.get_flask_config())
+    #app.config.from_ob
+
 
     #Use server secret file
     flow = google_auth_oauthlib.flow.Flow.from_client_secrets_file(
@@ -78,7 +82,6 @@ def oauth():
     workingPath = homePath + "data/" + userid + "/"
 
 
-
     credentials = flow.credentials
     with open(workingPath + "creds.pickle", 'wb') as c:
       pickle.dump(credentials, c)
@@ -86,12 +89,27 @@ def oauth():
 
     return flask.redirect(flask.url_for('process_data', userid = userid))
 
+@app.route("/process/")
 @app.route("/process/<userid>")
-def process_data(userid ):
+def process_data(userid = None):
 
     #function can be called normally from oauth, when user first authenticates
     #or function can be called from URL without authenticate 
 
+
+    #Set cookie for process
+    htmlResponse = flask.make_response("Processing data")
+
+    #If there is a cookie and no userid is entered
+    if(flask.request.cookies.get('userid') and userid is None):
+        userid = flask.request.cookies.get('userid')
+    elif (not flask.request.cookies.get('userid') and userid is None):
+        print("No cookie nor userid entered, redirecting to auth page")
+        return flask.redirect(flask.url_for('authorize'))
+
+    htmlResponse.set_data(htmlResponse.get_data(as_text = True) + "user id: \n"+userid)
+    #Store cookie for 30 days
+    htmlResponse.set_cookie('userid', userid, max_age  = 60*60*24*30)
 
     #Get working path from session, or create from homePath
     #Gets userId either from flask session or from params
@@ -112,9 +130,11 @@ def process_data(userid ):
 
     import test
     print("processing data...")
-    print("user id is %s"%userid)
-    #test.main( userid, homePath)
-    return "w"
+    #test.main( userid, homePath, workingPath)
+
+
+
+    return htmlResponse
 
 
 @app.route("/form", methods = ["GET", "POST"])
