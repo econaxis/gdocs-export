@@ -3,6 +3,7 @@ from datutils.dash_functions import *
 import flask
 
 
+workingPath = "data/5a80b6d0-07bb-42c2-a023-15894be46026/"
 pp = PrettyPrinter(indent=3)
 
 CACHE_CONFIG = {
@@ -15,6 +16,8 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
 
+#Imported from dash_functions module
+setPath(workingPath)
 app.layout = get_layout
 
 cache = Cache()
@@ -22,13 +25,13 @@ cache.init_app(app.server, config = CACHE_CONFIG)
 
 @cache.memoize()
 def loadcsv ():
-    return pd.read_pickle('data.pickle')
+    return pd.read_pickle(workingPath + 'collapsedFiles_p.pickle')
 @cache.memoize()
 def loadActivity ():
-    return pd.read_pickle('activity.pickle')
+    return pd.read_pickle(workingPath + 'activity.pickle')
 @cache.memoize()    
 def loadHists():
-    return pd.read_pickle('hists.pickle')
+    return pd.read_pickle(workingPath + 'hists.pickle')
 
 # Sets up activity bubble graph
 
@@ -55,7 +58,8 @@ def update_histogram(button, lineWord, zoomData, ddvalue):
     if(not fileChanged and zoomData != None and "xaxis.range[0]" in zoomData):
         x_range[0] = zoomData["xaxis.range[0]"]
         x_range[1] = zoomData["xaxis.range[1]"]
-        histData = redo_Histogram(ddvalue, pd.to_datetime(x_range[0]),
+        timesEdited = loadcsv().loc[ddvalue].index
+        histData = redo_Histogram(timesEdited, pd.to_datetime(x_range[0]),
             pd.to_datetime(x_range[1]))
     else:
         histData = loadHists()[ddvalue]
@@ -66,7 +70,7 @@ def update_histogram(button, lineWord, zoomData, ddvalue):
             x= histData[1]
         ),
         layout = {
-            'title': "Histogram",
+            'title': "Edits Histogram",
             'margin': gen_margin()
         }
     )
@@ -132,5 +136,4 @@ def update_zoom_params(zoom):
 
 
 if __name__ == '__main__':
-    print("rdsjlfdskj")
     app.run_server(debug=True)

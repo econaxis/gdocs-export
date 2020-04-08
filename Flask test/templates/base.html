@@ -1,14 +1,25 @@
 <html>
     <head>
       <title>Testing Website</title>
+      <link rel="stylesheet" href="{{url_for('static', filename = 'air.css')}}">
     </head>
     <body>
-        <div>Test 1 <a href="/index">Home</a></div>
-
-        <form action = "/submit/" method = "POST">
-        <button type = "Submit" class = "btn" > Submit now</button>
-        </form>
-        <hr>
-        {% block content %}{% endblock %}
+      <header>
+        <div class = "wrapper"> 
+          <a class = "site title" href = '{{url_for('home')}}'>Home Page</a>
+          <button class = 'button button4 floatRight midLign' onclick = "location.href = '{{url_for('authorize')}}'">
+            {% if session.get('signedin') %}
+              Sign out
+            {% else %}
+              Sign in with Google
+            {% endif %}
+          </button>
+        </div>
+      </header>
+      <div class = "main content">
+        {% block content %}
+        
+        {% endblock %}
+      </div>
     </body>
 </html>

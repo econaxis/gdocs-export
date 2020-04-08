@@ -16,6 +16,8 @@ import os
 
 #Necessary for non HTTPS OAUTH calls
 os.environ["OAUTHLIB_RELAX_TOKEN_SCOPE"] = "1"
+
+#Adds pydoc path to import directory
 sys.path.insert(1, '../')
 
 
@@ -31,8 +33,22 @@ os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
 SCOPES = ['https://www.googleapis.com/auth/drive.metadata.readonly',
         'https://www.googleapis.com/auth/drive.activity.readonly']
 
-@app.route('/authorize/')
+
+@app.route('/authorize')
 def authorize():
+    if(not flask.session.get('signedin')):
+        return redirect(flask.url_for('glogin'))
+    else:
+        #Sign out called
+        flask.session.clear()
+
+        request = redirect(flask.url_for('home'))
+        request.set_cookie('userid', value = "", max_age = 0)
+        return request
+
+
+@app.route('/glogin')
+def glogin():
     #Expected point for start of authorization chain
     print("Starting authorization method")
 
@@ -64,7 +80,6 @@ def authorize():
 def oauth():
     #Second part of authorizatoin cycle
 
-
     state = flask.session['state']
 
     flow = google_auth_oauthlib.flow.Flow.from_client_secrets_file(
@@ -77,39 +92,45 @@ def oauth():
     flow.fetch_token(authorization_response=authorization_response)
 
 
-
     userid = str(uuid.uuid4())
     workingPath = homePath + "data/" + userid + "/"
-
+    Path(workingPath).mkdir(exist_ok = True)
 
     credentials = flow.credentials
     with open(workingPath + "creds.pickle", 'wb') as c:
       pickle.dump(credentials, c)
 
+    flask.session['signedin'] = True
+    flask.session['userid'] = userid
 
-    return flask.redirect(flask.url_for('process_data', userid = userid))
+    return flask.redirect(flask.url_for('formValidate'))
 
 @app.route("/process/")
-@app.route("/process/<userid>")
-def process_data(userid = None):
+@app.route("/process/<_userid>")
+def process_data(_userid = None):
+    print("received user id: %s"%_userid)
 
     #function can be called normally from oauth, when user first authenticates
     #or function can be called from URL without authenticate 
+    
+    userid = None
 
-
-    #Set cookie for process
-    htmlResponse = flask.make_response("Processing data")
-
-    #If there is a cookie and no userid is entered
-    if(flask.request.cookies.get('userid') and userid is None):
+    if(_userid != None):
+        userid = _userid
+    elif ('userid' in flask.session):
+        userid = flask.session['userid']
+    elif (flask.request.cookies.get('userid')):
         userid = flask.request.cookies.get('userid')
-    elif (not flask.request.cookies.get('userid') and userid is None):
+    else:
         print("No cookie nor userid entered, redirecting to auth page")
-        return flask.redirect(flask.url_for('authorize'))
+        return flask.redirect(flask.url_for('glogin'))
 
-    htmlResponse.set_data(htmlResponse.get_data(as_text = True) + "user id: \n"+userid)
+
+    flask.session['userid'] = userid
+
+    if(not check_signin(userid)):
+        return "invalid signin"
     #Store cookie for 30 days
-    htmlResponse.set_cookie('userid', userid, max_age  = 60*60*24*30)
 
     #Get working path from session, or create from homePath
     #Gets userId either from flask session or from params
@@ -120,29 +141,74 @@ def process_data(userid = None):
     print("USERID %s WPATH %s"%(userid, workingPath))
 
     #Check if there exists a creds.pickle file at USERID
-    if (not os.path.exists(workingPath+"creds.pickle")):
-        #Pickle doesn't exist?
-        #Reload back to authenticate screen
-        print("no creds found, wpath: %s"%workingPath)
-        return flask.redirect(flask.url_for('authorize'))
+
+
+    from get_files_loader import queueLoad
+
+    #curJob is not used for now
+    data = None
+    htmlResponse = flask.make_response()
+
+
+    fileId = None
+    if 'fileid' in flask.session:
+        fileId = flask.session["fileid"]
     else:
-        print("Nothing wrong")
-
-    import test
-    print("processing data...")
-    #test.main( userid, homePath, workingPath)
+        return "Invalid file ID"
 
 
+    if(os.path.exists(workingPath + 'streaming.txt') and not flask.session.get('newsession')):
+        print("session found")
+        data =  open(workingPath + 'streaming.txt', 'r').read()
+        DONE = os.path.exists(workingPath+ 'done.txt')
+        htmlResponse.set_data(render_template('process.html', data = data, userid = userid, DONE = DONE))
+    else:
+        print("new session started")
+        flask.session['newsession'] = False
+        curJob = queueLoad(userid, workingPath, fileId)
+        htmlResponse = redirect(flask.url_for('process_data', _userid = userid))
 
+
+    htmlResponse.set_cookie('userid', userid, max_age  = 60*60*24*30)
     return htmlResponse
-
 
 @app.route("/form", methods = ["GET", "POST"])
 def formValidate():
     form = Form()
-    print("submitting")
-    #if(form.validate_on_submit()):
-    return render_template('form.html', form = form)
+    if(form.validate_on_submit()):
+        print(form.fileId.data)
+        flask.session["fileid"] = form.fileId.data
+        if ('userid' in flask.session and check_signin(flask.session['userid'])):
+            flask.session['newsession'] = True
+            return redirect(flask.url_for('process_data', _userid = flask.session["userid"]))
+        else:
+            return "have to sign in"
 
+    print("signed in :" , flask.session.get('signedin'))
+    return render_template('main.html', _form = form, SIGNED_IN = flask.session.get('signedin'))
+
+@app.route("/")
+def home():
+    return redirect(flask.url_for('formValidate'))
+
+
+@app.route("/jek")
+def jek_serve():
+    print("strating")
+    return render_template('from_jekyll/test.html')
+
+
+@app.route('/dashapp')
+def dashapp():
+    return 'w'
+
+def check_signin(userid):
+    workingPath = homePath + "data/" + userid + "/"
+    if (not os.path.exists(workingPath+"creds.pickle")):
+        #Pickle doesn't exist?
+        #Reload back to authenticate screen
+        print("no creds found, wpath: %s"%workingPath)
+        return False
+    return True
 if __name__ == "__main__":
     app.run(debug = True)

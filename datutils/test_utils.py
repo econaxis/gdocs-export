@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import random
 from math import log
 from datetime import datetime
 import google.oauth2.credentials
@@ -15,11 +16,11 @@ from google.auth.transport.requests import Request
 
 class TestUtil:
     SCOPES = ['https://www.googleapis.com/auth/drive.metadata.readonly', 'https://www.googleapis.com/auth/drive.activity.readonly']
-    pydocPath = None
     creds = None
     headers = {}
     consecutiveErrors = 0
     workingPath = None
+    maxSize = 0
 
     @classmethod
     def formatData(cls, fileName = 'collapsedFiles'):
@@ -28,8 +29,8 @@ class TestUtil:
         ind = pd.MultiIndex.from_tuples(rdata.keys())
         data = pd.DataFrame(rdata.values(), index = ind, columns = ["Type"])
 
-        sumDates=data.reset_index(levels = 0, drop = True)
-        data.to_pickle(cls.workingPath + fileName + "_p.picke")
+        sumDates=data.reset_index(level = 0, drop = True)
+        data.to_pickle(cls.workingPath + fileName + "_p.pickle")
 
 
     @classmethod
@@ -62,7 +63,7 @@ class TestUtil:
             else:
                 raise "cls.creds not valid!"
             # Save the credentials for the next run
-            with open(path + 'token.pickle', 'wb') as token:
+            with open(path + 'creds.pickle', 'wb') as token:
                 pickle.dump(cls.creds, token)
 
         cls.creds.apply(cls.headers)
@@ -87,14 +88,23 @@ class TestUtil:
 
 
     @classmethod
-    async def print_size(cls, folder, file):
+    async def print_size(cls, files, lastModFile, FilePrintText, continuous = True):
         while True:
-            outputString = "FLDR SZ: %d FILE SZ: %d\n" %(folder.qsize(), file.qsize())
+            totalSize = files.qsize() + len(lastModFile)
+            outputString = "%s <b>%d out of %d (discovered items)</b> <br>" %(FilePrintText.text,len(lastModFile),  totalSize)
 
-            streamingFile = open(cls.pydocPath + "streaming.txt", 'a')
-            streamingFile.write(outputString)
+            FilePrintText.clear()
+
+            cls.strToFile(outputString, 'streaming.txt')
+
             print(outputString)
-            await asyncio.sleep(3)
+
+            if continuous: 
+                await asyncio.sleep(10)
+
+    @classmethod
+    def strToFile(cls, string, filename):
+        open(cls.workingPath + filename, 'a').write(string)
 
 
 
@@ -102,16 +112,20 @@ consecutiveErrors = 0
 def dr2_urlbuilder(id: str):
     return "https://www.googleapis.com/drive/v2/files/" + id + "/revisions"
 
-def API_RESET(seconds = 10):
+async def API_RESET(fpt, seconds = 60):
     global consecutiveErrors
     consecutiveErrors+=1
     seconds *=(consecutiveErrors)
-    for i in range(math.ceil(seconds/10)):
-        print(consecutiveErrors)
-        print("%d/%d"%(i, math.ceil(seconds/10)))
-        time.sleep(10)
 
-async def tryGetQueue(queue: asyncio.Queue, repeatTimes:int = 4, interval:float = 4, name:str = ""):
+    perUpdate =15
+    for i in range(math.ceil(seconds/perUpdate)):
+        print(consecutiveErrors)
+        TestUtil.strToFile("Waiting for GDrive... %d/%d <br>"%(i, math.ceil(seconds/perUpdate)), 'streaming.txt')
+        await asyncio.sleep(perUpdate)
+
+    await asyncio.sleep(random.randint(0, 30))
+
+async def tryGetQueue(queue: asyncio.Queue, repeatTimes:int = 5, interval:float = 3, name:str = ""):
     output = None
     timesWaited = 0
     while(output==None):
@@ -122,6 +136,6 @@ async def tryGetQueue(queue: asyncio.Queue, repeatTimes:int = 4, interval:float 
             if(timesWaited>repeatTimes):
                 return -1
             print(name, "  waiting %d / %d"%(timesWaited, repeatTimes))
-            await asyncio.sleep(interval)
+            await asyncio.sleep(interval + random.randint(0, 5))
     return output
 
