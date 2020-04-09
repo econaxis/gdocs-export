@@ -1,7 +1,6 @@
 data/*
 credentials.json
 secret/*
-data/*
 __pycache__/*
 bin/*
 include/*

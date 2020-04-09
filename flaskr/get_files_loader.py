@@ -1,4 +1,4 @@
-from get_files import loadFiles
+from flaskr.get_files import loadFiles
 from rq import Queue
 from redis import Redis
 

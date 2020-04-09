@@ -1,20 +1,23 @@
 from flask import Flask
-from flask_config import CONF
+from flaskr.flask_config import CONF
 
 
-def create_app():
-    app = Flask(__name__)
-    app.config.from_object(CONF)
+def create_flask_serv():
+    flask_serv = Flask(__name__)
+    flask_serv.config.from_object(CONF)
 
-    from auth_blueprint import auth_bp
-    from server_bp import server
+    from flaskr.auth_blueprint import auth_bp
+    from flaskr.server_bp import server
+    from flaskr.dashapp import register_dashapp
 
-    app.register_blueprint(auth_bp)
-    app.register_blueprint(server)
-    app.run(debug = True);
-    return app
+    register_dashapp(flask_serv)
+
+    flask_serv.register_blueprint(auth_bp)
+    flask_serv.register_blueprint(server)
+    flask_serv.run(debug = True);
+    return flask_serv
 
 
 if __name__ == '__main__':
-    create_app()
+    create_flask_serv()
 

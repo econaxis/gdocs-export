@@ -1,10 +1,10 @@
 from pathlib import Path
 import pickle
-from flask import render_template, flash, redirect, Blueprint
+from flask import render_template, flash, redirect, Blueprint, current_app
 import flask
 from flask import Flask
 from wtforms import StringField, PasswordField
-from form import Form
+from flaskr.form import Form
 import uuid
 import google.oauth2.credentials
 import google_auth_oauthlib.flow
@@ -20,7 +20,6 @@ def process_data(_userid = None):
 
     #function can be called normally from oauth, when user first authenticates
     #or function can be called from URL without authenticate 
-    
     userid = None
 
     if(_userid != None):
@@ -33,45 +32,37 @@ def process_data(_userid = None):
         print("No cookie nor userid entered, redirecting to auth page")
         return flask.redirect(flask.url_for('server.glogin'))
 
-
-    flask.session['userid'] = userid
-
     if(not check_signin(userid)):
         return "invalid signin"
-    #Store cookie for 30 days
-
-    #Get working path from session, or create from homePath
-    #Gets userId either from flask session or from params
 
     workingPath = current_app.config.get("HOMEPATH") + "data/" + userid + "/"
     Path(workingPath).mkdir(exist_ok = True)
+
+    flask.session['workingPath'] = workingPath
+    flask.session['userid'] = userid
+
 
     print("USERID %s WPATH %s"%(userid, workingPath))
 
     #Check if there exists a creds.pickle file at USERID
 
 
-    from get_files_loader import queueLoad
 
-    #curJob is not used for now
-    data = None
+    if(not flask.session.get("fileid")):
+        return "Invalid File Id or not entered"
+    fileId = flask.session.get("fileid")
+
     htmlResponse = flask.make_response()
 
-
-    fileId = None
-    if 'fileid' in flask.session:
-        fileId = flask.session["fileid"]
-    else:
-        return "Invalid file ID"
-
-
     if(os.path.exists(workingPath + 'streaming.txt') and not flask.session.get('newsession')):
+        data = None
         print("session found")
         data =  open(workingPath + 'streaming.txt', 'r').read()
         DONE = os.path.exists(workingPath+ 'done.txt')
         htmlResponse.set_data(render_template('process.html', data = data, userid = userid, DONE = DONE))
     else:
-        print("new session started")
+
+        from flaskr.get_files_loader import queueLoad
         flask.session['newsession'] = False
         curJob = queueLoad(userid, workingPath, fileId)
         htmlResponse = redirect(flask.url_for('server.process_data', _userid = userid))

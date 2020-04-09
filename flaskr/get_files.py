@@ -17,7 +17,7 @@ from pathlib import Path
 
 
 #Imports TestUtil and corresponding functions
-from datutils.test_utils import *
+from flaskr.datutils.test_utils import *
 
 pp = pprint.PrettyPrinter(indent=4);
 
