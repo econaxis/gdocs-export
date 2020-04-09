@@ -241,7 +241,7 @@ def loadFiles(USER_ID, _workingPath, fileId):
     #Load pickle file. Should have been made by Flask/App.py
     #in authorization step
 
-    from datutils.test_utils import TestUtil
+    from flaskr.datutils.test_utils import TestUtil
     TestUtil.workingPath = workingPath
 
 

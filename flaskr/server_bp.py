@@ -109,5 +109,3 @@ def check_signin(userid):
         print("no creds found, wpath: %s"%workingPath)
         return False
     return True
-if __name__ == "__main__":
-    app.run(debug = True)
