@@ -2,7 +2,6 @@ data/*
 credentials.json
 secret/*
 __pycache__/*
-bin/*
-include/*
-lib/*
+flaskr/__pycache__/*
+flaskr/dashapp/__pycache__/*
 
