@@ -1,4 +1,5 @@
 aiohttp==3.6.2
+setuptools==45
 async-timeout==3.0.1
 attrs==19.3.0
 Automat==0.6.0
@@ -115,7 +116,7 @@ SecretStorage==2.3.1
 Send2Trash==1.5.0
 service-identity==16.0.0
 six==1.14.0
-ssh-import-id==5.7
+-e git+https://git.launchpad.net/ssh-import-id#egg=master
 terminado==0.8.3
 testpath==0.4.4
 text-unidecode==1.3
