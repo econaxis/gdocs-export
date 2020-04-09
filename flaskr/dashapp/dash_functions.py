@@ -15,17 +15,15 @@ from dash.dash import no_update
 from flask_caching import Cache
 from pprint import PrettyPrinter
 
-path  = None
-
-def setPath(_path):
-    global path
-    path = _path
+pp = PrettyPrinter(indent = 4)
 
 def serializeDT(d) :
     return o.__str__()
 
 def genOptList(path):
+    print("gen opt list path: ", path)
     cols=pd.read_pickle(path + 'collapsedFiles_p.pickle').index.levels[0].to_list()
+    pp.pprint(cols)
     ret = []
     ret.append(dict(label="sumDates", value="sumDates"))
     for c in cols:
@@ -46,58 +44,16 @@ def gen_fListFig(path):
     ),
         layout={
         'clickmode': 'event+select',
-        'margin' : {
-            'l':50,
-            'b':100,
-            't':50,
-            'r':0
+        'margin': gen_margin(),
+        'title' : "Bubble Chart",
+        'xaxis': {
+            'visible': False
         }
     }
     )
     return fListFig
 
 
-
-def get_layout():
-    global path
-    return html.Div([
-        html.Div([
-            dcc.Graph(
-                id="fList",
-                figure = gen_fListFig(path)
-            ), dcc.Dropdown(
-                id="dropdown",
-                options=genOptList(path),
-                value="sumDates"
-            )
-            ], className = "six columns",
-            style = {
-            'margin': gen_margin(l = 20)
-            }
-        ),
-        html.Div([
-            dcc.Graph(
-                id = "histogram"
-            ),
-            html.Button(
-                "Reset Histogram",
-                id = "reset_histogram"
-            )
-        ], className = "six columns"),
-        html.Div(
-            id = "csvdata", style = {'display': 'none'}
-        ),
-        html.Div(
-            id = "zoomInfo", style = {'display': 'none'}
-        ),
-        html.Div([
-            dcc.Graph(
-                id="lineWord"
-            )
-        ], className = "four columns",
-        style={'display':'none'})
-
-    ])
 
 def redo_Histogram(times, minDate, maxDate):
     hists = [0, 0]
