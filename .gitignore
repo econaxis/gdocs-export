@@ -1,3 +1,7 @@
 data/*
 credentials.json
->>>>>>> safe
+secret/*
+__pycache__/*
+flaskr/__pycache__/*
+flaskr/dashapp/__pycache__/*
+

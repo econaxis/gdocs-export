@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block SIBLOCK %}
+  {% if SIGNED_IN %}
+    Sign out
+  {% else %}
+    Sign in with Google
+  {% endif %}
+{% endblock %}
+
+
+{% block content %}
+<h3 id="file-id-submission-form">File Id Submission Form</h3>
+
+
+{% include '_info.html' %}
+
+<hr>
+
+{% if not SIGNED_IN %}
+  <div class = "justifyCenter">
+    <button class = "button button4 four columns" onclick = "location.href = ' {{ url_for('auth_bp.authorize') }} '">Sign in with Google</button>
+  </div>
+{% else %}
+  {% with %}
+    {% set form = _form %}
+    {% include '_form.html' %}
+  {% endwith %}
+{% endif %}
+
+{% endblock %}
