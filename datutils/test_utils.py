@@ -118,12 +118,13 @@ async def API_RESET(fpt, seconds = 60):
     seconds *=(consecutiveErrors)
 
     perUpdate =15
-    for i in range(math.ceil(seconds/perUpdate)):
+    secInterval = math.ceil(seconds/perUpdate)
+    for i in range(secInterval):
         print(consecutiveErrors)
-        TestUtil.strToFile("Waiting for GDrive... %d/%d <br>"%(i, math.ceil(seconds/perUpdate)), 'streaming.txt')
+        TestUtil.strToFile("Waiting for GDrive... %d/%d <br>"%(i, secInterval), 'streaming.txt')
         await asyncio.sleep(perUpdate)
 
-    await asyncio.sleep(random.randint(0, 30))
+    await asyncio.sleep(random.randint(0, 15))
 
 async def tryGetQueue(queue: asyncio.Queue, repeatTimes:int = 5, interval:float = 3, name:str = ""):
     output = None
@@ -136,6 +137,6 @@ async def tryGetQueue(queue: asyncio.Queue, repeatTimes:int = 5, interval:float 
             if(timesWaited>repeatTimes):
                 return -1
             print(name, "  waiting %d / %d"%(timesWaited, repeatTimes))
-            await asyncio.sleep(interval + random.randint(0, 5))
+            await asyncio.sleep(interval + random.randint(0, 15))
     return output
 

@@ -19,7 +19,7 @@
 
 {% if not SIGNED_IN %}
   <div class = "justifyCenter">
-    <button class = "button button4 two columns" onclick = "location.href = ' {{ url_for('authorize') }} '">Sign in with Google</button>
+    <button class = "button button4 four columns" onclick = "location.href = ' {{ url_for('authorize') }} '">Sign in with Google</button>
   </div>
 {% else %}
   {% with %}
