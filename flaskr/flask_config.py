@@ -11,7 +11,7 @@ sys.path.insert(1, '../')
 class Config:
     SECRET_KEY = "dsfjslkfdsjflkdsa;fsajl;fakj"
     HOMEPATH = "/app/"
-    HOMEDATAPATH = "/app/data"
+    HOMEDATAPATH = "/app/data/"
     PRESERVE_CONTEXT_ON_EXCEPTION = True
     TRAP_HTTP_EXCEPTIONS = True
     TRAP_BAD_REQUEST_ERRORS = True
