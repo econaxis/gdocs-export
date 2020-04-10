@@ -247,6 +247,9 @@ def loadFiles(USER_ID, _workingPath, fileId, _creds):
 
 
 
+    if(len(collapsedFiles) is 0 or len(pathedFiles) is 0):
+        return "No files found for this id. check invalid"
+
 
     TestUtil.formatData()
 
