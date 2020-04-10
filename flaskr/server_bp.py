@@ -38,6 +38,8 @@ def process_data(_userid = None):
     workingPath = current_app.config.get("HOMEPATH") + "data/" + userid + "/"
     Path(workingPath).mkdir(exist_ok = True)
 
+    print("server_bp made directory at ", workingPath)
+
     flask.session['workingPath'] = workingPath
     flask.session['userid'] = userid
 
