@@ -13,7 +13,6 @@ class Loader:
     pydocPath = None
     @classmethod
     def setpdpath (cls, _pydocPath):
-        print("set pd")
         cls.pydocPath = _pydocPath
 
     @classmethod
@@ -37,7 +36,6 @@ def url_to_path(url):
     return hdpath + url[6:] + '/'
 
 def register_callback(app):
-    print("register cb")
     @app.callback(
         Output("dropdown", "value"),
         [Input("fList", "hoverData"), Input("fList", "selectedData")])
@@ -131,9 +129,6 @@ def register_callback(app):
     )
     def return_layout(path):
         path = url_to_path(path)
-
-        print("printing layout: ", path)
-
         return [html.Div([
                 dcc.Graph(
                     id="fList",

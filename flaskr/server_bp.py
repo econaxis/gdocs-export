@@ -111,7 +111,7 @@ def dashapp(userid):
     if(os.path.exists(current_app.config['HOMEDATAPATH'] + userid + '/DONE.txt')):
         return redirect("/dash/" + userid)
     else:
-        return "cur job not done"
+        return "cur job not done, don't try to access dash app"
 
 
 
