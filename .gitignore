@@ -2,5 +2,5 @@ __pycache__/**
 flaskr/__pycache__/**
 flaskr/dashapp/__pycache__/**
 data/**
-
+**/__pycache__
 
