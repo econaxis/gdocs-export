@@ -61,7 +61,11 @@ def process_data(_userid = None):
         print("session found")
         data =  open(workingPath + 'streaming.txt', 'r').read()
         DONE = os.path.exists(workingPath+ 'done.txt')
-        htmlResponse.set_data(render_template('process.html', data = data, userid = userid, DONE = DONE))
+
+
+        #TODO: change global url prefix /dash/ to CONFIG file
+        htmlResponse.set_data(render_template('process.html', data = data, userid = userid, DONE = DONE,
+            DASH_LOC = "/dash/" + userid))
     else:
 
         from flaskr.get_files_loader import queueLoad
@@ -83,7 +87,7 @@ def formValidate():
             flask.session['newsession'] = True
             return redirect(flask.url_for('server.process_data', _userid = flask.session["userid"]))
         else:
-            return "have to sign in"
+            return "No credentials found for current user! This may be a bug, you need to go back to the homepage, sign out, then sign in again." 
 
     print("signed in :" , flask.session.get('signedin'))
     return render_template('main.html', _form = form, SIGNED_IN = flask.session.get('signedin'))
