@@ -74,9 +74,12 @@ def oauth():
     workingPath = current_app.config["HOMEPATH"] +  "data/" + userid + "/"
     Path(workingPath).mkdir(exist_ok = True)
 
+    print("auth_bp made directory at ", workingPath)
+
     credentials = flow.credentials
     with open(workingPath + "creds.pickle", 'wb') as c:
       pickle.dump(credentials, c)
+      print("auth_bp dumped credentials at ", workingPath + "creds.pickle")
 
     flask.session['signedin'] = True
     flask.session['userid'] = userid
