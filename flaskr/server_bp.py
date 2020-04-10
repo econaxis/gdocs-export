@@ -21,38 +21,28 @@ def process_data(_userid = None):
     #function can be called normally from oauth, when user first authenticates
     #or function can be called from URL without authenticate 
     userid = None
-
-    if(_userid != None):
+    if(_userid is not None):
         userid = _userid
     elif ('userid' in flask.session):
         userid = flask.session['userid']
     elif (flask.request.cookies.get('userid')):
         userid = flask.request.cookies.get('userid')
     else:
-        print("No cookie nor userid entered, redirecting to auth page")
-        return flask.redirect(flask.url_for('server.glogin'))
+        return "no user id found"
 
-    if(not check_signin(userid)):
-        return "invalid signin"
-
-    workingPath = current_app.config.get("HOMEPATH") + "data/" + userid + "/"
-    Path(workingPath).mkdir(exist_ok = True)
-
-    print("server_bp made directory at ", workingPath)
-
-    flask.session['workingPath'] = workingPath
+    creds = check_signin(userid, load_creds = True)
+    if(creds is None or creds is False):
+        return "creds not found for this userid, go back to home page"
+    else:
+        print("creds are valid")
     flask.session['userid'] = userid
 
+    workingPath = current_app.config.get("HOMEPATH") + "data/" + userid + "/"
+
+    flask.session['workingPath'] = workingPath
 
     print("USERID %s WPATH %s"%(userid, workingPath))
 
-    #Check if there exists a creds.pickle file at USERID
-
-
-
-    if(not flask.session.get("fileid")):
-        return "Invalid File Id or not entered"
-    fileId = flask.session.get("fileid")
 
     htmlResponse = flask.make_response()
 
@@ -62,56 +52,77 @@ def process_data(_userid = None):
         data =  open(workingPath + 'streaming.txt', 'r').read()
         DONE = os.path.exists(workingPath+ 'done.txt')
 
-
         #TODO: change global url prefix /dash/ to CONFIG file
         htmlResponse.set_data(render_template('process.html', data = data, userid = userid, DONE = DONE,
-            DASH_LOC = "/dash/" + userid))
-    else:
-
+            DASH_LOC = "/dashapp/" + userid))
+    elif ('fileid' in flask.session):
+        fileId = flask.session.get("fileid")
         from flaskr.get_files_loader import queueLoad
         flask.session['newsession'] = False
-        curJob = queueLoad(userid, workingPath, fileId)
+        curJob = queueLoad(userid, workingPath, fileId, creds)
         htmlResponse = redirect(flask.url_for('server.process_data', _userid = userid))
-
+    else:
+        return """
+            There is no file id found for the requested userid. This may be because you did not enter a fileid in <br>
+            the previous page, or you entered the wrong userid
+            """
 
     htmlResponse.set_cookie('userid', userid, max_age  = 60*60*24*30)
     return htmlResponse
 
+
 @server.route("/form", methods = ["GET", "POST"])
 def formValidate():
     form = Form()
+
+    userid = None
+
+    if ('userid' in flask.session):
+        userid = flask.session['userid']
+    elif (flask.request.cookies.get('userid')):
+        userid = flask.request.cookies.get('userid')
+    else:
+        userid = str(uuid.uuid4())
+
+    flask.session["userid"] = userid
+
+    creds = check_signin(userid)
+
     if(form.validate_on_submit()):
-        print(form.fileId.data)
         flask.session["fileid"] = form.fileId.data
-        if ('userid' in flask.session and check_signin(flask.session['userid'])):
+        if (check_signin(flask.session['userid']) and flask.session.get('signedin')):
             flask.session['newsession'] = True
             return redirect(flask.url_for('server.process_data', _userid = flask.session["userid"]))
         else:
-            return "No credentials found for current user! This may be a bug, you need to go back to the homepage, sign out, then sign in again." 
+            return "No credentials found for current user! This may be a bug, \
+                you need to go back to the homepage, sign out, then sign in again."
 
-    print("signed in :" , flask.session.get('signedin'))
-    return render_template('main.html', _form = form, SIGNED_IN = flask.session.get('signedin'))
+    httpResp = flask.make_response(render_template('main.html', _form = form))
+    httpResp.set_cookie('userid', userid, max_age  = 60*60*24*30)
+    return httpResp
 
 @server.route("/")
 def home():
     return redirect(flask.url_for('server.formValidate'))
 
 
-@server.route("/jek")
-def jek_serve():
-    print("strating")
-    return render_template('from_jekyll/test.html')
+@server.route('/dashapp/<userid>')
+def dashapp(userid):
+    if(os.path.exists(current_app.config['HOMEDATAPATH'] + userid + '/DONE.txt')):
+        return redirect("/dash/" + userid)
+    else:
+        return "cur job not done"
 
 
-@server.route('/dashapp')
-def dashapp():
-    return 'w'
 
-def check_signin(userid):
+def check_signin(userid, load_creds = False):
     workingPath = current_app.config.get("HOMEPATH") + "data/" + userid + "/"
     if (not os.path.exists(workingPath+"creds.pickle")):
         #Pickle doesn't exist?
         #Reload back to authenticate screen
         print("no creds found, wpath: %s"%workingPath)
         return False
-    return True
+    if (not load_creds):
+        return True
+    with open(workingPath + "creds.pickle", 'rb') as cr:
+        return pickle.load(cr)

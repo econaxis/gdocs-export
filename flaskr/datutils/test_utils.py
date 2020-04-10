@@ -51,21 +51,21 @@ class TestUtil:
 
 
     @classmethod
-    def creds_from_pickle(cls):
+    def refresh_creds(cls, creds):
         path = cls.workingPath
-
-        with open(path+'creds.pickle', 'rb') as cr:
-            cls.creds = pickle.load(cr)
+        cls.creds = creds
 
         if not cls.creds or not cls.creds.valid:
             if cls.creds and cls.creds.expired and cls.creds.refresh_token:
                 cls.creds.refresh(Request())
             else:
                 raise "cls.creds not valid!"
+
+            '''
             # Save the credentials for the next run
             with open(path + 'creds.pickle', 'wb') as token:
                 pickle.dump(cls.creds, token)
-
+            '''
         cls.creds.apply(cls.headers)
         return cls.creds
 
@@ -117,13 +117,14 @@ async def API_RESET(fpt, seconds = 60):
     consecutiveErrors+=1
     seconds *=(consecutiveErrors)
 
-    perUpdate =15
-    secInterval = math.ceil(seconds/perUpdate)
+    perUpdate = 25
+    secInterval = math.round(seconds/perUpdate)
     for i in range(secInterval):
         print(consecutiveErrors)
         TestUtil.strToFile("Waiting for GDrive... %d/%d <br>"%(i, secInterval), 'streaming.txt')
         await asyncio.sleep(perUpdate)
 
+    time.sleep(random.randint(5, 20))
     await asyncio.sleep(random.randint(0, 15))
 
 async def tryGetQueue(queue: asyncio.Queue, repeatTimes:int = 5, interval:float = 3, name:str = ""):

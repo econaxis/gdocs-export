@@ -1,4 +1,6 @@
-__pycache__/*
-flaskr/__pycache__/*
-flaskr/dashapp/__pycache__/*
+__pycache__/**
+flaskr/__pycache__/**
+flaskr/dashapp/__pycache__/**
+data/**
+
 

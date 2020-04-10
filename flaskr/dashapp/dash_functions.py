@@ -12,7 +12,6 @@ from datetime import datetime, timedelta
 from math import log
 from dash.dependencies import Input, Output, State
 from dash.dash import no_update
-from flask_caching import Cache
 from pprint import PrettyPrinter
 
 pp = PrettyPrinter(indent = 4)

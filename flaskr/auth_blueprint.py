@@ -18,7 +18,6 @@ def authorize():
     else:
         #Sign out called
         flask.session.clear()
-
         request = redirect(flask.url_for('server.home'))
         request.set_cookie('userid', value = "", max_age = 0)
         return request
@@ -29,11 +28,6 @@ def glogin():
     #Expected point for start of authorization chain
     print("Starting authorization method")
     print(current_app.config)
-
-    #config = Config(HOMEPATH = HOMEPATH)
-#    config.generate_id()
-    #app.config.from_object(config.get_flask_config())
-    #app.config.from_ob
 
 
     #Use server secret file
@@ -69,12 +63,11 @@ def oauth():
 
     flow.fetch_token(authorization_response=authorization_response)
 
+    userid = flask.session["userid"]
 
-    userid = str(uuid.uuid4())
     workingPath = current_app.config["HOMEPATH"] +  "data/" + userid + "/"
     Path(workingPath).mkdir(exist_ok = True)
 
-    print("auth_bp made directory at ", workingPath)
 
     credentials = flow.credentials
     with open(workingPath + "creds.pickle", 'wb') as c:
@@ -82,7 +75,6 @@ def oauth():
       print("auth_bp dumped credentials at ", workingPath + "creds.pickle")
 
     flask.session['signedin'] = True
-    flask.session['userid'] = userid
 
     return flask.redirect(flask.url_for('server.formValidate'))
 
