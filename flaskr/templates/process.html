@@ -15,7 +15,7 @@
 </div>
 
 {% if DONE %}
-<button class = "button button4 twelve columns" oncick = "href.location = '{{ DASH_LOC }}'"> View results </button>
+<button class = "button button4 twelve columns" oncick = "location.href='{{ DASH_LOC }}'"> View results </button>
 {% else %}
   <button class = "button button4 twelve columns disabled" onclick = "alert('Wait a moment until all data has been processed')"> View results (data has not finished yet) </button>
 {% endif %}
