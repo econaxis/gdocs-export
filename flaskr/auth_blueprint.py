@@ -27,8 +27,6 @@ def authorize():
 def glogin():
     #Expected point for start of authorization chain
     print("Starting authorization method")
-    print(current_app.config)
-
 
     #Use server secret file
     flow = google_auth_oauthlib.flow.Flow.from_client_secrets_file(
