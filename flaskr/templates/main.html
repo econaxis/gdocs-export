@@ -17,7 +17,7 @@
 
 <hr>
 
-{% if not SIGNED_IN %}
+{% if not session.signedin %}
   <div class = "justifyCenter">
     <button class = "button button4 four columns" onclick = "location.href = ' {{ url_for('auth_bp.authorize') }} '">Sign in with Google</button>
   </div>

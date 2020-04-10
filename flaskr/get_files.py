@@ -33,23 +33,17 @@ class FilePrintText:
         cls.text = ""
 
 
-
-workingPath = None
-
-
-worksDone = 0
-
 lastModFile = {}
 MAX_FILES = 20000
 ENABLE_FILESIZE = False
 collapsedFiles = {}
 pathedFiles = {}
-creds = 0
+
 consecutiveErrors = 1
 
-SEED_ID = "0B4Fujvv5MfqbeTVRc3hIbXRfNE0"
+SEED_ID = "root"
 
-workerInstances = 5
+workerInstances = 3
 
 def exceptionHandler(loop, context):
     #loop.default_exception_handler(context)
@@ -189,7 +183,7 @@ async def getRevision(files: asyncio.Queue, session: aiohttp.ClientSession, head
 
 SCOPES = ['https://www.googleapis.com/auth/drive.metadata.readonly', 'https://www.googleapis.com/auth/drive.activity.readonly'] 
 
-async def start(creds):
+async def start():
     global SEED_ID, workerInstances, lastModFile
 
 
@@ -230,33 +224,26 @@ async def start(creds):
 
 
 
-def loadFiles(USER_ID, _workingPath, fileId):
-    global creds, workingPath
-
-    workingPath = _workingPath
-
+def loadFiles(USER_ID, _workingPath, fileId, _creds):
 
     print("USER ID: %s"%USER_ID, " ", fileId)
 
     #Load pickle file. Should have been made by Flask/App.py
     #in authorization step
 
-    from flaskr.datutils.test_utils import TestUtil
-    TestUtil.workingPath = workingPath
+    TestUtil.refresh_creds(_creds)
+    TestUtil.workingPath = _workingPath
 
-
-    creds = TestUtil.creds_from_pickle()
-
-    print("Creds load successful")
 
     if(fileId != None):
         global SEED_ID
         SEED_ID = fileId
-    #Main loop
-    asyncio.run(start(creds), debug = True)
 
-    pickle.dump(collapsedFiles, open(workingPath + 'collapsedFiles.pickle', 'wb'))
-    pickle.dump(pathedFiles, open(workingPath + 'pathedFiles.pickle', 'wb'))
+    #Main loop
+    asyncio.run(start(), debug = True)
+
+    pickle.dump(collapsedFiles, open(_workingPath + 'collapsedFiles.pickle', 'wb'))
+    pickle.dump(pathedFiles, open(_workingPath + 'pathedFiles.pickle', 'wb'))
 
 
 
@@ -265,15 +252,13 @@ def loadFiles(USER_ID, _workingPath, fileId):
 
     TestUtil.activity_gen()
 
-    open(workingPath + 'done.txt', 'a+').write("DONE")
+    open(_workingPath + 'done.txt', 'a+').write("DONE")
  #   asyncio.DefaultEventLoopPolicy = asyncio.WindowsSelectorEventLoopPolicy
 
 if __name__ == "__main__":
 
     #Default settings
-
-
     uid = "5a80b6d0-07bb-42c2-a023-15894be46026"
     homePath =  "/mnt/c/users/henry/documents/pydocs/"
-    workingPath = homePath + 'data/' + uid + '/'
-    loadFiles(uid, workingPath)
+    TestUtil.workingPath =  homePath + 'data/' + uid + '/'
+    loadFiles(uid, TestUtil.workingPath)
