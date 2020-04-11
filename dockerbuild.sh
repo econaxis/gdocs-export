@@ -5,4 +5,5 @@ if [ -z "$1" ]
 then
   echo "pushing to registry"
   docker push registry.heroku.com/pydocs123/web
+  heroku container:release web
 fi
