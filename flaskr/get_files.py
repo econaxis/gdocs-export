@@ -82,8 +82,8 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue, files: asyncio.Queu
             query = "'" + id + "' in parents"
 
         #Searches all drives including shared files.
-        data = dict(q=query, corpora = "allDrives", includeItemsFromAllDrives = True, 
-                supportsTeamDrives = True)
+        data = dict(q=query, corpora = "allDrives", includeItemsFromAllDrives = 1, 
+                supportsTeamDrives = 1)
         async with session.get(url = drive_url, params = data, headers = headers) as response:
 
             if(response.status != 200):
