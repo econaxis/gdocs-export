@@ -119,7 +119,7 @@ def dashapp(userid):
 def dbg():
     userid = "debug mode"
     data = open('streaming.txt', 'r').read()
-    return render_template('process.html', data = data, userid = userid, DONE = DONE, DASH_LOC = "dsds")
+    return render_template('process.html', data = data, userid = userid, DONE = True, DASH_LOC = "dsds")
 
 
 def check_signin(userid, load_creds = False):
