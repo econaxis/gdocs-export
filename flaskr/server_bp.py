@@ -122,7 +122,7 @@ def dbg():
     return render_template('process.html', data = data, userid = userid, DONE = True, DASH_LOC = "dsds")
 
 @server.route('/errors')
-def dbg():
+def dbg1():
     userid = "error s"
     data = open('errors.txt', 'r').read()
     return render_template('process.html', data = data, userid = userid, DONE = True, DASH_LOC = "dsds")
