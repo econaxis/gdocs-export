@@ -66,7 +66,6 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue, files: asyncio.Queu
     #Query to pass into Drive to find item
 
     while (files.qsize() + len(lastModFile) < MAX_FILES):
-        print(1)
         #Wait for folders queue, with interval 6 seconds between each check
         #Necessary if more than one workers all starting at the same time,
         #with only one seed ID to start
@@ -76,14 +75,15 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue, files: asyncio.Queu
         (id, path) = folderIdTuple
 
         #Root id is different structure
+        data = None
         if(id == "root"):
-            query = None
+            data = dict( corpora = "allDrives", includeItemsFromAllDrives = 'true', supportsTeamDrives = 'true')
         else:
             query = "'" + id + "' in parents"
-
+            data = dict(q=query, corpora = "allDrives", includeItemsFromAllDrives = 'true',
+                supportsTeamDrives = 'true')
         #Searches all drives including shared files.
-        data = dict(q=query, corpora = "allDrives", includeItemsFromAllDrives = 1, 
-                supportsTeamDrives = 1)
+
         async with session.get(url = drive_url, params = data, headers = headers) as response:
 
             if(response.status != 200):
@@ -158,6 +158,7 @@ async def getRevision(files: asyncio.Queue, session: aiohttp.ClientSession, head
                 else:
                     consecutiveErrors=1
                     revisions = await revResponse.json()
+                    open("streaming.txt", "a+").write(await revResponse.text())
                     revisions = revisions["items"]
 
                     act = await actResponse.json()
