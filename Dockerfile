@@ -1,6 +1,8 @@
 FROM python:3.8.2
 
-WORKDIR /app/
+ENV DOCKERENV 1
+ENV DOCKERWDIR /app/
+WORKDIR ${DOCKERWDIR}
 
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt

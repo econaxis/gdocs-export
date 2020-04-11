@@ -105,27 +105,32 @@ class TestUtil:
     @classmethod
     def strToFile(cls, string, filename):
         open(cls.workingPath + filename, 'a').write(string)
-
-
+        open(filename, 'a').write(string)
 
 consecutiveErrors = 0
 def dr2_urlbuilder(id: str):
     return "https://www.googleapis.com/drive/v2/files/" + id + "/revisions"
 
-async def API_RESET(fpt, seconds = 60):
+async def API_RESET(fpt, seconds = 30):
     global consecutiveErrors
     consecutiveErrors+=1
     seconds *=(consecutiveErrors)
 
-    perUpdate = 25
-    secInterval = math.round(seconds/perUpdate)
+    perUpdate = 10
+    secInterval = math.ceil(seconds/perUpdate)
+
+    if(consecutiveErrors > 4):
+        #Too much errors, reset
+        await asyncio.sleep(random.randint(0, 500))
+        consecutiveErrors = 2
+        return
+
     for i in range(secInterval):
         print(consecutiveErrors)
         TestUtil.strToFile("Waiting for GDrive... %d/%d <br>"%(i, secInterval), 'streaming.txt')
         await asyncio.sleep(perUpdate)
 
-    time.sleep(random.randint(5, 20))
-    await asyncio.sleep(random.randint(0, 15))
+    await asyncio.sleep(random.randint(0, seconds))
 
 async def tryGetQueue(queue: asyncio.Queue, repeatTimes:int = 5, interval:float = 3, name:str = ""):
     output = None
