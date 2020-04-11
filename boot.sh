@@ -5,8 +5,6 @@ rq worker -c flaskr.rqsets &>  data/a/streaming.txt &
 rq worker -c flaskr.rqsets &>  data/a/streaming.txt &
 rq worker -c flaskr.rqsets &>  data/a/streaming.txt &
 rq worker -c flaskr.rqsets &>  data/a/streaming.txt &
-rq worker -c flaskr.rqsets &>  data/a/streaming.txt &
-rq worker -c flaskr.rqsets &>  data/a/streaming.txt &
 
 
 echo "Running gunicorn server now"
