@@ -113,16 +113,18 @@ def dr2_urlbuilder(id: str):
 
 async def API_RESET(seconds = 30):
     global consecutiveErrors
+    TestUtil.refresh_creds(TestUtil.creds)
     consecutiveErrors+=1
     seconds *=(consecutiveErrors)
 
     perUpdate = 10
     secInterval = math.ceil(seconds/perUpdate)
 
-    if(consecutiveErrors > 4):
+    if(consecutiveErrors > 1):
         #Too much errors, reset
-        await asyncio.sleep(random.randint(0, 500))
-        consecutiveErrors = 2
+        secs = random.randint(0, 50)
+        TestUtil.strToFile("Waiting for GDrive... %d<br>"%(secs), 'streaming.txt')
+        await asyncio.sleep(secs)
         return
 
     for i in range(secInterval):
