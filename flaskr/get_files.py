@@ -86,24 +86,10 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue, files: asyncio.Queu
 
         async with session.get(url = drive_url, params = data, headers = headers) as response:
 
-            if(response.status != 200):
-                #Checks if passed GDrive limit
-                if(response.status == 403):
-                    print("Waiting for GDrive API Limit...")
-                    FilePrintText.add("Waiting for GDrive API Limit...")
-                    pp.pprint(await response.text())
-                    #Reset, add ID back to queue as this item will not be processed
-                    await folders.put(folderIdTuple)
-                else:
-                    print("Not 403, But Error")
-                    print(await response.text())
-                await API_RESET(FilePrintText)
-            else:
+            if (response.status == 200):
                 global consecutiveErrors
                 consecutiveErrors = 1
                 DriveResponse = await response.json()
-
-
                 #Classify item type by file or folder
                 #If folder, then add back to folder queue for further processing
                 for resFile in DriveResponse["files"]:
@@ -111,7 +97,9 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue, files: asyncio.Queu
                         await folders.put( (resFile["id"], path + [resFile["name"]]) )
                     elif (resFile["mimeType"] == "application/vnd.google-apps.document"):
                         await files.put((resFile["id"], resFile["name"], path + [resFile["name"]]))
-
+            else:
+                FilePrintText.add("Waiting for GDrive API Limit...")
+                await folders.put(folderIdTuple)
 
         #Mark task as done for folders.join() to properly work
         folders.task_done()
@@ -141,33 +129,28 @@ async def getRevision(files: asyncio.Queue, session: aiohttp.ClientSession, head
         revisions  = {}
         async with session.get(url = dr2_urlbuilder(fileId), headers = headers) as revResponse:
             async with session.post(**TestUtil.dractivity_builder(fileId)) as actResponse:
-                if(revResponse.status != 200 or actResponse.status != 200):
-                    #Checks if passed GDrive limit
-                    if(revResponse.status == (403 or 429) or actResponse.status == (403 or 429)):
-                        print("Waiting for GDrive API Limit...")
-                        FilePrintText.add("Waiting for GDrive API Limit...")
-                        #Reset, add ID back to queue
-                        await files.put(fileTuple)
-                    else:
-                        print("non 403 error")
-                        #Assuming revResponse does not violate quota
-                        print(await actResponse.text())
-
-                    open("errors.txt", 'a').write(await revResponse.text() + await actResponse.text())
-                    await API_RESET(FilePrintText)
-                else:
+                if(revResponse.status == 200):
                     consecutiveErrors=1
                     revisions = await revResponse.json()
                     open("streaming.txt", "a+").write(await revResponse.text() + await actResponse.text())
                     revisions = revisions["items"]
 
                     act = await actResponse.json()
-                    act = act["activities"]
+
+                    if('activities' not in act):
+                        open('errors.txt', 'a+').write(act)
+                    act = act.get("activities", [dict(timestamp = "2019-03-13T01:34:24.629Z")])
 
                     #Append activities gained through driveactivity in structure "act"
                     #to revisions, which can be processed all in one by following code
                     for a in act:
                         revisions.append(dict(modifiedDate = a["timestamp"]))
+                else:
+                    FilePrintText.add("Waiting for GDrive API Limit (Revisions)...")
+                    await files.put(fileTuple)
+                    open("errors.txt", 'a').write(await revResponse.text() + await actResponse.text())
+                    await API_RESET(FilePrintText)
+
         for item in revisions:
             global ENABLE_FILESIZE
 
