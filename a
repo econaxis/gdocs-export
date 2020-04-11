@@ -1,0 +1,4 @@
+16:17:46 Worker rq:worker:9202792e72da44d88f34a855724613ef: started, version 1.3.0
+16:17:46 *** Listening on default...
+16:17:46 Cleaning registries for queue: default
+16:17:54 Warm shut down requested

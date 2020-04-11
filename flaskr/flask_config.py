@@ -11,12 +11,15 @@ sys.path.insert(1, '../')
 class Config:
     SECRET_KEY = "dsfjslkfdsjflkdsa;fsajl;fakj"
     
-    if('FLASKDBG' not in os.environ):
+    if('FLASKDBG' in os.environ):
+        HOMEPATH= "/home/henry/pydocs/"
+        HOMEDATAPATH = "/home/henry/pydocs/data/"
+    elif('DOCKERENV' in os.environ):
+        HOMEPATH= os.environ["DOCKERWDIR"]
+        HOMEDATAPATH = HOMEPATH + 'data/'
+    else:
         HOMEPATH = "/app/"
         HOMEDATAPATH = "/app/data/"
-    else:
-        HOMEPATH= "/home/henry/pydocs/"
-        HOMEDATAPATH = "/home/henry/pydocs/data"
     PRESERVE_CONTEXT_ON_EXCEPTION = True
     TRAP_HTTP_EXCEPTIONS = True
     TRAP_BAD_REQUEST_ERRORS = True

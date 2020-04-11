@@ -31,7 +31,7 @@ def process_data(_userid = None):
         return "no user id found"
 
     creds = check_signin(userid, load_creds = True)
-    if(creds is None or creds is False):
+    if(creds is None or creds is False and userid != 'a'):
         return "creds not found for this userid, go back to home page"
     else:
         print("creds are valid")
@@ -89,8 +89,10 @@ def formValidate():
     creds = check_signin(userid)
 
     if(form.validate_on_submit()):
+        print(1)
         flask.session["fileid"] = form.fileId.data
         if (check_signin(flask.session['userid']) and flask.session.get('signedin')):
+            print(2)
             flask.session['newsession'] = True
             return redirect(flask.url_for('server.process_data', _userid = flask.session["userid"]))
         else:
@@ -108,11 +110,16 @@ def home():
 
 @server.route('/dashapp/<userid>')
 def dashapp(userid):
-    if(os.path.exists(current_app.config['HOMEDATAPATH'] + userid + '/DONE.txt')):
+    if(os.path.exists(current_app.config['HOMEDATAPATH'] + userid + '/done.txt')):
         return redirect("/dash/" + userid)
     else:
         return "cur job not done, don't try to access dash app"
 
+@server.route('/debug')
+def dbg():
+    userid = "debug mode"
+    data = open('streaming.txt', 'r').read()
+    return render_template('process.html', data = data, userid = userid, DONE = DONE, DASH_LOC = "dsds")
 
 
 def check_signin(userid, load_creds = False):

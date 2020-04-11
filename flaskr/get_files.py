@@ -74,8 +74,16 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue, files: asyncio.Queu
         if(folderIdTuple == -1):
             return
         (id, path) = folderIdTuple
-        query = "'" + id + "' in parents"
-        data = dict(q=query)
+
+        #Root id is different structure
+        if(id == "root"):
+            query = None
+        else:
+            query = "'" + id + "' in parents"
+
+        #Searches all drives including shared files.
+        data = dict(q=query, corpora = "allDrives", includeItemsFromAllDrives = True, 
+                supportsTeamDrives = True)
         async with session.get(url = drive_url, params = data, headers = headers) as response:
 
             if(response.status != 200):
@@ -177,7 +185,7 @@ async def getRevision(files: asyncio.Queue, session: aiohttp.ClientSession, head
             pathedFiles [(*path, modifiedDate)] = 1
 
 
-            lastModFile[fileName] = modifiedDate
+            lastModFile[(fileName, fileId)] = modifiedDate
 
         files.task_done()
 
@@ -247,7 +255,7 @@ def loadFiles(USER_ID, _workingPath, fileId, _creds):
 
 
 
-    if(len(collapsedFiles) is 0 or len(pathedFiles) is 0):
+    if(len(collapsedFiles) == 0 or len(pathedFiles) == 0):
         return "No files found for this id. check invalid"
 
 
