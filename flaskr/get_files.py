@@ -1,5 +1,5 @@
 import asyncio
-import time
+import sys
 import random
 import json
 import os
@@ -102,11 +102,13 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue, files: asyncio.Queu
                     if e["reason"] == "insufficientFilePermissions":
                         FilePrintText.add("Insufficient permissions for this file, skipping")
                         break
-                    else:
-                        FilePrintText.add("Waiting for GDrive API Limit...")
+                    elif e["reason"] == "userRateLimitExceeded":
+                        FilePrintText.add("Google Drive API Limit exceeded, get ID")
                         await folders.put(folderIdTuple)
-                        API_RESET(FilePrintText)
+                        await API_RESET()
                         break
+                    else:
+                        FilePrintText.add("Other Error" + e["reason"])
 
         #Mark task as done for folders.join() to properly work
         folders.task_done()
@@ -136,17 +138,17 @@ async def getRevision(files: asyncio.Queue, session: aiohttp.ClientSession, head
         revisions  = {}
         async with session.get(url = dr2_urlbuilder(fileId), headers = headers) as revResponse:
             async with session.post(**TestUtil.dractivity_builder(fileId)) as actResponse:
-                if(revResponse.status == 200):
+                if(revResponse.status == 200 and actResponse.status == 200):
                     consecutiveErrors=1
-                    revisions = await revResponse.json()
-                    open("streaming.txt", "a+").write(await revResponse.text() + await actResponse.text())
-                    revisions = revisions["items"]
-
-                    act = await actResponse.json()
-
-                    if('activities' not in act):
-                        open('errors.txt', 'a+').write(str(act))
-                    act = act.get("activities", [dict(timestamp = "2019-03-13T01:34:24.629Z")])
+                    try:
+                        revisions = await revResponse.json()
+                        revisions = revisions["items"]
+                        act = await actResponse.json()
+                        act = act.get("activities", [dict(timestamp = "2019-03-13T01:34:24.629Z")])
+                    except:
+                        e = sys.exc_info()[0]
+                        open('errors.txt', 'a+').write("<h5> 1 </h5><p> %s </p> <br> Response: <br>"%e)
+                        open("errors.txt", "a+").write(await revResponse.text() + await actResponse.text())
 
                     #Append activities gained through driveactivity in structure "act"
                     #to revisions, which can be processed all in one by following code
@@ -155,27 +157,22 @@ async def getRevision(files: asyncio.Queue, session: aiohttp.ClientSession, head
                 else:
                     FilePrintText.add("Waiting for GDrive API Limit (Revisions)...")
                     #await files.put(fileTuple)
-                    r = await revResponse.json()
-                    a = await actResponse.json()
-                    r = r.get("error",dict(errors = [dict(message = "no err")])).get("errors")[0]["message"]
-                    a = a.get("error", dict(errors = [dict(message = "no err")])).get("errors")[0]["message"]
-                    open("errors.txt", 'a').write(r + a + "<br>")
-                    await API_RESET(FilePrintText)
+                    try:
+                        r = await revResponse.json()
+                        a = await actResponse.json()
+                        r = r.get("error",dict(errors = [dict(message = "no err")])).get("errors")[0]["message"]
+                        a = a.get("error", dict(errors = [dict(message = "no err")])).get("errors")[0]["message"]
+                        open("errors.txt", 'a').write(r + a + "<br>")
+                    except:
+                        e = sys.exc_info()[0]
+                        open('errors.txt', 'a+').write("<h5> 2 </h5> <p> %s </p> <br>"%e)
+                        open("errors.txt", "a+").write(await revResponse.text() + await actResponse.text())
+                    await API_RESET()
 
         for item in revisions:
             global ENABLE_FILESIZE
 
             modifiedDate = iso8601.parse_date(item["modifiedDate"])
-
-
-            '''
-            if(ENABLE_FILESIZE and "fileSize" in item):
-                collapsedFiles[(fileName,  modifiedDate)] = int(item["fileSize"])
-                pathedFiles [(*path[0:recursionSize], modifiedDate)] = int(item["fileSize"])
-            else:
-                collapsedFiles[(fileName,  modifiedDate)] = 1
-                pathedFiles [(*path, modifiedDate)] = 1
-            '''
             collapsedFiles[(fileName,  modifiedDate)] = 1
             pathedFiles [(*path, modifiedDate)] = 1
 
