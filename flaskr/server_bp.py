@@ -139,3 +139,8 @@ def check_signin(userid, load_creds = False):
         return True
     with open(workingPath + "creds.pickle", 'rb') as cr:
         return pickle.load(cr)
+
+
+@server.route('/favicon.ico')
+def favicon():
+        return redirect(flask.url_for('static', filename='favicon.ico'))

@@ -43,7 +43,7 @@ consecutiveErrors = 1
 
 SEED_ID = "root"
 
-workerInstances = 3
+workerInstances = 4
 
 def exceptionHandler(loop, context):
     #loop.default_exception_handler(context)
@@ -99,7 +99,7 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue, files: asyncio.Queu
             elif(response.status==403):
                 errors = DriveResponse.get("error", {}).get("errors", [])
                 for e in errors:
-                    if e["reason"] == "insufficientFilePermissions"
+                    if e["reason"] == "insufficientFilePermissions":
                         FilePrintText.add("Insufficient permissions for this file, skipping")
                         break
                     else:
@@ -154,10 +154,12 @@ async def getRevision(files: asyncio.Queue, session: aiohttp.ClientSession, head
                         revisions.append(dict(modifiedDate = a["timestamp"]))
                 else:
                     FilePrintText.add("Waiting for GDrive API Limit (Revisions)...")
-                    await files.put(fileTuple)
-                    txt = await revResponse.text().get("error").get("errors")[0]["message"]
-                    txt1 = await actResponse.text().get("error").get("errors")[0]["message"]
-                    open("errors.txt", 'a').write(txt + txt1)
+                    #await files.put(fileTuple)
+                    r = await revResponse.json()
+                    a = await actResponse.json()
+                    r = r.get("error",dict(errors = [dict(message = "no err")])).get("errors")[0]["message"]
+                    a = a.get("error", dict(errors = [dict(message = "no err")])).get("errors")[0]["message"]
+                    open("errors.txt", 'a').write(r + a + "<br>")
                     await API_RESET(FilePrintText)
 
         for item in revisions:
