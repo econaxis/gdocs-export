@@ -111,7 +111,7 @@ consecutiveErrors = 0
 def dr2_urlbuilder(id: str):
     return "https://www.googleapis.com/drive/v2/files/" + id + "/revisions"
 
-async def API_RESET(fpt, seconds = 30):
+async def API_RESET(seconds = 30):
     global consecutiveErrors
     consecutiveErrors+=1
     seconds *=(consecutiveErrors)
