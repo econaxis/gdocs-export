@@ -1,9 +1,11 @@
 docker build -t henry2833/pydocs .
-docker tag henry2833/pydocs registry.heroku.com/pydocs123/web
 
-if [ -z "$1" ]
+if [ $1 == "y" ]
 then
   echo "pushing to registry"
-  docker push registry.heroku.com/pydocs123/web
-  heroku container:release web
+  docker tag henry2833/pydocs registry.heroku.com/pydocs123/$2
+  docker push registry.heroku.com/pydocs123/$2
+  heroku container:release $2
 fi
+
+

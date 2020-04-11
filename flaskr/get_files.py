@@ -45,6 +45,8 @@ SEED_ID = "root"
 
 workerInstances = 4
 
+ACCEPTED_TYPES = {"application/vnd.google-apps.presentation", "application/vnd.google-apps.spreadsheet", "application/vnd.google-apps.document", "application/vnd.google-apps.file"}
+
 def exceptionHandler(loop, context):
     #loop.default_exception_handler(context)
     print("="*10)
@@ -94,8 +96,10 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue, files: asyncio.Queu
                 for resFile in DriveResponse["files"]:
                     if(resFile["mimeType"] == "application/vnd.google-apps.folder"):
                         await folders.put( (resFile["id"], path + [resFile["name"]]) )
-                    elif (resFile["mimeType"] == "application/vnd.google-apps.document"):
+                    elif (resFile["mimeType"] in ACCEPTED_TYPES):
                         await files.put((resFile["id"], resFile["name"], path + [resFile["name"]]))
+
+
             elif(response.status==403):
                 errors = DriveResponse.get("error", {}).get("errors", [])
                 for e in errors:
@@ -148,7 +152,7 @@ async def getRevision(files: asyncio.Queue, session: aiohttp.ClientSession, head
                     except:
                         e = sys.exc_info()[0]
                         open('errors.txt', 'a+').write("<h5> 1 </h5><p> %s </p> <br> Response: <br>"%e)
-                        open("errors.txt", "a+").write(await revResponse.text() + await actResponse.text())
+                        #open("errors.txt", "a+").write(await revResponse.text() + await actResponse.text())
 
                     #Append activities gained through driveactivity in structure "act"
                     #to revisions, which can be processed all in one by following code
@@ -166,7 +170,7 @@ async def getRevision(files: asyncio.Queue, session: aiohttp.ClientSession, head
                     except:
                         e = sys.exc_info()[0]
                         open('errors.txt', 'a+').write("<h5> 2 </h5> <p> %s </p> <br>"%e)
-                        open("errors.txt", "a+").write(await revResponse.text() + await actResponse.text())
+                        #open("errors.txt", "a+").write(await revResponse.text() + await actResponse.text())
                     await API_RESET()
 
         for item in revisions:

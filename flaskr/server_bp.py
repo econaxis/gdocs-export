@@ -144,3 +144,9 @@ def favicon():
 @server.route('/wakemydyno.txt')
 def wakedyno():
     return redirect(flask.url_for('static', filename='wakemydyno.txt'))
+
+@server.route('/google41579b1449e3ad61.html')
+def gver():
+    print(current_app.root_path)
+    return flask.send_from_directory(directory = current_app.root_path
+            + '/static', filename = 'google41579b1449e3ad61.html')
