@@ -153,12 +153,12 @@ async def getRevision(files: asyncio.Queue, session: aiohttp.ClientSession, head
                         #Assuming revResponse does not violate quota
                         print(await actResponse.text())
 
-                        open("errors.txt", 'a').write(await revResponse.text() + await actResponse.text())
+                    open("errors.txt", 'a').write(await revResponse.text() + await actResponse.text())
                     await API_RESET(FilePrintText)
                 else:
                     consecutiveErrors=1
                     revisions = await revResponse.json()
-                    open("streaming.txt", "a+").write(await revResponse.text())
+                    open("streaming.txt", "a+").write(await revResponse.text() + await actResponse.text())
                     revisions = revisions["items"]
 
                     act = await actResponse.json()
