@@ -138,7 +138,7 @@ async def getRevision(files: asyncio.Queue, session: aiohttp.ClientSession, head
                     act = await actResponse.json()
 
                     if('activities' not in act):
-                        open('errors.txt', 'a+').write(act)
+                        open('errors.txt', 'a+').write(str(act))
                     act = act.get("activities", [dict(timestamp = "2019-03-13T01:34:24.629Z")])
 
                     #Append activities gained through driveactivity in structure "act"
