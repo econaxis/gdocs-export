@@ -85,11 +85,10 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue, files: asyncio.Queu
         #Searches all drives including shared files.
 
         async with session.get(url = drive_url, params = data, headers = headers) as response:
-
+            DriveResponse = await response.json()
             if (response.status == 200):
                 global consecutiveErrors
                 consecutiveErrors = 1
-                DriveResponse = await response.json()
                 #Classify item type by file or folder
                 #If folder, then add back to folder queue for further processing
                 for resFile in DriveResponse["files"]:
@@ -97,9 +96,17 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue, files: asyncio.Queu
                         await folders.put( (resFile["id"], path + [resFile["name"]]) )
                     elif (resFile["mimeType"] == "application/vnd.google-apps.document"):
                         await files.put((resFile["id"], resFile["name"], path + [resFile["name"]]))
-            else:
-                FilePrintText.add("Waiting for GDrive API Limit...")
-                await folders.put(folderIdTuple)
+            elif(response.status==403):
+                errors = DriveResponse.get("error", {}).get("errors", [])
+                for e in errors:
+                    if e["reason"] == "insufficientFilePermissions"
+                        FilePrintText.add("Insufficient permissions for this file, skipping")
+                        break
+                    else:
+                        FilePrintText.add("Waiting for GDrive API Limit...")
+                        await folders.put(folderIdTuple)
+                        API_RESET(FilePrintText)
+                        break
 
         #Mark task as done for folders.join() to properly work
         folders.task_done()
@@ -148,7 +155,9 @@ async def getRevision(files: asyncio.Queue, session: aiohttp.ClientSession, head
                 else:
                     FilePrintText.add("Waiting for GDrive API Limit (Revisions)...")
                     await files.put(fileTuple)
-                    open("errors.txt", 'a').write(await revResponse.text() + await actResponse.text())
+                    txt = await revResponse.text().get("error").get("errors")[0]["message"]
+                    txt1 = await actResponse.text().get("error").get("errors")[0]["message"]
+                    open("errors.txt", 'a').write(txt + txt1)
                     await API_RESET(FilePrintText)
 
         for item in revisions:
