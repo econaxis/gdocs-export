@@ -1,5 +1,5 @@
 import asyncio
-import time
+import sys
 import random
 import json
 import os
@@ -33,23 +33,19 @@ class FilePrintText:
         cls.text = ""
 
 
-
-workingPath = None
-
-
-worksDone = 0
-
 lastModFile = {}
 MAX_FILES = 20000
 ENABLE_FILESIZE = False
 collapsedFiles = {}
 pathedFiles = {}
-creds = 0
+
 consecutiveErrors = 1
 
-SEED_ID = "0B4Fujvv5MfqbeTVRc3hIbXRfNE0"
+SEED_ID = "root"
 
-workerInstances = 5
+workerInstances = 4
+
+ACCEPTED_TYPES = {"application/vnd.google-apps.presentation", "application/vnd.google-apps.spreadsheet", "application/vnd.google-apps.document", "application/vnd.google-apps.file"}
 
 def exceptionHandler(loop, context):
     #loop.default_exception_handler(context)
@@ -72,7 +68,6 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue, files: asyncio.Queu
     #Query to pass into Drive to find item
 
     while (files.qsize() + len(lastModFile) < MAX_FILES):
-        print(1)
         #Wait for folders queue, with interval 6 seconds between each check
         #Necessary if more than one workers all starting at the same time,
         #with only one seed ID to start
@@ -80,36 +75,44 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue, files: asyncio.Queu
         if(folderIdTuple == -1):
             return
         (id, path) = folderIdTuple
-        query = "'" + id + "' in parents"
-        data = dict(q=query)
-        async with session.get(url = drive_url, params = data, headers = headers) as response:
 
-            if(response.status != 200):
-                #Checks if passed GDrive limit
-                if(response.status == 403):
-                    print("Waiting for GDrive API Limit...")
-                    FilePrintText.add("Waiting for GDrive API Limit...")
-                    pp.pprint(await response.text())
-                    #Reset, add ID back to queue as this item will not be processed
-                    await folders.put(folderIdTuple)
-                else:
-                    print("Not 403, But Error")
-                    print(await response.text())
-                await API_RESET(FilePrintText)
-            else:
+        #Root id is different structure
+        data = None
+        if(id == "root"):
+            data = dict( corpora = "allDrives", includeItemsFromAllDrives = 'true', supportsTeamDrives = 'true')
+        else:
+            query = "'" + id + "' in parents"
+            data = dict(q=query, corpora = "allDrives", includeItemsFromAllDrives = 'true',
+                supportsTeamDrives = 'true')
+        #Searches all drives including shared files.
+
+        async with session.get(url = drive_url, params = data, headers = headers) as response:
+            DriveResponse = await response.json()
+            if (response.status == 200):
                 global consecutiveErrors
                 consecutiveErrors = 1
-                DriveResponse = await response.json()
-
-
                 #Classify item type by file or folder
                 #If folder, then add back to folder queue for further processing
                 for resFile in DriveResponse["files"]:
                     if(resFile["mimeType"] == "application/vnd.google-apps.folder"):
                         await folders.put( (resFile["id"], path + [resFile["name"]]) )
-                    elif (resFile["mimeType"] == "application/vnd.google-apps.document"):
+                    elif (resFile["mimeType"] in ACCEPTED_TYPES):
                         await files.put((resFile["id"], resFile["name"], path + [resFile["name"]]))
 
+
+            elif(response.status==403):
+                errors = DriveResponse.get("error", {}).get("errors", [])
+                for e in errors:
+                    if e["reason"] == "insufficientFilePermissions":
+                        FilePrintText.add("Insufficient permissions for this file, skipping")
+                        break
+                    elif e["reason"] == "userRateLimitExceeded":
+                        FilePrintText.add("Google Drive API Limit exceeded, get ID")
+                        await folders.put(folderIdTuple)
+                        await API_RESET()
+                        break
+                    else:
+                        FilePrintText.add("Other Error" + e["reason"])
 
         #Mark task as done for folders.join() to properly work
         folders.task_done()
@@ -139,57 +142,52 @@ async def getRevision(files: asyncio.Queue, session: aiohttp.ClientSession, head
         revisions  = {}
         async with session.get(url = dr2_urlbuilder(fileId), headers = headers) as revResponse:
             async with session.post(**TestUtil.dractivity_builder(fileId)) as actResponse:
-                if(revResponse.status != 200 or actResponse.status != 200):
-                    #Checks if passed GDrive limit
-                    if(revResponse.status == (403 or 429) or actResponse.status == (403 or 429)):
-                        print("Waiting for GDrive API Limit...")
-                        FilePrintText.add("Waiting for GDrive API Limit...")
-                        #Reset, add ID back to queue
-                        await files.put(fileTuple)
-                    else:
-                        print("non 403 error")
-                        #Assuming revResponse does not violate quota
-                        print(await actResponse.text())
-
-                        open("errors.txt", 'a').write(await revResponse.text() + await actResponse.text())
-                    await API_RESET(FilePrintText)
-                else:
+                if(revResponse.status == 200 and actResponse.status == 200):
                     consecutiveErrors=1
-                    revisions = await revResponse.json()
-                    revisions = revisions["items"]
-
-                    act = await actResponse.json()
-                    act = act["activities"]
+                    try:
+                        revisions = await revResponse.json()
+                        revisions = revisions["items"]
+                        act = await actResponse.json()
+                        act = act.get("activities", [dict(timestamp = "2019-03-13T01:34:24.629Z")])
+                    except:
+                        e = sys.exc_info()[0]
+                        open('errors.txt', 'a+').write("<h5> 1 </h5><p> %s </p> <br> Response: <br>"%e)
+                        #open("errors.txt", "a+").write(await revResponse.text() + await actResponse.text())
 
                     #Append activities gained through driveactivity in structure "act"
                     #to revisions, which can be processed all in one by following code
                     for a in act:
                         revisions.append(dict(modifiedDate = a["timestamp"]))
+                else:
+                    FilePrintText.add("Waiting for GDrive API Limit (Revisions)...")
+                    #await files.put(fileTuple)
+                    try:
+                        r = await revResponse.json()
+                        a = await actResponse.json()
+                        r = r.get("error",dict(errors = [dict(message = "no err")])).get("errors")[0]["message"]
+                        a = a.get("error", dict(errors = [dict(message = "no err")])).get("errors")[0]["message"]
+                        open("errors.txt", 'a').write(r + a + "<br>")
+                    except:
+                        e = sys.exc_info()[0]
+                        open('errors.txt', 'a+').write("<h5> 2 </h5> <p> %s </p> <br>"%e)
+                        #open("errors.txt", "a+").write(await revResponse.text() + await actResponse.text())
+                    await API_RESET()
+
         for item in revisions:
             global ENABLE_FILESIZE
 
             modifiedDate = iso8601.parse_date(item["modifiedDate"])
-
-
-            '''
-            if(ENABLE_FILESIZE and "fileSize" in item):
-                collapsedFiles[(fileName,  modifiedDate)] = int(item["fileSize"])
-                pathedFiles [(*path[0:recursionSize], modifiedDate)] = int(item["fileSize"])
-            else:
-                collapsedFiles[(fileName,  modifiedDate)] = 1
-                pathedFiles [(*path, modifiedDate)] = 1
-            '''
             collapsedFiles[(fileName,  modifiedDate)] = 1
             pathedFiles [(*path, modifiedDate)] = 1
 
 
-            lastModFile[fileName] = modifiedDate
+            lastModFile[(fileName, fileId)] = modifiedDate
 
         files.task_done()
 
 SCOPES = ['https://www.googleapis.com/auth/drive.metadata.readonly', 'https://www.googleapis.com/auth/drive.activity.readonly'] 
 
-async def start(creds):
+async def start():
     global SEED_ID, workerInstances, lastModFile
 
 
@@ -230,50 +228,44 @@ async def start(creds):
 
 
 
-def loadFiles(USER_ID, _workingPath, fileId):
-    global creds, workingPath
-
-    workingPath = _workingPath
-
+def loadFiles(USER_ID, _workingPath, fileId, _creds):
 
     print("USER ID: %s"%USER_ID, " ", fileId)
 
     #Load pickle file. Should have been made by Flask/App.py
     #in authorization step
 
-    from datutils.test_utils import TestUtil
-    TestUtil.workingPath = workingPath
+    TestUtil.refresh_creds(_creds)
+    TestUtil.workingPath = _workingPath
 
-
-    creds = TestUtil.creds_from_pickle()
-
-    print("Creds load successful")
 
     if(fileId != None):
         global SEED_ID
         SEED_ID = fileId
+
     #Main loop
-    asyncio.run(start(creds), debug = True)
+    asyncio.run(start(), debug = True)
 
-    pickle.dump(collapsedFiles, open(workingPath + 'collapsedFiles.pickle', 'wb'))
-    pickle.dump(pathedFiles, open(workingPath + 'pathedFiles.pickle', 'wb'))
+    pickle.dump(collapsedFiles, open(_workingPath + 'collapsedFiles.pickle', 'wb'))
+    pickle.dump(pathedFiles, open(_workingPath + 'pathedFiles.pickle', 'wb'))
 
 
+
+    if(len(collapsedFiles) == 0 or len(pathedFiles) == 0):
+        return "No files found for this id. check invalid"
 
 
     TestUtil.formatData()
 
     TestUtil.activity_gen()
 
-    open(workingPath + 'done.txt', 'a+').write("DONE")
+    open(_workingPath + 'done.txt', 'a+').write("DONE")
  #   asyncio.DefaultEventLoopPolicy = asyncio.WindowsSelectorEventLoopPolicy
 
 if __name__ == "__main__":
 
     #Default settings
-
-
     uid = "5a80b6d0-07bb-42c2-a023-15894be46026"
     homePath =  "/mnt/c/users/henry/documents/pydocs/"
-    workingPath = homePath + 'data/' + uid + '/'
-    loadFiles(uid, workingPath)
+    TestUtil.workingPath =  homePath + 'data/' + uid + '/'
+    loadFiles(uid, TestUtil.workingPath)

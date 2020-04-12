@@ -18,7 +18,6 @@ def authorize():
     else:
         #Sign out called
         flask.session.clear()
-
         request = redirect(flask.url_for('server.home'))
         request.set_cookie('userid', value = "", max_age = 0)
         return request
@@ -28,13 +27,6 @@ def authorize():
 def glogin():
     #Expected point for start of authorization chain
     print("Starting authorization method")
-    print(current_app.config)
-
-    #config = Config(HOMEPATH = HOMEPATH)
-#    config.generate_id()
-    #app.config.from_object(config.get_flask_config())
-    #app.config.from_ob
-
 
     #Use server secret file
     flow = google_auth_oauthlib.flow.Flow.from_client_secrets_file(
@@ -69,17 +61,18 @@ def oauth():
 
     flow.fetch_token(authorization_response=authorization_response)
 
+    userid = flask.session["userid"]
 
-    userid = str(uuid.uuid4())
     workingPath = current_app.config["HOMEPATH"] +  "data/" + userid + "/"
     Path(workingPath).mkdir(exist_ok = True)
+
 
     credentials = flow.credentials
     with open(workingPath + "creds.pickle", 'wb') as c:
       pickle.dump(credentials, c)
+      print("auth_bp dumped credentials at ", workingPath + "creds.pickle")
 
     flask.session['signedin'] = True
-    flask.session['userid'] = userid
 
     return flask.redirect(flask.url_for('server.formValidate'))
 

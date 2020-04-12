@@ -1,7 +1,10 @@
-data/*
-credentials.json
-secret/*
-__pycache__/*
-flaskr/__pycache__/*
-flaskr/dashapp/__pycache__/*
+__pycache__/**
+flaskr/__pycache__/**
+flaskr/dashapp/__pycache__/**
+data/**
+**/__pycache__
 
+errors.txt
+streaming.txt
+
+*.swp

@@ -51,21 +51,21 @@ class TestUtil:
 
 
     @classmethod
-    def creds_from_pickle(cls):
+    def refresh_creds(cls, creds):
         path = cls.workingPath
-
-        with open(path+'creds.pickle', 'rb') as cr:
-            cls.creds = pickle.load(cr)
+        cls.creds = creds
 
         if not cls.creds or not cls.creds.valid:
             if cls.creds and cls.creds.expired and cls.creds.refresh_token:
                 cls.creds.refresh(Request())
             else:
                 raise "cls.creds not valid!"
+
+            '''
             # Save the credentials for the next run
             with open(path + 'creds.pickle', 'wb') as token:
                 pickle.dump(cls.creds, token)
-
+            '''
         cls.creds.apply(cls.headers)
         return cls.creds
 
@@ -104,27 +104,35 @@ class TestUtil:
 
     @classmethod
     def strToFile(cls, string, filename):
-        open(cls.workingPath + filename, 'a').write(string)
-
-
+        open(cls.workingPath + filename, 'a+').write(string)
+        open(filename, 'a').write(string)
 
 consecutiveErrors = 0
 def dr2_urlbuilder(id: str):
     return "https://www.googleapis.com/drive/v2/files/" + id + "/revisions"
 
-async def API_RESET(fpt, seconds = 60):
+async def API_RESET(seconds = 30):
     global consecutiveErrors
+    TestUtil.refresh_creds(TestUtil.creds)
     consecutiveErrors+=1
     seconds *=(consecutiveErrors)
 
-    perUpdate =15
+    perUpdate = 10
     secInterval = math.ceil(seconds/perUpdate)
+
+    if(consecutiveErrors > 1):
+        #Too much errors, reset
+        secs = random.randint(0, 50)
+        TestUtil.strToFile("Waiting for GDrive... %d<br>"%(secs), 'streaming.txt')
+        await asyncio.sleep(secs)
+        return
+
     for i in range(secInterval):
         print(consecutiveErrors)
         TestUtil.strToFile("Waiting for GDrive... %d/%d <br>"%(i, secInterval), 'streaming.txt')
         await asyncio.sleep(perUpdate)
 
-    await asyncio.sleep(random.randint(0, 15))
+    await asyncio.sleep(random.randint(0, seconds))
 
 async def tryGetQueue(queue: asyncio.Queue, repeatTimes:int = 5, interval:float = 3, name:str = ""):
     output = None
