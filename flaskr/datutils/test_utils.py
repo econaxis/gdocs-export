@@ -1,4 +1,5 @@
 import pandas as pd
+from flaskr.throttler import Throttle
 import numpy as np
 import random
 from math import log
@@ -21,6 +22,8 @@ class TestUtil:
     consecutiveErrors = 0
     workingPath = None
     maxSize = 0
+    errMsg = "BEGIN" + str(datetime.now()) + "<br> \n\n"
+    throttle = None
 
     @classmethod
     def formatData(cls, fileName = 'collapsedFiles'):
@@ -30,12 +33,12 @@ class TestUtil:
         data = pd.DataFrame(rdata.values(), index = ind, columns = ["Type"])
 
         sumDates=data.reset_index(level = 0, drop = True)
-        data.to_pickle(cls.workingPath + fileName + "_p.pickle")
+        pickle.dump(data, open(cls.workingPath + fileName + "_p.pickle", 'wb'))
 
 
     @classmethod
     def activity_gen(cls):
-        data = pd.read_pickle(cls.workingPath + 'collapsedFiles_p.pickle')
+        data = pickle.load(open(cls.workingPath + 'collapsedFiles_p.pickle', 'rb'))
         hists = {}
         activity = dict(time=[], files=[], marker_size=[])
         for f in data.index.levels[0]:
@@ -60,12 +63,6 @@ class TestUtil:
                 cls.creds.refresh(Request())
             else:
                 raise "cls.creds not valid!"
-
-            '''
-            # Save the credentials for the next run
-            with open(path + 'creds.pickle', 'wb') as token:
-                pickle.dump(cls.creds, token)
-            '''
         cls.creds.apply(cls.headers)
         return cls.creds
 
@@ -86,9 +83,12 @@ class TestUtil:
             filter = filter, quotaUser = quotaUser)
         return dict(params = params, headers = headers, url = "https://driveactivity.googleapis.com/v2/activity:query")
 
+    @classmethod 
+    def errors(cls, msg):
+        cls.errMsg += str(msg) + '<br> \n'
 
     @classmethod
-    async def print_size(cls, files, lastModFile, FilePrintText, continuous = True):
+    async def print_size(cls, files, lastModFile, FilePrintText):
         while True:
             totalSize = files.qsize() + len(lastModFile)
             outputString = "%s <b>%d out of %d (discovered items)</b> <br>" %(FilePrintText.text,len(lastModFile),  totalSize)
@@ -96,45 +96,37 @@ class TestUtil:
             FilePrintText.clear()
 
             cls.strToFile(outputString, 'streaming.txt')
+            cls.strToFile(cls.errMsg, 'errors.txt')
+
+            cls.errMsg = "CLEARED " + datetime.now() + "\n"
 
             print(outputString)
+            print('counter: ', cls.throttle.gcount(), '   rpm: ', cls.throttle.rpm)
 
-            if continuous: 
-                await asyncio.sleep(10)
+            if(random.randint(0, 100) > 95):
+                print("resetting counter")
+                cls.throttle.reset()
+            await asyncio.sleep(2)
+
 
     @classmethod
     def strToFile(cls, string, filename):
         open(cls.workingPath + filename, 'a+').write(string)
-        open(filename, 'a').write(string)
+        open(filename, 'a+').write(string)
 
-consecutiveErrors = 0
 def dr2_urlbuilder(id: str):
     return "https://www.googleapis.com/drive/v2/files/" + id + "/revisions"
 
-async def API_RESET(seconds = 30):
-    global consecutiveErrors
-    TestUtil.refresh_creds(TestUtil.creds)
-    consecutiveErrors+=1
-    seconds *=(consecutiveErrors)
+async def API_RESET(seconds = 6, throttle = None, decrease = False):
 
-    perUpdate = 10
-    secInterval = math.ceil(seconds/perUpdate)
+    if throttle and decrease:
+        throttle.decrease()
+    secs = random.randint(0, seconds)
+    TestUtil.strToFile("Waiting for GDrive... %d<br>"%(secs), 'streaming.txt')
+    await asyncio.sleep(secs)
+    return
 
-    if(consecutiveErrors > 1):
-        #Too much errors, reset
-        secs = random.randint(0, 50)
-        TestUtil.strToFile("Waiting for GDrive... %d<br>"%(secs), 'streaming.txt')
-        await asyncio.sleep(secs)
-        return
-
-    for i in range(secInterval):
-        print(consecutiveErrors)
-        TestUtil.strToFile("Waiting for GDrive... %d/%d <br>"%(i, secInterval), 'streaming.txt')
-        await asyncio.sleep(perUpdate)
-
-    await asyncio.sleep(random.randint(0, seconds))
-
-async def tryGetQueue(queue: asyncio.Queue, repeatTimes:int = 5, interval:float = 3, name:str = ""):
+async def tryGetQueue(queue: asyncio.Queue, repeatTimes:int = 5, interval:float = 10, name:str = ""):
     output = None
     timesWaited = 0
     while(output==None):

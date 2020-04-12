@@ -12,6 +12,6 @@ COPY . .
 
 EXPOSE 5000
 
-RUN chmod +x bootworker.sh
+RUN chmod +x boot.sh
 
-ENTRYPOINT ["./bootworker.sh"]
+ENTRYPOINT ["python", "dsds.py"]
