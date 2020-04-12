@@ -43,7 +43,7 @@ consecutiveErrors = 1
 
 SEED_ID = "root"
 
-workerInstances = 4
+workerInstances = 8
 
 ACCEPTED_TYPES = {"application/vnd.google-apps.presentation", "application/vnd.google-apps.spreadsheet", "application/vnd.google-apps.document", "application/vnd.google-apps.file"}
 
@@ -137,7 +137,6 @@ async def getRevision(files: asyncio.Queue, session: aiohttp.ClientSession, head
         (fileId, fileName, path) = fileTuple
 
         FilePrintText.add(fileId[0:3] + " <i>" + '/'.join(path) + "</i>")
-
 
         revisions  = {}
         async with session.get(url = dr2_urlbuilder(fileId), headers = headers) as revResponse:
