@@ -104,7 +104,7 @@ class TestUtil:
 
     @classmethod
     def strToFile(cls, string, filename):
-        open(cls.workingPath + filename, 'a').write(string)
+        open(cls.workingPath + filename, 'a+').write(string)
         open(filename, 'a').write(string)
 
 consecutiveErrors = 0
