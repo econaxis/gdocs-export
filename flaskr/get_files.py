@@ -132,7 +132,7 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue, files: asyncio.Queu
 
 
 counter = 0
-
+cancelled = {}
 async def handleResponse(response, files, fileTuple):
     try:
         rev = await response.json()
@@ -145,6 +145,9 @@ async def handleResponse(response, files, fileTuple):
         if(fileTuple[3] < 4):
             fileTuple[3] +=1
             await files.put(fileTuple)
+        else:
+            global cancelled
+            cancelled[fileTuple] = 1
 
         if(response.status ==429):
             await API_RESET(throttle = acThrottle, decrease = True)
@@ -178,7 +181,8 @@ async def getRevision(files: asyncio.Queue, session: aiohttp.ClientSession, head
         async with session.get(url = dr2_urlbuilder(fileId), headers = headers) as revResponse:
             code = await handleResponse(revResponse, files, fileTuple)
             if code == -1:
-                continue
+                pass
+                #continue
             else:
                 revisions = code
 
@@ -246,7 +250,7 @@ async def start():
 
         await jobs
         tt.cancel()
-        dd.cancel()
+#        dd.cancel()
         printTask.cancel()
         print("cancelled throttler")
 
@@ -274,6 +278,7 @@ def loadFiles(USER_ID, _workingPath, fileId, _creds):
 
     pickle.dump(collapsedFiles, open(_workingPath + 'collapsedFiles.pickle', 'wb'))
     pickle.dump(pathedFiles, open(_workingPath + 'pathedFiles.pickle', 'wb'))
+    pickle.dump(cancelled, open('cancelled', 'wb'))
 
 
 
