@@ -56,7 +56,7 @@ def process_data(_userid = None):
         #TODO: change global url prefix /dash/ to CONFIG file
         htmlResponse.set_data(render_template('process.html', data = data, userid = userid, DONE = DONE,
             DASH_LOC = "/dashapp/" + userid))
-    elif ('fileid' in flask.session and not flask.session["redirected"]):
+    elif ('fileid' in flask.session and not flask.session.get("redirected")):
         fileId = flask.session.get("fileid")
         from flaskr.get_files_loader import queueLoad
         flask.session['newsession'] = False
