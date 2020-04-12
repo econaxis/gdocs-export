@@ -51,20 +51,22 @@ def process_data(_userid = None):
         print("session found")
         data =  open(workingPath + 'streaming.txt', 'r').read()
         DONE = os.path.exists(workingPath+ 'done.txt')
+        print(1)
 
         #TODO: change global url prefix /dash/ to CONFIG file
         htmlResponse.set_data(render_template('process.html', data = data, userid = userid, DONE = DONE,
             DASH_LOC = "/dashapp/" + userid))
-    elif ('fileid' in flask.session):
+    elif ('fileid' in flask.session and not flask.session["redirected"]):
         fileId = flask.session.get("fileid")
         from flaskr.get_files_loader import queueLoad
         flask.session['newsession'] = False
         curJob = queueLoad(userid, workingPath, fileId, creds)
+        flask.session["redirected"] = True
         htmlResponse = redirect(flask.url_for('server.process_data', _userid = userid))
     else:
         return """
             There is no file id found for the requested userid. This may be because you did not enter a fileid in <br>
-            the previous page, or you entered the wrong userid
+            the previous page, or you entered the wrong userid. Your job may have not started processing yet.
             """
 
     htmlResponse.set_cookie('userid', userid, max_age  = 60*60*24*30)
@@ -89,10 +91,8 @@ def formValidate():
     creds = check_signin(userid)
 
     if(form.validate_on_submit()):
-        print(1)
         flask.session["fileid"] = form.fileId.data
         if (check_signin(flask.session['userid']) and flask.session.get('signedin')):
-            print(2)
             flask.session['newsession'] = True
             return redirect(flask.url_for('server.process_data', _userid = flask.session["userid"]))
         else:

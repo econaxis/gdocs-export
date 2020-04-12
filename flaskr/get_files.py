@@ -1,10 +1,13 @@
 import asyncio
 import sys
+from time import time
+from datetime import datetime
 import random
 import json
 import os
 import uuid
 import pickle
+from flaskr.throttler import Throttle
 import aiohttp
 import pprint
 import math
@@ -39,11 +42,13 @@ ENABLE_FILESIZE = False
 collapsedFiles = {}
 pathedFiles = {}
 
+acThrottle = None
+drThrottle = None
 consecutiveErrors = 1
 
 SEED_ID = "root"
 
-workerInstances = 8
+workerInstances = 10
 
 ACCEPTED_TYPES = {"application/vnd.google-apps.presentation", "application/vnd.google-apps.spreadsheet", "application/vnd.google-apps.document", "application/vnd.google-apps.file"}
 
@@ -60,10 +65,10 @@ def exceptionHandler(loop, context):
 async def getIdsRecursive(drive_url, folders: asyncio.Queue, files: asyncio.Queue, 
     session: aiohttp.ClientSession, headers):
 
-    global MAX_FILES, lastModFile
+    global MAX_FILES, lastModFile, drThrottle
     
     #Wait random moment for folder queue to be populated
-    await asyncio.sleep(random.randint(0, 10))
+    await asyncio.sleep(random.randint(0, 3))
 
     #Query to pass into Drive to find item
 
@@ -71,6 +76,7 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue, files: asyncio.Queu
         #Wait for folders queue, with interval 6 seconds between each check
         #Necessary if more than one workers all starting at the same time,
         #with only one seed ID to start
+        #await drThrottle.sem.acquire()
         folderIdTuple = await tryGetQueue(folders, name = "getIds", interval = 3)
         if(folderIdTuple == -1):
             return
@@ -97,7 +103,7 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue, files: asyncio.Queu
                     if(resFile["mimeType"] == "application/vnd.google-apps.folder"):
                         await folders.put( (resFile["id"], path + [resFile["name"]]) )
                     elif (resFile["mimeType"] in ACCEPTED_TYPES):
-                        await files.put((resFile["id"], resFile["name"], path + [resFile["name"]]))
+                        await files.put([resFile["id"], resFile["name"], path + [resFile["name"]], 0])
 
 
             elif(response.status==403):
@@ -125,52 +131,71 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue, files: asyncio.Queu
     #Folders for blocking call q.join() to be released
 
 
+counter = 0
+
+async def handleResponse(response, files, fileTuple):
+    try:
+        rev = await response.json()
+        assert response.status == 200, "Response not 200"
+    except:
+        e = sys.exc_info()[0]
+        rev = await response.text()
+        TestUtil.errors(e)
+        TestUtil.errors(rev)
+        if(fileTuple[3] < 4):
+            fileTuple[3] +=1
+            await files.put(fileTuple)
+
+        if(response.status ==429):
+            await API_RESET(throttle = acThrottle, decrease = True)
+        else:
+            await API_RESET(throttle = acThrottle, decrease = False)
+        return -1
+    return rev
+
+
 async def getRevision(files: asyncio.Queue, session: aiohttp.ClientSession, headers):
+    global counter
     #Await random amount for more staggered requesting (?)
-    await asyncio.sleep(5 + random.randint(0, 10))
+    await asyncio.sleep(random.randint(0, 15))
+    s = time.time()
     while True:
-        print(1)
+        await acThrottle.acquire()
+
+        
+        #Random code to reset counter every 2/10 times 
         fileTuple = await tryGetQueue(files, name = "getRevision")
         if(fileTuple==-1):
             return
 
-        (fileId, fileName, path) = fileTuple
+        (fileId, fileName, path, tried) = fileTuple
 
         FilePrintText.add(fileId[0:3] + " <i>" + '/'.join(path) + "</i>")
 
         revisions  = {}
+        rev = None
+        act = None
         async with session.get(url = dr2_urlbuilder(fileId), headers = headers) as revResponse:
-            async with session.post(**TestUtil.dractivity_builder(fileId)) as actResponse:
-                if(revResponse.status == 200 and actResponse.status == 200):
-                    consecutiveErrors=1
-                    try:
-                        revisions = await revResponse.json()
-                        revisions = revisions["items"]
-                        act = await actResponse.json()
-                        act = act.get("activities", [dict(timestamp = "2019-03-13T01:34:24.629Z")])
-                    except:
-                        e = sys.exc_info()[0]
-                        open('errors.txt', 'a+').write("<h5> 1 </h5><p> %s </p> <br> Response: <br>"%e)
-                        #open("errors.txt", "a+").write(await revResponse.text() + await actResponse.text())
+            code = await handleResponse(revResponse, files, fileTuple)
+            if code == -1:
+                continue
+            else:
+                revisions = code
 
-                    #Append activities gained through driveactivity in structure "act"
-                    #to revisions, which can be processed all in one by following code
-                    for a in act:
-                        revisions.append(dict(modifiedDate = a["timestamp"]))
-                else:
-                    FilePrintText.add("Waiting for GDrive API Limit (Revisions)...")
-                    #await files.put(fileTuple)
-                    try:
-                        r = await revResponse.json()
-                        a = await actResponse.json()
-                        r = r.get("error",dict(errors = [dict(message = "no err")])).get("errors")[0]["message"]
-                        a = a.get("error", dict(errors = [dict(message = "no err")])).get("errors")[0]["message"]
-                        open("errors.txt", 'a').write(r + a + "<br>")
-                    except:
-                        e = sys.exc_info()[0]
-                        open('errors.txt', 'a+').write("<h5> 2 </h5> <p> %s </p> <br>"%e)
-                        #open("errors.txt", "a+").write(await revResponse.text() + await actResponse.text())
-                    await API_RESET()
+        async with session.post(**TestUtil.dractivity_builder(fileId)) as actResponse:
+            code = await handleResponse(actResponse, files, fileTuple)
+            if code == -1:
+                continue
+            else:
+                act = code
+
+        acThrottle.increase()
+
+        #Pass this checkpoint both tests have passed
+        revisions = revisions["items"]
+        act = act.get("activities", [dict(timestamp = "2019-03-13T01:34:24.629Z")])
+        for a in act:
+            revisions.append(dict(modifiedDate = a["timestamp"]))
 
         for item in revisions:
             global ENABLE_FILESIZE
@@ -181,15 +206,18 @@ async def getRevision(files: asyncio.Queue, session: aiohttp.ClientSession, head
 
 
             lastModFile[(fileName, fileId)] = modifiedDate
-
         files.task_done()
+
+
 
 SCOPES = ['https://www.googleapis.com/auth/drive.metadata.readonly', 'https://www.googleapis.com/auth/drive.activity.readonly'] 
 
 async def start():
-    global SEED_ID, workerInstances, lastModFile
-
-
+    global SEED_ID, workerInstances, lastModFile, acThrottle, drThrottle
+    
+    acThrottle = Throttle(30)
+    drThrottle = Throttle(800)
+    TestUtil.throttle = acThrottle
 
     async with aiohttp.ClientSession() as session:
         folders = asyncio.Queue()
@@ -200,7 +228,8 @@ async def start():
         #Limits recursion limit
         await folders.put(( SEED_ID, ["root"]) )
 
-
+        tt = asyncio.create_task(acThrottle.work())
+        #dd = asyncio.create_task(drThrottle.work())
         #Generate list of Workers to explore folder structure
         fileExplorers = [asyncio.create_task(getIdsRecursive("https://www.googleapis.com/drive/v3/files",
             folders, files, session, TestUtil.headers)) for i in range(workerInstances)]
@@ -213,22 +242,20 @@ async def start():
         #Wait until all folders are properly processed, or until FILE_MAX is reached
         jobs = asyncio.gather(*(fileExplorers + revisionExplorer))
 
-        print("jobs started")
+
+
         await jobs
-        print("All jobs done")
-
-        #Cancel because Done
-        for i in fileExplorers:
-            i.cancel()
-        for i in revisionExplorer:
-            i.cancel()
-
+        tt.cancel()
+        dd.cancel()
         printTask.cancel()
+        print("cancelled throttler")
+
 
 
 
 def loadFiles(USER_ID, _workingPath, fileId, _creds):
 
+    print("load files started")
     print("USER ID: %s"%USER_ID, " ", fileId)
 
     #Load pickle file. Should have been made by Flask/App.py
@@ -262,9 +289,10 @@ def loadFiles(USER_ID, _workingPath, fileId, _creds):
  #   asyncio.DefaultEventLoopPolicy = asyncio.WindowsSelectorEventLoopPolicy
 
 if __name__ == "__main__":
-
     #Default settings
-    uid = "5a80b6d0-07bb-42c2-a023-15894be46026"
-    homePath =  "/mnt/c/users/henry/documents/pydocs/"
+    uid = "527e4afc-4598-400f-8536-afa5324f0ba4"
+    fileid = 'root'
+    homePath =  "/mnt/c/users/henry/pydocs/data/"
+    creds = pickle.load(open('creds.pickle', 'rb'))
     TestUtil.workingPath =  homePath + 'data/' + uid + '/'
-    loadFiles(uid, TestUtil.workingPath)
+    loadFiles(uid, TestUtil.workingPath, fileid, creds)
