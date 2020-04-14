@@ -39,11 +39,24 @@ class Throttle:
 
             print("done r")
 
-    def decrease(self):
-        self.rpm -= 5
-        self.rpm = max(self.rpm, 65)
+    async def decrease(self):
+        self.rpm -= 9
+        self.rpm = max(self.rpm, 30)
+
+        '''
+        #Use up all current quotas
+        if(self.rpm <70 ):
+            while (not self.sem.locked()):
+                try:
+                    #TODO: fix await outside of async function
+                    await asyncio.wait_for(self.sem.acquire(),0.3)
+                except:
+                    break;
+
+        '''
+
     def increase(self):
-        self.rpm +=0.6
+        self.rpm +=0.2
         self.rpm = min(self.rpm, 115)
     async def acquire(self):
         self.counter += 1

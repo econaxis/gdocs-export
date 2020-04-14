@@ -7,7 +7,7 @@ import json
 import os
 import uuid
 import pickle
-from flaskr.throttler import Throttle
+from processing.throttler import Throttle
 import aiohttp
 import pprint
 import math
@@ -20,7 +20,7 @@ from pathlib import Path
 
 
 #Imports TestUtil and corresponding functions
-from flaskr.datutils.test_utils import *
+from processing.datutils.test_utils import *
 
 pp = pprint.PrettyPrinter(indent=4);
 
@@ -48,7 +48,7 @@ consecutiveErrors = 1
 
 SEED_ID = "root"
 
-workerInstances = 10
+workerInstances = 3
 
 ACCEPTED_TYPES = {"application/vnd.google-apps.presentation", "application/vnd.google-apps.spreadsheet", "application/vnd.google-apps.document", "application/vnd.google-apps.file"}
 
@@ -288,14 +288,19 @@ def loadFiles(USER_ID, _workingPath, fileId, _creds):
 
     TestUtil.activity_gen()
 
+    #Writing data to SQL
+    import processing.sql
+    processing.sql.start(USER_ID, _workingPath)
+
     open(_workingPath + 'done.txt', 'a+').write("DONE")
  #   asyncio.DefaultEventLoopPolicy = asyncio.WindowsSelectorEventLoopPolicy
-
+'''
 if __name__ == "__main__":
     #Default settings
     uid = "527e4afc-4598-400f-8536-afa5324f0ba4"
-    fileid = 'root'
+    fileid = '0B4Fujvv5MfqbWTE1NF94dmRJVTg'
     homePath =  "/mnt/c/users/henry/pydocs/data/"
     creds = pickle.load(open('creds.pickle', 'rb'))
     TestUtil.workingPath =  homePath + 'data/' + uid + '/'
     loadFiles(uid, TestUtil.workingPath, fileid, creds)
+'''

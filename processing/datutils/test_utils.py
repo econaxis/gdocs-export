@@ -1,5 +1,5 @@
 import pandas as pd
-from flaskr.throttler import Throttle
+from processing.throttler import Throttle
 import numpy as np
 import random
 from math import log
@@ -91,7 +91,9 @@ class TestUtil:
     async def print_size(cls, files, lastModFile, FilePrintText):
         while True:
             totalSize = files.qsize() + len(lastModFile)
-            outputString = "%s <b>%d out of %d (discovered items)</b> <br>" %(FilePrintText.text,len(lastModFile),  totalSize)
+            outputString = "%s\n<br> <b>%d out of %d (discovered items)</b> %s<br>\n" %(FilePrintText.text,len(lastModFile),  totalSize, datetime.now().__str__())
+
+            outputString += "counter: " + cls.throttle.gcount() + "  rpm: " + cls.throttle.rpm
 
             FilePrintText.clear()
 
@@ -101,12 +103,11 @@ class TestUtil:
             cls.errMsg = "CLEARED " + str(datetime.now() )+ "\n"
 
             print(outputString)
-            print('counter: ', cls.throttle.gcount(), '   rpm: ', cls.throttle.rpm)
 
-            if(random.randint(0, 100) > 95):
+            if(random.randint(0, 100) > 97):
                 print("resetting counter")
                 cls.throttle.reset()
-            await asyncio.sleep(2)
+            await asyncio.sleep(15)
 
 
     @classmethod
@@ -120,13 +121,13 @@ def dr2_urlbuilder(id: str):
 async def API_RESET(seconds = 6, throttle = None, decrease = False):
 
     if throttle and decrease:
-        throttle.decrease()
+        await throttle.decrease()
     secs = random.randint(0, seconds)
     TestUtil.strToFile("Waiting for GDrive... %d<br>"%(secs), 'streaming.txt')
     await asyncio.sleep(secs)
     return
 
-async def tryGetQueue(queue: asyncio.Queue, repeatTimes:int = 5, interval:float = 10, name:str = ""):
+async def tryGetQueue(queue: asyncio.Queue, repeatTimes:int = 2, interval:float = 2, name:str = ""):
     output = None
     timesWaited = 0
     while(output==None):
