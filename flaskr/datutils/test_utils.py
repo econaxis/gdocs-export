@@ -98,7 +98,7 @@ class TestUtil:
             cls.strToFile(outputString, 'streaming.txt')
             cls.strToFile(cls.errMsg, 'errors.txt')
 
-            cls.errMsg = "CLEARED " + datetime.now() + "\n"
+            cls.errMsg = "CLEARED " + str(datetime.now() )+ "\n"
 
             print(outputString)
             print('counter: ', cls.throttle.gcount(), '   rpm: ', cls.throttle.rpm)

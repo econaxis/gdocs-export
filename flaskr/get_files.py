@@ -145,9 +145,6 @@ async def handleResponse(response, files, fileTuple):
         if(fileTuple[3] < 4):
             fileTuple[3] +=1
             await files.put(fileTuple)
-        else:
-            global cancelled
-            cancelled[fileTuple] = 1
 
         if(response.status ==429):
             await API_RESET(throttle = acThrottle, decrease = True)
@@ -181,8 +178,7 @@ async def getRevision(files: asyncio.Queue, session: aiohttp.ClientSession, head
         async with session.get(url = dr2_urlbuilder(fileId), headers = headers) as revResponse:
             code = await handleResponse(revResponse, files, fileTuple)
             if code == -1:
-                pass
-                #continue
+                continue
             else:
                 revisions = code
 
@@ -195,12 +191,9 @@ async def getRevision(files: asyncio.Queue, session: aiohttp.ClientSession, head
 
         acThrottle.increase()
 
-        #Pass this checkpoint both tests have passed
+        if(not revisions.get("items")):
+            continue
         revisions = revisions["items"]
-        act = act.get("activities", [dict(timestamp = "2019-03-13T01:34:24.629Z")])
-        for a in act:
-            revisions.append(dict(modifiedDate = a["timestamp"]))
-
         for item in revisions:
             global ENABLE_FILESIZE
 
@@ -210,6 +203,12 @@ async def getRevision(files: asyncio.Queue, session: aiohttp.ClientSession, head
 
 
             lastModFile[(fileName, fileId)] = modifiedDate
+
+
+        act = act.get("activities", [dict(timestamp = "2019-03-13T01:34:24.629Z")])
+        for a in act:
+            revisions.append(dict(modifiedDate = a["timestamp"]))
+
         files.task_done()
 
 
@@ -278,7 +277,6 @@ def loadFiles(USER_ID, _workingPath, fileId, _creds):
 
     pickle.dump(collapsedFiles, open(_workingPath + 'collapsedFiles.pickle', 'wb'))
     pickle.dump(pathedFiles, open(_workingPath + 'pathedFiles.pickle', 'wb'))
-    pickle.dump(cancelled, open('cancelled', 'wb'))
 
 
 
