@@ -46,21 +46,21 @@ def process_data(_userid = None):
 
     htmlResponse = flask.make_response()
 
-    if(os.path.exists(workingPath + 'streaming.txt') and not flask.session.get('newsession')):
+    if ('fileid' in flask.session):
+        fileId = flask.session.get("fileid")
+        flask.session.pop("fileid")
+        print("starting new task")
+        from flaskr.get_files_loader import queueLoad
+        curJob = queueLoad(userid, workingPath, fileId, creds)
+        htmlResponse = redirect(flask.url_for('server.process_data', _userid = userid))
+    elif (os.path.exists(workingPath + 'streaming.txt')):
         data = None
         print("session found")
         data =  open(workingPath + 'streaming.txt', 'r').read()
         DONE = os.path.exists(workingPath+ 'done.txt')
 
-        #TODO: change global url prefix /dash/ to CONFIG file
         htmlResponse.set_data(render_template('process.html', data = data, userid = userid, DONE = DONE,
             DASH_LOC = "/dashapp/" + userid))
-    elif ('fileid' in flask.session):
-        fileId = flask.session.get("fileid")
-        from flaskr.get_files_loader import queueLoad
-        flask.session['newsession'] = False
-        curJob = queueLoad(userid, workingPath, fileId, creds)
-        htmlResponse = redirect(flask.url_for('server.process_data', _userid = userid))
     else:
         return """
             There is no file id found for the requested userid. This may be because you did not enter a fileid in <br>
@@ -91,7 +91,6 @@ def formValidate():
     if(form.validate_on_submit()):
         flask.session["fileid"] = form.fileId.data
         if (check_signin(flask.session['userid']) and flask.session.get('signedin')):
-            flask.session['newsession'] = True
             return redirect(flask.url_for('server.process_data', _userid = flask.session["userid"]))
         else:
             return "No credentials found for current user! This may be a bug, \

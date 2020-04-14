@@ -1,5 +1,5 @@
 import pickle
-from flaskr.get_files import loadFiles
+from processing.get_files import loadFiles
 from rq import Queue
 from redis import Redis
 from pprint import PrettyPrinter
