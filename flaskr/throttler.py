@@ -40,11 +40,11 @@ class Throttle:
             print("done r")
 
     def decrease(self):
-        self.rpm -= 4
-        self.rpm = max(self.rpm, 30)
+        self.rpm -= 5
+        self.rpm = max(self.rpm, 65)
     def increase(self):
-        self.rpm +=1.2
-        self.rpm = min(self.rpm, 125)
+        self.rpm +=0.6
+        self.rpm = min(self.rpm, 115)
     async def acquire(self):
         self.counter += 1
         await self.sem.acquire()

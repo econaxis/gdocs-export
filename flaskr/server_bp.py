@@ -51,17 +51,15 @@ def process_data(_userid = None):
         print("session found")
         data =  open(workingPath + 'streaming.txt', 'r').read()
         DONE = os.path.exists(workingPath+ 'done.txt')
-        print(1)
 
         #TODO: change global url prefix /dash/ to CONFIG file
         htmlResponse.set_data(render_template('process.html', data = data, userid = userid, DONE = DONE,
             DASH_LOC = "/dashapp/" + userid))
-    elif ('fileid' in flask.session and not flask.session.get("redirected")):
+    elif ('fileid' in flask.session):
         fileId = flask.session.get("fileid")
         from flaskr.get_files_loader import queueLoad
         flask.session['newsession'] = False
         curJob = queueLoad(userid, workingPath, fileId, creds)
-        flask.session["redirected"] = True
         htmlResponse = redirect(flask.url_for('server.process_data', _userid = userid))
     else:
         return """
