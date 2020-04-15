@@ -25,39 +25,28 @@ class Throttle:
 
     async def work(self, per = 3):
         while True:
-            if (self.rpm < 10):
-                self.rpm = 10
-                print("less 1")
-                await asyncio.sleep(40)
+            print("sleeping for: ", 60*per/self.rpm)
+            await asyncio.sleep(60 * per / self.rpm)
+            for i in range(per):
                 self.sem.release()
-            else:
-                print("sleeping for: ", 60*per/self.rpm)
-                await asyncio.sleep(60 * per / self.rpm)
-                for i in range(per):
-                    print("r", end = "")
-                    self.sem.release()
 
-            print("done r")
 
     async def decrease(self):
-        self.rpm -= 9
-        self.rpm = max(self.rpm, 30)
+        self.rpm -= 1.3
+        self.rpm = max(self.rpm, 60)
 
-        '''
-        #Use up all current quotas
-        if(self.rpm <70 ):
-            while (not self.sem.locked()):
-                try:
-                    #TODO: fix await outside of async function
-                    await asyncio.wait_for(self.sem.acquire(),0.3)
-                except:
-                    break;
+        while (not self.sem.locked()):
+            print("decreasing")
+            try:
+                #TODO: fix await outside of async function
+                await asyncio.wait_for(self.sem.acquire(),0.3)
+            except:
+                break;
 
-        '''
 
     def increase(self):
-        self.rpm +=0.2
-        self.rpm = min(self.rpm, 115)
+        self.rpm +=0.5
+        self.rpm = min(self.rpm, 125)
     async def acquire(self):
         self.counter += 1
         await self.sem.acquire()

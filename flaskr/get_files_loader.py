@@ -13,7 +13,7 @@ def queueLoad(userid, workingPath, fileId, creds):
     pp.pprint(creds)
     redis_conn = Redis(**(returnConfig()))
     q = Queue (connection = redis_conn)
-#    open(workingPath + 'streaming.txt', 'a+').write("Starting (this may take up to 30 minutes) <br>Refresh the page to view updates<br>")
+    open(workingPath + 'streaming.txt', 'a+').write("Starting (this may take up to 30 minutes) <br>Refresh the page to view updates<br>")
     job = q.enqueue(loadFiles, job_timeout = '50h', args = (userid, workingPath, fileId, creds))
     prevTask = (userid, workingPath, fileId, creds)
     pickle.dump(prevTask, open('prevtask.pickle', 'wb'))

@@ -79,7 +79,7 @@ class TestUtil:
         #Generate random quotaUser
         quotaUser = str(uuid.uuid4())
 
-        params = dict(ancestorName = ancName, pageSize = pageSize, 
+        params = dict(ancestorName = ancName, pageSize = pageSize,
             filter = filter, quotaUser = quotaUser)
         return dict(params = params, headers = headers, url = "https://driveactivity.googleapis.com/v2/activity:query")
 
@@ -93,7 +93,7 @@ class TestUtil:
             totalSize = files.qsize() + len(lastModFile)
             outputString = "%s\n<br> <b>%d out of %d (discovered items)</b> %s<br>\n" %(FilePrintText.text,len(lastModFile),  totalSize, datetime.now().__str__())
 
-            outputString += "counter: " + cls.throttle.gcount() + "  rpm: " + cls.throttle.rpm
+            outputString += "counter: %f rpm: %f\n"%(cls.throttle.gcount(), cls.throttle.rpm)
 
             FilePrintText.clear()
 
@@ -107,7 +107,8 @@ class TestUtil:
             if(random.randint(0, 100) > 97):
                 print("resetting counter")
                 cls.throttle.reset()
-            await asyncio.sleep(15)
+
+            await asyncio.sleep(5)
 
 
     @classmethod
