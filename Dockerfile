@@ -9,17 +9,23 @@ COPY installation ./installation
 RUN chmod +x ./installation/instodbc.sh
 
 RUN ./installation/instodbc.sh
+RUN pip install -r ./installation/requirements.txt
 
-COPY requirements.txt requirements.txt
-RUN pip install -r requirements.txt
+EXPOSE 5000
+
+ARG WORKER
+ENV WORKER ${WORKER}
+ARG REDIS_PASSW
+ARG REDIS_HOST
+ARG SQL_PASS
+ENV REDIS_PASSW ${REDIS_PASSW}
+ENV REDIS_HOST ${REDIS_HOST}
+ENV SQL_PASS   ${SQL_PASS}
 
 
 COPY flaskr ./flaskr
 COPY processing ./processing
 COPY . .
 
-EXPOSE 5000
-
 RUN chmod +x boot.sh
-
 ENTRYPOINT ["./boot.sh"]

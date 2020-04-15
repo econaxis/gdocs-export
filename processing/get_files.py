@@ -50,7 +50,7 @@ SEED_ID = "root"
 
 workerInstances = 3
 
-ACCEPTED_TYPES = {"application/vnd.google-apps.presentation", "application/vnd.google-apps.spreadsheet", "application/vnd.google-apps.document", "application/vnd.google-apps.file"}
+ACCEPTED_TYPES = {"application/vnd.google-apps.presentation", "application/vnd.google-apps.spreadsheet", "application/vnd.google-apps.document", "application/vnd.google-apps.file", "application/pdf"}
 
 def exceptionHandler(loop, context):
     #loop.default_exception_handler(context)
@@ -78,49 +78,34 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue, files: asyncio.Queu
         #with only one seed ID to start
         #await drThrottle.sem.acquire()
         folderIdTuple = await tryGetQueue(folders, name = "getIds", interval = 3)
+
         if(folderIdTuple == -1):
             return
-        (id, path) = folderIdTuple
+        (id, path, retries) = folderIdTuple
 
         #Root id is different structure
         data = None
         if(id == "root"):
-            data = dict( corpora = "allDrives", includeItemsFromAllDrives = 'true', supportsTeamDrives = 'true')
+            data = dict(corpora="allDrives", includeItemsFromAllDrives = 'true',
+                    supportsTeamDrives = 'true')
         else:
             query = "'" + id + "' in parents"
-            data = dict(q=query, corpora = "allDrives", includeItemsFromAllDrives = 'true',
-                supportsTeamDrives = 'true')
-        #Searches all drives including shared files.
+            data = dict(q=query, corpora = "allDrives",
+                    includeItemsFromAllDrives = 'true', supportsTeamDrives = 'true')
+
 
         async with session.get(url = drive_url, params = data, headers = headers) as response:
-            DriveResponse = await response.json()
-            if (response.status == 200):
-                global consecutiveErrors
-                consecutiveErrors = 1
-                #Classify item type by file or folder
-                #If folder, then add back to folder queue for further processing
-                for resFile in DriveResponse["files"]:
-                    if(resFile["mimeType"] == "application/vnd.google-apps.folder"):
-                        await folders.put( (resFile["id"], path + [resFile["name"]]) )
-                    elif (resFile["mimeType"] in ACCEPTED_TYPES):
-                        await files.put([resFile["id"], resFile["name"], path + [resFile["name"]], 0])
+            resp = await handleResponse(response, folders, folderIdTuple, advanced = False)
 
+            if(resp == -1):
+                continue
 
-            elif(response.status==403):
-                errors = DriveResponse.get("error", {}).get("errors", [])
-                for e in errors:
-                    if e["reason"] == "insufficientFilePermissions":
-                        FilePrintText.add("Insufficient permissions for this file, skipping")
-                        break
-                    elif e["reason"] == "userRateLimitExceeded":
-                        FilePrintText.add("Google Drive API Limit exceeded, get ID")
-                        await folders.put(folderIdTuple)
-                        await API_RESET()
-                        break
-                    else:
-                        FilePrintText.add("Other Error" + e["reason"])
+        for resFile in resp["files"]:
+            if(resFile["mimeType"] == "application/vnd.google-apps.folder"):
+                await folders.put( [resFile["id"], path + [resFile["name"]], 0] )
+            elif (resFile["mimeType"] in ACCEPTED_TYPES):
+                await files.put([resFile["id"], resFile["name"], path + [resFile["name"]], 0])
 
-        #Mark task as done for folders.join() to properly work
         folders.task_done()
 
     while(not folders.empty()):
@@ -133,7 +118,7 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue, files: asyncio.Queu
 
 counter = 0
 cancelled = {}
-async def handleResponse(response, files, fileTuple):
+async def handleResponse(response, queue, fileTuple, advanced = True):
     try:
         rev = await response.json()
         assert response.status == 200, "Response not 200"
@@ -142,14 +127,16 @@ async def handleResponse(response, files, fileTuple):
         rev = await response.text()
         TestUtil.errors(e)
         TestUtil.errors(rev)
-        if(fileTuple[3] < 4):
-            fileTuple[3] +=1
-            await files.put(fileTuple)
 
-        if(response.status ==429):
+        if advanced:
             await API_RESET(throttle = acThrottle, decrease = True)
         else:
             await API_RESET(throttle = acThrottle, decrease = False)
+
+        if(fileTuple[-1] < 3):
+            fileTuple[-1] +=1
+            await queue.put(fileTuple)
+
         return -1
     return rev
 
@@ -218,8 +205,8 @@ SCOPES = ['https://www.googleapis.com/auth/drive.metadata.readonly', 'https://ww
 async def start():
     global SEED_ID, workerInstances, lastModFile, acThrottle, drThrottle
     
-    acThrottle = Throttle(30)
-    drThrottle = Throttle(800)
+    acThrottle = Throttle(80)
+    drThrottle = Throttle(100)
     TestUtil.throttle = acThrottle
 
     async with aiohttp.ClientSession() as session:
@@ -229,7 +216,7 @@ async def start():
 
         #Seed ID to start initial folder requests
         #Limits recursion limit
-        await folders.put(( SEED_ID, ["root"]) )
+        await folders.put([SEED_ID, ["root"], 0] )
 
         tt = asyncio.create_task(acThrottle.work())
         #dd = asyncio.create_task(drThrottle.work())
@@ -257,6 +244,7 @@ async def start():
 
 
 def loadFiles(USER_ID, _workingPath, fileId, _creds):
+    Path(_workingPath).mkdir(exist_ok = True)
 
     print("load files started")
     print("USER ID: %s"%USER_ID, " ", fileId)
