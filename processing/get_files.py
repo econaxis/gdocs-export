@@ -102,7 +102,7 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue, files: asyncio.Queu
 
         for resFile in resp["files"]:
             if(resFile["mimeType"] == "application/vnd.google-apps.folder"):
-                await folders.put( [resFile["id"], path + [resFile["name"]], 0] )
+                await folders.put([resFile["id"], path + [resFile["name"]], 0] )
             elif (resFile["mimeType"] in ACCEPTED_TYPES):
                 await files.put([resFile["id"], resFile["name"], path + [resFile["name"]], 0])
 
@@ -186,7 +186,7 @@ async def getRevision(files: asyncio.Queue, session: aiohttp.ClientSession, head
 
             modifiedDate = iso8601.parse_date(item["modifiedDate"])
             collapsedFiles[(fileName,  modifiedDate)] = 1
-            pathedFiles [(*path, modifiedDate)] = 1
+            pathedFiles [(*path,)] = modifiedDate
 
 
             lastModFile[(fileName, fileId)] = modifiedDate
@@ -263,6 +263,15 @@ def loadFiles(USER_ID, _workingPath, fileId, _creds):
     #Main loop
     asyncio.run(start(), debug = True)
 
+
+    d = set()
+    for l1 in pathedFiles:
+        for i1, path in enumerate(l1):
+            for i2,path2 in enumerate(l1):
+                if(i2>=i1 and path2==l1[-1]):
+                    d.update([(path, path2, i2-i1)])
+
+    pickle.dump(d, open(_workingPath + 'closure.pickle', 'wb'))
     pickle.dump(collapsedFiles, open(_workingPath + 'collapsedFiles.pickle', 'wb'))
     pickle.dump(pathedFiles, open(_workingPath + 'pathedFiles.pickle', 'wb'))
 

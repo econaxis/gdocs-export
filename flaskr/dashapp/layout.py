@@ -2,20 +2,18 @@ import dash_core_components as dcc
 import dash_html_components as html
 from flaskr.dashapp.dash_functions import *
 
-def return_layout():
-
+def layout():
     return html.Div([
         html.Div([
             html.Div([
                 dcc.Graph(
                     id="fList",
                 ), dcc.Dropdown(
-                    id="dropdown",
-                    value="sumDates"
+                    id="dropdown"
                 )
                 ], className = "six columns",
                 style = {
-                'margin': gen_margin(l = 20)
+                'margin': gen_margin()
                 }
             ),
             html.Div([
@@ -25,15 +23,15 @@ def return_layout():
                 html.Button(
                     "Reset Histogram",
                     id = "reset_histogram"
+                ),
+                dcc.Checklist(
+                    id="timeck",
+                    options=[
+                        {'label': 'Time Only', 'value': 'time'}
+                    ]
                 )
             ], className = "six columns"),
         ], id = "primary"),
-        html.Div(
-            id = "csvdata", style = {'display': 'none'}
-        ),
-        html.Div(
-            id = "zoomInfo", style = {'display': 'none'}
-        ),
         dcc.Location(id = 'url', refresh = False),
         html.Div([
             dcc.Graph(

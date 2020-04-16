@@ -32,15 +32,17 @@ class Throttle:
 
 
     async def decrease(self):
-        self.rpm -= 1.3
-        self.rpm = max(self.rpm, 60)
+        self.rpm -= 1.1
+        self.rpm = max(self.rpm, 85)
 
         while (not self.sem.locked()):
             print("decreasing")
             try:
                 #TODO: fix await outside of async function
-                await asyncio.wait_for(self.sem.acquire(),0.3)
+                await asyncio.wait_for(self.sem.acquire(),0.1)
             except:
+                for i in range(10):
+                    self.sem.release()
                 break;
 
 
