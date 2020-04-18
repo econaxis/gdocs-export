@@ -68,7 +68,6 @@ def register_callback(app):
     )
     def update_histogram( times, ddvalue, figure):
         selection = figure["data"][0]["selectedpoints"]
-        dates_uf = None
         print("ddvalue:" , ddvalue)
 
         print(selection)
@@ -79,16 +78,13 @@ def register_callback(app):
 
         @cache.memoize()
         def dbquery(selection):
+            dates_uf = None
             if(ddvalue == 'All'):
                 #If all dates are wanted, query is different for more optimization
-                dates_uf = sess.query(Dates).join(Files).filter(Files.parent_id==test["userid"]).all()
+                dates_uf = sess.query(Dates.moddate).join(Files).filter(Files.parent_id==test["userid"]).all()
             else:
-                dates_uf = sess.query(Dates).join(Files).filter(and_(Files.parent_id==test["userid"],
+                dates_uf = sess.query(Dates.moddate).join(Files).filter(and_(Files.parent_id==test["userid"],
                     Files.fileName.in_(selectedFiles))).all()
-                print(len(dates_uf))
-                #dates_uf = sess.query(Files).options(joinedload(Files.children)) \
-                #        .filter(Files.parent_id == test["userid"]).filter(Files.fileName.in_(selectedFiles)) \
-                #        .first().children
 
             return dates_uf
 
@@ -98,10 +94,10 @@ def register_callback(app):
 
         tickformat=""
         if(times):
-            dates = [x.moddate.replace(year=2000, month = 1, day = 1) for x in dates_uf]
+            dates = [x[0].replace(year=2000, month = 1, day = 1) for x in dates_uf]
             tickformat="%H:%M"
         else:
-            dates = [x.moddate for x in dates_uf]
+            dates = [x[0] for x in dates_uf]
 
         return go.Figure(
             data = [go.Histogram(x=dates, nbinsx=60)],
