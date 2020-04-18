@@ -23,5 +23,5 @@ def register_dashapp(flask_serv):
         Loader.setpdpath (flask_serv.config["HOMEDATAPATH"])
         dashapp.layout = layout()
         register_callback(dashapp)
-        dashapp.run_server(debug=True)
+#        dashapp.run_server(debug=True)
 

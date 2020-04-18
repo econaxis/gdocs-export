@@ -273,7 +273,7 @@ def loadFiles(USER_ID, _workingPath, fileId, _creds):
     for l1 in pathedFiles:
         for i1, path in enumerate(l1):
             path2 = l1[-1]
-            d.update([(path, path2, i2-i1)])
+            d.update([(path, path2, len(l1)-i1)])
 
     pickle.dump(d, open(_workingPath + 'closure.pickle', 'wb'))
     pickle.dump(collapsedFiles, open(_workingPath + 'collapsedFiles.pickle', 'wb'))
