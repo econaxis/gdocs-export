@@ -24,8 +24,8 @@ def layout():
                     id = "histogram"
                 ),
                 html.Button(
-                    "Reset Histogram",
-                    id = "reset_histogram"
+                    "Get parent",
+                    id = "get_parent"
                 ),
                 dcc.Checklist(
                     id="timeck",
@@ -35,13 +35,16 @@ def layout():
                 )
             ], className = "six columns"),
         ], id = "primary"),
-        dcc.Location(id = 'url', refresh = False),
+        html.Span(
+            id = "parent_span"
+        ),
         html.Div([
             dcc.Graph(
                 id="lineWord"
             )
         ], className = "four columns",
-        style={'display':'none'})
+        style={'display':'none'}),
+        dcc.Location(id = 'url', refresh = False),
 
     ])
 

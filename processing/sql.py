@@ -1,28 +1,25 @@
-import pyodbc
 import sys
 import pickle
-import re
 import threading
 import secrets
-from datetime import datetime
-import sqlalchemy as sal
-from sqlalchemy import create_engine, MetaData, Column, Integer, String, Table, DateTime, ForeignKey 
-from sqlalchemy.orm import sessionmaker, relationship, scoped_session
+import sqlalchemy as sqlal
+from sqlalchemy import create_engine, MetaData
+from sqlalchemy.orm import sessionmaker, scoped_session
 import pprint
-import urllib
 import os
 
-from .models import *
+from processing.models import Owner, Files, Closure, Dates, Base
 
 
-params = os.environ["SQL_CONN"]
+PARAMS = os.environ["SQL_CONN"]
 
-engine = sal.create_engine("mssql+pyodbc:///?odbc_connect=%s"%params, pool_size = 30, echo = True,
+engine = sqlal.create_engine("mssql+pyodbc:///?odbc_connect=%s"%PARAMS, pool_size = 30, echo = True,
         max_overflow = 300)
+
 Base.metadata.create_all(bind=engine)
 
-#engine = sal.create_engine('sqlite+pysqlite:///test.db', echo = True)
-conn = engine.connect()
+#engine = sqlal.create_engine('sqlite+pysqlite:///test.db', echo = True)
+CONN = engine.connect()
 
 meta = MetaData(bind = engine)
 
@@ -61,11 +58,10 @@ class mt (threading.Thread):
 #Create default owner
 
 def start(userid, workingPath):
-    print("sql start, received ", userid, workingPath)
     q= sess.query(Owner).filter(Owner.name == userid).count()
     if not q:
         ins = Owner.__table__.insert().values(name = userid)
-        conn.execute(ins)
+        CONN.execute(ins)
 
     df = pickle.load(open(workingPath + 'collapsedFiles_p.pickle', 'rb'))
 
@@ -75,25 +71,22 @@ def start(userid, workingPath):
     step = 30
     print(len(filesList))
     for i in range(0, len(filesList),step ):
-        print("ds")
         curses = scoped_session(_session)
         ds = mt(i, i+step, curses, df, userid)
         ts.append(ds)
 
-    '''
     for i in ts:
         i.start()
 
     for i in ts:
         i.join()
-    '''
 
     closure = []
     df = pickle.load(open(workingPath + 'closure.pickle', 'rb'))
+
+
     for c in df:
         c = list(c)
-        c[0] = re.sub('\W+',' ', c[0])[0:119]
-        c[1] = re.sub('\W+',' ', c[1])[0:119]
         closure.append(dict(parent=c[0], child = c[1], owner_id = userid, depth = c[2]))
 
     try:
@@ -101,10 +94,9 @@ def start(userid, workingPath):
         sess.commit()
     except:
         e = sys.exc_info()[0]
-        print(str(e) + '='*100)
+        print(str(e))
 
 def main():
-
    # Owner.__table__.insert(bind = engine).values([dict(name = "default")])
    # sess.add(Owner(name="default"))
    # sess.commit()

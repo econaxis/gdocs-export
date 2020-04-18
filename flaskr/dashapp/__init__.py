@@ -2,6 +2,7 @@
 from flaskr.dashapp.dash_functions import *
 import flask
 from flask import current_app
+from flaskr.dashapp.callbacks import test
 
 
 pp = PrettyPrinter(indent=3)
@@ -19,9 +20,15 @@ def register_dashapp(flask_serv):
     if flask_serv == None:
         flask_serv = dashapp.server
 
+
+    #DEbug params
+    test["workingPath"] = "/home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/"
+    test["userid"] = "527e4afc-4598-400f-8536-afa5324f0ba4"
+
+
     with flask_serv.app_context():
         Loader.setpdpath (flask_serv.config["HOMEDATAPATH"])
         dashapp.layout = layout()
         register_callback(dashapp)
-#        dashapp.run_server(debug=True)
+        dashapp.run_server(debug=True)
 
