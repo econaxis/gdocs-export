@@ -1,5 +1,7 @@
 import os
+from flask_caching import Cache
 import sys
+
 
 #Necessary for non HTTPS OAUTH calls
 os.environ["OAUTHLIB_RELAX_TOKEN_SCOPE"] = "1"
@@ -23,8 +25,9 @@ class Config:
     PRESERVE_CONTEXT_ON_EXCEPTION = True
     TRAP_HTTP_EXCEPTIONS = True
     TRAP_BAD_REQUEST_ERRORS = True
-    SCOPES = ['https://www.googleapis.com/auth/drive.metadata.readonly', 'https://www.googleapis.com/auth/drive.activity.readonly']
+    SCOPES = ['https://www.googleapis.com/auth/drive.metadata.readonly', 
+            'https://www.googleapis.com/auth/drive.activity.readonly', 'https://www.googleapis.com/auth/drive']
     TEMPLATES_AUTO_RELOAD = True
-    
 
 CONF = Config()
+cache = Cache(config = {"CACHE_TYPE":'simple'})

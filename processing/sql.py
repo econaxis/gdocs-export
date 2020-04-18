@@ -1,4 +1,5 @@
 import pyodbc
+import sys
 import pickle
 import re
 import threading
@@ -44,9 +45,8 @@ class mt (threading.Thread):
         for counter, i in enumerate(filesList[self.ind:self.end]):
             timesList = df.loc[i].index.to_pydatetime()
             fileId = secrets.token_urlsafe(8)
-            fileArr=[dict(fileName =i, fileId = fileId,
+            fileArr=[dict(fileName =i[0:119], fileId = fileId,
                 lastModDate = max(timesList), parent_id =self.userid)]
-
 
             self.session.bulk_insert_mappings(Files, fileArr)
             self.session.commit()
@@ -92,13 +92,16 @@ def start(userid, workingPath):
     df = pickle.load(open(workingPath + 'closure.pickle', 'rb'))
     for c in df:
         c = list(c)
-        c[0] = re.sub('\W+',' ', c[0])
-        c[1] = re.sub('\W+',' ', c[1])
+        c[0] = re.sub('\W+',' ', c[0])[0:119]
+        c[1] = re.sub('\W+',' ', c[1])[0:119]
         closure.append(dict(parent=c[0], child = c[1], owner_id = userid, depth = c[2]))
 
-    sess.bulk_insert_mappings(Closure, closure)
-    sess.commit()
-
+    try:
+        sess.bulk_insert_mappings(Closure, closure)
+        sess.commit()
+    except:
+        e = sys.exc_info()[0]
+        print(str(e) + '='*100)
 
 def main():
 

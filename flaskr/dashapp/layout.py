@@ -1,6 +1,8 @@
 import dash_core_components as dcc
 import dash_html_components as html
 from flaskr.dashapp.dash_functions import *
+from processing.sql import scoped_sess
+from flaskr.dashapp.callbacks import test
 
 def layout():
     return html.Div([
@@ -8,6 +10,7 @@ def layout():
             html.Div([
                 dcc.Graph(
                     id="fList",
+                    figure=gen_fListFig(scoped_sess, test["userid"])
                 ), dcc.Dropdown(
                     id="dropdown"
                 )
