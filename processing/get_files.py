@@ -1,4 +1,5 @@
 import asyncio
+import gdocrevisions as gdr
 import sys
 from time import time
 from datetime import datetime
@@ -37,6 +38,9 @@ class FilePrintText:
 
 
 lastModFile = {}
+
+docs = []
+
 MAX_FILES = 20000
 ENABLE_FILESIZE = False
 collapsedFiles = {}
@@ -51,15 +55,6 @@ SEED_ID = "root"
 workerInstances = 3
 
 ACCEPTED_TYPES = {"application/vnd.google-apps.presentation", "application/vnd.google-apps.spreadsheet", "application/vnd.google-apps.document", "application/vnd.google-apps.file", "application/pdf"}
-
-def exceptionHandler(loop, context):
-    #loop.default_exception_handler(context)
-    print("="*10)
-    exception = context.get('exception')
-    print("exception: %s"%exception)
-    print("loop %s"%loop)
-    print("=" * 20)
-    loop.stop()
 
 
 async def getIdsRecursive(drive_url, folders: asyncio.Queue, files: asyncio.Queue, 
@@ -94,17 +89,21 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue, files: asyncio.Queu
                     includeItemsFromAllDrives = 'true', supportsTeamDrives = 'true')
 
 
-        async with session.get(url = drive_url, params = data, headers = headers) as response:
-            resp = await handleResponse(response, folders, folderIdTuple, advanced = False)
+        try:
+            async with session.get(url = drive_url, params = data, headers = headers) as response:
+                resp = await handleResponse(response, folders, folderIdTuple, advanced = False)
 
-            if(resp == -1):
-                continue
+                if(resp == -1):
+                    continue
+        except aiohttp.client_exceptions:
+            print("something wrong with session.get connection closed prematurely?")
+
 
         for resFile in resp["files"]:
             if(resFile["mimeType"] == "application/vnd.google-apps.folder"):
                 await folders.put([resFile["id"], path + [resFile["name"]], 0] )
             elif (resFile["mimeType"] in ACCEPTED_TYPES):
-                await files.put([resFile["id"], resFile["name"], path + [resFile["name"]], 0])
+                await files.put([resFile["id"], resFile["name"], resFile["mimeType"],path + [resFile["name"]], 0])
 
         folders.task_done()
 
@@ -116,8 +115,6 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue, files: asyncio.Queu
     #Folders for blocking call q.join() to be released
 
 
-counter = 0
-cancelled = {}
 async def handleResponse(response, queue, fileTuple, advanced = True):
     try:
         rev = await response.json()
@@ -142,65 +139,73 @@ async def handleResponse(response, queue, fileTuple, advanced = True):
 
 
 async def getRevision(files: asyncio.Queue, session: aiohttp.ClientSession, headers):
-    global counter
+
     #Await random amount for more staggered requesting (?)
     await asyncio.sleep(random.randint(0, 15))
     s = time.time()
     while True:
         await acThrottle.acquire()
 
-        
         #Random code to reset counter every 2/10 times 
         fileTuple = await tryGetQueue(files, name = "getRevision")
         if(fileTuple==-1):
             return
 
-        (fileId, fileName, path, tried) = fileTuple
+        (fileId, fileName, kind, path, tried) = fileTuple
 
         FilePrintText.add(fileId[0:3] + " <i>" + '/'.join(path) + "</i>")
 
-        revisions  = {}
-        rev = None
-        act = None
-        async with session.get(url = dr2_urlbuilder(fileId), headers = headers) as revResponse:
-            code = await handleResponse(revResponse, files, fileTuple)
-            if code == -1:
-                continue
-            else:
-                revisions = code
+        if(kind != "application/vnd.google-apps.document" or True):
+            await queryDriveActivity(fileTuple, files, session, headers)
+        else:
+            print('='*10, fileId, TestUtil.creds, '='*10)
+            docs.append(gdr.GoogleDoc(fileId, TestUtil.creds))
+            print(len(docs), "len")
 
-        async with session.post(**TestUtil.dractivity_builder(fileId)) as actResponse:
-            code = await handleResponse(actResponse, files, fileTuple)
-            if code == -1:
-                continue
-            else:
-                act = code
+async def queryDriveActivity(fileTuple, files, session, headers):
 
-        acThrottle.increase()
+    (fileId, fileName, kind, path, tried) = fileTuple
 
-        if(not revisions.get("items")):
-            continue
-        revisions = revisions["items"]
-        for item in revisions:
-            global ENABLE_FILESIZE
+    revisions  = {}
+    rev = None
+    act = None
+    async with session.get(url = dr2_urlbuilder(fileId), headers = headers) as revResponse:
+        code = await handleResponse(revResponse, files, fileTuple)
+        if code == -1:
+            return
+        else:
+            revisions = code
 
-            modifiedDate = iso8601.parse_date(item["modifiedDate"])
-            collapsedFiles[(fileName,  modifiedDate)] = 1
-            pathedFiles [(*path,)] = modifiedDate
+    async with session.post(**TestUtil.dractivity_builder(fileId)) as actResponse:
+        code = await handleResponse(actResponse, files, fileTuple)
+        if code == -1:
+            return
+        else:
+            act = code
+
+    acThrottle.increase()
+
+    if(not revisions.get("items")):
+        return
+    revisions = revisions["items"]
+    for item in revisions:
+        global ENABLE_FILESIZE
+
+        modifiedDate = iso8601.parse_date(item["modifiedDate"])
+        collapsedFiles[(fileName,  modifiedDate)] = 1
+        pathedFiles [(*path,)] = modifiedDate
 
 
-            lastModFile[(fileName, fileId)] = modifiedDate
+        lastModFile[(fileName, fileId)] = modifiedDate
 
 
-        act = act.get("activities", [dict(timestamp = "2019-03-13T01:34:24.629Z")])
-        for a in act:
-            revisions.append(dict(modifiedDate = a["timestamp"]))
+    act = act.get("activities", [dict(timestamp = "2019-03-13T01:34:24.629Z")])
+    for a in act:
+        revisions.append(dict(modifiedDate = a["timestamp"]))
 
-        files.task_done()
+    files.task_done()
 
-
-
-SCOPES = ['https://www.googleapis.com/auth/drive.metadata.readonly', 'https://www.googleapis.com/auth/drive.activity.readonly'] 
+SCOPES = ['https://www.googleapis.com/auth/drive.metadata.readonly', 'https://www.googleapis.com/auth/drive.activity.readonly', 'https://www.googleapis.com/auth/drive']
 
 async def start():
     global SEED_ID, workerInstances, lastModFile, acThrottle, drThrottle
@@ -267,13 +272,13 @@ def loadFiles(USER_ID, _workingPath, fileId, _creds):
     d = set()
     for l1 in pathedFiles:
         for i1, path in enumerate(l1):
-            for i2,path2 in enumerate(l1):
-                if(i2>=i1 and path2==l1[-1]):
-                    d.update([(path, path2, i2-i1)])
+            path2 = l1[-1]
+            d.update([(path, path2, i2-i1)])
 
     pickle.dump(d, open(_workingPath + 'closure.pickle', 'wb'))
     pickle.dump(collapsedFiles, open(_workingPath + 'collapsedFiles.pickle', 'wb'))
     pickle.dump(pathedFiles, open(_workingPath + 'pathedFiles.pickle', 'wb'))
+    pickle.dump(docs, open(_workingPath + 'docs.pickle', 'wb'))
 
 
 

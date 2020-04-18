@@ -32,7 +32,7 @@ class Throttle:
 
 
     async def decrease(self):
-        self.rpm -= 1.1
+        self.rpm -= 3.3
         self.rpm = max(self.rpm, 85)
 
         while (not self.sem.locked()):
@@ -47,7 +47,7 @@ class Throttle:
 
 
     def increase(self):
-        self.rpm +=0.5
+        self.rpm +=0.25
         self.rpm = min(self.rpm, 125)
     async def acquire(self):
         self.counter += 1
