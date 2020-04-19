@@ -26,7 +26,8 @@ def register_dashapp(flask_serv):
 
     # DEbug params
     test["workingPath"] = "/home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/"
-    test["userid"] = "testing"
+    test["userid"] =2
+
 
     with flask_serv.app_context():
         Loader.setpdpath(flask_serv.config["HOMEDATAPATH"])

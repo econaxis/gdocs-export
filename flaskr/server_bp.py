@@ -1,8 +1,6 @@
-from pathlib import Path
 import pickle
-from flask import render_template, flash, redirect, Blueprint, current_app
+from flask import render_template, redirect, Blueprint, current_app
 import flask
-from flask import Flask
 from wtforms import StringField, PasswordField
 from flaskr.form import Form
 import uuid

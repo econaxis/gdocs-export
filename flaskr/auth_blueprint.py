@@ -1,7 +1,6 @@
 import flask
-from flask import Flask, Blueprint
+from flask import Blueprint
 from flask import current_app, redirect
-import uuid
 from pathlib import Path
 import google.oauth2.credentials
 import pickle

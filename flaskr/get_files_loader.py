@@ -1,4 +1,3 @@
-import pickle
 from processing.get_files import loadFiles
 from rq import Queue
 from redis import Redis
@@ -18,11 +17,5 @@ def queueLoad(userid, workingPath, fileId, creds):
         workingPath +
         'streaming.txt',
         'a+').write("Starting (this may take up to 30 minutes) <br>Refresh the page to view updates<br>")
-    job = q.enqueue(
-        loadFiles,
-        job_timeout='50h',
-        args=(
-            userid,
-            workingPath,
-            fileId,
-            creds))
+
+    job = q.enqueue( loadFiles, job_timeout='50h', args=( userid, workingPath, fileId, creds))
