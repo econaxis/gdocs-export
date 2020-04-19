@@ -107,12 +107,12 @@ async def getIdsRecursive (drive_url, folders: asyncio.Queue,
             ent_name = "".join(["" if c in ['\"', '\'', '\\']
                         else c for c in resFile["name"]]).rstrip()[0:298]
             id = resFile["id"]
-            idmapper[id[0:38]] = ent_name
+            idmapper[id[0:44]] = ent_name
             if(resFile["mimeType"] == "application/vnd.google-apps.folder"):
-                await folders.put((id, path + [id[0:38]], 0))
+                await folders.put((id, path + [id[0:44]], 0))
             elif (resFile["mimeType"] in ACCEPTED_TYPES):
                 # First element id is not used for naming, only for api calls
-                await files.put([id, resFile["mimeType"], path + [id[0:38]], 0])
+                await files.put([id, resFile["mimeType"], path + [id[0:44]], 0])
 
 
 async def queryDriveActivity(fileTuple, files, session, headers):
@@ -252,7 +252,9 @@ def loadFiles(USER_ID, _workingPath, fileId, _creds):
 
     if(fileId is not None):
         global SEED_ID
+        global idmapper
         SEED_ID = fileId
+        idmapper[SEED_ID] = 'root'
 
     # Main loop
     asyncio.run(start(), debug=True)

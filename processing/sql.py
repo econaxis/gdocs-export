@@ -8,24 +8,26 @@ from sqlalchemy import create_engine, MetaData
 from sqlalchemy.orm import sessionmaker, scoped_session
 import pprint
 import os
+import logging
 
 from processing.models import Owner, Files, Closure, Dates, Base, Filename
 
 
 PARAMS = os.environ["SQL_CONN"]
 
-ENGINE = sqlal.create_engine("mssql+pyodbc:///?odbc_connect=%s" % PARAMS, pool_size=30, echo=True,
+ENGINE = sqlal.create_engine("mssql+pyodbc:///?odbc_connect=%s" % PARAMS, pool_size=30, echo = True, 
                              max_overflow=300)
+
+logging.getLogger('sqlalchemy.engine').setLevel(logging.DEBUG)
 
 Base.metadata.create_all(bind=ENGINE)
 
 #engine = sqlal.create_engine('sqlite+pysqlite:///test.db', echo = True)
 CONN = ENGINE.connect()
 
-_session = sessionmaker(bind=ENGINE)
+_session = sessionmaker(bind=ENGINE, autoflush=True)
 sess = _session()
 scoped_sess = scoped_session(_session)
-
 
 def commit(q, sess, _type):
     _temp = []
@@ -33,19 +35,23 @@ def commit(q, sess, _type):
     while (not q.empty()):
         counter += 1
         _temp.append(q.get_nowait())
-        if (counter % 300 == 0):
+        if (counter % 50 == 0):
             print("SIZE: ", q.qsize())
             sess.bulk_insert_mappings(_type, _temp)
             sess.commit()
             _temp = []
-
     sess.bulk_insert_mappings(_type, _temp)
     sess.commit()
 
 
+
+def adder(queue, sess):
+    while(not queue.empty()):
+        sess.add(queue.get_nowait())
 def start(userid, path):
-    sess.add(Owner(name=userid))
-    sess.commit()
+    owner = Owner(name=userid + datetime.now().strftime("%m/%d %h:%m%s"))
+    sess.add(owner)
+    sess.flush()
 
     files = pickle.load(open(path + 'pathedFiles.pickle', 'rb'))
     clos = pickle.load(open(path + 'closure.pickle', 'rb'))
@@ -57,27 +63,77 @@ def start(userid, path):
     lt_closure = Queue()
     lt_filenames = Queue()
 
+
+    #fileid_obj_map maps gdrive fileids to file objects defined in models
+    fileid_obj_map = {}
+
     for f in files:
         fileId = f[-1]
-        print(fileId)
-        print(idmapper[fileId])
-        lt_files.put(dict(fileId=fileId, fileName=idmapper[fileId]))
+        file_obj = Files(fileId = fileId +datetime.now().strftime("%m/%d %h:%m:%s"), 
+                lastModDate = files[f][0], owner = owner, isFile = True)
+
+        fileid_obj_map[fileId] = file_obj
+
+        lt_files.put(file_obj)
+
+    adder(lt_files, sess)
+    sess.flush()
+
+
+    for f in files:
+        fileid = f[-1]
+        file_obj = fileid_obj_map[fileid]
         for d in files[f]:
-            lt_dates.put(dict(fileId=fileId, moddate=d, owner_id = userid))
+            fileid = file_obj.id
+            lt_dates.put(dict(moddate = d, fileId = fileid))
 
-    for c in clos:
-        lt_closure.put(
-            dict(
-                parent=c[0],
-                child=c[1],
-                depth=c[2],
-                owner_id=userid))
-
-    for n in idmapper:
-        lt_filenames.put(dict(fileId = n, fileName = idmapper[n], owner_id = userid))
 
     tdManage = []
-    thread_count = 50
+    for i in range(100):
+        scoped_sess = scoped_session(_session)
+        x = threading.Thread(
+            target=commit, args=(
+                lt_dates, scoped_sess, Dates))
+        tdManage.append(x)
+        x.start()
+
+
+
+    for c in clos:
+        try:
+            file_obj = fileid_obj_map[c[0]]
+        except:
+            file_obj = Files(fileId = c[0], lastModDate = None, owner = owner, isFile = False)
+            fileid_obj_map[c[0]] = file_obj
+            lt_files.put(file_obj)
+        lt_closure.put(Closure(parent_relationship = file_obj, files_relationship = fileid_obj_map[c[1]], owner = owner, depth = c[2]))
+
+
+    for n in idmapper:
+        try:
+            file_obj = fileid_obj_map[n]
+        except:
+            #Folder type
+            file_obj = Files(fileId = n, lastModDate = None, owner = owner, isFile = False)
+            fileid_obj_map[n] = file_obj
+            lt_files.put(file_obj)
+
+        lt_filenames.put(Filename(fileName = idmapper[n], files = file_obj, owner = owner))
+
+
+    adder(lt_filenames, sess)
+    sess.flush()
+    adder(lt_closure, sess)
+
+    for i in tdManage:
+        i.join()
+
+    sess.commit()
+
+    return
+
+
+
 
     for i in range(thread_count):
         scoped_sess = scoped_session(_session)
@@ -88,14 +144,6 @@ def start(userid, path):
         tdManage.append(x)
         x.start()
 
-    for i in range(thread_count):
-        scoped_sess = scoped_session(_session)
-
-        x = threading.Thread(
-            target=commit, args=(
-                lt_dates, scoped_sess, Dates))
-        tdManage.append(x)
-        x.start()
     for i in range(thread_count):
         scoped_sess = scoped_session(_session)
         scoped_sess1 = scoped_session(_session)
