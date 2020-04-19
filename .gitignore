@@ -8,3 +8,7 @@ errors.txt
 streaming.txt
 
 *.swp
+*.swo
+logs.txt
+
+profile
