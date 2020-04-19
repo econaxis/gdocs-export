@@ -7,6 +7,7 @@ if [ -z "${WORKER}" ]; then
   exec gunicorn -b :$PORT --access-logfile - --error-logfile - run:app
 
   echo "Web mode" > errors.txt
+  wait
 else 
   echo "Worker mode"
   rq worker -c flaskr.rqsets &

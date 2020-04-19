@@ -88,10 +88,12 @@ class TestUtil:
         cls.errMsg += str(msg) + '<br> \n'
 
     @classmethod
-    async def print_size(cls, files, lastModFile, FilePrintText):
+    async def print_size(cls, FilePrintText, pathedFiles, files):
         while True:
-            totalSize = files.qsize() + len(lastModFile)
-            outputString = "%s\n<br> <b>%d out of %d (discovered items)</b> %s<br>\n" %(FilePrintText.text,len(lastModFile),  totalSize, datetime.now().__str__())
+
+            totsize = files.qsize() + len(pathedFiles)
+            outputString = "%s\n<br> <b>%d/%d (discovered items)</b> %s<br>\n" %(FilePrintText.text,len(pathedFiles), totsize,
+                    datetime.now().__str__())
 
             outputString += "counter: %f rpm: %f\n"%(cls.throttle.gcount(), cls.throttle.rpm)
 

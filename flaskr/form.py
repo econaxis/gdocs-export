@@ -4,6 +4,5 @@ from wtforms.validators import DataRequired
 
 
 class Form(FlaskForm):
-    fileId = StringField('FileId', validators = [DataRequired()])
+    fileId = StringField('FileId', validators=[DataRequired()])
     submit = SubmitField('Submit')
-

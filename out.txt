@@ -1,0 +1,102 @@
+get_files module
+ USER ID: 527e4afc-4598-400f-8536-afa5324f0ba4   0B4Fujvv5Mfqba28zX3gzWlBoTzg
+
+<br> <b>0/0 (discovered items)</b> 2020-04-18 20:37:34.132835<br>
+counter: 11575.283566 rpm: 80.000000
+
+resetting counter
+getRevision   waiting 1 / 2
+getRevision   waiting 1 / 2
+getIds   waiting 1 / 2
+getRevision   waiting 1 / 2
+getIds   waiting 1 / 2
+getRevision   waiting 1 / 2
+getRevision   waiting 1 / 2
+getIds   waiting 1 / 2
+getIds   waiting 2 / 2
+getIds   waiting 1 / 2
+getIds   waiting 1 / 2
+getIds   waiting 1 / 2
+2
+2
+2
+getIds   waiting 1 / 2
+16c <i>root/16cqhRLUsi3Qo2vqxCM_zA4AukTjyrfADDx9_M</i><br>1So <i>root/1SomlELlB1nEXIUGAjtvJPqegi9_pB5PuDnHFS</i><br>1KT <i>root/1KTg7p_EP680NLfKczdfbr8wI4eK6deK04aM3V</i><br>
+<br> <b>3/9 (discovered items)</b> 2020-04-18 20:37:46.580616<br>
+counter: 53.022213 rpm: 80.000000
+
+getIds   waiting 1 / 2
+getIds   waiting 1 / 2
+getIds   waiting 1 / 2
+getIds   waiting 2 / 2
+getIds   waiting 2 / 2
+2
+2
+2
+2
+getIds   waiting 2 / 2
+getIds   waiting 2 / 2
+getRevision   waiting 2 / 2
+getIds   waiting 2 / 2
+getIds   waiting 2 / 2
+1ca <i>root/1caX2qKRxxndHOlqtQBWnnj7dbfiq7ICg5Okqv</i><br>13l <i>root/13l8V9jma8seFSE4EGu5bkYSWkPJT2j9vaDqQg</i><br>14c <i>root/14cW2ITjFw3mu0suoLw5Q7wyYfMwWOAu3iaC6K</i><br>1ka <i>root/0B4Fujvv5MfqbWWZLT3VpOXI2SWc/1kardxzC2Fy2Sfl-BBUIEWzZ0j2g9PxiPIDNco</i><br>1yl <i>root/0B4Fujvv5MfqbWWZLT3VpOXI2SWc/1yllVW5DGoWSkp3PmHABjhGfrZC4isoMYL7zCM</i><br>1du <i>root/0B4Fujvv5MfqbWWZLT3VpOXI2SWc/1dur5XycR1O_NpPS2rLfz79B73RqpqrV5VvQTJ</i><br>
+<br> <b>7/7 (discovered items)</b> 2020-04-18 20:37:58.076625<br>
+counter: 45.105958 rpm: 80.000000
+
+getRevision   waiting 2 / 2
+getIds   waiting 2 / 2
+getIds   waiting 2 / 2
+getRevision   waiting 1 / 2
+getRevision   waiting 1 / 2
+getRevision   waiting 1 / 2
+getIds   waiting 2 / 2
+getRevision   waiting 1 / 2
+getRevision   waiting 1 / 2
+getRevision   waiting 1 / 2
+getRevision   waiting 2 / 2
+getRevision   waiting 2 / 2
+getRevision   waiting 1 / 2
+getRevision   waiting 1 / 2
+
+<br> <b>9/9 (discovered items)</b> 2020-04-18 20:38:03.078654<br>
+counter: 41.456973 rpm: 80.500000
+
+getRevision   waiting 2 / 2
+
+<br> <b>9/9 (discovered items)</b> 2020-04-18 20:38:08.085080<br>
+counter: 35.343934 rpm: 80.500000
+
+getRevision   waiting 2 / 2
+getRevision   waiting 2 / 2
+
+<br> <b>9/9 (discovered items)</b> 2020-04-18 20:38:13.089123<br>
+counter: 30.803886 rpm: 80.500000
+
+getRevision   waiting 2 / 2
+getRevision   waiting 2 / 2
+getRevision   waiting 2 / 2
+
+<br> <b>9/9 (discovered items)</b> 2020-04-18 20:38:18.095655<br>
+counter: 27.295879 rpm: 80.500000
+
+
+<br> <b>9/9 (discovered items)</b> 2020-04-18 20:38:23.103105<br>
+counter: 24.504747 rpm: 80.500000
+
+
+<br> <b>9/9 (discovered items)</b> 2020-04-18 20:38:28.109928<br>
+counter: 22.231722 rpm: 80.500000
+
+cancelled throttler
+2020-04-18 20:38:33,866 INFO sqlalchemy.engine.base.Engine SELECT CAST(SERVERPROPERTY('ProductVersion') AS VARCHAR)
+2020-04-18 20:38:33,866 INFO sqlalchemy.engine.base.Engine ()
+2020-04-18 20:38:34,044 INFO sqlalchemy.engine.base.Engine SELECT schema_name()
+2020-04-18 20:38:34,045 INFO sqlalchemy.engine.base.Engine ()
+2020-04-18 20:38:34,256 INFO sqlalchemy.engine.base.Engine SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+2020-04-18 20:38:34,256 INFO sqlalchemy.engine.base.Engine ()
+2020-04-18 20:38:34,453 INFO sqlalchemy.engine.base.Engine SELECT CAST('test unicode returns' AS NVARCHAR(60)) AS anon_1
+2020-04-18 20:38:34,454 INFO sqlalchemy.engine.base.Engine ()
+2020-04-18 20:38:34,667 INFO sqlalchemy.engine.base.Engine SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+2020-04-18 20:38:34,668 INFO sqlalchemy.engine.base.Engine ('files', 'dbo')

@@ -12,6 +12,8 @@ RUN ./installation/instodbc.sh
 RUN pip install -r ./installation/requirements.txt
 
 EXPOSE 5000
+COPY boot.sh ./
+RUN chmod +x boot.sh
 
 ARG WORKER
 ENV WORKER ${WORKER}
@@ -24,10 +26,10 @@ ENV REDIS_HOST ${REDIS_HOST}
 ENV SQL_PASS   ${SQL_PASS}
 ENV SQL_CONN ${SQL_CONN}
 
+COPY run.py service.json drun.sh dockerbuild.sh Dockerfile ./
+COPY data ./data
 
 COPY flaskr ./flaskr
 COPY processing ./processing
-COPY . .
 
-RUN chmod +x boot.sh
 ENTRYPOINT ["./boot.sh"]
