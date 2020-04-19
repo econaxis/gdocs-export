@@ -1,4 +1,5 @@
 import sys
+from queue import Queue
 import pickle
 import threading
 import secrets
@@ -8,105 +9,117 @@ from sqlalchemy.orm import sessionmaker, scoped_session
 import pprint
 import os
 
-from processing.models import Owner, Files, Closure, Dates, Base
+from processing.models import Owner, Files, Closure, Dates, Base, Filename
 
 
 PARAMS = os.environ["SQL_CONN"]
 
-engine = sqlal.create_engine("mssql+pyodbc:///?odbc_connect=%s"%PARAMS, pool_size = 30, echo = True,
-        max_overflow = 300)
+ENGINE = sqlal.create_engine("mssql+pyodbc:///?odbc_connect=%s" % PARAMS, pool_size=30, echo=True,
+                             max_overflow=300)
 
-Base.metadata.create_all(bind=engine)
+Base.metadata.create_all(bind=ENGINE)
 
 #engine = sqlal.create_engine('sqlite+pysqlite:///test.db', echo = True)
-CONN = engine.connect()
+CONN = ENGINE.connect()
 
-meta = MetaData(bind = engine)
-
-_session = sessionmaker(bind=engine)
+_session = sessionmaker(bind=ENGINE)
 sess = _session()
 scoped_sess = scoped_session(_session)
 
-class mt (threading.Thread):
-    def __init__(self, ind, end, session, df, userid):
-        super(mt, self).__init__()
-        self.ind = ind
-        self.userid = userid
-        self.end = end
-        self.session = session
-        self.df = df
-    def run(self):
-        df = self.df
-        filesList = df.index.levels[0]
-        objects = []
-        for counter, i in enumerate(filesList[self.ind:self.end]):
-            timesList = df.loc[i].index.to_pydatetime()
-            fileId = secrets.token_urlsafe(8)
-            fileArr=[dict(fileName =i[0:119], fileId = fileId,
-                lastModDate = max(timesList), parent_id =self.userid)]
 
-            self.session.bulk_insert_mappings(Files, fileArr)
-            self.session.commit()
-            for k in timesList:
-                objects.append(dict(parent_id =fileId, moddate = k))
+def commit(q, sess, _type):
+    _temp = []
+    counter = 0
+    while (not q.empty()):
+        counter += 1
+        _temp.append(q.get_nowait())
+        if (counter % 300 == 0):
+            print("SIZE: ", q.qsize())
+            sess.bulk_insert_mappings(_type, _temp)
+            sess.commit()
+            _temp = []
 
-        self.session.bulk_insert_mappings(Dates, objects)
-        print(self.ind)
-        self.session.commit()
-        objects = []
-
-#Create default owner
-
-def start(userid, workingPath):
-    q= sess.query(Owner).filter(Owner.name == userid).count()
-    if not q:
-        ins = Owner.__table__.insert().values(name = userid)
-        CONN.execute(ins)
-
-    df = pickle.load(open(workingPath + 'collapsedFiles_p.pickle', 'rb'))
-
-    filesList = df.index.levels[0]
-    ts = []
-
-    step = 30
-    print(len(filesList))
-    for i in range(0, len(filesList),step ):
-        curses = scoped_session(_session)
-        ds = mt(i, i+step, curses, df, userid)
-        ts.append(ds)
-
-    for i in ts:
-        i.start()
-
-    for i in ts:
-        i.join()
-
-    closure = []
-    df = pickle.load(open(workingPath + 'closure.pickle', 'rb'))
+    sess.bulk_insert_mappings(_type, _temp)
+    sess.commit()
 
 
-    for c in df:
-        c = list(c)
-        closure.append(dict(parent=c[0], child = c[1], owner_id = userid, depth = c[2]))
+def start(userid, path):
+    sess.add(Owner(name=userid))
+    sess.commit()
 
-    try:
-        sess.bulk_insert_mappings(Closure, closure)
-        sess.commit()
-    except:
-        e = sys.exc_info()[0]
-        print(str(e))
+    files = pickle.load(open(path + 'pathedFiles.pickle', 'rb'))
+    clos = pickle.load(open(path + 'closure.pickle', 'rb'))
+    idmapper = pickle.load(open(path + 'idmapper.pickle', 'rb'))
 
-def main():
+
+    lt_files = Queue()
+    lt_dates = Queue()
+    lt_closure = Queue()
+    lt_filenames = Queue()
+
+    for f in files:
+        fileId = f[-1]
+        print(fileId)
+        print(idmapper[fileId])
+        lt_files.put(dict(fileId=fileId, fileName=idmapper[fileId]))
+        for d in files[f]:
+            lt_dates.put(dict(fileId=fileId, moddate=d, owner_id = userid))
+
+    for c in clos:
+        lt_closure.put(
+            dict(
+                parent=c[0],
+                child=c[1],
+                depth=c[2],
+                owner_id=userid))
+
+    for n in idmapper:
+        lt_filenames.put(dict(fileId = n, fileName = idmapper[n], owner_id = userid))
+
+    tdManage = []
+    thread_count = 50
+
+    for i in range(thread_count):
+        scoped_sess = scoped_session(_session)
+
+        x = threading.Thread(
+            target=commit, args=(
+                lt_files, scoped_sess, Files))
+        tdManage.append(x)
+        x.start()
+
+    for i in range(thread_count):
+        scoped_sess = scoped_session(_session)
+
+        x = threading.Thread(
+            target=commit, args=(
+                lt_dates, scoped_sess, Dates))
+        tdManage.append(x)
+        x.start()
+    for i in range(thread_count):
+        scoped_sess = scoped_session(_session)
+        scoped_sess1 = scoped_session(_session)
+
+        x = threading.Thread( target=commit, args=( lt_closure, scoped_sess, Closure))
+        x1 = threading.Thread( target=commit, args=( lt_filenames, scoped_sess1, Filename))
+
+        tdManage.append(x)
+        tdManage.append(x1)
+        x1.start()
+        x.start()
+
+    for x in tdManage:
+        print("donse")
+        x.join()
+
+
+    print("userid: ", userid)
+
+if __name__ == '__main__':
    # Owner.__table__.insert(bind = engine).values([dict(name = "default")])
    # sess.add(Owner(name="default"))
    # sess.commit()
-    
 
-
+    from datetime import datetime
     wpath = "/home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/"
-    start("testing", wpath)
-
-    print('aaa'*100)
-
-
-
+    start("testing" + datetime.now().__str__(), wpath)

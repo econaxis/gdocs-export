@@ -4,6 +4,7 @@ from flaskr.dashapp.dash_functions import *
 from processing.sql import scoped_sess
 from flaskr.dashapp.callbacks import test
 
+
 def layout():
     return html.Div([
         html.Div([
@@ -14,18 +15,18 @@ def layout():
                 ), dcc.Dropdown(
                     id="dropdown"
                 )
-                ], className = "six columns",
-                style = {
+            ], className="six columns",
+                style={
                 'margin': gen_margin()
-                }
+            }
             ),
             html.Div([
                 dcc.Graph(
-                    id = "histogram"
+                    id="histogram"
                 ),
                 html.Button(
                     "Get parent",
-                    id = "get_parent"
+                    id="get_parent"
                 ),
                 dcc.Checklist(
                     id="timeck",
@@ -33,18 +34,17 @@ def layout():
                         {'label': 'Time Only', 'value': 'time'}
                     ]
                 )
-            ], className = "six columns"),
-        ], id = "primary"),
+            ], className="six columns"),
+        ], id="primary"),
         html.Span(
-            id = "parent_span"
+            id="parent_span"
         ),
         html.Div([
             dcc.Graph(
                 id="lineWord"
             )
-        ], className = "four columns",
-        style={'display':'none'}),
-        dcc.Location(id = 'url', refresh = False),
+        ], className="four columns",
+            style={'display': 'none'}),
+        dcc.Location(id='url', refresh=False),
 
     ])
-
