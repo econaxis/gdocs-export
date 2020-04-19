@@ -1,15 +1,20 @@
 #!/bin/sh
-rq worker -c flaskr.rqsets &>  streaming.txt &
-rq worker -c flaskr.rqsets &>  streaming.txt &
-rq worker -c flaskr.rqsets &>  streaming.txt &
-rq worker -c flaskr.rqsets &>  streaming.txt &
-rq worker -c flaskr.rqsets &>  streaming.txt &
-rq worker -c flaskr.rqsets &>  streaming.txt &
-rq worker -c flaskr.rqsets &>  streaming.txt &
+if [ -z "${WORKER}" ]; then
+  echo "Not worker"
+  echo "Running gunicorn server now"
+  echo $PORT
+  ps -a | grep rq
+  exec gunicorn -b :$PORT --access-logfile - --error-logfile - run:app
 
+  echo "Web mode" > errors.txt
+  wait
+else 
+  echo "Worker mode"
+  rq worker -c flaskr.rqsets &
+  rq worker -c flaskr.rqsets &
+  rq worker -c flaskr.rqsets &
+  rq worker -c flaskr.rqsets &
 
-echo "Running gunicorn server now"
-echo $PORT
-ps -a | grep rq
-exec gunicorn -b :$PORT --access-logfile - --error-logfile - run:app
-wait
+  echo "Worker Mode" > errors.txt
+  wait
+fi

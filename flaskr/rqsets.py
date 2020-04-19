@@ -1,3 +1,12 @@
-REDIS_HOST = "pydocs.redis.cache.windows.net"
-REDIS_PORT = 6379
-REDIS_PASSWORD = "tlbJW39qQovNuryTdaUsdB1QBDABtU4kPrLfMxYoeq4="
+import os
+
+REDIS_HOST = os.environ["REDIS_HOST"]
+REDIS_PORT = 17608
+REDIS_PASSWORD = os.environ["REDIS_PASSW"]
+
+
+def returnConfig():
+    REDIS_HOST = os.environ["REDIS_HOST"]
+    REDIS_PORT = 17608
+    REDIS_PASSWORD = os.environ["REDIS_PASSW"]
+    return dict(host=REDIS_HOST, port=REDIS_PORT, password=REDIS_PASSWORD)
