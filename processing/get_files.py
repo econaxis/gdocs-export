@@ -17,10 +17,13 @@ import iso8601
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 from pathlib import Path
+import logging
 
 
 # Imports TestUtil and corresponding functions
 from processing.datutils.test_utils import *
+
+logger = logging.getLogger(__name__)
 
 pprint = pprint.PrettyPrinter(indent=4).pprint
 
@@ -49,7 +52,7 @@ acThrottle = None
 
 SEED_ID = "root"
 
-workerInstances = 10
+workerInstances = 5
 
 ACCEPTED_TYPES = { "application/vnd.google-apps.presentation", "application/vnd.google-apps.spreadsheet", "application/vnd.google-apps.document", "application/pdf"}
 
@@ -95,8 +98,8 @@ async def getIdsRecursive (drive_url, folders: asyncio.Queue,
                 resp = await handleResponse(response, folders, folderIdTuple, decrease=False)
                 if(resp == -1):
                     continue
-        except aiohttp.client_exceptions:
-            print("something wrong with session.get connection closed prematurely?")
+        except:
+            logger.exception("connection closed prematurely with gdrive")
             continue
 
         # Parse file and folder names to make them filesystem safe, limit to
@@ -119,20 +122,24 @@ async def queryDriveActivity(fileTuple, files, session, headers):
 
     (fileId, mimeType, path, tried) = fileTuple
 
-    async with session.get(url=dr2_urlbuilder(fileId), headers=headers) as revResponse:
-        code = await handleResponse(revResponse, files, fileTuple)
-        if code == -1:
-            _revisions = dict()
-        else:
-            _revisions = code
+    try:
+        async with session.get(url=dr2_urlbuilder(fileId), headers=headers) as revResponse:
+            code = await handleResponse(revResponse, files, fileTuple)
+            if code == -1:
+                _revisions = dict()
+            else:
+                _revisions = code
 
-    async with session.post(**TestUtil.dractivity_builder(fileId)) as actResponse:
-        code = await handleResponse(actResponse, files, fileTuple, decrease=True)
-        if code == -1:
-            return -1
-        else:
-            activities = code
-            acThrottle.increase()
+        async with session.post(**TestUtil.dractivity_builder(fileId)) as actResponse:
+            code = await handleResponse(actResponse, files, fileTuple, decrease=True)
+            if code == -1:
+                return -1
+            else:
+                activities = code
+                acThrottle.increase()
+    except:
+        logger.exception('exception on querydriveact', exc_info = True)
+        return -1
 
     # No items will be found if the first drive revision returns an error
     # This occurs when the user doesn't have permission
@@ -194,8 +201,12 @@ async def getRevision(files: asyncio.Queue, session: aiohttp.ClientSession, head
         if(mimeType != "application/vnd.google-apps.document"):
             await queryDriveActivity(fileTuple, files, session, headers)
         else:
-            print(2)
-            docs.append(gdr.GoogleDoc(fileId, TestUtil.creds))
+            try:
+                docs.append(gdr.GoogleDoc(fileId, TestUtil.creds))
+                await asyncio.sleep(random.uniform(2, 4))
+            except:
+                logger.exception("gdocs exception", exc_info = True)
+                continue
 
             for revision in docs[-1].revisions:
                 modifiedDate = revision.time
@@ -209,7 +220,7 @@ async def getRevision(files: asyncio.Queue, session: aiohttp.ClientSession, head
 async def start():
     global acThrottle
 
-    acThrottle = Throttle(80)
+    acThrottle = Throttle(30)
     TestUtil.throttle = acThrottle
 
     folders = asyncio.Queue()
@@ -240,6 +251,8 @@ async def start():
 
 
 def loadFiles(USER_ID, _workingPath, fileId, _creds):
+    logger.debug("Start loadFiles")
+
     Path(_workingPath).mkdir(exist_ok=True)
 
     print("get_files module\n USER ID: %s" % USER_ID, " ", fileId)
@@ -286,13 +299,17 @@ def loadFiles(USER_ID, _workingPath, fileId, _creds):
 
 
  #   asyncio.DefaultEventLoopPolicy = asyncio.WindowsSelectorEventLoopPolicy
-'''
 if __name__ == "__main__":
-    #Default settings
     uid = "527e4afc-4598-400f-8536-afa5324f0ba4"
-    fileid = '0B4Fujvv5MfqbWTE1NF94dmRJVTg'
-    homePath =  "/mnt/c/users/henry/pydocs/data/"
-    creds = pickle.load(open('creds.pickle', 'rb'))
-    TestUtil.workingPath =  homePath + 'data/' + uid + '/'
-    loadFiles(uid, TestUtil.workingPath, fileid, creds)
-'''
+    homePath = "/home/henry/pydocs/"
+
+    fileid = "0B4Fujvv5Mfqba28zX3gzWlBoTzg"
+
+    if("DBGHPATH" in os.environ):
+        homePath = os.environ["DBGHPATH"]
+
+    workingPath = homePath + 'data/' + uid + '/'
+    creds = pickle.load(open(workingPath + 'creds.pickle', 'rb'))
+    CREDENTIAL_FILE = 'service.json'
+    SCOPE = ['https://www.googleapis.com/auth/drive']
+    loadFiles(uid, workingPath, fileid, creds)
