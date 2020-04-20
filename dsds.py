@@ -5,12 +5,18 @@ import cProfile
 from google.oauth2 import service_account
 import pickle
 import os
+import configlog
+import logging
+
+logger = logging.getLogger(__name__)
+
 
 def start():
+    logger.debug("start")
     uid = "527e4afc-4598-400f-8536-afa5324f0ba4"
     homePath = "/home/henry/pydocs/"
 
-    fileid = "0B4Fujvv5Mfqba28zX3gzWlBoTzg"
+    fileid = "root"
 
     if("DBGHPATH" in os.environ):
         homePath = os.environ["DBGHPATH"]

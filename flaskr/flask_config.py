@@ -4,11 +4,6 @@ from flask_caching import Cache
 import sys
 
 
-logging.basicConfig(level=logging.DEBUG, filename = "logs.txt", filemode = "w", 
-        format =  "%(name)s %(asctime)s %(filename)s %(funcName)s %(lineno)d - %(message)s")
-logging.debug("Logging Started")
-
-
 # Necessary for non HTTPS OAUTH calls
 os.environ["OAUTHLIB_RELAX_TOKEN_SCOPE"] = "1"
 os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'

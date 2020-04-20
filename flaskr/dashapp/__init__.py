@@ -19,7 +19,7 @@ def register_dashapp(flask_serv):
         external_stylesheets=external_stylesheets,
         url_base_pathname="/dash/")
 
-#    dashapp = dash.Dash(__name__,external_stylesheets=external_stylesheets, url_base_pathname = "/dash/")
+    #dashapp = dash.Dash(__name__,external_stylesheets=external_stylesheets, url_base_pathname = "/dash/")
 
     if flask_serv is None:
         flask_serv = dashapp.server
@@ -33,4 +33,4 @@ def register_dashapp(flask_serv):
         Loader.setpdpath(flask_serv.config["HOMEDATAPATH"])
         dashapp.layout = layout()
         register_callback(dashapp)
-        dashapp.run_server(debug=True)
+

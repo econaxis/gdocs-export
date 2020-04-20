@@ -12,8 +12,9 @@ import uuid
 import pickle
 import math
 from google.auth.transport.requests import Request
+import logging
 
-
+logger = logging.getLogger(__name__)
 
 class TestUtil:
     SCOPES = ['https://www.googleapis.com/auth/drive.metadata.readonly', 'https://www.googleapis.com/auth/drive.activity.readonly']
@@ -89,28 +90,27 @@ class TestUtil:
 
     @classmethod
     async def print_size(cls, FilePrintText, pathedFiles, files):
+        import logging
         while True:
 
             totsize = files.qsize() + len(pathedFiles)
-            outputString = "%s\n<br> <b>%d/%d (discovered items)</b> %s<br>\n" %(FilePrintText.text,len(pathedFiles), totsize,
+            outputString = "%s\n%d/%d (discovered items)\n%s\n" %(FilePrintText.text,len(pathedFiles), totsize,
                     datetime.now().__str__())
 
             outputString += "counter: %f rpm: %f\n"%(cls.throttle.gcount(), cls.throttle.rpm)
-
             FilePrintText.clear()
 
-            cls.strToFile(outputString, 'streaming.txt')
-            cls.strToFile(cls.errMsg, 'errors.txt')
+            logger.debug(outputString)
+            logger.error(cls.errMsg)
+
 
             cls.errMsg = "CLEARED " + str(datetime.now() )+ "\n"
-
-            print(outputString)
 
             if(random.randint(0, 100) > 97):
                 print("resetting counter")
                 cls.throttle.reset()
 
-            await asyncio.sleep(5)
+            await asyncio.sleep(8)
 
 
     @classmethod
@@ -140,7 +140,8 @@ async def tryGetQueue(queue: asyncio.Queue, repeatTimes:int = 2, interval:float 
         except:
             if(timesWaited>repeatTimes):
                 return -1
-            print(name, "  waiting %d / %d"%(timesWaited, repeatTimes))
+            logger.info(name + "waiting %d %d", timesWaited, repeatTimes)
             await asyncio.sleep(interval + random.randint(0, 15))
     return output
+
 
