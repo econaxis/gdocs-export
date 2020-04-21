@@ -16,7 +16,7 @@ def start():
     uid = "527e4afc-4598-400f-8536-afa5324f0ba4"
     homePath = "/home/henry/pydocs/"
 
-    fileid = "root"
+    fileid = "0B4Fujvv5MfqbVElBU01fZUxHcUk"
 
     if("DBGHPATH" in os.environ):
         homePath = os.environ["DBGHPATH"]
@@ -29,6 +29,5 @@ def start():
 
 if __name__ =='__main__':
     start()
-    cProfile.runctx('start()', globals = globals(), locals = locals())
 
 

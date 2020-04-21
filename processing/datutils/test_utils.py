@@ -101,10 +101,11 @@ class TestUtil:
             FilePrintText.clear()
 
             logger.debug(outputString)
-            logger.error(cls.errMsg)
+            if(cls.errMsg != ""):
+                logger.error(cls.errMsg)
 
 
-            cls.errMsg = "CLEARED " + str(datetime.now() )+ "\n"
+            cls.errMsg = ""
 
             if(random.randint(0, 100) > 97):
                 print("resetting counter")
@@ -140,7 +141,7 @@ async def tryGetQueue(queue: asyncio.Queue, repeatTimes:int = 2, interval:float 
         except:
             if(timesWaited>repeatTimes):
                 return -1
-            logger.info(name + "waiting %d %d", timesWaited, repeatTimes)
+            logger.debug(name + "waiting %d %d", timesWaited, repeatTimes)
             await asyncio.sleep(interval + random.randint(0, 15))
     return output
 

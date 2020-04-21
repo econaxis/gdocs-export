@@ -18,6 +18,7 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 from pathlib import Path
 import logging
+import configlog
 
 
 # Imports TestUtil and corresponding functions
@@ -52,7 +53,7 @@ acThrottle = None
 
 SEED_ID = "root"
 
-workerInstances = 5
+workerInstances = 3
 
 ACCEPTED_TYPES = { "application/vnd.google-apps.presentation", "application/vnd.google-apps.spreadsheet", "application/vnd.google-apps.document", "application/pdf"}
 
@@ -94,12 +95,14 @@ async def getIdsRecursive (drive_url, folders: asyncio.Queue,
                         includeItemsFromAllDrives='true', supportsTeamDrives='true')
 
         try:
+            await asyncio.sleep(random.uniform(0, 1.3))
             async with session.get(url=drive_url, params=data, headers=headers) as response:
                 resp = await handleResponse(response, folders, folderIdTuple, decrease=False)
                 if(resp == -1):
                     continue
         except:
             logger.exception("connection closed prematurely with gdrive")
+            await asyncio.sleep(random.uniform(0, 10))
             continue
 
         # Parse file and folder names to make them filesystem safe, limit to
@@ -110,12 +113,12 @@ async def getIdsRecursive (drive_url, folders: asyncio.Queue,
             ent_name = "".join(["" if c in ['\"', '\'', '\\']
                         else c for c in resFile["name"]]).rstrip()[0:298]
             id = resFile["id"]
-            idmapper[id[0:44]] = ent_name
+            idmapper[id] = ent_name
             if(resFile["mimeType"] == "application/vnd.google-apps.folder"):
-                await folders.put((id, path + [id[0:44]], 0))
+                await folders.put((id, path + [id], 0))
             elif (resFile["mimeType"] in ACCEPTED_TYPES):
                 # First element id is not used for naming, only for api calls
-                await files.put([id, resFile["mimeType"], path + [id[0:44]], 0])
+                await files.put([id, resFile["mimeType"], path + [id], 0])
 
 
 async def queryDriveActivity(fileTuple, files, session, headers):
@@ -139,6 +142,7 @@ async def queryDriveActivity(fileTuple, files, session, headers):
                 acThrottle.increase()
     except:
         logger.exception('exception on querydriveact', exc_info = True)
+        await asyncio.sleep(random.uniform(0, 10))
         return -1
 
     # No items will be found if the first drive revision returns an error
@@ -167,8 +171,7 @@ async def handleResponse(response, queue, fileTuple, decrease=True):
     except BaseException:
         e = sys.exc_info()[0]
         rev = await response.text()
-        TestUtil.errors(e)
-        TestUtil.errors(rev)
+        logger.error("%s\n%s\n", e, rev)
 
         if response.status == 429:
             await API_RESET(throttle=acThrottle, decrease=True)
@@ -196,14 +199,15 @@ async def getRevision(files: asyncio.Queue, session: aiohttp.ClientSession, head
 
         (fileId, mimeType, path, tried) = fileTuple
 
-        FilePrintText.add(fileId[0:3] + " <i>" + '/'.join(path) + "</i>")
+        logger.info(fileId[0:3] + " <i>" + '/'.join(path) + "</i>")
 
         if(mimeType != "application/vnd.google-apps.document"):
             await queryDriveActivity(fileTuple, files, session, headers)
         else:
             try:
                 docs.append(gdr.GoogleDoc(fileId, TestUtil.creds))
-                await asyncio.sleep(random.uniform(2, 4))
+                logger.log(0, 'finished get gdr google docs')
+                await asyncio.sleep(random.uniform(0.5, 1.5))
             except:
                 logger.exception("gdocs exception", exc_info = True)
                 continue

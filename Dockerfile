@@ -1,14 +1,18 @@
-FROM python:3.8.2
+FROM python:3.8.2-buster
 
 ENV DOCKERENV 1
 ENV DOCKERWDIR /app/
+
 WORKDIR ${DOCKERWDIR}
+
+
 
 COPY installation ./installation
 RUN chmod +x ./installation/instodbc.sh
-
 RUN ./installation/instodbc.sh
-RUN pip install -r ./installation/requirements.txt
+RUN pip install --upgrade pip
+RUN pip install -r installation/requirements.txt
+RUN apt-get update && apt-get install nano vim -y
 
 EXPOSE 5000
 COPY boot.sh ./
@@ -27,7 +31,7 @@ ENV REDIS_HOST ${REDIS_HOST}
 ENV SQL_PASS   ${SQL_PASS}
 ENV SQL_CONN ${SQL_CONN}
 
-COPY logging.py loader.py run.py service.json drun.sh dockerbuild.sh Dockerfile ./
+COPY configlog.py loader.py dsds.py run.py drun.sh dockerbuild.sh Dockerfile ./
 COPY gdocrevisions ./gdocrevisions
 COPY data ./data
 
