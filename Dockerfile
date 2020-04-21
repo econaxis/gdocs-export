@@ -1,9 +1,9 @@
 FROM python:3.8.2-buster
 
 ENV DOCKERENV 1
-ENV DOCKERWDIR /app/
+#ENV DOCKERWDIR /app/
 
-WORKDIR ${DOCKERWDIR}
+#WORKDIR ${DOCKERWDIR}
 
 
 
@@ -31,13 +31,20 @@ ENV REDIS_HOST ${REDIS_HOST}
 ENV SQL_PASS   ${SQL_PASS}
 ENV SQL_CONN ${SQL_CONN}
 
-COPY configlog.py loader.py dsds.py run.py drun.sh dockerbuild.sh Dockerfile ./
-COPY gdocrevisions ./gdocrevisions
-COPY data ./data
+#COPY configlog.py loader.py dsds.py run.py drun.sh dockerbuild.sh Dockerfile ./
+#COPY gdocrevisions ./gdocrevisions
+#COPY data ./data
+
+FROM mcr.microsoft.com/azure-functions/python:3.0-python3.8
+
+ENV AzureWebJobsScriptRoot=/home/site/wwwroot \
+    AzureFunctionsJobHost__Logging__Console__IsEnabled=true
 
 
-COPY flaskr ./flaskr
-COPY processing ./processing
+COPY . /home/site/wwwroot
+
+#COPY flaskr ./flaskr
+#COPY processing ./processing
 
 
-ENTRYPOINT ["./boot.sh"]
+ENTRYPOINT ["./home/site/wwwroot/boot.sh"]

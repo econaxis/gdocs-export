@@ -20,6 +20,7 @@ from processing.models import Owner, Files, Closure, Dates, Base, Filename
 
 
 PARAMS = os.environ["SQL_CONN"]
+
 logging.debug(PARAMS)
 
 ENGINE = sqlal.create_engine("mssql+pyodbc:///?odbc_connect=%s" % PARAMS, pool_size=30, echo = False, max_overflow=300)

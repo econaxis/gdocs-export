@@ -1,5 +1,6 @@
 import dash
 import configlog
+import time
 import logging
 import configlog
 import dash_core_components as dcc
@@ -25,8 +26,13 @@ from sqlalchemy import and_
 pprint = PrettyPrinter(indent=4).pprint
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
+
+
 print("logger: %s"%__name__)
-logger.debug('testing \n\n\n')
+
+
+logger.info("DASH CALLBACKS IMPORTED"
+
 
 # Debug in place for flask.session
 test = {}
@@ -41,6 +47,8 @@ q = select([literal_column("floor((datediff(second, '2010-05-06 12:00:00', modda
 q1 = select([q.c.fl, func.count('*')]).select_from(q).group_by(q.c.fl).order_by(q.c.fl)
 CONN.execute(q1)
 """
+
+
 def _update_histogram(times, ddvalue, figure, selectedData):
 
     logger.debug("update_histogram called")
@@ -147,6 +155,9 @@ def _updateBubbleChart(_n_clicks, selection):
 
     return gen_fListFig(db, test["userid"], slPoints=pts), parentLabel
 
+
+
+# Moved functions out of register_callback for profiling to work
 def register_callback(app):
     @app.callback(
         [Output("fList", "figure"),
@@ -172,22 +183,3 @@ def register_callback(app):
     def genDropdownOptions(value):
         return genOptList(test["userid"])
 
-
-class Loader:
-    pydocPath = None
-
-    @classmethod
-    def setpdpath(cls, _pydocPath):
-        cls.pydocPath = _pydocPath
-
-    @classmethod
-    def loadcsv(cls, path):
-        return pd.read_pickle(path + 'collapsedFiles_p.pickle')
-
-    @classmethod
-    def loadActivity(cls, path):
-        return pd.read_pickle(path + 'activity.pickle')
-
-    @classmethod
-    def loadHists(cls, path):
-        return pd.read_pickle(path + 'hists.pickle')
