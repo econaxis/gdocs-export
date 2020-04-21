@@ -255,6 +255,7 @@ async def start():
 
 
 def loadFiles(USER_ID, _workingPath, fileId, _creds):
+    print("starting\n\n", flush=True)
     logger.debug("Start loadFiles")
 
     Path(_workingPath).mkdir(exist_ok=True)
