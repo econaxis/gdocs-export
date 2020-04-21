@@ -14,7 +14,8 @@ else
   rq worker -c flaskr.rqsets &
   rq worker -c flaskr.rqsets &
   rq worker -c flaskr.rqsets &
-
+  rq worker -c flaskr.rqsets &
+  exec gunicorn -b :$PORT --access-logfile - --error-logfile - run:app
   echo "Worker Mode" > errors.txt
   wait
 fi

@@ -14,7 +14,7 @@ from dash.dash import no_update
 from pprint import PrettyPrinter
 from processing.models import Owner, Dates, Files, Filename
 from sqlalchemy.sql import func
-from flaskr.flask_config import cache
+#from flaskr.flask_config import cache
 from processing.sql import scoped_sess as db
 import flask
 
@@ -31,14 +31,14 @@ pprint = PrettyPrinter(indent=4).pprint
 
 
 
-@cache.memoize()
+##@cache.memoize()
 def genOptList(userid):
     #Get list of all filenames and fileids by owner id
 
-    #names = db.query(Files.id, Filename.fileName).join(Filename).join(Owner).filter( Owner.name == userid).all()
+    names = db.query(Files.id, Filename.fileName).join(Filename).join(Owner).filter( Owner.id == userid).all()
 
     #DEBUG: no owner filter
-    names = db.query(Filename.fileName, Files.id).join(Files).join(Owner).all()
+    #names = db.query(Filename.fileName, Files.id).join(Files).join(Owner).all()
 
     ret = []
     for c in names:
@@ -51,16 +51,16 @@ def genOptList(userid):
 
 
 
-@cache.memoize()
+##@cache.memoize()
 def getNormalBubbleData(sess, userid):
 
     #Function should ideally be run only once per user, because of cache.memoize
 
     #Get all the files with their counts of edits and last modified time
-    allFiles = sess.query(Files.id, Dates.moddate).join(Dates).join(Owner).filter(Owner.name == userid).subquery()
+    allFiles = sess.query(Files.id, Dates.moddate).join(Dates).join(Owner).filter(Owner.id == userid).subquery()
 
     #TESTING: no owner query
-    allFiles = sess.query(Files.id, Dates.moddate).join(Dates).join(Owner).subquery()
+    #allFiles = sess.query(Files.id, Dates.moddate).join(Dates).join(Owner).subquery()
 
     #Group by id
     times = sess.query(allFiles.c.id, func.count('*').label('count'),
