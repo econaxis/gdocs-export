@@ -1,9 +1,9 @@
 FROM python:3.8.2-buster
 
 ENV DOCKERENV 1
-#ENV DOCKERWDIR /app/
+ENV DOCKERWDIR /app/
 
-#WORKDIR ${DOCKERWDIR}
+WORKDIR ${DOCKERWDIR}
 
 
 
@@ -15,7 +15,6 @@ RUN pip install -r installation/requirements.txt
 RUN apt-get update && apt-get install nano vim -y
 
 EXPOSE 5000
-COPY boot.sh ./
 
 COPY secret ./secret
 
@@ -33,7 +32,7 @@ ENV SQL_CONN ${SQL_CONN}
 RUN chmod +x ./installation/vartest.sh
 RUN ./installation/vartest.sh
 
-COPY configlog.py loader.py dsds.py run.py drun.sh dockerbuild.sh Dockerfile ./
+COPY configlog.py boot.sh loader.py dsds.py run.py drun.sh dockerbuild.sh Dockerfile ./
 COPY gdocrevisions ./gdocrevisions
 COPY data ./data
 
@@ -41,5 +40,6 @@ COPY data ./data
 COPY flaskr ./flaskr
 COPY processing ./processing
 
+RUN chmod+x ./boot.sh
 
-ENTRYPOINT ["./home/site/wwwroot/boot.sh"]
+ENTRYPOINT ["./boot.sh"]

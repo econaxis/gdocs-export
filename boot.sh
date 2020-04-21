@@ -1,6 +1,12 @@
 #!/bin/sh
 
 export PYTHONPATH=$PWD
+echo $SQL_CONN
+echo $REDIS_HOST
+echo $REDIS_PASSW
+
+rq worker -c flaskr.rqsets &
+rq worker -c flaskr.rqsets &
 
 if [ -z "${WORKER}" ]; then
   echo "Not worker"
