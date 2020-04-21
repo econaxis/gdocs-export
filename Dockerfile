@@ -16,7 +16,6 @@ RUN apt-get update && apt-get install nano vim -y
 
 EXPOSE 5000
 COPY boot.sh ./
-RUN chmod +x boot.sh
 
 COPY secret ./secret
 
@@ -31,20 +30,16 @@ ENV REDIS_HOST ${REDIS_HOST}
 ENV SQL_PASS   ${SQL_PASS}
 ENV SQL_CONN ${SQL_CONN}
 
-#COPY configlog.py loader.py dsds.py run.py drun.sh dockerbuild.sh Dockerfile ./
-#COPY gdocrevisions ./gdocrevisions
-#COPY data ./data
+RUN chmod +x ./installation/vartest.sh
+RUN ./installation/vartest.sh
 
-FROM mcr.microsoft.com/azure-functions/python:3.0-python3.8
-
-ENV AzureWebJobsScriptRoot=/home/site/wwwroot \
-    AzureFunctionsJobHost__Logging__Console__IsEnabled=true
+COPY configlog.py loader.py dsds.py run.py drun.sh dockerbuild.sh Dockerfile ./
+COPY gdocrevisions ./gdocrevisions
+COPY data ./data
 
 
-COPY . /home/site/wwwroot
-
-#COPY flaskr ./flaskr
-#COPY processing ./processing
+COPY flaskr ./flaskr
+COPY processing ./processing
 
 
 ENTRYPOINT ["./home/site/wwwroot/boot.sh"]
