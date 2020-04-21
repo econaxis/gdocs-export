@@ -113,10 +113,8 @@ def handle_exception(exc_type, exc_value, exc_traceback):
         server.login(email, password)
         server.sendmail(email, "henry2833+py@gmail.com", log)
 
-    if issubclass(exc_type, KeyboardInterrupt):
-        os._exit()
-    if(issubclass(exc_type, SystemExit)):
-        os._exit()
+
+    logger.critical("exiting! from sshook")
 
     sys.__excepthook__(exc_type, exc_value, exc_traceback)
     return
