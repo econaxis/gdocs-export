@@ -1,9 +1,11 @@
 #!/bin/sh
 
 export PYTHONPATH=$PWD
+
 if [ -z "${WORKER}" ]; then
   echo "Not worker"
   echo "Running gunicorn server now"
+  echo $SQL_CONN
   echo $PORT
   exec gunicorn -b :$PORT --access-logfile - --error-logfile - run:app
   echo "Web mode" > errors.txt
@@ -15,7 +17,6 @@ else
   rq worker -c flaskr.rqsets &
   rq worker -c flaskr.rqsets &
   rq worker -c flaskr.rqsets &
-  exec gunicorn -b :$PORT --access-logfile - --error-logfile - run:app
   echo "Worker Mode" > errors.txt
   wait
 fi
