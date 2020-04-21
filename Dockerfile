@@ -40,6 +40,6 @@ COPY data ./data
 COPY flaskr ./flaskr
 COPY processing ./processing
 
-RUN chmod+x ./boot.sh
+RUN chmod +x ./boot.sh
 
 ENTRYPOINT ["./boot.sh"]
