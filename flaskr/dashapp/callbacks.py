@@ -31,7 +31,7 @@ logger.setLevel(logging.DEBUG)
 print("logger: %s"%__name__)
 
 
-logger.info("DASH CALLBACKS IMPORTED"
+logger.info("DASH CALLBACKS IMPORTED")
 
 
 # Debug in place for flask.session
