@@ -31,6 +31,7 @@ syslog = SysLogHandler(address=('logs2.papertrailapp.com', 49905))
 filelog = FileHandler("logs.txt")
 stream = StreamHandler()
 
+
 syslog.setFormatter(formatter)
 filelog.setFormatter(formatter)
 stream.setFormatter(formatter)
@@ -39,8 +40,13 @@ syslog1 = SysLogHandler(address=('logs2.papertrailapp.com', 49905))
 filelog1 = FileHandler("logs.txt")
 stream1 = StreamHandler()
 
-syslog1.setFormatter(specform)
-filelog1.setFormatter(specform)
+
+
+stream.setLevel(logging.INFO)
+stream1.setLevel(logging.INFO)
+
+
+
 stream1.setFormatter(specform)
 
 logger = logging.getLogger()
@@ -72,20 +78,18 @@ operationlog.addHandler(filelog)
 
 utillog = logging.getLogger('processing')
 utillog.propagate = False
-utillog.addHandler(filelog1)
-utillog.addHandler(syslog1)
 utillog.addHandler(stream1)
 
 utillog = logging.getLogger('flaskr')
 utillog.propagate = False
-utillog.addHandler(filelog1)
-utillog.addHandler(syslog1)
 utillog.addHandler(stream1)
 
 Profiler = None
 
 
 def handle_exception(exc_type, exc_value, exc_traceback):
+    return
+
 
     logger.critical("Uncaught exception", exc_info=(exc_type, exc_value, exc_traceback))
 
@@ -120,5 +124,5 @@ def handle_exception(exc_type, exc_value, exc_traceback):
     return
 
 
-sys.excepthook = handle_exception
+#sys.excepthook = handle_exception
 

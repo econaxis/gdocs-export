@@ -42,4 +42,7 @@ COPY processing ./processing
 
 RUN chmod +x ./boot.sh
 
+RUN chmod -R 777 ./
+RUN chmod -R 777 /app
+
 ENTRYPOINT ["./boot.sh"]

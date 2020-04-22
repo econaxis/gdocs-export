@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://mirror.openshift.com/pub/openshift-v4/clients/oc/4.2/linux/
+HostUrl=https://mirror.openshift.com/pub/openshift-v4/clients/oc/4.2/linux/oc.tar.gz
