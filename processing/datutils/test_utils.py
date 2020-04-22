@@ -1,5 +1,7 @@
 import pandas as pd
+from guppy import hpy
 from processing.throttler import Throttle
+import tracemalloc
 import numpy as np
 import random
 from math import log
@@ -14,14 +16,18 @@ import math
 from google.auth.transport.requests import Request
 import logging
 
+tracemalloc.start(250)
+
 logger = logging.getLogger(__name__)
 
 class TestUtil:
     SCOPES = ['https://www.googleapis.com/auth/drive.metadata.readonly', 'https://www.googleapis.com/auth/drive.activity.readonly']
+    fileCounter = 0
     creds = None
     headers = {}
     consecutiveErrors = 0
     workingPath = None
+    pickleIndex = []
     maxSize = 0
     errMsg = "BEGIN" + str(datetime.now()) + "<br> \n\n"
     throttle = None
@@ -78,6 +84,7 @@ class TestUtil:
         filter = "detail.action_detail_case: EDIT"
 
         #Generate random quotaUser
+        #deprecated
         quotaUser = str(uuid.uuid4())
 
         params = dict(ancestorName = ancName, pageSize = pageSize,
@@ -90,17 +97,34 @@ class TestUtil:
 
     @classmethod
     async def print_size(cls, FilePrintText, pathedFiles, files):
-        import logging
+        cls.snapshot = tracemalloc.take_snapshot()
+        hp = hpy()
         while True:
+            print(hp.heap().__str__())
+            snapshot = tracemalloc.take_snapshot().compare_to(cls.snapshot, 'lineno')
+            for st in snapshot[0:10]:
+                print(st)
+
+            import resource
+            logger.warning( 'Memory usage: %s (kb)' % resource.getrusage(resource.RUSAGE_SELF).ru_maxrss)
+
+            cls.snapshot = tracemalloc.take_snapshot()
+            if(len(pathedFiles)>5):
+                cls.fileCounter +=1
+                _filename = cls.workingPath + str(cls.fileCounter) + '.pathed'
+                logger.info("dumped pathed files at %s", _filename)
+                pickle.dump(pathedFiles, open(_filename, 'wb'))
+                pathedFiles = {}
+                cls.pickleIndex.append(_filename)
 
             totsize = files.qsize() + len(pathedFiles)
-            outputString = "%s\n%d/%d (discovered items)\n%s\n" %(FilePrintText.text,len(pathedFiles), totsize,
+            outputString = "\n\nuser: %s\n%s\n%d/%d (discovered items)\n%s\n" %(cls.workingPath,FilePrintText.text,len(pathedFiles), totsize,
                     datetime.now().__str__())
 
             outputString += "counter: %f rpm: %f\n"%(cls.throttle.gcount(), cls.throttle.rpm)
             FilePrintText.clear()
 
-            logger.debug(outputString)
+            logger.info(outputString)
             if(cls.errMsg != ""):
                 logger.error(cls.errMsg)
 
@@ -111,7 +135,7 @@ class TestUtil:
                 print("resetting counter")
                 cls.throttle.reset()
 
-            await asyncio.sleep(8)
+            await asyncio.sleep(2)
 
 
     @classmethod

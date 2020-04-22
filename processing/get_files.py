@@ -1,21 +1,16 @@
 import asyncio
 import gdocrevisions as gdr
+import tracemalloc
 import sys
 from time import time
 from datetime import datetime
 import random
 import json
-import os
-import uuid
 import pickle
 from processing.throttler import Throttle
 import aiohttp
 import pprint
-from googleapiclient.discovery import build
-import pandas as pd
 import iso8601
-from google_auth_oauthlib.flow import InstalledAppFlow
-from google.auth.transport.requests import Request
 from pathlib import Path
 import logging
 import configlog
@@ -43,7 +38,6 @@ class FilePrintText:
 
 # Deprecated
 
-docs = []
 
 MAX_FILES = 20000
 pathedFiles = {}
@@ -53,7 +47,7 @@ acThrottle = None
 
 SEED_ID = "root"
 
-workerInstances = 3
+workerInstances = 1
 
 ACCEPTED_TYPES = { "application/vnd.google-apps.presentation", "application/vnd.google-apps.spreadsheet", "application/vnd.google-apps.document", "application/pdf"}
 
@@ -99,10 +93,14 @@ async def getIdsRecursive (drive_url, folders: asyncio.Queue,
             async with session.get(url=drive_url, params=data, headers=headers) as response:
                 resp = await handleResponse(response, folders, folderIdTuple, decrease=False)
                 if(resp == -1):
+                    del resp
+                    del response
                     continue
+        #except aiohttp.client_exceptions:
         except:
             logger.exception("connection closed prematurely with gdrive")
-            await asyncio.sleep(random.uniform(0, 10))
+            await asyncio.sleep(random.uniform(5, 25))
+            del response
             continue
 
         # Parse file and folder names to make them filesystem safe, limit to
@@ -132,6 +130,7 @@ async def queryDriveActivity(fileTuple, files, session, headers):
                 _revisions = dict()
             else:
                 _revisions = code
+            del code
 
         async with session.post(**TestUtil.dractivity_builder(fileId)) as actResponse:
             code = await handleResponse(actResponse, files, fileTuple, decrease=True)
@@ -140,10 +139,13 @@ async def queryDriveActivity(fileTuple, files, session, headers):
             else:
                 activities = code
                 acThrottle.increase()
+            del code
+    #except aiohttp.client_exceptions:
     except:
         logger.exception('exception on querydriveact', exc_info = True)
-        await asyncio.sleep(random.uniform(0, 10))
+        await asyncio.sleep(random.uniform(5, 25))
         return -1
+
 
     # No items will be found if the first drive revision returns an error
     # This occurs when the user doesn't have permission
@@ -162,7 +164,6 @@ async def queryDriveActivity(fileTuple, files, session, headers):
             pathedFiles[(*path,)].append(modifiedDate)
     return 0
 
-
 async def handleResponse(response, queue, fileTuple, decrease=True):
     try:
         rev = await response.json()
@@ -171,7 +172,9 @@ async def handleResponse(response, queue, fileTuple, decrease=True):
     except BaseException:
         e = sys.exc_info()[0]
         rev = await response.text()
-        logger.error("%s\n%s\n", e, rev)
+        logger.warning(rev)
+
+        del rev
 
         if response.status == 429:
             await API_RESET(throttle=acThrottle, decrease=True)
@@ -199,25 +202,27 @@ async def getRevision(files: asyncio.Queue, session: aiohttp.ClientSession, head
 
         (fileId, mimeType, path, tried) = fileTuple
 
-        logger.info(fileId[0:3] + " <i>" + '/'.join(path) + "</i>")
 
         if(mimeType != "application/vnd.google-apps.document"):
             await queryDriveActivity(fileTuple, files, session, headers)
         else:
             try:
-                docs.append(gdr.GoogleDoc(fileId, TestUtil.creds))
-                logger.log(0, 'finished get gdr google docs')
+                curdocs = gdr.GoogleDoc(fileId, TestUtil.creds)
                 await asyncio.sleep(random.uniform(0.5, 1.5))
             except:
-                logger.exception("gdocs exception", exc_info = True)
                 continue
 
-            for revision in docs[-1].revisions:
+            #Process revisoins
+
+            for revision in curdocs.revisions:
                 modifiedDate = revision.time
                 if((*path,) not in pathedFiles):
                     pathedFiles[(*path,)] = [modifiedDate]
                 else:
                     pathedFiles[(*path,)].append(modifiedDate)
+
+            del curdocs
+
 
 
 
@@ -239,7 +244,7 @@ async def start():
                                                              folders, files, session, TestUtil.headers)) for i in range(workerInstances)]
 
         revisionExplorer = [asyncio.create_task(getRevision(files, session, TestUtil.headers))
-                            for i in range(workerInstances)]
+                            for i in range(workerInstances+3)]
 
         # Generate Print Task that prints data every X seconds
         printTask = asyncio.create_task( TestUtil.print_size( FilePrintText, pathedFiles, files))
@@ -285,8 +290,8 @@ def loadFiles(USER_ID, _workingPath, fileId, _creds):
 
     pickle.dump(d, open(_workingPath + 'closure.pickle', 'wb'))
     pickle.dump(pathedFiles, open(_workingPath + 'pathedFiles.pickle', 'wb'))
-    pickle.dump(docs, open(_workingPath + 'docs.pickle', 'wb'))
     pickle.dump(idmapper, open(_workingPath + 'idmapper.pickle', 'wb'))
+    pickle.dump(TestUtil.pickleIndex, open(_workingPath + 'pickleIndex', 'wb'))
 
     if(len(pathedFiles) == 0):
         return "No files found for this id. check invalid"
@@ -310,6 +315,7 @@ if __name__ == "__main__":
 
     fileid = "0B4Fujvv5Mfqba28zX3gzWlBoTzg"
 
+    import os
     if("DBGHPATH" in os.environ):
         homePath = os.environ["DBGHPATH"]
 
