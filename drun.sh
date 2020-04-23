@@ -1,7 +1,6 @@
 
-if [-z "$2" ]; then
-    docker stop henry
-fi
+docker stop henry
+
 docker build -t henry2833/pydocs --build-arg REDIS_HOST --build-arg REDIS_PASSW --build-arg SQL_CONN .
 
 if [ -z "$1" ]; then

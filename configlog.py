@@ -1,9 +1,26 @@
 import logging
+import smtplib, ssl
 import os
 import sys
 import socket
 from logging import FileHandler, StreamHandler
 from logging.handlers import SysLogHandler
+from datetime import datetime
+
+
+logFile = "data/logs/logs%s.txt"%datetime.now().strftime("%-m-%d-%H:%M")
+
+syslog = SysLogHandler(address=('logs2.papertrailapp.com', 49905))
+filelog = FileHandler(logFile)
+stream = StreamHandler()
+
+stream.setLevel(logging.INFO)
+filelog.setLevel(logging.NOTSET)
+
+def semidisable(logg):
+    logg.propagate=False
+    logg.setLevel(logging.NOTSET)
+    logg.addHandler(filelog)
 
 class bcolors:
     HEADER = '\033[95m'
@@ -16,38 +33,17 @@ class bcolors:
     UNDERLINE = '\033[4m'
 
 
-logging.basicConfig(level=logging.DEBUG)
-
-
-formatter =logging.Formatter(f"{bcolors.BOLD}%(name)s {bcolors.ENDC} %(asctime)s{bcolors.BOLD} %(funcName)s{bcolors.ENDC} %(lineno)d :\n %(message)s")
-
-specform =logging.Formatter(f"{bcolors.BOLD}%(name)s {bcolors.ENDC} %(asctime)s{bcolors.BOLD}\
-        %(funcName)s{bcolors.ENDC} %(lineno)d :\n {bcolors.OKGREEN} %(message)s {bcolors.ENDC}")
-
+formatter =logging.Formatter(f"%(name)s %(asctime)s %(funcName)s %(lineno)d :\n %(message)s\n")
 
 #syslog = SysLogHandler(address=('syslog-a.logdna.com', 49905))
 
-syslog = SysLogHandler(address=('logs2.papertrailapp.com', 49905))
-filelog = FileHandler("logs.txt")
-stream = StreamHandler()
 
 
 syslog.setFormatter(formatter)
 filelog.setFormatter(formatter)
 stream.setFormatter(formatter)
 
-syslog1 = SysLogHandler(address=('logs2.papertrailapp.com', 49905))
-filelog1 = FileHandler("logs.txt")
-stream1 = StreamHandler()
 
-
-
-stream.setLevel(logging.INFO)
-stream1.setLevel(logging.INFO)
-
-
-
-stream1.setFormatter(specform)
 
 logger = logging.getLogger()
 logger.addHandler(syslog)
@@ -57,72 +53,81 @@ logger.addHandler(stream)
 logger.setLevel(logging.DEBUG)
 
 
-gdrive = logging.getLogger("googleapiclient")
-gdrive.propagate = False
-gdrive.setLevel(logging.WARNING)
-gdrive.addHandler(filelog)
+semidisable( logging.getLogger("googleapiclient"))
+semidisable( logging.getLogger("asyncio"))
+semidisable( logging.getLogger('urllib3'))
+semidisable( logging.getLogger('gdocrevisions.operation'))
+semidisable( logging.getLogger('sqlalchemy'))
+semidisable( logging.getLogger('sqlalchemy.engine'))
 
 
-asynclog = logging.getLogger("asyncio")
-asynclog.propagate = False
-asynclog.addHandler(filelog)
 
-urlliblog = logging.getLogger('urllib3')
-urlliblog.propagate = False
-urlliblog.addHandler(filelog)
-
-
-operationlog = logging.getLogger('gdocrevisions.operation')
-operationlog.propagate = False
-operationlog.addHandler(filelog)
-
-utillog = logging.getLogger('processing')
-utillog.propagate = False
-utillog.addHandler(stream1)
-
-utillog = logging.getLogger('flaskr')
-utillog.propagate = False
-utillog.addHandler(stream1)
 
 Profiler = None
 
 
 def handle_exception(exc_type, exc_value, exc_traceback):
-    return
 
+    logger.critical("Custom Uncaught exception", exc_info=(exc_type, exc_value, exc_traceback))
 
-    logger.critical("Uncaught exception", exc_info=(exc_type, exc_value, exc_traceback))
-
-    if(Profiler != None):
-        logger.critical('dumped stats')
-        Profiler.dump_stats('profiler')
-
-    import smtplib, ssl
-    port = 465
-    password = "henryrage"
-    email = "martinliu24@gmail.com"
-    context = ssl.create_default_context()
-
-    log = """\
-        Subject: PYDOCSLOGS
-
-        This message is sent from Pydocs Logging
-        """
-
-    log += open('logs.txt', 'r').read()
-
-
-    with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
-
-        server.login(email, password)
-        server.sendmail(email, "henry2833+py@gmail.com", log)
-
+    sendmail()
 
     logger.critical("exiting! from sshook")
 
+    logger.info("sending to default hook")
     sys.__excepthook__(exc_type, exc_value, exc_traceback)
+    logger.info("done")
     return
 
 
-#sys.excepthook = handle_exception
+sys.excepthook = handle_exception
+import email, smtplib, ssl
 
+from email import encoders
+from email.mime.base import MIMEBase
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+
+def sendmail():
+    subject = "PYDOCS LOGS"
+    body = "Automatically generated logging"
+    sender_email = "martinliu24@gmail.com"
+    receiver_email = "henry2833+py@gmail.com"
+    password = "henryrage"
+
+    # Create a multipart message and set headers
+    message = MIMEMultipart()
+    message["From"] = sender_email
+    message["To"] = receiver_email
+    message["Subject"] = subject
+    message["Bcc"] = receiver_email  # Recommended for mass emails
+
+    # Add body to email
+    message.attach(MIMEText(body, "plain"))
+
+
+    # Open PDF file in binary mode
+    with open(logFile, "rb") as attachment:
+        # Add file as application/octet-stream
+        # Email client can usually download this automatically as attachment
+        part = MIMEBase("application", "octet-stream")
+        part.set_payload(attachment.read())
+
+    # Encode file in ASCII characters to send by email    
+    encoders.encode_base64(part)
+
+    # Add header as key/value pair to attachment part
+    part.add_header(
+        "Content-Disposition",
+        f"attachment; filename= {logFile}",
+    )
+
+    # Add attachment to message and convert message to string
+    message.attach(part)
+    text = message.as_string()
+
+    # Log in to server using secure context and send email
+    context = ssl.create_default_context()
+    with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
+        server.login(sender_email, password)
+        server.sendmail(sender_email, receiver_email, text)
