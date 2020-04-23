@@ -1,6 +1,8 @@
 import pandas as pd
-from guppy import hpy
+import gc
+import resource
 from processing.throttler import Throttle
+import configlog
 import tracemalloc
 import numpy as np
 import random
@@ -16,7 +18,7 @@ import math
 from google.auth.transport.requests import Request
 import logging
 
-tracemalloc.start(250)
+tracemalloc.start(10)
 
 logger = logging.getLogger(__name__)
 
@@ -26,10 +28,11 @@ class TestUtil:
     creds = None
     headers = {}
     consecutiveErrors = 0
+    pathedFiles = {}
     workingPath = None
     pickleIndex = []
     maxSize = 0
-    errMsg = "BEGIN" + str(datetime.now()) + "<br> \n\n"
+    errMsg = "BEGIN" + str(datetime.now()) + "\n"
     throttle = None
 
     @classmethod
@@ -93,40 +96,28 @@ class TestUtil:
 
     @classmethod 
     def errors(cls, msg):
-        cls.errMsg += str(msg) + '<br> \n'
+        cls.errMsg += str(msg) + '\n'
 
     @classmethod
-    async def print_size(cls, FilePrintText, pathedFiles, files):
+    @profile
+    async def print_size(cls, files):
         cls.snapshot = tracemalloc.take_snapshot()
-        hp = hpy()
         while True:
-            print(hp.heap().__str__())
-            snapshot = tracemalloc.take_snapshot().compare_to(cls.snapshot, 'lineno')
-            for st in snapshot[0:10]:
-                print(st)
+            logger.warning('\n\nMemory usage: %s (kb)' % resource.getrusage(resource.RUSAGE_SELF).ru_maxrss)
+            sns = tracemalloc.take_snapshot()
+            for i in sns.compare_to(cls.snapshot, 'lineno')[0:10]:
+                logger.warning(i)
 
-            import resource
-            logger.warning( 'Memory usage: %s (kb)' % resource.getrusage(resource.RUSAGE_SELF).ru_maxrss)
+            cls.snapshot = sns
 
-            cls.snapshot = tracemalloc.take_snapshot()
-            if(len(pathedFiles)>5):
-                cls.fileCounter +=1
-                _filename = cls.workingPath + str(cls.fileCounter) + '.pathed'
-                logger.info("dumped pathed files at %s", _filename)
-                pickle.dump(pathedFiles, open(_filename, 'wb'))
-                pathedFiles = {}
-                cls.pickleIndex.append(_filename)
 
-            totsize = files.qsize() + len(pathedFiles)
-            outputString = "\n\nuser: %s\n%s\n%d/%d (discovered items)\n%s\n" %(cls.workingPath,FilePrintText.text,len(pathedFiles), totsize,
-                    datetime.now().__str__())
+            gc.collect()
 
-            outputString += "counter: %f rpm: %f\n"%(cls.throttle.gcount(), cls.throttle.rpm)
-            FilePrintText.clear()
+            totsize = files.qsize() + len(cls.pathedFiles)
+            logger.info("%s\n%d/%d at %s\ndumped: %d",cls.workingPath,len(cls.pathedFiles), totsize, datetime.now().__str__(),
+                    cls.fileCounter)
 
-            logger.info(outputString)
-            if(cls.errMsg != ""):
-                logger.error(cls.errMsg)
+            logger.error(cls.errMsg)
 
 
             cls.errMsg = ""
@@ -135,13 +126,28 @@ class TestUtil:
                 print("resetting counter")
                 cls.throttle.reset()
 
-            await asyncio.sleep(2)
+            if(len(cls.pathedFiles)>60):
+                cls.fileCounter +=1
+                _filename = cls.workingPath + str(cls.fileCounter) + '.pathed'
+                pickle.dump(cls.pathedFiles, open(_filename, 'wb'))
+                logger.warning("dumped pathed files at %s, length %d", _filename, len(cls.pathedFiles))
+                cls.pathedFiles = {}
+                cls.pickleIndex.append(_filename)
 
 
+            for i in range(5):
+                print(f"{i*4} out of 20 till next output      ", end = "\r", flush = True)
+                await asyncio.sleep(4)
+
+
+
+    #Deprecated
     @classmethod
     def strToFile(cls, string, filename):
         open(cls.workingPath + filename, 'a+').write(string)
         open(filename, 'a+').write(string)
+
+
 
 def dr2_urlbuilder(id: str):
     return "https://www.googleapis.com/drive/v2/files/" + id + "/revisions"
@@ -151,7 +157,7 @@ async def API_RESET(seconds = 6, throttle = None, decrease = False):
     if throttle and decrease:
         await throttle.decrease()
     secs = random.randint(0, seconds)
-    TestUtil.strToFile("Waiting for GDrive... %d<br>"%(secs), 'streaming.txt')
+    logger.debug("Waiting for GDrive... %d", secs)
     await asyncio.sleep(secs)
     return
 

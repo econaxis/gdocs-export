@@ -1,0 +1,2854 @@
+__main__ 2020-04-22 18:08:01,409 start 16 :
+ start
+
+processing.get_files 2020-04-22 18:08:01,411 loadFiles 303 :
+ Start loadFiles, 527e4afc-4598-400f-8536-afa5324f0ba4 0B4Fujvv5MfqbVElBU01fZUxHcUk
+
+google.auth.transport.requests 2020-04-22 18:08:01,413 __call__ 117 :
+ Making request: POST https://oauth2.googleapis.com/token
+
+urllib3.connectionpool 2020-04-22 18:08:01,419 _new_conn 817 :
+ Starting new HTTPS connection (1): oauth2.googleapis.com
+
+urllib3.connectionpool 2020-04-22 18:08:01,571 _make_request 393 :
+ https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+
+asyncio 2020-04-22 18:08:01,573 __init__ 59 :
+ Using selector: EpollSelector
+
+processing.datutils.test_utils 2020-04-22 18:08:01,597 print_size 105 :
+ 
+
+Memory usage: 88220 (kb)
+
+processing.datutils.test_utils 2020-04-22 18:08:01,714 print_size 108 :
+ /usr/lib/python3.8/tracemalloc.py:532: size=1376 B (+1320 B), count=19 (+18), average=72 B
+
+processing.datutils.test_utils 2020-04-22 18:08:01,716 print_size 108 :
+ /usr/lib/python3.8/tracemalloc.py:397: size=576 B (+576 B), count=4 (+4), average=144 B
+
+processing.datutils.test_utils 2020-04-22 18:08:01,717 print_size 108 :
+ /home/henry/pydocs/processing/datutils/test_utils.py:105: size=512 B (+512 B), count=2 (+2), average=256 B
+
+processing.datutils.test_utils 2020-04-22 18:08:01,718 print_size 108 :
+ /usr/lib/python3.8/logging/__init__.py:950: size=1392 B (+480 B), count=3 (+1), average=464 B
+
+processing.datutils.test_utils 2020-04-22 18:08:01,721 print_size 108 :
+ /usr/lib/python3.8/logging/__init__.py:1183: size=0 B (-480 B), count=0 (-1)
+
+processing.datutils.test_utils 2020-04-22 18:08:01,723 print_size 108 :
+ /usr/lib/python3.8/tracemalloc.py:534: size=472 B (+472 B), count=2 (+2), average=236 B
+
+processing.datutils.test_utils 2020-04-22 18:08:01,725 print_size 108 :
+ /home/henry/pydocs/processing/datutils/test_utils.py:106: size=424 B (+424 B), count=1 (+1), average=424 B
+
+processing.datutils.test_utils 2020-04-22 18:08:01,726 print_size 108 :
+ /home/henry/pydocs/processing/datutils/test_utils.py:103: size=0 B (-424 B), count=0 (-1)
+
+processing.datutils.test_utils 2020-04-22 18:08:01,727 print_size 108 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/requests/structures.py:51: size=0 B (-280 B), count=0 (-5)
+
+processing.datutils.test_utils 2020-04-22 18:08:01,729 print_size 108 :
+ /home/henry/pydocs/processing/get_files.py:265: size=760 B (-240 B), count=7 (-2), average=109 B
+
+processing.datutils.test_utils 2020-04-22 18:08:01,756 print_size 116 :
+ /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/0 at 2020-04-22 18:08:01.756079
+dumped: 0
+
+processing.datutils.test_utils 2020-04-22 18:08:01,758 print_size 119 :
+ BEGIN2020-04-22 18:08:01.407948<br> 
+
+
+
+asyncio 2020-04-22 18:08:01,761 _run_once 1854 :
+ Executing <Task pending name='Task-18' coro=<TestUtil.print_size() running at /home/henry/pydocs/processing/datutils/test_utils.py:139> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fa2d408d9a0>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> created at /home/henry/pydocs/processing/get_files.py:261> took 0.167 seconds
+
+processing.get_files 2020-04-22 18:08:01,762 getIdsRecursive 83 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 18:08:01,763 getRevision 214 :
+ getRevision looping
+
+processing.datutils.test_utils 2020-04-22 18:08:01,764 tryGetQueue 173 :
+ getRevisionwaiting 1 2
+
+processing.get_files 2020-04-22 18:08:01,782 getIdsRecursive 83 :
+ getIdsRecursive looping
+
+asyncio 2020-04-22 18:08:01,789 _getaddrinfo_debug 805 :
+ Get address info www.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1>
+
+asyncio 2020-04-22 18:08:01,823 _getaddrinfo_debug 815 :
+ Getting address info www.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1> took 34.018ms: [(<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('216.58.217.42', 443)), (<AddressFamily.AF_INET6: 10>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('2607:f8b0:400a:801::200a', 443, 0, 0))]
+
+asyncio 2020-04-22 18:08:01,846 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa2d408db80> starts SSL handshake
+
+asyncio 2020-04-22 18:08:01,876 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa2d408db80>: SSL handshake took 29.1 ms
+
+asyncio 2020-04-22 18:08:01,877 create_connection 1057 :
+ <asyncio.TransportSocket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 37336), raddr=('216.58.217.42', 443)> connected to 216.58.217.42:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7fa2d41f3be0>, <aiohttp.client_proto.ResponseHandler object at 0x7fa2d40a9f40>)
+
+processing.datutils.test_utils 2020-04-22 18:08:01,893 tryGetQueue 173 :
+ getIdswaiting 1 2
+
+processing.get_files 2020-04-22 18:08:02,047 getRevision 214 :
+ getRevision looping
+
+processing.datutils.test_utils 2020-04-22 18:08:02,049 tryGetQueue 173 :
+ getRevisionwaiting 1 2
+
+processing.get_files 2020-04-22 18:08:02,070 getIdsRecursive 83 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 18:08:02,237 getIdsRecursive 83 :
+ getIdsRecursive looping
+
+processing.datutils.test_utils 2020-04-22 18:08:02,268 tryGetQueue 173 :
+ getIdswaiting 1 2
+
+processing.get_files 2020-04-22 18:08:02,532 getIdsRecursive 83 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 18:08:02,539 getIdsRecursive 83 :
+ getIdsRecursive looping
+
+asyncio 2020-04-22 18:08:02,698 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa2d4241610> starts SSL handshake
+
+asyncio 2020-04-22 18:08:02,731 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa2d4241610>: SSL handshake took 32.5 ms
+
+asyncio 2020-04-22 18:08:02,731 create_connection 1057 :
+ <asyncio.TransportSocket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 37338), raddr=('216.58.217.42', 443)> connected to 216.58.217.42:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7fa2d424a580>, <aiohttp.client_proto.ResponseHandler object at 0x7fa2d4363160>)
+
+processing.datutils.test_utils 2020-04-22 18:08:02,737 tryGetQueue 173 :
+ getIdswaiting 1 2
+
+processing.get_files 2020-04-22 18:08:03,102 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:08:03,225 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:08:03,891 getIdsRecursive 83 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 18:08:03,893 getIdsRecursive 83 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 18:08:04,555 getIdsRecursive 83 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 18:08:04,723 getIdsRecursive 83 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 18:08:04,779 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:08:04,928 getIdsRecursive 83 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 18:08:05,341 getIdsRecursive 83 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 18:08:05,350 getIdsRecursive 83 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 18:08:05,961 getIdsRecursive 83 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 18:08:06,240 getIdsRecursive 83 :
+ getIdsRecursive looping
+
+processing.datutils.test_utils 2020-04-22 18:08:06,290 tryGetQueue 173 :
+ getIdswaiting 1 2
+
+processing.get_files 2020-04-22 18:08:06,626 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:08:06,644 getIdsRecursive 83 :
+ getIdsRecursive looping
+
+processing.datutils.test_utils 2020-04-22 18:08:06,906 tryGetQueue 173 :
+ getIdswaiting 1 2
+
+processing.get_files 2020-04-22 18:08:06,940 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:08:07,095 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:08:07,297 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:08:07,580 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:08:07,589 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:08:07,595 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:08:08,151 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1TYIOfz_uzybWgEeexs8iE64jcjt-AmUegOP6KORNaWQ?alt=json
+
+googleapiclient.discovery 2020-04-22 18:08:08,423 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:08:08,643 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1TYIOfz_uzybWgEeexs8iE64jcjt-AmUegOP6KORNaWQ/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:08:09,308 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:08:09,310 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:08:09,925 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1TYIOfz_uzybWgEeexs8iE64jcjt-AmUegOP6KORNaWQ/revisions/load?id=1TYIOfz_uzybWgEeexs8iE64jcjt-AmUegOP6KORNaWQ&start=1&end=394 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:08:09,958 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:08:09,960 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:08:09,961 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:08:09,964 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:08:10,580 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/19Fu317bfo0V7yOIkfLvKtAU-UJYLf8d2Soy-jTvq1uc?alt=json
+
+googleapiclient.discovery 2020-04-22 18:08:10,946 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:08:11,597 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/19Fu317bfo0V7yOIkfLvKtAU-UJYLf8d2Soy-jTvq1uc/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:08:12,584 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:08:12,589 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:08:13,198 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/19Fu317bfo0V7yOIkfLvKtAU-UJYLf8d2Soy-jTvq1uc/revisions/load?id=19Fu317bfo0V7yOIkfLvKtAU-UJYLf8d2Soy-jTvq1uc&start=1&end=1336 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:08:13,310 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:08:13,312 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:08:13,313 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:08:13,317 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:08:13,765 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1eXJKzIcZCM6pAdVLLrvEyIwQBDDrtm8dComeZ_W7uOI?alt=json
+
+googleapiclient.discovery 2020-04-22 18:08:14,223 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:08:14,432 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1eXJKzIcZCM6pAdVLLrvEyIwQBDDrtm8dComeZ_W7uOI/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:08:15,452 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:08:15,455 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:08:16,071 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1eXJKzIcZCM6pAdVLLrvEyIwQBDDrtm8dComeZ_W7uOI/revisions/load?id=1eXJKzIcZCM6pAdVLLrvEyIwQBDDrtm8dComeZ_W7uOI&start=1&end=1946 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:08:16,249 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:08:16,251 getRevision 214 :
+ getRevision looping
+
+asyncio 2020-04-22 18:08:16,253 _run_once 1854 :
+ Executing <Task pending name='Task-11' coro=<getRevision() running at /home/henry/pydocs/processing/get_files.py:215> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fa2d408d3a0>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> cb=[gather.<locals>._done_callback() at /usr/lib/python3.8/asyncio/tasks.py:751] created at /home/henry/pydocs/processing/get_files.py:257> took 8.664 seconds
+
+processing.datutils.test_utils 2020-04-22 18:08:16,255 tryGetQueue 173 :
+ getIdswaiting 2 2
+
+processing.datutils.test_utils 2020-04-22 18:08:16,260 tryGetQueue 173 :
+ getIdswaiting 2 2
+
+processing.get_files 2020-04-22 18:08:16,263 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:08:16,266 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:08:16,454 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1Ux4BA5BVJTcsGcTcGp8CtB85ahlWp0h83AGvrtAhnTg?alt=json
+
+googleapiclient.discovery 2020-04-22 18:08:16,814 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:08:17,120 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1Ux4BA5BVJTcsGcTcGp8CtB85ahlWp0h83AGvrtAhnTg/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:08:17,909 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:08:17,912 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:08:18,522 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1Ux4BA5BVJTcsGcTcGp8CtB85ahlWp0h83AGvrtAhnTg/revisions/load?id=1Ux4BA5BVJTcsGcTcGp8CtB85ahlWp0h83AGvrtAhnTg&start=1&end=12 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:08:18,531 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:08:18,532 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:08:18,533 getRevision 226 :
+ not google doc
+
+asyncio 2020-04-22 18:08:18,538 _run_once 1854 :
+ Executing <Task pending name='Task-14' coro=<getRevision() running at /home/henry/pydocs/processing/get_files.py:227> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fa2d42d5f70>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> cb=[gather.<locals>._done_callback() at /usr/lib/python3.8/asyncio/tasks.py:751] created at /home/henry/pydocs/processing/get_files.py:257> took 2.275 seconds
+
+processing.get_files 2020-04-22 18:08:18,538 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:08:18,541 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:08:18,975 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1K6SwyWCOhW6dt906DjOIhJ-ZklpsooCdTyYHGfEZD2s?alt=json
+
+googleapiclient.discovery 2020-04-22 18:08:19,343 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:08:19,796 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1K6SwyWCOhW6dt906DjOIhJ-ZklpsooCdTyYHGfEZD2s/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:08:20,365 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:08:20,368 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:08:20,980 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1K6SwyWCOhW6dt906DjOIhJ-ZklpsooCdTyYHGfEZD2s/revisions/load?id=1K6SwyWCOhW6dt906DjOIhJ-ZklpsooCdTyYHGfEZD2s&start=1&end=1394 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:08:21,084 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:08:21,086 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:08:21,088 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:08:21,090 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:08:21,311 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1ak3AnxwEDfv_EkgRG7Q8U_eglT-eK2W3RtAJqlrtcQA?alt=json
+
+googleapiclient.discovery 2020-04-22 18:08:21,802 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:08:21,983 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1ak3AnxwEDfv_EkgRG7Q8U_eglT-eK2W3RtAJqlrtcQA/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:08:23,029 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:08:23,033 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:08:23,646 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1ak3AnxwEDfv_EkgRG7Q8U_eglT-eK2W3RtAJqlrtcQA/revisions/load?id=1ak3AnxwEDfv_EkgRG7Q8U_eglT-eK2W3RtAJqlrtcQA&start=1&end=1782 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:08:23,812 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:08:23,814 getRevision 214 :
+ getRevision looping
+
+asyncio 2020-04-22 18:08:23,815 _run_once 1854 :
+ Executing <Task pending name='Task-10' coro=<getRevision() running at /home/henry/pydocs/processing/get_files.py:215> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fa2d45c7b50>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> cb=[gather.<locals>._done_callback() at /usr/lib/python3.8/asyncio/tasks.py:751] created at /home/henry/pydocs/processing/get_files.py:257> took 5.277 seconds
+
+processing.datutils.test_utils 2020-04-22 18:08:23,818 tryGetQueue 173 :
+ getIdswaiting 2 2
+
+processing.datutils.test_utils 2020-04-22 18:08:23,825 tryGetQueue 173 :
+ getIdswaiting 2 2
+
+processing.get_files 2020-04-22 18:08:23,827 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:08:23,829 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:08:24,031 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1iTV26x-U2-nngY6gONVklMtrhdfI818IwLM682vpABA?alt=json
+
+googleapiclient.discovery 2020-04-22 18:08:24,337 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:08:24,563 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1iTV26x-U2-nngY6gONVklMtrhdfI818IwLM682vpABA/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:08:25,696 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:08:25,699 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:08:26,305 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1iTV26x-U2-nngY6gONVklMtrhdfI818IwLM682vpABA/revisions/load?id=1iTV26x-U2-nngY6gONVklMtrhdfI818IwLM682vpABA&start=1&end=6533 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:08:26,769 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:08:26,770 getRevision 214 :
+ getRevision looping
+
+asyncio 2020-04-22 18:08:26,771 _run_once 1854 :
+ Executing <Task pending name='Task-17' coro=<getRevision() running at /home/henry/pydocs/processing/get_files.py:215> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fa2d408d580>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> cb=[gather.<locals>._done_callback() at /usr/lib/python3.8/asyncio/tasks.py:751] created at /home/henry/pydocs/processing/get_files.py:257> took 2.945 seconds
+
+processing.datutils.test_utils 2020-04-22 18:08:26,774 tryGetQueue 173 :
+ getIdswaiting 2 2
+
+asyncio 2020-04-22 18:08:26,777 _getaddrinfo_debug 805 :
+ Get address info driveactivity.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1>
+
+asyncio 2020-04-22 18:08:26,779 _getaddrinfo_debug 815 :
+ Getting address info driveactivity.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1> took 1.777ms: [(<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('172.217.3.202', 443)), (<AddressFamily.AF_INET6: 10>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('2607:f8b0:400a:809::200a', 443, 0, 0))]
+
+processing.get_files 2020-04-22 18:08:26,777 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:08:26,781 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:08:26,969 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1gKBPmWO42yparziEkHbvcBtubHyE_IQwtO1Q8IIrW1c?alt=json
+
+googleapiclient.discovery 2020-04-22 18:08:27,332 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:08:27,519 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1gKBPmWO42yparziEkHbvcBtubHyE_IQwtO1Q8IIrW1c/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:08:28,969 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:08:28,973 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:08:29,582 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1gKBPmWO42yparziEkHbvcBtubHyE_IQwtO1Q8IIrW1c/revisions/load?id=1gKBPmWO42yparziEkHbvcBtubHyE_IQwtO1Q8IIrW1c&start=1&end=2999 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:08:29,795 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:08:29,798 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:08:29,799 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:08:29,802 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:08:29,993 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/12x_9WkC_rJJ4iQW5IUNaY9BwAHRM1P6nRBi_oyRq7eI?alt=json
+
+googleapiclient.discovery 2020-04-22 18:08:30,198 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:08:30,382 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/12x_9WkC_rJJ4iQW5IUNaY9BwAHRM1P6nRBi_oyRq7eI/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:08:31,014 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:08:31,017 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:08:31,630 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/12x_9WkC_rJJ4iQW5IUNaY9BwAHRM1P6nRBi_oyRq7eI/revisions/load?id=12x_9WkC_rJJ4iQW5IUNaY9BwAHRM1P6nRBi_oyRq7eI&start=1&end=9 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:08:31,635 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:08:31,637 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:08:31,638 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:08:31,641 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:08:31,870 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1FzKITrCYnc_odhNCRNNaZ-PnT7m0f6qI-iDuQG382OY?alt=json
+
+googleapiclient.discovery 2020-04-22 18:08:32,246 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:08:32,441 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1FzKITrCYnc_odhNCRNNaZ-PnT7m0f6qI-iDuQG382OY/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:08:33,065 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:08:33,068 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:08:33,678 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1FzKITrCYnc_odhNCRNNaZ-PnT7m0f6qI-iDuQG382OY/revisions/load?id=1FzKITrCYnc_odhNCRNNaZ-PnT7m0f6qI-iDuQG382OY&start=1&end=1 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:08:33,683 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:08:33,684 getRevision 214 :
+ getRevision looping
+
+asyncio 2020-04-22 18:08:33,686 _run_once 1854 :
+ Executing <Task pending name='Task-16' coro=<getRevision() running at /home/henry/pydocs/processing/get_files.py:215> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fa2d42eb040>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> cb=[gather.<locals>._done_callback() at /usr/lib/python3.8/asyncio/tasks.py:751] created at /home/henry/pydocs/processing/get_files.py:257> took 6.909 seconds
+
+asyncio 2020-04-22 18:08:33,687 _read_ready__on_eof 869 :
+ <_SelectorSocketTransport fd=11 read=polling write=<idle, bufsize=0>> received EOF
+
+asyncio 2020-04-22 18:08:33,687 eof_received 567 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa2d4241610> received EOF
+
+processing.get_files 2020-04-22 18:08:33,690 getIdsRecursive 96 :
+ getId task exiting
+
+processing.get_files 2020-04-22 18:08:33,692 getIdsRecursive 96 :
+ getId task exiting
+
+processing.get_files 2020-04-22 18:08:33,694 getIdsRecursive 96 :
+ getId task exiting
+
+processing.get_files 2020-04-22 18:08:33,698 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:08:33,701 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:08:34,136 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1VzVAOYcQFfJoPSOGAqpK8xA7OtiUNdq13G3SNRtrq2U?alt=json
+
+googleapiclient.discovery 2020-04-22 18:08:34,499 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:08:34,701 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1VzVAOYcQFfJoPSOGAqpK8xA7OtiUNdq13G3SNRtrq2U/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:08:36,341 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:08:36,344 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:08:36,755 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1VzVAOYcQFfJoPSOGAqpK8xA7OtiUNdq13G3SNRtrq2U/revisions/load?id=1VzVAOYcQFfJoPSOGAqpK8xA7OtiUNdq13G3SNRtrq2U&start=1&end=1590 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:08:36,871 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:08:36,873 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:08:36,874 getRevision 226 :
+ not google doc
+
+asyncio 2020-04-22 18:08:36,878 _run_once 1854 :
+ Executing <Task pending name='Task-15' coro=<getRevision() running at /home/henry/pydocs/processing/get_files.py:227> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fa2d34ed970>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> cb=[gather.<locals>._done_callback() at /usr/lib/python3.8/asyncio/tasks.py:751] created at /home/henry/pydocs/processing/get_files.py:257> took 3.180 seconds
+
+processing.get_files 2020-04-22 18:08:36,879 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:08:36,881 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:08:37,202 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1Xm-pyhQ5D_o4tAHRCtX-amvzVhf-d_pGw0ZhdcTL35Q?alt=json
+
+googleapiclient.discovery 2020-04-22 18:08:37,571 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:08:37,761 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1Xm-pyhQ5D_o4tAHRCtX-amvzVhf-d_pGw0ZhdcTL35Q/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:08:38,811 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:08:38,815 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:08:39,208 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1Xm-pyhQ5D_o4tAHRCtX-amvzVhf-d_pGw0ZhdcTL35Q/revisions/load?id=1Xm-pyhQ5D_o4tAHRCtX-amvzVhf-d_pGw0ZhdcTL35Q&start=1&end=2640 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:08:39,408 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:08:39,410 getRevision 214 :
+ getRevision looping
+
+asyncio 2020-04-22 18:08:39,412 _run_once 1854 :
+ Executing <Task pending name='Task-8' coro=<getRevision() running at /home/henry/pydocs/processing/get_files.py:215> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fa2d408d820>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> cb=[gather.<locals>._done_callback() at /usr/lib/python3.8/asyncio/tasks.py:751] created at /home/henry/pydocs/processing/get_files.py:257> took 2.533 seconds
+
+processing.datutils.test_utils 2020-04-22 18:08:39,414 print_size 105 :
+ 
+
+Memory usage: 111780 (kb)
+
+processing.datutils.test_utils 2020-04-22 18:08:39,682 print_size 108 :
+ /usr/lib/python3.8/copy.py:264: size=806 KiB (+806 KiB), count=20624 (+20624), average=40 B
+
+processing.datutils.test_utils 2020-04-22 18:08:39,684 print_size 108 :
+ /usr/lib/python3.8/linecache.py:137: size=974 KiB (+439 KiB), count=9860 (+4490), average=101 B
+
+processing.datutils.test_utils 2020-04-22 18:08:39,686 print_size 108 :
+ /home/henry/pydocs/processing/get_files.py:68: size=171 KiB (+171 KiB), count=11 (+11), average=15.6 KiB
+
+processing.datutils.test_utils 2020-04-22 18:08:39,687 print_size 108 :
+ /usr/lib/python3.8/copy.py:142: size=90.6 KiB (+90.6 KiB), count=1932 (+1932), average=48 B
+
+processing.datutils.test_utils 2020-04-22 18:08:39,690 print_size 108 :
+ /usr/lib/python3.8/json/decoder.py:353: size=55.1 KiB (+54.8 KiB), count=621 (+619), average=91 B
+
+processing.datutils.test_utils 2020-04-22 18:08:39,692 print_size 108 :
+ /usr/lib/python3.8/abc.py:102: size=106 KiB (+41.7 KiB), count=1189 (+486), average=91 B
+
+processing.datutils.test_utils 2020-04-22 18:08:39,694 print_size 108 :
+ /usr/lib/python3.8/traceback.py:359: size=53.0 KiB (+16.0 KiB), count=695 (+198), average=78 B
+
+processing.datutils.test_utils 2020-04-22 18:08:39,695 print_size 108 :
+ <frozen importlib._bootstrap_external>:580: size=39.0 KiB (+14.7 KiB), count=318 (+154), average=126 B
+
+processing.datutils.test_utils 2020-04-22 18:08:39,697 print_size 108 :
+ /home/henry/pydocs/processing/get_files.py:212: size=0 B (-13.5 KiB), count=0 (-151)
+
+processing.datutils.test_utils 2020-04-22 18:08:39,699 print_size 108 :
+ /home/henry/pydocs/processing/get_files.py:137: size=11.9 KiB (+11.9 KiB), count=269 (+269), average=45 B
+
+processing.datutils.test_utils 2020-04-22 18:08:39,726 print_size 116 :
+ /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+12/72 at 2020-04-22 18:08:39.726878
+dumped: 0
+
+processing.datutils.test_utils 2020-04-22 18:08:39,728 print_size 119 :
+ 
+
+asyncio 2020-04-22 18:08:39,732 _run_once 1854 :
+ Executing <Task pending name='Task-18' coro=<TestUtil.print_size() running at /home/henry/pydocs/processing/datutils/test_utils.py:139> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fa2d34f8c10>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> created at /home/henry/pydocs/processing/get_files.py:261> took 0.318 seconds
+
+processing.get_files 2020-04-22 18:08:39,732 getIdsRecursive 96 :
+ getId task exiting
+
+asyncio 2020-04-22 18:08:39,744 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa2d34f8b20> starts SSL handshake
+
+processing.get_files 2020-04-22 18:08:39,746 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:08:39,750 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:08:40,072 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/18s8_aXXl5LtTX5ljUkglb7uf3QgbVuGoTlhwf9iHzKw?alt=json
+
+googleapiclient.discovery 2020-04-22 18:08:40,437 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:08:40,610 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/18s8_aXXl5LtTX5ljUkglb7uf3QgbVuGoTlhwf9iHzKw/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:08:43,305 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:08:43,308 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:08:45,561 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/18s8_aXXl5LtTX5ljUkglb7uf3QgbVuGoTlhwf9iHzKw/revisions/load?id=18s8_aXXl5LtTX5ljUkglb7uf3QgbVuGoTlhwf9iHzKw&start=1&end=10467 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:08:46,482 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:08:46,483 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:08:46,485 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:08:46,487 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:08:47,032 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1V3RqT0n3pc2un7LT3XHJhOLGqmACXSAMSCExEzabbJw?alt=json
+
+googleapiclient.discovery 2020-04-22 18:08:47,401 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:08:47,614 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1V3RqT0n3pc2un7LT3XHJhOLGqmACXSAMSCExEzabbJw/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:08:48,332 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:08:48,335 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:08:49,037 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1V3RqT0n3pc2un7LT3XHJhOLGqmACXSAMSCExEzabbJw/revisions/load?id=1V3RqT0n3pc2un7LT3XHJhOLGqmACXSAMSCExEzabbJw&start=1&end=519 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:08:49,082 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:08:49,084 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:08:49,085 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:08:49,087 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:08:49,488 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1-1y6G4MviqPb0QzFlRjccX3Hlm72FFJS1VppqcHKCTs?alt=json
+
+googleapiclient.discovery 2020-04-22 18:08:49,860 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:08:50,033 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1-1y6G4MviqPb0QzFlRjccX3Hlm72FFJS1VppqcHKCTs/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:08:50,678 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:08:50,681 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:08:51,086 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1-1y6G4MviqPb0QzFlRjccX3Hlm72FFJS1VppqcHKCTs/revisions/load?id=1-1y6G4MviqPb0QzFlRjccX3Hlm72FFJS1VppqcHKCTs&start=1&end=8 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:08:51,091 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:08:51,093 getRevision 214 :
+ getRevision looping
+
+asyncio 2020-04-22 18:08:51,094 _run_once 1854 :
+ Executing <Task pending name='Task-12' coro=<getRevision() running at /home/henry/pydocs/processing/get_files.py:215> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fa2d42c50d0>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> cb=[gather.<locals>._done_callback() at /usr/lib/python3.8/asyncio/tasks.py:751] created at /home/henry/pydocs/processing/get_files.py:257> took 11.348 seconds
+
+asyncio 2020-04-22 18:08:51,096 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa2d34f8b20>: SSL handshake took 11352.2 ms
+
+asyncio 2020-04-22 18:08:51,099 create_connection 1057 :
+ <asyncio.TransportSocket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 53326), raddr=('172.217.3.202', 443)> connected to 172.217.3.202:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7fa2d414fa00>, <aiohttp.client_proto.ResponseHandler object at 0x7fa2d45bfac0>)
+
+processing.get_files 2020-04-22 18:08:51,102 getIdsRecursive 96 :
+ getId task exiting
+
+asyncio 2020-04-22 18:08:51,106 _read_ready__on_eof 869 :
+ <_SelectorSocketTransport fd=11 read=polling write=<idle, bufsize=0>> received EOF
+
+asyncio 2020-04-22 18:08:51,106 eof_received 567 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa2d34f8b20> received EOF
+
+processing.get_files 2020-04-22 18:08:51,107 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:08:51,111 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:08:51,297 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/19yXrTeWC3zjIWztx7RSpKqHL-dpfVf7PPaOmbKyAPrs?alt=json
+
+googleapiclient.discovery 2020-04-22 18:08:52,725 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:08:53,166 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/19yXrTeWC3zjIWztx7RSpKqHL-dpfVf7PPaOmbKyAPrs/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:08:53,954 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:08:53,956 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:08:54,519 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/19yXrTeWC3zjIWztx7RSpKqHL-dpfVf7PPaOmbKyAPrs/revisions/load?id=19yXrTeWC3zjIWztx7RSpKqHL-dpfVf7PPaOmbKyAPrs&start=1&end=667 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:08:54,612 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:08:54,614 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:08:54,615 getRevision 226 :
+ not google doc
+
+asyncio 2020-04-22 18:08:54,619 _run_once 1854 :
+ Executing <Task pending name='Task-16' coro=<getRevision() running at /home/henry/pydocs/processing/get_files.py:227> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fa2d34651c0>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> cb=[gather.<locals>._done_callback() at /usr/lib/python3.8/asyncio/tasks.py:751] created at /home/henry/pydocs/processing/get_files.py:257> took 3.512 seconds
+
+processing.get_files 2020-04-22 18:08:54,620 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:08:54,622 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:08:54,831 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1KxeMzcqJ7__fOtXnftJ-Pa7r2vlOP2GwzmoDpyt0mBE?alt=json
+
+googleapiclient.discovery 2020-04-22 18:08:55,183 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:08:55,396 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1KxeMzcqJ7__fOtXnftJ-Pa7r2vlOP2GwzmoDpyt0mBE/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:08:56,204 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:08:56,207 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:08:56,822 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1KxeMzcqJ7__fOtXnftJ-Pa7r2vlOP2GwzmoDpyt0mBE/revisions/load?id=1KxeMzcqJ7__fOtXnftJ-Pa7r2vlOP2GwzmoDpyt0mBE&start=1&end=733 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:08:56,900 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:08:56,902 getRevision 214 :
+ getRevision looping
+
+asyncio 2020-04-22 18:08:56,903 _run_once 1854 :
+ Executing <Task pending name='Task-9' coro=<getRevision() running at /home/henry/pydocs/processing/get_files.py:215> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fa2d42eb040>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> cb=[gather.<locals>._done_callback() at /usr/lib/python3.8/asyncio/tasks.py:751] created at /home/henry/pydocs/processing/get_files.py:257> took 2.284 seconds
+
+processing.get_files 2020-04-22 18:08:56,907 queryDriveActivity 162 :
+ EXCEPTION
+Traceback (most recent call last):
+  File "/home/henry/pydocs/processing/get_files.py", line 152, in queryDriveActivity
+    async with session.post(**TestUtil.dractivity_builder(fileId)) as actResponse:
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py", line 504, in _request
+    await resp.start(conn)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 847, in start
+    message, payload = await self._protocol.read()  # type: ignore  # noqa
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/streams.py", line 591, in read
+    await self._waiter
+aiohttp.client_exceptions.ServerDisconnectedError
+processing.get_files 2020-04-22 18:08:56,909 queryDriveActivity 164 :
+ Because of exception, sleeping for 11
+
+asyncio 2020-04-22 18:08:56,920 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa2d36afbe0> starts SSL handshake
+
+asyncio 2020-04-22 18:08:56,922 _getaddrinfo_debug 805 :
+ Get address info driveactivity.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1>
+
+asyncio 2020-04-22 18:08:56,923 _getaddrinfo_debug 815 :
+ Getting address info driveactivity.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1> took 1.356ms: [(<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('172.217.3.202', 443)), (<AddressFamily.AF_INET6: 10>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('2607:f8b0:400a:809::200a', 443, 0, 0))]
+
+asyncio 2020-04-22 18:08:56,959 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa2d36afbe0>: SSL handshake took 38.5 ms
+
+asyncio 2020-04-22 18:08:56,960 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa2d40cffa0> starts SSL handshake
+
+asyncio 2020-04-22 18:08:56,961 create_connection 1057 :
+ <asyncio.TransportSocket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 53358), raddr=('172.217.3.202', 443)> connected to 172.217.3.202:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7fa2d3671ee0>, <aiohttp.client_proto.ResponseHandler object at 0x7fa2d4363e80>)
+
+asyncio 2020-04-22 18:08:56,988 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa2d40cffa0>: SSL handshake took 28.2 ms
+
+asyncio 2020-04-22 18:08:56,989 create_connection 1057 :
+ <asyncio.TransportSocket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 53380), raddr=('172.217.3.202', 443)> connected to 172.217.3.202:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7fa2d42b9b20>, <aiohttp.client_proto.ResponseHandler object at 0x7fa2d3671ac0>)
+
+processing.get_files 2020-04-22 18:08:57,108 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:08:57,111 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:08:57,306 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1Rwm5j7Cnfx80BQ5aCjWLNGe5Zsy2eEIcqnHMhaIgwRc?alt=json
+
+googleapiclient.discovery 2020-04-22 18:08:57,516 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:08:57,713 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1Rwm5j7Cnfx80BQ5aCjWLNGe5Zsy2eEIcqnHMhaIgwRc/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:08:59,484 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:08:59,487 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:09:00,103 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1Rwm5j7Cnfx80BQ5aCjWLNGe5Zsy2eEIcqnHMhaIgwRc/revisions/load?id=1Rwm5j7Cnfx80BQ5aCjWLNGe5Zsy2eEIcqnHMhaIgwRc&start=1&end=2233 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:09:00,415 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:09:00,417 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:09:00,418 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:09:00,421 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:09:00,625 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1zyLifTUL_nG8Vm-qDkOCwL5iOSD1DiyDuysUCIgDBXk?alt=json
+
+googleapiclient.discovery 2020-04-22 18:09:01,123 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:09:01,329 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1zyLifTUL_nG8Vm-qDkOCwL5iOSD1DiyDuysUCIgDBXk/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:09:02,556 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:09:02,559 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:09:03,169 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1zyLifTUL_nG8Vm-qDkOCwL5iOSD1DiyDuysUCIgDBXk/revisions/load?id=1zyLifTUL_nG8Vm-qDkOCwL5iOSD1DiyDuysUCIgDBXk&start=1&end=1593 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:09:03,353 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:09:03,355 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:09:03,356 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:09:03,360 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:09:03,551 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1cflNpTbjQqpz-E4GqrehbgvXRayQ6dXE_X_x5tC8gbE?alt=json
+
+googleapiclient.discovery 2020-04-22 18:09:03,784 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:09:04,002 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1cflNpTbjQqpz-E4GqrehbgvXRayQ6dXE_X_x5tC8gbE/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:09:04,808 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:09:04,811 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:09:05,422 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1cflNpTbjQqpz-E4GqrehbgvXRayQ6dXE_X_x5tC8gbE/revisions/load?id=1cflNpTbjQqpz-E4GqrehbgvXRayQ6dXE_X_x5tC8gbE&start=1&end=229 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:09:05,442 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:09:05,443 getRevision 214 :
+ getRevision looping
+
+asyncio 2020-04-22 18:09:05,445 _run_once 1854 :
+ Executing <Task pending name='Task-8' coro=<getRevision() running at /home/henry/pydocs/processing/get_files.py:215> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fa2d3237d60>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> cb=[gather.<locals>._done_callback() at /usr/lib/python3.8/asyncio/tasks.py:751] created at /home/henry/pydocs/processing/get_files.py:257> took 8.336 seconds
+
+processing.get_files 2020-04-22 18:09:05,459 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:09:05,468 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:09:05,472 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:09:05,475 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:09:05,671 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1BU7kF9C-LzvjiV2WBq5Yx6sstmvvYDDOPKYP8jygvKg?alt=json
+
+googleapiclient.discovery 2020-04-22 18:09:06,039 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:09:06,216 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1BU7kF9C-LzvjiV2WBq5Yx6sstmvvYDDOPKYP8jygvKg/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:09:06,855 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:09:06,858 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:09:07,470 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1BU7kF9C-LzvjiV2WBq5Yx6sstmvvYDDOPKYP8jygvKg/revisions/load?id=1BU7kF9C-LzvjiV2WBq5Yx6sstmvvYDDOPKYP8jygvKg&start=1&end=33 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:09:07,481 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:09:07,483 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:09:07,484 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:09:07,486 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:09:07,923 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1gWhoOIIk2dcQObAvgYpY8Cx_Qc9YUoqNgXEapMic1Qo?alt=json
+
+googleapiclient.discovery 2020-04-22 18:09:08,199 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:09:08,746 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1gWhoOIIk2dcQObAvgYpY8Cx_Qc9YUoqNgXEapMic1Qo/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:09:10,247 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:09:10,249 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:09:10,818 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1gWhoOIIk2dcQObAvgYpY8Cx_Qc9YUoqNgXEapMic1Qo/revisions/load?id=1gWhoOIIk2dcQObAvgYpY8Cx_Qc9YUoqNgXEapMic1Qo&start=1&end=1868 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:09:11,206 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:09:11,208 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:09:11,209 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:09:11,211 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:09:11,532 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1xS96CqWG26lxXRjriQhRXyssvP6FimBkTtA5EIOLfao?alt=json
+
+googleapiclient.discovery 2020-04-22 18:09:11,893 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:09:12,100 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1xS96CqWG26lxXRjriQhRXyssvP6FimBkTtA5EIOLfao/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:09:13,205 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:09:13,208 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:09:13,815 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1xS96CqWG26lxXRjriQhRXyssvP6FimBkTtA5EIOLfao/revisions/load?id=1xS96CqWG26lxXRjriQhRXyssvP6FimBkTtA5EIOLfao&start=1&end=1382 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:09:13,926 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:09:13,928 getRevision 214 :
+ getRevision looping
+
+asyncio 2020-04-22 18:09:13,930 _run_once 1854 :
+ Executing <Task pending name='Task-13' coro=<getRevision() running at /home/henry/pydocs/processing/get_files.py:215> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fa2d45c7b50>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> cb=[gather.<locals>._done_callback() at /usr/lib/python3.8/asyncio/tasks.py:751] created at /home/henry/pydocs/processing/get_files.py:257> took 8.458 seconds
+
+processing.get_files 2020-04-22 18:09:13,931 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:09:13,935 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:09:13,939 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:09:14,124 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1qC8O9UkkKeZ82f4iVgf2UYL0ZDqm9ny54I45NmQqBK0?alt=json
+
+googleapiclient.discovery 2020-04-22 18:09:14,435 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:09:14,646 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1qC8O9UkkKeZ82f4iVgf2UYL0ZDqm9ny54I45NmQqBK0/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:09:15,458 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:09:15,460 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:09:16,071 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1qC8O9UkkKeZ82f4iVgf2UYL0ZDqm9ny54I45NmQqBK0/revisions/load?id=1qC8O9UkkKeZ82f4iVgf2UYL0ZDqm9ny54I45NmQqBK0&start=1&end=990 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:09:16,153 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:09:16,155 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:09:16,156 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:09:16,158 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:09:16,373 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/14KTZ9MFQGABvko_oR_4LlYTopekxI_fVWLoZQA0N85c?alt=json
+
+googleapiclient.discovery 2020-04-22 18:09:16,892 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:09:17,071 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/14KTZ9MFQGABvko_oR_4LlYTopekxI_fVWLoZQA0N85c/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:09:17,711 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:09:17,714 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:09:18,324 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/14KTZ9MFQGABvko_oR_4LlYTopekxI_fVWLoZQA0N85c/revisions/load?id=14KTZ9MFQGABvko_oR_4LlYTopekxI_fVWLoZQA0N85c&start=1&end=271 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:09:18,353 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:09:18,355 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:09:18,356 getRevision 226 :
+ not google doc
+
+asyncio 2020-04-22 18:09:18,360 _run_once 1854 :
+ Executing <Task pending name='Task-11' coro=<getRevision() running at /home/henry/pydocs/processing/get_files.py:227> wait_for=<Future pending cb=[shield.<locals>._outer_done_callback() at /usr/lib/python3.8/asyncio/tasks.py:884, <TaskWakeupMethWrapper object at 0x7fa2d3449610>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> cb=[gather.<locals>._done_callback() at /usr/lib/python3.8/asyncio/tasks.py:751] created at /home/henry/pydocs/processing/get_files.py:257> took 4.425 seconds
+
+asyncio 2020-04-22 18:09:18,362 _getaddrinfo_debug 805 :
+ Get address info www.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1>
+
+asyncio 2020-04-22 18:09:18,363 _getaddrinfo_debug 815 :
+ Getting address info www.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1> took 1.341ms: [(<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('216.58.217.42', 443)), (<AddressFamily.AF_INET6: 10>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('2607:f8b0:400a:801::200a', 443, 0, 0))]
+
+processing.datutils.test_utils 2020-04-22 18:09:18,362 print_size 105 :
+ 
+
+Memory usage: 143508 (kb)
+
+processing.datutils.test_utils 2020-04-22 18:09:18,791 print_size 108 :
+ /usr/lib/python3.8/copy.py:264: size=1625 KiB (+820 KiB), count=41604 (+20980), average=40 B
+
+processing.datutils.test_utils 2020-04-22 18:09:18,793 print_size 108 :
+ /home/henry/pydocs/processing/get_files.py:68: size=342 KiB (+171 KiB), count=24 (+13), average=14.3 KiB
+
+processing.datutils.test_utils 2020-04-22 18:09:18,794 print_size 108 :
+ /usr/lib/python3.8/abc.py:102: size=160 KiB (+54.4 KiB), count=1455 (+266), average=113 B
+
+processing.datutils.test_utils 2020-04-22 18:09:18,796 print_size 108 :
+ /usr/lib/python3.8/tracemalloc.py:532: size=13.9 KiB (+13.5 KiB), count=216 (+210), average=66 B
+
+processing.datutils.test_utils 2020-04-22 18:09:18,797 print_size 108 :
+ /usr/lib/python3.8/traceback.py:359: size=40.9 KiB (-12.1 KiB), count=540 (-155), average=77 B
+
+processing.datutils.test_utils 2020-04-22 18:09:18,799 print_size 108 :
+ /usr/lib/python3.8/ssl.py:906: size=15.8 KiB (+10.4 KiB), count=257 (+169), average=63 B
+
+processing.datutils.test_utils 2020-04-22 18:09:18,801 print_size 108 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/iso8601/iso8601.py:203: size=6624 B (+6624 B), count=138 (+138), average=48 B
+
+processing.datutils.test_utils 2020-04-22 18:09:18,802 print_size 108 :
+ /usr/lib/python3.8/json/decoder.py:353: size=50.5 KiB (-4721 B), count=544 (-77), average=95 B
+
+processing.datutils.test_utils 2020-04-22 18:09:18,804 print_size 108 :
+ /usr/lib/python3.8/traceback.py:288: size=33.1 KiB (-4028 B), count=405 (-45), average=84 B
+
+processing.datutils.test_utils 2020-04-22 18:09:18,806 print_size 108 :
+ /home/henry/pydocs/processing/datutils/test_utils.py:174: size=0 B (-3264 B), count=0 (-33)
+
+processing.datutils.test_utils 2020-04-22 18:09:18,842 print_size 116 :
+ /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+27/72 at 2020-04-22 18:09:18.842150
+dumped: 0
+
+processing.datutils.test_utils 2020-04-22 18:09:18,844 print_size 119 :
+ 
+
+asyncio 2020-04-22 18:09:18,846 _run_once 1854 :
+ Executing <Task pending name='Task-18' coro=<TestUtil.print_size() running at /home/henry/pydocs/processing/datutils/test_utils.py:139> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fa2d35cd220>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> created at /home/henry/pydocs/processing/get_files.py:261> took 0.483 seconds
+
+asyncio 2020-04-22 18:09:18,846 _read_ready__on_eof 869 :
+ <_SelectorSocketTransport fd=10 read=polling write=<idle, bufsize=0>> received EOF
+
+asyncio 2020-04-22 18:09:18,847 eof_received 567 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa2d408db80> received EOF
+
+asyncio 2020-04-22 18:09:18,872 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa2d36a7eb0> starts SSL handshake
+
+asyncio 2020-04-22 18:09:18,902 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa2d36a7eb0>: SSL handshake took 29.3 ms
+
+asyncio 2020-04-22 18:09:18,903 create_connection 1057 :
+ <asyncio.TransportSocket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 37596), raddr=('216.58.217.42', 443)> connected to 216.58.217.42:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7fa2d420e340>, <aiohttp.client_proto.ResponseHandler object at 0x7fa2d41ca460>)
+
+processing.get_files 2020-04-22 18:09:19,840 getRevision 226 :
+ not google doc
+
+processing.get_files 2020-04-22 18:09:19,845 getRevision 226 :
+ not google doc
+
+processing.get_files 2020-04-22 18:09:19,849 getRevision 226 :
+ not google doc
+
+processing.get_files 2020-04-22 18:09:19,856 getRevision 214 :
+ getRevision looping
+
+asyncio 2020-04-22 18:09:19,882 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa2d34650a0> starts SSL handshake
+
+asyncio 2020-04-22 18:09:19,883 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa2d34f8a90> starts SSL handshake
+
+asyncio 2020-04-22 18:09:19,914 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa2d34650a0>: SSL handshake took 31.8 ms
+
+asyncio 2020-04-22 18:09:19,915 create_connection 1057 :
+ <asyncio.TransportSocket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 37598), raddr=('216.58.217.42', 443)> connected to 216.58.217.42:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7fa2d42e5e80>, <aiohttp.client_proto.ResponseHandler object at 0x7fa2d41ca580>)
+
+asyncio 2020-04-22 18:09:19,919 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa2d34f8a90>: SSL handshake took 35.6 ms
+
+asyncio 2020-04-22 18:09:19,920 create_connection 1057 :
+ <asyncio.TransportSocket fd=14, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 37600), raddr=('216.58.217.42', 443)> connected to 216.58.217.42:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7fa2d42ef6a0>, <aiohttp.client_proto.ResponseHandler object at 0x7fa2d41ca820>)
+
+asyncio 2020-04-22 18:09:20,182 _getaddrinfo_debug 805 :
+ Get address info driveactivity.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1>
+
+asyncio 2020-04-22 18:09:20,184 _getaddrinfo_debug 815 :
+ Getting address info driveactivity.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1> took 1.418ms: [(<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('172.217.3.202', 443)), (<AddressFamily.AF_INET6: 10>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('2607:f8b0:400a:809::200a', 443, 0, 0))]
+
+asyncio 2020-04-22 18:09:20,205 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa2d42bb6d0> starts SSL handshake
+
+asyncio 2020-04-22 18:09:20,238 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa2d42bb6d0>: SSL handshake took 32.1 ms
+
+asyncio 2020-04-22 18:09:20,239 create_connection 1057 :
+ <asyncio.TransportSocket fd=15, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 53468), raddr=('172.217.3.202', 443)> connected to 172.217.3.202:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7fa2d4363460>, <aiohttp.client_proto.ResponseHandler object at 0x7fa2d42effa0>)
+
+processing.get_files 2020-04-22 18:09:20,787 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:09:20,790 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:09:20,792 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:09:25,747 getRevision 226 :
+ not google doc
+
+processing.get_files 2020-04-22 18:09:25,759 getRevision 226 :
+ not google doc
+
+processing.get_files 2020-04-22 18:09:25,764 getRevision 226 :
+ not google doc
+
+processing.get_files 2020-04-22 18:09:26,517 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:09:26,590 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:09:26,629 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:09:31,464 getRevision 226 :
+ not google doc
+
+processing.get_files 2020-04-22 18:09:31,470 getRevision 226 :
+ not google doc
+
+processing.get_files 2020-04-22 18:09:31,475 getRevision 226 :
+ not google doc
+
+processing.get_files 2020-04-22 18:09:32,048 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:09:32,051 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:09:32,128 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:09:37,050 getRevision 226 :
+ not google doc
+
+processing.get_files 2020-04-22 18:09:37,055 getRevision 226 :
+ not google doc
+
+processing.get_files 2020-04-22 18:09:37,059 getRevision 226 :
+ not google doc
+
+processing.get_files 2020-04-22 18:09:37,783 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:09:37,785 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:09:37,799 getRevision 214 :
+ getRevision looping
+
+processing.datutils.test_utils 2020-04-22 18:09:38,867 print_size 105 :
+ 
+
+Memory usage: 143508 (kb)
+
+processing.datutils.test_utils 2020-04-22 18:09:39,362 print_size 108 :
+ /usr/lib/python3.8/copy.py:142: size=0 B (-92.8 KiB), count=0 (-1979)
+
+processing.datutils.test_utils 2020-04-22 18:09:39,364 print_size 108 :
+ /usr/lib/python3.8/json/decoder.py:353: size=24.6 KiB (-25.9 KiB), count=243 (-301), average=104 B
+
+processing.datutils.test_utils 2020-04-22 18:09:39,365 print_size 108 :
+ /usr/lib/python3.8/ssl.py:906: size=31.5 KiB (+15.7 KiB), count=511 (+254), average=63 B
+
+processing.datutils.test_utils 2020-04-22 18:09:39,367 print_size 108 :
+ /usr/lib/python3.8/traceback.py:359: size=55.2 KiB (+14.3 KiB), count=721 (+181), average=78 B
+
+processing.datutils.test_utils 2020-04-22 18:09:39,369 print_size 108 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:714: size=0 B (-9245 B), count=0 (-1)
+
+processing.datutils.test_utils 2020-04-22 18:09:39,371 print_size 108 :
+ /usr/lib/python3.8/asyncio/events.py:63: size=6726 B (+5839 B), count=33 (+29), average=204 B
+
+processing.datutils.test_utils 2020-04-22 18:09:39,372 print_size 108 :
+ /usr/lib/python3.8/traceback.py:288: size=28.1 KiB (-5074 B), count=343 (-62), average=84 B
+
+processing.datutils.test_utils 2020-04-22 18:09:39,374 print_size 108 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:833: size=0 B (-4032 B), count=0 (-4)
+
+processing.datutils.test_utils 2020-04-22 18:09:39,375 print_size 108 :
+ /usr/lib/python3.8/ssl.py:1124: size=0 B (-3680 B), count=0 (-67)
+
+processing.datutils.test_utils 2020-04-22 18:09:39,376 print_size 108 :
+ /usr/lib/python3.8/asyncio/base_events.py:702: size=4776 B (+3616 B), count=41 (+34), average=116 B
+
+processing.datutils.test_utils 2020-04-22 18:09:39,410 print_size 116 :
+ /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+40/73 at 2020-04-22 18:09:39.410578
+dumped: 0
+
+processing.datutils.test_utils 2020-04-22 18:09:39,412 print_size 119 :
+ 
+
+asyncio 2020-04-22 18:09:39,414 _run_once 1854 :
+ Executing <Task pending name='Task-18' coro=<TestUtil.print_size() running at /home/henry/pydocs/processing/datutils/test_utils.py:139> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fa2f5c37700>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> created at /home/henry/pydocs/processing/get_files.py:261> took 0.547 seconds
+
+processing.get_files 2020-04-22 18:09:42,511 getRevision 226 :
+ not google doc
+
+processing.get_files 2020-04-22 18:09:42,516 getRevision 226 :
+ not google doc
+
+processing.get_files 2020-04-22 18:09:42,520 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:09:42,523 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:09:42,708 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1b-WTM2ekE1k6pPqFt0v7fa-myJ3Yvhg-vFT_zOs-DA4?alt=json
+
+googleapiclient.discovery 2020-04-22 18:09:43,108 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:09:43,285 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1b-WTM2ekE1k6pPqFt0v7fa-myJ3Yvhg-vFT_zOs-DA4/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:09:45,773 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:09:45,776 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:09:46,384 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1b-WTM2ekE1k6pPqFt0v7fa-myJ3Yvhg-vFT_zOs-DA4/revisions/load?id=1b-WTM2ekE1k6pPqFt0v7fa-myJ3Yvhg-vFT_zOs-DA4&start=1&end=4897 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:09:46,868 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:09:46,869 getRevision 214 :
+ getRevision looping
+
+asyncio 2020-04-22 18:09:46,871 _run_once 1854 :
+ Executing <Task pending name='Task-9' coro=<getRevision() running at /home/henry/pydocs/processing/get_files.py:215> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fa2d40cfe80>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> cb=[gather.<locals>._done_callback() at /usr/lib/python3.8/asyncio/tasks.py:751] created at /home/henry/pydocs/processing/get_files.py:257> took 4.350 seconds
+
+processing.get_files 2020-04-22 18:09:47,408 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:09:47,411 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:09:47,847 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:09:47,851 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:09:48,061 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1UvcAx8uccrerf4uud0w1zvsAsbMSJfyqo298Dh_bq_M?alt=json
+
+googleapiclient.discovery 2020-04-22 18:09:48,382 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:09:48,560 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1UvcAx8uccrerf4uud0w1zvsAsbMSJfyqo298Dh_bq_M/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:09:49,251 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:09:49,254 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:09:49,873 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1UvcAx8uccrerf4uud0w1zvsAsbMSJfyqo298Dh_bq_M/revisions/load?id=1UvcAx8uccrerf4uud0w1zvsAsbMSJfyqo298Dh_bq_M&start=1&end=833 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:09:49,950 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:09:49,952 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:09:49,953 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:09:49,955 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:09:50,151 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1i-Tv07oc_5F72OdEdWf91bbLwoFEaXhmjjlo3QOQyrk?alt=json
+
+googleapiclient.discovery 2020-04-22 18:09:50,481 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:09:50,668 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1i-Tv07oc_5F72OdEdWf91bbLwoFEaXhmjjlo3QOQyrk/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:09:53,298 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:09:53,301 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:09:53,961 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1i-Tv07oc_5F72OdEdWf91bbLwoFEaXhmjjlo3QOQyrk/revisions/load?id=1i-Tv07oc_5F72OdEdWf91bbLwoFEaXhmjjlo3QOQyrk&start=1&end=6251 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:09:54,433 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:09:54,436 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:09:54,438 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:09:54,440 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:09:54,611 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/12msYuSI-rqvfXROgoGjtxN3Y9AlT3SnRTd6Om5xOxmM?alt=json
+
+googleapiclient.discovery 2020-04-22 18:09:54,986 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:09:55,169 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/12msYuSI-rqvfXROgoGjtxN3Y9AlT3SnRTd6Om5xOxmM/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:09:56,215 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:09:56,218 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:09:56,828 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/12msYuSI-rqvfXROgoGjtxN3Y9AlT3SnRTd6Om5xOxmM/revisions/load?id=12msYuSI-rqvfXROgoGjtxN3Y9AlT3SnRTd6Om5xOxmM&start=1&end=725 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:09:56,898 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:09:56,900 getRevision 214 :
+ getRevision looping
+
+asyncio 2020-04-22 18:09:56,901 _run_once 1854 :
+ Executing <Task pending name='Task-17' coro=<getRevision() running at /home/henry/pydocs/processing/get_files.py:215> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fa2d24a4b50>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> cb=[gather.<locals>._done_callback() at /usr/lib/python3.8/asyncio/tasks.py:751] created at /home/henry/pydocs/processing/get_files.py:257> took 9.054 seconds
+
+processing.get_files 2020-04-22 18:09:56,905 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:09:56,909 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:09:57,108 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1z0qLmI61do7x0qw3rnK74msvcEZ4tEEVVOERiauTuaI?alt=json
+
+googleapiclient.discovery 2020-04-22 18:09:57,444 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:09:57,633 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1z0qLmI61do7x0qw3rnK74msvcEZ4tEEVVOERiauTuaI/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:09:58,263 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:09:58,266 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:09:58,875 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1z0qLmI61do7x0qw3rnK74msvcEZ4tEEVVOERiauTuaI/revisions/load?id=1z0qLmI61do7x0qw3rnK74msvcEZ4tEEVVOERiauTuaI&start=1&end=309 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:09:58,905 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:09:58,907 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:09:58,909 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:09:58,911 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:09:59,110 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1HdWWgJDh4IA7T550gANGtjqDNvq0AwP0serPT4qI34k?alt=json
+
+googleapiclient.discovery 2020-04-22 18:09:59,493 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:09:59,684 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1HdWWgJDh4IA7T550gANGtjqDNvq0AwP0serPT4qI34k/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:10:02,322 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:10:02,325 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:10:03,177 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1HdWWgJDh4IA7T550gANGtjqDNvq0AwP0serPT4qI34k/revisions/load?id=1HdWWgJDh4IA7T550gANGtjqDNvq0AwP0serPT4qI34k&start=1&end=4443 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:10:03,578 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:10:03,581 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:10:03,582 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:10:03,585 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:10:03,773 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1kzKbaDRw0fxr-yzmfDdTWyiOBuuGprpgdsicAGMD8aw?alt=json
+
+googleapiclient.discovery 2020-04-22 18:10:03,997 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:10:04,176 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1kzKbaDRw0fxr-yzmfDdTWyiOBuuGprpgdsicAGMD8aw/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:10:05,021 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:10:05,024 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:10:05,634 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1kzKbaDRw0fxr-yzmfDdTWyiOBuuGprpgdsicAGMD8aw/revisions/load?id=1kzKbaDRw0fxr-yzmfDdTWyiOBuuGprpgdsicAGMD8aw&start=1&end=478 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:10:05,675 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:10:05,677 getRevision 214 :
+ getRevision looping
+
+asyncio 2020-04-22 18:10:05,679 _run_once 1854 :
+ Executing <Task pending name='Task-14' coro=<getRevision() running at /home/henry/pydocs/processing/get_files.py:215> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fa2d4302130>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> cb=[gather.<locals>._done_callback() at /usr/lib/python3.8/asyncio/tasks.py:751] created at /home/henry/pydocs/processing/get_files.py:257> took 8.773 seconds
+
+processing.get_files 2020-04-22 18:10:05,682 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:10:05,685 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:10:05,876 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1fVc04agXKNKopxuf3yInvn_EXCPuHxfctQqv9rarZIQ?alt=json
+
+googleapiclient.discovery 2020-04-22 18:10:06,250 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:10:06,437 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1fVc04agXKNKopxuf3yInvn_EXCPuHxfctQqv9rarZIQ/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:10:07,889 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:10:07,893 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:10:08,310 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1fVc04agXKNKopxuf3yInvn_EXCPuHxfctQqv9rarZIQ/revisions/load?id=1fVc04agXKNKopxuf3yInvn_EXCPuHxfctQqv9rarZIQ&start=1&end=2392 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:10:08,611 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:10:08,613 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:10:08,614 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:10:08,616 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:10:08,827 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1CEbUajiAYrz2tpwIPZdNCVGniK6leqx04Hmva2N4XM4?alt=json
+
+googleapiclient.discovery 2020-04-22 18:10:09,323 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:10:09,527 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1CEbUajiAYrz2tpwIPZdNCVGniK6leqx04Hmva2N4XM4/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:10:10,345 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:10:10,348 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:10:10,755 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1CEbUajiAYrz2tpwIPZdNCVGniK6leqx04Hmva2N4XM4/revisions/load?id=1CEbUajiAYrz2tpwIPZdNCVGniK6leqx04Hmva2N4XM4&start=1&end=463 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:10:10,800 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:10:10,802 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:10:10,803 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:10:10,806 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:10:10,995 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1Jzh-bWmP8YOEwSm1WsYvN6c8BDgEzMsWsSYXrZ6uwds?alt=json
+
+googleapiclient.discovery 2020-04-22 18:10:11,371 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:10:11,543 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1Jzh-bWmP8YOEwSm1WsYvN6c8BDgEzMsWsSYXrZ6uwds/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:10:12,194 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:10:12,197 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:10:13,007 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1Jzh-bWmP8YOEwSm1WsYvN6c8BDgEzMsWsSYXrZ6uwds/revisions/load?id=1Jzh-bWmP8YOEwSm1WsYvN6c8BDgEzMsWsSYXrZ6uwds&start=1&end=22 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:10:13,020 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:10:13,022 getRevision 214 :
+ getRevision looping
+
+asyncio 2020-04-22 18:10:13,024 _run_once 1854 :
+ Executing <Task pending name='Task-15' coro=<getRevision() running at /home/henry/pydocs/processing/get_files.py:215> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fa2d30839d0>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> cb=[gather.<locals>._done_callback() at /usr/lib/python3.8/asyncio/tasks.py:751] created at /home/henry/pydocs/processing/get_files.py:257> took 7.341 seconds
+
+processing.get_files 2020-04-22 18:10:13,027 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:10:13,030 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:10:13,218 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1U1hoywM09b-AUO7fIR9TflRSsc3Qu3XmxWmzEph3TmE?alt=json
+
+googleapiclient.discovery 2020-04-22 18:10:13,624 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:10:13,820 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1U1hoywM09b-AUO7fIR9TflRSsc3Qu3XmxWmzEph3TmE/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:10:15,056 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:10:15,060 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:10:15,738 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1U1hoywM09b-AUO7fIR9TflRSsc3Qu3XmxWmzEph3TmE/revisions/load?id=1U1hoywM09b-AUO7fIR9TflRSsc3Qu3XmxWmzEph3TmE&start=1&end=1585 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:10:15,892 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:10:15,895 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:10:15,896 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:10:15,898 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:10:16,247 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1_ovH_D4cpuVTDp9z4DtrqQUeTTjLYI5RWrZ06FXx8fg?alt=json
+
+googleapiclient.discovery 2020-04-22 18:10:16,661 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:10:17,045 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1_ovH_D4cpuVTDp9z4DtrqQUeTTjLYI5RWrZ06FXx8fg/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:10:19,357 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:10:19,360 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:10:19,970 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1_ovH_D4cpuVTDp9z4DtrqQUeTTjLYI5RWrZ06FXx8fg/revisions/load?id=1_ovH_D4cpuVTDp9z4DtrqQUeTTjLYI5RWrZ06FXx8fg&start=1&end=3009 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:10:20,327 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:10:20,330 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:10:20,335 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:10:20,338 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:10:20,526 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1HOWZp6ESjGoYrybdR0LLcpWVlgxys_LqI8yxEeyFkpY?alt=json
+
+googleapiclient.discovery 2020-04-22 18:10:20,997 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:10:21,251 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1HOWZp6ESjGoYrybdR0LLcpWVlgxys_LqI8yxEeyFkpY/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:10:22,108 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:10:22,111 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:10:22,634 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1HOWZp6ESjGoYrybdR0LLcpWVlgxys_LqI8yxEeyFkpY/revisions/load?id=1HOWZp6ESjGoYrybdR0LLcpWVlgxys_LqI8yxEeyFkpY&start=1&end=1883 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:10:22,818 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:10:22,820 getRevision 214 :
+ getRevision looping
+
+asyncio 2020-04-22 18:10:22,821 _run_once 1854 :
+ Executing <Task pending name='Task-13' coro=<getRevision() running at /home/henry/pydocs/processing/get_files.py:215> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fa2d431dd30>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> cb=[gather.<locals>._done_callback() at /usr/lib/python3.8/asyncio/tasks.py:751] created at /home/henry/pydocs/processing/get_files.py:257> took 9.794 seconds
+
+processing.datutils.test_utils 2020-04-22 18:10:22,822 print_size 105 :
+ 
+
+Memory usage: 143508 (kb)
+
+processing.datutils.test_utils 2020-04-22 18:10:23,408 print_size 108 :
+ /usr/lib/python3.8/copy.py:264: size=2691 KiB (+1066 KiB), count=68881 (+27277), average=40 B
+
+processing.datutils.test_utils 2020-04-22 18:10:23,410 print_size 108 :
+ /home/henry/pydocs/processing/get_files.py:68: size=573 KiB (+231 KiB), count=37 (+13), average=15.5 KiB
+
+processing.datutils.test_utils 2020-04-22 18:10:23,412 print_size 108 :
+ /usr/lib/python3.8/copy.py:142: size=88.2 KiB (+88.2 KiB), count=1882 (+1882), average=48 B
+
+processing.datutils.test_utils 2020-04-22 18:10:23,413 print_size 108 :
+ /usr/lib/python3.8/traceback.py:359: size=37.0 KiB (-18.2 KiB), count=486 (-235), average=78 B
+
+processing.datutils.test_utils 2020-04-22 18:10:23,415 print_size 108 :
+ /usr/lib/python3.8/tracemalloc.py:532: size=23.5 KiB (+11.0 KiB), count=360 (+161), average=67 B
+
+processing.datutils.test_utils 2020-04-22 18:10:23,418 print_size 108 :
+ /usr/lib/python3.8/asyncio/events.py:63: size=1448 B (-5278 B), count=7 (-26), average=207 B
+
+processing.datutils.test_utils 2020-04-22 18:10:23,419 print_size 108 :
+ /usr/lib/python3.8/json/decoder.py:353: size=29.7 KiB (+5206 B), count=366 (+123), average=83 B
+
+processing.datutils.test_utils 2020-04-22 18:10:23,420 print_size 108 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:162: size=0 B (-4256 B), count=0 (-76)
+
+processing.datutils.test_utils 2020-04-22 18:10:23,422 print_size 108 :
+ /usr/lib/python3.8/traceback.py:301: size=7646 B (-3500 B), count=273 (-125), average=28 B
+
+processing.datutils.test_utils 2020-04-22 18:10:23,423 print_size 108 :
+ /usr/lib/python3.8/asyncio/base_events.py:702: size=1384 B (-3392 B), count=9 (-32), average=154 B
+
+processing.datutils.test_utils 2020-04-22 18:10:23,455 print_size 116 :
+ /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+55/73 at 2020-04-22 18:10:23.455716
+dumped: 0
+
+processing.datutils.test_utils 2020-04-22 18:10:23,457 print_size 119 :
+ 
+
+asyncio 2020-04-22 18:10:23,459 _run_once 1854 :
+ Executing <Task pending name='Task-18' coro=<TestUtil.print_size() running at /home/henry/pydocs/processing/datutils/test_utils.py:139> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fa2d36841f0>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> created at /home/henry/pydocs/processing/get_files.py:261> took 0.637 seconds
+
+processing.get_files 2020-04-22 18:10:23,461 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:10:23,464 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:10:23,672 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1cX0p4FkT_mRKMngyAqtysHHhT0t8EXJLvv0IYzoS4sU?alt=json
+
+googleapiclient.discovery 2020-04-22 18:10:24,069 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:10:24,269 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1cX0p4FkT_mRKMngyAqtysHHhT0t8EXJLvv0IYzoS4sU/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:10:25,301 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:10:25,305 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:10:25,910 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1cX0p4FkT_mRKMngyAqtysHHhT0t8EXJLvv0IYzoS4sU/revisions/load?id=1cX0p4FkT_mRKMngyAqtysHHhT0t8EXJLvv0IYzoS4sU&start=1&end=1538 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:10:26,075 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:10:26,078 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:10:26,079 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:10:26,081 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:10:26,273 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1WVRprv2UdMlSY1fciu82upcO_aVl7lOnIFAm3XzHZ1Y?alt=json
+
+googleapiclient.discovery 2020-04-22 18:10:26,526 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:10:26,708 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1WVRprv2UdMlSY1fciu82upcO_aVl7lOnIFAm3XzHZ1Y/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:10:27,549 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:10:27,552 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:10:28,163 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1WVRprv2UdMlSY1fciu82upcO_aVl7lOnIFAm3XzHZ1Y/revisions/load?id=1WVRprv2UdMlSY1fciu82upcO_aVl7lOnIFAm3XzHZ1Y&start=1&end=2988 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:10:28,406 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:10:28,409 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:10:28,410 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:10:28,413 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:10:28,628 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1JK8IsrP_wGm2CMPI2TbhvrrYTfzAebH5h56mDeQugoo?alt=json
+
+googleapiclient.discovery 2020-04-22 18:10:28,989 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:10:29,187 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1JK8IsrP_wGm2CMPI2TbhvrrYTfzAebH5h56mDeQugoo/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:10:30,418 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:10:30,421 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:10:31,029 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1JK8IsrP_wGm2CMPI2TbhvrrYTfzAebH5h56mDeQugoo/revisions/load?id=1JK8IsrP_wGm2CMPI2TbhvrrYTfzAebH5h56mDeQugoo&start=1&end=2981 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:10:31,259 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:10:31,262 getRevision 214 :
+ getRevision looping
+
+asyncio 2020-04-22 18:10:31,264 _run_once 1854 :
+ Executing <Task pending name='Task-8' coro=<getRevision() running at /home/henry/pydocs/processing/get_files.py:215> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fa2d42d5c40>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> cb=[gather.<locals>._done_callback() at /usr/lib/python3.8/asyncio/tasks.py:751] created at /home/henry/pydocs/processing/get_files.py:257> took 7.803 seconds
+
+processing.get_files 2020-04-22 18:10:31,267 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:10:31,270 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:10:31,469 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1bJZoExEi-jg9c7EimHL4Uc3XPLQsrmCZM_Dz_1M5OVg?alt=json
+
+googleapiclient.discovery 2020-04-22 18:10:31,852 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:10:32,046 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1bJZoExEi-jg9c7EimHL4Uc3XPLQsrmCZM_Dz_1M5OVg/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:10:32,675 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:10:32,678 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:10:33,399 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1bJZoExEi-jg9c7EimHL4Uc3XPLQsrmCZM_Dz_1M5OVg/revisions/load?id=1bJZoExEi-jg9c7EimHL4Uc3XPLQsrmCZM_Dz_1M5OVg&start=1&end=679 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:10:33,466 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:10:33,468 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:10:33,469 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:10:33,472 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:10:33,659 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1KfPb3dCRNiKJ-_mj-L5IdTZYQRTQo6xd2jDkCL94W1w?alt=json
+
+googleapiclient.discovery 2020-04-22 18:10:34,104 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:10:34,290 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1KfPb3dCRNiKJ-_mj-L5IdTZYQRTQo6xd2jDkCL94W1w/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:10:35,127 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:10:35,130 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:10:35,943 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1KfPb3dCRNiKJ-_mj-L5IdTZYQRTQo6xd2jDkCL94W1w/revisions/load?id=1KfPb3dCRNiKJ-_mj-L5IdTZYQRTQo6xd2jDkCL94W1w&start=1&end=677 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:10:36,012 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:10:36,013 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:10:36,015 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:10:36,017 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:10:36,227 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1QCHW4IQHA2vCa1Yoxak6ciYnhE7qlwNW_fnOoSBMEG0?alt=json
+
+googleapiclient.discovery 2020-04-22 18:10:36,566 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:10:36,762 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1QCHW4IQHA2vCa1Yoxak6ciYnhE7qlwNW_fnOoSBMEG0/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:10:37,585 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:10:37,588 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:10:38,212 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1QCHW4IQHA2vCa1Yoxak6ciYnhE7qlwNW_fnOoSBMEG0/revisions/load?id=1QCHW4IQHA2vCa1Yoxak6ciYnhE7qlwNW_fnOoSBMEG0&start=1&end=1243 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:10:38,328 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:10:38,330 getRevision 214 :
+ getRevision looping
+
+asyncio 2020-04-22 18:10:38,332 _run_once 1854 :
+ Executing <Task pending name='Task-16' coro=<getRevision() running at /home/henry/pydocs/processing/get_files.py:215> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fa2d431d730>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> cb=[gather.<locals>._done_callback() at /usr/lib/python3.8/asyncio/tasks.py:751] created at /home/henry/pydocs/processing/get_files.py:257> took 7.064 seconds
+
+processing.get_files 2020-04-22 18:10:38,335 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:10:38,340 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:10:38,545 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1qzyADvsj4voj5Gk1RxlbUhvMUx52JS_4Lz0Rub4nDAI?alt=json
+
+googleapiclient.discovery 2020-04-22 18:10:39,019 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:10:39,230 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1qzyADvsj4voj5Gk1RxlbUhvMUx52JS_4Lz0Rub4nDAI/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:10:40,042 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:10:40,045 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:10:40,655 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1qzyADvsj4voj5Gk1RxlbUhvMUx52JS_4Lz0Rub4nDAI/revisions/load?id=1qzyADvsj4voj5Gk1RxlbUhvMUx52JS_4Lz0Rub4nDAI&start=1&end=1419 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:10:40,781 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:10:40,784 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:10:40,785 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:10:40,788 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:10:40,991 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/15l9f_tZzB4B4ByKbuD5fJa0bwdk_YqiSmSg62w5TU4E?alt=json
+
+googleapiclient.discovery 2020-04-22 18:10:41,272 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:10:41,464 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/15l9f_tZzB4B4ByKbuD5fJa0bwdk_YqiSmSg62w5TU4E/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:10:42,909 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:10:42,913 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:10:43,525 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/15l9f_tZzB4B4ByKbuD5fJa0bwdk_YqiSmSg62w5TU4E/revisions/load?id=15l9f_tZzB4B4ByKbuD5fJa0bwdk_YqiSmSg62w5TU4E&start=1&end=13 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:10:43,533 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:10:43,534 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:10:43,535 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:10:43,538 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:10:43,728 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1fb6O0E3ND3FngBsYCfiFvTf5C7xDmIyjFbxCEQGeQK0?alt=json
+
+googleapiclient.discovery 2020-04-22 18:10:44,140 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:10:44,341 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1fb6O0E3ND3FngBsYCfiFvTf5C7xDmIyjFbxCEQGeQK0/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:10:45,774 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:10:45,778 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:10:46,388 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1fb6O0E3ND3FngBsYCfiFvTf5C7xDmIyjFbxCEQGeQK0/revisions/load?id=1fb6O0E3ND3FngBsYCfiFvTf5C7xDmIyjFbxCEQGeQK0&start=1&end=713 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:10:46,467 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:10:46,470 getRevision 214 :
+ getRevision looping
+
+asyncio 2020-04-22 18:10:46,471 _run_once 1854 :
+ Executing <Task pending name='Task-12' coro=<getRevision() running at /home/henry/pydocs/processing/get_files.py:215> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fa2d2f60370>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> cb=[gather.<locals>._done_callback() at /usr/lib/python3.8/asyncio/tasks.py:751] created at /home/henry/pydocs/processing/get_files.py:257> took 8.136 seconds
+
+processing.get_files 2020-04-22 18:10:46,474 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:10:46,478 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:10:46,658 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/15A7uqZ5m_7jqIYz5NVUyM0cmStEbSTcezN7qTo0wwXA?alt=json
+
+googleapiclient.discovery 2020-04-22 18:10:47,011 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:10:47,204 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/15A7uqZ5m_7jqIYz5NVUyM0cmStEbSTcezN7qTo0wwXA/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:10:49,464 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:10:49,468 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:10:50,076 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/15A7uqZ5m_7jqIYz5NVUyM0cmStEbSTcezN7qTo0wwXA/revisions/load?id=15A7uqZ5m_7jqIYz5NVUyM0cmStEbSTcezN7qTo0wwXA&start=1&end=4438 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:10:50,460 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:10:50,463 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:10:50,464 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:10:50,467 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:10:50,648 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1aOrKFEEEphoSmQXNpvXYE8OVqfpq4Cm0_pavpJnHNhg?alt=json
+
+googleapiclient.discovery 2020-04-22 18:10:51,100 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:10:51,301 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1aOrKFEEEphoSmQXNpvXYE8OVqfpq4Cm0_pavpJnHNhg/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:10:51,921 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:10:51,924 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:10:52,738 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1aOrKFEEEphoSmQXNpvXYE8OVqfpq4Cm0_pavpJnHNhg/revisions/load?id=1aOrKFEEEphoSmQXNpvXYE8OVqfpq4Cm0_pavpJnHNhg&start=1&end=2 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:10:52,744 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:10:52,745 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:10:52,746 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:10:52,749 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:10:52,938 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1tEY2XbnyEkH5bOQ0y0HmWgJ2vZ5tKsrjh7qZYjdWAyg?alt=json
+
+googleapiclient.discovery 2020-04-22 18:10:53,356 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:10:53,539 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1tEY2XbnyEkH5bOQ0y0HmWgJ2vZ5tKsrjh7qZYjdWAyg/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:10:54,378 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:10:54,381 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:10:54,790 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1tEY2XbnyEkH5bOQ0y0HmWgJ2vZ5tKsrjh7qZYjdWAyg/revisions/load?id=1tEY2XbnyEkH5bOQ0y0HmWgJ2vZ5tKsrjh7qZYjdWAyg&start=1&end=526 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:10:54,858 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:10:54,859 getRevision 214 :
+ getRevision looping
+
+asyncio 2020-04-22 18:10:54,861 _run_once 1854 :
+ Executing <Task pending name='Task-10' coro=<getRevision() running at /home/henry/pydocs/processing/get_files.py:215> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fa2d408db20>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> cb=[gather.<locals>._done_callback() at /usr/lib/python3.8/asyncio/tasks.py:751] created at /home/henry/pydocs/processing/get_files.py:257> took 8.386 seconds
+
+processing.get_files 2020-04-22 18:10:54,864 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:10:54,867 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:10:55,065 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1WFJYasE9LmtyBf776a2oSGIC_ITRZNZNrHnJbByiHz8?alt=json
+
+googleapiclient.discovery 2020-04-22 18:10:55,403 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:10:55,575 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1WFJYasE9LmtyBf776a2oSGIC_ITRZNZNrHnJbByiHz8/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:10:56,221 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:10:56,225 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:10:56,837 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1WFJYasE9LmtyBf776a2oSGIC_ITRZNZNrHnJbByiHz8/revisions/load?id=1WFJYasE9LmtyBf776a2oSGIC_ITRZNZNrHnJbByiHz8&start=1&end=26 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:10:56,845 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:10:56,855 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:10:56,856 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:10:56,859 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:10:57,053 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/19qZnBERiKqL8I8xdBdLdgD7fOFZsNL1NDdcz3TJ9Gkg?alt=json
+
+googleapiclient.discovery 2020-04-22 18:10:57,451 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:10:57,646 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/19qZnBERiKqL8I8xdBdLdgD7fOFZsNL1NDdcz3TJ9Gkg/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:10:59,498 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:10:59,501 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:11:01,205 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/19qZnBERiKqL8I8xdBdLdgD7fOFZsNL1NDdcz3TJ9Gkg/revisions/load?id=19qZnBERiKqL8I8xdBdLdgD7fOFZsNL1NDdcz3TJ9Gkg&start=1&end=2154 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:11:01,457 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:11:01,459 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:11:01,460 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:11:01,463 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:11:01,657 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/160R40mTuqkKNjME0oJVZAEM0186W6yAjl0SBUMSIIFY?alt=json
+
+googleapiclient.discovery 2020-04-22 18:11:01,957 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:11:02,161 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/160R40mTuqkKNjME0oJVZAEM0186W6yAjl0SBUMSIIFY/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:11:03,390 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:11:03,393 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:11:03,825 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/160R40mTuqkKNjME0oJVZAEM0186W6yAjl0SBUMSIIFY/revisions/load?id=160R40mTuqkKNjME0oJVZAEM0186W6yAjl0SBUMSIIFY&start=1&end=1315 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:11:03,998 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:11:04,001 getRevision 214 :
+ getRevision looping
+
+asyncio 2020-04-22 18:11:04,002 _run_once 1854 :
+ Executing <Task pending name='Task-11' coro=<getRevision() running at /home/henry/pydocs/processing/get_files.py:215> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fa2d3504c10>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> cb=[gather.<locals>._done_callback() at /usr/lib/python3.8/asyncio/tasks.py:751] created at /home/henry/pydocs/processing/get_files.py:257> took 9.138 seconds
+
+processing.datutils.test_utils 2020-04-22 18:11:04,003 print_size 105 :
+ 
+
+Memory usage: 143508 (kb)
+
+processing.datutils.test_utils 2020-04-22 18:11:04,771 print_size 108 :
+ /usr/lib/python3.8/copy.py:264: size=3499 KiB (+808 KiB), count=89578 (+20697), average=40 B
+
+processing.datutils.test_utils 2020-04-22 18:11:04,773 print_size 108 :
+ /home/henry/pydocs/processing/get_files.py:68: size=747 KiB (+174 KiB), count=52 (+15), average=14.4 KiB
+
+processing.datutils.test_utils 2020-04-22 18:11:04,774 print_size 108 :
+ /usr/lib/python3.8/tracemalloc.py:532: size=4376 B (-19.3 KiB), count=65 (-295), average=67 B
+
+processing.datutils.test_utils 2020-04-22 18:11:04,776 print_size 108 :
+ /usr/lib/python3.8/copy.py:142: size=92.8 KiB (+4656 B), count=1979 (+97), average=48 B
+
+processing.datutils.test_utils 2020-04-22 18:11:04,779 print_size 108 :
+ /home/henry/pydocs/processing/get_files.py:137: size=2840 B (-2704 B), count=53 (-60), average=54 B
+
+processing.datutils.test_utils 2020-04-22 18:11:04,780 print_size 108 :
+ /usr/lib/python3.8/ssl.py:1124: size=2168 B (+2168 B), count=40 (+40), average=54 B
+
+processing.datutils.test_utils 2020-04-22 18:11:04,782 print_size 108 :
+ /usr/lib/python3.8/urllib/parse.py:468: size=3102 B (+2118 B), count=32 (+22), average=97 B
+
+processing.datutils.test_utils 2020-04-22 18:11:04,783 print_size 108 :
+ /home/henry/pydocs/processing/get_files.py:230: size=6368 B (+2016 B), count=102 (+30), average=62 B
+
+processing.datutils.test_utils 2020-04-22 18:11:04,785 print_size 108 :
+ <string>:1: size=2459 B (+1195 B), count=30 (+15), average=82 B
+
+processing.datutils.test_utils 2020-04-22 18:11:04,786 print_size 108 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/googleapiclient/schema.py:315: size=1584 B (+1056 B), count=3 (+2), average=528 B
+
+processing.datutils.test_utils 2020-04-22 18:11:04,822 print_size 116 :
+ /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+70/73 at 2020-04-22 18:11:04.822334
+dumped: 0
+
+processing.datutils.test_utils 2020-04-22 18:11:04,824 print_size 119 :
+ 
+
+processing.datutils.test_utils 2020-04-22 18:11:05,219 print_size 132 :
+ dumped pathed files at /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/1.pathed, length 70
+
+asyncio 2020-04-22 18:11:05,235 _run_once 1854 :
+ Executing <Task pending name='Task-18' coro=<TestUtil.print_size() running at /home/henry/pydocs/processing/datutils/test_utils.py:139> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fa2d34d0df0>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> created at /home/henry/pydocs/processing/get_files.py:261> took 1.231 seconds
+
+processing.get_files 2020-04-22 18:11:05,237 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:11:05,240 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:11:05,449 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1A7VHFEYQVj0bigcnBi3pn4NngcNXxH35Croy3zrdvLY?alt=json
+
+googleapiclient.discovery 2020-04-22 18:11:05,848 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:11:06,088 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1A7VHFEYQVj0bigcnBi3pn4NngcNXxH35Croy3zrdvLY/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:11:07,150 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:11:07,153 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:11:07,895 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1A7VHFEYQVj0bigcnBi3pn4NngcNXxH35Croy3zrdvLY/revisions/load?id=1A7VHFEYQVj0bigcnBi3pn4NngcNXxH35Croy3zrdvLY&start=1&end=1953 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:11:08,053 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:11:08,056 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:11:08,057 getRevision 229 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 18:11:08,060 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:11:08,249 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1WrjmluBbaNBS8u_WZmREl02_oMy2zv6Kcdte82zR5yk?alt=json
+
+googleapiclient.discovery 2020-04-22 18:11:08,511 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 18:11:08,718 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1WrjmluBbaNBS8u_WZmREl02_oMy2zv6Kcdte82zR5yk/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 18:11:09,328 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 18:11:09,331 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 18:11:09,737 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1WrjmluBbaNBS8u_WZmREl02_oMy2zv6Kcdte82zR5yk/revisions/load?id=1WrjmluBbaNBS8u_WZmREl02_oMy2zv6Kcdte82zR5yk&start=1&end=707 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 18:11:09,812 getRevision 233 :
+ done gdoc
+
+processing.get_files 2020-04-22 18:11:09,814 getRevision 214 :
+ getRevision looping
+
+processing.get_files 2020-04-22 18:11:09,816 getRevision 226 :
+ not google doc
+
+asyncio 2020-04-22 18:11:09,820 _run_once 1854 :
+ Executing <Task pending name='Task-9' coro=<getRevision() running at /home/henry/pydocs/processing/get_files.py:227> wait_for=<Future pending cb=[shield.<locals>._outer_done_callback() at /usr/lib/python3.8/asyncio/tasks.py:884, <TaskWakeupMethWrapper object at 0x7fa2d42ca940>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> cb=[gather.<locals>._done_callback() at /usr/lib/python3.8/asyncio/tasks.py:751] created at /home/henry/pydocs/processing/get_files.py:257> took 4.583 seconds
+
+asyncio 2020-04-22 18:11:09,823 _getaddrinfo_debug 805 :
+ Get address info www.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1>
+
+asyncio 2020-04-22 18:11:09,824 _getaddrinfo_debug 815 :
+ Getting address info www.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1> took 1.551ms: [(<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('216.58.217.42', 443)), (<AddressFamily.AF_INET6: 10>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('2607:f8b0:400a:804::200a', 443, 0, 0))]
+
+asyncio 2020-04-22 18:11:09,842 _read_ready__on_eof 869 :
+ <_SelectorSocketTransport fd=12 read=polling write=<idle, bufsize=0>> received EOF
+
+asyncio 2020-04-22 18:11:09,843 eof_received 567 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa2d34650a0> received EOF
+
+asyncio 2020-04-22 18:11:09,844 _read_ready__on_eof 869 :
+ <_SelectorSocketTransport fd=10 read=polling write=<idle, bufsize=0>> received EOF
+
+asyncio 2020-04-22 18:11:09,844 eof_received 567 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa2d36a7eb0> received EOF
+
+asyncio 2020-04-22 18:11:09,844 _read_ready__on_eof 869 :
+ <_SelectorSocketTransport fd=14 read=polling write=<idle, bufsize=0>> received EOF
+
+asyncio 2020-04-22 18:11:09,845 eof_received 567 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa2d34f8a90> received EOF
+
+asyncio 2020-04-22 18:11:09,847 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa2d369d9d0> starts SSL handshake
+
+asyncio 2020-04-22 18:11:09,914 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa2d369d9d0>: SSL handshake took 66.2 ms
+
+asyncio 2020-04-22 18:11:09,915 create_connection 1057 :
+ <asyncio.TransportSocket fd=16, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 37904), raddr=('216.58.217.42', 443)> connected to 216.58.217.42:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7fa2d42e5f40>, <aiohttp.client_proto.ResponseHandler object at 0x7fa2d4035a00>)
+
+processing.datutils.test_utils 2020-04-22 18:11:10,496 tryGetQueue 173 :
+ getRevisionwaiting 1 2
+
+processing.datutils.test_utils 2020-04-22 18:11:10,498 tryGetQueue 173 :
+ getRevisionwaiting 1 2
+
+processing.datutils.test_utils 2020-04-22 18:11:10,499 tryGetQueue 173 :
+ getRevisionwaiting 1 2
+
+asyncio 2020-04-22 18:11:10,767 _getaddrinfo_debug 805 :
+ Get address info driveactivity.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1>
+
+asyncio 2020-04-22 18:11:10,789 _read_ready__on_eof 869 :
+ <_SelectorSocketTransport fd=15 read=polling write=<idle, bufsize=0>> received EOF
+
+asyncio 2020-04-22 18:11:10,790 eof_received 567 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa2d42bb6d0> received EOF
+
+asyncio 2020-04-22 18:11:10,790 _read_ready__on_eof 869 :
+ <_SelectorSocketTransport fd=11 read=polling write=<idle, bufsize=0>> received EOF
+
+asyncio 2020-04-22 18:11:10,790 eof_received 567 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa2d40cffa0> received EOF
+
+asyncio 2020-04-22 18:11:10,791 _read_ready__on_eof 869 :
+ <_SelectorSocketTransport fd=13 read=polling write=<idle, bufsize=0>> received EOF
+
+asyncio 2020-04-22 18:11:10,791 eof_received 567 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa2d36afbe0> received EOF
+
+asyncio 2020-04-22 18:11:10,834 _getaddrinfo_debug 815 :
+ Getting address info driveactivity.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1> took 66.247ms: [(<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('172.217.3.202', 443)), (<AddressFamily.AF_INET6: 10>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('2607:f8b0:400a:800::200a', 443, 0, 0))]
+
+asyncio 2020-04-22 18:11:10,857 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa2d42b3430> starts SSL handshake
+
+asyncio 2020-04-22 18:11:10,886 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa2d42b3430>: SSL handshake took 28.3 ms
+
+asyncio 2020-04-22 18:11:10,887 create_connection 1057 :
+ <asyncio.TransportSocket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 53772), raddr=('172.217.3.202', 443)> connected to 172.217.3.202:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7fa2d42ef340>, <aiohttp.client_proto.ResponseHandler object at 0x7fa2d42e53a0>)
+
+processing.get_files 2020-04-22 18:11:11,590 getRevision 214 :
+ getRevision looping
+
+processing.datutils.test_utils 2020-04-22 18:11:15,756 tryGetQueue 173 :
+ getRevisionwaiting 1 2
+
+processing.datutils.test_utils 2020-04-22 18:11:15,765 tryGetQueue 173 :
+ getRevisionwaiting 1 2
+
+processing.datutils.test_utils 2020-04-22 18:11:15,767 tryGetQueue 173 :
+ getRevisionwaiting 1 2
+
+processing.datutils.test_utils 2020-04-22 18:11:17,503 tryGetQueue 173 :
+ getRevisionwaiting 2 2
+
+processing.datutils.test_utils 2020-04-22 18:11:17,767 tryGetQueue 173 :
+ getRevisionwaiting 2 2
+
+processing.get_files 2020-04-22 18:11:19,508 getRevision 219 :
+ getRevision task exiting
+
+processing.datutils.test_utils 2020-04-22 18:11:20,501 tryGetQueue 173 :
+ getRevisionwaiting 2 2
+
+processing.datutils.test_utils 2020-04-22 18:11:20,504 tryGetQueue 173 :
+ getRevisionwaiting 2 2
+
+processing.get_files 2020-04-22 18:11:20,770 getRevision 219 :
+ getRevision task exiting
+
+processing.datutils.test_utils 2020-04-22 18:11:20,976 tryGetQueue 173 :
+ getRevisionwaiting 1 2
+
+processing.datutils.test_utils 2020-04-22 18:11:20,978 tryGetQueue 173 :
+ getRevisionwaiting 1 2
+
+processing.datutils.test_utils 2020-04-22 18:11:20,980 tryGetQueue 173 :
+ getRevisionwaiting 1 2
+
+processing.datutils.test_utils 2020-04-22 18:11:23,985 tryGetQueue 173 :
+ getRevisionwaiting 2 2
+
+processing.datutils.test_utils 2020-04-22 18:11:25,835 print_size 105 :
+ 
+
+Memory usage: 155452 (kb)
+
+processing.datutils.test_utils 2020-04-22 18:11:26,384 print_size 108 :
+ /usr/lib/python3.8/copy.py:264: size=355 KiB (-3145 KiB), count=9078 (-80500), average=40 B
+
+processing.datutils.test_utils 2020-04-22 18:11:26,386 print_size 108 :
+ /home/henry/pydocs/processing/get_files.py:68: size=75.7 KiB (-671 KiB), count=9 (-43), average=8611 B
+
+processing.datutils.test_utils 2020-04-22 18:11:26,387 print_size 108 :
+ /home/henry/pydocs/processing/datutils/test_utils.py:131: size=96.8 KiB (+96.8 KiB), count=2051 (+2051), average=48 B
+
+processing.datutils.test_utils 2020-04-22 18:11:26,389 print_size 108 :
+ /usr/lib/python3.8/copy.py:142: size=0 B (-92.8 KiB), count=0 (-1979)
+
+processing.datutils.test_utils 2020-04-22 18:11:26,391 print_size 108 :
+ /usr/lib/python3.8/ssl.py:906: size=13.7 KiB (-17.8 KiB), count=224 (-287), average=63 B
+
+processing.datutils.test_utils 2020-04-22 18:11:26,393 print_size 108 :
+ /home/henry/pydocs/processing/get_files.py:176: size=15.9 KiB (+15.9 KiB), count=141 (+141), average=116 B
+
+processing.datutils.test_utils 2020-04-22 18:11:26,395 print_size 108 :
+ /home/henry/pydocs/processing/throttler.py:51: size=1960 B (-14.1 KiB), count=17 (-151), average=115 B
+
+processing.datutils.test_utils 2020-04-22 18:11:26,396 print_size 108 :
+ /home/henry/pydocs/processing/datutils/test_utils.py:174: size=12.4 KiB (+12.4 KiB), count=131 (+131), average=97 B
+
+processing.datutils.test_utils 2020-04-22 18:11:26,398 print_size 108 :
+ /home/henry/pydocs/processing/get_files.py:215: size=2048 B (-11.8 KiB), count=16 (-134), average=128 B
+
+processing.datutils.test_utils 2020-04-22 18:11:26,399 print_size 108 :
+ /usr/lib/python3.8/json/decoder.py:353: size=18.5 KiB (-10.4 KiB), count=279 (-74), average=68 B
+
+processing.datutils.test_utils 2020-04-22 18:11:26,442 print_size 116 :
+ /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-22 18:11:26.442698
+dumped: 1
+
+processing.datutils.test_utils 2020-04-22 18:11:26,444 print_size 119 :
+ 
+
+asyncio 2020-04-22 18:11:26,446 _run_once 1854 :
+ Executing <Task pending name='Task-18' coro=<TestUtil.print_size() running at /home/henry/pydocs/processing/datutils/test_utils.py:139> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fa2d42b38e0>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> created at /home/henry/pydocs/processing/get_files.py:261> took 0.611 seconds
+
+processing.datutils.test_utils 2020-04-22 18:11:26,447 tryGetQueue 173 :
+ getRevisionwaiting 1 2
+
+processing.datutils.test_utils 2020-04-22 18:11:27,981 tryGetQueue 173 :
+ getRevisionwaiting 2 2
+
+processing.get_files 2020-04-22 18:11:27,988 getRevision 219 :
+ getRevision task exiting
+
+processing.get_files 2020-04-22 18:11:28,505 getRevision 219 :
+ getRevision task exiting
+
+processing.get_files 2020-04-22 18:11:31,512 getRevision 219 :
+ getRevision task exiting
+
+processing.datutils.test_utils 2020-04-22 18:11:32,770 tryGetQueue 173 :
+ getRevisionwaiting 2 2
+
+processing.datutils.test_utils 2020-04-22 18:11:32,773 tryGetQueue 173 :
+ getRevisionwaiting 2 2
+
+processing.datutils.test_utils 2020-04-22 18:11:33,983 tryGetQueue 173 :
+ getRevisionwaiting 2 2
+
+processing.get_files 2020-04-22 18:11:34,776 getRevision 219 :
+ getRevision task exiting
+
+processing.datutils.test_utils 2020-04-22 18:11:37,451 tryGetQueue 173 :
+ getRevisionwaiting 2 2
+
+processing.get_files 2020-04-22 18:11:39,989 getRevision 219 :
+ getRevision task exiting
+
+processing.get_files 2020-04-22 18:11:42,456 getRevision 219 :
+ getRevision task exiting
+
+processing.get_files 2020-04-22 18:11:43,985 getRevision 219 :
+ getRevision task exiting
+
+processing.datutils.test_utils 2020-04-22 18:11:46,463 print_size 105 :
+ 
+
+Memory usage: 155452 (kb)
+
+processing.datutils.test_utils 2020-04-22 18:11:46,711 print_size 108 :
+ /usr/lib/python3.8/copy.py:264: size=155 KiB (-199 KiB), count=3972 (-5106), average=40 B
+
+processing.datutils.test_utils 2020-04-22 18:11:46,713 print_size 108 :
+ /home/henry/pydocs/processing/datutils/test_utils.py:131: size=168 B (-96.7 KiB), count=1 (-2050), average=168 B
+
+processing.datutils.test_utils 2020-04-22 18:11:46,714 print_size 108 :
+ /home/henry/pydocs/processing/get_files.py:68: size=33.3 KiB (-42.4 KiB), count=3 (-6), average=11.1 KiB
+
+processing.datutils.test_utils 2020-04-22 18:11:46,716 print_size 108 :
+ /usr/lib/python3.8/tracemalloc.py:532: size=28.8 KiB (+19.1 KiB), count=469 (+314), average=63 B
+
+processing.datutils.test_utils 2020-04-22 18:11:46,719 print_size 108 :
+ /home/henry/pydocs/processing/get_files.py:176: size=0 B (-15.9 KiB), count=0 (-141)
+
+processing.datutils.test_utils 2020-04-22 18:11:46,721 print_size 108 :
+ /usr/lib/python3.8/traceback.py:359: size=25.5 KiB (-9784 B), count=337 (-128), average=78 B
+
+processing.datutils.test_utils 2020-04-22 18:11:46,722 print_size 108 :
+ /usr/lib/python3.8/json/decoder.py:353: size=10033 B (-8879 B), count=99 (-180), average=101 B
+
+processing.datutils.test_utils 2020-04-22 18:11:46,724 print_size 108 :
+ /usr/lib/python3.8/reprlib.py:62: size=9048 B (+6968 B), count=16 (+12), average=566 B
+
+processing.datutils.test_utils 2020-04-22 18:11:46,725 print_size 108 :
+ /usr/lib/python3.8/traceback.py:288: size=18.2 KiB (-6251 B), count=216 (-77), average=86 B
+
+processing.datutils.test_utils 2020-04-22 18:11:46,727 print_size 108 :
+ /home/henry/pydocs/processing/datutils/test_utils.py:174: size=7016 B (-5640 B), count=82 (-49), average=86 B
+
+processing.datutils.test_utils 2020-04-22 18:11:46,760 print_size 116 :
+ /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-22 18:11:46.760614
+dumped: 1
+
+processing.datutils.test_utils 2020-04-22 18:11:46,762 print_size 119 :
+ 
+
+asyncio 2020-04-22 18:11:46,764 _run_once 1854 :
+ Executing <Task pending name='Task-18' coro=<TestUtil.print_size() running at /home/henry/pydocs/processing/datutils/test_utils.py:139> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fa2d24d8d90>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> created at /home/henry/pydocs/processing/get_files.py:261> took 0.301 seconds
+
+processing.get_files 2020-04-22 18:11:46,775 getRevision 219 :
+ getRevision task exiting
+
+processing.get_files 2020-04-22 18:11:46,778 start 266 :
+ await gather revisions done
+
+processing.get_files 2020-04-22 18:11:46,780 start 273 :
+ cancelled throttler
+
+processing.get_files 2020-04-22 18:11:46,782 loadFiles 330 :
+ loop done
+
+root 2020-04-22 18:11:47,209 <module> 24 :
+ Driver%3D%7BODBC+Driver+17+for+SQL+Server%7D%3BServer%3Dtcp%3Apydoc-db.database.windows.net%2C1433%3BDatabase%3Dpydoc-db%3BUid%3Dhenry2833%3BPwd%3D%7BInfoip32%7D%3BEncrypt%3Dyes%3BTrustServerCertificate%3Dno%3BConnection+Timeout%3D30%3B
+
+processing.sql 2020-04-22 18:11:49,717 start 76 :
+ STARTING SQL 527e4afc-4598-400f-8536-afa5324f0ba4 /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+
+processing.sql 2020-04-22 18:11:50,862 start 85 :
+ Added owner row, name: 527e4afc-4598-404 22 AprRNEhwkemjQ id: 54
+
+processing.sql 2020-04-22 18:11:50,871 start 118 :
+ len of id map 3 len of q 3
+
+processing.sql 2020-04-22 18:11:51,472 start 142 :
+ sess commit done
+
+processing.sql 2020-04-22 18:11:52,193 start 152 :
+ starting thread for dates
+
+processing.sql 2020-04-22 18:12:05,081 commit 62 :
+ commit func done
+
+processing.sql 2020-04-22 18:12:05,126 commit 62 :
+ commit func done
+
+processing.sql 2020-04-22 18:12:05,202 commit 62 :
+ commit func done
+
+processing.sql 2020-04-22 18:12:05,267 commit 62 :
+ commit func done
+
+processing.sql 2020-04-22 18:12:05,340 commit 62 :
+ commit func done
+
+processing.sql 2020-04-22 18:12:05,402 commit 62 :
+ commit func done
+
+processing.sql 2020-04-22 18:12:05,503 commit 62 :
+ commit func done
+
+processing.sql 2020-04-22 18:12:05,653 commit 62 :
+ commit func done
+
+processing.sql 2020-04-22 18:12:05,711 commit 62 :
+ commit func done
+
+processing.sql 2020-04-22 18:12:05,763 commit 62 :
+ commit func done
+
+processing.sql 2020-04-22 18:12:06,480 commit 62 :
+ commit func done
+
+processing.sql 2020-04-22 18:12:11,232 commit 62 :
+ commit func done
+
+processing.sql 2020-04-22 18:12:11,411 commit 62 :
+ commit func done
+
+processing.sql 2020-04-22 18:12:11,779 commit 62 :
+ commit func done
+
+processing.sql 2020-04-22 18:12:11,904 commit 62 :
+ commit func done
+
+processing.sql 2020-04-22 18:12:11,909 commit 62 :
+ commit func done
+
+processing.sql 2020-04-22 18:12:11,931 commit 62 :
+ commit func done
+
+processing.sql 2020-04-22 18:12:11,975 commit 62 :
+ commit func done
+
+processing.sql 2020-04-22 18:12:12,067 commit 62 :
+ commit func done
+
+processing.sql 2020-04-22 18:12:12,114 commit 62 :
+ commit func done
+
+processing.sql 2020-04-22 18:12:12,115 commit 62 :
+ commit func done
+
+processing.sql 2020-04-22 18:12:12,215 commit 62 :
+ commit func done
+
+processing.sql 2020-04-22 18:12:12,228 commit 62 :
+ commit func done
+
+processing.sql 2020-04-22 18:12:12,256 commit 62 :
+ commit func done
+
+processing.sql 2020-04-22 18:12:12,361 commit 62 :
+ commit func done
+
+processing.sql 2020-04-22 18:12:39,725 start 195 :
+ joining
+
+processing.sql 2020-04-22 18:12:39,726 start 195 :
+ joining
+
+processing.sql 2020-04-22 18:12:39,727 start 195 :
+ joining
+
+processing.sql 2020-04-22 18:12:39,728 start 195 :
+ joining
+
+processing.sql 2020-04-22 18:12:39,729 start 195 :
+ joining
+
+processing.sql 2020-04-22 18:12:39,730 start 195 :
+ joining
+
+processing.sql 2020-04-22 18:12:39,731 start 195 :
+ joining
+
+processing.sql 2020-04-22 18:12:39,732 start 195 :
+ joining
+
+processing.sql 2020-04-22 18:12:39,733 start 195 :
+ joining
+
+processing.sql 2020-04-22 18:12:39,734 start 195 :
+ joining
+
+processing.sql 2020-04-22 18:12:39,735 start 195 :
+ joining
+
+processing.sql 2020-04-22 18:12:39,736 start 195 :
+ joining
+
+processing.sql 2020-04-22 18:12:39,737 start 195 :
+ joining
+
+processing.sql 2020-04-22 18:12:39,738 start 195 :
+ joining
+
+processing.sql 2020-04-22 18:12:39,739 start 195 :
+ joining
+
+processing.sql 2020-04-22 18:12:39,740 start 195 :
+ joining
+
+processing.sql 2020-04-22 18:12:39,741 start 195 :
+ joining
+
+processing.sql 2020-04-22 18:12:39,742 start 195 :
+ joining
+
+processing.sql 2020-04-22 18:12:39,743 start 195 :
+ joining
+
+processing.sql 2020-04-22 18:12:39,744 start 195 :
+ joining
+
+processing.sql 2020-04-22 18:12:39,745 start 195 :
+ joining
+
+processing.sql 2020-04-22 18:12:39,746 start 195 :
+ joining
+
+processing.sql 2020-04-22 18:12:39,747 start 195 :
+ joining
+
+processing.sql 2020-04-22 18:12:39,748 start 195 :
+ joining
+
+processing.sql 2020-04-22 18:12:39,749 start 195 :
+ joining
+
+root 2020-04-22 18:12:39,843 handle_exception 71 :
+ Custom Uncaught exception
+Traceback (most recent call last):
+  File "dsds.py", line 34, in <module>
+    start()
+  File "dsds.py", line 31, in start
+    loadFiles(uid, workingPath, fileid, creds)
+  File "/home/henry/pydocs/processing/get_files.py", line 358, in loadFiles
+    raise AssertionError("Program ended normally. This assertion is to send SMTP logs by syshook handler")
+AssertionError: Program ended normally. This assertion is to send SMTP logs by syshook handler
+root 2020-04-22 18:12:42,944 handle_exception 75 :
+ exiting! from sshook
+
+root 2020-04-22 18:12:42,945 handle_exception 77 :
+ sending to default hook
+
+root 2020-04-22 18:12:42,948 handle_exception 79 :
+ done
+

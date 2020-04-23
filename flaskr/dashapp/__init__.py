@@ -10,7 +10,7 @@ pp = PrettyPrinter(indent=3)
 
 
 def register_dashapp(flask_serv):
-    from flaskr.dashapp.callbacks import register_callback, Loader
+    from flaskr.dashapp.callbacks import register_callback
     from flaskr.dashapp.layout import layout
     external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
@@ -27,7 +27,6 @@ def register_dashapp(flask_serv):
 
 
     with flask_serv.app_context():
-        Loader.setpdpath(flask_serv.config["HOMEDATAPATH"])
         dashapp.layout = layout()
         register_callback(dashapp)
         #dashapp.run_server(debug=True)

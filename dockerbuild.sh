@@ -14,3 +14,10 @@ then
   docker push henry2833/pydocs:$1
 fi
 
+
+if [ "$2" = "o" ]
+then
+    echo "openshift"
+    docker tag henry2833/pydocs:$1 default-route-openshift-image-registry.apps.us-east-2.starter.openshift-online.com/pydocs/pydocs:$1
+    docker push default-route-openshift-image-registry.apps.us-east-2.starter.openshift-online.com/pydocs/pydocs:$1
+fi

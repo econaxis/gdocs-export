@@ -25,13 +25,6 @@ logging.debug(PARAMS)
 
 ENGINE = sqlal.create_engine("mssql+pyodbc:///?odbc_connect=%s" % PARAMS, pool_size=30, echo = False, max_overflow=300)
 
-dblogger = logging.getLogger('sqlalchemy.engine')
-dblogger.setLevel(logging.DEBUG)
-dbfilehandler = FileHandler('logs.txt')
-dblogger.addHandler(dbfilehandler)
-dblogger.propagate = False
-
-
 logger = logging.getLogger(__name__)
 
 Base.metadata.create_all(bind=ENGINE)
