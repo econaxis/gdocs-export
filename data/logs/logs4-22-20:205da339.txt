@@ -1,0 +1,320 @@
+root 2020-04-22 20:20:42,639 <module> 24 :
+ Driver%3D%7BODBC+Driver+17+for+SQL+Server%7D%3BServer%3Dtcp%3Apydoc-db.database.windows.net%2C1433%3BDatabase%3Dpydoc-db%3BUid%3Dhenry2833%3BPwd%3D%7BInfoip32%7D%3BEncrypt%3Dyes%3BTrustServerCertificate%3Dno%3BConnection+Timeout%3D30%3B
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:43,622 info 110 :
+ SELECT CAST(SERVERPROPERTY('ProductVersion') AS VARCHAR)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:43,622 info 110 :
+ ()
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:43,706 info 110 :
+ SELECT schema_name()
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:43,706 info 110 :
+ ()
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:43,873 info 110 :
+ SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:43,874 info 110 :
+ ()
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:43,957 info 110 :
+ SELECT CAST('test unicode returns' AS NVARCHAR(60)) AS anon_1
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:43,957 info 110 :
+ ()
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:44,127 info 110 :
+ SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:44,128 info 110 :
+ ('files', 'dbo')
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:44,300 info 110 :
+ SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:44,300 info 110 :
+ ('owner', 'dbo')
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:44,468 info 110 :
+ SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:44,469 info 110 :
+ ('dates', 'dbo')
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:44,639 info 110 :
+ SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:44,639 info 110 :
+ ('closure', 'dbo')
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:44,806 info 110 :
+ SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:44,807 info 110 :
+ ('filename', 'dbo')
+
+__main__ 2020-04-22 20:20:45,060 start 84 :
+ STARTING SQL testing2020-04-22 20:20:45.060591 /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:45,745 info 110 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:45,749 info 110 :
+ INSERT INTO owner (name) OUTPUT inserted.id VALUES (?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:45,750 info 110 :
+ ('testing2020-04-04 22 AprRzMeHRozjA',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:45,914 info 110 :
+ COMMIT
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:46,007 info 110 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:46,008 info 110 :
+ SELECT owner.id AS owner_id, owner.name AS owner_name 
+FROM owner 
+WHERE owner.id = ?
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:46,008 info 110 :
+ (80,)
+
+__main__ 2020-04-22 20:20:46,174 start 93 :
+ Added owner row, name: testing2020-04-04 22 AprRzMeHRozjA id: 80
+
+__main__ 2020-04-22 20:20:46,182 start 101 :
+ Finished loading pickles
+
+__main__ 2020-04-22 20:20:46,183 start 117 :
+ File: 1A7VHFEYQVj0bigcnBi3pn4NngcNXxH35Croy3zrdvLY
+
+__main__ 2020-04-22 20:20:46,186 start 117 :
+ File: 1WrjmluBbaNBS8u_WZmREl02_oMy2zv6Kcdte82zR5yk
+
+__main__ 2020-04-22 20:20:46,187 start 117 :
+ File: 1NO1CVAUsBSgghggdLH2X4YQ2XNaEkDmr7vK156pSCxk
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:46,194 info 110 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:46,194 info 110 :
+ ('1A7VHFEYQVj0bigcnBi3pn4NngcNXxH35Croy3zrdvLY:22-20.062112RzMeHRozjA', datetime.datetime(2014, 12, 11, 16, 10, 21, 45000), 80, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:46,364 info 110 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:46,364 info 110 :
+ ('1WrjmluBbaNBS8u_WZmREl02_oMy2zv6Kcdte82zR5yk:22-20.062112RzMeHRozjA', datetime.datetime(2014, 12, 4, 17, 30, 58, 528000), 80, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:46,532 info 110 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:46,533 info 110 :
+ ('1NO1CVAUsBSgghggdLH2X4YQ2XNaEkDmr7vK156pSCxk:22-20.062112RzMeHRozjA', datetime.datetime(2014, 11, 21, 0, 2, 53, 318000, tzinfo=datetime.timezone.utc), 80, 1)
+
+__main__ 2020-04-22 20:20:46,698 start 135 :
+ bulked save
+
+__main__ 2020-04-22 20:20:46,700 start 160 :
+ sess flush done
+
+__main__ 2020-04-22 20:20:46,729 start 170 :
+ starting thread for dates
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:46,767 info 110 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:46,767 info 110 :
+ ('root22-20.062112RzMeHRozjA', None, 80, 0)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:47,012 info 110 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:47,013 info 110 :
+ ('0B4Fujvv5MfqbYjdEcG5iY2tyUTA22-20.062112RzMeHRozjA', None, 80, 0)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:47,266 info 110 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:47,266 info 110 :
+ ('0B4Fujvv5Mfqbfmp4aHYzaHBQeHdua3JtUi1ORVFmd3VJbGt4Ylptc0ZXYzNqR0xvWlRRTEk22-20.062112RzMeHRozjA', None, 80, 0)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:47,326 info 110 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:47,329 info 110 :
+ INSERT INTO dates ([fileId], moddate) VALUES (?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:47,330 info 110 :
+ ((12777, datetime.datetime(2014, 12, 11, 18, 44, 34, 256000)), (12777, datetime.datetime(2014, 12, 11, 18, 44, 34, 697000)), (12777, datetime.datetime(2014, 12, 11, 18, 44, 34, 906000)), (12777, datetime.datetime(2014, 12, 11, 18, 44, 35, 392000)), (12777, datetime.datetime(2014, 12, 11, 18, 44, 35, 625000)), (12777, datetime.datetime(2014, 12, 11, 18, 44, 36, 83000)), (12777, datetime.datetime(2014, 12, 11, 18, 44, 36, 482000)), (12777, datetime.datetime(2014, 12, 11, 18, 44, 36, 648000))  ... displaying 10 of 70 total bound parameter sets ...  (12777, datetime.datetime(2014, 12, 11, 18, 45, 7, 645000)), (12777, datetime.datetime(2014, 12, 11, 18, 45, 7, 892000)))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:47,357 info 110 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:47,360 info 110 :
+ INSERT INTO dates ([fileId], moddate) VALUES (?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:47,360 info 110 :
+ ((12777, datetime.datetime(2014, 12, 11, 17, 24, 13, 49000)), (12777, datetime.datetime(2014, 12, 11, 17, 24, 14, 813000)), (12777, datetime.datetime(2014, 12, 11, 17, 24, 16, 107000)), (12777, datetime.datetime(2014, 12, 11, 17, 24, 16, 394000)), (12777, datetime.datetime(2014, 12, 11, 17, 24, 16, 894000)), (12777, datetime.datetime(2014, 12, 11, 17, 24, 18, 529000)), (12777, datetime.datetime(2014, 12, 11, 17, 24, 23, 173000)), (12777, datetime.datetime(2014, 12, 11, 17, 24, 23, 612000))  ... displaying 10 of 70 total bound parameter sets ...  (12777, datetime.datetime(2014, 12, 11, 17, 33, 24, 88000)), (12777, datetime.datetime(2014, 12, 11, 17, 33, 25, 436000)))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:47,378 info 110 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:47,383 info 110 :
+ INSERT INTO dates ([fileId], moddate) VALUES (?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:47,383 info 110 :
+ ((12777, datetime.datetime(2014, 12, 11, 18, 38, 48, 673000)), (12777, datetime.datetime(2014, 12, 11, 18, 38, 49, 128000)), (12777, datetime.datetime(2014, 12, 11, 18, 38, 49, 396000)), (12777, datetime.datetime(2014, 12, 11, 18, 38, 49, 697000)), (12777, datetime.datetime(2014, 12, 11, 18, 38, 49, 987000)), (12777, datetime.datetime(2014, 12, 11, 18, 38, 50, 302000)), (12777, datetime.datetime(2014, 12, 11, 18, 38, 50, 730000)), (12777, datetime.datetime(2014, 12, 11, 18, 38, 51, 38000))  ... displaying 10 of 70 total bound parameter sets ...  (12777, datetime.datetime(2014, 12, 11, 18, 39, 18, 182000)), (12777, datetime.datetime(2014, 12, 11, 18, 39, 18, 660000)))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:47,424 info 110 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:47,427 info 110 :
+ INSERT INTO dates ([fileId], moddate) VALUES (?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:47,427 info 110 :
+ ((12777, datetime.datetime(2014, 12, 11, 18, 45, 8, 503000)), (12777, datetime.datetime(2014, 12, 11, 18, 45, 8, 752000)), (12777, datetime.datetime(2014, 12, 11, 18, 45, 9, 220000)), (12777, datetime.datetime(2014, 12, 11, 18, 45, 9, 622000)), (12777, datetime.datetime(2014, 12, 11, 18, 45, 10, 6000)), (12777, datetime.datetime(2014, 12, 11, 18, 45, 10, 321000)), (12777, datetime.datetime(2014, 12, 11, 18, 45, 10, 760000)), (12777, datetime.datetime(2014, 12, 11, 18, 45, 10, 931000))  ... displaying 10 of 70 total bound parameter sets ...  (12777, datetime.datetime(2014, 12, 11, 19, 14, 3, 446000)), (12777, datetime.datetime(2014, 12, 11, 19, 14, 4, 696000)))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:47,485 info 110 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:47,487 info 110 :
+ INSERT INTO dates ([fileId], moddate) VALUES (?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:47,488 info 110 :
+ ((12777, datetime.datetime(2014, 12, 11, 17, 11, 38, 638000)), (12777, datetime.datetime(2014, 12, 11, 17, 11, 38, 862000)), (12777, datetime.datetime(2014, 12, 11, 17, 11, 39, 300000)), (12777, datetime.datetime(2014, 12, 11, 17, 11, 39, 511000)), (12777, datetime.datetime(2014, 12, 11, 17, 11, 39, 884000)), (12777, datetime.datetime(2014, 12, 11, 17, 11, 40, 475000)), (12777, datetime.datetime(2014, 12, 11, 17, 11, 52, 543000)), (12777, datetime.datetime(2014, 12, 11, 17, 11, 52, 718000))  ... displaying 10 of 70 total bound parameter sets ...  (12777, datetime.datetime(2014, 12, 11, 17, 12, 26, 953000)), (12777, datetime.datetime(2014, 12, 11, 17, 12, 27, 315000)))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:47,518 info 110 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:47,519 info 110 :
+ ('0B4Fujvv5MfqbbW5wLWJIU2JhSTA22-20.062112RzMeHRozjA', None, 80, 0)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:47,549 info 110 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:47,552 info 110 :
+ INSERT INTO dates ([fileId], moddate) VALUES (?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:47,552 info 110 :
+ ((12777, datetime.datetime(2014, 12, 11, 16, 49, 27, 890000)), (12777, datetime.datetime(2014, 12, 11, 16, 49, 28, 262000)), (12777, datetime.datetime(2014, 12, 11, 16, 49, 28, 529000)), (12777, datetime.datetime(2014, 12, 11, 16, 49, 28, 980000)), (12777, datetime.datetime(2014, 12, 11, 16, 49, 30, 11000)), (12777, datetime.datetime(2014, 12, 11, 16, 49, 30, 202000)), (12777, datetime.datetime(2014, 12, 11, 16, 49, 30, 477000)), (12777, datetime.datetime(2014, 12, 11, 16, 49, 30, 774000))  ... displaying 10 of 70 total bound parameter sets ...  (12777, datetime.datetime(2014, 12, 11, 17, 0, 45, 420000)), (12777, datetime.datetime(2014, 12, 11, 17, 0, 45, 849000)))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:47,638 info 110 :
+ ROLLBACK
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:47,687 info 110 :
+ ROLLBACK
+
+root 2020-04-22 20:20:47,776 handle_exception 74 :
+ Custom Uncaught exception
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1247, in _execute_context
+    self.dialect.do_execute(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+pyodbc.Error: ('HY000', "[HY000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Resource ID : 1. The request limit for the database is 30 and has been reached. See 'http://go.microsoft.com/fwlink/?LinkId=267637' for assistance. (10928) (SQLExecDirectW)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2597, in _flush
+    flush_context.execute()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 586, in execute
+    persistence.save_obj(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 239, in save_obj
+    _emit_insert_statements(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 1135, in _emit_insert_statements
+    result = cached_connections[connection].execute(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 984, in execute
+    return meth(self, multiparams, params)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 293, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1097, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1287, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1481, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1247, in _execute_context
+    self.dialect.do_execute(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DBAPIError: (pyodbc.Error) ('HY000', "[HY000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Resource ID : 1. The request limit for the database is 30 and has been reached. See 'http://go.microsoft.com/fwlink/?LinkId=267637' for assistance. (10928) (SQLExecDirectW)")
+[SQL: INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)]
+[parameters: ('0B4Fujvv5MfqbbW5wLWJIU2JhSTA22-20.062112RzMeHRozjA', None, 80, 0)]
+(Background on this error at: http://sqlalche.me/e/dbapi)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 733, in _rollback_impl
+    self.engine.dialect.do_rollback(self.connection)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 540, in do_rollback
+    dbapi_connection.rollback()
+pyodbc.Error: ('HY000', "[HY000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Resource ID : 1. The request limit for the database is 30 and has been reached. See 'http://go.microsoft.com/fwlink/?LinkId=267637' for assistance. (10928) (SQLEndTran)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 193, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/henry/pydocs/processing/sql.py", line 257, in <module>
+    start("testing" + datetime.now().__str__(), wpath)
+  File "/home/henry/pydocs/processing/sql.py", line 192, in start
+    sess.flush()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2496, in flush
+    self._flush(objects)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2637, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 81, in __exit__
+    compat.raise_(value, with_traceback=traceback)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2637, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 573, in rollback
+    util.raise_(rollback_err[1], with_traceback=rollback_err[2])
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 533, in rollback
+    t[1].rollback()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1725, in rollback
+    self._do_rollback()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1763, in _do_rollback
+    self.connection._rollback_impl()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 735, in _rollback_impl
+    self._handle_dbapi_exception(e, None, None, None, None)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1481, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 733, in _rollback_impl
+    self.engine.dialect.do_rollback(self.connection)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 540, in do_rollback
+    dbapi_connection.rollback()
+sqlalchemy.exc.DBAPIError: (pyodbc.Error) ('HY000', "[HY000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Resource ID : 1. The request limit for the database is 30 and has been reached. See 'http://go.microsoft.com/fwlink/?LinkId=267637' for assistance. (10928) (SQLEndTran)")
+(Background on this error at: http://sqlalche.me/e/dbapi)
+root 2020-04-22 20:20:49,439 handle_exception 78 :
+ exiting! from sshook
+
+root 2020-04-22 20:20:49,441 handle_exception 80 :
+ sending to default hook
+

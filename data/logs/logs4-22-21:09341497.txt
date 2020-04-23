@@ -1,0 +1,3171 @@
+root 2020-04-22 21:09:20,030 <module> 24 :
+ Driver%3D%7BODBC+Driver+17+for+SQL+Server%7D%3BServer%3Dtcp%3Apydoc-db.database.windows.net%2C1433%3BDatabase%3Dpydoc-db%3BUid%3Dhenry2833%3BPwd%3D%7BInfoip32%7D%3BEncrypt%3Dyes%3BTrustServerCertificate%3Dno%3BConnection+Timeout%3D30%3B
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:20,871 _execute_context 1205 :
+ SELECT CAST(SERVERPROPERTY('ProductVersion') AS VARCHAR)
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:20,872 _execute_context 1207 :
+ ()
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:20,953 _init_metadata 809 :
+ Col ('',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:20,953 process_rows 1249 :
+ Row ('12.0.2000.8',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:20,954 _execute_context 1205 :
+ SELECT schema_name()
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:20,955 _execute_context 1207 :
+ ()
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:21,032 _init_metadata 809 :
+ Col ('',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:21,032 process_rows 1249 :
+ Row ('dbo',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:21,114 _cursor_execute 1311 :
+ SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:21,115 _cursor_execute 1312 :
+ ()
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:21,198 _cursor_execute 1311 :
+ SELECT CAST('test unicode returns' AS NVARCHAR(60)) AS anon_1
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:21,199 _cursor_execute 1312 :
+ ()
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:21,365 _execute_context 1205 :
+ SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:21,365 _execute_context 1207 :
+ ('files', 'dbo')
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:21,448 _init_metadata 809 :
+ Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:21,449 process_rows 1249 :
+ Row ('dbo', 'files', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:21,533 _execute_context 1205 :
+ SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:21,534 _execute_context 1207 :
+ ('owner', 'dbo')
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:21,617 _init_metadata 809 :
+ Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:21,617 process_rows 1249 :
+ Row ('dbo', 'owner', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:21,702 _execute_context 1205 :
+ SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:21,702 _execute_context 1207 :
+ ('dates', 'dbo')
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:21,790 _init_metadata 809 :
+ Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:21,790 process_rows 1249 :
+ Row ('dbo', 'dates', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:21,871 _execute_context 1205 :
+ SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:21,871 _execute_context 1207 :
+ ('closure', 'dbo')
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:21,959 _init_metadata 809 :
+ Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:21,959 process_rows 1249 :
+ Row ('dbo', 'closure', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:22,042 _execute_context 1205 :
+ SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:22,042 _execute_context 1207 :
+ ('filename', 'dbo')
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:22,124 _init_metadata 809 :
+ Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:22,125 process_rows 1249 :
+ Row ('dbo', 'filename', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+
+__main__ 2020-04-22 21:09:22,282 start 90 :
+ STARTING SQL testing2020-04-22 21:09:22.282790 /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:22,912 _begin_impl 711 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:22,916 _execute_context 1205 :
+ INSERT INTO owner (name) OUTPUT inserted.id VALUES (?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:22,916 _execute_context 1207 :
+ ('testing2020-04-04 22 AprTTV0GXlxAw',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:22,997 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:22,997 process_rows 1249 :
+ Row (108,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:23,088 _commit_impl 753 :
+ COMMIT
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:23,185 _begin_impl 711 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:23,187 _execute_context 1205 :
+ SELECT owner.id AS owner_id, owner.name AS owner_name 
+FROM owner 
+WHERE owner.id = ?
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:23,187 _execute_context 1207 :
+ (108,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:23,270 _init_metadata 809 :
+ Col ('owner_id', 'owner_name')
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:23,270 process_rows 1249 :
+ Row (108, 'testing2020-04-04 22 AprTTV0GXlxAw')
+
+__main__ 2020-04-22 21:09:23,352 start 99 :
+ Added owner row, name: testing2020-04-04 22 AprTTV0GXlxAw id: 108
+
+__main__ 2020-04-22 21:09:27,650 start 112 :
+ Finished loading pickles
+
+__main__ 2020-04-22 21:09:27,653 start 128 :
+ File: 1SGPIbZAmFYwIakoHevrYhHMwAf6xNIbMuS1zeULYsTQ
+
+__main__ 2020-04-22 21:09:27,656 start 128 :
+ File: 1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ
+
+__main__ 2020-04-22 21:09:27,658 start 128 :
+ File: 0B4Fujvv5Mfqbb2d0TnNhcFhhREdadmRaaEI3QzVabnE2NE5v
+
+__main__ 2020-04-22 21:09:27,660 start 128 :
+ File: 10GJz3CIxCa6CT11Y-kg8f30atim8xSyx
+
+__main__ 2020-04-22 21:09:27,662 start 128 :
+ File: 1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s
+
+__main__ 2020-04-22 21:09:27,664 start 128 :
+ File: 1OH8h0i2T4Is0R9S8uaZ4C18SQWkxItIW0KwLKnOJGSM
+
+__main__ 2020-04-22 21:09:27,666 start 128 :
+ File: 1QNNRjwRnVqieEoA5i9CdaSCyT_6Bi4vkmGO8YuZHytU
+
+__main__ 2020-04-22 21:09:27,669 start 128 :
+ File: 1kMTGenwbpJUMiYZMSDbDg_tcROM5USl6
+
+__main__ 2020-04-22 21:09:27,670 start 128 :
+ File: 1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08
+
+__main__ 2020-04-22 21:09:27,673 start 128 :
+ File: 1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4
+
+__main__ 2020-04-22 21:09:27,675 start 128 :
+ File: 1C09g5-ATBpXNJOmH8ANwCnq7Pk6vClzI1lmFYcqaH6A
+
+__main__ 2020-04-22 21:09:27,676 start 128 :
+ File: 1G-K37QbHDgyLsJaUjRsROtLZZkj1fmqyC5YyHzOh-_Q
+
+__main__ 2020-04-22 21:09:27,679 start 128 :
+ File: 1cIWwf3nZ2RAeriW8GerxZHY9nirLdcc968-GgSnRkjQ
+
+__main__ 2020-04-22 21:09:27,682 start 128 :
+ File: 1yqF_hJ9NyASL9nHpchNsjrb04FUVvTNEmmStnAsh1Sg
+
+__main__ 2020-04-22 21:09:27,684 start 128 :
+ File: 16Tz6lbS7tdWBUhgseZCx0va0xBAayzOSSDSH-T20xRA
+
+__main__ 2020-04-22 21:09:27,687 start 128 :
+ File: 1leky1DdjFgZcCKZf1EBdNopIRnIdqTLevUE1mliolBI
+
+__main__ 2020-04-22 21:09:27,689 start 128 :
+ File: 16wsJnYBwdOHbuGROxWDFe2Tcf1w8T49TwWnGvq5OjXY
+
+__main__ 2020-04-22 21:09:27,690 start 128 :
+ File: 1B6ePg9Ixtc4xqKL4D0_JO80n8GL83WpztJKJGaH-6S0
+
+__main__ 2020-04-22 21:09:27,692 start 128 :
+ File: 1jRrZTHn-oge2sTqxli8Um026xuniXAeezLZn4B2zVSg
+
+__main__ 2020-04-22 21:09:27,694 start 128 :
+ File: 1D48Gz6hmPkE6sATNqYoA3P3Hdjtq1y2zHRjrh1kH64I
+
+__main__ 2020-04-22 21:09:27,696 start 128 :
+ File: 1B37ygx-Iwh0EpS1c5fqpbK6AqE39m6ao4WD4uMWknzc
+
+__main__ 2020-04-22 21:09:27,699 start 128 :
+ File: 1cctIQ_TyhvRFgFVkzjwcfDL1w0i4L2lF-78_WM7Hy6A
+
+__main__ 2020-04-22 21:09:27,702 start 128 :
+ File: 1JQ-JszbkA6JHylaBr1ZDWeMXTy2X6fM2evDEJo-W3U4
+
+__main__ 2020-04-22 21:09:27,703 start 128 :
+ File: 11L4quB0D_Ttk0WMkddrcn_r8OmWG5Y7xEWgALTBoNvg
+
+__main__ 2020-04-22 21:09:27,705 start 128 :
+ File: 12NnsHOjtevUATb-yYIgDFFLyYajiHxhJ6xHiJnIXj-8
+
+__main__ 2020-04-22 21:09:27,707 start 128 :
+ File: 186ge00t4G7kcx1QdCIHxRhTnZfzpSTGDgfAXkdbD_Ig
+
+__main__ 2020-04-22 21:09:27,709 start 128 :
+ File: 15T7jFID6g5L9jNgtFSqVnNVFuqL7BqlHq9w9uB3CamE
+
+__main__ 2020-04-22 21:09:27,711 start 128 :
+ File: 17MhIJt6Bl2HnDLFiNZPRh7UOx-Co9FMvPWBsRnJRfsM
+
+__main__ 2020-04-22 21:09:27,713 start 128 :
+ File: 15e68EIS9xXe5Yvzju4GtkyhFKJ_UgUA9juJKiUpPeUA
+
+__main__ 2020-04-22 21:09:27,716 start 128 :
+ File: 1sF1pFtL8fsnQBBAoTt8P7YGOVZVr6-6a4BLeU3PBncI
+
+__main__ 2020-04-22 21:09:27,718 start 128 :
+ File: 1G1g252JtmrFnXI5HaLLEafe8apipzquYwQQ0hbQIaho
+
+__main__ 2020-04-22 21:09:27,719 start 128 :
+ File: 1wfaH9BSg8wrDaKXR54KK1y8pd-miEOQNj3E8GL6fTfg
+
+__main__ 2020-04-22 21:09:27,722 start 128 :
+ File: 10M2HsNol6IOHe6wMXb0WkJV9bmy2445a
+
+__main__ 2020-04-22 21:09:27,727 start 128 :
+ File: 1VmB8_0x000GHL4Tbza6LarQMec0Z0esW
+
+__main__ 2020-04-22 21:09:27,729 start 128 :
+ File: 1LuJ1Ln_dAc7n3Qj0zNE4yuYfFG6NEgxO-hsDA9M4qpQ
+
+__main__ 2020-04-22 21:09:27,731 start 128 :
+ File: 1o6ARVj7jhE2K_VNnX2BYajR2XBX1kdMu
+
+__main__ 2020-04-22 21:09:27,734 start 128 :
+ File: 15JWTM6GKGzGaum2h7EvaoJXszPRWFSdINZ4fq6l87LI
+
+__main__ 2020-04-22 21:09:27,736 start 128 :
+ File: 15Fi6RHQtC8H-GOJC_gjiED_9rNxtCdahEGtLvBUZcv4
+
+__main__ 2020-04-22 21:09:27,738 start 128 :
+ File: 1H1aSubiwctKw-qMV6t1aGlfooY2Qn9V6Y01phHpg-kw
+
+__main__ 2020-04-22 21:09:27,740 start 128 :
+ File: 1WbGMwYDyqP6aCDpf5fBbR7sneMicXtvEtfm3Z4k0Vzs
+
+__main__ 2020-04-22 21:09:27,742 start 128 :
+ File: 16wh_FgWE8Y0tUpAdIte4WyuB91_ypCySi82lvdhAiFY
+
+__main__ 2020-04-22 21:09:27,744 start 128 :
+ File: 1WKk8W5cG-CYKBYN_cWpAdziiPVhvQZEAarnPwf58z4Y
+
+__main__ 2020-04-22 21:09:27,746 start 128 :
+ File: 1YJPVyeYstaXiTguoSGCe_Kb3y4yv49N224nUrfLo7rU
+
+__main__ 2020-04-22 21:09:27,748 start 128 :
+ File: 14fGVD8kN7ZTYHhthuk5QFTw2j-OnV9QV6BJvuLedIik
+
+__main__ 2020-04-22 21:09:27,751 start 128 :
+ File: 17U5RL60qPqJRSKZgj9HpNG0xIgrUI1_buueGhgcZaGs
+
+__main__ 2020-04-22 21:09:27,753 start 128 :
+ File: 1PscMFhdtA31Nh7ELmM18NqjUfLDeGiexKI6q-lI0fKY
+
+__main__ 2020-04-22 21:09:27,755 start 128 :
+ File: 1YlY2MTwu_I6PGWgmkNqFXYJVvNSQKMi7j0WulyoD75w
+
+__main__ 2020-04-22 21:09:27,757 start 128 :
+ File: 1Gxvc-37IOivNHIPUJBI1v3jf5e-Hwcby_VZbN-k-Bfc
+
+__main__ 2020-04-22 21:09:27,759 start 128 :
+ File: 11WIU2snHtcamnb9iQszGuvQwhOALT-Gy
+
+__main__ 2020-04-22 21:09:27,763 start 128 :
+ File: 1T1Sj69DxCTpEQI2pH0O04l_PSx1V3xsxYOnkiHPEPis
+
+__main__ 2020-04-22 21:09:27,765 start 128 :
+ File: 1iwD0UOBkgdB5Jnza1szyk2RCaNpOfito5Be0lD0HGvk
+
+__main__ 2020-04-22 21:09:27,767 start 128 :
+ File: 18Fo4vEnjNw9SuVSM0FprUH3bFdl4oVP31YM5H-VH3fs
+
+__main__ 2020-04-22 21:09:27,769 start 128 :
+ File: 1NBVW6zOvYcoTmGZ46HZosMmV2SVNURBvf4WOm1ydcTk
+
+__main__ 2020-04-22 21:09:27,771 start 128 :
+ File: 1ZBA6pHQ0vfqgMprDjRS0-PqUaeusoF5Z
+
+__main__ 2020-04-22 21:09:27,773 start 128 :
+ File: 1VrK4o4hKCSJyT8P4hKL9la_FO7-29hcBJMJDsvjXo2A
+
+__main__ 2020-04-22 21:09:27,775 start 128 :
+ File: 1Ez54_TKEcG-xUH_lCEW1711SozJ2_cSeBgiuGKjE8Pk
+
+__main__ 2020-04-22 21:09:27,777 start 128 :
+ File: 15oiL5vtc6Pm7TbWGmBPul9ZHEaq5Cp25MmoK7Wj3wQA
+
+__main__ 2020-04-22 21:09:27,780 start 128 :
+ File: 1TxO4rhqIX6VUqO2bLJNkukbTpEDNVYSHD0X9hOzi88o
+
+__main__ 2020-04-22 21:09:27,783 start 128 :
+ File: 1ZSAyOh8IJqYeY30rg2YNgHU06UxOpmgVqlhKL6puaDs
+
+__main__ 2020-04-22 21:09:27,786 start 128 :
+ File: 1kJg8DrOx2wxRXUGvNKc0X_t2GyFMglwXImurNUjTni0
+
+__main__ 2020-04-22 21:09:27,788 start 128 :
+ File: 1bVHzlp_4wGefhP9sx5GvI7ZR_ArSbtX0LaFmfZTeB8Y
+
+__main__ 2020-04-22 21:09:27,790 start 128 :
+ File: 1c2DcDim6LhJH_JL0iJ23K-KzykdaMUOyvAUnXaAhQEg
+
+__main__ 2020-04-22 21:09:27,792 start 128 :
+ File: 1ZNO0oUicsL1By5_92_96mrDU5-FgMK0Dm5bGcYPvUrc
+
+__main__ 2020-04-22 21:09:27,794 start 128 :
+ File: 1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ
+
+__main__ 2020-04-22 21:09:27,796 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:27,797 start 128 :
+ File: 1ZSCKTVjGJu6pUx7auNWEyfs83DLJtOeA3AbwuGuY8kI
+
+__main__ 2020-04-22 21:09:27,800 start 128 :
+ File: 1R9fH_VyHSB3k-yCrmzD5fzj25Ga8neQLtKLceiEhdt0
+
+__main__ 2020-04-22 21:09:27,802 start 128 :
+ File: 17U5RL60qPqJRSKZgj9HpNG0xIgrUI1_buueGhgcZaGs
+
+__main__ 2020-04-22 21:09:27,803 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:27,805 start 128 :
+ File: 1uy_vT-keDyeMgDuhCyHL3N6t_JxvCOPv
+
+__main__ 2020-04-22 21:09:27,807 start 128 :
+ File: 1MQLjux58byegkybU7J0OZLYCh1xUaMI0lIhSuDoklVk
+
+__main__ 2020-04-22 21:09:27,810 start 128 :
+ File: 17VDFogW5NTpbqj4jbMOtBoyFV_TZymMjKozpNpezSCc
+
+__main__ 2020-04-22 21:09:27,812 start 128 :
+ File: 1gS0ZLEc-tkOVw-QM-oeezt-ATZgZt_g5wDuW2U4KvF8
+
+__main__ 2020-04-22 21:09:27,814 start 128 :
+ File: 0B4Fujvv5MfqbYzVpOFdBTTNIdFE
+
+__main__ 2020-04-22 21:09:27,817 start 128 :
+ File: 1HFZFqPRWqIwvxrXnRg_7i3LXlFfCzPkf
+
+__main__ 2020-04-22 21:09:27,820 start 128 :
+ File: 1ECJHKZpyfd75nEg20CQdICaWhZzri2SX_mQjfIFN-Wk
+
+__main__ 2020-04-22 21:09:27,822 start 128 :
+ File: 1e7IjM7tgdUxRQcmg2bbYvLArkghX129Cz_lOLFpnF34
+
+__main__ 2020-04-22 21:09:27,824 start 128 :
+ File: 1adckvxMM48z9k3sSG_JP2w-9T5WOqLNocASrGMkmaEs
+
+__main__ 2020-04-22 21:09:27,826 start 128 :
+ File: 1cZg8adblMjYv0HOMh9qeEGR5Hhx59fhEAYD_mG1tfL0
+
+__main__ 2020-04-22 21:09:27,828 start 128 :
+ File: 1_BIMsBsouGOgicFcBVR7gHXNHaSP4iVZGb6ezTcaHg8
+
+__main__ 2020-04-22 21:09:27,831 start 128 :
+ File: 1x8Vlo2OmIPQX7_XYCRzaAG2DgEULR8QVA588B6rCcOg
+
+__main__ 2020-04-22 21:09:27,834 start 128 :
+ File: 1jqJ0-FMfB3RjcqrSJxckdoC-jzHHMa3nLcRMP6CquRQ
+
+__main__ 2020-04-22 21:09:27,836 start 128 :
+ File: 1F6-Z7HfxAQ-F5SIBuApsQr141gOfpxG4y3_h7W7xN0E
+
+__main__ 2020-04-22 21:09:27,837 start 128 :
+ File: 1VSIZknJPJGRXuMPnSk9gjDStnMEXty0XJR1KO4z7QBk
+
+__main__ 2020-04-22 21:09:27,840 start 128 :
+ File: 1h1FUpGxFne9y7IFDVl7IQZGCPE1vhm3rJbCf5WgovQo
+
+__main__ 2020-04-22 21:09:27,842 start 128 :
+ File: 1wqRmLVKxvm7w--kMAMGzVAjoILC593KzG-z6AFTdt_8
+
+__main__ 2020-04-22 21:09:27,844 start 128 :
+ File: 1XGCuTdCzlBbB5B0rAu29ButWuims-VeTYBdfozFaFPk
+
+__main__ 2020-04-22 21:09:27,845 start 128 :
+ File: 1b1ARGMmgTYWTMHAnv5biEbQKVzTLLQ3vt2n2YLicEws
+
+__main__ 2020-04-22 21:09:27,847 start 128 :
+ File: 1ecDoneIykl54KGJhMUpcvdNKg350pGauVB9v0uCuFbI
+
+__main__ 2020-04-22 21:09:27,851 start 128 :
+ File: 1ZIuPeHFKHzM1yn1G47W92JbGijyxWqaOfKhkejWXMdA
+
+__main__ 2020-04-22 21:09:27,853 start 128 :
+ File: 12K516OwpugshsvDcQqP4cSvg-ku6pJuAJGfrEmbDqGc
+
+__main__ 2020-04-22 21:09:27,856 start 128 :
+ File: 1a7puy4GkUsAx2u9lu1i3MnxJAx0JyFPFozhkGYlCT5I
+
+__main__ 2020-04-22 21:09:27,858 start 128 :
+ File: 1jEPinYNleGwKDF0SJddLTTeVvYZbF40sbV5FxvJyNCU
+
+__main__ 2020-04-22 21:09:27,860 start 128 :
+ File: 12bPKEMHnfEBwlDfZnXYlPZRRwnRiHPVtDkcBZqNxBA4
+
+__main__ 2020-04-22 21:09:27,862 start 128 :
+ File: 125AyhViQoEQKg-wVD4y2hv82aynGTyK7SmeqVHpXvQs
+
+__main__ 2020-04-22 21:09:27,864 start 128 :
+ File: 1LyrolWAEdF9g6y9DyEk_FIH8B7V1cGDowMv8NvVTjow
+
+__main__ 2020-04-22 21:09:27,867 start 128 :
+ File: 1gvFEgWgxaLnNlgLpfwtdH_-UVEY1rglxelRy307hjns
+
+__main__ 2020-04-22 21:09:27,869 start 128 :
+ File: 19qkWrA-moW3LlnMEtT1VSoCGU5TpOwB_17goJbrvWHM
+
+__main__ 2020-04-22 21:09:27,872 start 128 :
+ File: 1F5C4F51m7TcoiVU-U3s2TERMRIMoe_RxQFA8GBf6-64
+
+__main__ 2020-04-22 21:09:27,874 start 128 :
+ File: 1RFm8X0JkBTJj7iR7YLxsrpzbiBTMANScjSeDO9l2aQw
+
+__main__ 2020-04-22 21:09:27,876 start 128 :
+ File: 1XJ5BlIal28QXAMwFOiNr81G7U0xElvy16JUj-39MTrU
+
+__main__ 2020-04-22 21:09:27,878 start 128 :
+ File: 1Visfq9vleQOXgJ3svv3Yj5A3qf3GOY4VMIcq4E7J5q0
+
+__main__ 2020-04-22 21:09:27,880 start 128 :
+ File: 1kIbHXyKc4uI2MzuXFMhT73ZIAPnP32_jW1kv2yMNoUU
+
+__main__ 2020-04-22 21:09:27,883 start 128 :
+ File: 1AOfGsW5I-aG8b0WdSsq4IqMlGiDqDYUCUQfFoEJ1ll4
+
+__main__ 2020-04-22 21:09:27,885 start 128 :
+ File: 18vcbSvvx_xRDIq0vUFjpKkYGdu00l5XbORDG5EKfWNw
+
+__main__ 2020-04-22 21:09:27,887 start 128 :
+ File: 1kn3xhSXmFhPNdSs3J-4x4F95PXucVOdAJAwycd591Ns
+
+__main__ 2020-04-22 21:09:27,889 start 128 :
+ File: 1iMp4WTH5NG-vtb4UkJiqLA7D3ck7MkjS2Mu9gw8rOKs
+
+__main__ 2020-04-22 21:09:27,891 start 128 :
+ File: 1b6qJW2miNoybz6Y2_UdB51prtkzfFmWcKbbZ6YpSAbg
+
+__main__ 2020-04-22 21:09:27,893 start 128 :
+ File: 1LvrNb0X-i_B-0eXh_cLDTHGqGukf5UcyNwtVIzimL4E
+
+__main__ 2020-04-22 21:09:27,895 start 128 :
+ File: 1_wRTbPygF0D0H8VlY-aHjCKTKBQ_Yr8jhCaemuGypXg
+
+__main__ 2020-04-22 21:09:27,897 start 128 :
+ File: 1DGlo99pbjGwp3lZne4o98aEBS-oC_FaPV0BGUOHCrNo
+
+__main__ 2020-04-22 21:09:27,899 start 128 :
+ File: 1DE8JkISOGvpaUbmFRqQ_zVwh-29QmyD1t7ap73cr0KU
+
+__main__ 2020-04-22 21:09:27,901 start 128 :
+ File: 1NpHQsdIiUQJTN0Bwdl__Kn69Ix3I3FEZM-6XWD-hCQ4
+
+__main__ 2020-04-22 21:09:27,904 start 128 :
+ File: 1RMi1U6KwIBwORi6hYYv4HQiypu8bD1obKFyiCthf7pw
+
+__main__ 2020-04-22 21:09:27,906 start 128 :
+ File: 1MQSAawInjoU_bWoc22FZS1s-qXWkPZNXwZDM-lFUoU0
+
+__main__ 2020-04-22 21:09:27,908 start 128 :
+ File: 1fZgygLRoHAb-498SXVjIXpGUIvLGU9qeRU63qzQx9nQ
+
+__main__ 2020-04-22 21:09:27,909 start 128 :
+ File: 1pWqW84PU9HyaS_FLl_qn80OAdv0gFum7_FkO6a82EyE
+
+__main__ 2020-04-22 21:09:27,911 start 128 :
+ File: 1R6xbWkbfzsQajjjcXW8tMQWAHqG2Kw6fUzCtSVa3rKI
+
+__main__ 2020-04-22 21:09:27,914 start 128 :
+ File: 1ohuX_SQlBRAEoBP1lszH7C5sU4UixwKTJsjyRB4hSWw
+
+__main__ 2020-04-22 21:09:27,917 start 128 :
+ File: 1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s
+
+__main__ 2020-04-22 21:09:27,919 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:27,920 start 128 :
+ File: 1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08
+
+__main__ 2020-04-22 21:09:27,922 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:27,923 start 128 :
+ File: 1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4
+
+__main__ 2020-04-22 21:09:27,924 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:27,926 start 128 :
+ File: 186ge00t4G7kcx1QdCIHxRhTnZfzpSTGDgfAXkdbD_Ig
+
+__main__ 2020-04-22 21:09:27,927 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:27,928 start 128 :
+ File: 1WbGMwYDyqP6aCDpf5fBbR7sneMicXtvEtfm3Z4k0Vzs
+
+__main__ 2020-04-22 21:09:27,930 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:27,932 start 128 :
+ File: 15JWTM6GKGzGaum2h7EvaoJXszPRWFSdINZ4fq6l87LI
+
+__main__ 2020-04-22 21:09:27,935 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:27,936 start 128 :
+ File: 15T7jFID6g5L9jNgtFSqVnNVFuqL7BqlHq9w9uB3CamE
+
+__main__ 2020-04-22 21:09:27,938 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:27,939 start 128 :
+ File: 11WIU2snHtcamnb9iQszGuvQwhOALT-Gy
+
+__main__ 2020-04-22 21:09:27,941 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:27,942 start 128 :
+ File: 14fGVD8kN7ZTYHhthuk5QFTw2j-OnV9QV6BJvuLedIik
+
+__main__ 2020-04-22 21:09:27,943 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:27,945 start 128 :
+ File: 1GVW_WJ1fcSY94uy5maqvEezczsS-m-YretVhLS7EXzk
+
+__main__ 2020-04-22 21:09:27,947 start 128 :
+ File: 16wh_FgWE8Y0tUpAdIte4WyuB91_ypCySi82lvdhAiFY
+
+__main__ 2020-04-22 21:09:27,949 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:27,950 start 128 :
+ File: 1WKk8W5cG-CYKBYN_cWpAdziiPVhvQZEAarnPwf58z4Y
+
+__main__ 2020-04-22 21:09:27,952 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:27,953 start 128 :
+ File: 1YlY2MTwu_I6PGWgmkNqFXYJVvNSQKMi7j0WulyoD75w
+
+__main__ 2020-04-22 21:09:27,955 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:27,956 start 128 :
+ File: 1T1Sj69DxCTpEQI2pH0O04l_PSx1V3xsxYOnkiHPEPis
+
+__main__ 2020-04-22 21:09:27,957 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:27,958 start 128 :
+ File: 1VrK4o4hKCSJyT8P4hKL9la_FO7-29hcBJMJDsvjXo2A
+
+__main__ 2020-04-22 21:09:27,960 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:27,961 start 128 :
+ File: 125AyhViQoEQKg-wVD4y2hv82aynGTyK7SmeqVHpXvQs
+
+__main__ 2020-04-22 21:09:27,963 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:27,965 start 128 :
+ File: 1LyrolWAEdF9g6y9DyEk_FIH8B7V1cGDowMv8NvVTjow
+
+__main__ 2020-04-22 21:09:27,966 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:27,968 start 128 :
+ File: 1gvFEgWgxaLnNlgLpfwtdH_-UVEY1rglxelRy307hjns
+
+__main__ 2020-04-22 21:09:27,970 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:27,971 start 128 :
+ File: 19qkWrA-moW3LlnMEtT1VSoCGU5TpOwB_17goJbrvWHM
+
+__main__ 2020-04-22 21:09:27,973 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:27,974 start 128 :
+ File: 1F5C4F51m7TcoiVU-U3s2TERMRIMoe_RxQFA8GBf6-64
+
+__main__ 2020-04-22 21:09:27,975 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:27,977 start 128 :
+ File: 1RFm8X0JkBTJj7iR7YLxsrpzbiBTMANScjSeDO9l2aQw
+
+__main__ 2020-04-22 21:09:27,978 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:27,980 start 128 :
+ File: 1XJ5BlIal28QXAMwFOiNr81G7U0xElvy16JUj-39MTrU
+
+__main__ 2020-04-22 21:09:27,982 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:27,984 start 128 :
+ File: 1Visfq9vleQOXgJ3svv3Yj5A3qf3GOY4VMIcq4E7J5q0
+
+__main__ 2020-04-22 21:09:27,985 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:27,987 start 128 :
+ File: 1kIbHXyKc4uI2MzuXFMhT73ZIAPnP32_jW1kv2yMNoUU
+
+__main__ 2020-04-22 21:09:27,988 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:27,989 start 128 :
+ File: 1AOfGsW5I-aG8b0WdSsq4IqMlGiDqDYUCUQfFoEJ1ll4
+
+__main__ 2020-04-22 21:09:27,991 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:27,992 start 128 :
+ File: 18vcbSvvx_xRDIq0vUFjpKkYGdu00l5XbORDG5EKfWNw
+
+__main__ 2020-04-22 21:09:27,994 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:27,995 start 128 :
+ File: 1kn3xhSXmFhPNdSs3J-4x4F95PXucVOdAJAwycd591Ns
+
+__main__ 2020-04-22 21:09:27,996 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:27,998 start 128 :
+ File: 1iMp4WTH5NG-vtb4UkJiqLA7D3ck7MkjS2Mu9gw8rOKs
+
+__main__ 2020-04-22 21:09:28,000 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,001 start 128 :
+ File: 1b6qJW2miNoybz6Y2_UdB51prtkzfFmWcKbbZ6YpSAbg
+
+__main__ 2020-04-22 21:09:28,003 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,004 start 128 :
+ File: 1LvrNb0X-i_B-0eXh_cLDTHGqGukf5UcyNwtVIzimL4E
+
+__main__ 2020-04-22 21:09:28,005 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,007 start 128 :
+ File: 1_wRTbPygF0D0H8VlY-aHjCKTKBQ_Yr8jhCaemuGypXg
+
+__main__ 2020-04-22 21:09:28,008 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,009 start 128 :
+ File: 1DGlo99pbjGwp3lZne4o98aEBS-oC_FaPV0BGUOHCrNo
+
+__main__ 2020-04-22 21:09:28,011 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,013 start 128 :
+ File: 1DE8JkISOGvpaUbmFRqQ_zVwh-29QmyD1t7ap73cr0KU
+
+__main__ 2020-04-22 21:09:28,014 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,016 start 128 :
+ File: 1NpHQsdIiUQJTN0Bwdl__Kn69Ix3I3FEZM-6XWD-hCQ4
+
+__main__ 2020-04-22 21:09:28,017 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,018 start 128 :
+ File: 1RMi1U6KwIBwORi6hYYv4HQiypu8bD1obKFyiCthf7pw
+
+__main__ 2020-04-22 21:09:28,020 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,021 start 128 :
+ File: 1MQSAawInjoU_bWoc22FZS1s-qXWkPZNXwZDM-lFUoU0
+
+__main__ 2020-04-22 21:09:28,023 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,024 start 128 :
+ File: 1fZgygLRoHAb-498SXVjIXpGUIvLGU9qeRU63qzQx9nQ
+
+__main__ 2020-04-22 21:09:28,026 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,027 start 128 :
+ File: 1pWqW84PU9HyaS_FLl_qn80OAdv0gFum7_FkO6a82EyE
+
+__main__ 2020-04-22 21:09:28,029 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,030 start 128 :
+ File: 1R6xbWkbfzsQajjjcXW8tMQWAHqG2Kw6fUzCtSVa3rKI
+
+__main__ 2020-04-22 21:09:28,032 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,034 start 128 :
+ File: 1ohuX_SQlBRAEoBP1lszH7C5sU4UixwKTJsjyRB4hSWw
+
+__main__ 2020-04-22 21:09:28,036 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,037 start 128 :
+ File: 11pQJMPSqdBII6CieoNmfHahRsuvHflXvehfOaWt8H7k
+
+__main__ 2020-04-22 21:09:28,039 start 128 :
+ File: 1WbvAv_ymDwWk-BGlPHw8SzD163SnYVFrw7IIt4mHjiM
+
+__main__ 2020-04-22 21:09:28,041 start 128 :
+ File: 0B4Fujvv5MfqbYnZpY2kyejRXUTA
+
+__main__ 2020-04-22 21:09:28,043 start 128 :
+ File: 0B4Fujvv5MfqbUzVBaTJLRmVPSFk
+
+__main__ 2020-04-22 21:09:28,046 start 128 :
+ File: 0B4Fujvv5MfqbWnV0bEtveGs1UDA
+
+__main__ 2020-04-22 21:09:28,048 start 128 :
+ File: 0B4Fujvv5MfqbUnFPejgxa05BanM
+
+__main__ 2020-04-22 21:09:28,051 start 128 :
+ File: 0B4Fujvv5MfqbZEpFRGE3N01rWmc
+
+__main__ 2020-04-22 21:09:28,054 start 128 :
+ File: 0B4Fujvv5MfqbaWg2NGJIUlpadFQtWjFhbUJJN2ZqRVBVYk5v
+
+__main__ 2020-04-22 21:09:28,056 start 128 :
+ File: 0B1WNUX-O8FMUREpkaUMzRHV0dTQ
+
+__main__ 2020-04-22 21:09:28,058 start 128 :
+ File: 0B1WNUX-O8FMUeldabERKSUsxWUk
+
+__main__ 2020-04-22 21:09:28,061 start 128 :
+ File: 0B1WNUX-O8FMUb0R6YzJueGVBU2c
+
+__main__ 2020-04-22 21:09:28,063 start 128 :
+ File: 1TnVVPTcfazUtMTwhCjyfpdZlTzOQiKRdNv5kUTPsuzU
+
+__main__ 2020-04-22 21:09:28,066 start 128 :
+ File: 0B4Fujvv5MfqbckJod3FUQXV1UEU
+
+__main__ 2020-04-22 21:09:28,068 start 128 :
+ File: 0B1WNUX-O8FMUR1I3ZXpOR1kySXc
+
+__main__ 2020-04-22 21:09:28,070 start 128 :
+ File: 0B4Fujvv5MfqbR2wzLXhmYWRMUnc
+
+__main__ 2020-04-22 21:09:28,071 start 128 :
+ File: 0B4Fujvv5MfqbSVcwbjdyVXl2RlE
+
+__main__ 2020-04-22 21:09:28,074 start 128 :
+ File: 0B4Fujvv5MfqbcExFcUd2TW1aT3M
+
+__main__ 2020-04-22 21:09:28,076 start 128 :
+ File: 1k6USGPq1ow9Inuf5jBXSBkTAk4kTlBazp9DxzTmXUEo
+
+__main__ 2020-04-22 21:09:28,078 start 128 :
+ File: 1xdiTvBflf61ouDyxvD_REuwZMG28miJg6gUGJHinjRg
+
+__main__ 2020-04-22 21:09:28,079 start 128 :
+ File: 1IrzFWsulK7xO4kyKki8Fpy4a8XTkSdfQDHAEZ3uVr-I
+
+__main__ 2020-04-22 21:09:28,082 start 128 :
+ File: 1y_qbg5SNo40vU9kELBqxO7bQphACiO3-N6kANQbBiXg
+
+__main__ 2020-04-22 21:09:28,084 start 128 :
+ File: 16cqhRLUsi3Qo2vqxCM_zA4AukTjyrfADDx9_MldhruU
+
+__main__ 2020-04-22 21:09:28,086 start 128 :
+ File: 1SomlELlB1nEXIUGAjtvJPqegi9_pB5PuDnHFSbl3niA
+
+__main__ 2020-04-22 21:09:28,088 start 128 :
+ File: 1KTg7p_EP680NLfKczdfbr8wI4eK6deK04aM3VpWt124
+
+__main__ 2020-04-22 21:09:28,089 start 128 :
+ File: 1caX2qKRxxndHOlqtQBWnnj7dbfiq7ICg5OkqvOm-13U
+
+__main__ 2020-04-22 21:09:28,092 start 128 :
+ File: 13l8V9jma8seFSE4EGu5bkYSWkPJT2j9vaDqQgKEjwFk
+
+__main__ 2020-04-22 21:09:28,094 start 128 :
+ File: 14cW2ITjFw3mu0suoLw5Q7wyYfMwWOAu3iaC6Kxo_9SM
+
+__main__ 2020-04-22 21:09:28,096 start 128 :
+ File: 1I3Gu3QKCRgOUayhCLaxdjmjd_ja0G45LU9Al_cQEpBs
+
+__main__ 2020-04-22 21:09:28,098 start 128 :
+ File: 19x9p2PdgzWXsKrnbdZ0VVb4x_MemS73DS-j20F3zhOk
+
+__main__ 2020-04-22 21:09:28,100 start 128 :
+ File: 1ZU3R0ZILm0eda1_ra901RqrpNrffZG_XpuJTpGZvsXo
+
+__main__ 2020-04-22 21:09:28,102 start 128 :
+ File: 1hT75vuG-KNRGyubZPjPsAhNfBP4PDKF441q6cY8qNaA
+
+__main__ 2020-04-22 21:09:28,104 start 128 :
+ File: 1h_QnPXYHWUF7zbH2p5gxqdNXykk5tjvgAjmPby88KEY
+
+__main__ 2020-04-22 21:09:28,106 start 128 :
+ File: 18K3OuWAM4foGW6Bc6xyG5EkXB8bPPyb9gJRmLrqekxw
+
+__main__ 2020-04-22 21:09:28,108 start 128 :
+ File: 1qboc3ylwNG3cSsWTkguNuootVmDBCvIBJZ1FQSmmBQw
+
+__main__ 2020-04-22 21:09:28,110 start 128 :
+ File: 177ub3jbX4uscDt3uDv_WYisrvqmR5B5C9jhfnv-3T7Y
+
+__main__ 2020-04-22 21:09:28,111 start 128 :
+ File: 1wblHudQn6UwWLOkXpX-X2k4YEPv4obOEHTUhy3n8cMY
+
+__main__ 2020-04-22 21:09:28,113 start 128 :
+ File: 1sd2IyZnVT_UW3DOFdi9bIzzAtNBok0WFugmnnJvJf38
+
+__main__ 2020-04-22 21:09:28,116 start 128 :
+ File: 17rFp_FJUjEH_qhETF7SM8dqYzpGmrq7LcT3LUBZIiwA
+
+__main__ 2020-04-22 21:09:28,118 start 128 :
+ File: 0B4Fujvv5Mfqbajg5cmFoOVFTUWoxMmdiQS1BNlBjMl83Nml3
+
+__main__ 2020-04-22 21:09:28,120 start 128 :
+ File: 0B4Fujvv5MfqbUWw1OGZLaVJYM25ic2dkVUp4YU9MeUYxempN
+
+__main__ 2020-04-22 21:09:28,122 start 128 :
+ File: 1WN1sPgeACI3FUPUwOEit8xTBsUjsasQUzeIQ7PrBPYk
+
+__main__ 2020-04-22 21:09:28,124 start 128 :
+ File: 1OXx2LaTMGkAs2x_wSMHmZZdNVBWxJkq16rBTKcv46e4
+
+__main__ 2020-04-22 21:09:28,126 start 128 :
+ File: 1OctQHnUJUYiVNd90Dc1tetJzYl0MxIJL-vH-oACIhR8
+
+__main__ 2020-04-22 21:09:28,127 start 128 :
+ File: 1NSEpg3wzcFzi85vgvSQ14ebqQaEwgthPzkBcHvFYK4g
+
+__main__ 2020-04-22 21:09:28,129 start 128 :
+ File: 0B4Fujvv5MfqbdF81NHdULUNwMElJTF8xb0p6eUZnbTRjTUdJ
+
+__main__ 2020-04-22 21:09:28,132 start 128 :
+ File: 0B4Fujvv5MfqbTGNDT3psVktMNnQ3N3NPQTJZVlk5ekVBSlRj
+
+__main__ 2020-04-22 21:09:28,134 start 128 :
+ File: 0B4Fujvv5MfqbdjFuYXJSSFcwOFpSTjdyanc5Z1NKOXVQMk5N
+
+__main__ 2020-04-22 21:09:28,136 start 128 :
+ File: 0B4Fujvv5MfqbNGswWE5uS19Pc00xQ183SjhGdlVRcGRSSVBj
+
+__main__ 2020-04-22 21:09:28,139 start 128 :
+ File: 0B4Fujvv5MfqbRjB5bGRlTlZBZ09xN2hjOVphQ3Q5eGVaa2tR
+
+__main__ 2020-04-22 21:09:28,142 start 128 :
+ File: 0B4Fujvv5MfqbMHpzR1pIQ3ZYcHBaSi1FTUpWZkpBOWNHTEM4
+
+__main__ 2020-04-22 21:09:28,144 start 128 :
+ File: 0B4Fujvv5MfqbNE1zbGxyMWRfbjFuMDlwd0RhRzdNMVJwSHEw
+
+__main__ 2020-04-22 21:09:28,146 start 128 :
+ File: 0B4Fujvv5MfqbY0VSOW9Ud1BZZ21hSk9mMUhjVUVlTXZhdE9J
+
+__main__ 2020-04-22 21:09:28,148 start 128 :
+ File: 1TYIOfz_uzybWgEeexs8iE64jcjt-AmUegOP6KORNaWQ
+
+__main__ 2020-04-22 21:09:28,150 start 128 :
+ File: 19Fu317bfo0V7yOIkfLvKtAU-UJYLf8d2Soy-jTvq1uc
+
+__main__ 2020-04-22 21:09:28,152 start 128 :
+ File: 1eXJKzIcZCM6pAdVLLrvEyIwQBDDrtm8dComeZ_W7uOI
+
+__main__ 2020-04-22 21:09:28,154 start 128 :
+ File: 1Ux4BA5BVJTcsGcTcGp8CtB85ahlWp0h83AGvrtAhnTg
+
+__main__ 2020-04-22 21:09:28,156 start 128 :
+ File: 1nOYHEZQN_i8dc6gZNDqguGEmCIU7IX62qngQE0Yvy7o
+
+__main__ 2020-04-22 21:09:28,157 start 128 :
+ File: 1K6SwyWCOhW6dt906DjOIhJ-ZklpsooCdTyYHGfEZD2s
+
+__main__ 2020-04-22 21:09:28,159 start 128 :
+ File: 1ak3AnxwEDfv_EkgRG7Q8U_eglT-eK2W3RtAJqlrtcQA
+
+__main__ 2020-04-22 21:09:28,161 start 128 :
+ File: 1iTV26x-U2-nngY6gONVklMtrhdfI818IwLM682vpABA
+
+__main__ 2020-04-22 21:09:28,163 start 128 :
+ File: 1gKBPmWO42yparziEkHbvcBtubHyE_IQwtO1Q8IIrW1c
+
+__main__ 2020-04-22 21:09:28,165 start 128 :
+ File: 12x_9WkC_rJJ4iQW5IUNaY9BwAHRM1P6nRBi_oyRq7eI
+
+__main__ 2020-04-22 21:09:28,168 start 128 :
+ File: 1FzKITrCYnc_odhNCRNNaZ-PnT7m0f6qI-iDuQG382OY
+
+__main__ 2020-04-22 21:09:28,170 start 128 :
+ File: 1VzVAOYcQFfJoPSOGAqpK8xA7OtiUNdq13G3SNRtrq2U
+
+__main__ 2020-04-22 21:09:28,172 start 128 :
+ File: 1B37ygx-Iwh0EpS1c5fqpbK6AqE39m6ao4WD4uMWknzc
+
+__main__ 2020-04-22 21:09:28,173 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,174 start 128 :
+ File: 1wwO34JKRjuj3j8LPJ8GpZ1qUZjudaS9ZKuH_vvH9u1Y
+
+__main__ 2020-04-22 21:09:28,176 start 128 :
+ File: 1d4h1lq9gvAfUpxC3DILSxTJvVCs3vbGLmMQXpRW5k2M
+
+__main__ 2020-04-22 21:09:28,179 start 128 :
+ File: 1YPHMaMcgzysPOs7Flk2L4cAj1R_9U1mesOMP_u-9Ie0
+
+__main__ 2020-04-22 21:09:28,182 start 128 :
+ File: 1PIFIQuFfWBnGVFqjEJeGFanqwpbbs7bmc_vhuKQpWT8
+
+__main__ 2020-04-22 21:09:28,185 start 128 :
+ File: 18bxzMnkY1PebmnCbJwDWXkwO5PfuDYwiHwJF98y87uU
+
+__main__ 2020-04-22 21:09:28,187 start 128 :
+ File: 1ebdbk-Heh5hZkqr3vk2KnUOaThJtdAHsW4PTRckjRIc
+
+__main__ 2020-04-22 21:09:28,189 start 128 :
+ File: 1OKxvzHOhjxBtzX3_mgg3f36xaqMOBwrfwypEAjrXooc
+
+__main__ 2020-04-22 21:09:28,191 start 128 :
+ File: 1xjZMkCR9jK3uLcj3VVv8iG9vMhOY-TdfaTtm_-Gfluo
+
+__main__ 2020-04-22 21:09:28,193 start 128 :
+ File: 1sq0GKewD4f-c6Nu_FDoW-h3Sr8mpsXl3VX3-b7gm_vY
+
+__main__ 2020-04-22 21:09:28,195 start 128 :
+ File: 1lRv0A0-GImHxYL7qjV7bO9ewz4ErLrPGmb_9DkjOCZo
+
+__main__ 2020-04-22 21:09:28,197 start 128 :
+ File: 10tBzs-b4tUfUtr6Uw1PNlbeIIFj9-RwWnNb4gghJcB0
+
+__main__ 2020-04-22 21:09:28,200 start 128 :
+ File: 1cWs7Ivk6q8HNllhbZrC6t0gPU7HAVF98tJb0L2zJQYM
+
+__main__ 2020-04-22 21:09:28,202 start 128 :
+ File: 1c9QE4E2tonnIhb6KO3DmLnZoXssnEB4bFn4vEzz959o
+
+__main__ 2020-04-22 21:09:28,203 start 128 :
+ File: 1L7Y6FI81HIJ6PKQnrSDEW_Y6JmxTZdSJLRs1eS29MnU
+
+__main__ 2020-04-22 21:09:28,205 start 128 :
+ File: 1bxYZOBqncwfgK7wiBP3rHPk9nkhJYQGhmlIKScdrGXg
+
+__main__ 2020-04-22 21:09:28,207 start 128 :
+ File: 121oJ48RCkqiq1AAiTQksw63LJHVHTzcAL5p7SfFDzN4
+
+__main__ 2020-04-22 21:09:28,209 start 128 :
+ File: 1v1MzjKeWndRSIeIUIcsttYQsBSQqwvKYvM_i4pm93eY
+
+__main__ 2020-04-22 21:09:28,211 start 128 :
+ File: 1HH2s7wRH1yZ3RzwuwRiqENRoNtdfG5EF034jvIGr9E0
+
+__main__ 2020-04-22 21:09:28,213 start 128 :
+ File: 1Mwr2PIKBobTIwfJH1DP806Ki3q69vz-hb84A3SyrEQ4
+
+__main__ 2020-04-22 21:09:28,215 start 128 :
+ File: 1tPjh3-nBi17bhMtRviIdViEpl5m1AKUdV8Sal5eQ6Mc
+
+__main__ 2020-04-22 21:09:28,217 start 128 :
+ File: 19T-3KeDzmN1hbJIOHoCGshN-2MkfzzL3niQ9g-kJ8wA
+
+__main__ 2020-04-22 21:09:28,219 start 128 :
+ File: 10Kfg9ce99awKIA1TMLlCIXxs8aD11enD4s_aPY7fSIk
+
+__main__ 2020-04-22 21:09:28,221 start 128 :
+ File: 1ybcAuvKiH1jP7Xq6ah4lL12FxIQ3XV9hBQTF5WX6LvY
+
+__main__ 2020-04-22 21:09:28,223 start 128 :
+ File: 1r75iiO6eNJGhSzNVz_XOptyuhgUt1Ec4IOcxA72_76I
+
+__main__ 2020-04-22 21:09:28,224 start 128 :
+ File: 1WnajaWbVBh4Nd8LuknbgrxA0WFTKQPOOn3H-fEwMTr8
+
+__main__ 2020-04-22 21:09:28,226 start 128 :
+ File: 1jys4yWL3RLe37f1yAGZzlKp2CCsWQ9YVRefNJm0sDFk
+
+__main__ 2020-04-22 21:09:28,228 start 128 :
+ File: 1W_EIUFDWQMdAyZKe69M9nuW5XedFb3bcsP7atg6LvIo
+
+__main__ 2020-04-22 21:09:28,230 start 128 :
+ File: 1iaW7VZ7uupNJpOlGARjNoRsixK4TNmi36foaVjtD9og
+
+__main__ 2020-04-22 21:09:28,233 start 128 :
+ File: 1iuVb4Si_gTncPRe2R6kJ53PhPgL4I68_w9j2R8fRB7E
+
+__main__ 2020-04-22 21:09:28,235 start 128 :
+ File: 1jc_mjy90aKZ43SiRGSxmgNPyZQbrMh9Jb1dHoYzGWIM
+
+__main__ 2020-04-22 21:09:28,236 start 128 :
+ File: 15UMfb4c64GnCPTxFkvl-LShnbVIahiPADwLU-2h2PIY
+
+__main__ 2020-04-22 21:09:28,238 start 128 :
+ File: 1H_FqHaJlUTfDeWZNITmjb7_9mc0kiPixuBSIXLeOEb8
+
+__main__ 2020-04-22 21:09:28,240 start 128 :
+ File: 1J-D9OQu7Xccz5BDEdiqPsKj5gJwW1qJ87Z24LSV6gak
+
+__main__ 2020-04-22 21:09:28,242 start 128 :
+ File: 1V1KI6RIfQ38M_UIWpldBLKxJzXeuvsW8fKi0XodfERc
+
+__main__ 2020-04-22 21:09:28,244 start 128 :
+ File: 1mU_Z2FXHCrL3UIf13uXSZsLBLPdJjh0-VRK_CEIcCvU
+
+__main__ 2020-04-22 21:09:28,246 start 128 :
+ File: 1vOEsYOAXIV_XJiid27nBy1s2lCEvz2ZjmYbKsHsQNFI
+
+__main__ 2020-04-22 21:09:28,249 start 128 :
+ File: 1nYk0GBJ-0vTonu9nvhsvBvlWK5swHLSDmao9eTwVoms
+
+__main__ 2020-04-22 21:09:28,251 start 128 :
+ File: 1u1ZrB5rE8JfGb5y69hdtADX5fXeex9hXNDmUexYtOng
+
+__main__ 2020-04-22 21:09:28,253 start 128 :
+ File: 1U3nNqST1Sz5VIepZU8p33HVgn3uhRorhv_mkL3raAg8
+
+__main__ 2020-04-22 21:09:28,255 start 128 :
+ File: 1F1rKSpzRwIDSpcWlc8hARJhserv3yywojoXRLNtOsM4
+
+__main__ 2020-04-22 21:09:28,257 start 128 :
+ File: 1UIJTMxlSrxlRK8VNymZdKCY61mVleSP6jM3b6qckwAQ
+
+__main__ 2020-04-22 21:09:28,260 start 128 :
+ File: 1WNM32gREzjB7ks8IAJm9f14c8pxhFEXTr5AYbeXQCwo
+
+__main__ 2020-04-22 21:09:28,263 start 128 :
+ File: 1Hgko3gj0SKfYfD0a7bXwsx2tZyy7p-fOj2tWB7ZBZYE
+
+__main__ 2020-04-22 21:09:28,265 start 128 :
+ File: 12Q6bZVGb6Gd19_BYI7FDsnp1YPM5gZAp8VUzxm5bmHo
+
+__main__ 2020-04-22 21:09:28,267 start 128 :
+ File: 1RBeu5UyrRyxopPQqc_hm2XiVS2RCO40mARJHPTouoIE
+
+__main__ 2020-04-22 21:09:28,269 start 128 :
+ File: 1qPi9_y7ctipEYPaOxEzvxutR_cvDAxGQKLYhs7KA91c
+
+__main__ 2020-04-22 21:09:28,271 start 128 :
+ File: 1Ac1Qh6p3Cq6XHlWf2-wRLZ_naYPJLXZoDbgJfy6w-YY
+
+__main__ 2020-04-22 21:09:28,273 start 128 :
+ File: 1ax-gJpCTZ3apRqQ5GXVL8iPMCj3Bzc4vrHx5raCHPoo
+
+__main__ 2020-04-22 21:09:28,275 start 128 :
+ File: 1rYeomn5QTElgFAErrnBtX4iR9p8G7AWrBNZN0t83QyI
+
+__main__ 2020-04-22 21:09:28,277 start 128 :
+ File: 1lFVPDJJqO1flvYuk5n4N0cSzh9PY8hU9QK-xuachhms
+
+__main__ 2020-04-22 21:09:28,279 start 128 :
+ File: 10O9QmWkYt3lpDiCmKhdUDpvgY5Vt7-FbeHhixZzff40
+
+__main__ 2020-04-22 21:09:28,282 start 128 :
+ File: 17Ar8JD8IDNr2zTGLCX_m5VNUwhVI-z27amxEYdMZo9A
+
+__main__ 2020-04-22 21:09:28,284 start 128 :
+ File: 18HTxjPXMFCZ2X4cWr9ZcVoCXTKtLD0BA2oZ8WcLOBdc
+
+__main__ 2020-04-22 21:09:28,286 start 128 :
+ File: 1PXNN4iw_j8MhvbtcB4IejaUqw80-4wZhYsmDzKNd8Yo
+
+__main__ 2020-04-22 21:09:28,288 start 128 :
+ File: 1cPTe9tBUkFo1sVlMT5-ZG2-DvO7HoGbgR413A8hrYoE
+
+__main__ 2020-04-22 21:09:28,289 start 128 :
+ File: 16ZOaBmwaEUNHKdzVDDYsvGKcnUOgWK7jqZs4zaWwyKY
+
+__main__ 2020-04-22 21:09:28,292 start 128 :
+ File: 1BJlt8woa95IYNvGkGFpvKvYIGqQXW3mqr1MAnZwqS64
+
+__main__ 2020-04-22 21:09:28,294 start 128 :
+ File: 15G9sQV-39Si_2_hIIxIBh7xEg6IrSN6-wMZUxYCP2Bk
+
+__main__ 2020-04-22 21:09:28,296 start 128 :
+ File: 1Se0xjKN6ugnSc8EozbwAq4_gQMoz3ejTeJLhkpUeiik
+
+__main__ 2020-04-22 21:09:28,298 start 128 :
+ File: 18dyEIk03yKG-7bM19EkiJzrtoWIwrRNov-z7XeJw1m4
+
+__main__ 2020-04-22 21:09:28,301 start 128 :
+ File: 1hzbRCzK66ADkXJA5ed5p79TfqNyqCpkdKAttWPh4VlE
+
+__main__ 2020-04-22 21:09:28,303 start 128 :
+ File: 1zavQne_MWRu5tTO2v9z1e0JdPGROFrTIadjBa6MSipc
+
+__main__ 2020-04-22 21:09:28,305 start 128 :
+ File: 1_o5CC6s1lKBY2FqxzGKVoBNMRW0Ekaya3mEVaS7Xh_w
+
+__main__ 2020-04-22 21:09:28,307 start 128 :
+ File: 1-uubVDVcFISy6uzaYsXmPbxS9UmxDjNBxhUDniVDmlk
+
+__main__ 2020-04-22 21:09:28,309 start 128 :
+ File: 1eD408OKIXN196mYbC69-8M5wDGPxTJLqAnJc7zGlIDQ
+
+__main__ 2020-04-22 21:09:28,311 start 128 :
+ File: 1tb3xmBatR7YNy70lzq1K41ozoTBaYERMzGcsGNQ5K9Y
+
+__main__ 2020-04-22 21:09:28,313 start 128 :
+ File: 1NspHhMgG_VjC3P93oZ5IV7xFFL7Uk3NNktrH2O9ZeoE
+
+__main__ 2020-04-22 21:09:28,315 start 128 :
+ File: 1tbtgmS94lbqjRwYy-I75q4BH8WCkyHDE6HViwAF00ss
+
+__main__ 2020-04-22 21:09:28,317 start 128 :
+ File: 1PpB3vZv2lJpoVklW51mZuquyju9GF7Zb-_c-rBSIQxc
+
+__main__ 2020-04-22 21:09:28,319 start 128 :
+ File: 1HRakKISuqu2K_e2YyjoWGlB9C7H8vne7Q3_u089wRW0
+
+__main__ 2020-04-22 21:09:28,322 start 128 :
+ File: 1mJDzwEHTj1Zvf91GbF8_hhBLhtKugl2wQuzkhEH06zE
+
+__main__ 2020-04-22 21:09:28,324 start 128 :
+ File: 1KKaeEE792dDRG5mhXJQVCqgdqpJBHaWD_OQ6M3ZhRuo
+
+__main__ 2020-04-22 21:09:28,326 start 128 :
+ File: 1KsWck_UFf_Kf1t500KZ9VgqB6onKJVu16NYeNLLvAmI
+
+__main__ 2020-04-22 21:09:28,327 start 128 :
+ File: 15xp5eKILeVOBXgP_NrQRJxEckYLJn4TF-HH51I4xSDQ
+
+__main__ 2020-04-22 21:09:28,329 start 128 :
+ File: 1FyG_ZowGX2NAKBVvlKMnPuQtHEnQTM2kD5VYkjoVjxI
+
+__main__ 2020-04-22 21:09:28,332 start 128 :
+ File: 18k-JjTWeVXu2K65Vk32-q7MPPQiAX4K7bflONox2Kos
+
+__main__ 2020-04-22 21:09:28,334 start 128 :
+ File: 1Xv2sTgI0X-dIB5LLgDmaOviNSzeonDUoLFQ5uGw1Hgw
+
+__main__ 2020-04-22 21:09:28,336 start 128 :
+ File: 13tHLJrPwP1o3jOffP1Z-orNRbsKBIZSCUR6zs6Nl-z8
+
+__main__ 2020-04-22 21:09:28,338 start 128 :
+ File: 17xnllCXbgNGTCl3UCF7rjdDFUenH7Ybp_oBLlhaazPM
+
+__main__ 2020-04-22 21:09:28,340 start 128 :
+ File: 1yub5ti1om7s1nua9Nc3YFcfpzn_WQlrZn3yNxI_WUa0
+
+__main__ 2020-04-22 21:09:28,342 start 128 :
+ File: 1BuSMP_TzGXY7KbsocMKJCDmtrjrUZxkSX-JKKqKU0U4
+
+__main__ 2020-04-22 21:09:28,344 start 128 :
+ File: 1sXtPdTSN5B-aVm1yaiGZopC7AoXVhi-ZvJcllmC5iJ0
+
+__main__ 2020-04-22 21:09:28,346 start 128 :
+ File: 19HElFbOypbhzZzPKby2rypaTe9UsgLq9Upfx0WWhsas
+
+__main__ 2020-04-22 21:09:28,348 start 128 :
+ File: 1eg0Rle5g1rhCkOPjeENL4SKs4V7SpTIozIv_YMzzuMQ
+
+__main__ 2020-04-22 21:09:28,350 start 128 :
+ File: 1R0t5FNM3FAp9uJhf2TraL5lKE1hAASZ7fSXr1q7Irxs
+
+__main__ 2020-04-22 21:09:28,352 start 128 :
+ File: 12a-Eu55AvABgEnfWGrlYyb_H9P0H8UeZVi2lejD5jig
+
+__main__ 2020-04-22 21:09:28,354 start 128 :
+ File: 1pqUL-BLtEu6HcTxjZToeaNaAz8vkKjDLQiu4B7TLZVU
+
+__main__ 2020-04-22 21:09:28,356 start 128 :
+ File: 1zjx4HJJwsgyjPEMwb4Q3sMRZSoYMXpspxs2awIpvMcE
+
+__main__ 2020-04-22 21:09:28,357 start 128 :
+ File: 1VfNKMndN01Hbe2ijTgC-EAj9TpqdD133dm-ltW3BpEc
+
+__main__ 2020-04-22 21:09:28,359 start 128 :
+ File: 1NXctsqWBRGB5_WvoTyW05ovUYiOoIc0NfXKvl4Z6K40
+
+__main__ 2020-04-22 21:09:28,361 start 128 :
+ File: 1294s17bsyDgKru3xzl_nM6RJvbU4YKu0b8BFIJaNTvg
+
+__main__ 2020-04-22 21:09:28,362 start 128 :
+ File: 1F6SbGdjxQe1JjSCL_xfo1pIZRQxLtprw36plcnlZ-0A
+
+__main__ 2020-04-22 21:09:28,365 start 128 :
+ File: 1_EgMi7XA_HEtXs6t6_t16Tx0SjA8P0R4gp3c_Tx91mU
+
+__main__ 2020-04-22 21:09:28,367 start 128 :
+ File: 11WIU2snHtcamnb9iQszGuvQwhOALT-Gy
+
+__main__ 2020-04-22 21:09:28,369 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,370 start 128 :
+ File: 1GVW_WJ1fcSY94uy5maqvEezczsS-m-YretVhLS7EXzk
+
+__main__ 2020-04-22 21:09:28,371 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,373 start 128 :
+ File: 1e8X7BjoK-9tw6LtZ906nkT8UU0ZRXhuYYVGMY3zGhG4
+
+__main__ 2020-04-22 21:09:28,375 start 128 :
+ File: 1UYpX0KtWixk6R1ljqbRo-oHK1flm4eArGMqLkGGDjbA
+
+__main__ 2020-04-22 21:09:28,376 start 128 :
+ File: 10u3-LXvFnSLUWooUhaGr9Au1jxnUA5wA7ZtW-D2ECQw
+
+__main__ 2020-04-22 21:09:28,378 start 128 :
+ File: 1EscsRDbG6mfeND2Y5cGps94XYwbiqhhfXHAheHROGlU
+
+__main__ 2020-04-22 21:09:28,381 start 128 :
+ File: 1k6USGPq1ow9Inuf5jBXSBkTAk4kTlBazp9DxzTmXUEo
+
+__main__ 2020-04-22 21:09:28,383 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,385 start 128 :
+ File: 1xdiTvBflf61ouDyxvD_REuwZMG28miJg6gUGJHinjRg
+
+__main__ 2020-04-22 21:09:28,386 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,388 start 128 :
+ File: 1IrzFWsulK7xO4kyKki8Fpy4a8XTkSdfQDHAEZ3uVr-I
+
+__main__ 2020-04-22 21:09:28,389 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,390 start 128 :
+ File: 1y_qbg5SNo40vU9kELBqxO7bQphACiO3-N6kANQbBiXg
+
+__main__ 2020-04-22 21:09:28,392 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,393 start 128 :
+ File: 1I3Gu3QKCRgOUayhCLaxdjmjd_ja0G45LU9Al_cQEpBs
+
+__main__ 2020-04-22 21:09:28,394 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,396 start 128 :
+ File: 19x9p2PdgzWXsKrnbdZ0VVb4x_MemS73DS-j20F3zhOk
+
+__main__ 2020-04-22 21:09:28,397 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,399 start 128 :
+ File: 1ZU3R0ZILm0eda1_ra901RqrpNrffZG_XpuJTpGZvsXo
+
+__main__ 2020-04-22 21:09:28,401 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,402 start 128 :
+ File: 177ub3jbX4uscDt3uDv_WYisrvqmR5B5C9jhfnv-3T7Y
+
+__main__ 2020-04-22 21:09:28,403 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,404 start 128 :
+ File: 1hT75vuG-KNRGyubZPjPsAhNfBP4PDKF441q6cY8qNaA
+
+__main__ 2020-04-22 21:09:28,406 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,407 start 128 :
+ File: 1h_QnPXYHWUF7zbH2p5gxqdNXykk5tjvgAjmPby88KEY
+
+__main__ 2020-04-22 21:09:28,408 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,409 start 128 :
+ File: 1wblHudQn6UwWLOkXpX-X2k4YEPv4obOEHTUhy3n8cMY
+
+__main__ 2020-04-22 21:09:28,411 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,412 start 128 :
+ File: 17rFp_FJUjEH_qhETF7SM8dqYzpGmrq7LcT3LUBZIiwA
+
+__main__ 2020-04-22 21:09:28,414 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,416 start 128 :
+ File: 1WN1sPgeACI3FUPUwOEit8xTBsUjsasQUzeIQ7PrBPYk
+
+__main__ 2020-04-22 21:09:28,417 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,419 start 128 :
+ File: 0B4Fujvv5MfqbdF81NHdULUNwMElJTF8xb0p6eUZnbTRjTUdJ
+
+__main__ 2020-04-22 21:09:28,420 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,421 start 128 :
+ File: 0B4Fujvv5Mfqbajg5cmFoOVFTUWoxMmdiQS1BNlBjMl83Nml3
+
+__main__ 2020-04-22 21:09:28,423 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,424 start 128 :
+ File: 1OXx2LaTMGkAs2x_wSMHmZZdNVBWxJkq16rBTKcv46e4
+
+__main__ 2020-04-22 21:09:28,425 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,426 start 128 :
+ File: 1OctQHnUJUYiVNd90Dc1tetJzYl0MxIJL-vH-oACIhR8
+
+__main__ 2020-04-22 21:09:28,428 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,429 start 128 :
+ File: 1NSEpg3wzcFzi85vgvSQ14ebqQaEwgthPzkBcHvFYK4g
+
+__main__ 2020-04-22 21:09:28,432 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,434 start 128 :
+ File: 16cqhRLUsi3Qo2vqxCM_zA4AukTjyrfADDx9_MldhruU
+
+__main__ 2020-04-22 21:09:28,435 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,437 start 128 :
+ File: 1SomlELlB1nEXIUGAjtvJPqegi9_pB5PuDnHFSbl3niA
+
+__main__ 2020-04-22 21:09:28,438 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,440 start 128 :
+ File: 1KTg7p_EP680NLfKczdfbr8wI4eK6deK04aM3VpWt124
+
+__main__ 2020-04-22 21:09:28,441 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,442 start 128 :
+ File: 1caX2qKRxxndHOlqtQBWnnj7dbfiq7ICg5OkqvOm-13U
+
+__main__ 2020-04-22 21:09:28,443 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,445 start 128 :
+ File: 13l8V9jma8seFSE4EGu5bkYSWkPJT2j9vaDqQgKEjwFk
+
+__main__ 2020-04-22 21:09:28,446 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,448 start 128 :
+ File: 14cW2ITjFw3mu0suoLw5Q7wyYfMwWOAu3iaC6Kxo_9SM
+
+__main__ 2020-04-22 21:09:28,450 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,451 start 128 :
+ File: 0B4Fujvv5MfqbMmlId3NYTGg1T2pwazhoSHZYcXZsOUxtamQ4
+
+__main__ 2020-04-22 21:09:28,453 start 128 :
+ File: 0B4Fujvv5MfqbdjFuYXJSSFcwOFpSTjdyanc5Z1NKOXVQMk5N
+
+__main__ 2020-04-22 21:09:28,454 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,455 start 128 :
+ File: 0B4Fujvv5MfqbTGNDT3psVktMNnQ3N3NPQTJZVlk5ekVBSlRj
+
+__main__ 2020-04-22 21:09:28,457 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,458 start 128 :
+ File: 0B4Fujvv5MfqbS1JPNm1SclVzVXhtVG5lSDlHOHU0WXdEakVZ
+
+__main__ 2020-04-22 21:09:28,460 start 128 :
+ File: 0B4Fujvv5MfqbNE1zbGxyMWRfbjFuMDlwd0RhRzdNMVJwSHEw
+
+__main__ 2020-04-22 21:09:28,462 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,464 start 128 :
+ File: 0B4Fujvv5MfqbRjB5bGRlTlZBZ09xN2hjOVphQ3Q5eGVaa2tR
+
+__main__ 2020-04-22 21:09:28,465 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,466 start 128 :
+ File: 0B4Fujvv5MfqbY0VSOW9Ud1BZZ21hSk9mMUhjVUVlTXZhdE9J
+
+__main__ 2020-04-22 21:09:28,468 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,469 start 128 :
+ File: 16_RoxclGNghHaLcs-KUC4R7ke30A7-XlvFubV4fXyAI
+
+__main__ 2020-04-22 21:09:28,471 start 128 :
+ File: 18K3OuWAM4foGW6Bc6xyG5EkXB8bPPyb9gJRmLrqekxw
+
+__main__ 2020-04-22 21:09:28,472 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,474 start 128 :
+ File: 1qboc3ylwNG3cSsWTkguNuootVmDBCvIBJZ1FQSmmBQw
+
+__main__ 2020-04-22 21:09:28,476 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,477 start 128 :
+ File: 1B37ygx-Iwh0EpS1c5fqpbK6AqE39m6ao4WD4uMWknzc
+
+__main__ 2020-04-22 21:09:28,478 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,480 start 128 :
+ File: 1wwO34JKRjuj3j8LPJ8GpZ1qUZjudaS9ZKuH_vvH9u1Y
+
+__main__ 2020-04-22 21:09:28,482 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,483 start 128 :
+ File: 1d4h1lq9gvAfUpxC3DILSxTJvVCs3vbGLmMQXpRW5k2M
+
+__main__ 2020-04-22 21:09:28,485 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,486 start 128 :
+ File: 1YPHMaMcgzysPOs7Flk2L4cAj1R_9U1mesOMP_u-9Ie0
+
+__main__ 2020-04-22 21:09:28,488 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,489 start 128 :
+ File: 1PIFIQuFfWBnGVFqjEJeGFanqwpbbs7bmc_vhuKQpWT8
+
+__main__ 2020-04-22 21:09:28,490 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,492 start 128 :
+ File: 18bxzMnkY1PebmnCbJwDWXkwO5PfuDYwiHwJF98y87uU
+
+__main__ 2020-04-22 21:09:28,493 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,494 start 128 :
+ File: 1ebdbk-Heh5hZkqr3vk2KnUOaThJtdAHsW4PTRckjRIc
+
+__main__ 2020-04-22 21:09:28,495 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,497 start 128 :
+ File: 1OKxvzHOhjxBtzX3_mgg3f36xaqMOBwrfwypEAjrXooc
+
+__main__ 2020-04-22 21:09:28,499 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,500 start 128 :
+ File: 1xjZMkCR9jK3uLcj3VVv8iG9vMhOY-TdfaTtm_-Gfluo
+
+__main__ 2020-04-22 21:09:28,502 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,503 start 128 :
+ File: 1sq0GKewD4f-c6Nu_FDoW-h3Sr8mpsXl3VX3-b7gm_vY
+
+__main__ 2020-04-22 21:09:28,505 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,506 start 128 :
+ File: 1lRv0A0-GImHxYL7qjV7bO9ewz4ErLrPGmb_9DkjOCZo
+
+__main__ 2020-04-22 21:09:28,508 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,510 start 128 :
+ File: 10tBzs-b4tUfUtr6Uw1PNlbeIIFj9-RwWnNb4gghJcB0
+
+__main__ 2020-04-22 21:09:28,511 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,513 start 128 :
+ File: 1cWs7Ivk6q8HNllhbZrC6t0gPU7HAVF98tJb0L2zJQYM
+
+__main__ 2020-04-22 21:09:28,515 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,517 start 128 :
+ File: 1c9QE4E2tonnIhb6KO3DmLnZoXssnEB4bFn4vEzz959o
+
+__main__ 2020-04-22 21:09:28,518 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,520 start 128 :
+ File: 1L7Y6FI81HIJ6PKQnrSDEW_Y6JmxTZdSJLRs1eS29MnU
+
+__main__ 2020-04-22 21:09:28,521 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,523 start 128 :
+ File: 1bxYZOBqncwfgK7wiBP3rHPk9nkhJYQGhmlIKScdrGXg
+
+__main__ 2020-04-22 21:09:28,524 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,525 start 128 :
+ File: 121oJ48RCkqiq1AAiTQksw63LJHVHTzcAL5p7SfFDzN4
+
+__main__ 2020-04-22 21:09:28,527 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,528 start 128 :
+ File: 1v1MzjKeWndRSIeIUIcsttYQsBSQqwvKYvM_i4pm93eY
+
+__main__ 2020-04-22 21:09:28,529 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,531 start 128 :
+ File: 1HH2s7wRH1yZ3RzwuwRiqENRoNtdfG5EF034jvIGr9E0
+
+__main__ 2020-04-22 21:09:28,533 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,534 start 128 :
+ File: 1Mwr2PIKBobTIwfJH1DP806Ki3q69vz-hb84A3SyrEQ4
+
+__main__ 2020-04-22 21:09:28,535 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,537 start 128 :
+ File: 1tPjh3-nBi17bhMtRviIdViEpl5m1AKUdV8Sal5eQ6Mc
+
+__main__ 2020-04-22 21:09:28,538 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,539 start 128 :
+ File: 19T-3KeDzmN1hbJIOHoCGshN-2MkfzzL3niQ9g-kJ8wA
+
+__main__ 2020-04-22 21:09:28,541 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,542 start 128 :
+ File: 10Kfg9ce99awKIA1TMLlCIXxs8aD11enD4s_aPY7fSIk
+
+__main__ 2020-04-22 21:09:28,544 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,546 start 128 :
+ File: 1ybcAuvKiH1jP7Xq6ah4lL12FxIQ3XV9hBQTF5WX6LvY
+
+__main__ 2020-04-22 21:09:28,547 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,549 start 128 :
+ File: 1r75iiO6eNJGhSzNVz_XOptyuhgUt1Ec4IOcxA72_76I
+
+__main__ 2020-04-22 21:09:28,550 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,552 start 128 :
+ File: 1WnajaWbVBh4Nd8LuknbgrxA0WFTKQPOOn3H-fEwMTr8
+
+__main__ 2020-04-22 21:09:28,554 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,555 start 128 :
+ File: 1jys4yWL3RLe37f1yAGZzlKp2CCsWQ9YVRefNJm0sDFk
+
+__main__ 2020-04-22 21:09:28,556 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,557 start 128 :
+ File: 1W_EIUFDWQMdAyZKe69M9nuW5XedFb3bcsP7atg6LvIo
+
+__main__ 2020-04-22 21:09:28,559 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,560 start 128 :
+ File: 1iaW7VZ7uupNJpOlGARjNoRsixK4TNmi36foaVjtD9og
+
+__main__ 2020-04-22 21:09:28,562 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,563 start 128 :
+ File: 1iuVb4Si_gTncPRe2R6kJ53PhPgL4I68_w9j2R8fRB7E
+
+__main__ 2020-04-22 21:09:28,565 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,566 start 128 :
+ File: 1jc_mjy90aKZ43SiRGSxmgNPyZQbrMh9Jb1dHoYzGWIM
+
+__main__ 2020-04-22 21:09:28,567 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,569 start 128 :
+ File: 15UMfb4c64GnCPTxFkvl-LShnbVIahiPADwLU-2h2PIY
+
+__main__ 2020-04-22 21:09:28,570 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,572 start 128 :
+ File: 1H_FqHaJlUTfDeWZNITmjb7_9mc0kiPixuBSIXLeOEb8
+
+__main__ 2020-04-22 21:09:28,573 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,574 start 128 :
+ File: 1J-D9OQu7Xccz5BDEdiqPsKj5gJwW1qJ87Z24LSV6gak
+
+__main__ 2020-04-22 21:09:28,576 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,577 start 128 :
+ File: 1V1KI6RIfQ38M_UIWpldBLKxJzXeuvsW8fKi0XodfERc
+
+__main__ 2020-04-22 21:09:28,578 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,579 start 128 :
+ File: 1mU_Z2FXHCrL3UIf13uXSZsLBLPdJjh0-VRK_CEIcCvU
+
+__main__ 2020-04-22 21:09:28,581 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,583 start 128 :
+ File: 1vOEsYOAXIV_XJiid27nBy1s2lCEvz2ZjmYbKsHsQNFI
+
+__main__ 2020-04-22 21:09:28,585 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,586 start 128 :
+ File: 1nYk0GBJ-0vTonu9nvhsvBvlWK5swHLSDmao9eTwVoms
+
+__main__ 2020-04-22 21:09:28,588 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,589 start 128 :
+ File: 1u1ZrB5rE8JfGb5y69hdtADX5fXeex9hXNDmUexYtOng
+
+__main__ 2020-04-22 21:09:28,591 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,592 start 128 :
+ File: 1U3nNqST1Sz5VIepZU8p33HVgn3uhRorhv_mkL3raAg8
+
+__main__ 2020-04-22 21:09:28,593 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,594 start 128 :
+ File: 1F1rKSpzRwIDSpcWlc8hARJhserv3yywojoXRLNtOsM4
+
+__main__ 2020-04-22 21:09:28,596 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,597 start 128 :
+ File: 1UIJTMxlSrxlRK8VNymZdKCY61mVleSP6jM3b6qckwAQ
+
+__main__ 2020-04-22 21:09:28,600 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,601 start 128 :
+ File: 1WNM32gREzjB7ks8IAJm9f14c8pxhFEXTr5AYbeXQCwo
+
+__main__ 2020-04-22 21:09:28,603 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,604 start 128 :
+ File: 1Hgko3gj0SKfYfD0a7bXwsx2tZyy7p-fOj2tWB7ZBZYE
+
+__main__ 2020-04-22 21:09:28,606 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,607 start 128 :
+ File: 12Q6bZVGb6Gd19_BYI7FDsnp1YPM5gZAp8VUzxm5bmHo
+
+__main__ 2020-04-22 21:09:28,608 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,609 start 128 :
+ File: 1RBeu5UyrRyxopPQqc_hm2XiVS2RCO40mARJHPTouoIE
+
+__main__ 2020-04-22 21:09:28,611 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,612 start 128 :
+ File: 1qPi9_y7ctipEYPaOxEzvxutR_cvDAxGQKLYhs7KA91c
+
+__main__ 2020-04-22 21:09:28,613 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,615 start 128 :
+ File: 1Ac1Qh6p3Cq6XHlWf2-wRLZ_naYPJLXZoDbgJfy6w-YY
+
+__main__ 2020-04-22 21:09:28,616 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,617 start 128 :
+ File: 1ax-gJpCTZ3apRqQ5GXVL8iPMCj3Bzc4vrHx5raCHPoo
+
+__main__ 2020-04-22 21:09:28,619 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,621 start 128 :
+ File: 1rYeomn5QTElgFAErrnBtX4iR9p8G7AWrBNZN0t83QyI
+
+__main__ 2020-04-22 21:09:28,622 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,623 start 128 :
+ File: 1lFVPDJJqO1flvYuk5n4N0cSzh9PY8hU9QK-xuachhms
+
+__main__ 2020-04-22 21:09:28,624 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,625 start 128 :
+ File: 10O9QmWkYt3lpDiCmKhdUDpvgY5Vt7-FbeHhixZzff40
+
+__main__ 2020-04-22 21:09:28,626 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,628 start 128 :
+ File: 17Ar8JD8IDNr2zTGLCX_m5VNUwhVI-z27amxEYdMZo9A
+
+__main__ 2020-04-22 21:09:28,630 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,632 start 128 :
+ File: 18HTxjPXMFCZ2X4cWr9ZcVoCXTKtLD0BA2oZ8WcLOBdc
+
+__main__ 2020-04-22 21:09:28,634 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,635 start 128 :
+ File: 1PXNN4iw_j8MhvbtcB4IejaUqw80-4wZhYsmDzKNd8Yo
+
+__main__ 2020-04-22 21:09:28,637 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,638 start 128 :
+ File: 1cPTe9tBUkFo1sVlMT5-ZG2-DvO7HoGbgR413A8hrYoE
+
+__main__ 2020-04-22 21:09:28,640 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,641 start 128 :
+ File: 16ZOaBmwaEUNHKdzVDDYsvGKcnUOgWK7jqZs4zaWwyKY
+
+__main__ 2020-04-22 21:09:28,642 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,643 start 128 :
+ File: 1BJlt8woa95IYNvGkGFpvKvYIGqQXW3mqr1MAnZwqS64
+
+__main__ 2020-04-22 21:09:28,645 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,646 start 128 :
+ File: 15G9sQV-39Si_2_hIIxIBh7xEg6IrSN6-wMZUxYCP2Bk
+
+__main__ 2020-04-22 21:09:28,647 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,649 start 128 :
+ File: 1Se0xjKN6ugnSc8EozbwAq4_gQMoz3ejTeJLhkpUeiik
+
+__main__ 2020-04-22 21:09:28,650 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,652 start 128 :
+ File: 18dyEIk03yKG-7bM19EkiJzrtoWIwrRNov-z7XeJw1m4
+
+__main__ 2020-04-22 21:09:28,653 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,654 start 128 :
+ File: 1hzbRCzK66ADkXJA5ed5p79TfqNyqCpkdKAttWPh4VlE
+
+__main__ 2020-04-22 21:09:28,655 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,656 start 128 :
+ File: 1zavQne_MWRu5tTO2v9z1e0JdPGROFrTIadjBa6MSipc
+
+__main__ 2020-04-22 21:09:28,657 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,658 start 128 :
+ File: 1_o5CC6s1lKBY2FqxzGKVoBNMRW0Ekaya3mEVaS7Xh_w
+
+__main__ 2020-04-22 21:09:28,659 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,661 start 128 :
+ File: 1-uubVDVcFISy6uzaYsXmPbxS9UmxDjNBxhUDniVDmlk
+
+__main__ 2020-04-22 21:09:28,662 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,664 start 128 :
+ File: 1eD408OKIXN196mYbC69-8M5wDGPxTJLqAnJc7zGlIDQ
+
+__main__ 2020-04-22 21:09:28,666 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,667 start 128 :
+ File: 1tb3xmBatR7YNy70lzq1K41ozoTBaYERMzGcsGNQ5K9Y
+
+__main__ 2020-04-22 21:09:28,668 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,669 start 128 :
+ File: 1NspHhMgG_VjC3P93oZ5IV7xFFL7Uk3NNktrH2O9ZeoE
+
+__main__ 2020-04-22 21:09:28,670 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,671 start 128 :
+ File: 1tbtgmS94lbqjRwYy-I75q4BH8WCkyHDE6HViwAF00ss
+
+__main__ 2020-04-22 21:09:28,672 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,673 start 128 :
+ File: 1PpB3vZv2lJpoVklW51mZuquyju9GF7Zb-_c-rBSIQxc
+
+__main__ 2020-04-22 21:09:28,675 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,676 start 128 :
+ File: 1HRakKISuqu2K_e2YyjoWGlB9C7H8vne7Q3_u089wRW0
+
+__main__ 2020-04-22 21:09:28,677 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,678 start 128 :
+ File: 1mJDzwEHTj1Zvf91GbF8_hhBLhtKugl2wQuzkhEH06zE
+
+__main__ 2020-04-22 21:09:28,680 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,682 start 128 :
+ File: 1KKaeEE792dDRG5mhXJQVCqgdqpJBHaWD_OQ6M3ZhRuo
+
+__main__ 2020-04-22 21:09:28,684 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,685 start 128 :
+ File: 1KsWck_UFf_Kf1t500KZ9VgqB6onKJVu16NYeNLLvAmI
+
+__main__ 2020-04-22 21:09:28,686 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,687 start 128 :
+ File: 15xp5eKILeVOBXgP_NrQRJxEckYLJn4TF-HH51I4xSDQ
+
+__main__ 2020-04-22 21:09:28,688 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,689 start 128 :
+ File: 1FyG_ZowGX2NAKBVvlKMnPuQtHEnQTM2kD5VYkjoVjxI
+
+__main__ 2020-04-22 21:09:28,690 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,692 start 128 :
+ File: 18k-JjTWeVXu2K65Vk32-q7MPPQiAX4K7bflONox2Kos
+
+__main__ 2020-04-22 21:09:28,693 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,694 start 128 :
+ File: 1Xv2sTgI0X-dIB5LLgDmaOviNSzeonDUoLFQ5uGw1Hgw
+
+__main__ 2020-04-22 21:09:28,695 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,696 start 128 :
+ File: 13tHLJrPwP1o3jOffP1Z-orNRbsKBIZSCUR6zs6Nl-z8
+
+__main__ 2020-04-22 21:09:28,698 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,699 start 128 :
+ File: 17xnllCXbgNGTCl3UCF7rjdDFUenH7Ybp_oBLlhaazPM
+
+__main__ 2020-04-22 21:09:28,701 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,702 start 128 :
+ File: 1yub5ti1om7s1nua9Nc3YFcfpzn_WQlrZn3yNxI_WUa0
+
+__main__ 2020-04-22 21:09:28,703 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,704 start 128 :
+ File: 1BuSMP_TzGXY7KbsocMKJCDmtrjrUZxkSX-JKKqKU0U4
+
+__main__ 2020-04-22 21:09:28,705 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,707 start 128 :
+ File: 1sXtPdTSN5B-aVm1yaiGZopC7AoXVhi-ZvJcllmC5iJ0
+
+__main__ 2020-04-22 21:09:28,708 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,709 start 128 :
+ File: 19HElFbOypbhzZzPKby2rypaTe9UsgLq9Upfx0WWhsas
+
+__main__ 2020-04-22 21:09:28,711 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,713 start 128 :
+ File: 1eg0Rle5g1rhCkOPjeENL4SKs4V7SpTIozIv_YMzzuMQ
+
+__main__ 2020-04-22 21:09:28,714 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,715 start 128 :
+ File: 1R0t5FNM3FAp9uJhf2TraL5lKE1hAASZ7fSXr1q7Irxs
+
+__main__ 2020-04-22 21:09:28,716 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,718 start 128 :
+ File: 12a-Eu55AvABgEnfWGrlYyb_H9P0H8UeZVi2lejD5jig
+
+__main__ 2020-04-22 21:09:28,719 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,720 start 128 :
+ File: 1pqUL-BLtEu6HcTxjZToeaNaAz8vkKjDLQiu4B7TLZVU
+
+__main__ 2020-04-22 21:09:28,721 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,722 start 128 :
+ File: 1zjx4HJJwsgyjPEMwb4Q3sMRZSoYMXpspxs2awIpvMcE
+
+__main__ 2020-04-22 21:09:28,723 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,724 start 128 :
+ File: 1VfNKMndN01Hbe2ijTgC-EAj9TpqdD133dm-ltW3BpEc
+
+__main__ 2020-04-22 21:09:28,726 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,727 start 128 :
+ File: 1NXctsqWBRGB5_WvoTyW05ovUYiOoIc0NfXKvl4Z6K40
+
+__main__ 2020-04-22 21:09:28,728 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,729 start 128 :
+ File: 1294s17bsyDgKru3xzl_nM6RJvbU4YKu0b8BFIJaNTvg
+
+__main__ 2020-04-22 21:09:28,731 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,733 start 128 :
+ File: 1F6SbGdjxQe1JjSCL_xfo1pIZRQxLtprw36plcnlZ-0A
+
+__main__ 2020-04-22 21:09:28,734 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,735 start 128 :
+ File: 1_EgMi7XA_HEtXs6t6_t16Tx0SjA8P0R4gp3c_Tx91mU
+
+__main__ 2020-04-22 21:09:28,736 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,737 start 128 :
+ File: 198Xnuv8hxH5mxy_BM8_ccntM8xYkffEJ
+
+__main__ 2020-04-22 21:09:28,739 start 128 :
+ File: 1LfeyEXdNl3YM-lV7iOPSP4dl-uXlnbcL
+
+__main__ 2020-04-22 21:09:28,740 start 128 :
+ File: 1_wlxhy2APCz4lVq6wofdN82TN-A1DYGd
+
+__main__ 2020-04-22 21:09:28,741 start 128 :
+ File: 1TYIOfz_uzybWgEeexs8iE64jcjt-AmUegOP6KORNaWQ
+
+__main__ 2020-04-22 21:09:28,742 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,743 start 128 :
+ File: 19Fu317bfo0V7yOIkfLvKtAU-UJYLf8d2Soy-jTvq1uc
+
+__main__ 2020-04-22 21:09:28,744 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,745 start 128 :
+ File: 1eXJKzIcZCM6pAdVLLrvEyIwQBDDrtm8dComeZ_W7uOI
+
+__main__ 2020-04-22 21:09:28,746 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,747 start 128 :
+ File: 1Ux4BA5BVJTcsGcTcGp8CtB85ahlWp0h83AGvrtAhnTg
+
+__main__ 2020-04-22 21:09:28,749 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,750 start 128 :
+ File: 1K6SwyWCOhW6dt906DjOIhJ-ZklpsooCdTyYHGfEZD2s
+
+__main__ 2020-04-22 21:09:28,751 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,752 start 128 :
+ File: 1ak3AnxwEDfv_EkgRG7Q8U_eglT-eK2W3RtAJqlrtcQA
+
+__main__ 2020-04-22 21:09:28,754 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,755 start 128 :
+ File: 1iTV26x-U2-nngY6gONVklMtrhdfI818IwLM682vpABA
+
+__main__ 2020-04-22 21:09:28,756 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,758 start 128 :
+ File: 1gKBPmWO42yparziEkHbvcBtubHyE_IQwtO1Q8IIrW1c
+
+__main__ 2020-04-22 21:09:28,759 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,760 start 128 :
+ File: 1nOYHEZQN_i8dc6gZNDqguGEmCIU7IX62qngQE0Yvy7o
+
+__main__ 2020-04-22 21:09:28,761 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,762 start 128 :
+ File: 12x_9WkC_rJJ4iQW5IUNaY9BwAHRM1P6nRBi_oyRq7eI
+
+__main__ 2020-04-22 21:09:28,763 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,765 start 128 :
+ File: 1FzKITrCYnc_odhNCRNNaZ-PnT7m0f6qI-iDuQG382OY
+
+__main__ 2020-04-22 21:09:28,767 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,768 start 128 :
+ File: 1VzVAOYcQFfJoPSOGAqpK8xA7OtiUNdq13G3SNRtrq2U
+
+__main__ 2020-04-22 21:09:28,769 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,771 start 128 :
+ File: 0B4z70ztg3cLKR3RPUkZjaUhVdXc
+
+__main__ 2020-04-22 21:09:28,773 start 128 :
+ File: 0B4z70ztg3cLKdUt3ZmxldDVNQ1U
+
+__main__ 2020-04-22 21:09:28,774 start 128 :
+ File: 1UekAo_5ZNDeGufpfc97vaXGktNoq5U04
+
+__main__ 2020-04-22 21:09:28,775 start 128 :
+ File: 0B9uwNDTkJVIYV0JQVU05NkN3dmM
+
+__main__ 2020-04-22 21:09:28,777 start 128 :
+ File: 0B4z70ztg3cLKNnA1SS10UEFzdkE
+
+__main__ 2020-04-22 21:09:28,778 start 128 :
+ File: 0B4z70ztg3cLKVnkyeTR2cFBhTWc
+
+__main__ 2020-04-22 21:09:28,779 start 128 :
+ File: 0B9uwNDTkJVIYVlNfWDF4YllqNkE
+
+__main__ 2020-04-22 21:09:28,781 start 128 :
+ File: 0B4z70ztg3cLKdHNjeFg2TTJhOUk
+
+__main__ 2020-04-22 21:09:28,783 start 128 :
+ File: 0B4z70ztg3cLKb2Q2cXk4X1Q5dk0
+
+__main__ 2020-04-22 21:09:28,785 start 128 :
+ File: 0BzB0sWZU6K74bjI5SURMS2NpUTQ
+
+__main__ 2020-04-22 21:09:28,787 start 128 :
+ File: 0BzbrKEZKhQBBODAzTWRqT2I0alE
+
+__main__ 2020-04-22 21:09:28,789 start 128 :
+ File: 0BzbrKEZKhQBBR1h6cVhwQzA2RWM
+
+__main__ 2020-04-22 21:09:28,791 start 128 :
+ File: 0BzbrKEZKhQBBSWs2NW1kSnBuSlE
+
+__main__ 2020-04-22 21:09:28,793 start 128 :
+ File: 0B4Fujvv5MfqbV0xGc0szQ2ZGVlE
+
+__main__ 2020-04-22 21:09:28,794 start 128 :
+ File: 0B1dAL8o0BN-IVkhiNVQzR004eVU
+
+__main__ 2020-04-22 21:09:28,795 start 128 :
+ File: 0BzbrKEZKhQBBd2JtbjR0NlBZaXc
+
+__main__ 2020-04-22 21:09:28,797 start 128 :
+ File: 0BzbrKEZKhQBBc3pwV05FUHRPS28
+
+__main__ 2020-04-22 21:09:28,799 start 128 :
+ File: 0BzbrKEZKhQBBY204R2c2S3ZxbnM
+
+__main__ 2020-04-22 21:09:28,801 start 128 :
+ File: 1uQO1a7zikb8Pfg4OQZiH0Ccw07mFkOsZ
+
+__main__ 2020-04-22 21:09:28,802 start 128 :
+ File: 0BzbrKEZKhQBBd0s2N2lTc3ZCUnc
+
+__main__ 2020-04-22 21:09:28,803 start 128 :
+ File: 0BzbrKEZKhQBBb3BWZExEY2FEOXc
+
+__main__ 2020-04-22 21:09:28,805 start 128 :
+ File: 0BzbrKEZKhQBBWmZ0ZW1PVkVDWTQ
+
+__main__ 2020-04-22 21:09:28,806 start 128 :
+ File: 0BzbrKEZKhQBBS0kxRWRNRTBiemM
+
+__main__ 2020-04-22 21:09:28,807 start 128 :
+ File: 0BzbrKEZKhQBBWS1FcjVmcWNKX2s
+
+__main__ 2020-04-22 21:09:28,808 start 128 :
+ File: 0BzbrKEZKhQBBMzBuUTdyMFdFVE0
+
+__main__ 2020-04-22 21:09:28,810 start 128 :
+ File: 0B4z70ztg3cLKQjZkRnJveGhpd3c
+
+__main__ 2020-04-22 21:09:28,811 start 128 :
+ File: 0BzbrKEZKhQBBM1R5U1RxZ0hGYzQ
+
+__main__ 2020-04-22 21:09:28,814 start 128 :
+ File: 1Srx2jSpjUQ4VXSpS6lRwAcZ6jtXkJNvR
+
+__main__ 2020-04-22 21:09:28,815 start 128 :
+ File: 1pboBu3tT1z8K2EYr7-EX_xQaaQZETpZp
+
+__main__ 2020-04-22 21:09:28,817 start 128 :
+ File: 0B4z70ztg3cLKT0MyRUE5c0pSSFU
+
+__main__ 2020-04-22 21:09:28,818 start 128 :
+ File: 14_vv-gLYy3o0AHBpuRwVXxbdyZf-OZfi
+
+__main__ 2020-04-22 21:09:28,819 start 128 :
+ File: 0B4z70ztg3cLKNDJ6SlV6bWYzWEU
+
+__main__ 2020-04-22 21:09:28,821 start 128 :
+ File: 0B4z70ztg3cLKa3o1UFhna19uTWs
+
+__main__ 2020-04-22 21:09:28,822 start 128 :
+ File: 0B4z70ztg3cLKelVObUZxcFZIWmc
+
+__main__ 2020-04-22 21:09:28,824 start 128 :
+ File: 1kardxzC2Fy2Sfl-BBUIEWzZ0j2g9PxiPIDNcoiynXiE
+
+__main__ 2020-04-22 21:09:28,826 start 128 :
+ File: 1LZ49mZZavfbc6qrupR026UclucxC0ywjsdzw65tvHy8
+
+__main__ 2020-04-22 21:09:28,827 start 128 :
+ File: 1YrEDAhPVQRvL1DAF7FnxmorNmO91tOYm0CeKCx-YHYc
+
+__main__ 2020-04-22 21:09:28,829 start 128 :
+ File: 1Nm0Mb5nJrqDHqhOJFChfJGh_v4pIxupnA3F3HELGmlQ
+
+__main__ 2020-04-22 21:09:28,831 start 128 :
+ File: 1M5cdlQeDLMFaNcwVNaOPiv3AFPtVTMH-6lQltnCrNJ8
+
+__main__ 2020-04-22 21:09:28,833 start 128 :
+ File: 1M23JcQw9m1kFonxRU3JZU96p4eHCMSYpJcFfpSo73JE
+
+__main__ 2020-04-22 21:09:28,835 start 128 :
+ File: 17Lf2t-DFVyj_vHbkHM--J-OoausS5Kt1NsZg5XFGZTA
+
+__main__ 2020-04-22 21:09:28,836 start 128 :
+ File: 1ErpgaQ5zEbmbVALXTEGj8knlKYDU-ganQZFkuWdMdLs
+
+__main__ 2020-04-22 21:09:28,837 start 128 :
+ File: 1ATwt33p58GMJonubR0SfbRIbwgjGzF1PkFCDWRDno88
+
+__main__ 2020-04-22 21:09:28,838 start 128 :
+ File: 1cflNpTbjQqpz-E4GqrehbgvXRayQ6dXE_X_x5tC8gbE
+
+__main__ 2020-04-22 21:09:28,840 start 128 :
+ File: 1BU7kF9C-LzvjiV2WBq5Yx6sstmvvYDDOPKYP8jygvKg
+
+__main__ 2020-04-22 21:09:28,841 start 128 :
+ File: 1gWhoOIIk2dcQObAvgYpY8Cx_Qc9YUoqNgXEapMic1Qo
+
+__main__ 2020-04-22 21:09:28,844 start 128 :
+ File: 1xS96CqWG26lxXRjriQhRXyssvP6FimBkTtA5EIOLfao
+
+__main__ 2020-04-22 21:09:28,845 start 128 :
+ File: 1qC8O9UkkKeZ82f4iVgf2UYL0ZDqm9ny54I45NmQqBK0
+
+__main__ 2020-04-22 21:09:28,848 start 128 :
+ File: 14KTZ9MFQGABvko_oR_4LlYTopekxI_fVWLoZQA0N85c
+
+__main__ 2020-04-22 21:09:28,850 start 128 :
+ File: 1Xm-pyhQ5D_o4tAHRCtX-amvzVhf-d_pGw0ZhdcTL35Q
+
+__main__ 2020-04-22 21:09:28,851 start 128 :
+ File: 18s8_aXXl5LtTX5ljUkglb7uf3QgbVuGoTlhwf9iHzKw
+
+__main__ 2020-04-22 21:09:28,853 start 128 :
+ File: 1V3RqT0n3pc2un7LT3XHJhOLGqmACXSAMSCExEzabbJw
+
+__main__ 2020-04-22 21:09:28,854 start 128 :
+ File: 1-1y6G4MviqPb0QzFlRjccX3Hlm72FFJS1VppqcHKCTs
+
+__main__ 2020-04-22 21:09:28,855 start 128 :
+ File: 19yXrTeWC3zjIWztx7RSpKqHL-dpfVf7PPaOmbKyAPrs
+
+__main__ 2020-04-22 21:09:28,857 start 128 :
+ File: 1KxeMzcqJ7__fOtXnftJ-Pa7r2vlOP2GwzmoDpyt0mBE
+
+__main__ 2020-04-22 21:09:28,858 start 128 :
+ File: 1Rwm5j7Cnfx80BQ5aCjWLNGe5Zsy2eEIcqnHMhaIgwRc
+
+__main__ 2020-04-22 21:09:28,860 start 128 :
+ File: 1zyLifTUL_nG8Vm-qDkOCwL5iOSD1DiyDuysUCIgDBXk
+
+__main__ 2020-04-22 21:09:28,862 start 128 :
+ File: 1h_HFgkaxvyfaL9G3-VwMoICDdcnZjmbg76vR0qwBRaE
+
+__main__ 2020-04-22 21:09:28,864 start 128 :
+ File: 1yvpmUIl5IPAvt3DLkCojjBjK0c8LngY4rVwqAIxau5U
+
+__main__ 2020-04-22 21:09:28,866 start 128 :
+ File: 1uJxHEVRHa1gqbbqWbxUkzSl5t5v3OOPZXJ7Yotx4dFI
+
+__main__ 2020-04-22 21:09:28,868 start 128 :
+ File: 17Lf2t-DFVyj_vHbkHM--J-OoausS5Kt1NsZg5XFGZTA
+
+__main__ 2020-04-22 21:09:28,869 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,870 start 128 :
+ File: 1ErpgaQ5zEbmbVALXTEGj8knlKYDU-ganQZFkuWdMdLs
+
+__main__ 2020-04-22 21:09:28,871 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,872 start 128 :
+ File: 1ATwt33p58GMJonubR0SfbRIbwgjGzF1PkFCDWRDno88
+
+__main__ 2020-04-22 21:09:28,873 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,874 start 128 :
+ File: 1yvpmUIl5IPAvt3DLkCojjBjK0c8LngY4rVwqAIxau5U
+
+__main__ 2020-04-22 21:09:28,875 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,877 start 128 :
+ File: 1cflNpTbjQqpz-E4GqrehbgvXRayQ6dXE_X_x5tC8gbE
+
+__main__ 2020-04-22 21:09:28,878 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,879 start 128 :
+ File: 1BU7kF9C-LzvjiV2WBq5Yx6sstmvvYDDOPKYP8jygvKg
+
+__main__ 2020-04-22 21:09:28,881 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,882 start 128 :
+ File: 1gWhoOIIk2dcQObAvgYpY8Cx_Qc9YUoqNgXEapMic1Qo
+
+__main__ 2020-04-22 21:09:28,884 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,885 start 128 :
+ File: 1xS96CqWG26lxXRjriQhRXyssvP6FimBkTtA5EIOLfao
+
+__main__ 2020-04-22 21:09:28,886 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,887 start 128 :
+ File: 1qC8O9UkkKeZ82f4iVgf2UYL0ZDqm9ny54I45NmQqBK0
+
+__main__ 2020-04-22 21:09:28,889 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,890 start 128 :
+ File: 14KTZ9MFQGABvko_oR_4LlYTopekxI_fVWLoZQA0N85c
+
+__main__ 2020-04-22 21:09:28,892 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,893 start 128 :
+ File: 1LZ49mZZavfbc6qrupR026UclucxC0ywjsdzw65tvHy8
+
+__main__ 2020-04-22 21:09:28,894 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,895 start 128 :
+ File: 1YrEDAhPVQRvL1DAF7FnxmorNmO91tOYm0CeKCx-YHYc
+
+__main__ 2020-04-22 21:09:28,896 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,897 start 128 :
+ File: 1Nm0Mb5nJrqDHqhOJFChfJGh_v4pIxupnA3F3HELGmlQ
+
+__main__ 2020-04-22 21:09:28,899 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,900 start 128 :
+ File: 1M5cdlQeDLMFaNcwVNaOPiv3AFPtVTMH-6lQltnCrNJ8
+
+__main__ 2020-04-22 21:09:28,901 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,902 start 128 :
+ File: 1M23JcQw9m1kFonxRU3JZU96p4eHCMSYpJcFfpSo73JE
+
+__main__ 2020-04-22 21:09:28,904 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,905 start 128 :
+ File: 1kardxzC2Fy2Sfl-BBUIEWzZ0j2g9PxiPIDNcoiynXiE
+
+__main__ 2020-04-22 21:09:28,906 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,908 start 128 :
+ File: 1h_HFgkaxvyfaL9G3-VwMoICDdcnZjmbg76vR0qwBRaE
+
+__main__ 2020-04-22 21:09:28,909 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,910 start 128 :
+ File: 1Xm-pyhQ5D_o4tAHRCtX-amvzVhf-d_pGw0ZhdcTL35Q
+
+__main__ 2020-04-22 21:09:28,911 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,912 start 128 :
+ File: 18s8_aXXl5LtTX5ljUkglb7uf3QgbVuGoTlhwf9iHzKw
+
+__main__ 2020-04-22 21:09:28,914 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,915 start 128 :
+ File: 1V3RqT0n3pc2un7LT3XHJhOLGqmACXSAMSCExEzabbJw
+
+__main__ 2020-04-22 21:09:28,917 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,918 start 128 :
+ File: 1-1y6G4MviqPb0QzFlRjccX3Hlm72FFJS1VppqcHKCTs
+
+__main__ 2020-04-22 21:09:28,920 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,921 start 128 :
+ File: 19yXrTeWC3zjIWztx7RSpKqHL-dpfVf7PPaOmbKyAPrs
+
+__main__ 2020-04-22 21:09:28,922 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,924 start 128 :
+ File: 1KxeMzcqJ7__fOtXnftJ-Pa7r2vlOP2GwzmoDpyt0mBE
+
+__main__ 2020-04-22 21:09:28,925 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,926 start 128 :
+ File: 1Rwm5j7Cnfx80BQ5aCjWLNGe5Zsy2eEIcqnHMhaIgwRc
+
+__main__ 2020-04-22 21:09:28,927 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,928 start 128 :
+ File: 1zyLifTUL_nG8Vm-qDkOCwL5iOSD1DiyDuysUCIgDBXk
+
+__main__ 2020-04-22 21:09:28,929 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,931 start 128 :
+ File: 1uJxHEVRHa1gqbbqWbxUkzSl5t5v3OOPZXJ7Yotx4dFI
+
+__main__ 2020-04-22 21:09:28,932 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,934 start 128 :
+ File: 13a3Owyyk120IyPj-ibLkjMj-gJlc-GoLnREVR1v76gk
+
+__main__ 2020-04-22 21:09:28,935 start 128 :
+ File: 1crgyAPC7Va9ScwbcSEMrmtDqpSOHtDKKin4Qy6jIZbE
+
+__main__ 2020-04-22 21:09:28,937 start 128 :
+ File: 1TTsNGYYccQIuKIydQ5Me_4KPhSVUcs-rpcoksBh-Yao
+
+__main__ 2020-04-22 21:09:28,939 start 128 :
+ File: 1SceQARvoMZsenh3mHNFZVorG4Y--Tk-S85NhP1QqXUc
+
+__main__ 2020-04-22 21:09:28,941 start 128 :
+ File: 1e9ijaiN6UeeWdszruJusWJvcERPDFZxm47zPkASOsTo
+
+__main__ 2020-04-22 21:09:28,942 start 128 :
+ File: 11KNQSupvOIHe8RyMtVPDhxRpxDE9qIJVGgsB0sGTA4A
+
+__main__ 2020-04-22 21:09:28,944 start 128 :
+ File: 1GRvwZGIxky-TRmGLbc-oCJiLZtK5Ah0T5jP-i5pm6Rw
+
+__main__ 2020-04-22 21:09:28,945 start 128 :
+ File: 196_rMcr8M0kh_jhQ7LjUjO23bKnhwLu7rm9IwA-8o_I
+
+__main__ 2020-04-22 21:09:28,947 start 128 :
+ File: 13-vzOM3RA1SHdKRTAsFyLnLbbGlbUx9AV99Q_c95VXs
+
+__main__ 2020-04-22 21:09:28,950 start 128 :
+ File: 1JfK1iJRQ_0W5VQYPAktucbe6JWwyTjTbs6l_keXVFj4
+
+__main__ 2020-04-22 21:09:28,951 start 128 :
+ File: 1b-WTM2ekE1k6pPqFt0v7fa-myJ3Yvhg-vFT_zOs-DA4
+
+__main__ 2020-04-22 21:09:28,953 start 128 :
+ File: 1UvcAx8uccrerf4uud0w1zvsAsbMSJfyqo298Dh_bq_M
+
+__main__ 2020-04-22 21:09:28,955 start 128 :
+ File: 1i-Tv07oc_5F72OdEdWf91bbLwoFEaXhmjjlo3QOQyrk
+
+__main__ 2020-04-22 21:09:28,957 start 128 :
+ File: 12msYuSI-rqvfXROgoGjtxN3Y9AlT3SnRTd6Om5xOxmM
+
+__main__ 2020-04-22 21:09:28,958 start 128 :
+ File: 1z0qLmI61do7x0qw3rnK74msvcEZ4tEEVVOERiauTuaI
+
+__main__ 2020-04-22 21:09:28,959 start 128 :
+ File: 1HdWWgJDh4IA7T550gANGtjqDNvq0AwP0serPT4qI34k
+
+__main__ 2020-04-22 21:09:28,961 start 128 :
+ File: 1kzKbaDRw0fxr-yzmfDdTWyiOBuuGprpgdsicAGMD8aw
+
+__main__ 2020-04-22 21:09:28,962 start 128 :
+ File: 1fVc04agXKNKopxuf3yInvn_EXCPuHxfctQqv9rarZIQ
+
+__main__ 2020-04-22 21:09:28,964 start 128 :
+ File: 1ISa7kCERN_ZasqG1xx_SlUxIBqIShR61bruIFiW0dyg
+
+__main__ 2020-04-22 21:09:28,966 start 128 :
+ File: 1J49oebTpPhUPtQ02Es7X4UHwi8LuKQLM8mvBxprbasM
+
+__main__ 2020-04-22 21:09:28,968 start 128 :
+ File: 11KNQSupvOIHe8RyMtVPDhxRpxDE9qIJVGgsB0sGTA4A
+
+__main__ 2020-04-22 21:09:28,969 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,970 start 128 :
+ File: 1GRvwZGIxky-TRmGLbc-oCJiLZtK5Ah0T5jP-i5pm6Rw
+
+__main__ 2020-04-22 21:09:28,972 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,973 start 128 :
+ File: 1OUKhIKEYHvySvAKVYyxahfwA7aNRDTgUuCKhW_72aF4
+
+__main__ 2020-04-22 21:09:28,974 start 128 :
+ File: 1ICn3A7OdVPnhEX3jPkQfMvLu_P3QKtQO_wb5Ds5Rs6Q
+
+__main__ 2020-04-22 21:09:28,976 start 128 :
+ File: 1B-r50uSqygoVn0leRm1HUNgCfj7cTXCgZ-KrUqd8EyE
+
+__main__ 2020-04-22 21:09:28,977 start 128 :
+ File: 1TdlhubLVUoi_6U9xaVK42KshMOaBIF7x-rsMQfwC8ZY
+
+__main__ 2020-04-22 21:09:28,978 start 128 :
+ File: 1CEbUajiAYrz2tpwIPZdNCVGniK6leqx04Hmva2N4XM4
+
+__main__ 2020-04-22 21:09:28,980 start 128 :
+ File: 1Jzh-bWmP8YOEwSm1WsYvN6c8BDgEzMsWsSYXrZ6uwds
+
+__main__ 2020-04-22 21:09:28,982 start 128 :
+ File: 1U1hoywM09b-AUO7fIR9TflRSsc3Qu3XmxWmzEph3TmE
+
+__main__ 2020-04-22 21:09:28,984 start 128 :
+ File: 1_ovH_D4cpuVTDp9z4DtrqQUeTTjLYI5RWrZ06FXx8fg
+
+__main__ 2020-04-22 21:09:28,986 start 128 :
+ File: 1HOWZp6ESjGoYrybdR0LLcpWVlgxys_LqI8yxEeyFkpY
+
+__main__ 2020-04-22 21:09:28,988 start 128 :
+ File: 1cX0p4FkT_mRKMngyAqtysHHhT0t8EXJLvv0IYzoS4sU
+
+__main__ 2020-04-22 21:09:28,990 start 128 :
+ File: 1WVRprv2UdMlSY1fciu82upcO_aVl7lOnIFAm3XzHZ1Y
+
+__main__ 2020-04-22 21:09:28,991 start 128 :
+ File: 1JK8IsrP_wGm2CMPI2TbhvrrYTfzAebH5h56mDeQugoo
+
+__main__ 2020-04-22 21:09:28,992 start 128 :
+ File: 1JfK1iJRQ_0W5VQYPAktucbe6JWwyTjTbs6l_keXVFj4
+
+__main__ 2020-04-22 21:09:28,993 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,994 start 128 :
+ File: 1b-WTM2ekE1k6pPqFt0v7fa-myJ3Yvhg-vFT_zOs-DA4
+
+__main__ 2020-04-22 21:09:28,995 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,996 start 128 :
+ File: 1UvcAx8uccrerf4uud0w1zvsAsbMSJfyqo298Dh_bq_M
+
+__main__ 2020-04-22 21:09:28,997 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:28,999 start 128 :
+ File: 1i-Tv07oc_5F72OdEdWf91bbLwoFEaXhmjjlo3QOQyrk
+
+__main__ 2020-04-22 21:09:29,001 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:29,002 start 128 :
+ File: 12msYuSI-rqvfXROgoGjtxN3Y9AlT3SnRTd6Om5xOxmM
+
+__main__ 2020-04-22 21:09:29,004 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:29,005 start 128 :
+ File: 1z0qLmI61do7x0qw3rnK74msvcEZ4tEEVVOERiauTuaI
+
+__main__ 2020-04-22 21:09:29,006 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:29,007 start 128 :
+ File: 1HdWWgJDh4IA7T550gANGtjqDNvq0AwP0serPT4qI34k
+
+__main__ 2020-04-22 21:09:29,008 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:29,009 start 128 :
+ File: 1kzKbaDRw0fxr-yzmfDdTWyiOBuuGprpgdsicAGMD8aw
+
+__main__ 2020-04-22 21:09:29,010 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:29,011 start 128 :
+ File: 1fVc04agXKNKopxuf3yInvn_EXCPuHxfctQqv9rarZIQ
+
+__main__ 2020-04-22 21:09:29,012 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:29,013 start 128 :
+ File: 1ZOEuDWmcBiEsrKUhpAXEZmTCecLn0urNu2XQv_2cBk4
+
+__main__ 2020-04-22 21:09:29,015 start 128 :
+ File: 16s2vcEm8xd2lr7zC_y2qLL0yKH6m7cOmHuPPKage55Q
+
+__main__ 2020-04-22 21:09:29,018 start 128 :
+ File: 0B4Fujvv5MfqbUWw1OGZLaVJYM25ic2dkVUp4YU9MeUYxempN
+
+__main__ 2020-04-22 21:09:29,019 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:29,020 start 128 :
+ File: 1sd2IyZnVT_UW3DOFdi9bIzzAtNBok0WFugmnnJvJf38
+
+__main__ 2020-04-22 21:09:29,022 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:29,023 start 128 :
+ File: 0B4Fujvv5MfqbNGswWE5uS19Pc00xQ183SjhGdlVRcGRSSVBj
+
+__main__ 2020-04-22 21:09:29,024 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:29,025 start 128 :
+ File: 0B4Fujvv5MfqbMHpzR1pIQ3ZYcHBaSi1FTUpWZkpBOWNHTEM4
+
+__main__ 2020-04-22 21:09:29,026 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:29,026 start 128 :
+ File: 0B4Fujvv5MfqbWTU4YUZLbGdncjdvWVFrdm5OMzAtUTRRZzgw
+
+__main__ 2020-04-22 21:09:29,028 start 128 :
+ File: 0B4z70ztg3cLKLTV4SVJIeVRaR00
+
+__main__ 2020-04-22 21:09:29,029 start 128 :
+ File: 0B4z70ztg3cLKN0dlSWxDcEJIcXc
+
+__main__ 2020-04-22 21:09:29,032 start 128 :
+ File: 0B4z70ztg3cLKWmZkYkNZeWxkMEk
+
+__main__ 2020-04-22 21:09:29,034 start 128 :
+ File: 0B4z70ztg3cLKZGIxSDlKdTJUalU
+
+__main__ 2020-04-22 21:09:29,036 start 128 :
+ File: 0B4z70ztg3cLKa19od1pWRjdWMnc
+
+__main__ 2020-04-22 21:09:29,038 start 128 :
+ File: 0B4z70ztg3cLKLW1wbmY1bUM2M28
+
+__main__ 2020-04-22 21:09:29,039 start 128 :
+ File: 0B4z70ztg3cLKV0J6YkNYWVN6V1U
+
+__main__ 2020-04-22 21:09:29,040 start 128 :
+ File: 0B314tJw3ioySaU02Y25KV1RmZmM
+
+__main__ 2020-04-22 21:09:29,041 start 128 :
+ File: 0B314tJw3ioySOU1qX2tyS2VSTjg
+
+__main__ 2020-04-22 21:09:29,043 start 128 :
+ File: 0BzbrKEZKhQBBRmZoUEhXaEFXeFE
+
+__main__ 2020-04-22 21:09:29,044 start 128 :
+ File: 0B314tJw3ioySWWpuZWxtN2ZybWM
+
+__main__ 2020-04-22 21:09:29,045 start 128 :
+ File: 0B314tJw3ioySRTdrUk9YRFBNLWM
+
+__main__ 2020-04-22 21:09:29,048 start 128 :
+ File: 0BzbrKEZKhQBBanRya0trWnBaR0E
+
+__main__ 2020-04-22 21:09:29,051 start 128 :
+ File: 0BzbrKEZKhQBBbkFwcmdGeUU3cE0
+
+__main__ 2020-04-22 21:09:29,054 start 128 :
+ File: 0BzbrKEZKhQBBTktmWU13LWNfZ0k
+
+__main__ 2020-04-22 21:09:29,055 start 128 :
+ File: 0B4z70ztg3cLKQlB1Z2kyRGJHbGc
+
+__main__ 2020-04-22 21:09:29,057 start 128 :
+ File: 0BzbrKEZKhQBBbjVEaVJMeV9HVUU
+
+__main__ 2020-04-22 21:09:29,059 start 128 :
+ File: 0BzbrKEZKhQBBWnczWHQ5eEJpX2c
+
+__main__ 2020-04-22 21:09:29,060 start 128 :
+ File: 0BzbrKEZKhQBBZDR4c05VaDhmMEU
+
+__main__ 2020-04-22 21:09:29,061 start 128 :
+ File: 1WsdgPP3z17uNTsiGD7LfWIoPIHHGWfEVQ-CXSwgs3059XhLAvDUsVPcGlmBS
+
+__main__ 2020-04-22 21:09:29,064 start 128 :
+ File: 0BzbrKEZKhQBBVy1SXzZhSEJZbEE
+
+__main__ 2020-04-22 21:09:29,066 start 128 :
+ File: 0B4z70ztg3cLKRHhyUnFRY0hFYlk
+
+__main__ 2020-04-22 21:09:29,069 start 128 :
+ File: 0B4z70ztg3cLKSkNCYmlscG9uR1U
+
+__main__ 2020-04-22 21:09:29,070 start 128 :
+ File: 0B4z70ztg3cLKOVFjODJfb2Uzb2s
+
+__main__ 2020-04-22 21:09:29,072 start 128 :
+ File: 0B3LDW5TwQt3jbVpiY21wRml2dWs
+
+__main__ 2020-04-22 21:09:29,073 start 128 :
+ File: 0BzbrKEZKhQBBZmM3SUtRRUpMcVU
+
+__main__ 2020-04-22 21:09:29,074 start 128 :
+ File: 0B39EL3QtE8zyMENScWE2MHR5VlE
+
+__main__ 2020-04-22 21:09:29,076 start 128 :
+ File: 0B3LDW5TwQt3jMnJ3bWVNZXFla0E
+
+__main__ 2020-04-22 21:09:29,077 start 128 :
+ File: 0BzbrKEZKhQBBWlJZajU3R2trRVk
+
+__main__ 2020-04-22 21:09:29,079 start 128 :
+ File: 1EJ5bpFWJWLdDI3BuX2_yKbriiZlByFx2hM_h3Iuo0lU
+
+__main__ 2020-04-22 21:09:29,082 start 128 :
+ File: 19ygUczxObgJ1T6IaNNy58eb13Z7FL6Z3QmuGA5eLPnU
+
+__main__ 2020-04-22 21:09:29,084 start 128 :
+ File: 1NIRC8ZVCuz8MwINM-6pgmCznw6ZfmzGjDQVf8Td1I68
+
+__main__ 2020-04-22 21:09:29,086 start 128 :
+ File: 1yllVW5DGoWSkp3PmHABjhGfrZC4isoMYL7zCMVYq4Is
+
+__main__ 2020-04-22 21:09:29,087 start 128 :
+ File: 1dur5XycR1O_NpPS2rLfz79B73RqpqrV5VvQTJmPODq8
+
+__main__ 2020-04-22 21:09:29,089 start 128 :
+ File: 1dur5XycR1O_NpPS2rLfz79B73RqpqrV5VvQTJmPODq8
+
+__main__ 2020-04-22 21:09:29,090 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:29,091 start 128 :
+ File: 1yllVW5DGoWSkp3PmHABjhGfrZC4isoMYL7zCMVYq4Is
+
+__main__ 2020-04-22 21:09:29,091 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:29,092 start 128 :
+ File: 1EJ5bpFWJWLdDI3BuX2_yKbriiZlByFx2hM_h3Iuo0lU
+
+__main__ 2020-04-22 21:09:29,093 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:29,095 start 128 :
+ File: 1NIRC8ZVCuz8MwINM-6pgmCznw6ZfmzGjDQVf8Td1I68
+
+__main__ 2020-04-22 21:09:29,096 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:29,097 start 128 :
+ File: 19ygUczxObgJ1T6IaNNy58eb13Z7FL6Z3QmuGA5eLPnU
+
+__main__ 2020-04-22 21:09:29,098 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:29,100 start 128 :
+ File: 1-9_HCsElPxdZw2z6K6uF-Mix2Y7JNE0H
+
+__main__ 2020-04-22 21:09:29,101 start 128 :
+ File: 1BShvNLJPHC8mPY_nU45kyYgr_80QbSXQ
+
+__main__ 2020-04-22 21:09:29,103 start 128 :
+ File: 0B4z70ztg3cLKUUFSeEZMU0kteWs
+
+__main__ 2020-04-22 21:09:29,104 start 128 :
+ File: 0BzbrKEZKhQBBQXBrZnMyNjBKSFU
+
+__main__ 2020-04-22 21:09:29,105 start 128 :
+ File: 1CGnV36KKevveLpDdtqEWUD96JLHji09j
+
+__main__ 2020-04-22 21:09:29,107 start 128 :
+ File: 0B4z70ztg3cLKR1hTSUQwX3hVZjA
+
+__main__ 2020-04-22 21:09:29,108 start 128 :
+ File: 0BzbrKEZKhQBBSWk0UF9mdFdZQjg
+
+__main__ 2020-04-22 21:09:29,110 start 128 :
+ File: 0B4z70ztg3cLKaXZ1clZTUGF3TGM
+
+__main__ 2020-04-22 21:09:29,111 start 128 :
+ File: 1IKMzjQYS2BmQtqjctsEugYAAQ6Gamo2F
+
+__main__ 2020-04-22 21:09:29,114 start 128 :
+ File: 0B4z70ztg3cLKOTlfTmw4R1JXOVU
+
+__main__ 2020-04-22 21:09:29,116 start 128 :
+ File: 1zySU3-jwa0plUtI99yitk2hAMCYb42nf
+
+__main__ 2020-04-22 21:09:29,118 start 128 :
+ File: 0B4z70ztg3cLKQURzSTBUQ01GcjA
+
+__main__ 2020-04-22 21:09:29,119 start 128 :
+ File: 0BzbrKEZKhQBBWGNMSFNXVFRXaW8
+
+__main__ 2020-04-22 21:09:29,121 start 128 :
+ File: 1gv80C3QKHv9b2YFv2vlnMb3F-pC0j3Ih
+
+__main__ 2020-04-22 21:09:29,122 start 128 :
+ File: 15n73u4biX0aeMPiZCUr7pg1DaJsWLA33
+
+__main__ 2020-04-22 21:09:29,123 start 128 :
+ File: 1gLpWHtLUQKPV5alLIQZZuFIRQ5vLGJF8
+
+__main__ 2020-04-22 21:09:29,125 start 128 :
+ File: 1z47pjh_V2ewdFHfBR7Tru3u9hGHwkVnm
+
+__main__ 2020-04-22 21:09:29,126 start 128 :
+ File: 0B4z70ztg3cLKNUloR1QzcnpTSmM
+
+__main__ 2020-04-22 21:09:29,127 start 128 :
+ File: 131liVyDybywkLCpWQMiu8ooCXHv0piOn
+
+__main__ 2020-04-22 21:09:29,129 start 128 :
+ File: 0BzbrKEZKhQBBSF9kNE1nT3Q4V1U
+
+__main__ 2020-04-22 21:09:29,130 start 128 :
+ File: 0BzbrKEZKhQBBYzlCOUJITlFud1E
+
+__main__ 2020-04-22 21:09:29,133 start 128 :
+ File: 0B4z70ztg3cLKcHNaX2o3VVJ1UTQ
+
+__main__ 2020-04-22 21:09:29,134 start 128 :
+ File: 0BzbrKEZKhQBBSF9kdW5JVXVqYXc
+
+__main__ 2020-04-22 21:09:29,136 start 128 :
+ File: 0BzbrKEZKhQBBLVhPRUlYUlJ0WHc
+
+__main__ 2020-04-22 21:09:29,137 start 128 :
+ File: 0BzbrKEZKhQBBN2hXempBa2JIQU0
+
+__main__ 2020-04-22 21:09:29,138 start 128 :
+ File: 1gFZKPYhQPM-kijc3Q3If-Bo34pmeCnwQsKxrcZcipOc
+
+__main__ 2020-04-22 21:09:29,140 start 128 :
+ File: 1DwsrAcC611l4MM1jZzGKCSsOz5KCi98HAECgfA2vnCk
+
+__main__ 2020-04-22 21:09:29,141 start 128 :
+ File: 1OUKhIKEYHvySvAKVYyxahfwA7aNRDTgUuCKhW_72aF4
+
+__main__ 2020-04-22 21:09:29,142 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:29,143 start 128 :
+ File: 1ICn3A7OdVPnhEX3jPkQfMvLu_P3QKtQO_wb5Ds5Rs6Q
+
+__main__ 2020-04-22 21:09:29,145 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:29,146 start 128 :
+ File: 1B-r50uSqygoVn0leRm1HUNgCfj7cTXCgZ-KrUqd8EyE
+
+__main__ 2020-04-22 21:09:29,148 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:29,149 start 128 :
+ File: 1TdlhubLVUoi_6U9xaVK42KshMOaBIF7x-rsMQfwC8ZY
+
+__main__ 2020-04-22 21:09:29,150 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:29,150 start 128 :
+ File: 1ISa7kCERN_ZasqG1xx_SlUxIBqIShR61bruIFiW0dyg
+
+__main__ 2020-04-22 21:09:29,152 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:29,153 start 128 :
+ File: 1J49oebTpPhUPtQ02Es7X4UHwi8LuKQLM8mvBxprbasM
+
+__main__ 2020-04-22 21:09:29,153 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:29,154 start 128 :
+ File: 1gFZKPYhQPM-kijc3Q3If-Bo34pmeCnwQsKxrcZcipOc
+
+__main__ 2020-04-22 21:09:29,155 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:29,156 start 128 :
+ File: 1DwsrAcC611l4MM1jZzGKCSsOz5KCi98HAECgfA2vnCk
+
+__main__ 2020-04-22 21:09:29,158 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:29,159 start 128 :
+ File: 13a3Owyyk120IyPj-ibLkjMj-gJlc-GoLnREVR1v76gk
+
+__main__ 2020-04-22 21:09:29,160 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:29,161 start 128 :
+ File: 1crgyAPC7Va9ScwbcSEMrmtDqpSOHtDKKin4Qy6jIZbE
+
+__main__ 2020-04-22 21:09:29,162 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:29,164 start 128 :
+ File: 1TTsNGYYccQIuKIydQ5Me_4KPhSVUcs-rpcoksBh-Yao
+
+__main__ 2020-04-22 21:09:29,166 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:29,168 start 128 :
+ File: 1SceQARvoMZsenh3mHNFZVorG4Y--Tk-S85NhP1QqXUc
+
+__main__ 2020-04-22 21:09:29,169 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:29,170 start 128 :
+ File: 1e9ijaiN6UeeWdszruJusWJvcERPDFZxm47zPkASOsTo
+
+__main__ 2020-04-22 21:09:29,171 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:29,172 start 128 :
+ File: 196_rMcr8M0kh_jhQ7LjUjO23bKnhwLu7rm9IwA-8o_I
+
+__main__ 2020-04-22 21:09:29,174 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:29,175 start 128 :
+ File: 13-vzOM3RA1SHdKRTAsFyLnLbbGlbUx9AV99Q_c95VXs
+
+__main__ 2020-04-22 21:09:29,176 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:29,177 start 128 :
+ File: 1CEbUajiAYrz2tpwIPZdNCVGniK6leqx04Hmva2N4XM4
+
+__main__ 2020-04-22 21:09:29,178 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:29,179 start 128 :
+ File: 1Jzh-bWmP8YOEwSm1WsYvN6c8BDgEzMsWsSYXrZ6uwds
+
+__main__ 2020-04-22 21:09:29,180 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:29,182 start 128 :
+ File: 1U1hoywM09b-AUO7fIR9TflRSsc3Qu3XmxWmzEph3TmE
+
+__main__ 2020-04-22 21:09:29,183 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:29,184 start 128 :
+ File: 1_ovH_D4cpuVTDp9z4DtrqQUeTTjLYI5RWrZ06FXx8fg
+
+__main__ 2020-04-22 21:09:29,185 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:29,186 start 128 :
+ File: 1JK8IsrP_wGm2CMPI2TbhvrrYTfzAebH5h56mDeQugoo
+
+__main__ 2020-04-22 21:09:29,187 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:29,189 start 128 :
+ File: 1HZw5L-rcza1iEFswUoacFN2CigYhHUmy1DoQHMUEnqc
+
+__main__ 2020-04-22 21:09:29,190 start 128 :
+ File: 1q4oUT527mvm6Z99z5Wxh7cBVu8txJwaihnaXAdzz5fE
+
+__main__ 2020-04-22 21:09:29,192 start 128 :
+ File: 1H3xmRBsmrq-iOSwSuZdEQoGrqC-0Ka8yKpcocJWI2Qk
+
+__main__ 2020-04-22 21:09:29,194 start 128 :
+ File: 1LcAHCpfJPQo23LeE6raQ48ZltiQqZ0jwFGQp-cpOGks
+
+__main__ 2020-04-22 21:09:29,196 start 128 :
+ File: 1sanBGafzkn5lzrqFgAJa2DQ-R872Rt-lCMkeCMP-xQs
+
+__main__ 2020-04-22 21:09:29,199 start 128 :
+ File: 1h5crBPICUl1tr_PjOHIuHLOePVpI944PpDwPZTdBgcQ
+
+__main__ 2020-04-22 21:09:29,201 start 128 :
+ File: 1rBFa02pYZiT1kfpCBNCLHQ97-1mp-NGpIATfc4iZboc
+
+__main__ 2020-04-22 21:09:29,202 start 128 :
+ File: 1QyQmNut60FNJByMNcv0NSyQvI1j1DLYTGtXn-VGarPE
+
+__main__ 2020-04-22 21:09:29,204 start 128 :
+ File: 1tcAEYXU067CQcn9zzTM-ujz9NOjUOM1mRLUVgIIb80c
+
+__main__ 2020-04-22 21:09:29,205 start 128 :
+ File: 1mpiOXrgHa0SGIsNDnSOs70ArIAi_2vi0Ujw6TkSW2RQ
+
+__main__ 2020-04-22 21:09:29,206 start 128 :
+ File: 1QFQ7F7mNbpa6ZIo2Piy-sFb7--Rxdy5GYfgiIpwrJ8A
+
+__main__ 2020-04-22 21:09:29,209 start 128 :
+ File: 1IY-_pt2CS9hoPlSk2144Rnf4jHH4Nv2L2eo4kPBTRiY
+
+__main__ 2020-04-22 21:09:29,211 start 128 :
+ File: 1t8jf4y8CJQiul6bXc6OrvjnXjkPgONkTKdXGkj6e4Ps
+
+__main__ 2020-04-22 21:09:29,212 start 128 :
+ File: 1bJZoExEi-jg9c7EimHL4Uc3XPLQsrmCZM_Dz_1M5OVg
+
+__main__ 2020-04-22 21:09:29,214 start 128 :
+ File: 1KfPb3dCRNiKJ-_mj-L5IdTZYQRTQo6xd2jDkCL94W1w
+
+__main__ 2020-04-22 21:09:29,217 start 128 :
+ File: 1QCHW4IQHA2vCa1Yoxak6ciYnhE7qlwNW_fnOoSBMEG0
+
+__main__ 2020-04-22 21:09:29,218 start 128 :
+ File: 1qzyADvsj4voj5Gk1RxlbUhvMUx52JS_4Lz0Rub4nDAI
+
+__main__ 2020-04-22 21:09:29,220 start 128 :
+ File: 1U6Y1Qg4RVxKdKyUPg8mb_RObDnC5QcEygOXYF4mXuSg
+
+__main__ 2020-04-22 21:09:29,222 start 128 :
+ File: 1tEY2XbnyEkH5bOQ0y0HmWgJ2vZ5tKsrjh7qZYjdWAyg
+
+__main__ 2020-04-22 21:09:29,223 start 128 :
+ File: 1WFJYasE9LmtyBf776a2oSGIC_ITRZNZNrHnJbByiHz8
+
+__main__ 2020-04-22 21:09:29,226 start 128 :
+ File: 19qZnBERiKqL8I8xdBdLdgD7fOFZsNL1NDdcz3TJ9Gkg
+
+__main__ 2020-04-22 21:09:29,228 start 128 :
+ File: 15l9f_tZzB4B4ByKbuD5fJa0bwdk_YqiSmSg62w5TU4E
+
+__main__ 2020-04-22 21:09:29,230 start 128 :
+ File: 1fb6O0E3ND3FngBsYCfiFvTf5C7xDmIyjFbxCEQGeQK0
+
+__main__ 2020-04-22 21:09:29,232 start 128 :
+ File: 15A7uqZ5m_7jqIYz5NVUyM0cmStEbSTcezN7qTo0wwXA
+
+__main__ 2020-04-22 21:09:29,234 start 128 :
+ File: 1aOrKFEEEphoSmQXNpvXYE8OVqfpq4Cm0_pavpJnHNhg
+
+__main__ 2020-04-22 21:09:29,236 start 128 :
+ File: 1ZOEuDWmcBiEsrKUhpAXEZmTCecLn0urNu2XQv_2cBk4
+
+__main__ 2020-04-22 21:09:29,237 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:29,238 start 128 :
+ File: 16s2vcEm8xd2lr7zC_y2qLL0yKH6m7cOmHuPPKage55Q
+
+__main__ 2020-04-22 21:09:29,240 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:29,242 start 128 :
+ File: 1rBFa02pYZiT1kfpCBNCLHQ97-1mp-NGpIATfc4iZboc
+
+__main__ 2020-04-22 21:09:29,243 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:29,244 start 128 :
+ File: 160R40mTuqkKNjME0oJVZAEM0186W6yAjl0SBUMSIIFY
+
+__main__ 2020-04-22 21:09:29,246 start 128 :
+ File: 1A7VHFEYQVj0bigcnBi3pn4NngcNXxH35Croy3zrdvLY
+
+__main__ 2020-04-22 21:09:29,248 start 128 :
+ File: 1WrjmluBbaNBS8u_WZmREl02_oMy2zv6Kcdte82zR5yk
+
+__main__ 2020-04-22 21:09:29,250 start 128 :
+ File: 1LcAHCpfJPQo23LeE6raQ48ZltiQqZ0jwFGQp-cpOGks
+
+__main__ 2020-04-22 21:09:29,251 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:29,252 start 128 :
+ File: 1sanBGafzkn5lzrqFgAJa2DQ-R872Rt-lCMkeCMP-xQs
+
+__main__ 2020-04-22 21:09:29,254 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:29,255 start 128 :
+ File: 1IY-_pt2CS9hoPlSk2144Rnf4jHH4Nv2L2eo4kPBTRiY
+
+__main__ 2020-04-22 21:09:29,256 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:29,258 start 128 :
+ File: 1QyQmNut60FNJByMNcv0NSyQvI1j1DLYTGtXn-VGarPE
+
+__main__ 2020-04-22 21:09:29,260 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:29,261 start 128 :
+ File: 1tcAEYXU067CQcn9zzTM-ujz9NOjUOM1mRLUVgIIb80c
+
+__main__ 2020-04-22 21:09:29,262 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:29,263 start 128 :
+ File: 1h5crBPICUl1tr_PjOHIuHLOePVpI944PpDwPZTdBgcQ
+
+__main__ 2020-04-22 21:09:29,265 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:29,267 start 128 :
+ File: 1mpiOXrgHa0SGIsNDnSOs70ArIAi_2vi0Ujw6TkSW2RQ
+
+__main__ 2020-04-22 21:09:29,268 start 130 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 21:09:29,270 start 150 :
+ starting bulk save
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:29,353 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:29,353 _execute_context 1207 :
+ ('1SGPIbZAmFYwIakoHevrYhHMwAf6xNIbMuS1zeULYsTQ:22-21.284540TTV0GXlxAw', None, 108, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:29,539 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:29,540 process_rows 1249 :
+ Row (14159,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:29,625 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:29,625 _execute_context 1207 :
+ ('1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ:22-21.284540TTV0GXlxAw', datetime.datetime(2020, 3, 28, 12, 21, 3, 616000), 108, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:29,714 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:29,715 process_rows 1249 :
+ Row (14161,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:29,797 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:29,797 _execute_context 1207 :
+ ('0B4Fujvv5Mfqbb2d0TnNhcFhhREdadmRaaEI3QzVabnE2NE5v:22-21.284540TTV0GXlxAw', datetime.datetime(2018, 1, 26, 6, 14, 45, 287000, tzinfo=datetime.timezone.utc), 108, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:29,881 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:29,881 process_rows 1249 :
+ Row (14164,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:29,964 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:29,964 _execute_context 1207 :
+ ('10GJz3CIxCa6CT11Y-kg8f30atim8xSyx:22-21.284540TTV0GXlxAw', datetime.datetime(2018, 9, 14, 23, 3, 28, 701000, tzinfo=datetime.timezone.utc), 108, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:30,049 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:30,050 process_rows 1249 :
+ Row (14166,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:30,137 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:30,138 _execute_context 1207 :
+ ('1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s:22-21.284540TTV0GXlxAw', datetime.datetime(2020, 2, 3, 22, 42, 12, 545000), 108, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:30,223 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:30,223 process_rows 1249 :
+ Row (14168,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:30,306 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:30,306 _execute_context 1207 :
+ ('1OH8h0i2T4Is0R9S8uaZ4C18SQWkxItIW0KwLKnOJGSM:22-21.284540TTV0GXlxAw', datetime.datetime(2020, 1, 23, 18, 51, 38, 548000, tzinfo=datetime.timezone.utc), 108, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:30,389 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 21:09:30,389 process_rows 1249 :
+ Row (14170,)
+

@@ -1,4 +1,6 @@
 import logging
+from memory_profiler import profile
+from processing.datutils.test_utils import TestUtil
 import smtplib, ssl
 import os
 import sys
@@ -6,20 +8,21 @@ import socket
 from logging import FileHandler, StreamHandler
 from logging.handlers import SysLogHandler
 from datetime import datetime
+import secrets
 
 
-logFile = "data/logs/logs%s.txt"%datetime.now().strftime("%-m-%d-%H:%M")
+logFile = "data/logs/logs{}{}.txt".format(datetime.now().strftime("%-m-%d-%H:%M"), secrets.token_hex(3))
 
 syslog = SysLogHandler(address=('logs2.papertrailapp.com', 49905))
 filelog = FileHandler(logFile)
 stream = StreamHandler()
 
 stream.setLevel(logging.INFO)
-filelog.setLevel(logging.NOTSET)
+filelog.setLevel(logging.DEBUG)
 
 def semidisable(logg):
     logg.propagate=False
-    logg.setLevel(logging.NOTSET)
+    logg.setLevel(logging.DEBUG)
     logg.addHandler(filelog)
 
 class bcolors:
@@ -57,7 +60,7 @@ semidisable( logging.getLogger("googleapiclient"))
 semidisable( logging.getLogger("asyncio"))
 semidisable( logging.getLogger('urllib3'))
 semidisable( logging.getLogger('gdocrevisions.operation'))
-semidisable( logging.getLogger('sqlalchemy'))
+#semidisable( logging.getLogger('sqlalchemy'))
 semidisable( logging.getLogger('sqlalchemy.engine'))
 
 
@@ -75,8 +78,7 @@ def handle_exception(exc_type, exc_value, exc_traceback):
     logger.critical("exiting! from sshook")
 
     logger.info("sending to default hook")
-    sys.__excepthook__(exc_type, exc_value, exc_traceback)
-    logger.info("done")
+    #sys.__excepthook__(exc_type, exc_value, exc_traceback)
     return
 
 

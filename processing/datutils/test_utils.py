@@ -1,4 +1,5 @@
 import pandas as pd
+from memory_profiler import profile
 import gc
 import resource
 from processing.throttler import Throttle
