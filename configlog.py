@@ -1,6 +1,7 @@
 import logging
 from processing.datutils.test_utils import TestUtil
 import smtplib, ssl
+import time
 import os
 import sys
 import socket
@@ -8,6 +9,8 @@ from logging import FileHandler, StreamHandler
 from logging.handlers import SysLogHandler
 from datetime import datetime
 import secrets
+
+os.environ["TZ"]="America/Vancouver"
 
 
 logFile = "data/logs/logs{}.txt".format(datetime.now().strftime("%-m-%d"))

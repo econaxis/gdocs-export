@@ -33,7 +33,6 @@ RUN chmod +x ./installation/vartest.sh
 RUN ./installation/vartest.sh
 
 COPY configlog.py boot.sh loader.py dsds.py run.py drun.sh dockerbuild.sh Dockerfile ./
-COPY gdocrevisions ./gdocrevisions
 COPY data ./data
 
 
