@@ -1,0 +1,150 @@
+root 2020-04-22 20:27:42,297 <module> 24 :
+ Driver%3D%7BODBC+Driver+17+for+SQL+Server%7D%3BServer%3Dtcp%3Apydoc-db.database.windows.net%2C1433%3BDatabase%3Dpydoc-db%3BUid%3Dhenry2833%3BPwd%3D%7BInfoip32%7D%3BEncrypt%3Dyes%3BTrustServerCertificate%3Dno%3BConnection+Timeout%3D30%3B
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:27:43,300 _execute_context 1205 :
+ SELECT CAST(SERVERPROPERTY('ProductVersion') AS VARCHAR)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:27:43,300 _execute_context 1207 :
+ ()
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:27:43,387 _init_metadata 809 :
+ Col ('',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:27:43,388 process_rows 1249 :
+ Row ('12.0.2000.8',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:27:43,389 _execute_context 1205 :
+ SELECT schema_name()
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:27:43,389 _execute_context 1207 :
+ ()
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:27:43,474 _init_metadata 809 :
+ Col ('',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:27:43,474 process_rows 1249 :
+ Row ('dbo',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:27:43,571 _cursor_execute 1311 :
+ SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:27:43,571 _cursor_execute 1312 :
+ ()
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:27:43,657 _cursor_execute 1311 :
+ SELECT CAST('test unicode returns' AS NVARCHAR(60)) AS anon_1
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:27:43,657 _cursor_execute 1312 :
+ ()
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:27:43,833 _execute_context 1205 :
+ SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:27:43,833 _execute_context 1207 :
+ ('files', 'dbo')
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:27:43,925 _init_metadata 809 :
+ Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:27:43,925 process_rows 1249 :
+ Row ('dbo', 'files', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:27:44,017 _execute_context 1205 :
+ SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:27:44,017 _execute_context 1207 :
+ ('owner', 'dbo')
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:27:44,109 _init_metadata 809 :
+ Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:27:44,109 process_rows 1249 :
+ Row ('dbo', 'owner', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:27:44,197 _execute_context 1205 :
+ SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:27:44,197 _execute_context 1207 :
+ ('dates', 'dbo')
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:27:44,289 _init_metadata 809 :
+ Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:27:44,289 process_rows 1249 :
+ Row ('dbo', 'dates', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:27:44,377 _execute_context 1205 :
+ SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:27:44,377 _execute_context 1207 :
+ ('closure', 'dbo')
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:27:44,469 _init_metadata 809 :
+ Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:27:44,469 process_rows 1249 :
+ Row ('dbo', 'closure', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:27:44,556 _execute_context 1205 :
+ SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:27:44,556 _execute_context 1207 :
+ ('filename', 'dbo')
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:27:44,650 _init_metadata 809 :
+ Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:27:44,650 process_rows 1249 :
+ Row ('dbo', 'filename', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+
+__main__ 2020-04-22 20:27:44,818 start 84 :
+ STARTING SQL testing2020-04-22 20:27:44.818515 /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:27:45,602 _begin_impl 711 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:27:45,605 _execute_context 1205 :
+ INSERT INTO owner (name) OUTPUT inserted.id VALUES (?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:27:45,605 _execute_context 1207 :
+ ('testing2020-04-04 22 AprOyFovC89VA',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:27:45,693 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:27:45,693 process_rows 1249 :
+ Row (88,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:27:45,783 _commit_impl 753 :
+ COMMIT
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:27:45,884 _begin_impl 711 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:27:45,885 _execute_context 1205 :
+ SELECT owner.id AS owner_id, owner.name AS owner_name 
+FROM owner 
+WHERE owner.id = ?
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:27:45,885 _execute_context 1207 :
+ (88,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:27:45,973 _init_metadata 809 :
+ Col ('owner_id', 'owner_name')
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:27:45,973 process_rows 1249 :
+ Row (88, 'testing2020-04-04 22 AprOyFovC89VA')
+
+__main__ 2020-04-22 20:27:46,061 start 93 :
+ Added owner row, name: testing2020-04-04 22 AprOyFovC89VA id: 88
+

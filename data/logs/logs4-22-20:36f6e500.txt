@@ -1,0 +1,1346 @@
+root 2020-04-22 20:36:56,132 <module> 24 :
+ Driver%3D%7BODBC+Driver+17+for+SQL+Server%7D%3BServer%3Dtcp%3Apydoc-db.database.windows.net%2C1433%3BDatabase%3Dpydoc-db%3BUid%3Dhenry2833%3BPwd%3D%7BInfoip32%7D%3BEncrypt%3Dyes%3BTrustServerCertificate%3Dno%3BConnection+Timeout%3D30%3B
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:36:57,260 _execute_context 1205 :
+ SELECT CAST(SERVERPROPERTY('ProductVersion') AS VARCHAR)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:36:57,260 _execute_context 1207 :
+ ()
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:36:57,346 _init_metadata 809 :
+ Col ('',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:36:57,346 process_rows 1249 :
+ Row ('12.0.2000.8',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:36:57,348 _execute_context 1205 :
+ SELECT schema_name()
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:36:57,348 _execute_context 1207 :
+ ()
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:36:57,429 _init_metadata 809 :
+ Col ('',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:36:57,430 process_rows 1249 :
+ Row ('dbo',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:36:57,513 _cursor_execute 1311 :
+ SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:36:57,513 _cursor_execute 1312 :
+ ()
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:36:57,603 _cursor_execute 1311 :
+ SELECT CAST('test unicode returns' AS NVARCHAR(60)) AS anon_1
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:36:57,604 _cursor_execute 1312 :
+ ()
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:36:57,773 _execute_context 1205 :
+ SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:36:57,773 _execute_context 1207 :
+ ('files', 'dbo')
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:36:57,858 _init_metadata 809 :
+ Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:36:57,859 process_rows 1249 :
+ Row ('dbo', 'files', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:36:57,943 _execute_context 1205 :
+ SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:36:57,944 _execute_context 1207 :
+ ('owner', 'dbo')
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:36:58,031 _init_metadata 809 :
+ Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:36:58,032 process_rows 1249 :
+ Row ('dbo', 'owner', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:36:58,122 _execute_context 1205 :
+ SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:36:58,122 _execute_context 1207 :
+ ('dates', 'dbo')
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:36:58,210 _init_metadata 809 :
+ Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:36:58,210 process_rows 1249 :
+ Row ('dbo', 'dates', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:36:58,296 _execute_context 1205 :
+ SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:36:58,296 _execute_context 1207 :
+ ('closure', 'dbo')
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:36:58,380 _init_metadata 809 :
+ Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:36:58,380 process_rows 1249 :
+ Row ('dbo', 'closure', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:36:58,464 _execute_context 1205 :
+ SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:36:58,465 _execute_context 1207 :
+ ('filename', 'dbo')
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:36:58,549 _init_metadata 809 :
+ Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:36:58,550 process_rows 1249 :
+ Row ('dbo', 'filename', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+
+__main__ 2020-04-22 20:36:58,713 start 84 :
+ STARTING SQL testing2020-04-22 20:36:58.713529 /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:36:59,377 _begin_impl 711 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:36:59,380 _execute_context 1205 :
+ INSERT INTO owner (name) OUTPUT inserted.id VALUES (?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:36:59,380 _execute_context 1207 :
+ ('testing2020-04-04 22 AprjJ8c2FcOaQ',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:36:59,461 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:36:59,462 process_rows 1249 :
+ Row (95,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:36:59,541 _commit_impl 753 :
+ COMMIT
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:36:59,706 _begin_impl 711 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:36:59,708 _execute_context 1205 :
+ SELECT owner.id AS owner_id, owner.name AS owner_name 
+FROM owner 
+WHERE owner.id = ?
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:36:59,708 _execute_context 1207 :
+ (95,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:36:59,786 _init_metadata 809 :
+ Col ('owner_id', 'owner_name')
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:36:59,787 process_rows 1249 :
+ Row (95, 'testing2020-04-04 22 AprjJ8c2FcOaQ')
+
+__main__ 2020-04-22 20:36:59,868 start 93 :
+ Added owner row, name: testing2020-04-04 22 AprjJ8c2FcOaQ id: 95
+
+__main__ 2020-04-22 20:37:00,013 start 106 :
+ Finished loading pickles
+
+__main__ 2020-04-22 20:37:00,015 start 122 :
+ File: 1SGPIbZAmFYwIakoHevrYhHMwAf6xNIbMuS1zeULYsTQ
+
+__main__ 2020-04-22 20:37:00,018 start 122 :
+ File: 1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ
+
+__main__ 2020-04-22 20:37:00,020 start 122 :
+ File: 0B4Fujvv5Mfqbb2d0TnNhcFhhREdadmRaaEI3QzVabnE2NE5v
+
+__main__ 2020-04-22 20:37:00,022 start 122 :
+ File: 10GJz3CIxCa6CT11Y-kg8f30atim8xSyx
+
+__main__ 2020-04-22 20:37:00,025 start 122 :
+ File: 1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s
+
+__main__ 2020-04-22 20:37:00,027 start 122 :
+ File: 1OH8h0i2T4Is0R9S8uaZ4C18SQWkxItIW0KwLKnOJGSM
+
+__main__ 2020-04-22 20:37:00,030 start 122 :
+ File: 1QNNRjwRnVqieEoA5i9CdaSCyT_6Bi4vkmGO8YuZHytU
+
+__main__ 2020-04-22 20:37:00,032 start 122 :
+ File: 1kMTGenwbpJUMiYZMSDbDg_tcROM5USl6
+
+__main__ 2020-04-22 20:37:00,033 start 122 :
+ File: 1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08
+
+__main__ 2020-04-22 20:37:00,035 start 122 :
+ File: 1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4
+
+__main__ 2020-04-22 20:37:00,036 start 122 :
+ File: 1C09g5-ATBpXNJOmH8ANwCnq7Pk6vClzI1lmFYcqaH6A
+
+__main__ 2020-04-22 20:37:00,038 start 122 :
+ File: 1G-K37QbHDgyLsJaUjRsROtLZZkj1fmqyC5YyHzOh-_Q
+
+__main__ 2020-04-22 20:37:00,041 start 122 :
+ File: 1cIWwf3nZ2RAeriW8GerxZHY9nirLdcc968-GgSnRkjQ
+
+__main__ 2020-04-22 20:37:00,044 start 122 :
+ File: 1yqF_hJ9NyASL9nHpchNsjrb04FUVvTNEmmStnAsh1Sg
+
+__main__ 2020-04-22 20:37:00,046 start 122 :
+ File: 16Tz6lbS7tdWBUhgseZCx0va0xBAayzOSSDSH-T20xRA
+
+__main__ 2020-04-22 20:37:00,049 start 122 :
+ File: 1leky1DdjFgZcCKZf1EBdNopIRnIdqTLevUE1mliolBI
+
+__main__ 2020-04-22 20:37:00,050 start 122 :
+ File: 16wsJnYBwdOHbuGROxWDFe2Tcf1w8T49TwWnGvq5OjXY
+
+__main__ 2020-04-22 20:37:00,052 start 122 :
+ File: 1B6ePg9Ixtc4xqKL4D0_JO80n8GL83WpztJKJGaH-6S0
+
+__main__ 2020-04-22 20:37:00,053 start 122 :
+ File: 1jRrZTHn-oge2sTqxli8Um026xuniXAeezLZn4B2zVSg
+
+__main__ 2020-04-22 20:37:00,055 start 122 :
+ File: 1D48Gz6hmPkE6sATNqYoA3P3Hdjtq1y2zHRjrh1kH64I
+
+__main__ 2020-04-22 20:37:00,058 start 122 :
+ File: 1B37ygx-Iwh0EpS1c5fqpbK6AqE39m6ao4WD4uMWknzc
+
+__main__ 2020-04-22 20:37:00,060 start 122 :
+ File: 1cctIQ_TyhvRFgFVkzjwcfDL1w0i4L2lF-78_WM7Hy6A
+
+__main__ 2020-04-22 20:37:00,062 start 122 :
+ File: 1JQ-JszbkA6JHylaBr1ZDWeMXTy2X6fM2evDEJo-W3U4
+
+__main__ 2020-04-22 20:37:00,064 start 122 :
+ File: 11L4quB0D_Ttk0WMkddrcn_r8OmWG5Y7xEWgALTBoNvg
+
+__main__ 2020-04-22 20:37:00,065 start 122 :
+ File: 12NnsHOjtevUATb-yYIgDFFLyYajiHxhJ6xHiJnIXj-8
+
+__main__ 2020-04-22 20:37:00,067 start 122 :
+ File: 186ge00t4G7kcx1QdCIHxRhTnZfzpSTGDgfAXkdbD_Ig
+
+__main__ 2020-04-22 20:37:00,068 start 122 :
+ File: 15T7jFID6g5L9jNgtFSqVnNVFuqL7BqlHq9w9uB3CamE
+
+__main__ 2020-04-22 20:37:00,070 start 122 :
+ File: 17MhIJt6Bl2HnDLFiNZPRh7UOx-Co9FMvPWBsRnJRfsM
+
+__main__ 2020-04-22 20:37:00,072 start 122 :
+ File: 15e68EIS9xXe5Yvzju4GtkyhFKJ_UgUA9juJKiUpPeUA
+
+__main__ 2020-04-22 20:37:00,074 start 122 :
+ File: 1sF1pFtL8fsnQBBAoTt8P7YGOVZVr6-6a4BLeU3PBncI
+
+__main__ 2020-04-22 20:37:00,077 start 122 :
+ File: 1G1g252JtmrFnXI5HaLLEafe8apipzquYwQQ0hbQIaho
+
+__main__ 2020-04-22 20:37:00,080 start 122 :
+ File: 1wfaH9BSg8wrDaKXR54KK1y8pd-miEOQNj3E8GL6fTfg
+
+__main__ 2020-04-22 20:37:00,081 start 122 :
+ File: 10M2HsNol6IOHe6wMXb0WkJV9bmy2445a
+
+__main__ 2020-04-22 20:37:00,082 start 122 :
+ File: 1VmB8_0x000GHL4Tbza6LarQMec0Z0esW
+
+__main__ 2020-04-22 20:37:00,084 start 122 :
+ File: 1LuJ1Ln_dAc7n3Qj0zNE4yuYfFG6NEgxO-hsDA9M4qpQ
+
+__main__ 2020-04-22 20:37:00,085 start 122 :
+ File: 1o6ARVj7jhE2K_VNnX2BYajR2XBX1kdMu
+
+__main__ 2020-04-22 20:37:00,087 start 122 :
+ File: 15JWTM6GKGzGaum2h7EvaoJXszPRWFSdINZ4fq6l87LI
+
+__main__ 2020-04-22 20:37:00,089 start 122 :
+ File: 15Fi6RHQtC8H-GOJC_gjiED_9rNxtCdahEGtLvBUZcv4
+
+__main__ 2020-04-22 20:37:00,092 start 122 :
+ File: 1H1aSubiwctKw-qMV6t1aGlfooY2Qn9V6Y01phHpg-kw
+
+__main__ 2020-04-22 20:37:00,094 start 122 :
+ File: 1WbGMwYDyqP6aCDpf5fBbR7sneMicXtvEtfm3Z4k0Vzs
+
+__main__ 2020-04-22 20:37:00,096 start 122 :
+ File: 16wh_FgWE8Y0tUpAdIte4WyuB91_ypCySi82lvdhAiFY
+
+__main__ 2020-04-22 20:37:00,098 start 122 :
+ File: 1WKk8W5cG-CYKBYN_cWpAdziiPVhvQZEAarnPwf58z4Y
+
+__main__ 2020-04-22 20:37:00,099 start 122 :
+ File: 1YJPVyeYstaXiTguoSGCe_Kb3y4yv49N224nUrfLo7rU
+
+__main__ 2020-04-22 20:37:00,101 start 122 :
+ File: 14fGVD8kN7ZTYHhthuk5QFTw2j-OnV9QV6BJvuLedIik
+
+__main__ 2020-04-22 20:37:00,102 start 122 :
+ File: 17U5RL60qPqJRSKZgj9HpNG0xIgrUI1_buueGhgcZaGs
+
+__main__ 2020-04-22 20:37:00,104 start 122 :
+ File: 1PscMFhdtA31Nh7ELmM18NqjUfLDeGiexKI6q-lI0fKY
+
+__main__ 2020-04-22 20:37:00,105 start 122 :
+ File: 1YlY2MTwu_I6PGWgmkNqFXYJVvNSQKMi7j0WulyoD75w
+
+__main__ 2020-04-22 20:37:00,108 start 122 :
+ File: 1Gxvc-37IOivNHIPUJBI1v3jf5e-Hwcby_VZbN-k-Bfc
+
+__main__ 2020-04-22 20:37:00,110 start 122 :
+ File: 11WIU2snHtcamnb9iQszGuvQwhOALT-Gy
+
+__main__ 2020-04-22 20:37:00,112 start 122 :
+ File: 1T1Sj69DxCTpEQI2pH0O04l_PSx1V3xsxYOnkiHPEPis
+
+__main__ 2020-04-22 20:37:00,114 start 122 :
+ File: 1iwD0UOBkgdB5Jnza1szyk2RCaNpOfito5Be0lD0HGvk
+
+__main__ 2020-04-22 20:37:00,116 start 122 :
+ File: 18Fo4vEnjNw9SuVSM0FprUH3bFdl4oVP31YM5H-VH3fs
+
+__main__ 2020-04-22 20:37:00,117 start 122 :
+ File: 1NBVW6zOvYcoTmGZ46HZosMmV2SVNURBvf4WOm1ydcTk
+
+__main__ 2020-04-22 20:37:00,119 start 122 :
+ File: 1ZBA6pHQ0vfqgMprDjRS0-PqUaeusoF5Z
+
+__main__ 2020-04-22 20:37:00,120 start 122 :
+ File: 1VrK4o4hKCSJyT8P4hKL9la_FO7-29hcBJMJDsvjXo2A
+
+__main__ 2020-04-22 20:37:00,122 start 122 :
+ File: 1Ez54_TKEcG-xUH_lCEW1711SozJ2_cSeBgiuGKjE8Pk
+
+__main__ 2020-04-22 20:37:00,124 start 122 :
+ File: 15oiL5vtc6Pm7TbWGmBPul9ZHEaq5Cp25MmoK7Wj3wQA
+
+__main__ 2020-04-22 20:37:00,126 start 122 :
+ File: 1TxO4rhqIX6VUqO2bLJNkukbTpEDNVYSHD0X9hOzi88o
+
+__main__ 2020-04-22 20:37:00,128 start 122 :
+ File: 1ZSAyOh8IJqYeY30rg2YNgHU06UxOpmgVqlhKL6puaDs
+
+__main__ 2020-04-22 20:37:00,131 start 122 :
+ File: 1kJg8DrOx2wxRXUGvNKc0X_t2GyFMglwXImurNUjTni0
+
+__main__ 2020-04-22 20:37:00,132 start 122 :
+ File: 1bVHzlp_4wGefhP9sx5GvI7ZR_ArSbtX0LaFmfZTeB8Y
+
+__main__ 2020-04-22 20:37:00,134 start 122 :
+ File: 1c2DcDim6LhJH_JL0iJ23K-KzykdaMUOyvAUnXaAhQEg
+
+__main__ 2020-04-22 20:37:00,135 start 122 :
+ File: 1ZNO0oUicsL1By5_92_96mrDU5-FgMK0Dm5bGcYPvUrc
+
+__main__ 2020-04-22 20:37:00,136 start 122 :
+ File: 1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ
+
+__main__ 2020-04-22 20:37:00,137 start 124 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 20:37:00,138 start 122 :
+ File: 1ZSCKTVjGJu6pUx7auNWEyfs83DLJtOeA3AbwuGuY8kI
+
+__main__ 2020-04-22 20:37:00,140 start 144 :
+ starting bulk save
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:00,159 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:00,160 _execute_context 1207 :
+ ('1SGPIbZAmFYwIakoHevrYhHMwAf6xNIbMuS1zeULYsTQ:22-20.723556jJ8c2FcOaQ', None, 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:00,318 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:00,318 process_rows 1249 :
+ Row (12981,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:00,397 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:00,397 _execute_context 1207 :
+ ('1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ:22-20.723556jJ8c2FcOaQ', datetime.datetime(2020, 3, 28, 12, 21, 3, 616000), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:00,475 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:00,476 process_rows 1249 :
+ Row (12982,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:00,555 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:00,555 _execute_context 1207 :
+ ('0B4Fujvv5Mfqbb2d0TnNhcFhhREdadmRaaEI3QzVabnE2NE5v:22-20.723556jJ8c2FcOaQ', datetime.datetime(2018, 1, 26, 6, 14, 45, 287000, tzinfo=datetime.timezone.utc), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:00,635 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:00,635 process_rows 1249 :
+ Row (12983,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:00,712 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:00,713 _execute_context 1207 :
+ ('10GJz3CIxCa6CT11Y-kg8f30atim8xSyx:22-20.723556jJ8c2FcOaQ', datetime.datetime(2018, 9, 14, 23, 3, 28, 701000, tzinfo=datetime.timezone.utc), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:00,793 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:00,793 process_rows 1249 :
+ Row (12984,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:00,876 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:00,876 _execute_context 1207 :
+ ('1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s:22-20.723556jJ8c2FcOaQ', datetime.datetime(2020, 2, 3, 22, 42, 12, 545000), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:00,954 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:00,955 process_rows 1249 :
+ Row (12985,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:01,034 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:01,034 _execute_context 1207 :
+ ('1OH8h0i2T4Is0R9S8uaZ4C18SQWkxItIW0KwLKnOJGSM:22-20.723556jJ8c2FcOaQ', datetime.datetime(2020, 1, 23, 18, 51, 38, 548000, tzinfo=datetime.timezone.utc), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:01,113 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:01,113 process_rows 1249 :
+ Row (12986,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:01,192 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:01,192 _execute_context 1207 :
+ ('1QNNRjwRnVqieEoA5i9CdaSCyT_6Bi4vkmGO8YuZHytU:22-20.723556jJ8c2FcOaQ', datetime.datetime(2020, 3, 10, 18, 28, 24, 166000, tzinfo=datetime.timezone.utc), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:01,271 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:01,272 process_rows 1249 :
+ Row (12987,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:01,349 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:01,349 _execute_context 1207 :
+ ('1kMTGenwbpJUMiYZMSDbDg_tcROM5USl6:22-20.723556jJ8c2FcOaQ', datetime.datetime(2019, 5, 30, 5, 55, 20, 970000, tzinfo=datetime.timezone.utc), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:01,431 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:01,432 process_rows 1249 :
+ Row (12988,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:01,513 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:01,513 _execute_context 1207 :
+ ('1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08:22-20.723556jJ8c2FcOaQ', datetime.datetime(2019, 3, 12, 17, 47, 4, 884000), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:01,593 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:01,593 process_rows 1249 :
+ Row (12989,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:01,670 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:01,671 _execute_context 1207 :
+ ('1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4:22-20.723556jJ8c2FcOaQ', datetime.datetime(2020, 4, 6, 21, 54, 16, 435000), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:01,749 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:01,749 process_rows 1249 :
+ Row (12990,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:01,830 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:01,830 _execute_context 1207 :
+ ('1C09g5-ATBpXNJOmH8ANwCnq7Pk6vClzI1lmFYcqaH6A:22-20.723556jJ8c2FcOaQ', datetime.datetime(2020, 4, 10, 15, 37, 31, 881000), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:01,908 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:01,908 process_rows 1249 :
+ Row (12991,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:02,005 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:02,006 _execute_context 1207 :
+ ('1G-K37QbHDgyLsJaUjRsROtLZZkj1fmqyC5YyHzOh-_Q:22-20.723556jJ8c2FcOaQ', datetime.datetime(2020, 3, 26, 6, 57, 29, 487000, tzinfo=datetime.timezone.utc), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:02,087 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:02,087 process_rows 1249 :
+ Row (12992,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:02,164 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:02,164 _execute_context 1207 :
+ ('1cIWwf3nZ2RAeriW8GerxZHY9nirLdcc968-GgSnRkjQ:22-20.723556jJ8c2FcOaQ', datetime.datetime(2020, 1, 17, 18, 30, 39, 243000, tzinfo=datetime.timezone.utc), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:02,243 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:02,243 process_rows 1249 :
+ Row (12993,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:02,322 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:02,322 _execute_context 1207 :
+ ('1yqF_hJ9NyASL9nHpchNsjrb04FUVvTNEmmStnAsh1Sg:22-20.723556jJ8c2FcOaQ', datetime.datetime(2020, 4, 15, 12, 52, 38, 698000, tzinfo=datetime.timezone.utc), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:02,402 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:02,403 process_rows 1249 :
+ Row (12994,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:02,481 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:02,481 _execute_context 1207 :
+ ('16Tz6lbS7tdWBUhgseZCx0va0xBAayzOSSDSH-T20xRA:22-20.723556jJ8c2FcOaQ', None, 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:02,640 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:02,640 process_rows 1249 :
+ Row (12995,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:02,718 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:02,718 _execute_context 1207 :
+ ('1leky1DdjFgZcCKZf1EBdNopIRnIdqTLevUE1mliolBI:22-20.723556jJ8c2FcOaQ', datetime.datetime(2020, 4, 6, 2, 28, 19, 308000, tzinfo=datetime.timezone.utc), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:02,799 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:02,799 process_rows 1249 :
+ Row (12996,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:02,878 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:02,878 _execute_context 1207 :
+ ('16wsJnYBwdOHbuGROxWDFe2Tcf1w8T49TwWnGvq5OjXY:22-20.723556jJ8c2FcOaQ', datetime.datetime(2015, 7, 6, 23, 38, 1, 618000, tzinfo=datetime.timezone.utc), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:02,958 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:02,958 process_rows 1249 :
+ Row (12997,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:03,037 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:03,037 _execute_context 1207 :
+ ('1B6ePg9Ixtc4xqKL4D0_JO80n8GL83WpztJKJGaH-6S0:22-20.723556jJ8c2FcOaQ', None, 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:03,207 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:03,208 process_rows 1249 :
+ Row (12998,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:03,287 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:03,287 _execute_context 1207 :
+ ('1jRrZTHn-oge2sTqxli8Um026xuniXAeezLZn4B2zVSg:22-20.723556jJ8c2FcOaQ', datetime.datetime(2020, 3, 17, 14, 56, 13, 451000), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:03,365 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:03,365 process_rows 1249 :
+ Row (12999,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:03,445 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:03,445 _execute_context 1207 :
+ ('1D48Gz6hmPkE6sATNqYoA3P3Hdjtq1y2zHRjrh1kH64I:22-20.723556jJ8c2FcOaQ', None, 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:03,608 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:03,609 process_rows 1249 :
+ Row (13000,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:03,688 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:03,689 _execute_context 1207 :
+ ('1B37ygx-Iwh0EpS1c5fqpbK6AqE39m6ao4WD4uMWknzc:22-20.723556jJ8c2FcOaQ', datetime.datetime(2018, 5, 20, 7, 33, 38, 788000, tzinfo=datetime.timezone.utc), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:03,767 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:03,767 process_rows 1249 :
+ Row (13001,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:03,844 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:03,844 _execute_context 1207 :
+ ('1cctIQ_TyhvRFgFVkzjwcfDL1w0i4L2lF-78_WM7Hy6A:22-20.723556jJ8c2FcOaQ', datetime.datetime(2020, 3, 27, 22, 27, 31, 397000), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:03,922 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:03,922 process_rows 1249 :
+ Row (13002,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:04,001 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:04,001 _execute_context 1207 :
+ ('1JQ-JszbkA6JHylaBr1ZDWeMXTy2X6fM2evDEJo-W3U4:22-20.723556jJ8c2FcOaQ', None, 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:04,165 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:04,165 process_rows 1249 :
+ Row (13003,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:04,244 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:04,244 _execute_context 1207 :
+ ('11L4quB0D_Ttk0WMkddrcn_r8OmWG5Y7xEWgALTBoNvg:22-20.723556jJ8c2FcOaQ', None, 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:04,404 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:04,404 process_rows 1249 :
+ Row (13004,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:04,491 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:04,492 _execute_context 1207 :
+ ('12NnsHOjtevUATb-yYIgDFFLyYajiHxhJ6xHiJnIXj-8:22-20.723556jJ8c2FcOaQ', datetime.datetime(2020, 3, 30, 18, 20, 51, 634000, tzinfo=datetime.timezone.utc), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:04,570 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:04,571 process_rows 1249 :
+ Row (13005,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:04,650 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:04,650 _execute_context 1207 :
+ ('186ge00t4G7kcx1QdCIHxRhTnZfzpSTGDgfAXkdbD_Ig:22-20.723556jJ8c2FcOaQ', datetime.datetime(2020, 3, 6, 10, 51, 33, 932000), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:04,730 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:04,730 process_rows 1249 :
+ Row (13006,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:04,808 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:04,808 _execute_context 1207 :
+ ('15T7jFID6g5L9jNgtFSqVnNVFuqL7BqlHq9w9uB3CamE:22-20.723556jJ8c2FcOaQ', datetime.datetime(2020, 3, 9, 1, 17, 30, 970000, tzinfo=datetime.timezone.utc), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:04,889 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:04,889 process_rows 1249 :
+ Row (13007,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:04,972 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:04,973 _execute_context 1207 :
+ ('17MhIJt6Bl2HnDLFiNZPRh7UOx-Co9FMvPWBsRnJRfsM:22-20.723556jJ8c2FcOaQ', datetime.datetime(2020, 3, 12, 16, 48, 26, 31000, tzinfo=datetime.timezone.utc), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:05,055 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:05,055 process_rows 1249 :
+ Row (13008,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:05,136 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:05,136 _execute_context 1207 :
+ ('15e68EIS9xXe5Yvzju4GtkyhFKJ_UgUA9juJKiUpPeUA:22-20.723556jJ8c2FcOaQ', datetime.datetime(2020, 2, 25, 15, 1, 38, 567000), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:05,214 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:05,214 process_rows 1249 :
+ Row (13009,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:05,292 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:05,292 _execute_context 1207 :
+ ('1sF1pFtL8fsnQBBAoTt8P7YGOVZVr6-6a4BLeU3PBncI:22-20.723556jJ8c2FcOaQ', datetime.datetime(2018, 11, 27, 9, 8, 20, 70000), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:05,371 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:05,372 process_rows 1249 :
+ Row (13010,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:05,451 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:05,451 _execute_context 1207 :
+ ('1G1g252JtmrFnXI5HaLLEafe8apipzquYwQQ0hbQIaho:22-20.723556jJ8c2FcOaQ', datetime.datetime(2020, 2, 19, 14, 32, 20, 608000), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:05,532 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:05,532 process_rows 1249 :
+ Row (13011,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:05,614 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:05,615 _execute_context 1207 :
+ ('1wfaH9BSg8wrDaKXR54KK1y8pd-miEOQNj3E8GL6fTfg:22-20.723556jJ8c2FcOaQ', datetime.datetime(2020, 2, 18, 11, 8, 36, 897000), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:05,693 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:05,694 process_rows 1249 :
+ Row (13012,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:05,774 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:05,774 _execute_context 1207 :
+ ('10M2HsNol6IOHe6wMXb0WkJV9bmy2445a:22-20.723556jJ8c2FcOaQ', datetime.datetime(2020, 2, 20, 4, 49, 17, 723000, tzinfo=datetime.timezone.utc), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:05,854 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:05,854 process_rows 1249 :
+ Row (13013,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:05,937 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:05,937 _execute_context 1207 :
+ ('1VmB8_0x000GHL4Tbza6LarQMec0Z0esW:22-20.723556jJ8c2FcOaQ', datetime.datetime(2020, 2, 21, 4, 6, 55, 880000, tzinfo=datetime.timezone.utc), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:06,017 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:06,017 process_rows 1249 :
+ Row (13014,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:06,095 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:06,095 _execute_context 1207 :
+ ('1LuJ1Ln_dAc7n3Qj0zNE4yuYfFG6NEgxO-hsDA9M4qpQ:22-20.723556jJ8c2FcOaQ', datetime.datetime(2020, 2, 18, 8, 54, 57, 650000), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:06,174 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:06,175 process_rows 1249 :
+ Row (13015,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:06,252 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:06,252 _execute_context 1207 :
+ ('1o6ARVj7jhE2K_VNnX2BYajR2XBX1kdMu:22-20.723556jJ8c2FcOaQ', datetime.datetime(2020, 2, 18, 17, 0, 26, 568000, tzinfo=datetime.timezone.utc), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:06,337 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:06,337 process_rows 1249 :
+ Row (13016,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:06,415 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:06,416 _execute_context 1207 :
+ ('15JWTM6GKGzGaum2h7EvaoJXszPRWFSdINZ4fq6l87LI:22-20.723556jJ8c2FcOaQ', datetime.datetime(2020, 2, 15, 6, 7, 44, 644000, tzinfo=datetime.timezone.utc), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:06,494 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:06,494 process_rows 1249 :
+ Row (13017,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:06,573 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:06,573 _execute_context 1207 :
+ ('15Fi6RHQtC8H-GOJC_gjiED_9rNxtCdahEGtLvBUZcv4:22-20.723556jJ8c2FcOaQ', datetime.datetime(2020, 2, 17, 17, 20, 17, 28000), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:06,652 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:06,652 process_rows 1249 :
+ Row (13018,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:06,731 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:06,731 _execute_context 1207 :
+ ('1H1aSubiwctKw-qMV6t1aGlfooY2Qn9V6Y01phHpg-kw:22-20.723556jJ8c2FcOaQ', datetime.datetime(2020, 2, 17, 17, 7, 27, 816000), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:06,809 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:06,810 process_rows 1249 :
+ Row (13019,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:06,891 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:06,892 _execute_context 1207 :
+ ('1WbGMwYDyqP6aCDpf5fBbR7sneMicXtvEtfm3Z4k0Vzs:22-20.723556jJ8c2FcOaQ', datetime.datetime(2020, 2, 12, 10, 19, 13, 585000), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:06,971 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:06,971 process_rows 1249 :
+ Row (13020,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:07,051 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:07,052 _execute_context 1207 :
+ ('16wh_FgWE8Y0tUpAdIte4WyuB91_ypCySi82lvdhAiFY:22-20.723556jJ8c2FcOaQ', datetime.datetime(2020, 2, 4, 13, 59, 22, 43000), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:07,131 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:07,131 process_rows 1249 :
+ Row (13021,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:07,211 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:07,212 _execute_context 1207 :
+ ('1WKk8W5cG-CYKBYN_cWpAdziiPVhvQZEAarnPwf58z4Y:22-20.723556jJ8c2FcOaQ', datetime.datetime(2020, 1, 28, 12, 33, 2, 283000), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:07,291 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:07,291 process_rows 1249 :
+ Row (13022,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:07,371 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:07,371 _execute_context 1207 :
+ ('1YJPVyeYstaXiTguoSGCe_Kb3y4yv49N224nUrfLo7rU:22-20.723556jJ8c2FcOaQ', datetime.datetime(2020, 1, 28, 14, 10, 20, 781000), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:07,450 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:07,451 process_rows 1249 :
+ Row (13023,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:07,530 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:07,530 _execute_context 1207 :
+ ('14fGVD8kN7ZTYHhthuk5QFTw2j-OnV9QV6BJvuLedIik:22-20.723556jJ8c2FcOaQ', datetime.datetime(2020, 1, 28, 21, 7, 50, 805000, tzinfo=datetime.timezone.utc), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:07,618 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:07,619 process_rows 1249 :
+ Row (13024,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:07,697 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:07,697 _execute_context 1207 :
+ ('17U5RL60qPqJRSKZgj9HpNG0xIgrUI1_buueGhgcZaGs:22-20.723556jJ8c2FcOaQ', datetime.datetime(2019, 12, 14, 0, 40, 7, 307000, tzinfo=datetime.timezone.utc), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:07,775 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:07,776 process_rows 1249 :
+ Row (13025,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:07,854 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:07,854 _execute_context 1207 :
+ ('1PscMFhdtA31Nh7ELmM18NqjUfLDeGiexKI6q-lI0fKY:22-20.723556jJ8c2FcOaQ', datetime.datetime(2020, 1, 14, 14, 19, 48, 443000), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:07,933 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:07,933 process_rows 1249 :
+ Row (13026,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:08,011 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:08,012 _execute_context 1207 :
+ ('1YlY2MTwu_I6PGWgmkNqFXYJVvNSQKMi7j0WulyoD75w:22-20.723556jJ8c2FcOaQ', datetime.datetime(2020, 1, 4, 11, 19, 10, 128000), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:08,095 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:08,095 process_rows 1249 :
+ Row (13027,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:08,182 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:08,182 _execute_context 1207 :
+ ('1Gxvc-37IOivNHIPUJBI1v3jf5e-Hwcby_VZbN-k-Bfc:22-20.723556jJ8c2FcOaQ', datetime.datetime(2020, 1, 3, 19, 1, 8, 650000), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:08,262 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:08,263 process_rows 1249 :
+ Row (13028,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:08,342 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:08,342 _execute_context 1207 :
+ ('11WIU2snHtcamnb9iQszGuvQwhOALT-Gy:22-20.723556jJ8c2FcOaQ', datetime.datetime(2020, 2, 2, 2, 48, 39, 885000, tzinfo=datetime.timezone.utc), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:08,421 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:08,421 process_rows 1249 :
+ Row (13029,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:08,499 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:08,500 _execute_context 1207 :
+ ('1T1Sj69DxCTpEQI2pH0O04l_PSx1V3xsxYOnkiHPEPis:22-20.723556jJ8c2FcOaQ', datetime.datetime(2020, 1, 20, 15, 1, 31, 858000), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:08,580 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:08,581 process_rows 1249 :
+ Row (13030,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:08,659 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:08,660 _execute_context 1207 :
+ ('1iwD0UOBkgdB5Jnza1szyk2RCaNpOfito5Be0lD0HGvk:22-20.723556jJ8c2FcOaQ', None, 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:08,823 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:08,824 process_rows 1249 :
+ Row (13031,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:08,902 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:08,902 _execute_context 1207 :
+ ('18Fo4vEnjNw9SuVSM0FprUH3bFdl4oVP31YM5H-VH3fs:22-20.723556jJ8c2FcOaQ', datetime.datetime(2020, 1, 12, 0, 51, 58, 994000, tzinfo=datetime.timezone.utc), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:08,981 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:08,982 process_rows 1249 :
+ Row (13032,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:09,061 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:09,061 _execute_context 1207 :
+ ('1NBVW6zOvYcoTmGZ46HZosMmV2SVNURBvf4WOm1ydcTk:22-20.723556jJ8c2FcOaQ', None, 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:09,224 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:09,224 process_rows 1249 :
+ Row (13033,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:09,301 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:09,302 _execute_context 1207 :
+ ('1ZBA6pHQ0vfqgMprDjRS0-PqUaeusoF5Z:22-20.723556jJ8c2FcOaQ', datetime.datetime(2020, 1, 20, 15, 15, 38, 363000, tzinfo=datetime.timezone.utc), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:09,381 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:09,381 process_rows 1249 :
+ Row (13034,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:09,461 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:09,461 _execute_context 1207 :
+ ('1VrK4o4hKCSJyT8P4hKL9la_FO7-29hcBJMJDsvjXo2A:22-20.723556jJ8c2FcOaQ', datetime.datetime(2020, 1, 7, 20, 6, 49, 774000), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:09,553 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:09,553 process_rows 1249 :
+ Row (13035,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:09,646 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:09,646 _execute_context 1207 :
+ ('1Ez54_TKEcG-xUH_lCEW1711SozJ2_cSeBgiuGKjE8Pk:22-20.723556jJ8c2FcOaQ', None, 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:09,850 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:09,851 process_rows 1249 :
+ Row (13036,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:09,931 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:09,932 _execute_context 1207 :
+ ('15oiL5vtc6Pm7TbWGmBPul9ZHEaq5Cp25MmoK7Wj3wQA:22-20.723556jJ8c2FcOaQ', None, 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:10,111 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:10,112 process_rows 1249 :
+ Row (13037,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:10,190 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:10,190 _execute_context 1207 :
+ ('1TxO4rhqIX6VUqO2bLJNkukbTpEDNVYSHD0X9hOzi88o:22-20.723556jJ8c2FcOaQ', datetime.datetime(2019, 9, 28, 14, 35, 20, 987000), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:10,269 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:10,269 process_rows 1249 :
+ Row (13038,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:10,350 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:10,350 _execute_context 1207 :
+ ('1ZSAyOh8IJqYeY30rg2YNgHU06UxOpmgVqlhKL6puaDs:22-20.723556jJ8c2FcOaQ', datetime.datetime(2020, 1, 11, 20, 44, 10, 586000, tzinfo=datetime.timezone.utc), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:10,429 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:10,429 process_rows 1249 :
+ Row (13039,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:10,509 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:10,509 _execute_context 1207 :
+ ('1kJg8DrOx2wxRXUGvNKc0X_t2GyFMglwXImurNUjTni0:22-20.723556jJ8c2FcOaQ', datetime.datetime(2020, 1, 6, 19, 3, 36, 959000, tzinfo=datetime.timezone.utc), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:10,589 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:10,590 process_rows 1249 :
+ Row (13040,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:10,668 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:10,668 _execute_context 1207 :
+ ('1bVHzlp_4wGefhP9sx5GvI7ZR_ArSbtX0LaFmfZTeB8Y:22-20.723556jJ8c2FcOaQ', datetime.datetime(2019, 12, 28, 16, 58, 34, 677000), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:10,747 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:10,747 process_rows 1249 :
+ Row (13041,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:10,826 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:10,826 _execute_context 1207 :
+ ('1c2DcDim6LhJH_JL0iJ23K-KzykdaMUOyvAUnXaAhQEg:22-20.723556jJ8c2FcOaQ', None, 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:10,989 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:10,989 process_rows 1249 :
+ Row (13042,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:11,070 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:11,070 _execute_context 1207 :
+ ('1ZNO0oUicsL1By5_92_96mrDU5-FgMK0Dm5bGcYPvUrc:22-20.723556jJ8c2FcOaQ', datetime.datetime(2019, 12, 9, 14, 16, 45, 695000), 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:11,148 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:11,149 process_rows 1249 :
+ Row (13043,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:11,227 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:11,227 _execute_context 1207 :
+ ('1ZSCKTVjGJu6pUx7auNWEyfs83DLJtOeA3AbwuGuY8kI:22-20.723556jJ8c2FcOaQ', None, 95, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:11,385 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:11,386 process_rows 1249 :
+ Row (13044,)
+
+__main__ 2020-04-22 20:37:11,476 start 146 :
+ bulked save done
+
+__main__ 2020-04-22 20:37:11,479 start 171 :
+ sess flush done
+
+__main__ 2020-04-22 20:37:11,617 start 181 :
+ starting thread for dates
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:11,636 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:11,637 _execute_context 1207 :
+ ('0B4Fujvv5MfqbbW5wLWJIU2JhSTA:22-20.723556jJ8c2FcOaQ', None, 95, 0)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:11,799 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:11,799 process_rows 1249 :
+ Row (13045,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:11,882 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:11,882 _execute_context 1207 :
+ ('1A7VHFEYQVj0bigcnBi3pn4NngcNXxH35Croy3zrdvLY:22-20.723556jJ8c2FcOaQ', None, 95, 0)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:12,041 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:12,042 process_rows 1249 :
+ Row (13046,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:12,126 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:12,126 _execute_context 1207 :
+ ('root:22-20.723556jJ8c2FcOaQ', None, 95, 0)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:12,219 _begin_impl 711 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:12,224 _execute_context 1205 :
+ INSERT INTO dates ([fileId], moddate) OUTPUT inserted.id VALUES (?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:12,224 _execute_context 1207 :
+ (12982, datetime.datetime(2020, 3, 28, 12, 21, 3, 616000))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:12,259 _begin_impl 711 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:12,260 _execute_context 1205 :
+ INSERT INTO dates ([fileId], moddate) OUTPUT inserted.id VALUES (?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:12,260 _execute_context 1207 :
+ (12982, datetime.datetime(2020, 3, 28, 12, 21, 3, 616000))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:12,289 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:12,289 process_rows 1249 :
+ Row (13047,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:12,342 _begin_impl 711 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:12,343 _execute_context 1205 :
+ INSERT INTO dates ([fileId], moddate) OUTPUT inserted.id VALUES (?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:12,343 _execute_context 1207 :
+ (12982, datetime.datetime(2020, 3, 28, 12, 21, 3, 616000))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:12,350 _begin_impl 711 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:12,351 _execute_context 1205 :
+ INSERT INTO dates ([fileId], moddate) OUTPUT inserted.id VALUES (?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:12,351 _execute_context 1207 :
+ (12982, datetime.datetime(2020, 3, 28, 12, 21, 3, 616000))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:12,369 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:12,370 _execute_context 1207 :
+ ('1WrjmluBbaNBS8u_WZmREl02_oMy2zv6Kcdte82zR5yk:22-20.723556jJ8c2FcOaQ', None, 95, 0)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:12,453 _begin_impl 711 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:12,453 _execute_context 1205 :
+ INSERT INTO dates ([fileId], moddate) OUTPUT inserted.id VALUES (?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:12,454 _execute_context 1207 :
+ (12982, datetime.datetime(2020, 3, 28, 12, 21, 3, 616000))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:12,466 _begin_impl 711 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:12,467 _execute_context 1205 :
+ INSERT INTO dates ([fileId], moddate) OUTPUT inserted.id VALUES (?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:12,467 _execute_context 1207 :
+ (12982, datetime.datetime(2020, 3, 28, 12, 21, 3, 616000))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:12,530 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:12,531 process_rows 1249 :
+ Row (13048,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:12,549 _rollback_impl 731 :
+ ROLLBACK
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:12,615 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:12,615 _execute_context 1207 :
+ ('0B4Fujvv5Mfqbfmp4aHYzaHBQeHdua3JtUi1ORVFmd3VJbGt4Ylptc0ZXYzNqR0xvWlRRTEk:22-20.723556jJ8c2FcOaQ', None, 95, 0)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:37:12,782 _rollback_impl 731 :
+ ROLLBACK
+
+root 2020-04-22 20:37:12,864 handle_exception 74 :
+ Custom Uncaught exception
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1247, in _execute_context
+    self.dialect.do_execute(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+pyodbc.Error: ('HY000', "[HY000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Resource ID : 1. The request limit for the database is 30 and has been reached. See 'http://go.microsoft.com/fwlink/?LinkId=267637' for assistance. (10928) (SQLExecDirectW)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2597, in _flush
+    flush_context.execute()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 586, in execute
+    persistence.save_obj(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 239, in save_obj
+    _emit_insert_statements(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 1135, in _emit_insert_statements
+    result = cached_connections[connection].execute(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 984, in execute
+    return meth(self, multiparams, params)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 293, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1097, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1287, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1481, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1247, in _execute_context
+    self.dialect.do_execute(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DBAPIError: (pyodbc.Error) ('HY000', "[HY000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Resource ID : 1. The request limit for the database is 30 and has been reached. See 'http://go.microsoft.com/fwlink/?LinkId=267637' for assistance. (10928) (SQLExecDirectW)")
+[SQL: INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)]
+[parameters: ('0B4Fujvv5Mfqbfmp4aHYzaHBQeHdua3JtUi1ORVFmd3VJbGt4Ylptc0ZXYzNqR0xvWlRRTEk:22-20.723556jJ8c2FcOaQ', None, 95, 0)]
+(Background on this error at: http://sqlalche.me/e/dbapi)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 733, in _rollback_impl
+    self.engine.dialect.do_rollback(self.connection)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 540, in do_rollback
+    dbapi_connection.rollback()
+pyodbc.Error: ('HY000', "[HY000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Resource ID : 1. The request limit for the database is 30 and has been reached. See 'http://go.microsoft.com/fwlink/?LinkId=267637' for assistance. (10928) (SQLEndTran)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 193, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/henry/pydocs/processing/sql.py", line 276, in <module>
+    start("testing" + datetime.now().__str__(), wpath)
+  File "/home/henry/pydocs/processing/sql.py", line 211, in start
+    sess.flush()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2496, in flush
+    self._flush(objects)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2637, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 81, in __exit__
+    compat.raise_(value, with_traceback=traceback)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2637, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 573, in rollback
+    util.raise_(rollback_err[1], with_traceback=rollback_err[2])
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 533, in rollback
+    t[1].rollback()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1725, in rollback
+    self._do_rollback()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1763, in _do_rollback
+    self.connection._rollback_impl()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 735, in _rollback_impl
+    self._handle_dbapi_exception(e, None, None, None, None)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1481, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 733, in _rollback_impl
+    self.engine.dialect.do_rollback(self.connection)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 540, in do_rollback
+    dbapi_connection.rollback()
+sqlalchemy.exc.DBAPIError: (pyodbc.Error) ('HY000', "[HY000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Resource ID : 1. The request limit for the database is 30 and has been reached. See 'http://go.microsoft.com/fwlink/?LinkId=267637' for assistance. (10928) (SQLEndTran)")
+(Background on this error at: http://sqlalche.me/e/dbapi)
+root 2020-04-22 20:37:15,089 handle_exception 78 :
+ exiting! from sshook
+
+root 2020-04-22 20:37:15,098 handle_exception 80 :
+ sending to default hook
+

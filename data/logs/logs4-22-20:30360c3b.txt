@@ -1,0 +1,420 @@
+root 2020-04-22 20:30:00,533 <module> 24 :
+ Driver%3D%7BODBC+Driver+17+for+SQL+Server%7D%3BServer%3Dtcp%3Apydoc-db.database.windows.net%2C1433%3BDatabase%3Dpydoc-db%3BUid%3Dhenry2833%3BPwd%3D%7BInfoip32%7D%3BEncrypt%3Dyes%3BTrustServerCertificate%3Dno%3BConnection+Timeout%3D30%3B
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:02,036 _execute_context 1205 :
+ SELECT CAST(SERVERPROPERTY('ProductVersion') AS VARCHAR)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:02,037 _execute_context 1207 :
+ ()
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:02,123 _init_metadata 809 :
+ Col ('',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:02,124 process_rows 1249 :
+ Row ('12.0.2000.8',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:02,125 _execute_context 1205 :
+ SELECT schema_name()
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:02,125 _execute_context 1207 :
+ ()
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:02,321 _init_metadata 809 :
+ Col ('',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:02,321 process_rows 1249 :
+ Row ('dbo',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:02,446 _cursor_execute 1311 :
+ SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:02,447 _cursor_execute 1312 :
+ ()
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:02,532 _cursor_execute 1311 :
+ SELECT CAST('test unicode returns' AS NVARCHAR(60)) AS anon_1
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:02,532 _cursor_execute 1312 :
+ ()
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:02,867 _execute_context 1205 :
+ SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:02,867 _execute_context 1207 :
+ ('files', 'dbo')
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:03,062 _init_metadata 809 :
+ Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:03,062 process_rows 1249 :
+ Row ('dbo', 'files', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:03,148 _execute_context 1205 :
+ SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:03,149 _execute_context 1207 :
+ ('owner', 'dbo')
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:03,348 _init_metadata 809 :
+ Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:03,349 process_rows 1249 :
+ Row ('dbo', 'owner', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:03,552 _execute_context 1205 :
+ SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:03,552 _execute_context 1207 :
+ ('dates', 'dbo')
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:03,675 _init_metadata 809 :
+ Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:03,675 process_rows 1249 :
+ Row ('dbo', 'dates', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:03,891 _execute_context 1205 :
+ SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:03,892 _execute_context 1207 :
+ ('closure', 'dbo')
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:03,977 _init_metadata 809 :
+ Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:03,977 process_rows 1249 :
+ Row ('dbo', 'closure', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:04,062 _execute_context 1205 :
+ SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:04,062 _execute_context 1207 :
+ ('filename', 'dbo')
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:04,146 _init_metadata 809 :
+ Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:04,146 process_rows 1249 :
+ Row ('dbo', 'filename', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+
+__main__ 2020-04-22 20:30:04,315 start 84 :
+ STARTING SQL testing2020-04-22 20:30:04.315595 /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:05,072 _begin_impl 711 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:05,074 _execute_context 1205 :
+ INSERT INTO owner (name) OUTPUT inserted.id VALUES (?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:05,074 _execute_context 1207 :
+ ('testing2020-04-04 22 Aprj-vZT_vLyw',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:05,164 _init_metadata 809 :
+ Col ('id',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:05,164 process_rows 1249 :
+ Row (91,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:05,251 _commit_impl 753 :
+ COMMIT
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:05,586 _begin_impl 711 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:05,587 _execute_context 1205 :
+ SELECT owner.id AS owner_id, owner.name AS owner_name 
+FROM owner 
+WHERE owner.id = ?
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:05,587 _execute_context 1207 :
+ (91,)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:05,677 _init_metadata 809 :
+ Col ('owner_id', 'owner_name')
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:05,677 process_rows 1249 :
+ Row (91, 'testing2020-04-04 22 Aprj-vZT_vLyw')
+
+__main__ 2020-04-22 20:30:05,763 start 93 :
+ Added owner row, name: testing2020-04-04 22 Aprj-vZT_vLyw id: 91
+
+__main__ 2020-04-22 20:30:05,921 start 106 :
+ Finished loading pickles
+
+__main__ 2020-04-22 20:30:05,922 start 122 :
+ File: 1SGPIbZAmFYwIakoHevrYhHMwAf6xNIbMuS1zeULYsTQ
+
+__main__ 2020-04-22 20:30:05,925 start 122 :
+ File: 1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ
+
+__main__ 2020-04-22 20:30:05,928 start 122 :
+ File: 0B4Fujvv5Mfqbb2d0TnNhcFhhREdadmRaaEI3QzVabnE2NE5v
+
+__main__ 2020-04-22 20:30:05,930 start 122 :
+ File: 10GJz3CIxCa6CT11Y-kg8f30atim8xSyx
+
+__main__ 2020-04-22 20:30:05,932 start 122 :
+ File: 1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s
+
+__main__ 2020-04-22 20:30:05,933 start 122 :
+ File: 1OH8h0i2T4Is0R9S8uaZ4C18SQWkxItIW0KwLKnOJGSM
+
+__main__ 2020-04-22 20:30:05,935 start 122 :
+ File: 1QNNRjwRnVqieEoA5i9CdaSCyT_6Bi4vkmGO8YuZHytU
+
+__main__ 2020-04-22 20:30:05,936 start 122 :
+ File: 1kMTGenwbpJUMiYZMSDbDg_tcROM5USl6
+
+__main__ 2020-04-22 20:30:05,938 start 122 :
+ File: 1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08
+
+__main__ 2020-04-22 20:30:05,941 start 122 :
+ File: 1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4
+
+__main__ 2020-04-22 20:30:05,943 start 122 :
+ File: 1C09g5-ATBpXNJOmH8ANwCnq7Pk6vClzI1lmFYcqaH6A
+
+__main__ 2020-04-22 20:30:05,945 start 122 :
+ File: 1G-K37QbHDgyLsJaUjRsROtLZZkj1fmqyC5YyHzOh-_Q
+
+__main__ 2020-04-22 20:30:05,946 start 122 :
+ File: 1cIWwf3nZ2RAeriW8GerxZHY9nirLdcc968-GgSnRkjQ
+
+__main__ 2020-04-22 20:30:05,948 start 122 :
+ File: 1yqF_hJ9NyASL9nHpchNsjrb04FUVvTNEmmStnAsh1Sg
+
+__main__ 2020-04-22 20:30:05,949 start 122 :
+ File: 16Tz6lbS7tdWBUhgseZCx0va0xBAayzOSSDSH-T20xRA
+
+__main__ 2020-04-22 20:30:05,950 start 122 :
+ File: 1leky1DdjFgZcCKZf1EBdNopIRnIdqTLevUE1mliolBI
+
+__main__ 2020-04-22 20:30:05,952 start 122 :
+ File: 16wsJnYBwdOHbuGROxWDFe2Tcf1w8T49TwWnGvq5OjXY
+
+__main__ 2020-04-22 20:30:05,954 start 122 :
+ File: 1B6ePg9Ixtc4xqKL4D0_JO80n8GL83WpztJKJGaH-6S0
+
+__main__ 2020-04-22 20:30:05,955 start 122 :
+ File: 1jRrZTHn-oge2sTqxli8Um026xuniXAeezLZn4B2zVSg
+
+__main__ 2020-04-22 20:30:05,957 start 122 :
+ File: 1D48Gz6hmPkE6sATNqYoA3P3Hdjtq1y2zHRjrh1kH64I
+
+__main__ 2020-04-22 20:30:05,959 start 122 :
+ File: 1B37ygx-Iwh0EpS1c5fqpbK6AqE39m6ao4WD4uMWknzc
+
+__main__ 2020-04-22 20:30:05,961 start 122 :
+ File: 1cctIQ_TyhvRFgFVkzjwcfDL1w0i4L2lF-78_WM7Hy6A
+
+__main__ 2020-04-22 20:30:05,963 start 122 :
+ File: 1JQ-JszbkA6JHylaBr1ZDWeMXTy2X6fM2evDEJo-W3U4
+
+__main__ 2020-04-22 20:30:05,964 start 122 :
+ File: 11L4quB0D_Ttk0WMkddrcn_r8OmWG5Y7xEWgALTBoNvg
+
+__main__ 2020-04-22 20:30:05,965 start 122 :
+ File: 12NnsHOjtevUATb-yYIgDFFLyYajiHxhJ6xHiJnIXj-8
+
+__main__ 2020-04-22 20:30:05,966 start 122 :
+ File: 186ge00t4G7kcx1QdCIHxRhTnZfzpSTGDgfAXkdbD_Ig
+
+__main__ 2020-04-22 20:30:05,968 start 122 :
+ File: 15T7jFID6g5L9jNgtFSqVnNVFuqL7BqlHq9w9uB3CamE
+
+__main__ 2020-04-22 20:30:05,970 start 122 :
+ File: 17MhIJt6Bl2HnDLFiNZPRh7UOx-Co9FMvPWBsRnJRfsM
+
+__main__ 2020-04-22 20:30:05,972 start 122 :
+ File: 15e68EIS9xXe5Yvzju4GtkyhFKJ_UgUA9juJKiUpPeUA
+
+__main__ 2020-04-22 20:30:05,975 start 122 :
+ File: 1sF1pFtL8fsnQBBAoTt8P7YGOVZVr6-6a4BLeU3PBncI
+
+__main__ 2020-04-22 20:30:05,976 start 122 :
+ File: 1G1g252JtmrFnXI5HaLLEafe8apipzquYwQQ0hbQIaho
+
+__main__ 2020-04-22 20:30:05,978 start 122 :
+ File: 1wfaH9BSg8wrDaKXR54KK1y8pd-miEOQNj3E8GL6fTfg
+
+__main__ 2020-04-22 20:30:05,979 start 122 :
+ File: 10M2HsNol6IOHe6wMXb0WkJV9bmy2445a
+
+__main__ 2020-04-22 20:30:05,980 start 122 :
+ File: 1VmB8_0x000GHL4Tbza6LarQMec0Z0esW
+
+__main__ 2020-04-22 20:30:05,982 start 122 :
+ File: 1LuJ1Ln_dAc7n3Qj0zNE4yuYfFG6NEgxO-hsDA9M4qpQ
+
+__main__ 2020-04-22 20:30:05,984 start 122 :
+ File: 1o6ARVj7jhE2K_VNnX2BYajR2XBX1kdMu
+
+__main__ 2020-04-22 20:30:05,986 start 122 :
+ File: 15JWTM6GKGzGaum2h7EvaoJXszPRWFSdINZ4fq6l87LI
+
+__main__ 2020-04-22 20:30:05,987 start 122 :
+ File: 15Fi6RHQtC8H-GOJC_gjiED_9rNxtCdahEGtLvBUZcv4
+
+__main__ 2020-04-22 20:30:05,989 start 122 :
+ File: 1H1aSubiwctKw-qMV6t1aGlfooY2Qn9V6Y01phHpg-kw
+
+__main__ 2020-04-22 20:30:05,991 start 122 :
+ File: 1WbGMwYDyqP6aCDpf5fBbR7sneMicXtvEtfm3Z4k0Vzs
+
+__main__ 2020-04-22 20:30:05,993 start 122 :
+ File: 16wh_FgWE8Y0tUpAdIte4WyuB91_ypCySi82lvdhAiFY
+
+__main__ 2020-04-22 20:30:05,996 start 122 :
+ File: 1WKk8W5cG-CYKBYN_cWpAdziiPVhvQZEAarnPwf58z4Y
+
+__main__ 2020-04-22 20:30:05,998 start 122 :
+ File: 1YJPVyeYstaXiTguoSGCe_Kb3y4yv49N224nUrfLo7rU
+
+__main__ 2020-04-22 20:30:05,999 start 122 :
+ File: 14fGVD8kN7ZTYHhthuk5QFTw2j-OnV9QV6BJvuLedIik
+
+__main__ 2020-04-22 20:30:06,001 start 122 :
+ File: 17U5RL60qPqJRSKZgj9HpNG0xIgrUI1_buueGhgcZaGs
+
+__main__ 2020-04-22 20:30:06,002 start 122 :
+ File: 1PscMFhdtA31Nh7ELmM18NqjUfLDeGiexKI6q-lI0fKY
+
+__main__ 2020-04-22 20:30:06,003 start 122 :
+ File: 1YlY2MTwu_I6PGWgmkNqFXYJVvNSQKMi7j0WulyoD75w
+
+__main__ 2020-04-22 20:30:06,005 start 122 :
+ File: 1Gxvc-37IOivNHIPUJBI1v3jf5e-Hwcby_VZbN-k-Bfc
+
+__main__ 2020-04-22 20:30:06,006 start 122 :
+ File: 11WIU2snHtcamnb9iQszGuvQwhOALT-Gy
+
+__main__ 2020-04-22 20:30:06,008 start 122 :
+ File: 1T1Sj69DxCTpEQI2pH0O04l_PSx1V3xsxYOnkiHPEPis
+
+__main__ 2020-04-22 20:30:06,011 start 122 :
+ File: 1iwD0UOBkgdB5Jnza1szyk2RCaNpOfito5Be0lD0HGvk
+
+__main__ 2020-04-22 20:30:06,012 start 122 :
+ File: 18Fo4vEnjNw9SuVSM0FprUH3bFdl4oVP31YM5H-VH3fs
+
+__main__ 2020-04-22 20:30:06,014 start 122 :
+ File: 1NBVW6zOvYcoTmGZ46HZosMmV2SVNURBvf4WOm1ydcTk
+
+__main__ 2020-04-22 20:30:06,015 start 122 :
+ File: 1ZBA6pHQ0vfqgMprDjRS0-PqUaeusoF5Z
+
+__main__ 2020-04-22 20:30:06,016 start 122 :
+ File: 1VrK4o4hKCSJyT8P4hKL9la_FO7-29hcBJMJDsvjXo2A
+
+__main__ 2020-04-22 20:30:06,018 start 122 :
+ File: 1Ez54_TKEcG-xUH_lCEW1711SozJ2_cSeBgiuGKjE8Pk
+
+__main__ 2020-04-22 20:30:06,019 start 122 :
+ File: 15oiL5vtc6Pm7TbWGmBPul9ZHEaq5Cp25MmoK7Wj3wQA
+
+__main__ 2020-04-22 20:30:06,020 start 122 :
+ File: 1TxO4rhqIX6VUqO2bLJNkukbTpEDNVYSHD0X9hOzi88o
+
+__main__ 2020-04-22 20:30:06,023 start 122 :
+ File: 1ZSAyOh8IJqYeY30rg2YNgHU06UxOpmgVqlhKL6puaDs
+
+__main__ 2020-04-22 20:30:06,025 start 122 :
+ File: 1kJg8DrOx2wxRXUGvNKc0X_t2GyFMglwXImurNUjTni0
+
+__main__ 2020-04-22 20:30:06,027 start 122 :
+ File: 1bVHzlp_4wGefhP9sx5GvI7ZR_ArSbtX0LaFmfZTeB8Y
+
+__main__ 2020-04-22 20:30:06,029 start 122 :
+ File: 1c2DcDim6LhJH_JL0iJ23K-KzykdaMUOyvAUnXaAhQEg
+
+__main__ 2020-04-22 20:30:06,030 start 122 :
+ File: 1ZNO0oUicsL1By5_92_96mrDU5-FgMK0Dm5bGcYPvUrc
+
+__main__ 2020-04-22 20:30:06,031 start 122 :
+ File: 1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ
+
+__main__ 2020-04-22 20:30:06,032 start 124 :
+ duplicaed fileid found, skipping
+
+__main__ 2020-04-22 20:30:06,034 start 122 :
+ File: 1ZSCKTVjGJu6pUx7auNWEyfs83DLJtOeA3AbwuGuY8kI
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:06,049 _execute_context 1205 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:06,049 _execute_context 1207 :
+ ('1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ:22-20.317026j-vZT_vLyw', [datetime.datetime(2020, 3, 28, 12, 21, 3, 616000), datetime.datetime(2020, 3, 28, 12, 21, 4, 473000), datetime.datetime(2020, 3, 28, 12, 21, 5, 18700 ... (362 characters truncated) ... atetime.datetime(2020, 4, 16, 21, 4, 55, 22000), datetime.datetime(2020, 4, 16, 21, 4, 55, 811000), datetime.datetime(2020, 4, 16, 21, 4, 56, 746000)], 91, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:30:06,137 _rollback_impl 731 :
+ ROLLBACK
+
+root 2020-04-22 20:30:06,417 handle_exception 74 :
+ Custom Uncaught exception
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1247, in _execute_context
+    self.dialect.do_execute(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+pyodbc.ProgrammingError: ("A TVP's rows must be Sequence objects.", 'HY000')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 193, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/henry/pydocs/processing/sql.py", line 263, in <module>
+    start("testing" + datetime.now().__str__(), wpath)
+  File "/home/henry/pydocs/processing/sql.py", line 140, in start
+    adder(lt_files, sess)
+  File "/home/henry/pydocs/processing/sql.py", line 73, in adder
+    sess.flush()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2496, in flush
+    self._flush(objects)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2637, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 68, in __exit__
+    compat.raise_(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2597, in _flush
+    flush_context.execute()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 586, in execute
+    persistence.save_obj(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 239, in save_obj
+    _emit_insert_statements(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 1135, in _emit_insert_statements
+    result = cached_connections[connection].execute(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 984, in execute
+    return meth(self, multiparams, params)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 293, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1097, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1287, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1481, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1247, in _execute_context
+    self.dialect.do_execute(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (pyodbc.ProgrammingError) ("A TVP's rows must be Sequence objects.", 'HY000')
+[SQL: INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)]
+[parameters: ('1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ:22-20.317026j-vZT_vLyw', [datetime.datetime(2020, 3, 28, 12, 21, 3, 616000), datetime.datetime(2020, 3, 28, 12, 21, 4, 473000), datetime.datetime(2020, 3, 28, 12, 21, 5, 18700 ... (362 characters truncated) ... atetime.datetime(2020, 4, 16, 21, 4, 55, 22000), datetime.datetime(2020, 4, 16, 21, 4, 55, 811000), datetime.datetime(2020, 4, 16, 21, 4, 56, 746000)], 91, 1)]
+(Background on this error at: http://sqlalche.me/e/f405)

@@ -1,0 +1,385 @@
+root 2020-04-22 20:19:59,128 <module> 24 :
+ Driver%3D%7BODBC+Driver+17+for+SQL+Server%7D%3BServer%3Dtcp%3Apydoc-db.database.windows.net%2C1433%3BDatabase%3Dpydoc-db%3BUid%3Dhenry2833%3BPwd%3D%7BInfoip32%7D%3BEncrypt%3Dyes%3BTrustServerCertificate%3Dno%3BConnection+Timeout%3D30%3B
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:00,079 info 110 :
+ SELECT CAST(SERVERPROPERTY('ProductVersion') AS VARCHAR)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:00,079 info 110 :
+ ()
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:00,169 info 110 :
+ SELECT schema_name()
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:00,169 info 110 :
+ ()
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:00,342 info 110 :
+ SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:00,343 info 110 :
+ ()
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:00,443 info 110 :
+ SELECT CAST('test unicode returns' AS NVARCHAR(60)) AS anon_1
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:00,443 info 110 :
+ ()
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:00,621 info 110 :
+ SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:00,621 info 110 :
+ ('files', 'dbo')
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:00,801 info 110 :
+ SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:00,801 info 110 :
+ ('owner', 'dbo')
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:00,979 info 110 :
+ SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:00,979 info 110 :
+ ('dates', 'dbo')
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:01,156 info 110 :
+ SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:01,156 info 110 :
+ ('closure', 'dbo')
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:01,332 info 110 :
+ SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:01,333 info 110 :
+ ('filename', 'dbo')
+
+__main__ 2020-04-22 20:20:01,600 start 84 :
+ STARTING SQL testing2020-04-22 20:20:01.600780 /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:02,163 info 110 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:02,169 info 110 :
+ INSERT INTO owner (name) OUTPUT inserted.id VALUES (?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:02,169 info 110 :
+ ('testing2020-04-04 22 AprfFoZSNlzHw',)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:02,327 info 110 :
+ COMMIT
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:02,421 info 110 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:02,423 info 110 :
+ SELECT owner.id AS owner_id, owner.name AS owner_name 
+FROM owner 
+WHERE owner.id = ?
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:02,423 info 110 :
+ (79,)
+
+__main__ 2020-04-22 20:20:02,582 start 93 :
+ Added owner row, name: testing2020-04-04 22 AprfFoZSNlzHw id: 79
+
+__main__ 2020-04-22 20:20:02,589 start 101 :
+ Finished loading pickles
+
+__main__ 2020-04-22 20:20:02,591 start 117 :
+ File: 1A7VHFEYQVj0bigcnBi3pn4NngcNXxH35Croy3zrdvLY
+
+__main__ 2020-04-22 20:20:02,594 start 117 :
+ File: 1WrjmluBbaNBS8u_WZmREl02_oMy2zv6Kcdte82zR5yk
+
+__main__ 2020-04-22 20:20:02,596 start 117 :
+ File: 1NO1CVAUsBSgghggdLH2X4YQ2XNaEkDmr7vK156pSCxk
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:02,602 info 110 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:02,602 info 110 :
+ ('1A7VHFEYQVj0bigcnBi3pn4NngcNXxH35Croy3zrdvLY:22-20.602721fFoZSNlzHw', datetime.datetime(2014, 12, 11, 16, 10, 21, 45000), 79, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:02,775 info 110 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:02,776 info 110 :
+ ('1WrjmluBbaNBS8u_WZmREl02_oMy2zv6Kcdte82zR5yk:22-20.602721fFoZSNlzHw', datetime.datetime(2014, 12, 4, 17, 30, 58, 528000), 79, 1)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:02,935 info 110 :
+ INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:02,936 info 110 :
+ ('1NO1CVAUsBSgghggdLH2X4YQ2XNaEkDmr7vK156pSCxk:22-20.602721fFoZSNlzHw', datetime.datetime(2014, 11, 21, 0, 2, 53, 318000, tzinfo=datetime.timezone.utc), 79, 1)
+
+__main__ 2020-04-22 20:20:03,092 start 135 :
+ bulked save
+
+__main__ 2020-04-22 20:20:03,094 start 160 :
+ sess flush done
+
+__main__ 2020-04-22 20:20:03,120 start 170 :
+ starting thread for dates
+
+root 2020-04-22 20:20:03,149 handle_exception 74 :
+ Custom Uncaught exception
+Traceback (most recent call last):
+  File "/home/henry/pydocs/processing/sql.py", line 185, in start
+    file_obj = fileid_obj_map[c[0]]
+KeyError: '0B4Fujvv5MfqbbW5wLWJIU2JhSTA'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 193, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/henry/pydocs/processing/sql.py", line 257, in <module>
+    start("testing" + datetime.now().__str__(), wpath)
+  File "/home/henry/pydocs/processing/sql.py", line 189, in start
+    lt_files.put(file_obj)
+AttributeError: 'list' object has no attribute 'put'
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:03,734 info 110 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:03,738 info 110 :
+ INSERT INTO dates ([fileId], moddate) VALUES (?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:03,738 info 110 :
+ ((12774, datetime.datetime(2014, 12, 11, 17, 17, 5, 1000)), (12774, datetime.datetime(2014, 12, 11, 17, 17, 5, 310000)), (12774, datetime.datetime(2014, 12, 11, 17, 17, 5, 986000)), (12774, datetime.datetime(2014, 12, 11, 17, 17, 6, 415000)), (12774, datetime.datetime(2014, 12, 11, 17, 17, 6, 757000)), (12774, datetime.datetime(2014, 12, 11, 17, 17, 6, 992000)), (12774, datetime.datetime(2014, 12, 11, 17, 17, 7, 219000)), (12774, datetime.datetime(2014, 12, 11, 17, 17, 7, 533000))  ... displaying 10 of 70 total bound parameter sets ...  (12774, datetime.datetime(2014, 12, 11, 17, 17, 50, 46000)), (12774, datetime.datetime(2014, 12, 11, 17, 17, 50, 348000)))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:03,846 info 110 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:03,849 info 110 :
+ INSERT INTO dates ([fileId], moddate) VALUES (?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:03,849 info 110 :
+ ((12774, datetime.datetime(2014, 12, 11, 18, 43, 34, 279000)), (12774, datetime.datetime(2014, 12, 11, 18, 43, 34, 546000)), (12774, datetime.datetime(2014, 12, 11, 18, 43, 34, 841000)), (12774, datetime.datetime(2014, 12, 11, 18, 43, 35, 290000)), (12774, datetime.datetime(2014, 12, 11, 18, 43, 38, 263000)), (12774, datetime.datetime(2014, 12, 11, 18, 43, 38, 503000)), (12774, datetime.datetime(2014, 12, 11, 18, 43, 38, 829000)), (12774, datetime.datetime(2014, 12, 11, 18, 43, 39, 701000))  ... displaying 10 of 70 total bound parameter sets ...  (12774, datetime.datetime(2014, 12, 11, 18, 44, 29, 121000)), (12774, datetime.datetime(2014, 12, 11, 18, 44, 29, 918000)))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:03,881 info 110 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:03,883 info 110 :
+ INSERT INTO dates ([fileId], moddate) VALUES (?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:03,884 info 110 :
+ ((12774, datetime.datetime(2014, 12, 11, 16, 17, 43, 573000)), (12774, datetime.datetime(2014, 12, 11, 16, 17, 43, 898000)), (12774, datetime.datetime(2014, 12, 11, 16, 17, 44, 118000)), (12774, datetime.datetime(2014, 12, 11, 16, 17, 44, 347000)), (12774, datetime.datetime(2014, 12, 11, 16, 17, 44, 614000)), (12774, datetime.datetime(2014, 12, 11, 16, 17, 45, 211000)), (12774, datetime.datetime(2014, 12, 11, 16, 17, 45, 515000)), (12774, datetime.datetime(2014, 12, 11, 16, 17, 45, 934000))  ... displaying 10 of 70 total bound parameter sets ...  (12774, datetime.datetime(2014, 12, 11, 16, 48, 41, 485000)), (12774, datetime.datetime(2014, 12, 11, 16, 48, 42, 24000)))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:03,919 info 110 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:03,921 info 110 :
+ INSERT INTO dates ([fileId], moddate) VALUES (?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:03,921 info 110 :
+ ((12774, datetime.datetime(2014, 12, 11, 17, 34, 3, 172000)), (12774, datetime.datetime(2014, 12, 11, 17, 34, 3, 494000)), (12774, datetime.datetime(2014, 12, 11, 17, 34, 4, 111000)), (12774, datetime.datetime(2014, 12, 11, 17, 34, 4, 357000)), (12774, datetime.datetime(2014, 12, 11, 17, 34, 4, 780000)), (12774, datetime.datetime(2014, 12, 11, 17, 34, 5, 45000)), (12774, datetime.datetime(2014, 12, 11, 17, 34, 5, 415000)), (12774, datetime.datetime(2014, 12, 11, 17, 34, 6, 103000))  ... displaying 10 of 70 total bound parameter sets ...  (12774, datetime.datetime(2014, 12, 11, 18, 27, 24, 122000)), (12774, datetime.datetime(2014, 12, 11, 18, 27, 24, 501000)))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:03,927 info 110 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:03,932 info 110 :
+ INSERT INTO dates ([fileId], moddate) VALUES (?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:03,932 info 110 :
+ ((12774, datetime.datetime(2014, 12, 11, 17, 14, 18, 877000)), (12774, datetime.datetime(2014, 12, 11, 17, 14, 19, 109000)), (12774, datetime.datetime(2014, 12, 11, 17, 14, 19, 348000)), (12774, datetime.datetime(2014, 12, 11, 17, 14, 19, 747000)), (12774, datetime.datetime(2014, 12, 11, 17, 14, 20, 194000)), (12774, datetime.datetime(2014, 12, 11, 17, 14, 20, 577000)), (12774, datetime.datetime(2014, 12, 11, 17, 14, 21, 23000)), (12774, datetime.datetime(2014, 12, 11, 17, 14, 21, 378000))  ... displaying 10 of 70 total bound parameter sets ...  (12774, datetime.datetime(2014, 12, 11, 17, 15, 7, 64000)), (12774, datetime.datetime(2014, 12, 11, 17, 15, 7, 310000)))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:04,063 info 110 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:04,067 info 110 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:04,070 info 110 :
+ INSERT INTO dates ([fileId], moddate) VALUES (?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:04,071 info 110 :
+ ((12774, datetime.datetime(2014, 12, 11, 16, 10, 21, 45000)), (12774, datetime.datetime(2014, 12, 11, 16, 10, 23, 310000)), (12774, datetime.datetime(2014, 12, 11, 16, 10, 23, 618000)), (12774, datetime.datetime(2014, 12, 11, 16, 10, 24, 8000)), (12774, datetime.datetime(2014, 12, 11, 16, 10, 25, 156000)), (12774, datetime.datetime(2014, 12, 11, 16, 10, 25, 387000)), (12774, datetime.datetime(2014, 12, 11, 16, 10, 26, 257000)), (12774, datetime.datetime(2014, 12, 11, 16, 10, 27, 699000))  ... displaying 10 of 70 total bound parameter sets ...  (12774, datetime.datetime(2014, 12, 11, 16, 11, 6, 379000)), (12774, datetime.datetime(2014, 12, 11, 16, 11, 6, 660000)))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:04,072 info 110 :
+ INSERT INTO dates ([fileId], moddate) VALUES (?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:04,073 info 110 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:04,074 info 110 :
+ ((12774, datetime.datetime(2014, 12, 11, 17, 33, 25, 646000)), (12774, datetime.datetime(2014, 12, 11, 17, 33, 26, 420000)), (12774, datetime.datetime(2014, 12, 11, 17, 33, 26, 760000)), (12774, datetime.datetime(2014, 12, 11, 17, 33, 27, 963000)), (12774, datetime.datetime(2014, 12, 11, 17, 33, 28, 193000)), (12774, datetime.datetime(2014, 12, 11, 17, 33, 32, 892000)), (12774, datetime.datetime(2014, 12, 11, 17, 33, 33, 321000)), (12774, datetime.datetime(2014, 12, 11, 17, 33, 33, 716000))  ... displaying 10 of 70 total bound parameter sets ...  (12774, datetime.datetime(2014, 12, 11, 17, 34, 1, 796000)), (12774, datetime.datetime(2014, 12, 11, 17, 34, 2, 550000)))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:04,076 info 110 :
+ INSERT INTO dates ([fileId], moddate) VALUES (?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:04,078 info 110 :
+ ((12774, datetime.datetime(2014, 12, 11, 17, 12, 29, 110000)), (12774, datetime.datetime(2014, 12, 11, 17, 12, 30, 191000)), (12774, datetime.datetime(2014, 12, 11, 17, 12, 30, 996000)), (12774, datetime.datetime(2014, 12, 11, 17, 13, 12, 572000)), (12774, datetime.datetime(2014, 12, 11, 17, 13, 12, 773000)), (12774, datetime.datetime(2014, 12, 11, 17, 13, 13, 258000)), (12774, datetime.datetime(2014, 12, 11, 17, 13, 13, 625000)), (12774, datetime.datetime(2014, 12, 11, 17, 13, 14, 101000))  ... displaying 10 of 70 total bound parameter sets ...  (12774, datetime.datetime(2014, 12, 11, 17, 14, 18, 2000)), (12774, datetime.datetime(2014, 12, 11, 17, 14, 18, 421000)))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:04,212 info 110 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:04,216 info 110 :
+ INSERT INTO dates ([fileId], moddate) VALUES (?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:04,216 info 110 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:04,217 info 110 :
+ ((12774, datetime.datetime(2014, 12, 11, 16, 48, 42, 430000)), (12774, datetime.datetime(2014, 12, 11, 16, 48, 42, 710000)), (12774, datetime.datetime(2014, 12, 11, 16, 48, 43, 16000)), (12774, datetime.datetime(2014, 12, 11, 16, 48, 43, 641000)), (12774, datetime.datetime(2014, 12, 11, 16, 48, 44, 72000)), (12774, datetime.datetime(2014, 12, 11, 16, 48, 48, 528000)), (12774, datetime.datetime(2014, 12, 11, 16, 48, 48, 782000)), (12774, datetime.datetime(2014, 12, 11, 16, 48, 49, 236000))  ... displaying 10 of 70 total bound parameter sets ...  (12774, datetime.datetime(2014, 12, 11, 16, 49, 27, 94000)), (12774, datetime.datetime(2014, 12, 11, 16, 49, 27, 537000)))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:04,220 info 110 :
+ INSERT INTO dates ([fileId], moddate) VALUES (?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:04,221 info 110 :
+ ((12774, datetime.datetime(2014, 12, 11, 18, 39, 19, 237000)), (12774, datetime.datetime(2014, 12, 11, 18, 39, 19, 901000)), (12774, datetime.datetime(2014, 12, 11, 18, 39, 20, 87000)), (12774, datetime.datetime(2014, 12, 11, 18, 39, 20, 350000)), (12774, datetime.datetime(2014, 12, 11, 18, 39, 20, 635000)), (12774, datetime.datetime(2014, 12, 11, 18, 39, 20, 884000)), (12774, datetime.datetime(2014, 12, 11, 18, 39, 21, 134000)), (12774, datetime.datetime(2014, 12, 11, 18, 39, 21, 564000))  ... displaying 10 of 70 total bound parameter sets ...  (12774, datetime.datetime(2014, 12, 11, 18, 39, 54, 739000)), (12774, datetime.datetime(2014, 12, 11, 18, 39, 55, 35000)))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:04,296 info 110 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:04,299 info 110 :
+ INSERT INTO dates ([fileId], moddate) VALUES (?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:04,299 info 110 :
+ ((12774, datetime.datetime(2014, 12, 11, 16, 16, 33, 209000)), (12774, datetime.datetime(2014, 12, 11, 16, 16, 33, 452000)), (12774, datetime.datetime(2014, 12, 11, 16, 16, 33, 947000)), (12774, datetime.datetime(2014, 12, 11, 16, 16, 34, 693000)), (12774, datetime.datetime(2014, 12, 11, 16, 16, 34, 913000)), (12774, datetime.datetime(2014, 12, 11, 16, 16, 35, 266000)), (12774, datetime.datetime(2014, 12, 11, 16, 16, 35, 529000)), (12774, datetime.datetime(2014, 12, 11, 16, 16, 35, 793000))  ... displaying 10 of 70 total bound parameter sets ...  (12774, datetime.datetime(2014, 12, 11, 16, 17, 42, 832000)), (12774, datetime.datetime(2014, 12, 11, 16, 17, 43, 118000)))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:04,303 info 110 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:04,306 info 110 :
+ INSERT INTO dates ([fileId], moddate) VALUES (?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:04,306 info 110 :
+ ((12774, datetime.datetime(2014, 12, 11, 17, 11, 38, 638000)), (12774, datetime.datetime(2014, 12, 11, 17, 11, 38, 862000)), (12774, datetime.datetime(2014, 12, 11, 17, 11, 39, 300000)), (12774, datetime.datetime(2014, 12, 11, 17, 11, 39, 511000)), (12774, datetime.datetime(2014, 12, 11, 17, 11, 39, 884000)), (12774, datetime.datetime(2014, 12, 11, 17, 11, 40, 475000)), (12774, datetime.datetime(2014, 12, 11, 17, 11, 52, 543000)), (12774, datetime.datetime(2014, 12, 11, 17, 11, 52, 718000))  ... displaying 10 of 70 total bound parameter sets ...  (12774, datetime.datetime(2014, 12, 11, 17, 12, 26, 953000)), (12774, datetime.datetime(2014, 12, 11, 17, 12, 27, 315000)))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:04,575 info 110 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:04,581 info 110 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:04,581 info 110 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:04,582 info 110 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:04,583 info 110 :
+ INSERT INTO dates ([fileId], moddate) VALUES (?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:04,585 info 110 :
+ INSERT INTO dates ([fileId], moddate) VALUES (?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:04,587 info 110 :
+ INSERT INTO dates ([fileId], moddate) VALUES (?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:04,590 info 110 :
+ INSERT INTO dates ([fileId], moddate) VALUES (?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:04,591 info 110 :
+ ((12774, datetime.datetime(2014, 12, 11, 17, 24, 13, 49000)), (12774, datetime.datetime(2014, 12, 11, 17, 24, 14, 813000)), (12774, datetime.datetime(2014, 12, 11, 17, 24, 16, 107000)), (12774, datetime.datetime(2014, 12, 11, 17, 24, 16, 394000)), (12774, datetime.datetime(2014, 12, 11, 17, 24, 16, 894000)), (12774, datetime.datetime(2014, 12, 11, 17, 24, 18, 529000)), (12774, datetime.datetime(2014, 12, 11, 17, 24, 23, 173000)), (12774, datetime.datetime(2014, 12, 11, 17, 24, 23, 612000))  ... displaying 10 of 70 total bound parameter sets ...  (12774, datetime.datetime(2014, 12, 11, 17, 33, 24, 88000)), (12774, datetime.datetime(2014, 12, 11, 17, 33, 25, 436000)))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:04,591 info 110 :
+ ((12774, datetime.datetime(2014, 12, 11, 17, 17, 50, 716000)), (12774, datetime.datetime(2014, 12, 11, 17, 17, 51, 233000)), (12774, datetime.datetime(2014, 12, 11, 17, 17, 51, 413000)), (12774, datetime.datetime(2014, 12, 11, 17, 17, 51, 704000)), (12774, datetime.datetime(2014, 12, 11, 17, 17, 52, 576000)), (12774, datetime.datetime(2014, 12, 11, 17, 17, 52, 906000)), (12774, datetime.datetime(2014, 12, 11, 17, 17, 53, 683000)), (12774, datetime.datetime(2014, 12, 11, 17, 18, 0, 348000))  ... displaying 10 of 70 total bound parameter sets ...  (12774, datetime.datetime(2014, 12, 11, 17, 24, 11, 371000)), (12774, datetime.datetime(2014, 12, 11, 17, 24, 12, 475000)))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:04,593 info 110 :
+ ((12774, datetime.datetime(2014, 12, 11, 16, 49, 27, 890000)), (12774, datetime.datetime(2014, 12, 11, 16, 49, 28, 262000)), (12774, datetime.datetime(2014, 12, 11, 16, 49, 28, 529000)), (12774, datetime.datetime(2014, 12, 11, 16, 49, 28, 980000)), (12774, datetime.datetime(2014, 12, 11, 16, 49, 30, 11000)), (12774, datetime.datetime(2014, 12, 11, 16, 49, 30, 202000)), (12774, datetime.datetime(2014, 12, 11, 16, 49, 30, 477000)), (12774, datetime.datetime(2014, 12, 11, 16, 49, 30, 774000))  ... displaying 10 of 70 total bound parameter sets ...  (12774, datetime.datetime(2014, 12, 11, 17, 0, 45, 420000)), (12774, datetime.datetime(2014, 12, 11, 17, 0, 45, 849000)))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:04,594 info 110 :
+ ((12774, datetime.datetime(2014, 12, 11, 18, 44, 34, 256000)), (12774, datetime.datetime(2014, 12, 11, 18, 44, 34, 697000)), (12774, datetime.datetime(2014, 12, 11, 18, 44, 34, 906000)), (12774, datetime.datetime(2014, 12, 11, 18, 44, 35, 392000)), (12774, datetime.datetime(2014, 12, 11, 18, 44, 35, 625000)), (12774, datetime.datetime(2014, 12, 11, 18, 44, 36, 83000)), (12774, datetime.datetime(2014, 12, 11, 18, 44, 36, 482000)), (12774, datetime.datetime(2014, 12, 11, 18, 44, 36, 648000))  ... displaying 10 of 70 total bound parameter sets ...  (12774, datetime.datetime(2014, 12, 11, 18, 45, 7, 645000)), (12774, datetime.datetime(2014, 12, 11, 18, 45, 7, 892000)))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:04,869 info 110 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:04,872 info 110 :
+ INSERT INTO dates ([fileId], moddate) VALUES (?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:04,872 info 110 :
+ ((12774, datetime.datetime(2014, 12, 11, 18, 45, 8, 503000)), (12774, datetime.datetime(2014, 12, 11, 18, 45, 8, 752000)), (12774, datetime.datetime(2014, 12, 11, 18, 45, 9, 220000)), (12774, datetime.datetime(2014, 12, 11, 18, 45, 9, 622000)), (12774, datetime.datetime(2014, 12, 11, 18, 45, 10, 6000)), (12774, datetime.datetime(2014, 12, 11, 18, 45, 10, 321000)), (12774, datetime.datetime(2014, 12, 11, 18, 45, 10, 760000)), (12774, datetime.datetime(2014, 12, 11, 18, 45, 10, 931000))  ... displaying 10 of 70 total bound parameter sets ...  (12774, datetime.datetime(2014, 12, 11, 19, 14, 3, 446000)), (12774, datetime.datetime(2014, 12, 11, 19, 14, 4, 696000)))
+
+root 2020-04-22 20:20:04,897 handle_exception 78 :
+ exiting! from sshook
+
+root 2020-04-22 20:20:04,898 handle_exception 80 :
+ sending to default hook
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:05,032 info 110 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:05,034 info 110 :
+ INSERT INTO dates ([fileId], moddate) VALUES (?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:05,035 info 110 :
+ ((12774, datetime.datetime(2014, 12, 11, 16, 11, 6, 979000)), (12774, datetime.datetime(2014, 12, 11, 16, 11, 7, 278000)), (12774, datetime.datetime(2014, 12, 11, 16, 11, 7, 626000)), (12774, datetime.datetime(2014, 12, 11, 16, 11, 8, 16000)), (12774, datetime.datetime(2014, 12, 11, 16, 11, 8, 268000)), (12774, datetime.datetime(2014, 12, 11, 16, 11, 12, 731000)), (12774, datetime.datetime(2014, 12, 11, 16, 11, 13, 60000)), (12774, datetime.datetime(2014, 12, 11, 16, 11, 13, 379000))  ... displaying 10 of 70 total bound parameter sets ...  (12774, datetime.datetime(2014, 12, 11, 16, 15, 55, 878000)), (12774, datetime.datetime(2014, 12, 11, 16, 15, 56, 337000)))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:05,036 info 110 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:05,038 info 110 :
+ INSERT INTO dates ([fileId], moddate) VALUES (?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:05,039 info 110 :
+ ((12774, datetime.datetime(2014, 12, 11, 17, 0, 46, 268000)), (12774, datetime.datetime(2014, 12, 11, 17, 0, 46, 820000)), (12774, datetime.datetime(2014, 12, 11, 17, 0, 47, 392000)), (12774, datetime.datetime(2014, 12, 11, 17, 0, 47, 714000)), (12774, datetime.datetime(2014, 12, 11, 17, 0, 48, 82000)), (12774, datetime.datetime(2014, 12, 11, 17, 0, 50, 13000)), (12774, datetime.datetime(2014, 12, 11, 17, 0, 50, 281000)), (12774, datetime.datetime(2014, 12, 11, 17, 0, 50, 604000))  ... displaying 10 of 70 total bound parameter sets ...  (12774, datetime.datetime(2014, 12, 11, 17, 1, 14, 475000)), (12774, datetime.datetime(2014, 12, 11, 17, 1, 14, 761000)))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:05,040 info 110 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:05,040 info 110 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:05,040 info 110 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:05,044 info 110 :
+ INSERT INTO dates ([fileId], moddate) VALUES (?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:05,046 info 110 :
+ INSERT INTO dates ([fileId], moddate) VALUES (?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:05,048 info 110 :
+ INSERT INTO dates ([fileId], moddate) VALUES (?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:05,049 info 110 :
+ ((12774, datetime.datetime(2014, 12, 11, 17, 1, 15, 354000)), (12774, datetime.datetime(2014, 12, 11, 17, 1, 15, 600000)), (12774, datetime.datetime(2014, 12, 11, 17, 1, 16, 233000)), (12774, datetime.datetime(2014, 12, 11, 17, 1, 16, 491000)), (12774, datetime.datetime(2014, 12, 11, 17, 1, 16, 917000)), (12774, datetime.datetime(2014, 12, 11, 17, 1, 17, 836000)), (12774, datetime.datetime(2014, 12, 11, 17, 11, 6, 397000)), (12774, datetime.datetime(2014, 12, 11, 17, 11, 7, 196000))  ... displaying 10 of 70 total bound parameter sets ...  (12774, datetime.datetime(2014, 12, 11, 17, 11, 36, 273000)), (12774, datetime.datetime(2014, 12, 11, 17, 11, 36, 493000)))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:05,049 info 110 :
+ ((12774, datetime.datetime(2014, 12, 11, 18, 38, 48, 673000)), (12774, datetime.datetime(2014, 12, 11, 18, 38, 49, 128000)), (12774, datetime.datetime(2014, 12, 11, 18, 38, 49, 396000)), (12774, datetime.datetime(2014, 12, 11, 18, 38, 49, 697000)), (12774, datetime.datetime(2014, 12, 11, 18, 38, 49, 987000)), (12774, datetime.datetime(2014, 12, 11, 18, 38, 50, 302000)), (12774, datetime.datetime(2014, 12, 11, 18, 38, 50, 730000)), (12774, datetime.datetime(2014, 12, 11, 18, 38, 51, 38000))  ... displaying 10 of 70 total bound parameter sets ...  (12774, datetime.datetime(2014, 12, 11, 18, 39, 18, 182000)), (12774, datetime.datetime(2014, 12, 11, 18, 39, 18, 660000)))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:05,050 info 110 :
+ ((12774, datetime.datetime(2014, 12, 11, 17, 15, 8, 262000)), (12774, datetime.datetime(2014, 12, 11, 17, 15, 8, 582000)), (12774, datetime.datetime(2014, 12, 11, 17, 15, 8, 881000)), (12774, datetime.datetime(2014, 12, 11, 17, 15, 9, 359000)), (12774, datetime.datetime(2014, 12, 11, 17, 15, 9, 706000)), (12774, datetime.datetime(2014, 12, 11, 17, 15, 9, 933000)), (12774, datetime.datetime(2014, 12, 11, 17, 15, 10, 305000)), (12774, datetime.datetime(2014, 12, 11, 17, 15, 10, 500000))  ... displaying 10 of 70 total bound parameter sets ...  (12774, datetime.datetime(2014, 12, 11, 17, 17, 4, 224000)), (12774, datetime.datetime(2014, 12, 11, 17, 17, 4, 516000)))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:05,237 info 110 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:05,240 info 110 :
+ INSERT INTO dates ([fileId], moddate) VALUES (?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:05,241 info 110 :
+ ((12774, datetime.datetime(2014, 12, 11, 18, 39, 55, 505000)), (12774, datetime.datetime(2014, 12, 11, 18, 39, 55, 728000)), (12774, datetime.datetime(2014, 12, 11, 18, 39, 56, 223000)), (12774, datetime.datetime(2014, 12, 11, 18, 39, 56, 691000)), (12774, datetime.datetime(2014, 12, 11, 18, 39, 57, 180000)), (12774, datetime.datetime(2014, 12, 11, 18, 39, 57, 825000)), (12774, datetime.datetime(2014, 12, 11, 18, 39, 58, 652000)), (12774, datetime.datetime(2014, 12, 11, 18, 39, 58, 856000))  ... displaying 10 of 70 total bound parameter sets ...  (12774, datetime.datetime(2014, 12, 11, 18, 43, 33, 521000)), (12774, datetime.datetime(2014, 12, 11, 18, 43, 33, 842000)))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:05,242 info 110 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:05,244 info 110 :
+ INSERT INTO dates ([fileId], moddate) VALUES (?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:05,244 info 110 :
+ ((12774, datetime.datetime(2014, 12, 11, 16, 15, 56, 552000)), (12774, datetime.datetime(2014, 12, 11, 16, 15, 57, 315000)), (12774, datetime.datetime(2014, 12, 11, 16, 15, 57, 529000)), (12774, datetime.datetime(2014, 12, 11, 16, 15, 57, 953000)), (12774, datetime.datetime(2014, 12, 11, 16, 15, 58, 913000)), (12774, datetime.datetime(2014, 12, 11, 16, 16, 2, 101000)), (12774, datetime.datetime(2014, 12, 11, 16, 16, 2, 390000)), (12774, datetime.datetime(2014, 12, 11, 16, 16, 2, 695000))  ... displaying 10 of 70 total bound parameter sets ...  (12774, datetime.datetime(2014, 12, 11, 16, 16, 32, 680000)), (12774, datetime.datetime(2014, 12, 11, 16, 16, 33, 2000)))
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:05,442 info 110 :
+ BEGIN (implicit)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:05,445 info 110 :
+ INSERT INTO dates ([fileId], moddate) VALUES (?, ?)
+
+sqlalchemy.engine.base.Engine 2020-04-22 20:20:05,445 info 110 :
+ ((12774, datetime.datetime(2014, 12, 11, 18, 27, 24, 822000)), (12774, datetime.datetime(2014, 12, 11, 18, 27, 25, 342000)), (12774, datetime.datetime(2014, 12, 11, 18, 27, 25, 573000)), (12774, datetime.datetime(2014, 12, 11, 18, 27, 25, 858000)), (12774, datetime.datetime(2014, 12, 11, 18, 27, 26, 112000)), (12774, datetime.datetime(2014, 12, 11, 18, 27, 26, 542000)), (12774, datetime.datetime(2014, 12, 11, 18, 27, 26, 916000)), (12774, datetime.datetime(2014, 12, 11, 18, 27, 27, 133000))  ... displaying 10 of 70 total bound parameter sets ...  (12774, datetime.datetime(2014, 12, 11, 18, 38, 47, 439000)), (12774, datetime.datetime(2014, 12, 11, 18, 38, 47, 775000)))
+

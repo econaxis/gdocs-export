@@ -1,0 +1,105 @@
+root 2020-04-22 20:52:42,333 <module> 24 :
+ Driver%3D%7BODBC+Driver+17+for+SQL+Server%7D%3BServer%3Dtcp%3Apydoc-db.database.windows.net%2C1433%3BDatabase%3Dpydoc-db%3BUid%3Dhenry2833%3BPwd%3D%7BInfoip32%7D%3BEncrypt%3Dyes%3BTrustServerCertificate%3Dno%3BConnection+Timeout%3D30%3B
+
+root 2020-04-22 20:52:43,310 handle_exception 74 :
+ Custom Uncaught exception
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2285, in _wrap_pool_connect
+    return fn()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 363, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 773, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 492, in checkout
+    rec = pool._do_get()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 139, in _do_get
+    self._dec_overflow()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 68, in __exit__
+    compat.raise_(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 136, in _do_get
+    return self._create_connection()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 308, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 437, in __init__
+    self.__connect(first_connect_check=True)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 657, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 68, in __exit__
+    compat.raise_(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 652, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/strategies.py", line 114, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 490, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+pyodbc.Error: ('HY000', "[HY000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Resource ID : 1. The request limit for the database is 30 and has been reached. See 'http://go.microsoft.com/fwlink/?LinkId=267637' for assistance. (10928) (SQLSetConnectAttr(SQL_ATTR_AUTOCOMMIT))")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 193, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/henry/pydocs/processing/sql.py", line 30, in <module>
+    Base.metadata.create_all(bind=ENGINE)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/sql/schema.py", line 4320, in create_all
+    bind._run_visitor(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2057, in _run_visitor
+    with self._optional_conn_ctx_manager(connection) as conn:
+  File "/usr/lib/python3.8/contextlib.py", line 113, in __enter__
+    return next(self.gen)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2049, in _optional_conn_ctx_manager
+    with self._contextual_connect() as conn:
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2251, in _contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2288, in _wrap_pool_connect
+    Connection._handle_dbapi_exception_noconnection(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1554, in _handle_dbapi_exception_noconnection
+    util.raise_(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2285, in _wrap_pool_connect
+    return fn()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 363, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 773, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 492, in checkout
+    rec = pool._do_get()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 139, in _do_get
+    self._dec_overflow()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 68, in __exit__
+    compat.raise_(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 136, in _do_get
+    return self._create_connection()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 308, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 437, in __init__
+    self.__connect(first_connect_check=True)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 657, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 68, in __exit__
+    compat.raise_(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 652, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/strategies.py", line 114, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 490, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+sqlalchemy.exc.DBAPIError: (pyodbc.Error) ('HY000', "[HY000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Resource ID : 1. The request limit for the database is 30 and has been reached. See 'http://go.microsoft.com/fwlink/?LinkId=267637' for assistance. (10928) (SQLSetConnectAttr(SQL_ATTR_AUTOCOMMIT))")
+(Background on this error at: http://sqlalche.me/e/dbapi)
+root 2020-04-22 20:52:45,366 handle_exception 78 :
+ exiting! from sshook
+
+root 2020-04-22 20:52:45,367 handle_exception 80 :
+ sending to default hook
+

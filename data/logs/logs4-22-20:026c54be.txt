@@ -1,0 +1,124 @@
+root 2020-04-22 20:02:00,801 <module> 24 :
+ Driver%3D%7BODBC+Driver+17+for+SQL+Server%7D%3BServer%3Dtcp%3Apydoc-db.database.windows.net%2C1433%3BDatabase%3Dpydoc-db%3BUid%3Dhenry2833%3BPwd%3D%7BInfoip32%7D%3BEncrypt%3Dyes%3BTrustServerCertificate%3Dno%3BConnection+Timeout%3D30%3B
+
+__main__ 2020-04-22 20:02:03,327 start 76 :
+ STARTING SQL testing2020-04-22 20:02:03.327897 /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+
+__main__ 2020-04-22 20:02:04,534 start 85 :
+ Added owner row, name: testing2020-04-04 22 AprZKjRLL7UCA id: 66
+
+__main__ 2020-04-22 20:02:04,542 start 93 :
+ Finished loading pickles
+
+__main__ 2020-04-22 20:02:04,544 start 109 :
+ File: 1A7VHFEYQVj0bigcnBi3pn4NngcNXxH35Croy3zrdvLY
+
+__main__ 2020-04-22 20:02:04,546 start 109 :
+ File: 1WrjmluBbaNBS8u_WZmREl02_oMy2zv6Kcdte82zR5yk
+
+__main__ 2020-04-22 20:02:04,548 start 109 :
+ File: 1NO1CVAUsBSgghggdLH2X4YQ2XNaEkDmr7vK156pSCxk
+
+__main__ 2020-04-22 20:02:04,550 start 121 :
+ len of id map 3 len of q 3
+
+__main__ 2020-04-22 20:02:05,166 start 145 :
+ sess commit done
+
+__main__ 2020-04-22 20:02:05,717 start 155 :
+ starting thread for dates
+
+root 2020-04-22 20:02:10,804 handle_exception 74 :
+ Custom Uncaught exception
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/encodings/utf_16_le.py", line 15, in decode
+    def decode(input, errors='strict'):
+KeyboardInterrupt
+
+The above exception was the direct cause of the following exception:
+
+KeyboardInterrupt: decoding with 'utf-16le' codec failed (KeyboardInterrupt: )
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2597, in _flush
+    flush_context.execute()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 586, in execute
+    persistence.save_obj(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 239, in save_obj
+    _emit_insert_statements(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 1135, in _emit_insert_statements
+    result = cached_connections[connection].execute(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 984, in execute
+    return meth(self, multiparams, params)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 293, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1097, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1287, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1485, in _handle_dbapi_exception
+    util.raise_(exc_info[1], with_traceback=exc_info[2])
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1247, in _execute_context
+    self.dialect.do_execute(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+SystemError: <class 'pyodbc.Error'> returned a result with an error set
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 733, in _rollback_impl
+    self.engine.dialect.do_rollback(self.connection)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 540, in do_rollback
+    dbapi_connection.rollback()
+pyodbc.OperationalError: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLEndTran)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 193, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/henry/pydocs/processing/sql.py", line 242, in <module>
+    start("testing" + datetime.now().__str__(), wpath)
+  File "/home/henry/pydocs/processing/sql.py", line 190, in start
+    sess.flush()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2496, in flush
+    self._flush(objects)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2637, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 81, in __exit__
+    compat.raise_(value, with_traceback=traceback)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2637, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 573, in rollback
+    util.raise_(rollback_err[1], with_traceback=rollback_err[2])
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 533, in rollback
+    t[1].rollback()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1725, in rollback
+    self._do_rollback()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1763, in _do_rollback
+    self.connection._rollback_impl()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 735, in _rollback_impl
+    self._handle_dbapi_exception(e, None, None, None, None)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1481, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 733, in _rollback_impl
+    self.engine.dialect.do_rollback(self.connection)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 540, in do_rollback
+    dbapi_connection.rollback()
+sqlalchemy.exc.OperationalError: (pyodbc.OperationalError) ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLEndTran)')
+(Background on this error at: http://sqlalche.me/e/e3q8)

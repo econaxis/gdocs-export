@@ -72,6 +72,7 @@ def getgdoc(creds, id, dates):
     rawrev=None
 
     return 0
+@profile
 async def getIdsRecursive (drive_url, folders: asyncio.Queue,
                           files: asyncio.Queue, session: aiohttp.ClientSession, headers):
 
@@ -139,6 +140,7 @@ async def getIdsRecursive (drive_url, folders: asyncio.Queue,
                 # First element id is not used for naming, only for api calls
                 await files.put([id, resFile["mimeType"], path + [id], 0])
 
+@profile
 async def queryDriveActivity(fileTuple, files, session, headers):
 
     (fileId, mimeType, path, tried) = fileTuple
@@ -186,6 +188,7 @@ async def queryDriveActivity(fileTuple, files, session, headers):
             TestUtil.pathedFiles[(*path,)].append(modifiedDate)
     return 0
 
+@profile
 async def handleResponse(response, queue, fileTuple, decrease=True):
     try:
         rev = await response.json()
@@ -209,6 +212,7 @@ async def handleResponse(response, queue, fileTuple, decrease=True):
 
         return -1
 
+@profile
 async def getRevision(files: asyncio.Queue, session: aiohttp.ClientSession, headers):
 
     # Await random amount for more staggered requesting (?)
@@ -236,6 +240,7 @@ async def getRevision(files: asyncio.Queue, session: aiohttp.ClientSession, head
             logger.debug('done gdoc')
 
 
+@profile
 async def start():
     global acThrottle
 
@@ -274,7 +279,6 @@ async def start():
     printTask.cancel()
 
     logger.warning("cancelled throttler")
-
 
 def exchandler(loop, context):
     msg = context.get("exception", context["message"])
