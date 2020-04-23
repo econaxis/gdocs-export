@@ -1,5 +1,4 @@
 import logging
-from memory_profiler import profile
 from processing.datutils.test_utils import TestUtil
 import smtplib, ssl
 import os
@@ -11,7 +10,7 @@ from datetime import datetime
 import secrets
 
 
-logFile = "data/logs/logs{}{}.txt".format(datetime.now().strftime("%-m-%d-%H:%M"), secrets.token_hex(3))
+logFile = "data/logs/logs{}.txt".format(datetime.now().strftime("%-m-%d"))
 
 syslog = SysLogHandler(address=('logs2.papertrailapp.com', 49905))
 filelog = FileHandler(logFile)
@@ -36,7 +35,7 @@ class bcolors:
     UNDERLINE = '\033[4m'
 
 
-formatter =logging.Formatter(f"%(name)s %(asctime)s %(funcName)s %(lineno)d :\n %(message)s\n")
+formatter =logging.Formatter(f"%(filename).8s:%(asctime)s:%(funcName)s:%(lineno)d -- %(message)s", "%m-%d %H:%M:%S")
 
 #syslog = SysLogHandler(address=('syslog-a.logdna.com', 49905))
 
@@ -60,7 +59,6 @@ semidisable( logging.getLogger("googleapiclient"))
 semidisable( logging.getLogger("asyncio"))
 semidisable( logging.getLogger('urllib3'))
 semidisable( logging.getLogger('gdocrevisions.operation'))
-#semidisable( logging.getLogger('sqlalchemy'))
 semidisable( logging.getLogger('sqlalchemy.engine'))
 
 
@@ -83,6 +81,7 @@ def handle_exception(exc_type, exc_value, exc_traceback):
 
 
 sys.excepthook = handle_exception
+
 import email, smtplib, ssl
 
 from email import encoders

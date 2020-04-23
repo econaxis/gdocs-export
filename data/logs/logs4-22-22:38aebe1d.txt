@@ -1,0 +1,376 @@
+__main__ 2020-04-22 22:38:34,763 start 16 :
+ start
+
+processing.get_files 2020-04-22 22:38:34,764 loadFiles 292 :
+ Start loadFiles, 527e4afc-4598-400f-8536-afa5324f0ba4 root
+
+google.auth.transport.requests 2020-04-22 22:38:34,766 __call__ 117 :
+ Making request: POST https://oauth2.googleapis.com/token
+
+urllib3.connectionpool 2020-04-22 22:38:34,772 _new_conn 817 :
+ Starting new HTTPS connection (1): oauth2.googleapis.com
+
+urllib3.connectionpool 2020-04-22 22:38:34,893 _make_request 393 :
+ https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+
+asyncio 2020-04-22 22:38:34,895 __init__ 59 :
+ Using selector: EpollSelector
+
+processing.datutils.test_utils 2020-04-22 22:38:35,531 print_size 108 :
+ 
+
+Memory usage: 111872 (kb)
+
+processing.datutils.test_utils 2020-04-22 22:38:35,679 print_size 111 :
+ /usr/lib/python3.8/tracemalloc.py:532: size=82.0 KiB (+81.9 KiB), count=1485 (+1484), average=57 B
+
+processing.datutils.test_utils 2020-04-22 22:38:35,682 print_size 111 :
+ /usr/lib/python3.8/inspect.py:744: size=0 B (-36.8 KiB), count=0 (-673)
+
+processing.datutils.test_utils 2020-04-22 22:38:35,683 print_size 111 :
+ /usr/lib/python3.8/sre_parse.py:220: size=0 B (-13.1 KiB), count=0 (-240)
+
+processing.datutils.test_utils 2020-04-22 22:38:35,685 print_size 111 :
+ /usr/lib/python3.8/sre_parse.py:529: size=0 B (-12.7 KiB), count=0 (-233)
+
+processing.datutils.test_utils 2020-04-22 22:38:35,686 print_size 111 :
+ /usr/lib/python3.8/sre_parse.py:599: size=0 B (-3472 B), count=0 (-62)
+
+processing.datutils.test_utils 2020-04-22 22:38:35,688 print_size 111 :
+ /usr/lib/python3.8/sre_parse.py:680: size=0 B (-3192 B), count=0 (-57)
+
+processing.datutils.test_utils 2020-04-22 22:38:35,691 print_size 111 :
+ /usr/lib/python3.8/sre_parse.py:618: size=0 B (-2800 B), count=0 (-50)
+
+processing.datutils.test_utils 2020-04-22 22:38:35,693 print_size 111 :
+ /usr/lib/python3.8/sre_parse.py:490: size=0 B (-2128 B), count=0 (-38)
+
+processing.datutils.test_utils 2020-04-22 22:38:35,695 print_size 111 :
+ /usr/lib/python3.8/sre_parse.py:840: size=0 B (-1968 B), count=0 (-32)
+
+processing.datutils.test_utils 2020-04-22 22:38:35,696 print_size 111 :
+ /usr/lib/python3.8/sre_parse.py:567: size=0 B (-1848 B), count=0 (-33)
+
+processing.datutils.test_utils 2020-04-22 22:38:35,734 print_size 119 :
+ /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/0 at 2020-04-22 22:38:35.734681
+dumped: 0
+
+processing.datutils.test_utils 2020-04-22 22:38:35,736 print_size 122 :
+ BEGIN2020-04-22 22:38:34.688266
+
+
+asyncio 2020-04-22 22:38:35,738 _run_once 1854 :
+ Executing <Task pending name='Task-23' coro=<TestUtil.print_size() running at /home/henry/pydocs/processing/datutils/test_utils.py:142> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fef9a0aec10>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> created at /home/henry/pydocs/processing/get_files.py:251> took 0.215 seconds
+
+processing.get_files 2020-04-22 22:38:35,739 getRevision 197 :
+ getRevision looping
+
+processing.datutils.test_utils 2020-04-22 22:38:35,740 tryGetQueue 196 :
+ getRevisionwaiting 1 2
+
+processing.get_files 2020-04-22 22:38:35,786 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:38:35,834 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:38:35,844 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+asyncio 2020-04-22 22:38:35,899 _getaddrinfo_debug 805 :
+ Get address info www.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1>
+
+asyncio 2020-04-22 22:38:35,919 _getaddrinfo_debug 815 :
+ Getting address info www.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1> took 18.906ms: [(<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('172.217.3.170', 443)), (<AddressFamily.AF_INET6: 10>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('2607:f8b0:400a:809::200a', 443, 0, 0))]
+
+asyncio 2020-04-22 22:38:35,947 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fef76b5dc10> starts SSL handshake
+
+processing.datutils.test_utils 2020-04-22 22:38:35,961 tryGetQueue 196 :
+ getIdswaiting 1 2
+
+asyncio 2020-04-22 22:38:35,978 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fef76b5dc10>: SSL handshake took 30.7 ms
+
+asyncio 2020-04-22 22:38:35,979 create_connection 1057 :
+ <asyncio.TransportSocket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 52538), raddr=('172.217.3.170', 443)> connected to 172.217.3.170:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7fef7696db80>, <aiohttp.client_proto.ResponseHandler object at 0x7fef76b55f40>)
+
+processing.get_files 2020-04-22 22:38:35,984 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:38:36,001 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.datutils.test_utils 2020-04-22 22:38:36,020 tryGetQueue 196 :
+ getIdswaiting 1 2
+
+processing.get_files 2020-04-22 22:38:36,100 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.datutils.test_utils 2020-04-22 22:38:36,156 tryGetQueue 196 :
+ getIdswaiting 1 2
+
+processing.get_files 2020-04-22 22:38:36,170 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.datutils.test_utils 2020-04-22 22:38:36,189 tryGetQueue 196 :
+ getIdswaiting 1 2
+
+processing.get_files 2020-04-22 22:38:36,333 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:38:36,428 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.datutils.test_utils 2020-04-22 22:38:36,473 tryGetQueue 196 :
+ getIdswaiting 1 2
+
+processing.get_files 2020-04-22 22:38:36,484 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:38:36,507 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:38:36,525 getRevision 197 :
+ getRevision looping
+
+processing.get_files 2020-04-22 22:38:36,527 getRevision 209 :
+ not google doc
+
+asyncio 2020-04-22 22:38:36,615 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fef7690a0a0> starts SSL handshake
+
+asyncio 2020-04-22 22:38:36,645 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fef7690a0a0>: SSL handshake took 29.3 ms
+
+asyncio 2020-04-22 22:38:36,646 create_connection 1057 :
+ <asyncio.TransportSocket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 52540), raddr=('172.217.3.170', 443)> connected to 172.217.3.170:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7fef7690fdc0>, <aiohttp.client_proto.ResponseHandler object at 0x7fef76d69280>)
+
+asyncio 2020-04-22 22:38:36,680 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fef7690a100> starts SSL handshake
+
+asyncio 2020-04-22 22:38:36,709 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fef7690a100>: SSL handshake took 28.7 ms
+
+asyncio 2020-04-22 22:38:36,710 create_connection 1057 :
+ <asyncio.TransportSocket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 52542), raddr=('172.217.3.170', 443)> connected to 172.217.3.170:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7fef76c48340>, <aiohttp.client_proto.ResponseHandler object at 0x7fef7690f880>)
+
+asyncio 2020-04-22 22:38:36,714 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fef76c43f40> starts SSL handshake
+
+asyncio 2020-04-22 22:38:36,733 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fef76c43e50> starts SSL handshake
+
+asyncio 2020-04-22 22:38:36,742 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fef76c43f40>: SSL handshake took 27.6 ms
+
+asyncio 2020-04-22 22:38:36,743 create_connection 1057 :
+ <asyncio.TransportSocket fd=14, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 52544), raddr=('172.217.3.170', 443)> connected to 172.217.3.170:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7fef76c5c3a0>, <aiohttp.client_proto.ResponseHandler object at 0x7fef76c48e80>)
+
+asyncio 2020-04-22 22:38:36,761 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fef76c43e50>: SSL handshake took 27.7 ms
+
+asyncio 2020-04-22 22:38:36,762 create_connection 1057 :
+ <asyncio.TransportSocket fd=15, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 52546), raddr=('172.217.3.170', 443)> connected to 172.217.3.170:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7fef76c5c520>, <aiohttp.client_proto.ResponseHandler object at 0x7fef76c48a60>)
+
+asyncio 2020-04-22 22:38:36,831 _getaddrinfo_debug 805 :
+ Get address info driveactivity.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1>
+
+asyncio 2020-04-22 22:38:36,833 _getaddrinfo_debug 815 :
+ Getting address info driveactivity.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1> took 1.714ms: [(<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('172.217.3.202', 443)), (<AddressFamily.AF_INET6: 10>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('2607:f8b0:400a:801::200a', 443, 0, 0))]
+
+asyncio 2020-04-22 22:38:36,854 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fef76c57cd0> starts SSL handshake
+
+asyncio 2020-04-22 22:38:36,895 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fef76c57cd0>: SSL handshake took 39.9 ms
+
+asyncio 2020-04-22 22:38:36,895 create_connection 1057 :
+ <asyncio.TransportSocket fd=16, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 44338), raddr=('172.217.3.202', 443)> connected to 172.217.3.202:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7fef76c68040>, <aiohttp.client_proto.ResponseHandler object at 0x7fef7690f520>)
+
+processing.get_files 2020-04-22 22:38:36,981 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:38:37,019 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:38:37,052 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:38:37,292 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:38:37,300 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:38:37,520 getRevision 197 :
+ getRevision looping
+
+processing.get_files 2020-04-22 22:38:37,726 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:38:37,764 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:38:37,770 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:38:37,843 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:38:38,073 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:38:38,332 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:38:38,595 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:38:38,668 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:38:38,729 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+asyncio 2020-04-22 22:38:38,992 pause_reading 792 :
+ <_SelectorSocketTransport fd=16 read=idle write=<idle, bufsize=0>> pauses reading
+
+asyncio 2020-04-22 22:38:38,996 resume_reading 800 :
+ <_SelectorSocketTransport fd=16 read=polling write=<idle, bufsize=0>> resumes reading
+
+processing.get_files 2020-04-22 22:38:39,073 getRevision 197 :
+ getRevision looping
+
+processing.get_files 2020-04-22 22:38:39,075 getRevision 197 :
+ getRevision looping
+
+processing.get_files 2020-04-22 22:38:39,149 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:38:39,166 getRevision 197 :
+ getRevision looping
+
+processing.get_files 2020-04-22 22:38:39,186 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:38:39,420 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:38:39,501 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:38:39,688 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:38:39,971 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:38:40,114 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:38:40,370 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:38:40,520 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:38:40,575 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:38:40,651 getRevision 197 :
+ getRevision looping
+
+processing.get_files 2020-04-22 22:38:40,795 getRevision 197 :
+ getRevision looping
+
+processing.get_files 2020-04-22 22:38:40,815 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:38:40,915 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:38:40,995 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:38:41,038 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:38:41,071 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:38:41,104 getRevision 197 :
+ getRevision looping
+
+processing.get_files 2020-04-22 22:38:41,250 getRevision 197 :
+ getRevision looping
+
+processing.get_files 2020-04-22 22:38:41,311 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:38:41,413 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:38:41,510 getRevision 197 :
+ getRevision looping
+
+processing.get_files 2020-04-22 22:38:41,526 getRevision 209 :
+ not google doc
+
+asyncio 2020-04-22 22:38:41,565 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fef774f2280> starts SSL handshake
+
+asyncio 2020-04-22 22:38:41,565 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fef75f85df0> starts SSL handshake
+
+asyncio 2020-04-22 22:38:41,592 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fef774f2280>: SSL handshake took 27.3 ms
+
+asyncio 2020-04-22 22:38:41,593 create_connection 1057 :
+ <asyncio.TransportSocket fd=17, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 52554), raddr=('172.217.3.170', 443)> connected to 172.217.3.170:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7fef76b815e0>, <aiohttp.client_proto.ResponseHandler object at 0x7fef76bb9fa0>)
+
+asyncio 2020-04-22 22:38:41,597 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fef75f85df0>: SSL handshake took 31.4 ms
+
+processing.get_files 2020-04-22 22:38:41,598 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+asyncio 2020-04-22 22:38:41,600 create_connection 1057 :
+ <asyncio.TransportSocket fd=18, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 52556), raddr=('172.217.3.170', 443)> connected to 172.217.3.170:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7fef76b81220>, <aiohttp.client_proto.ResponseHandler object at 0x7fef76ba0e80>)
+
+processing.get_files 2020-04-22 22:38:41,684 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:38:41,735 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:38:41,743 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+root 2020-04-22 22:38:41,786 handle_exception 74 :
+ Custom Uncaught exception
+Traceback (most recent call last):
+  File "dsds.py", line 34, in <module>
+    start()
+  File "dsds.py", line 31, in start
+    loadFiles(uid, workingPath, fileid, creds)
+  File "/home/henry/pydocs/processing/get_files.py", line 317, in loadFiles
+    loop.run_until_complete(asyncio.gather(startTask))
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+    return future.result()
+  File "/home/henry/pydocs/processing/get_files.py", line 255, in start
+    await asyncio.gather(*revisionExplorer)
+  File "/home/henry/pydocs/processing/get_files.py", line 214, in getRevision
+    await gd.async_init(fileId, session, headers)
+  File "/home/henry/pydocs/processing/gdoc.py", line 12, in async_init
+    await self.get_last_revision()
+  File "/home/henry/pydocs/processing/gdoc.py", line 27, in get_last_revision
+    logger.info(rev)
+NameError: name 'logger' is not defined
+root 2020-04-22 22:38:43,479 handle_exception 78 :
+ exiting! from sshook
+
+root 2020-04-22 22:38:43,481 handle_exception 80 :
+ sending to default hook
+

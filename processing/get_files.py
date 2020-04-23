@@ -1,12 +1,10 @@
 import asyncio
+import processing.sql
 import  multiprocessing as mp
-import gdocrevisions as gdr
-import copy
 import sys
 from time import time
 from datetime import datetime
 import random
-import json
 import pickle
 from processing.throttler import Throttle
 import aiohttp
@@ -19,22 +17,13 @@ import configlog
 
 # Imports TestUtil and corresponding functions
 from processing.datutils.test_utils import *
+from processing.gdoc import GDoc
 
 logger = logging.getLogger(__name__)
 
 pprint = pprint.PrettyPrinter(indent=4).pprint
 
 
-class FilePrintText:
-    text = ""
-
-    @classmethod
-    def add(cls, txt):
-        cls.text += txt + "<br>"
-
-    @classmethod
-    def clear(cls):
-        cls.text = ""
 
 
 # Deprecated
@@ -47,32 +36,10 @@ acThrottle = None
 
 SEED_ID = "root"
 
-workerInstances = 10
+workerInstances = 14
 
 ACCEPTED_TYPES = { "application/vnd.google-apps.presentation", "application/vnd.google-apps.spreadsheet", "application/vnd.google-apps.document", "application/pdf"}
 
-@profile
-def getgdoc(creds, id, dates):
-    try:
-        #Memory leak
-        rawrev = gdr.GoogleDoc(id, creds).revisions_raw['changelog']
-    except:
-        rawrev = None
-        del rawrev
-        return -1
-
-    #Process revisoins
-
-    for revision in rawrev[1:]:
-        value = revision[1]
-        _moddate = datetime.fromtimestamp(value/1e3)
-        dates.append(copy.deepcopy(_moddate))
-
-    rawrev.clear()
-    rawrev=None
-
-    return 0
-@profile
 async def getIdsRecursive (drive_url, folders: asyncio.Queue,
                           files: asyncio.Queue, session: aiohttp.ClientSession, headers):
 
@@ -113,7 +80,7 @@ async def getIdsRecursive (drive_url, folders: asyncio.Queue,
 
         try:
             async with session.get(url=drive_url, params=data, headers=headers) as response:
-                resp = await handleResponse(response, folders, folderIdTuple, decrease=False)
+                resp = await TestUtil.handleResponse(response,  folderIdTuple, queue = folders)
                 if(resp == -1):
                     del resp
                     del response
@@ -140,14 +107,14 @@ async def getIdsRecursive (drive_url, folders: asyncio.Queue,
                 # First element id is not used for naming, only for api calls
                 await files.put([id, resFile["mimeType"], path + [id], 0])
 
-@profile
+
 async def queryDriveActivity(fileTuple, files, session, headers):
 
     (fileId, mimeType, path, tried) = fileTuple
 
     try:
         async with session.get(url=dr2_urlbuilder(fileId), headers=headers) as revResponse:
-            code = await handleResponse(revResponse, files, fileTuple)
+            code = await TestUtil.handleResponse(revResponse, fileTuple,queue = files)
             if code == -1:
                 _revisions = dict()
             else:
@@ -155,7 +122,7 @@ async def queryDriveActivity(fileTuple, files, session, headers):
             del code
 
         async with session.post(**TestUtil.dractivity_builder(fileId)) as actResponse:
-            code = await handleResponse(actResponse, files, fileTuple, decrease=True)
+            code = await TestUtil.handleResponse(actResponse,  fileTuple, queue = files)
             if code == -1:
                 return -1
             else:
@@ -188,65 +155,51 @@ async def queryDriveActivity(fileTuple, files, session, headers):
             TestUtil.pathedFiles[(*path,)].append(modifiedDate)
     return 0
 
-@profile
-async def handleResponse(response, queue, fileTuple, decrease=True):
-    try:
-        rev = await response.json()
-        assert response.status == 200, "Response not 200"
-        return rev
-    except:
-        e = sys.exc_info()[0]
-        rev = await response.text()
-        logger.log(5, rev)
-
-        del rev
-
-        if response.status == 429:
-            await API_RESET(throttle=acThrottle, decrease=True)
-        else:
-            pass
-        if(fileTuple[-1] < 2):
-            fileTuple = list(fileTuple)
-            fileTuple[-1] += 1
-            await queue.put(fileTuple)
-
-        return -1
-
-@profile
-async def getRevision(files: asyncio.Queue, session: aiohttp.ClientSession, headers):
+async def getRevision(files: asyncio.Queue, session: aiohttp.ClientSession, headers, endEvent):
 
     # Await random amount for more staggered requesting (?)
     await asyncio.sleep(random.uniform(0, 6))
-    while True:
+    while not endEvent.is_set():
         logger.debug("getRevision looping")
         await acThrottle.acquire()
 
         fileTuple = await tryGetQueue(files, name="getRevision")
         if(fileTuple == -1):
             logger.warning('getRevision task exiting')
-            return
+            break
 
         (fileId, mimeType, path, tried) = fileTuple
+
+        if(len(TestUtil.pathedFiles) > 10):
+            #Sleep to avoid xs memory usage
+            await asyncio.sleep(10)
 
 
         if(mimeType != "application/vnd.google-apps.document"):
             logger.debug("not google doc")
             await queryDriveActivity(fileTuple, files, session, headers)
         else:
+            gd = GDoc()
+
+            dates = await gd.async_init(fileId, session, headers)
+            TestUtil.pathedFiles[(*path,)] = dates
             logger.debug("google doc")
-            TestUtil.pathedFiles[(*path,)] = []
-            dates = TestUtil.pathedFiles[(*path,)]
-            getgdoc(TestUtil.creds, fileId, dates)
-            logger.debug('done gdoc')
+            #TestUtil.pathedFiles[(*path,)] = []
+            #dates = TestUtil.pathedFiles[(*path,)]
+            #getgdoc(TestUtil.creds, fileId, dates)
+
+    secs = 30
+    logger.warning("getRevision task has ended, waiting for {x} seconds for all other tasks to finish", x = secs)
+    await asyncio.sleep(secs)
+    endEvent.set()
+    logger.warning("Close event has been set. Expect print task to finish soon")
 
 
-@profile
 async def start():
     global acThrottle
 
     loop = asyncio.get_event_loop()
     loop.set_exception_handler(exchandler)
-    loop.set_debug(enabled=True)
 
     acThrottle = Throttle(30)
     TestUtil.throttle = acThrottle
@@ -259,18 +212,21 @@ async def start():
 
     async with aiohttp.ClientSession() as session:
         # Generate list of Workers to explore folder structure
+
+        endEvent = asyncio.Event()
+
         fileExplorers = [loop.create_task(getIdsRecursive("https://www.googleapis.com/drive/v3/files",
                                                              folders, files, session, TestUtil.headers)) for i in range(workerInstances)]
 
-        revisionExplorer = [loop.create_task(getRevision(files, session, TestUtil.headers))
+        revisionExplorer = [loop.create_task(getRevision(files, session, TestUtil.headers, endEvent))
                             for i in range(10)]
 
         # Generate Print Task that prints data every X seconds
-        printTask = loop.create_task( TestUtil.print_size(files))
+        printTask = loop.create_task( TestUtil.print_size(files, endEvent))
         # Wait until all folders are properly processed, or until FILE_MAX is
         # reached
 
-        await asyncio.gather(*revisionExplorer)
+        await asyncio.gather(*revisionExplorer, *fileExplorers, printTask)
         logger.info("await gather revisions done")
 
 
@@ -300,10 +256,9 @@ async def shutdown(loop, signal=None):
 
     logging.info(f"Cancelling {len(tasks)} outstanding tasks")
     await asyncio.gather(*tasks, return_exceptions=True)
-    logging.info(f"Flushing metrics")
-    logging.info("sending logs")
+    logging.info("Emailing logs...")
     sendmail()
-    logging.info("stopping")
+    logging.info("Stopping")
     loop.stop()
 
 def loadFiles(USER_ID, _workingPath, fileId, _creds):
@@ -353,19 +308,15 @@ def loadFiles(USER_ID, _workingPath, fileId, _creds):
 
 
 
-#    TestUtil.formatData()
-
-#    TestUtil.activity_gen()
 
     # Writing data to SQL
-    import processing.sql
     processing.sql.start(USER_ID, _workingPath)
 
     open(_workingPath + 'done.txt', 'a+').write("DONE")
     raise AssertionError("Program ended normally. This assertion is to send SMTP logs by syshook handler")
-    sys.exit()
 
 
+'''
  #   asyncio.DefaultEventLoopPolicy = asyncio.WindowsSelectorEventLoopPolicy
 if __name__ == "__main__":
     uid = "527e4afc-4598-400f-8536-afa5324f0ba4"
@@ -382,3 +333,4 @@ if __name__ == "__main__":
     CREDENTIAL_FILE = 'service.json'
     SCOPE = ['https://www.googleapis.com/auth/drive']
     loadFiles(uid, workingPath, fileid, creds)
+'''

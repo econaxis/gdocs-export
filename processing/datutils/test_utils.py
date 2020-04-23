@@ -1,10 +1,11 @@
 import pandas as pd
-from memory_profiler import profile
+import sys
+#from memory_profiler import profile
 import gc
 import resource
 from processing.throttler import Throttle
 import configlog
-import tracemalloc
+#import tracemalloc
 import numpy as np
 import random
 from math import log
@@ -19,12 +20,11 @@ import math
 from google.auth.transport.requests import Request
 import logging
 
-tracemalloc.start(10)
+#tracemalloc.start(10)
 
 logger = logging.getLogger(__name__)
 
 class TestUtil:
-    SCOPES = ['https://www.googleapis.com/auth/drive.metadata.readonly', 'https://www.googleapis.com/auth/drive.activity.readonly']
     fileCounter = 0
     creds = None
     headers = {}
@@ -33,36 +33,7 @@ class TestUtil:
     workingPath = None
     pickleIndex = []
     maxSize = 0
-    errMsg = "BEGIN" + str(datetime.now()) + "\n"
     throttle = None
-
-    @classmethod
-    def formatData(cls, fileName = 'collapsedFiles'):
-        rdata = pickle.load(open(cls.workingPath + fileName + '.pickle', 'rb'))
-
-        ind = pd.MultiIndex.from_tuples(rdata.keys())
-        data = pd.DataFrame(rdata.values(), index = ind, columns = ["Type"])
-
-        sumDates=data.reset_index(level = 0, drop = True)
-        pickle.dump(data, open(cls.workingPath + fileName + "_p.pickle", 'wb'))
-
-
-    @classmethod
-    def activity_gen(cls):
-        data = pickle.load(open(cls.workingPath + 'collapsedFiles_p.pickle', 'rb'))
-        hists = {}
-        activity = dict(time=[], files=[], marker_size=[])
-        for f in data.index.levels[0]:
-            timesForFile = data.loc[f].index
-            activity["time"].append(data.loc[f].index[-1])
-            activity["files"].append(f)
-            activity["marker_size"].append(log(len(timesForFile), 1.3))
-            hists[f] = [0, 0]
-            hists[f][0], bins = np.histogram([i.timestamp() for i in timesForFile], bins = 'auto')
-            hists[f][1] = [datetime.fromtimestamp(i) for i in bins]
-        pickle.dump(activity, open(cls.workingPath + 'activity.pickle', 'wb'))
-        pickle.dump(hists, open(cls.workingPath + 'hists.pickle', 'wb'))
-
 
     @classmethod
     def refresh_creds(cls, creds):
@@ -95,21 +66,24 @@ class TestUtil:
             filter = filter, quotaUser = quotaUser)
         return dict(params = params, headers = headers, url = "https://driveactivity.googleapis.com/v2/activity:query")
 
-    @classmethod 
-    def errors(cls, msg):
-        cls.errMsg += str(msg) + '\n'
 
     @classmethod
-    @profile
-    async def print_size(cls, files):
-        cls.snapshot = tracemalloc.take_snapshot()
-        while True:
-            logger.warning('\n\nMemory usage: %s (kb)' % resource.getrusage(resource.RUSAGE_SELF).ru_maxrss)
-            sns = tracemalloc.take_snapshot()
-            for i in sns.compare_to(cls.snapshot, 'lineno')[0:10]:
-                logger.warning(i)
+    async def print_size(cls, files, endEvent):
+        #cls.snapshot = tracemalloc.take_snapshot()
+        while not endEvent.is_set():
+            logger.info('%sMemory usage: %s (kb)%s','-'*15,resource.getrusage(resource.RUSAGE_SELF).ru_maxrss, '-'*15)
 
-            cls.snapshot = sns
+
+            #sns = tracemalloc.take_snapshot()
+            #for i in sns.compare_to(cls.snapshot, 'lineno')[0:10]:
+                #logger.warning(i)
+
+            #logger.warning('-'*10)
+
+            #for i in sns.statistics('lineno')[0:10]:
+                #logger.warning(i)
+
+            #cls.snapshot = sns
 
 
             gc.collect()
@@ -118,36 +92,75 @@ class TestUtil:
             logger.info("%s\n%d/%d at %s\ndumped: %d",cls.workingPath,len(cls.pathedFiles), totsize, datetime.now().__str__(),
                     cls.fileCounter)
 
-            logger.error(cls.errMsg)
-
-
-            cls.errMsg = ""
-
             if(random.randint(0, 100) > 97):
                 print("resetting counter")
                 cls.throttle.reset()
 
-            if(len(cls.pathedFiles)>60):
+            if(len(cls.pathedFiles)>10):
                 cls.fileCounter +=1
                 _filename = cls.workingPath + str(cls.fileCounter) + '.pathed'
                 pickle.dump(cls.pathedFiles, open(_filename, 'wb'))
-                logger.warning("dumped pathed files at %s, length %d", _filename, len(cls.pathedFiles))
+                logger.info("dumped pathed files at %s, length %d", _filename, len(cls.pathedFiles))
                 cls.pathedFiles = {}
                 cls.pickleIndex.append(_filename)
 
 
-            for i in range(5):
-                print(f"{i*4} out of 20 till next output      ", end = "\r", flush = True)
-                await asyncio.sleep(4)
+            for i in range(2):
+                print(f"{i*6} out of 12 till next output      ", end = "\r", flush = True)
+                await asyncio.sleep(6)
 
 
 
-    #Deprecated
+
     @classmethod
-    def strToFile(cls, string, filename):
-        open(cls.workingPath + filename, 'a+').write(string)
-        open(filename, 'a+').write(string)
+    async def handleResponse(cls, response, fileTuple = None, queue = None):
+        try:
+            rev = await response.json()
+            assert response.status == 200, "Response not 200"
+            return rev
+        except:
+            e = sys.exc_info()[0]
+            rev = await response.text()
+            logger.log(5, rev)
 
+
+
+            if(fileTuple and queue and fileTuple[-1] < 2):
+                fileTuple = list(fileTuple)
+                fileTuple[-1] += 1
+                await queue.put(fileTuple)
+
+            return -1
+
+
+    '''
+    @classmethod
+    def formatData(cls, fileName = 'collapsedFiles'):
+        rdata = pickle.load(open(cls.workingPath + fileName + '.pickle', 'rb'))
+
+        ind = pd.MultiIndex.from_tuples(rdata.keys())
+        data = pd.DataFrame(rdata.values(), index = ind, columns = ["Type"])
+
+        sumDates=data.reset_index(level = 0, drop = True)
+        pickle.dump(data, open(cls.workingPath + fileName + "_p.pickle", 'wb'))
+
+
+    @classmethod
+    def activity_gen(cls):
+        data = pickle.load(open(cls.workingPath + 'collapsedFiles_p.pickle', 'rb'))
+        hists = {}
+        activity = dict(time=[], files=[], marker_size=[])
+        for f in data.index.levels[0]:
+            timesForFile = data.loc[f].index
+            activity["time"].append(data.loc[f].index[-1])
+            activity["files"].append(f)
+            activity["marker_size"].append(log(len(timesForFile), 1.3))
+            hists[f] = [0, 0]
+            hists[f][0], bins = np.histogram([i.timestamp() for i in timesForFile], bins = 'auto')
+            hists[f][1] = [datetime.fromtimestamp(i) for i in bins]
+        pickle.dump(activity, open(cls.workingPath + 'activity.pickle', 'wb'))
+        pickle.dump(hists, open(cls.workingPath + 'hists.pickle', 'wb'))
+    '''
 
 
 def dr2_urlbuilder(id: str):
@@ -162,7 +175,7 @@ async def API_RESET(seconds = 6, throttle = None, decrease = False):
     await asyncio.sleep(secs)
     return
 
-async def tryGetQueue(queue: asyncio.Queue, repeatTimes:int = 2, interval:float = 2, name:str = ""):
+async def tryGetQueue(queue: asyncio.Queue, repeatTimes:int = 10, interval:float = 3.5, name:str = ""):
     output = None
     timesWaited = 0
     while(output==None):
