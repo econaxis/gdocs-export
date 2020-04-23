@@ -8,9 +8,11 @@ WORKDIR ${DOCKERWDIR}
 
 
 COPY installation ./installation
-RUN chmod +x ./installation/instodbc.sh && chmod +x ./installation/vartest.sh && chmod +x ./boot.sh
+RUN chmod +x ./installation/instodbc.sh
 RUN ./installation/instodbc.sh
-RUN pip install --upgrade pip && pip install -r installation/requirements.txt && apt-get update && apt-get install nano vim -y
+RUN pip install --upgrade pip
+RUN pip install -r installation/requirements.txt
+RUN apt-get update && apt-get install nano vim -y
 
 EXPOSE 5000
 
@@ -27,14 +29,18 @@ ENV REDIS_HOST ${REDIS_HOST}
 ENV SQL_PASS   ${SQL_PASS}
 ENV SQL_CONN ${SQL_CONN}
 
+RUN chmod +x ./installation/vartest.sh
+RUN ./installation/vartest.sh
 
 COPY configlog.py boot.sh loader.py dsds.py run.py drun.sh dockerbuild.sh Dockerfile ./
+COPY gdocrevisions ./gdocrevisions
 COPY data ./data
 
 
 COPY flaskr ./flaskr
 COPY processing ./processing
 
+RUN chmod +x ./boot.sh
 
 RUN chmod -R 777 ./
 
