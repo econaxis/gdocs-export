@@ -1,0 +1,4605 @@
+__main__ 2020-04-23 09:36:14,891 start 16 :
+ start
+
+processing.get_files 2020-04-23 09:36:14,892 loadFiles 270 :
+ Start loadFiles, 527e4afc-4598-400f-8536-afa5324f0ba4 root
+
+google.auth.transport.requests 2020-04-23 09:36:14,894 __call__ 117 :
+ Making request: POST https://oauth2.googleapis.com/token
+
+urllib3.connectionpool 2020-04-23 09:36:14,899 _new_conn 817 :
+ Starting new HTTPS connection (1): oauth2.googleapis.com
+
+urllib3.connectionpool 2020-04-23 09:36:15,021 _make_request 393 :
+ https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+
+asyncio 2020-04-23 09:36:15,023 __init__ 59 :
+ Using selector: EpollSelector
+
+processing.datutils.test_utils 2020-04-23 09:36:15,631 print_size 108 :
+ 
+
+Memory usage: 109724 (kb)
+
+processing.datutils.test_utils 2020-04-23 09:36:15,779 print_size 111 :
+ /usr/lib/python3.8/tracemalloc.py:532: size=82.0 KiB (+81.9 KiB), count=1485 (+1484), average=57 B
+
+processing.datutils.test_utils 2020-04-23 09:36:15,781 print_size 111 :
+ /usr/lib/python3.8/inspect.py:744: size=0 B (-36.1 KiB), count=0 (-660)
+
+processing.datutils.test_utils 2020-04-23 09:36:15,782 print_size 111 :
+ /usr/lib/python3.8/sre_parse.py:220: size=0 B (-13.3 KiB), count=0 (-243)
+
+processing.datutils.test_utils 2020-04-23 09:36:15,783 print_size 111 :
+ /usr/lib/python3.8/sre_parse.py:529: size=0 B (-13.2 KiB), count=0 (-241)
+
+processing.datutils.test_utils 2020-04-23 09:36:15,784 print_size 111 :
+ /usr/lib/python3.8/sre_parse.py:599: size=0 B (-3472 B), count=0 (-62)
+
+processing.datutils.test_utils 2020-04-23 09:36:15,786 print_size 111 :
+ /usr/lib/python3.8/sre_parse.py:680: size=0 B (-3192 B), count=0 (-57)
+
+processing.datutils.test_utils 2020-04-23 09:36:15,787 print_size 111 :
+ /usr/lib/python3.8/sre_parse.py:618: size=0 B (-2800 B), count=0 (-50)
+
+processing.datutils.test_utils 2020-04-23 09:36:15,788 print_size 111 :
+ /usr/lib/python3.8/sre_parse.py:490: size=0 B (-2240 B), count=0 (-40)
+
+processing.datutils.test_utils 2020-04-23 09:36:15,790 print_size 111 :
+ /usr/lib/python3.8/sre_parse.py:840: size=0 B (-1968 B), count=0 (-32)
+
+processing.datutils.test_utils 2020-04-23 09:36:15,792 print_size 111 :
+ /usr/lib/python3.8/sre_parse.py:567: size=0 B (-1848 B), count=0 (-33)
+
+processing.datutils.test_utils 2020-04-23 09:36:15,830 print_size 119 :
+ /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/0 at 2020-04-23 09:36:15.830839
+dumped: 0
+
+processing.datutils.test_utils 2020-04-23 09:36:15,832 print_size 122 :
+ BEGIN2020-04-23 09:36:14.844435
+
+
+asyncio 2020-04-23 09:36:15,834 _run_once 1854 :
+ Executing <Task pending name='Task-23' coro=<TestUtil.print_size() running at /home/henry/pydocs/processing/datutils/test_utils.py:142> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7ffa121414f0>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> created at /home/henry/pydocs/processing/get_files.py:229> took 0.210 seconds
+
+processing.get_files 2020-04-23 09:36:15,834 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+asyncio 2020-04-23 09:36:15,889 _getaddrinfo_debug 805 :
+ Get address info www.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1>
+
+asyncio 2020-04-23 09:36:15,890 _getaddrinfo_debug 815 :
+ Getting address info www.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1> took 1.369ms: [(<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('216.58.193.74', 443)), (<AddressFamily.AF_INET6: 10>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('2607:f8b0:400a:804::200a', 443, 0, 0))]
+
+asyncio 2020-04-23 09:36:15,912 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eeb1f8e0> starts SSL handshake
+
+asyncio 2020-04-23 09:36:15,941 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eeb1f8e0>: SSL handshake took 28.0 ms
+
+asyncio 2020-04-23 09:36:15,942 create_connection 1057 :
+ <asyncio.TransportSocket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 35768), raddr=('216.58.193.74', 443)> connected to 216.58.193.74:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7ff9eeb3e820>, <aiohttp.client_proto.ResponseHandler object at 0x7ff9eee76880>)
+
+processing.get_files 2020-04-23 09:36:16,023 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:16,045 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:16,135 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:16,243 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:16,260 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:16,270 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:16,272 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.datutils.test_utils 2020-04-23 09:36:16,372 tryGetQueue 196 :
+ getIdswaiting 1 2
+
+processing.get_files 2020-04-23 09:36:16,426 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.datutils.test_utils 2020-04-23 09:36:16,428 tryGetQueue 196 :
+ getIdswaiting 1 2
+
+processing.datutils.test_utils 2020-04-23 09:36:16,480 tryGetQueue 196 :
+ getIdswaiting 1 2
+
+processing.datutils.test_utils 2020-04-23 09:36:16,548 tryGetQueue 196 :
+ getIdswaiting 1 2
+
+processing.get_files 2020-04-23 09:36:16,568 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.datutils.test_utils 2020-04-23 09:36:16,596 tryGetQueue 196 :
+ getIdswaiting 1 2
+
+processing.datutils.test_utils 2020-04-23 09:36:16,605 tryGetQueue 196 :
+ getIdswaiting 1 2
+
+processing.datutils.test_utils 2020-04-23 09:36:16,639 tryGetQueue 196 :
+ getIdswaiting 1 2
+
+processing.datutils.test_utils 2020-04-23 09:36:16,778 tryGetQueue 196 :
+ getIdswaiting 1 2
+
+processing.get_files 2020-04-23 09:36:16,849 getRevision 174 :
+ getRevision looping
+
+processing.datutils.test_utils 2020-04-23 09:36:16,850 tryGetQueue 196 :
+ getRevisionwaiting 1 2
+
+processing.get_files 2020-04-23 09:36:16,857 getRevision 174 :
+ getRevision looping
+
+processing.datutils.test_utils 2020-04-23 09:36:16,858 tryGetQueue 196 :
+ getRevisionwaiting 1 2
+
+processing.get_files 2020-04-23 09:36:16,966 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+asyncio 2020-04-23 09:36:17,414 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eeaed430> starts SSL handshake
+
+asyncio 2020-04-23 09:36:17,448 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eeaed430>: SSL handshake took 33.5 ms
+
+asyncio 2020-04-23 09:36:17,449 create_connection 1057 :
+ <asyncio.TransportSocket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 35770), raddr=('216.58.193.74', 443)> connected to 216.58.193.74:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7ff9eeb09b20>, <aiohttp.client_proto.ResponseHandler object at 0x7ff9eee08ca0>)
+
+processing.get_files 2020-04-23 09:36:17,565 getRevision 174 :
+ getRevision looping
+
+processing.get_files 2020-04-23 09:36:17,613 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:18,035 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:18,110 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:18,620 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:18,738 getRevision 174 :
+ getRevision looping
+
+processing.get_files 2020-04-23 09:36:18,788 getRevision 174 :
+ getRevision looping
+
+processing.get_files 2020-04-23 09:36:18,817 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:19,061 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:19,083 getRevision 174 :
+ getRevision looping
+
+processing.get_files 2020-04-23 09:36:19,335 getRevision 174 :
+ getRevision looping
+
+processing.get_files 2020-04-23 09:36:19,886 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:19,888 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:19,994 getRevision 174 :
+ getRevision looping
+
+processing.get_files 2020-04-23 09:36:20,268 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:20,332 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:20,648 getRevision 174 :
+ getRevision looping
+
+processing.get_files 2020-04-23 09:36:20,772 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:20,891 getRevision 174 :
+ getRevision looping
+
+processing.get_files 2020-04-23 09:36:21,080 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:21,619 getRevision 186 :
+ not google doc
+
+processing.gdoc 2020-04-23 09:36:21,630 async_init 16 :
+ async init called
+
+processing.gdoc 2020-04-23 09:36:21,634 async_init 16 :
+ async init called
+
+processing.get_files 2020-04-23 09:36:21,641 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+asyncio 2020-04-23 09:36:21,665 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eeae3940> starts SSL handshake
+
+asyncio 2020-04-23 09:36:21,671 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eeaedc10> starts SSL handshake
+
+asyncio 2020-04-23 09:36:21,672 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eeae3640> starts SSL handshake
+
+asyncio 2020-04-23 09:36:21,697 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eeae3940>: SSL handshake took 31.8 ms
+
+asyncio 2020-04-23 09:36:21,697 create_connection 1057 :
+ <asyncio.TransportSocket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 35772), raddr=('216.58.193.74', 443)> connected to 216.58.193.74:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7ff9eeaec400>, <aiohttp.client_proto.ResponseHandler object at 0x7ff9eeaecbe0>)
+
+asyncio 2020-04-23 09:36:21,701 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eeaedc10>: SSL handshake took 30.2 ms
+
+asyncio 2020-04-23 09:36:21,703 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eeae3640>: SSL handshake took 30.7 ms
+
+asyncio 2020-04-23 09:36:21,703 create_connection 1057 :
+ <asyncio.TransportSocket fd=15, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 35776), raddr=('216.58.193.74', 443)> connected to 216.58.193.74:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7ff9eeaecf40>, <aiohttp.client_proto.ResponseHandler object at 0x7ff9eeae18e0>)
+
+asyncio 2020-04-23 09:36:21,706 create_connection 1057 :
+ <asyncio.TransportSocket fd=14, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 35774), raddr=('216.58.193.74', 443)> connected to 216.58.193.74:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7ff9eeaec8e0>, <aiohttp.client_proto.ResponseHandler object at 0x7ff9eeaff700>)
+
+processing.get_files 2020-04-23 09:36:21,731 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.gdoc 2020-04-23 09:36:22,104 get_last_revision 35 :
+ code not 200
+
+asyncio 2020-04-23 09:36:22,110 _getaddrinfo_debug 805 :
+ Get address info driveactivity.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1>
+
+asyncio 2020-04-23 09:36:22,111 _getaddrinfo_debug 815 :
+ Getting address info driveactivity.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1> took 1.190ms: [(<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('172.217.14.202', 443)), (<AddressFamily.AF_INET6: 10>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('2607:f8b0:400a:803::200a', 443, 0, 0))]
+
+asyncio 2020-04-23 09:36:22,139 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eeb1fd60> starts SSL handshake
+
+processing.gdoc 2020-04-23 09:36:22,141 get_last_revision 45 :
+ last revision id 14
+
+processing.gdoc 2020-04-23 09:36:22,142 async_init 24 :
+ 0
+
+processing.gdoc 2020-04-23 09:36:22,143 async_init 26 :
+ after await 14
+
+asyncio 2020-04-23 09:36:22,148 _getaddrinfo_debug 805 :
+ Get address info docs.google.com:443, type=<SocketKind.SOCK_STREAM: 1>
+
+asyncio 2020-04-23 09:36:22,149 _getaddrinfo_debug 815 :
+ Getting address info docs.google.com:443, type=<SocketKind.SOCK_STREAM: 1> took 1.297ms: [(<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('172.217.14.206', 443)), (<AddressFamily.AF_INET6: 10>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('2607:f8b0:400a:801::200e', 443, 0, 0))]
+
+asyncio 2020-04-23 09:36:22,168 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eeb1fd60>: SSL handshake took 28.8 ms
+
+asyncio 2020-04-23 09:36:22,169 create_connection 1057 :
+ <asyncio.TransportSocket fd=16, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 52710), raddr=('172.217.14.202', 443)> connected to 172.217.14.202:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7ff9eeaec340>, <aiohttp.client_proto.ResponseHandler object at 0x7ff9eeae19a0>)
+
+asyncio 2020-04-23 09:36:22,173 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eedbb6a0> starts SSL handshake
+
+asyncio 2020-04-23 09:36:22,202 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eedbb6a0>: SSL handshake took 28.6 ms
+
+asyncio 2020-04-23 09:36:22,203 create_connection 1057 :
+ <asyncio.TransportSocket fd=17, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 58030), raddr=('172.217.14.206', 443)> connected to 172.217.14.206:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7ff9eedb5040>, <aiohttp.client_proto.ResponseHandler object at 0x7ff9eedb16a0>)
+
+processing.get_files 2020-04-23 09:36:22,544 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:22,546 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:22,551 getRevision 197 :
+ google doc
+
+processing.get_files 2020-04-23 09:36:22,552 getRevision 174 :
+ getRevision looping
+
+processing.get_files 2020-04-23 09:36:23,033 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:23,292 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:23,304 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:23,772 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:23,775 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:23,830 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:24,798 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:24,801 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:24,853 getRevision 186 :
+ not google doc
+
+asyncio 2020-04-23 09:36:25,150 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eedaa6a0> starts SSL handshake
+
+asyncio 2020-04-23 09:36:25,183 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eedaa6a0>: SSL handshake took 32.1 ms
+
+asyncio 2020-04-23 09:36:25,184 create_connection 1057 :
+ <asyncio.TransportSocket fd=18, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 52714), raddr=('172.217.14.202', 443)> connected to 172.217.14.202:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7ff9eee52100>, <aiohttp.client_proto.ResponseHandler object at 0x7ff9eedbf520>)
+
+processing.get_files 2020-04-23 09:36:25,321 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:25,528 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:25,642 getRevision 174 :
+ getRevision looping
+
+processing.get_files 2020-04-23 09:36:25,660 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:26,241 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:26,249 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:26,252 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:26,638 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:26,677 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+asyncio 2020-04-23 09:36:27,007 pause_reading 792 :
+ <_SelectorSocketTransport fd=16 read=idle write=<idle, bufsize=0>> pauses reading
+
+asyncio 2020-04-23 09:36:27,010 resume_reading 800 :
+ <_SelectorSocketTransport fd=16 read=polling write=<idle, bufsize=0>> resumes reading
+
+processing.get_files 2020-04-23 09:36:27,083 getRevision 174 :
+ getRevision looping
+
+processing.get_files 2020-04-23 09:36:27,089 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:27,091 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:27,413 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:27,441 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:27,621 getRevision 186 :
+ not google doc
+
+processing.get_files 2020-04-23 09:36:27,632 getRevision 186 :
+ not google doc
+
+processing.get_files 2020-04-23 09:36:27,642 getRevision 186 :
+ not google doc
+
+asyncio 2020-04-23 09:36:27,652 _getaddrinfo_debug 805 :
+ Get address info www.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1>
+
+asyncio 2020-04-23 09:36:27,654 _getaddrinfo_debug 815 :
+ Getting address info www.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1> took 1.275ms: [(<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('216.58.193.74', 443)), (<AddressFamily.AF_INET6: 10>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('2607:f8b0:400a:804::200a', 443, 0, 0))]
+
+asyncio 2020-04-23 09:36:27,673 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9ef6b3b20> starts SSL handshake
+
+asyncio 2020-04-23 09:36:27,704 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9ef6b3b20>: SSL handshake took 30.4 ms
+
+asyncio 2020-04-23 09:36:27,705 create_connection 1057 :
+ <asyncio.TransportSocket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 35784), raddr=('216.58.193.74', 443)> connected to 216.58.193.74:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7ff9ee1ca400>, <aiohttp.client_proto.ResponseHandler object at 0x7ff9eeb094c0>)
+
+asyncio 2020-04-23 09:36:27,740 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9ee18aa30> starts SSL handshake
+
+processing.get_files 2020-04-23 09:36:27,748 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+asyncio 2020-04-23 09:36:27,765 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eee60b20> starts SSL handshake
+
+asyncio 2020-04-23 09:36:27,771 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9ee18aa30>: SSL handshake took 31.5 ms
+
+asyncio 2020-04-23 09:36:27,772 create_connection 1057 :
+ <asyncio.TransportSocket fd=20, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 35786), raddr=('216.58.193.74', 443)> connected to 216.58.193.74:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7ff9eee72400>, <aiohttp.client_proto.ResponseHandler object at 0x7ff9eedbf100>)
+
+processing.get_files 2020-04-23 09:36:27,781 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+asyncio 2020-04-23 09:36:27,794 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eee60b20>: SSL handshake took 28.7 ms
+
+asyncio 2020-04-23 09:36:27,795 create_connection 1057 :
+ <asyncio.TransportSocket fd=21, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 35788), raddr=('216.58.193.74', 443)> connected to 216.58.193.74:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7ff9eee725e0>, <aiohttp.client_proto.ResponseHandler object at 0x7ff9ee1cafa0>)
+
+processing.get_files 2020-04-23 09:36:27,911 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:28,065 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:28,206 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:28,355 getRevision 174 :
+ getRevision looping
+
+processing.get_files 2020-04-23 09:36:28,357 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:28,483 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:28,651 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:28,685 getRevision 174 :
+ getRevision looping
+
+processing.get_files 2020-04-23 09:36:28,813 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:28,820 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:29,102 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:29,233 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:29,273 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:29,323 getRevision 174 :
+ getRevision looping
+
+processing.get_files 2020-04-23 09:36:29,509 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:29,511 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:29,513 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:29,515 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.gdoc 2020-04-23 09:36:29,518 get_last_revision 35 :
+ code not 200
+
+processing.get_files 2020-04-23 09:36:29,620 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:29,900 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:29,931 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:30,324 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:30,416 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:30,433 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:30,501 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:31,013 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:31,085 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:31,293 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:31,326 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:31,337 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:31,341 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:31,783 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:31,804 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:31,866 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:31,877 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:31,980 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:32,044 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:32,074 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:32,120 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:32,201 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:32,234 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:32,344 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:32,391 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:32,406 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:32,434 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:32,473 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:32,619 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:32,772 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:32,774 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:32,777 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:32,796 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.gdoc 2020-04-23 09:36:32,862 async_init 16 :
+ async init called
+
+processing.get_files 2020-04-23 09:36:32,981 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+asyncio 2020-04-23 09:36:32,991 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eedaab80> starts SSL handshake
+
+asyncio 2020-04-23 09:36:33,022 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eedaab80>: SSL handshake took 30.7 ms
+
+asyncio 2020-04-23 09:36:33,022 create_connection 1057 :
+ <asyncio.TransportSocket fd=22, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 35790), raddr=('216.58.193.74', 443)> connected to 216.58.193.74:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7ff9ee16e2e0>, <aiohttp.client_proto.ResponseHandler object at 0x7ff9eeaff460>)
+
+processing.get_files 2020-04-23 09:36:33,044 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:33,049 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:33,080 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:33,107 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:33,122 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:33,262 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:33,327 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:33,331 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:33,447 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:33,493 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.gdoc 2020-04-23 09:36:33,525 async_init 16 :
+ async init called
+
+processing.gdoc 2020-04-23 09:36:33,530 async_init 16 :
+ async init called
+
+processing.gdoc 2020-04-23 09:36:33,536 async_init 16 :
+ async init called
+
+asyncio 2020-04-23 09:36:33,566 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9ee18e520> starts SSL handshake
+
+processing.get_files 2020-04-23 09:36:33,571 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+asyncio 2020-04-23 09:36:33,595 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9ee18e520>: SSL handshake took 29.3 ms
+
+asyncio 2020-04-23 09:36:33,596 create_connection 1057 :
+ <asyncio.TransportSocket fd=23, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 35792), raddr=('216.58.193.74', 443)> connected to 216.58.193.74:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7ff9ee1941c0>, <aiohttp.client_proto.ResponseHandler object at 0x7ff9ee16bac0>)
+
+processing.get_files 2020-04-23 09:36:33,606 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:33,653 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:33,700 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+asyncio 2020-04-23 09:36:33,805 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9ee18ed60> starts SSL handshake
+
+asyncio 2020-04-23 09:36:33,836 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9ee18ed60>: SSL handshake took 31.2 ms
+
+processing.get_files 2020-04-23 09:36:33,837 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+asyncio 2020-04-23 09:36:33,839 create_connection 1057 :
+ <asyncio.TransportSocket fd=24, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 35794), raddr=('216.58.193.74', 443)> connected to 216.58.193.74:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7ff9ee1a0700>, <aiohttp.client_proto.ResponseHandler object at 0x7ff9ee166ee0>)
+
+processing.gdoc 2020-04-23 09:36:33,845 get_last_revision 45 :
+ last revision id 3059
+
+processing.gdoc 2020-04-23 09:36:33,846 async_init 24 :
+ 0
+
+processing.gdoc 2020-04-23 09:36:33,847 async_init 26 :
+ after await 3059
+
+processing.gdoc 2020-04-23 09:36:33,852 get_last_revision 45 :
+ last revision id 647
+
+processing.gdoc 2020-04-23 09:36:33,853 async_init 24 :
+ 0
+
+processing.gdoc 2020-04-23 09:36:33,854 async_init 26 :
+ after await 647
+
+asyncio 2020-04-23 09:36:33,859 _getaddrinfo_debug 805 :
+ Get address info docs.google.com:443, type=<SocketKind.SOCK_STREAM: 1>
+
+asyncio 2020-04-23 09:36:33,860 _getaddrinfo_debug 815 :
+ Getting address info docs.google.com:443, type=<SocketKind.SOCK_STREAM: 1> took 1.043ms: [(<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('172.217.14.206', 443)), (<AddressFamily.AF_INET6: 10>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('2607:f8b0:400a:801::200e', 443, 0, 0))]
+
+asyncio 2020-04-23 09:36:33,884 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9ee170790> starts SSL handshake
+
+asyncio 2020-04-23 09:36:33,912 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9ee170790>: SSL handshake took 27.5 ms
+
+asyncio 2020-04-23 09:36:33,913 create_connection 1057 :
+ <asyncio.TransportSocket fd=25, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 58046), raddr=('172.217.14.206', 443)> connected to 172.217.14.206:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7ff9ee18b5e0>, <aiohttp.client_proto.ResponseHandler object at 0x7ff9ee173ac0>)
+
+processing.gdoc 2020-04-23 09:36:33,957 get_last_revision 45 :
+ last revision id 2502
+
+processing.gdoc 2020-04-23 09:36:33,958 async_init 24 :
+ 0
+
+processing.gdoc 2020-04-23 09:36:33,959 async_init 26 :
+ after await 2502
+
+asyncio 2020-04-23 09:36:33,985 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9ee1a1af0> starts SSL handshake
+
+asyncio 2020-04-23 09:36:34,015 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9ee1a1af0>: SSL handshake took 29.8 ms
+
+asyncio 2020-04-23 09:36:34,016 create_connection 1057 :
+ <asyncio.TransportSocket fd=26, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 58048), raddr=('172.217.14.206', 443)> connected to 172.217.14.206:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7ff9ee1a0fa0>, <aiohttp.client_proto.ResponseHandler object at 0x7ff9ee18b0a0>)
+
+processing.get_files 2020-04-23 09:36:34,041 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:34,044 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:34,047 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:34,100 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:34,105 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:34,119 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:34,229 getRevision 197 :
+ google doc
+
+processing.get_files 2020-04-23 09:36:34,231 getRevision 174 :
+ getRevision looping
+
+processing.get_files 2020-04-23 09:36:34,238 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:34,277 getRevision 197 :
+ google doc
+
+processing.get_files 2020-04-23 09:36:34,279 getRevision 174 :
+ getRevision looping
+
+processing.get_files 2020-04-23 09:36:34,405 getRevision 197 :
+ google doc
+
+processing.get_files 2020-04-23 09:36:34,406 getRevision 174 :
+ getRevision looping
+
+processing.get_files 2020-04-23 09:36:34,410 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:34,467 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:34,477 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:34,486 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:34,540 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:34,697 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:34,728 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:34,736 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:34,813 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:34,815 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:34,818 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:35,100 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:35,214 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:35,262 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:35,286 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:35,304 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:35,417 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:35,488 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.datutils.test_utils 2020-04-23 09:36:35,844 print_size 108 :
+ 
+
+Memory usage: 123936 (kb)
+
+processing.datutils.test_utils 2020-04-23 09:36:36,124 print_size 111 :
+ /usr/lib/python3.8/linecache.py:137: size=979 KiB (+432 KiB), count=9909 (+4409), average=101 B
+
+processing.datutils.test_utils 2020-04-23 09:36:36,126 print_size 111 :
+ /home/henry/pydocs/processing/gdoc.py:66: size=296 KiB (+296 KiB), count=6232 (+6232), average=49 B
+
+processing.datutils.test_utils 2020-04-23 09:36:36,127 print_size 111 :
+ /usr/lib/python3.8/json/decoder.py:353: size=202 KiB (+201 KiB), count=2458 (+2457), average=84 B
+
+processing.datutils.test_utils 2020-04-23 09:36:36,128 print_size 111 :
+ /home/henry/pydocs/processing/get_files.py:118: size=157 KiB (+157 KiB), count=3557 (+3557), average=45 B
+
+processing.datutils.test_utils 2020-04-23 09:36:36,131 print_size 111 :
+ /usr/lib/python3.8/traceback.py:359: size=173 KiB (+126 KiB), count=2292 (+1655), average=77 B
+
+processing.datutils.test_utils 2020-04-23 09:36:36,132 print_size 111 :
+ /usr/lib/python3.8/ssl.py:906: size=114 KiB (+114 KiB), count=1885 (+1885), average=62 B
+
+processing.datutils.test_utils 2020-04-23 09:36:36,134 print_size 111 :
+ /usr/lib/python3.8/tracemalloc.py:532: size=464 B (-81.5 KiB), count=7 (-1478), average=66 B
+
+processing.datutils.test_utils 2020-04-23 09:36:36,135 print_size 111 :
+ /home/henry/pydocs/processing/get_files.py:110: size=68.0 KiB (+68.0 KiB), count=872 (+872), average=80 B
+
+processing.datutils.test_utils 2020-04-23 09:36:36,136 print_size 111 :
+ /usr/lib/python3.8/traceback.py:288: size=98.9 KiB (+63.5 KiB), count=1198 (+763), average=84 B
+
+processing.datutils.test_utils 2020-04-23 09:36:36,137 print_size 111 :
+ /usr/lib/python3.8/abc.py:102: size=107 KiB (+41.2 KiB), count=1214 (+493), average=90 B
+
+processing.datutils.test_utils 2020-04-23 09:36:36,179 print_size 119 :
+ /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+9/889 at 2020-04-23 09:36:36.179106
+dumped: 0
+
+processing.datutils.test_utils 2020-04-23 09:36:36,180 print_size 122 :
+ 
+
+asyncio 2020-04-23 09:36:36,182 _run_once 1854 :
+ Executing <Task pending name='Task-23' coro=<TestUtil.print_size() running at /home/henry/pydocs/processing/datutils/test_utils.py:142> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7ff9ef6c1550>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> created at /home/henry/pydocs/processing/get_files.py:229> took 0.338 seconds
+
+processing.get_files 2020-04-23 09:36:36,189 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:36,192 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:36,194 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:36,196 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:36,198 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:36,200 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:36,230 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:36,480 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:36,661 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:36,664 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:36,805 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:36,813 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:36,942 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.gdoc 2020-04-23 09:36:36,974 get_last_revision 35 :
+ code not 200
+
+processing.get_files 2020-04-23 09:36:37,013 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:37,053 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:37,056 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:37,071 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:37,101 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:37,507 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:37,521 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:37,564 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:37,611 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:37,622 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:37,790 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:37,794 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:37,855 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:37,919 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.gdoc 2020-04-23 09:36:37,979 get_last_revision 45 :
+ last revision id 546
+
+processing.gdoc 2020-04-23 09:36:37,981 async_init 24 :
+ 0
+
+processing.gdoc 2020-04-23 09:36:37,982 async_init 26 :
+ after await 546
+
+processing.get_files 2020-04-23 09:36:37,989 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:38,016 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:38,062 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:38,075 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:38,187 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:38,235 getRevision 197 :
+ google doc
+
+processing.get_files 2020-04-23 09:36:38,236 getRevision 174 :
+ getRevision looping
+
+processing.get_files 2020-04-23 09:36:38,344 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:38,490 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:38,514 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:38,533 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:38,585 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:38,633 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:38,672 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:38,887 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:39,067 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:39,073 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:39,231 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:39,268 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:39,288 getRevision 186 :
+ not google doc
+
+processing.get_files 2020-04-23 09:36:39,299 getRevision 186 :
+ not google doc
+
+processing.get_files 2020-04-23 09:36:39,309 getRevision 186 :
+ not google doc
+
+processing.get_files 2020-04-23 09:36:39,323 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:39,492 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:39,655 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+asyncio 2020-04-23 09:36:39,734 _getaddrinfo_debug 805 :
+ Get address info www.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1>
+
+asyncio 2020-04-23 09:36:39,736 _getaddrinfo_debug 815 :
+ Getting address info www.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1> took 1.283ms: [(<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('216.58.193.74', 443)), (<AddressFamily.AF_INET6: 10>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('2607:f8b0:400a:804::200a', 443, 0, 0))]
+
+asyncio 2020-04-23 09:36:39,758 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eeb51df0> starts SSL handshake
+
+processing.get_files 2020-04-23 09:36:39,778 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+asyncio 2020-04-23 09:36:39,787 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eeb51df0>: SSL handshake took 29.0 ms
+
+asyncio 2020-04-23 09:36:39,788 create_connection 1057 :
+ <asyncio.TransportSocket fd=27, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 35800), raddr=('216.58.193.74', 443)> connected to 216.58.193.74:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7ff9eeb14f40>, <aiohttp.client_proto.ResponseHandler object at 0x7ff9ee17bdc0>)
+
+processing.get_files 2020-04-23 09:36:39,810 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+asyncio 2020-04-23 09:36:39,920 _getaddrinfo_debug 805 :
+ Get address info driveactivity.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1>
+
+asyncio 2020-04-23 09:36:39,977 _getaddrinfo_debug 815 :
+ Getting address info driveactivity.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1> took 56.896ms: [(<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('172.217.14.234', 443)), (<AddressFamily.AF_INET6: 10>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('2607:f8b0:400a:808::200a', 443, 0, 0))]
+
+processing.get_files 2020-04-23 09:36:39,993 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+asyncio 2020-04-23 09:36:39,999 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9ee294f70> starts SSL handshake
+
+asyncio 2020-04-23 09:36:40,027 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9ee294f70>: SSL handshake took 28.1 ms
+
+asyncio 2020-04-23 09:36:40,028 create_connection 1057 :
+ <asyncio.TransportSocket fd=28, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 44158), raddr=('172.217.14.234', 443)> connected to 172.217.14.234:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7ff9ee2b6b80>, <aiohttp.client_proto.ResponseHandler object at 0x7ff9ee1a6040>)
+
+processing.get_files 2020-04-23 09:36:40,099 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:40,134 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:40,244 getRevision 174 :
+ getRevision looping
+
+processing.get_files 2020-04-23 09:36:40,248 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:40,336 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:40,438 getRevision 174 :
+ getRevision looping
+
+processing.get_files 2020-04-23 09:36:40,452 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:40,457 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:40,568 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:40,584 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:40,688 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:40,876 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:40,940 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:40,963 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:40,999 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:41,025 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:41,116 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:41,143 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:41,238 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:41,257 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+asyncio 2020-04-23 09:36:41,360 pause_reading 792 :
+ <_SelectorSocketTransport fd=28 read=idle write=<idle, bufsize=0>> pauses reading
+
+asyncio 2020-04-23 09:36:41,361 resume_reading 800 :
+ <_SelectorSocketTransport fd=28 read=polling write=<idle, bufsize=0>> resumes reading
+
+processing.get_files 2020-04-23 09:36:41,407 getRevision 174 :
+ getRevision looping
+
+processing.get_files 2020-04-23 09:36:41,412 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:41,415 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:41,425 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:41,559 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:41,612 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:41,627 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:41,634 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:41,674 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:41,677 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:41,793 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:41,796 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:41,808 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:41,823 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:41,847 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:41,993 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:42,084 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:42,155 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:42,192 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:42,197 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:42,204 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:42,264 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:42,270 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:42,357 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:42,367 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:42,388 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:42,561 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:42,565 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:42,571 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:42,573 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:42,687 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:42,699 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:42,709 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:42,853 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:42,869 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:42,877 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:42,904 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:42,926 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:42,947 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.datutils.test_utils 2020-04-23 09:36:42,994 tryGetQueue 196 :
+ getIdswaiting 1 2
+
+processing.datutils.test_utils 2020-04-23 09:36:43,025 tryGetQueue 196 :
+ getIdswaiting 1 2
+
+processing.get_files 2020-04-23 09:36:43,029 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-23 09:36:43,033 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.datutils.test_utils 2020-04-23 09:36:43,044 tryGetQueue 196 :
+ getIdswaiting 1 2
+
+processing.datutils.test_utils 2020-04-23 09:36:43,046 tryGetQueue 196 :
+ getIdswaiting 1 2
+
+processing.datutils.test_utils 2020-04-23 09:36:43,217 tryGetQueue 196 :
+ getIdswaiting 1 2
+
+processing.datutils.test_utils 2020-04-23 09:36:43,257 tryGetQueue 196 :
+ getIdswaiting 1 2
+
+processing.get_files 2020-04-23 09:36:43,301 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.datutils.test_utils 2020-04-23 09:36:43,326 tryGetQueue 196 :
+ getIdswaiting 1 2
+
+processing.datutils.test_utils 2020-04-23 09:36:43,517 tryGetQueue 196 :
+ getIdswaiting 1 2
+
+processing.datutils.test_utils 2020-04-23 09:36:43,794 tryGetQueue 196 :
+ getIdswaiting 1 2
+
+processing.gdoc 2020-04-23 09:36:44,456 get_last_revision 35 :
+ code not 200
+
+processing.get_files 2020-04-23 09:36:45,051 getRevision 186 :
+ not google doc
+
+processing.get_files 2020-04-23 09:36:45,062 getRevision 186 :
+ not google doc
+
+processing.gdoc 2020-04-23 09:36:45,078 async_init 16 :
+ async init called
+
+processing.gdoc 2020-04-23 09:36:45,481 get_last_revision 35 :
+ code not 200
+
+processing.get_files 2020-04-23 09:36:45,902 getIdsRecursive 63 :
+ getIdsRecursive looping
+
+processing.datutils.test_utils 2020-04-23 09:36:45,945 tryGetQueue 196 :
+ getIdswaiting 1 2
+
+processing.datutils.test_utils 2020-04-23 09:36:46,048 tryGetQueue 196 :
+ getIdswaiting 2 2
+
+processing.get_files 2020-04-23 09:36:46,114 getRevision 174 :
+ getRevision looping
+
+processing.get_files 2020-04-23 09:36:46,220 getRevision 174 :
+ getRevision looping
+
+processing.datutils.test_utils 2020-04-23 09:36:46,521 tryGetQueue 196 :
+ getIdswaiting 2 2
+
+processing.datutils.test_utils 2020-04-23 09:36:47,030 tryGetQueue 196 :
+ getIdswaiting 2 2
+
+processing.gdoc 2020-04-23 09:36:50,681 async_init 16 :
+ async init called
+
+processing.get_files 2020-04-23 09:36:50,686 getRevision 186 :
+ not google doc
+
+processing.get_files 2020-04-23 09:36:50,696 getRevision 186 :
+ not google doc
+
+processing.datutils.test_utils 2020-04-23 09:36:50,797 tryGetQueue 196 :
+ getIdswaiting 2 2
+
+processing.datutils.test_utils 2020-04-23 09:36:50,949 tryGetQueue 196 :
+ getIdswaiting 2 2
+
+processing.gdoc 2020-04-23 09:36:51,099 get_last_revision 35 :
+ code not 200
+
+processing.datutils.test_utils 2020-04-23 09:36:51,261 tryGetQueue 196 :
+ getIdswaiting 2 2
+
+processing.get_files 2020-04-23 09:36:51,526 getRevision 174 :
+ getRevision looping
+
+processing.gdoc 2020-04-23 09:36:52,033 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:36:52,855 get_last_revision 35 :
+ code not 200
+
+processing.datutils.test_utils 2020-04-23 09:36:53,330 tryGetQueue 196 :
+ getIdswaiting 2 2
+
+processing.datutils.test_utils 2020-04-23 09:36:56,197 print_size 108 :
+ 
+
+Memory usage: 128212 (kb)
+
+processing.datutils.test_utils 2020-04-23 09:36:56,699 print_size 111 :
+ /usr/lib/python3.8/traceback.py:359: size=115 KiB (-58.3 KiB), count=1532 (-760), average=77 B
+
+processing.datutils.test_utils 2020-04-23 09:36:56,701 print_size 111 :
+ /home/henry/pydocs/processing/get_files.py:118: size=198 KiB (+41.1 KiB), count=4414 (+857), average=46 B
+
+processing.datutils.test_utils 2020-04-23 09:36:56,702 print_size 111 :
+ /usr/lib/python3.8/traceback.py:288: size=61.1 KiB (-37.7 KiB), count=737 (-461), average=85 B
+
+processing.datutils.test_utils 2020-04-23 09:36:56,703 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/iso8601/iso8601.py:203: size=65.0 KiB (+33.7 KiB), count=1386 (+718), average=48 B
+
+processing.datutils.test_utils 2020-04-23 09:36:56,705 print_size 111 :
+ /home/henry/pydocs/processing/gdoc.py:66: size=322 KiB (+26.1 KiB), count=6780 (+548), average=49 B
+
+processing.datutils.test_utils 2020-04-23 09:36:56,707 print_size 111 :
+ /usr/lib/python3.8/json/decoder.py:353: size=227 KiB (+25.5 KiB), count=2878 (+420), average=81 B
+
+processing.datutils.test_utils 2020-04-23 09:36:56,708 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:833: size=2016 B (-19.7 KiB), count=2 (-20), average=1008 B
+
+processing.datutils.test_utils 2020-04-23 09:36:56,710 print_size 111 :
+ /home/henry/pydocs/processing/get_files.py:92: size=0 B (-18.7 KiB), count=0 (-162)
+
+processing.datutils.test_utils 2020-04-23 09:36:56,711 print_size 111 :
+ /home/henry/pydocs/processing/datutils/test_utils.py:197: size=17.5 KiB (+17.0 KiB), count=161 (+160), average=111 B
+
+processing.datutils.test_utils 2020-04-23 09:36:56,712 print_size 111 :
+ /home/henry/pydocs/processing/get_files.py:73: size=17.0 KiB (+16.5 KiB), count=150 (+149), average=116 B
+
+processing.datutils.test_utils 2020-04-23 09:36:56,754 print_size 119 :
+ /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+15/1115 at 2020-04-23 09:36:56.754857
+dumped: 0
+
+processing.datutils.test_utils 2020-04-23 09:36:56,756 print_size 122 :
+ 
+
+asyncio 2020-04-23 09:36:56,758 _run_once 1854 :
+ Executing <Task pending name='Task-23' coro=<TestUtil.print_size() running at /home/henry/pydocs/processing/datutils/test_utils.py:142> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7ff9eeb13520>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> created at /home/henry/pydocs/processing/get_files.py:229> took 0.561 seconds
+
+processing.gdoc 2020-04-23 09:36:56,762 async_init 16 :
+ async init called
+
+processing.get_files 2020-04-23 09:36:56,768 getRevision 186 :
+ not google doc
+
+processing.gdoc 2020-04-23 09:36:56,781 async_init 16 :
+ async init called
+
+processing.get_files 2020-04-23 09:36:56,801 getIdsRecursive 76 :
+ getId task exiting
+
+processing.get_files 2020-04-23 09:36:57,051 getIdsRecursive 76 :
+ getId task exiting
+
+asyncio 2020-04-23 09:36:57,059 pause_reading 792 :
+ <_SelectorSocketTransport fd=14 read=idle write=<idle, bufsize=0>> pauses reading
+
+asyncio 2020-04-23 09:36:57,062 resume_reading 800 :
+ <_SelectorSocketTransport fd=14 read=polling write=<idle, bufsize=0>> resumes reading
+
+processing.gdoc 2020-04-23 09:36:57,103 get_last_revision 45 :
+ last revision id 1
+
+processing.gdoc 2020-04-23 09:36:57,104 async_init 24 :
+ 0
+
+processing.gdoc 2020-04-23 09:36:57,105 async_init 26 :
+ after await 1
+
+asyncio 2020-04-23 09:36:57,111 _getaddrinfo_debug 805 :
+ Get address info docs.google.com:443, type=<SocketKind.SOCK_STREAM: 1>
+
+asyncio 2020-04-23 09:36:57,113 _getaddrinfo_debug 815 :
+ Getting address info docs.google.com:443, type=<SocketKind.SOCK_STREAM: 1> took 1.192ms: [(<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('172.217.14.206', 443)), (<AddressFamily.AF_INET6: 10>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('2607:f8b0:400a:801::200e', 443, 0, 0))]
+
+asyncio 2020-04-23 09:36:57,131 _read_ready__on_eof 869 :
+ <_SelectorSocketTransport fd=26 read=polling write=<idle, bufsize=0>> received EOF
+
+asyncio 2020-04-23 09:36:57,131 eof_received 567 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9ee1a1af0> received EOF
+
+asyncio 2020-04-23 09:36:57,132 _read_ready__on_eof 869 :
+ <_SelectorSocketTransport fd=17 read=polling write=<idle, bufsize=0>> received EOF
+
+asyncio 2020-04-23 09:36:57,132 eof_received 567 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eedbb6a0> received EOF
+
+asyncio 2020-04-23 09:36:57,133 _read_ready__on_eof 869 :
+ <_SelectorSocketTransport fd=25 read=polling write=<idle, bufsize=0>> received EOF
+
+asyncio 2020-04-23 09:36:57,133 eof_received 567 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9ee170790> received EOF
+
+asyncio 2020-04-23 09:36:57,137 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eeade0a0> starts SSL handshake
+
+processing.gdoc 2020-04-23 09:36:57,170 get_last_revision 45 :
+ last revision id 626
+
+processing.gdoc 2020-04-23 09:36:57,171 async_init 24 :
+ 0
+
+processing.gdoc 2020-04-23 09:36:57,172 async_init 26 :
+ after await 626
+
+asyncio 2020-04-23 09:36:57,178 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eeade0a0>: SSL handshake took 40.9 ms
+
+asyncio 2020-04-23 09:36:57,179 create_connection 1057 :
+ <asyncio.TransportSocket fd=29, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 58054), raddr=('172.217.14.206', 443)> connected to 172.217.14.206:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7ff9ee1bcb80>, <aiohttp.client_proto.ResponseHandler object at 0x7ff9eef30d60>)
+
+asyncio 2020-04-23 09:36:57,205 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eeae3550> starts SSL handshake
+
+asyncio 2020-04-23 09:36:57,233 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eeae3550>: SSL handshake took 27.6 ms
+
+asyncio 2020-04-23 09:36:57,234 create_connection 1057 :
+ <asyncio.TransportSocket fd=17, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 58056), raddr=('172.217.14.206', 443)> connected to 172.217.14.206:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7ff9edbe88e0>, <aiohttp.client_proto.ResponseHandler object at 0x7ff9ee1b1d00>)
+
+processing.get_files 2020-04-23 09:36:57,570 getRevision 197 :
+ google doc
+
+processing.get_files 2020-04-23 09:36:57,571 getRevision 174 :
+ getRevision looping
+
+processing.get_files 2020-04-23 09:36:57,607 getRevision 197 :
+ google doc
+
+processing.get_files 2020-04-23 09:36:57,608 getRevision 174 :
+ getRevision looping
+
+asyncio 2020-04-23 09:36:57,666 pause_reading 792 :
+ <_SelectorSocketTransport fd=18 read=idle write=<idle, bufsize=0>> pauses reading
+
+asyncio 2020-04-23 09:36:57,668 resume_reading 800 :
+ <_SelectorSocketTransport fd=18 read=polling write=<idle, bufsize=0>> resumes reading
+
+asyncio 2020-04-23 09:36:57,670 pause_reading 792 :
+ <_SelectorSocketTransport fd=18 read=idle write=<idle, bufsize=0>> pauses reading
+
+asyncio 2020-04-23 09:36:57,672 resume_reading 800 :
+ <_SelectorSocketTransport fd=18 read=polling write=<idle, bufsize=0>> resumes reading
+
+processing.get_files 2020-04-23 09:36:57,850 getRevision 174 :
+ getRevision looping
+
+asyncio 2020-04-23 09:36:57,853 _run_once 1854 :
+ Executing <Task pending name='Task-20' coro=<getRevision() running at /home/henry/pydocs/processing/get_files.py:175> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7ff9eee10160>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> cb=[gather.<locals>._done_callback() at /usr/lib/python3.8/asyncio/tasks.py:751] created at /home/henry/pydocs/processing/get_files.py:225> took 0.181 seconds
+
+processing.datutils.test_utils 2020-04-23 09:36:57,998 tryGetQueue 196 :
+ getIdswaiting 2 2
+
+processing.datutils.test_utils 2020-04-23 09:36:58,048 tryGetQueue 196 :
+ getIdswaiting 2 2
+
+asyncio 2020-04-23 09:36:58,176 pause_reading 792 :
+ <_SelectorSocketTransport fd=28 read=idle write=<idle, bufsize=0>> pauses reading
+
+asyncio 2020-04-23 09:36:58,178 resume_reading 800 :
+ <_SelectorSocketTransport fd=28 read=polling write=<idle, bufsize=0>> resumes reading
+
+processing.get_files 2020-04-23 09:36:58,220 getRevision 174 :
+ getRevision looping
+
+processing.datutils.test_utils 2020-04-23 09:36:58,224 tryGetQueue 196 :
+ getIdswaiting 2 2
+
+processing.gdoc 2020-04-23 09:36:58,381 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:36:59,274 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:37:00,225 get_last_revision 35 :
+ code not 200
+
+processing.get_files 2020-04-23 09:37:00,333 getIdsRecursive 76 :
+ getId task exiting
+
+processing.get_files 2020-04-23 09:37:00,524 getIdsRecursive 76 :
+ getId task exiting
+
+processing.gdoc 2020-04-23 09:37:02,262 async_init 16 :
+ async init called
+
+processing.gdoc 2020-04-23 09:37:02,268 async_init 16 :
+ async init called
+
+processing.gdoc 2020-04-23 09:37:02,273 async_init 16 :
+ async init called
+
+processing.gdoc 2020-04-23 09:37:02,684 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:37:02,686 get_last_revision 45 :
+ last revision id 3
+
+processing.gdoc 2020-04-23 09:37:02,687 async_init 24 :
+ 0
+
+processing.gdoc 2020-04-23 09:37:02,688 async_init 26 :
+ after await 3
+
+processing.gdoc 2020-04-23 09:37:02,720 get_last_revision 35 :
+ code not 200
+
+processing.get_files 2020-04-23 09:37:03,033 getIdsRecursive 76 :
+ getId task exiting
+
+processing.get_files 2020-04-23 09:37:03,043 getRevision 197 :
+ google doc
+
+processing.get_files 2020-04-23 09:37:03,044 getRevision 174 :
+ getRevision looping
+
+processing.get_files 2020-04-23 09:37:04,052 getIdsRecursive 76 :
+ getId task exiting
+
+asyncio 2020-04-23 09:37:04,627 _read_ready__on_eof 869 :
+ <_SelectorSocketTransport fd=13 read=polling write=<idle, bufsize=0>> received EOF
+
+asyncio 2020-04-23 09:37:04,628 eof_received 567 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eeae3940> received EOF
+
+asyncio 2020-04-23 09:37:04,628 _read_ready__on_eof 869 :
+ <_SelectorSocketTransport fd=11 read=polling write=<idle, bufsize=0>> received EOF
+
+asyncio 2020-04-23 09:37:04,628 eof_received 567 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eeb1f8e0> received EOF
+
+asyncio 2020-04-23 09:37:04,630 _read_ready__on_eof 869 :
+ <_SelectorSocketTransport fd=22 read=polling write=<idle, bufsize=0>> received EOF
+
+asyncio 2020-04-23 09:37:04,630 eof_received 567 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eedaab80> received EOF
+
+asyncio 2020-04-23 09:37:04,630 _read_ready__on_eof 869 :
+ <_SelectorSocketTransport fd=12 read=polling write=<idle, bufsize=0>> received EOF
+
+asyncio 2020-04-23 09:37:04,631 eof_received 567 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eeaed430> received EOF
+
+asyncio 2020-04-23 09:37:04,632 _read_ready__on_eof 869 :
+ <_SelectorSocketTransport fd=16 read=polling write=<idle, bufsize=0>> received EOF
+
+asyncio 2020-04-23 09:37:04,632 eof_received 567 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eeb1fd60> received EOF
+
+asyncio 2020-04-23 09:37:04,632 _read_ready__on_eof 869 :
+ <_SelectorSocketTransport fd=15 read=polling write=<idle, bufsize=0>> received EOF
+
+asyncio 2020-04-23 09:37:04,632 eof_received 567 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eeaedc10> received EOF
+
+asyncio 2020-04-23 09:37:04,634 _read_ready__on_eof 869 :
+ <_SelectorSocketTransport fd=24 read=polling write=<idle, bufsize=0>> received EOF
+
+asyncio 2020-04-23 09:37:04,634 eof_received 567 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9ee18ed60> received EOF
+
+asyncio 2020-04-23 09:37:04,634 _read_ready__on_eof 869 :
+ <_SelectorSocketTransport fd=21 read=polling write=<idle, bufsize=0>> received EOF
+
+asyncio 2020-04-23 09:37:04,634 eof_received 567 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eee60b20> received EOF
+
+asyncio 2020-04-23 09:37:04,636 _read_ready__on_eof 869 :
+ <_SelectorSocketTransport fd=23 read=polling write=<idle, bufsize=0>> received EOF
+
+asyncio 2020-04-23 09:37:04,636 eof_received 567 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9ee18e520> received EOF
+
+processing.get_files 2020-04-23 09:37:05,265 getIdsRecursive 76 :
+ getId task exiting
+
+processing.gdoc 2020-04-23 09:37:05,961 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:37:06,587 get_last_revision 35 :
+ code not 200
+
+processing.get_files 2020-04-23 09:37:06,956 getIdsRecursive 76 :
+ getId task exiting
+
+processing.get_files 2020-04-23 09:37:07,228 getIdsRecursive 76 :
+ getId task exiting
+
+processing.get_files 2020-04-23 09:37:07,677 getRevision 186 :
+ not google doc
+
+processing.get_files 2020-04-23 09:37:07,689 getRevision 186 :
+ not google doc
+
+processing.gdoc 2020-04-23 09:37:07,700 async_init 16 :
+ async init called
+
+processing.gdoc 2020-04-23 09:37:07,707 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:37:07,992 get_last_revision 45 :
+ last revision id 908
+
+processing.gdoc 2020-04-23 09:37:07,993 async_init 24 :
+ 0
+
+processing.gdoc 2020-04-23 09:37:07,994 async_init 26 :
+ after await 908
+
+processing.get_files 2020-04-23 09:37:08,287 getRevision 197 :
+ google doc
+
+processing.get_files 2020-04-23 09:37:08,289 getRevision 174 :
+ getRevision looping
+
+processing.get_files 2020-04-23 09:37:08,829 getRevision 174 :
+ getRevision looping
+
+processing.get_files 2020-04-23 09:37:09,001 getIdsRecursive 76 :
+ getId task exiting
+
+asyncio 2020-04-23 09:37:09,799 pause_reading 792 :
+ <_SelectorSocketTransport fd=18 read=idle write=<idle, bufsize=0>> pauses reading
+
+asyncio 2020-04-23 09:37:09,801 resume_reading 800 :
+ <_SelectorSocketTransport fd=18 read=polling write=<idle, bufsize=0>> resumes reading
+
+asyncio 2020-04-23 09:37:09,803 pause_reading 792 :
+ <_SelectorSocketTransport fd=18 read=idle write=<idle, bufsize=0>> pauses reading
+
+asyncio 2020-04-23 09:37:09,804 resume_reading 800 :
+ <_SelectorSocketTransport fd=18 read=polling write=<idle, bufsize=0>> resumes reading
+
+asyncio 2020-04-23 09:37:09,828 pause_reading 792 :
+ <_SelectorSocketTransport fd=18 read=idle write=<idle, bufsize=0>> pauses reading
+
+asyncio 2020-04-23 09:37:09,829 resume_reading 800 :
+ <_SelectorSocketTransport fd=18 read=polling write=<idle, bufsize=0>> resumes reading
+
+asyncio 2020-04-23 09:37:09,830 pause_reading 792 :
+ <_SelectorSocketTransport fd=18 read=idle write=<idle, bufsize=0>> pauses reading
+
+asyncio 2020-04-23 09:37:09,831 resume_reading 800 :
+ <_SelectorSocketTransport fd=18 read=polling write=<idle, bufsize=0>> resumes reading
+
+processing.get_files 2020-04-23 09:37:10,012 getRevision 174 :
+ getRevision looping
+
+asyncio 2020-04-23 09:37:10,014 _run_once 1854 :
+ Executing <Task pending name='Task-14' coro=<getRevision() running at /home/henry/pydocs/processing/get_files.py:175> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7ff9ee18e520>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> cb=[gather.<locals>._done_callback() at /usr/lib/python3.8/asyncio/tasks.py:751] created at /home/henry/pydocs/processing/get_files.py:225> took 0.184 seconds
+
+processing.gdoc 2020-04-23 09:37:10,057 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:37:10,105 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:37:13,093 async_init 16 :
+ async init called
+
+processing.gdoc 2020-04-23 09:37:13,100 async_init 16 :
+ async init called
+
+processing.gdoc 2020-04-23 09:37:13,104 async_init 16 :
+ async init called
+
+processing.gdoc 2020-04-23 09:37:13,539 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:37:13,542 get_last_revision 45 :
+ last revision id 1948
+
+processing.gdoc 2020-04-23 09:37:13,543 async_init 24 :
+ 0
+
+processing.gdoc 2020-04-23 09:37:13,544 async_init 26 :
+ after await 1948
+
+processing.gdoc 2020-04-23 09:37:13,551 get_last_revision 45 :
+ last revision id 2586
+
+processing.gdoc 2020-04-23 09:37:13,552 async_init 24 :
+ 0
+
+processing.gdoc 2020-04-23 09:37:13,553 async_init 26 :
+ after await 2586
+
+asyncio 2020-04-23 09:37:13,557 _getaddrinfo_debug 805 :
+ Get address info docs.google.com:443, type=<SocketKind.SOCK_STREAM: 1>
+
+asyncio 2020-04-23 09:37:13,559 _getaddrinfo_debug 815 :
+ Getting address info docs.google.com:443, type=<SocketKind.SOCK_STREAM: 1> took 1.199ms: [(<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('172.217.14.206', 443)), (<AddressFamily.AF_INET6: 10>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('2607:f8b0:400a:801::200e', 443, 0, 0))]
+
+asyncio 2020-04-23 09:37:13,577 _read_ready__on_eof 869 :
+ <_SelectorSocketTransport fd=29 read=polling write=<idle, bufsize=0>> received EOF
+
+asyncio 2020-04-23 09:37:13,577 eof_received 567 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eeade0a0> received EOF
+
+asyncio 2020-04-23 09:37:13,584 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eed90940> starts SSL handshake
+
+asyncio 2020-04-23 09:37:13,614 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eed90940>: SSL handshake took 28.8 ms
+
+asyncio 2020-04-23 09:37:13,614 create_connection 1057 :
+ <asyncio.TransportSocket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 58058), raddr=('172.217.14.206', 443)> connected to 172.217.14.206:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7ff9ee1a6fa0>, <aiohttp.client_proto.ResponseHandler object at 0x7ff9eedb5040>)
+
+asyncio 2020-04-23 09:37:13,951 pause_reading 792 :
+ <_SelectorSocketTransport fd=17 read=idle write=<idle, bufsize=0>> pauses reading
+
+asyncio 2020-04-23 09:37:13,956 resume_reading 800 :
+ <_SelectorSocketTransport fd=17 read=polling write=<idle, bufsize=0>> resumes reading
+
+processing.gdoc 2020-04-23 09:37:13,963 get_last_revision 45 :
+ last revision id 9391
+
+processing.gdoc 2020-04-23 09:37:13,964 async_init 24 :
+ 0
+
+processing.gdoc 2020-04-23 09:37:13,965 async_init 26 :
+ after await 9391
+
+processing.gdoc 2020-04-23 09:37:13,971 get_last_revision 35 :
+ code not 200
+
+asyncio 2020-04-23 09:37:13,984 pause_reading 792 :
+ <_SelectorSocketTransport fd=11 read=idle write=<idle, bufsize=0>> pauses reading
+
+asyncio 2020-04-23 09:37:13,989 resume_reading 800 :
+ <_SelectorSocketTransport fd=11 read=polling write=<idle, bufsize=0>> resumes reading
+
+processing.get_files 2020-04-23 09:37:14,060 getRevision 197 :
+ google doc
+
+processing.get_files 2020-04-23 09:37:14,062 getRevision 174 :
+ getRevision looping
+
+asyncio 2020-04-23 09:37:14,068 pause_reading 792 :
+ <_SelectorSocketTransport fd=11 read=idle write=<idle, bufsize=0>> pauses reading
+
+asyncio 2020-04-23 09:37:14,077 resume_reading 800 :
+ <_SelectorSocketTransport fd=11 read=polling write=<idle, bufsize=0>> resumes reading
+
+asyncio 2020-04-23 09:37:14,079 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9ed777d60> starts SSL handshake
+
+processing.get_files 2020-04-23 09:37:14,214 getRevision 197 :
+ google doc
+
+processing.get_files 2020-04-23 09:37:14,217 getRevision 174 :
+ getRevision looping
+
+asyncio 2020-04-23 09:37:14,218 _run_once 1854 :
+ Executing <Task pending name='Task-15' coro=<getRevision() running at /home/henry/pydocs/processing/get_files.py:175> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7ff9ee18e100>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> cb=[gather.<locals>._done_callback() at /usr/lib/python3.8/asyncio/tasks.py:751] created at /home/henry/pydocs/processing/get_files.py:225> took 0.137 seconds
+
+asyncio 2020-04-23 09:37:14,219 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9ed777d60>: SSL handshake took 139.9 ms
+
+asyncio 2020-04-23 09:37:14,220 create_connection 1057 :
+ <asyncio.TransportSocket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 58060), raddr=('172.217.14.206', 443)> connected to 172.217.14.206:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7ff9eedfdc40>, <aiohttp.client_proto.ResponseHandler object at 0x7ff9eeb09ac0>)
+
+asyncio 2020-04-23 09:37:14,725 pause_reading 792 :
+ <_SelectorSocketTransport fd=12 read=idle write=<idle, bufsize=0>> pauses reading
+
+asyncio 2020-04-23 09:37:14,726 resume_reading 800 :
+ <_SelectorSocketTransport fd=12 read=polling write=<idle, bufsize=0>> resumes reading
+
+asyncio 2020-04-23 09:37:14,742 pause_reading 792 :
+ <_SelectorSocketTransport fd=12 read=idle write=<idle, bufsize=0>> pauses reading
+
+asyncio 2020-04-23 09:37:14,744 resume_reading 800 :
+ <_SelectorSocketTransport fd=12 read=polling write=<idle, bufsize=0>> resumes reading
+
+asyncio 2020-04-23 09:37:14,748 pause_reading 792 :
+ <_SelectorSocketTransport fd=12 read=idle write=<idle, bufsize=0>> pauses reading
+
+asyncio 2020-04-23 09:37:14,749 resume_reading 800 :
+ <_SelectorSocketTransport fd=12 read=polling write=<idle, bufsize=0>> resumes reading
+
+asyncio 2020-04-23 09:37:14,754 pause_reading 792 :
+ <_SelectorSocketTransport fd=12 read=idle write=<idle, bufsize=0>> pauses reading
+
+asyncio 2020-04-23 09:37:14,758 resume_reading 800 :
+ <_SelectorSocketTransport fd=12 read=polling write=<idle, bufsize=0>> resumes reading
+
+asyncio 2020-04-23 09:37:14,763 pause_reading 792 :
+ <_SelectorSocketTransport fd=12 read=idle write=<idle, bufsize=0>> pauses reading
+
+asyncio 2020-04-23 09:37:14,767 resume_reading 800 :
+ <_SelectorSocketTransport fd=12 read=polling write=<idle, bufsize=0>> resumes reading
+
+processing.gdoc 2020-04-23 09:37:15,064 get_last_revision 35 :
+ code not 200
+
+processing.get_files 2020-04-23 09:37:15,676 getRevision 197 :
+ google doc
+
+processing.get_files 2020-04-23 09:37:15,677 getRevision 174 :
+ getRevision looping
+
+asyncio 2020-04-23 09:37:15,679 _run_once 1854 :
+ Executing <Task pending name='Task-19' coro=<getRevision() running at /home/henry/pydocs/processing/get_files.py:175> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7ff9ed947940>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> cb=[gather.<locals>._done_callback() at /usr/lib/python3.8/asyncio/tasks.py:751] created at /home/henry/pydocs/processing/get_files.py:225> took 0.546 seconds
+
+processing.datutils.test_utils 2020-04-23 09:37:16,774 print_size 108 :
+ 
+
+Memory usage: 170468 (kb)
+
+processing.datutils.test_utils 2020-04-23 09:37:17,262 print_size 111 :
+ /home/henry/pydocs/processing/gdoc.py:66: size=1052 KiB (+730 KiB), count=22257 (+15477), average=48 B
+
+processing.datutils.test_utils 2020-04-23 09:37:17,264 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/iso8601/iso8601.py:203: size=214 KiB (+149 KiB), count=4556 (+3170), average=48 B
+
+processing.datutils.test_utils 2020-04-23 09:37:17,265 print_size 111 :
+ /usr/lib/python3.8/ssl.py:906: size=77.6 KiB (-47.2 KiB), count=1290 (-765), average=62 B
+
+processing.datutils.test_utils 2020-04-23 09:37:17,266 print_size 111 :
+ /home/henry/pydocs/processing/get_files.py:165: size=38.4 KiB (+26.4 KiB), count=14 (+1), average=2812 B
+
+processing.datutils.test_utils 2020-04-23 09:37:17,268 print_size 111 :
+ /home/henry/pydocs/processing/gdoc.py:41: size=27.8 KiB (+19.6 KiB), count=261 (+177), average=109 B
+
+processing.datutils.test_utils 2020-04-23 09:37:17,270 print_size 111 :
+ /home/henry/pydocs/processing/datutils/test_utils.py:197: size=448 B (-17.0 KiB), count=1 (-160), average=448 B
+
+processing.datutils.test_utils 2020-04-23 09:37:17,271 print_size 111 :
+ /home/henry/pydocs/processing/get_files.py:73: size=0 B (-17.0 KiB), count=0 (-150)
+
+processing.datutils.test_utils 2020-04-23 09:37:17,272 print_size 111 :
+ /usr/lib/python3.8/tracemalloc.py:532: size=29.6 KiB (+14.7 KiB), count=464 (+229), average=65 B
+
+processing.datutils.test_utils 2020-04-23 09:37:17,274 print_size 111 :
+ /home/henry/pydocs/processing/get_files.py:158: size=9240 B (-11.6 KiB), count=55 (-95), average=168 B
+
+processing.datutils.test_utils 2020-04-23 09:37:17,275 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:850: size=22.4 KiB (+10.6 KiB), count=345 (+188), average=66 B
+
+processing.datutils.test_utils 2020-04-23 09:37:17,315 print_size 119 :
+ /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+26/1116 at 2020-04-23 09:37:17.315592
+dumped: 0
+
+processing.datutils.test_utils 2020-04-23 09:37:17,317 print_size 122 :
+ 
+
+asyncio 2020-04-23 09:37:17,319 _run_once 1854 :
+ Executing <Task pending name='Task-23' coro=<TestUtil.print_size() running at /home/henry/pydocs/processing/datutils/test_utils.py:142> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7ff9eeb51670>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> created at /home/henry/pydocs/processing/get_files.py:229> took 0.545 seconds
+
+processing.gdoc 2020-04-23 09:37:17,634 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:37:17,676 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:37:18,430 async_init 16 :
+ async init called
+
+processing.get_files 2020-04-23 09:37:18,436 getRevision 186 :
+ not google doc
+
+processing.get_files 2020-04-23 09:37:18,446 getRevision 186 :
+ not google doc
+
+processing.gdoc 2020-04-23 09:37:18,881 get_last_revision 45 :
+ last revision id 1592
+
+processing.gdoc 2020-04-23 09:37:18,882 async_init 24 :
+ 0
+
+processing.gdoc 2020-04-23 09:37:18,883 async_init 26 :
+ after await 1592
+
+asyncio 2020-04-23 09:37:19,282 pause_reading 792 :
+ <_SelectorSocketTransport fd=12 read=idle write=<idle, bufsize=0>> pauses reading
+
+asyncio 2020-04-23 09:37:19,290 resume_reading 800 :
+ <_SelectorSocketTransport fd=12 read=polling write=<idle, bufsize=0>> resumes reading
+
+processing.get_files 2020-04-23 09:37:19,352 getRevision 197 :
+ google doc
+
+processing.get_files 2020-04-23 09:37:19,354 getRevision 174 :
+ getRevision looping
+
+processing.get_files 2020-04-23 09:37:19,435 getRevision 174 :
+ getRevision looping
+
+processing.get_files 2020-04-23 09:37:19,483 getRevision 174 :
+ getRevision looping
+
+processing.gdoc 2020-04-23 09:37:20,910 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:37:21,525 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:37:22,555 get_last_revision 35 :
+ code not 200
+
+processing.get_files 2020-04-23 09:37:23,767 getRevision 186 :
+ not google doc
+
+processing.get_files 2020-04-23 09:37:23,780 getRevision 186 :
+ not google doc
+
+processing.gdoc 2020-04-23 09:37:23,791 async_init 16 :
+ async init called
+
+processing.gdoc 2020-04-23 09:37:24,190 get_last_revision 45 :
+ last revision id 36
+
+processing.gdoc 2020-04-23 09:37:24,191 async_init 24 :
+ 0
+
+processing.gdoc 2020-04-23 09:37:24,192 async_init 26 :
+ after await 36
+
+processing.get_files 2020-04-23 09:37:24,613 getRevision 197 :
+ google doc
+
+processing.get_files 2020-04-23 09:37:24,614 getRevision 174 :
+ getRevision looping
+
+processing.get_files 2020-04-23 09:37:24,637 getRevision 174 :
+ getRevision looping
+
+processing.get_files 2020-04-23 09:37:24,806 getRevision 174 :
+ getRevision looping
+
+processing.gdoc 2020-04-23 09:37:24,892 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:37:25,212 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:37:28,283 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:37:28,898 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:37:29,026 async_init 16 :
+ async init called
+
+processing.gdoc 2020-04-23 09:37:29,032 async_init 16 :
+ async init called
+
+processing.gdoc 2020-04-23 09:37:29,038 async_init 16 :
+ async init called
+
+processing.gdoc 2020-04-23 09:37:29,514 get_last_revision 45 :
+ last revision id 6
+
+processing.gdoc 2020-04-23 09:37:29,516 async_init 24 :
+ 0
+
+processing.gdoc 2020-04-23 09:37:29,517 async_init 26 :
+ after await 6
+
+processing.gdoc 2020-04-23 09:37:29,522 get_last_revision 45 :
+ last revision id 919
+
+processing.gdoc 2020-04-23 09:37:29,524 async_init 24 :
+ 0
+
+processing.gdoc 2020-04-23 09:37:29,525 async_init 26 :
+ after await 919
+
+processing.gdoc 2020-04-23 09:37:29,529 get_last_revision 45 :
+ last revision id 2
+
+processing.gdoc 2020-04-23 09:37:29,530 async_init 24 :
+ 0
+
+processing.gdoc 2020-04-23 09:37:29,531 async_init 26 :
+ after await 2
+
+asyncio 2020-04-23 09:37:29,536 _getaddrinfo_debug 805 :
+ Get address info docs.google.com:443, type=<SocketKind.SOCK_STREAM: 1>
+
+asyncio 2020-04-23 09:37:29,538 _getaddrinfo_debug 815 :
+ Getting address info docs.google.com:443, type=<SocketKind.SOCK_STREAM: 1> took 1.147ms: [(<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('172.217.14.206', 443)), (<AddressFamily.AF_INET6: 10>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('2607:f8b0:400a:801::200e', 443, 0, 0))]
+
+asyncio 2020-04-23 09:37:29,546 _read_ready__on_eof 869 :
+ <_SelectorSocketTransport fd=11 read=polling write=<idle, bufsize=0>> received EOF
+
+asyncio 2020-04-23 09:37:29,546 eof_received 567 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eed90940> received EOF
+
+asyncio 2020-04-23 09:37:29,551 _read_ready__on_eof 869 :
+ <_SelectorSocketTransport fd=17 read=polling write=<idle, bufsize=0>> received EOF
+
+asyncio 2020-04-23 09:37:29,552 eof_received 567 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eeae3550> received EOF
+
+asyncio 2020-04-23 09:37:29,570 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9ee167520> starts SSL handshake
+
+asyncio 2020-04-23 09:37:29,577 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eed90940> starts SSL handshake
+
+asyncio 2020-04-23 09:37:29,599 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9ee167520>: SSL handshake took 29.0 ms
+
+asyncio 2020-04-23 09:37:29,600 create_connection 1057 :
+ <asyncio.TransportSocket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 58062), raddr=('172.217.14.206', 443)> connected to 172.217.14.206:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7ff9ee17b1c0>, <aiohttp.client_proto.ResponseHandler object at 0x7ff9eeb12400>)
+
+asyncio 2020-04-23 09:37:29,604 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eed90940>: SSL handshake took 26.8 ms
+
+asyncio 2020-04-23 09:37:29,604 create_connection 1057 :
+ <asyncio.TransportSocket fd=15, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 58064), raddr=('172.217.14.206', 443)> connected to 172.217.14.206:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7ff9ee1b17c0>, <aiohttp.client_proto.ResponseHandler object at 0x7ff9ee194dc0>)
+
+asyncio 2020-04-23 09:37:29,927 pause_reading 792 :
+ <_SelectorSocketTransport fd=13 read=idle write=<idle, bufsize=0>> pauses reading
+
+asyncio 2020-04-23 09:37:29,932 resume_reading 800 :
+ <_SelectorSocketTransport fd=13 read=polling write=<idle, bufsize=0>> resumes reading
+
+processing.gdoc 2020-04-23 09:37:29,933 get_last_revision 35 :
+ code not 200
+
+processing.get_files 2020-04-23 09:37:29,936 getRevision 197 :
+ google doc
+
+processing.get_files 2020-04-23 09:37:29,937 getRevision 174 :
+ getRevision looping
+
+processing.get_files 2020-04-23 09:37:29,942 getRevision 197 :
+ google doc
+
+processing.get_files 2020-04-23 09:37:29,943 getRevision 174 :
+ getRevision looping
+
+processing.get_files 2020-04-23 09:37:29,994 getRevision 197 :
+ google doc
+
+processing.get_files 2020-04-23 09:37:29,995 getRevision 174 :
+ getRevision looping
+
+processing.gdoc 2020-04-23 09:37:32,584 get_last_revision 35 :
+ code not 200
+
+processing.get_files 2020-04-23 09:37:34,208 getRevision 186 :
+ not google doc
+
+processing.gdoc 2020-04-23 09:37:34,219 async_init 16 :
+ async init called
+
+processing.gdoc 2020-04-23 09:37:34,224 async_init 16 :
+ async init called
+
+asyncio 2020-04-23 09:37:34,228 _getaddrinfo_debug 805 :
+ Get address info www.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1>
+
+asyncio 2020-04-23 09:37:34,229 _getaddrinfo_debug 815 :
+ Getting address info www.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1> took 1.084ms: [(<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('216.58.193.74', 443)), (<AddressFamily.AF_INET6: 10>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('2607:f8b0:400a:804::200a', 443, 0, 0))]
+
+asyncio 2020-04-23 09:37:34,355 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eddd2c10> starts SSL handshake
+
+asyncio 2020-04-23 09:37:34,356 _read_ready__on_eof 869 :
+ <_SelectorSocketTransport fd=27 read=polling write=<idle, bufsize=0>> received EOF
+
+asyncio 2020-04-23 09:37:34,356 eof_received 567 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eeb51df0> received EOF
+
+asyncio 2020-04-23 09:37:34,389 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eddd2c10>: SSL handshake took 33.6 ms
+
+asyncio 2020-04-23 09:37:34,390 create_connection 1057 :
+ <asyncio.TransportSocket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 35820), raddr=('216.58.193.74', 443)> connected to 216.58.193.74:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7ff9edbe8640>, <aiohttp.client_proto.ResponseHandler object at 0x7ff9ee1caa00>)
+
+processing.gdoc 2020-04-23 09:37:34,950 get_last_revision 45 :
+ last revision id 567
+
+processing.gdoc 2020-04-23 09:37:34,951 async_init 24 :
+ 0
+
+processing.gdoc 2020-04-23 09:37:34,952 async_init 26 :
+ after await 567
+
+processing.gdoc 2020-04-23 09:37:34,957 get_last_revision 45 :
+ last revision id 929
+
+processing.gdoc 2020-04-23 09:37:34,958 async_init 24 :
+ 0
+
+processing.gdoc 2020-04-23 09:37:34,959 async_init 26 :
+ after await 929
+
+processing.get_files 2020-04-23 09:37:35,449 getRevision 197 :
+ google doc
+
+processing.get_files 2020-04-23 09:37:35,450 getRevision 174 :
+ getRevision looping
+
+processing.get_files 2020-04-23 09:37:35,499 getRevision 197 :
+ google doc
+
+processing.get_files 2020-04-23 09:37:35,500 getRevision 174 :
+ getRevision looping
+
+processing.get_files 2020-04-23 09:37:35,599 getRevision 174 :
+ getRevision looping
+
+processing.gdoc 2020-04-23 09:37:35,948 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:37:36,272 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:37:37,027 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:37:37,295 get_last_revision 35 :
+ code not 200
+
+processing.datutils.test_utils 2020-04-23 09:37:37,331 print_size 108 :
+ 
+
+Memory usage: 170468 (kb)
+
+processing.datutils.test_utils 2020-04-23 09:37:37,860 print_size 111 :
+ /home/henry/pydocs/processing/gdoc.py:66: size=1244 KiB (+192 KiB), count=26322 (+4065), average=48 B
+
+processing.datutils.test_utils 2020-04-23 09:37:37,861 print_size 111 :
+ /usr/lib/python3.8/tracemalloc.py:532: size=3488 B (-26.2 KiB), count=54 (-410), average=65 B
+
+processing.datutils.test_utils 2020-04-23 09:37:37,863 print_size 111 :
+ /home/henry/pydocs/processing/gdoc.py:41: size=52.0 KiB (+24.2 KiB), count=487 (+226), average=109 B
+
+processing.datutils.test_utils 2020-04-23 09:37:37,864 print_size 111 :
+ /usr/lib/python3.8/traceback.py:288: size=87.8 KiB (+23.1 KiB), count=1062 (+285), average=85 B
+
+processing.datutils.test_utils 2020-04-23 09:37:37,866 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:159: size=39.2 KiB (+17.3 KiB), count=520 (+226), average=77 B
+
+processing.datutils.test_utils 2020-04-23 09:37:37,868 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:93: size=36.4 KiB (+15.8 KiB), count=37 (+16), average=1008 B
+
+processing.datutils.test_utils 2020-04-23 09:37:37,870 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client_reqrep.py:363: size=36.4 KiB (+15.8 KiB), count=37 (+16), average=1008 B
+
+processing.datutils.test_utils 2020-04-23 09:37:37,871 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:850: size=36.5 KiB (+14.1 KiB), count=556 (+211), average=67 B
+
+processing.datutils.test_utils 2020-04-23 09:37:37,872 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:108: size=31.1 KiB (+13.8 KiB), count=520 (+226), average=61 B
+
+processing.datutils.test_utils 2020-04-23 09:37:37,873 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:714: size=23.1 KiB (+13.7 KiB), count=37 (+16), average=640 B
+
+processing.datutils.test_utils 2020-04-23 09:37:37,917 print_size 119 :
+ /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+38/1117 at 2020-04-23 09:37:37.917503
+dumped: 0
+
+processing.datutils.test_utils 2020-04-23 09:37:37,919 print_size 122 :
+ 
+
+asyncio 2020-04-23 09:37:37,921 _run_once 1854 :
+ Executing <Task pending name='Task-23' coro=<TestUtil.print_size() running at /home/henry/pydocs/processing/datutils/test_utils.py:142> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7ff9eee7a0d0>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> created at /home/henry/pydocs/processing/get_files.py:229> took 0.590 seconds
+
+processing.get_files 2020-04-23 09:37:39,392 getRevision 186 :
+ not google doc
+
+processing.get_files 2020-04-23 09:37:39,405 getRevision 186 :
+ not google doc
+
+processing.gdoc 2020-04-23 09:37:39,417 async_init 16 :
+ async init called
+
+processing.gdoc 2020-04-23 09:37:39,956 get_last_revision 35 :
+ code not 200
+
+asyncio 2020-04-23 09:37:40,371 _getaddrinfo_debug 805 :
+ Get address info driveactivity.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1>
+
+asyncio 2020-04-23 09:37:40,373 _getaddrinfo_debug 815 :
+ Getting address info driveactivity.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1> took 1.258ms: [(<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('172.217.14.234', 443)), (<AddressFamily.AF_INET6: 10>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('2607:f8b0:400a:808::200a', 443, 0, 0))]
+
+asyncio 2020-04-23 09:37:40,387 _read_ready__on_eof 869 :
+ <_SelectorSocketTransport fd=28 read=polling write=<idle, bufsize=0>> received EOF
+
+asyncio 2020-04-23 09:37:40,387 eof_received 567 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9ee294f70> received EOF
+
+asyncio 2020-04-23 09:37:40,395 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9ee1671c0> starts SSL handshake
+
+asyncio 2020-04-23 09:37:40,427 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9ee1671c0>: SSL handshake took 31.6 ms
+
+asyncio 2020-04-23 09:37:40,428 create_connection 1057 :
+ <asyncio.TransportSocket fd=16, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 44178), raddr=('172.217.14.234', 443)> connected to 172.217.14.234:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7ff9ee16e040>, <aiohttp.client_proto.ResponseHandler object at 0x7ff9eeae1a00>)
+
+processing.get_files 2020-04-23 09:37:40,777 getRevision 174 :
+ getRevision looping
+
+processing.get_files 2020-04-23 09:37:40,879 getRevision 174 :
+ getRevision looping
+
+processing.gdoc 2020-04-23 09:37:41,596 get_last_revision 45 :
+ last revision id 1580
+
+processing.gdoc 2020-04-23 09:37:41,598 async_init 24 :
+ 0
+
+processing.gdoc 2020-04-23 09:37:41,599 async_init 26 :
+ after await 1580
+
+asyncio 2020-04-23 09:37:42,010 pause_reading 792 :
+ <_SelectorSocketTransport fd=12 read=idle write=<idle, bufsize=0>> pauses reading
+
+asyncio 2020-04-23 09:37:42,015 resume_reading 800 :
+ <_SelectorSocketTransport fd=12 read=polling write=<idle, bufsize=0>> resumes reading
+
+asyncio 2020-04-23 09:37:42,020 pause_reading 792 :
+ <_SelectorSocketTransport fd=12 read=idle write=<idle, bufsize=0>> pauses reading
+
+asyncio 2020-04-23 09:37:42,033 resume_reading 800 :
+ <_SelectorSocketTransport fd=12 read=polling write=<idle, bufsize=0>> resumes reading
+
+processing.get_files 2020-04-23 09:37:42,157 getRevision 197 :
+ google doc
+
+processing.get_files 2020-04-23 09:37:42,159 getRevision 174 :
+ getRevision looping
+
+asyncio 2020-04-23 09:37:42,160 _run_once 1854 :
+ Executing <Task pending name='Task-15' coro=<getRevision() running at /home/henry/pydocs/processing/get_files.py:175> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7ff9ed0ccee0>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> cb=[gather.<locals>._done_callback() at /usr/lib/python3.8/asyncio/tasks.py:751] created at /home/henry/pydocs/processing/get_files.py:225> took 0.127 seconds
+
+processing.gdoc 2020-04-23 09:37:43,209 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:37:43,644 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:37:44,307 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:37:44,538 async_init 16 :
+ async init called
+
+processing.gdoc 2020-04-23 09:37:44,544 async_init 16 :
+ async init called
+
+processing.gdoc 2020-04-23 09:37:44,549 async_init 16 :
+ async init called
+
+processing.gdoc 2020-04-23 09:37:44,556 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:37:45,283 get_last_revision 45 :
+ last revision id 1028
+
+processing.gdoc 2020-04-23 09:37:45,284 async_init 24 :
+ 0
+
+processing.gdoc 2020-04-23 09:37:45,285 async_init 26 :
+ after await 1028
+
+processing.gdoc 2020-04-23 09:37:45,612 get_last_revision 45 :
+ last revision id 747
+
+processing.gdoc 2020-04-23 09:37:45,614 async_init 24 :
+ 0
+
+processing.gdoc 2020-04-23 09:37:45,615 async_init 26 :
+ after await 747
+
+processing.gdoc 2020-04-23 09:37:45,701 get_last_revision 45 :
+ last revision id 2372
+
+processing.gdoc 2020-04-23 09:37:45,703 async_init 24 :
+ 0
+
+processing.gdoc 2020-04-23 09:37:45,704 async_init 26 :
+ after await 2372
+
+asyncio 2020-04-23 09:37:45,708 _getaddrinfo_debug 805 :
+ Get address info docs.google.com:443, type=<SocketKind.SOCK_STREAM: 1>
+
+asyncio 2020-04-23 09:37:45,710 _getaddrinfo_debug 815 :
+ Getting address info docs.google.com:443, type=<SocketKind.SOCK_STREAM: 1> took 1.131ms: [(<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('172.217.14.206', 443)), (<AddressFamily.AF_INET6: 10>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('2607:f8b0:400a:801::200e', 443, 0, 0))]
+
+asyncio 2020-04-23 09:37:45,727 _read_ready__on_eof 869 :
+ <_SelectorSocketTransport fd=15 read=polling write=<idle, bufsize=0>> received EOF
+
+asyncio 2020-04-23 09:37:45,727 eof_received 567 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eed90940> received EOF
+
+asyncio 2020-04-23 09:37:45,732 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eddd2f40> starts SSL handshake
+
+asyncio 2020-04-23 09:37:45,762 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eddd2f40>: SSL handshake took 29.2 ms
+
+asyncio 2020-04-23 09:37:45,763 create_connection 1057 :
+ <asyncio.TransportSocket fd=17, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 58074), raddr=('172.217.14.206', 443)> connected to 172.217.14.206:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7ff9ee1b1f40>, <aiohttp.client_proto.ResponseHandler object at 0x7ff9eed5bac0>)
+
+processing.get_files 2020-04-23 09:37:45,835 getRevision 197 :
+ google doc
+
+processing.get_files 2020-04-23 09:37:45,837 getRevision 174 :
+ getRevision looping
+
+asyncio 2020-04-23 09:37:46,330 pause_reading 792 :
+ <_SelectorSocketTransport fd=13 read=idle write=<idle, bufsize=0>> pauses reading
+
+asyncio 2020-04-23 09:37:46,333 resume_reading 800 :
+ <_SelectorSocketTransport fd=13 read=polling write=<idle, bufsize=0>> resumes reading
+
+processing.get_files 2020-04-23 09:37:46,368 getRevision 197 :
+ google doc
+
+processing.get_files 2020-04-23 09:37:46,370 getRevision 174 :
+ getRevision looping
+
+asyncio 2020-04-23 09:37:46,375 pause_reading 792 :
+ <_SelectorSocketTransport fd=17 read=idle write=<idle, bufsize=0>> pauses reading
+
+asyncio 2020-04-23 09:37:46,380 resume_reading 800 :
+ <_SelectorSocketTransport fd=17 read=polling write=<idle, bufsize=0>> resumes reading
+
+processing.get_files 2020-04-23 09:37:46,483 getRevision 197 :
+ google doc
+
+processing.get_files 2020-04-23 09:37:46,485 getRevision 174 :
+ getRevision looping
+
+processing.gdoc 2020-04-23 09:37:47,330 get_last_revision 35 :
+ code not 200
+
+processing.get_files 2020-04-23 09:37:49,613 getRevision 186 :
+ not google doc
+
+processing.gdoc 2020-04-23 09:37:49,623 async_init 16 :
+ async init called
+
+processing.gdoc 2020-04-23 09:37:49,628 async_init 16 :
+ async init called
+
+processing.gdoc 2020-04-23 09:37:50,199 get_last_revision 45 :
+ last revision id 188
+
+processing.gdoc 2020-04-23 09:37:50,200 async_init 24 :
+ 0
+
+processing.gdoc 2020-04-23 09:37:50,201 async_init 26 :
+ after await 188
+
+processing.gdoc 2020-04-23 09:37:50,206 get_last_revision 35 :
+ code not 200
+
+processing.get_files 2020-04-23 09:37:50,640 getRevision 197 :
+ google doc
+
+processing.get_files 2020-04-23 09:37:50,642 getRevision 174 :
+ getRevision looping
+
+processing.gdoc 2020-04-23 09:37:50,653 get_last_revision 35 :
+ code not 200
+
+processing.get_files 2020-04-23 09:37:51,023 getRevision 174 :
+ getRevision looping
+
+processing.gdoc 2020-04-23 09:37:51,025 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:37:51,835 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:37:51,906 get_last_revision 35 :
+ code not 200
+
+processing.get_files 2020-04-23 09:37:54,687 getRevision 186 :
+ not google doc
+
+processing.gdoc 2020-04-23 09:37:54,704 async_init 16 :
+ async init called
+
+processing.get_files 2020-04-23 09:37:54,710 getRevision 186 :
+ not google doc
+
+processing.gdoc 2020-04-23 09:37:54,725 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:37:55,124 get_last_revision 35 :
+ code not 200
+
+processing.get_files 2020-04-23 09:37:55,332 getRevision 174 :
+ getRevision looping
+
+processing.get_files 2020-04-23 09:37:55,597 getRevision 174 :
+ getRevision looping
+
+processing.gdoc 2020-04-23 09:37:57,570 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:37:57,912 get_last_revision 35 :
+ code not 200
+
+processing.datutils.test_utils 2020-04-23 09:37:57,931 print_size 108 :
+ 
+
+Memory usage: 170468 (kb)
+
+processing.datutils.test_utils 2020-04-23 09:37:58,593 print_size 111 :
+ /home/henry/pydocs/processing/gdoc.py:66: size=1525 KiB (+281 KiB), count=32247 (+5925), average=48 B
+
+processing.datutils.test_utils 2020-04-23 09:37:58,595 print_size 111 :
+ /usr/lib/python3.8/traceback.py:359: size=165 KiB (+46.5 KiB), count=2171 (+609), average=78 B
+
+processing.datutils.test_utils 2020-04-23 09:37:58,596 print_size 111 :
+ /usr/lib/python3.8/traceback.py:288: size=112 KiB (+24.5 KiB), count=1357 (+295), average=85 B
+
+processing.datutils.test_utils 2020-04-23 09:37:58,597 print_size 111 :
+ /home/henry/pydocs/processing/gdoc.py:41: size=72.0 KiB (+20.0 KiB), count=666 (+179), average=111 B
+
+processing.datutils.test_utils 2020-04-23 09:37:58,599 print_size 111 :
+ /usr/lib/python3.8/tracemalloc.py:532: size=19.5 KiB (+16.1 KiB), count=283 (+229), average=71 B
+
+processing.datutils.test_utils 2020-04-23 09:37:58,601 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:159: size=53.2 KiB (+14.0 KiB), count=714 (+194), average=76 B
+
+processing.datutils.test_utils 2020-04-23 09:37:58,603 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:93: size=50.2 KiB (+13.8 KiB), count=51 (+14), average=1008 B
+
+processing.datutils.test_utils 2020-04-23 09:37:58,604 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client_reqrep.py:363: size=50.2 KiB (+13.8 KiB), count=51 (+14), average=1008 B
+
+processing.datutils.test_utils 2020-04-23 09:37:58,605 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:850: size=50.1 KiB (+13.6 KiB), count=751 (+195), average=68 B
+
+processing.datutils.test_utils 2020-04-23 09:37:58,606 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:161: size=42.4 KiB (+11.5 KiB), count=714 (+194), average=61 B
+
+processing.datutils.test_utils 2020-04-23 09:37:58,651 print_size 119 :
+ /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+46/1117 at 2020-04-23 09:37:58.651866
+dumped: 0
+
+processing.datutils.test_utils 2020-04-23 09:37:58,653 print_size 122 :
+ 
+
+asyncio 2020-04-23 09:37:58,655 _run_once 1854 :
+ Executing <Task pending name='Task-23' coro=<TestUtil.print_size() running at /home/henry/pydocs/processing/datutils/test_utils.py:142> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7ff9eda05a60>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> created at /home/henry/pydocs/processing/get_files.py:229> took 0.724 seconds
+
+processing.gdoc 2020-04-23 09:37:58,879 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:37:59,209 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:37:59,392 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:37:59,724 async_init 16 :
+ async init called
+
+processing.get_files 2020-04-23 09:37:59,729 getRevision 186 :
+ not google doc
+
+processing.gdoc 2020-04-23 09:37:59,742 async_init 16 :
+ async init called
+
+processing.gdoc 2020-04-23 09:38:00,375 get_last_revision 45 :
+ last revision id 551
+
+processing.gdoc 2020-04-23 09:38:00,377 async_init 24 :
+ 0
+
+processing.gdoc 2020-04-23 09:38:00,379 async_init 26 :
+ after await 551
+
+processing.gdoc 2020-04-23 09:38:00,641 get_last_revision 35 :
+ code not 200
+
+processing.get_files 2020-04-23 09:38:00,910 getRevision 197 :
+ google doc
+
+processing.get_files 2020-04-23 09:38:00,911 getRevision 174 :
+ getRevision looping
+
+processing.get_files 2020-04-23 09:38:01,052 getRevision 174 :
+ getRevision looping
+
+processing.gdoc 2020-04-23 09:38:02,076 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:02,719 get_last_revision 35 :
+ code not 200
+
+processing.get_files 2020-04-23 09:38:04,727 getRevision 186 :
+ not google doc
+
+processing.gdoc 2020-04-23 09:38:04,739 async_init 16 :
+ async init called
+
+processing.gdoc 2020-04-23 09:38:04,831 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:05,116 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:05,643 get_last_revision 35 :
+ code not 200
+
+processing.get_files 2020-04-23 09:38:05,650 getRevision 174 :
+ getRevision looping
+
+processing.gdoc 2020-04-23 09:38:05,651 async_init 16 :
+ async init called
+
+processing.gdoc 2020-04-23 09:38:06,231 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:06,475 get_last_revision 45 :
+ last revision id 48
+
+processing.gdoc 2020-04-23 09:38:06,476 async_init 24 :
+ 0
+
+processing.gdoc 2020-04-23 09:38:06,477 async_init 26 :
+ after await 48
+
+processing.gdoc 2020-04-23 09:38:06,585 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:06,992 get_last_revision 35 :
+ code not 200
+
+processing.get_files 2020-04-23 09:38:07,052 getRevision 197 :
+ google doc
+
+processing.get_files 2020-04-23 09:38:07,053 getRevision 174 :
+ getRevision looping
+
+processing.gdoc 2020-04-23 09:38:08,220 get_last_revision 35 :
+ code not 200
+
+asyncio 2020-04-23 09:38:08,630 _read_ready__on_eof 869 :
+ <_SelectorSocketTransport fd=12 read=polling write=<idle, bufsize=0>> received EOF
+
+asyncio 2020-04-23 09:38:08,630 eof_received 567 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9ed777d60> received EOF
+
+asyncio 2020-04-23 09:38:08,631 _read_ready__on_eof 869 :
+ <_SelectorSocketTransport fd=13 read=polling write=<idle, bufsize=0>> received EOF
+
+asyncio 2020-04-23 09:38:08,631 eof_received 567 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9ee167520> received EOF
+
+processing.gdoc 2020-04-23 09:38:09,620 get_last_revision 35 :
+ code not 200
+
+processing.get_files 2020-04-23 09:38:09,693 getRevision 186 :
+ not google doc
+
+processing.gdoc 2020-04-23 09:38:09,998 get_last_revision 35 :
+ code not 200
+
+processing.get_files 2020-04-23 09:38:10,678 getRevision 174 :
+ getRevision looping
+
+processing.get_files 2020-04-23 09:38:10,679 getRevision 186 :
+ not google doc
+
+processing.get_files 2020-04-23 09:38:11,857 getRevision 174 :
+ getRevision looping
+
+processing.gdoc 2020-04-23 09:38:11,859 async_init 16 :
+ async init called
+
+processing.gdoc 2020-04-23 09:38:12,111 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:12,317 get_last_revision 45 :
+ last revision id 89
+
+processing.gdoc 2020-04-23 09:38:12,318 async_init 24 :
+ 0
+
+processing.gdoc 2020-04-23 09:38:12,319 async_init 26 :
+ after await 89
+
+processing.gdoc 2020-04-23 09:38:12,930 get_last_revision 35 :
+ code not 200
+
+processing.get_files 2020-04-23 09:38:12,958 getRevision 197 :
+ google doc
+
+processing.get_files 2020-04-23 09:38:12,959 getRevision 174 :
+ getRevision looping
+
+processing.gdoc 2020-04-23 09:38:13,105 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:13,597 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:13,956 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:14,366 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:14,628 async_init 16 :
+ async init called
+
+processing.gdoc 2020-04-23 09:38:14,979 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:15,508 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:17,013 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:17,436 get_last_revision 35 :
+ code not 200
+
+processing.datutils.test_utils 2020-04-23 09:38:18,669 print_size 108 :
+ 
+
+Memory usage: 170468 (kb)
+
+processing.datutils.test_utils 2020-04-23 09:38:19,279 print_size 111 :
+ /usr/lib/python3.8/traceback.py:288: size=150 KiB (+37.8 KiB), count=1822 (+465), average=84 B
+
+processing.datutils.test_utils 2020-04-23 09:38:19,281 print_size 111 :
+ /home/henry/pydocs/processing/gdoc.py:41: size=106 KiB (+33.6 KiB), count=984 (+318), average=110 B
+
+processing.datutils.test_utils 2020-04-23 09:38:19,282 print_size 111 :
+ /home/henry/pydocs/processing/gdoc.py:66: size=1558 KiB (+33.0 KiB), count=32941 (+694), average=48 B
+
+processing.datutils.test_utils 2020-04-23 09:38:19,283 print_size 111 :
+ /usr/lib/python3.8/ssl.py:906: size=47.7 KiB (-29.9 KiB), count=788 (-502), average=62 B
+
+processing.datutils.test_utils 2020-04-23 09:38:19,285 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:159: size=79.3 KiB (+26.1 KiB), count=1064 (+350), average=76 B
+
+processing.datutils.test_utils 2020-04-23 09:38:19,287 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:93: size=74.8 KiB (+24.6 KiB), count=76 (+25), average=1008 B
+
+processing.datutils.test_utils 2020-04-23 09:38:19,288 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client_reqrep.py:363: size=74.8 KiB (+24.6 KiB), count=76 (+25), average=1008 B
+
+processing.datutils.test_utils 2020-04-23 09:38:19,289 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:850: size=72.9 KiB (+22.9 KiB), count=1116 (+365), average=67 B
+
+processing.datutils.test_utils 2020-04-23 09:38:19,291 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:161: size=63.2 KiB (+20.8 KiB), count=1064 (+350), average=61 B
+
+processing.datutils.test_utils 2020-04-23 09:38:19,292 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:158: size=63.2 KiB (+20.8 KiB), count=1064 (+350), average=61 B
+
+processing.datutils.test_utils 2020-04-23 09:38:19,338 print_size 119 :
+ /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+51/1115 at 2020-04-23 09:38:19.338338
+dumped: 0
+
+processing.datutils.test_utils 2020-04-23 09:38:19,339 print_size 122 :
+ 
+
+asyncio 2020-04-23 09:38:19,341 _run_once 1854 :
+ Executing <Task pending name='Task-23' coro=<TestUtil.print_size() running at /home/henry/pydocs/processing/datutils/test_utils.py:142> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7ff9eed90d30>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> created at /home/henry/pydocs/processing/get_files.py:229> took 0.672 seconds
+
+processing.gdoc 2020-04-23 09:38:19,727 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:20,328 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:20,357 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:21,123 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:21,329 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:21,737 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:22,352 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:22,968 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:24,399 get_last_revision 35 :
+ code not 200
+
+asyncio 2020-04-23 09:38:24,622 _read_ready__on_eof 869 :
+ <_SelectorSocketTransport fd=11 read=polling write=<idle, bufsize=0>> received EOF
+
+asyncio 2020-04-23 09:38:24,623 eof_received 567 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eddd2c10> received EOF
+
+asyncio 2020-04-23 09:38:24,627 _read_ready__on_eof 869 :
+ <_SelectorSocketTransport fd=20 read=polling write=<idle, bufsize=0>> received EOF
+
+asyncio 2020-04-23 09:38:24,627 eof_received 567 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9ee18aa30> received EOF
+
+asyncio 2020-04-23 09:38:24,629 _read_ready__on_eof 869 :
+ <_SelectorSocketTransport fd=18 read=polling write=<idle, bufsize=0>> received EOF
+
+asyncio 2020-04-23 09:38:24,629 eof_received 567 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eedaa6a0> received EOF
+
+processing.gdoc 2020-04-23 09:38:24,685 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:27,222 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:27,677 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:27,685 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:28,496 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:28,694 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:29,110 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:29,724 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:30,544 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:31,978 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:31,980 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:34,639 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:35,229 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:35,261 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:35,764 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:36,075 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:36,687 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:37,097 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:38,122 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:39,351 get_last_revision 35 :
+ code not 200
+
+processing.datutils.test_utils 2020-04-23 09:38:39,353 print_size 108 :
+ 
+
+Memory usage: 170468 (kb)
+
+processing.datutils.test_utils 2020-04-23 09:38:40,040 print_size 111 :
+ /usr/lib/python3.8/traceback.py:359: size=259 KiB (+84.8 KiB), count=3336 (+1039), average=80 B
+
+processing.datutils.test_utils 2020-04-23 09:38:40,042 print_size 111 :
+ /usr/lib/python3.8/traceback.py:288: size=213 KiB (+63.0 KiB), count=2585 (+763), average=84 B
+
+processing.datutils.test_utils 2020-04-23 09:38:40,047 print_size 111 :
+ /home/henry/pydocs/processing/gdoc.py:41: size=151 KiB (+45.5 KiB), count=1420 (+436), average=109 B
+
+processing.datutils.test_utils 2020-04-23 09:38:40,049 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:850: size=106 KiB (+33.0 KiB), count=1558 (+442), average=70 B
+
+processing.datutils.test_utils 2020-04-23 09:38:40,051 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:159: size=110 KiB (+30.3 KiB), count=1470 (+406), average=76 B
+
+processing.datutils.test_utils 2020-04-23 09:38:40,052 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client_reqrep.py:363: size=104 KiB (+29.5 KiB), count=106 (+30), average=1008 B
+
+processing.datutils.test_utils 2020-04-23 09:38:40,053 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:93: size=103 KiB (+28.5 KiB), count=105 (+29), average=1008 B
+
+processing.datutils.test_utils 2020-04-23 09:38:40,054 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:161: size=87.4 KiB (+24.1 KiB), count=1470 (+406), average=61 B
+
+processing.datutils.test_utils 2020-04-23 09:38:40,055 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:158: size=87.4 KiB (+24.1 KiB), count=1470 (+406), average=61 B
+
+processing.datutils.test_utils 2020-04-23 09:38:40,057 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:108: size=86.6 KiB (+23.9 KiB), count=1470 (+406), average=60 B
+
+processing.datutils.test_utils 2020-04-23 09:38:40,102 print_size 119 :
+ /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+51/1115 at 2020-04-23 09:38:40.102754
+dumped: 0
+
+processing.datutils.test_utils 2020-04-23 09:38:40,104 print_size 122 :
+ 
+
+asyncio 2020-04-23 09:38:40,106 _run_once 1854 :
+ Executing <Task pending name='Task-23' coro=<TestUtil.print_size() running at /home/henry/pydocs/processing/datutils/test_utils.py:142> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7ff9ef6b3d60>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> created at /home/henry/pydocs/processing/get_files.py:229> took 0.753 seconds
+
+processing.gdoc 2020-04-23 09:38:40,109 get_last_revision 35 :
+ code not 200
+
+asyncio 2020-04-23 09:38:40,704 _read_ready__on_eof 869 :
+ <_SelectorSocketTransport fd=16 read=polling write=<idle, bufsize=0>> received EOF
+
+asyncio 2020-04-23 09:38:40,704 eof_received 567 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9ee1671c0> received EOF
+
+asyncio 2020-04-23 09:38:40,708 _read_ready__on_eof 869 :
+ <_SelectorSocketTransport fd=17 read=polling write=<idle, bufsize=0>> received EOF
+
+asyncio 2020-04-23 09:38:40,708 eof_received 567 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eddd2f40> received EOF
+
+asyncio 2020-04-23 09:38:42,269 _getaddrinfo_debug 805 :
+ Get address info www.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1>
+
+asyncio 2020-04-23 09:38:42,405 _getaddrinfo_debug 813 :
+ Getting address info www.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1> took 135.322ms: [(<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('216.58.217.42', 443)), (<AddressFamily.AF_INET6: 10>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('2607:f8b0:400a:804::200a', 443, 0, 0))]
+
+processing.gdoc 2020-04-23 09:38:42,329 get_last_revision 35 :
+ code not 200
+
+asyncio 2020-04-23 09:38:42,428 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eecbaeb0> starts SSL handshake
+
+processing.gdoc 2020-04-23 09:38:42,548 get_last_revision 35 :
+ code not 200
+
+asyncio 2020-04-23 09:38:42,570 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eecbaeb0>: SSL handshake took 141.5 ms
+
+asyncio 2020-04-23 09:38:42,571 create_connection 1057 :
+ <asyncio.TransportSocket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 33706), raddr=('216.58.217.42', 443)> connected to 216.58.217.42:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7ff9ee155220>, <aiohttp.client_proto.ResponseHandler object at 0x7ff9ee1a6fa0>)
+
+processing.gdoc 2020-04-23 09:38:42,958 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:42,989 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:43,652 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:44,060 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:44,676 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:45,494 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:46,724 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:47,665 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:49,667 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:49,969 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:50,239 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:50,321 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:51,025 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:51,434 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:52,049 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:53,072 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:54,096 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:55,119 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:56,963 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:57,271 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:57,782 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:57,786 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:58,380 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:58,695 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:38:59,421 get_last_revision 35 :
+ code not 200
+
+processing.datutils.test_utils 2020-04-23 09:39:00,119 print_size 108 :
+ 
+
+Memory usage: 170468 (kb)
+
+processing.datutils.test_utils 2020-04-23 09:39:00,853 print_size 111 :
+ /usr/lib/python3.8/traceback.py:359: size=344 KiB (+84.4 KiB), count=4373 (+1037), average=80 B
+
+processing.datutils.test_utils 2020-04-23 09:39:00,855 print_size 111 :
+ /usr/lib/python3.8/traceback.py:288: size=275 KiB (+61.5 KiB), count=3333 (+748), average=84 B
+
+processing.datutils.test_utils 2020-04-23 09:39:00,856 print_size 111 :
+ /home/henry/pydocs/processing/gdoc.py:41: size=192 KiB (+40.3 KiB), count=1794 (+374), average=109 B
+
+processing.datutils.test_utils 2020-04-23 09:39:00,858 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:159: size=139 KiB (+29.2 KiB), count=1862 (+392), average=76 B
+
+processing.datutils.test_utils 2020-04-23 09:39:00,860 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:850: size=134 KiB (+28.2 KiB), count=1948 (+390), average=70 B
+
+processing.datutils.test_utils 2020-04-23 09:39:00,862 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client_reqrep.py:363: size=132 KiB (+27.6 KiB), count=134 (+28), average=1008 B
+
+processing.datutils.test_utils 2020-04-23 09:39:00,863 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:93: size=131 KiB (+27.6 KiB), count=133 (+28), average=1008 B
+
+processing.datutils.test_utils 2020-04-23 09:39:00,865 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:161: size=111 KiB (+23.3 KiB), count=1862 (+392), average=61 B
+
+processing.datutils.test_utils 2020-04-23 09:39:00,867 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:158: size=111 KiB (+23.3 KiB), count=1862 (+392), average=61 B
+
+processing.datutils.test_utils 2020-04-23 09:39:00,868 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:108: size=110 KiB (+23.1 KiB), count=1862 (+392), average=60 B
+
+processing.datutils.test_utils 2020-04-23 09:39:00,919 print_size 119 :
+ /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+51/1115 at 2020-04-23 09:39:00.919190
+dumped: 0
+
+processing.datutils.test_utils 2020-04-23 09:39:00,920 print_size 122 :
+ 
+
+asyncio 2020-04-23 09:39:00,923 _run_once 1854 :
+ Executing <Task pending name='Task-23' coro=<TestUtil.print_size() running at /home/henry/pydocs/processing/datutils/test_utils.py:142> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7ff9ee18adf0>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> created at /home/henry/pydocs/processing/get_files.py:229> took 0.803 seconds
+
+processing.gdoc 2020-04-23 09:39:00,924 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:01,469 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:02,493 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:04,290 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:04,746 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:05,157 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:05,160 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:05,652 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:06,180 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:06,783 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:08,273 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:09,047 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:09,793 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:11,708 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:12,121 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:12,490 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:12,494 get_last_revision 35 :
+ code not 200
+
+asyncio 2020-04-23 09:39:12,622 _read_ready__on_eof 869 :
+ <_SelectorSocketTransport fd=19 read=polling write=<idle, bufsize=0>> received EOF
+
+asyncio 2020-04-23 09:39:12,623 eof_received 567 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9ef6b3b20> received EOF
+
+processing.gdoc 2020-04-23 09:39:12,943 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:13,757 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:14,577 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:15,626 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:16,341 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:17,155 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:19,136 get_last_revision 35 :
+ code not 200
+
+asyncio 2020-04-23 09:39:19,503 _getaddrinfo_debug 805 :
+ Get address info www.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1>
+
+asyncio 2020-04-23 09:39:19,504 _getaddrinfo_debug 815 :
+ Getting address info www.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1> took 1.294ms: [(<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('216.58.217.42', 443)), (<AddressFamily.AF_INET6: 10>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('2607:f8b0:400a:804::200a', 443, 0, 0))]
+
+asyncio 2020-04-23 09:39:19,527 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9ed7d6310> starts SSL handshake
+
+asyncio 2020-04-23 09:39:19,560 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9ed7d6310>: SSL handshake took 32.9 ms
+
+asyncio 2020-04-23 09:39:19,561 create_connection 1057 :
+ <asyncio.TransportSocket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 33740), raddr=('216.58.217.42', 443)> connected to 216.58.217.42:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7ff9eeee38e0>, <aiohttp.client_proto.ResponseHandler object at 0x7ff9eee08dc0>)
+
+processing.gdoc 2020-04-23 09:39:19,901 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:19,904 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:19,927 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:20,307 get_last_revision 35 :
+ code not 200
+
+processing.datutils.test_utils 2020-04-23 09:39:20,934 print_size 108 :
+ 
+
+Memory usage: 170468 (kb)
+
+processing.datutils.test_utils 2020-04-23 09:39:21,742 print_size 111 :
+ /usr/lib/python3.8/traceback.py:288: size=338 KiB (+63.6 KiB), count=4117 (+784), average=84 B
+
+processing.datutils.test_utils 2020-04-23 09:39:21,744 print_size 111 :
+ /home/henry/pydocs/processing/gdoc.py:41: size=231 KiB (+40.0 KiB), count=2158 (+364), average=110 B
+
+processing.datutils.test_utils 2020-04-23 09:39:21,745 print_size 111 :
+ /usr/lib/python3.8/traceback.py:359: size=379 KiB (+35.0 KiB), count=4769 (+396), average=81 B
+
+processing.datutils.test_utils 2020-04-23 09:39:21,747 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:850: size=163 KiB (+29.3 KiB), count=2339 (+391), average=71 B
+
+processing.datutils.test_utils 2020-04-23 09:39:21,749 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:159: size=168 KiB (+29.2 KiB), count=2254 (+392), average=76 B
+
+processing.datutils.test_utils 2020-04-23 09:39:21,751 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client_reqrep.py:363: size=159 KiB (+27.6 KiB), count=162 (+28), average=1008 B
+
+processing.datutils.test_utils 2020-04-23 09:39:21,753 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:93: size=158 KiB (+27.6 KiB), count=161 (+28), average=1008 B
+
+processing.datutils.test_utils 2020-04-23 09:39:21,754 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:161: size=134 KiB (+23.3 KiB), count=2254 (+392), average=61 B
+
+processing.datutils.test_utils 2020-04-23 09:39:21,755 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:158: size=134 KiB (+23.3 KiB), count=2254 (+392), average=61 B
+
+processing.datutils.test_utils 2020-04-23 09:39:21,756 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:108: size=133 KiB (+23.1 KiB), count=2254 (+392), average=60 B
+
+processing.datutils.test_utils 2020-04-23 09:39:21,803 print_size 119 :
+ /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+51/1115 at 2020-04-23 09:39:21.803450
+dumped: 0
+
+processing.datutils.test_utils 2020-04-23 09:39:21,804 print_size 122 :
+ 
+
+asyncio 2020-04-23 09:39:21,807 _run_once 1854 :
+ Executing <Task pending name='Task-23' coro=<TestUtil.print_size() running at /home/henry/pydocs/processing/datutils/test_utils.py:142> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7ff9eda49910>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> created at /home/henry/pydocs/processing/get_files.py:229> took 0.873 seconds
+
+processing.gdoc 2020-04-23 09:39:21,810 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:22,154 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:23,355 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:23,791 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:24,445 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:26,454 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:27,274 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:27,276 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:27,284 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:27,888 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:29,213 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:29,732 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:30,757 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:31,170 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:31,942 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:34,059 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:34,650 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:34,652 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:34,654 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:35,228 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:36,695 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:37,308 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:38,129 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:38,743 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:39,356 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:41,406 get_last_revision 35 :
+ code not 200
+
+processing.datutils.test_utils 2020-04-23 09:39:41,820 print_size 108 :
+ 
+
+Memory usage: 170468 (kb)
+
+processing.datutils.test_utils 2020-04-23 09:39:42,623 print_size 111 :
+ /usr/lib/python3.8/traceback.py:359: size=491 KiB (+112 KiB), count=6167 (+1398), average=82 B
+
+processing.datutils.test_utils 2020-04-23 09:39:42,625 print_size 111 :
+ /usr/lib/python3.8/traceback.py:288: size=428 KiB (+90.2 KiB), count=5214 (+1097), average=84 B
+
+processing.datutils.test_utils 2020-04-23 09:39:42,626 print_size 111 :
+ /home/henry/pydocs/processing/gdoc.py:41: size=272 KiB (+40.9 KiB), count=2522 (+364), average=111 B
+
+processing.datutils.test_utils 2020-04-23 09:39:42,628 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:850: size=195 KiB (+31.5 KiB), count=2737 (+398), average=73 B
+
+processing.datutils.test_utils 2020-04-23 09:39:42,630 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client_reqrep.py:363: size=187 KiB (+27.6 KiB), count=190 (+28), average=1008 B
+
+processing.datutils.test_utils 2020-04-23 09:39:42,632 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:159: size=195 KiB (+27.1 KiB), count=2618 (+364), average=76 B
+
+processing.datutils.test_utils 2020-04-23 09:39:42,634 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:93: size=184 KiB (+25.6 KiB), count=187 (+26), average=1008 B
+
+processing.datutils.test_utils 2020-04-23 09:39:42,636 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:161: size=156 KiB (+21.6 KiB), count=2618 (+364), average=61 B
+
+processing.datutils.test_utils 2020-04-23 09:39:42,637 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:158: size=156 KiB (+21.6 KiB), count=2618 (+364), average=61 B
+
+processing.datutils.test_utils 2020-04-23 09:39:42,639 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:108: size=154 KiB (+21.5 KiB), count=2618 (+364), average=60 B
+
+processing.datutils.test_utils 2020-04-23 09:39:42,697 print_size 119 :
+ /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+51/1115 at 2020-04-23 09:39:42.697819
+dumped: 0
+
+processing.datutils.test_utils 2020-04-23 09:39:42,699 print_size 122 :
+ 
+
+asyncio 2020-04-23 09:39:42,702 _run_once 1854 :
+ Executing <Task pending name='Task-23' coro=<TestUtil.print_size() running at /home/henry/pydocs/processing/datutils/test_utils.py:142> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7ff9ed9e6ca0>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> created at /home/henry/pydocs/processing/get_files.py:229> took 0.882 seconds
+
+processing.gdoc 2020-04-23 09:39:42,708 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:42,711 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:42,714 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:43,248 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:44,065 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:44,887 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:45,706 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:46,130 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:46,728 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:48,984 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:50,006 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:50,037 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:50,136 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:50,537 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:51,644 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:52,465 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:53,197 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:53,489 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:54,306 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:56,356 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:57,381 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:57,388 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:57,456 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:58,203 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:59,018 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:39:59,838 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:00,748 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:01,681 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:02,500 get_last_revision 35 :
+ code not 200
+
+processing.datutils.test_utils 2020-04-23 09:40:02,713 print_size 108 :
+ 
+
+Memory usage: 170468 (kb)
+
+processing.datutils.test_utils 2020-04-23 09:40:03,504 print_size 111 :
+ /usr/lib/python3.8/traceback.py:359: size=564 KiB (+72.8 KiB), count=7054 (+887), average=82 B
+
+processing.datutils.test_utils 2020-04-23 09:40:03,506 print_size 111 :
+ /usr/lib/python3.8/traceback.py:288: size=476 KiB (+48.1 KiB), count=5805 (+591), average=84 B
+
+processing.datutils.test_utils 2020-04-23 09:40:03,507 print_size 111 :
+ /home/henry/pydocs/processing/gdoc.py:41: size=311 KiB (+38.2 KiB), count=2860 (+338), average=111 B
+
+processing.datutils.test_utils 2020-04-23 09:40:03,508 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:159: size=225 KiB (+30.3 KiB), count=3024 (+406), average=76 B
+
+processing.datutils.test_utils 2020-04-23 09:40:03,511 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:93: size=213 KiB (+28.5 KiB), count=216 (+29), average=1008 B
+
+processing.datutils.test_utils 2020-04-23 09:40:03,513 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client_reqrep.py:363: size=213 KiB (+25.6 KiB), count=216 (+26), average=1008 B
+
+processing.datutils.test_utils 2020-04-23 09:40:03,514 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:850: size=220 KiB (+25.1 KiB), count=3093 (+356), average=73 B
+
+processing.datutils.test_utils 2020-04-23 09:40:03,516 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:161: size=180 KiB (+24.1 KiB), count=3024 (+406), average=61 B
+
+processing.datutils.test_utils 2020-04-23 09:40:03,517 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:158: size=180 KiB (+24.1 KiB), count=3024 (+406), average=61 B
+
+processing.datutils.test_utils 2020-04-23 09:40:03,519 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:108: size=178 KiB (+23.9 KiB), count=3024 (+406), average=60 B
+
+processing.datutils.test_utils 2020-04-23 09:40:03,569 print_size 119 :
+ /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+51/1115 at 2020-04-23 09:40:03.569664
+dumped: 0
+
+processing.datutils.test_utils 2020-04-23 09:40:03,571 print_size 122 :
+ 
+
+asyncio 2020-04-23 09:40:03,573 _run_once 1854 :
+ Executing <Task pending name='Task-23' coro=<TestUtil.print_size() running at /home/henry/pydocs/processing/datutils/test_utils.py:142> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7ff9eeb66520>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> created at /home/henry/pydocs/processing/get_files.py:229> took 0.860 seconds
+
+processing.gdoc 2020-04-23 09:40:04,139 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:04,666 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:04,751 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:04,791 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:05,573 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:06,392 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:07,210 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:08,644 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:09,260 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:09,834 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:11,512 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:12,133 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:12,135 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:12,535 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:13,402 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:13,969 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:14,589 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:16,223 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:16,631 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:17,245 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:19,089 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:19,500 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:19,505 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:19,909 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:20,933 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:21,546 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:22,765 get_last_revision 35 :
+ code not 200
+
+processing.datutils.test_utils 2020-04-23 09:40:23,586 print_size 108 :
+ 
+
+Memory usage: 170468 (kb)
+
+processing.datutils.test_utils 2020-04-23 09:40:24,450 print_size 111 :
+ /usr/lib/python3.8/traceback.py:288: size=565 KiB (+88.8 KiB), count=6898 (+1093), average=84 B
+
+processing.datutils.test_utils 2020-04-23 09:40:24,452 print_size 111 :
+ /usr/lib/python3.8/traceback.py:359: size=623 KiB (+59.1 KiB), count=7753 (+699), average=82 B
+
+processing.datutils.test_utils 2020-04-23 09:40:24,453 print_size 111 :
+ /home/henry/pydocs/processing/gdoc.py:41: size=351 KiB (+40.9 KiB), count=3224 (+364), average=112 B
+
+processing.datutils.test_utils 2020-04-23 09:40:24,455 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:850: size=249 KiB (+29.3 KiB), count=3486 (+393), average=73 B
+
+processing.datutils.test_utils 2020-04-23 09:40:24,457 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:159: size=254 KiB (+28.2 KiB), count=3402 (+378), average=76 B
+
+processing.datutils.test_utils 2020-04-23 09:40:24,459 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client_reqrep.py:363: size=240 KiB (+27.6 KiB), count=244 (+28), average=1008 B
+
+processing.datutils.test_utils 2020-04-23 09:40:24,461 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:93: size=239 KiB (+26.6 KiB), count=243 (+27), average=1008 B
+
+processing.datutils.test_utils 2020-04-23 09:40:24,463 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:161: size=202 KiB (+22.5 KiB), count=3402 (+378), average=61 B
+
+processing.datutils.test_utils 2020-04-23 09:40:24,464 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:158: size=202 KiB (+22.5 KiB), count=3402 (+378), average=61 B
+
+processing.datutils.test_utils 2020-04-23 09:40:24,465 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:108: size=201 KiB (+22.3 KiB), count=3402 (+378), average=60 B
+
+processing.datutils.test_utils 2020-04-23 09:40:24,520 print_size 119 :
+ /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+51/1115 at 2020-04-23 09:40:24.519998
+dumped: 0
+
+processing.datutils.test_utils 2020-04-23 09:40:24,521 print_size 122 :
+ 
+
+asyncio 2020-04-23 09:40:24,523 _run_once 1854 :
+ Executing <Task pending name='Task-23' coro=<TestUtil.print_size() running at /home/henry/pydocs/processing/datutils/test_utils.py:142> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7ff9ece93400>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> created at /home/henry/pydocs/processing/get_files.py:229> took 0.937 seconds
+
+processing.gdoc 2020-04-23 09:40:24,525 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:24,849 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:24,925 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:26,538 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:26,873 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:26,875 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:27,281 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:28,304 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:28,921 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:30,149 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:31,928 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:32,401 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:32,405 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:33,952 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:34,245 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:34,248 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:34,654 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:35,883 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:36,293 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:37,522 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:39,364 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:39,774 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:39,979 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:41,208 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:41,617 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:41,678 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:42,846 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:43,256 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:43,665 get_last_revision 35 :
+ code not 200
+
+processing.datutils.test_utils 2020-04-23 09:40:44,536 print_size 108 :
+ 
+
+Memory usage: 170468 (kb)
+
+processing.datutils.test_utils 2020-04-23 09:40:45,435 print_size 111 :
+ /usr/lib/python3.8/traceback.py:359: size=740 KiB (+117 KiB), count=9218 (+1465), average=82 B
+
+processing.datutils.test_utils 2020-04-23 09:40:45,437 print_size 111 :
+ /usr/lib/python3.8/traceback.py:288: size=659 KiB (+93.8 KiB), count=8044 (+1146), average=84 B
+
+processing.datutils.test_utils 2020-04-23 09:40:45,438 print_size 111 :
+ /home/henry/pydocs/processing/gdoc.py:41: size=394 KiB (+42.3 KiB), count=3601 (+377), average=112 B
+
+processing.datutils.test_utils 2020-04-23 09:40:45,439 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:850: size=280 KiB (+30.3 KiB), count=3891 (+405), average=74 B
+
+processing.datutils.test_utils 2020-04-23 09:40:45,441 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:159: size=284 KiB (+30.3 KiB), count=3808 (+406), average=76 B
+
+processing.datutils.test_utils 2020-04-23 09:40:45,443 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client_reqrep.py:363: size=269 KiB (+28.5 KiB), count=273 (+29), average=1008 B
+
+processing.datutils.test_utils 2020-04-23 09:40:45,445 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:93: size=268 KiB (+28.5 KiB), count=272 (+29), average=1008 B
+
+processing.datutils.test_utils 2020-04-23 09:40:45,447 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:161: size=226 KiB (+24.1 KiB), count=3808 (+406), average=61 B
+
+processing.datutils.test_utils 2020-04-23 09:40:45,448 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:158: size=226 KiB (+24.1 KiB), count=3808 (+406), average=61 B
+
+processing.datutils.test_utils 2020-04-23 09:40:45,450 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:108: size=224 KiB (+23.9 KiB), count=3808 (+406), average=60 B
+
+processing.datutils.test_utils 2020-04-23 09:40:45,511 print_size 119 :
+ /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+51/1115 at 2020-04-23 09:40:45.511680
+dumped: 0
+
+processing.datutils.test_utils 2020-04-23 09:40:45,513 print_size 122 :
+ 
+
+asyncio 2020-04-23 09:40:45,515 _run_once 1854 :
+ Executing <Task pending name='Task-23' coro=<TestUtil.print_size() running at /home/henry/pydocs/processing/datutils/test_utils.py:142> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7ff9ed8bd520>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> created at /home/henry/pydocs/processing/get_files.py:229> took 0.979 seconds
+
+processing.gdoc 2020-04-23 09:40:45,517 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:46,737 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:47,353 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:47,356 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:48,627 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:49,196 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:49,199 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:50,240 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:50,773 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:51,038 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:52,882 get_last_revision 35 :
+ code not 200
+
+asyncio 2020-04-23 09:40:54,367 _getaddrinfo_debug 805 :
+ Get address info www.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1>
+
+asyncio 2020-04-23 09:40:54,441 _getaddrinfo_debug 815 :
+ Getting address info www.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1> took 73.785ms: [(<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('216.58.217.42', 443)), (<AddressFamily.AF_INET6: 10>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('2607:f8b0:400a:801::200a', 443, 0, 0))]
+
+processing.gdoc 2020-04-23 09:40:54,436 get_last_revision 35 :
+ code not 200
+
+asyncio 2020-04-23 09:40:54,456 _read_ready__on_eof 869 :
+ <_SelectorSocketTransport fd=14 read=polling write=<idle, bufsize=0>> received EOF
+
+asyncio 2020-04-23 09:40:54,457 eof_received 567 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9eeae3640> received EOF
+
+asyncio 2020-04-23 09:40:54,477 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9ed8bd3a0> starts SSL handshake
+
+asyncio 2020-04-23 09:40:54,508 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9ed8bd3a0>: SSL handshake took 30.7 ms
+
+asyncio 2020-04-23 09:40:54,509 create_connection 1057 :
+ <asyncio.TransportSocket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 33742), raddr=('216.58.217.42', 443)> connected to 216.58.217.42:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7ff9eed5de80>, <aiohttp.client_proto.ResponseHandler object at 0x7ff9eee807c0>)
+
+processing.gdoc 2020-04-23 09:40:54,854 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:54,910 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:55,954 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:56,568 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:56,572 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:57,787 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:58,085 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:40:58,617 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:00,460 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:01,866 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:02,302 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:02,712 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:03,531 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:04,148 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:04,150 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:05,111 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:05,310 get_last_revision 35 :
+ code not 200
+
+processing.datutils.test_utils 2020-04-23 09:41:05,527 print_size 108 :
+ 
+
+Memory usage: 170468 (kb)
+
+processing.datutils.test_utils 2020-04-23 09:41:06,518 print_size 111 :
+ /usr/lib/python3.8/traceback.py:359: size=855 KiB (+115 KiB), count=10640 (+1422), average=82 B
+
+processing.datutils.test_utils 2020-04-23 09:41:06,520 print_size 111 :
+ /usr/lib/python3.8/traceback.py:288: size=750 KiB (+90.7 KiB), count=9155 (+1111), average=84 B
+
+processing.datutils.test_utils 2020-04-23 09:41:06,522 print_size 111 :
+ /home/henry/pydocs/processing/gdoc.py:41: size=433 KiB (+39.0 KiB), count=3964 (+363), average=112 B
+
+processing.datutils.test_utils 2020-04-23 09:41:06,523 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:159: size=314 KiB (+30.3 KiB), count=4214 (+406), average=76 B
+
+processing.datutils.test_utils 2020-04-23 09:41:06,525 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:850: size=309 KiB (+29.3 KiB), count=4281 (+390), average=74 B
+
+processing.datutils.test_utils 2020-04-23 09:41:06,527 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:93: size=296 KiB (+28.5 KiB), count=301 (+29), average=1008 B
+
+processing.datutils.test_utils 2020-04-23 09:41:06,529 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client_reqrep.py:363: size=296 KiB (+27.6 KiB), count=301 (+28), average=1008 B
+
+processing.datutils.test_utils 2020-04-23 09:41:06,531 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:161: size=250 KiB (+24.1 KiB), count=4214 (+406), average=61 B
+
+processing.datutils.test_utils 2020-04-23 09:41:06,532 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:158: size=250 KiB (+24.1 KiB), count=4214 (+406), average=61 B
+
+processing.datutils.test_utils 2020-04-23 09:41:06,533 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:108: size=248 KiB (+23.9 KiB), count=4214 (+406), average=60 B
+
+processing.datutils.test_utils 2020-04-23 09:41:06,591 print_size 119 :
+ /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+51/1115 at 2020-04-23 09:41:06.591891
+dumped: 0
+
+processing.datutils.test_utils 2020-04-23 09:41:06,593 print_size 122 :
+ 
+
+asyncio 2020-04-23 09:41:06,596 _run_once 1854 :
+ Executing <Task pending name='Task-23' coro=<TestUtil.print_size() running at /home/henry/pydocs/processing/datutils/test_utils.py:142> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7ff9edee77f0>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> created at /home/henry/pydocs/processing/get_files.py:229> took 1.068 seconds
+
+processing.gdoc 2020-04-23 09:41:06,844 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:08,037 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:09,358 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:09,724 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:10,085 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:10,904 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:11,520 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:11,523 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:12,542 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:12,586 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:14,181 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:15,410 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:16,639 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:17,114 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:17,458 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:18,277 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:18,891 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:19,096 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:19,916 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:20,000 get_last_revision 35 :
+ code not 200
+
+asyncio 2020-04-23 09:41:20,629 _read_ready__on_eof 869 :
+ <_SelectorSocketTransport fd=12 read=polling write=<idle, bufsize=0>> received EOF
+
+asyncio 2020-04-23 09:41:20,629 eof_received 567 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9ed7d6310> received EOF
+
+processing.gdoc 2020-04-23 09:41:21,758 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:22,988 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:24,013 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:24,524 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:25,035 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:25,854 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:26,265 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:26,482 get_last_revision 35 :
+ code not 200
+
+processing.datutils.test_utils 2020-04-23 09:41:26,606 print_size 108 :
+ 
+
+Memory usage: 170468 (kb)
+
+processing.datutils.test_utils 2020-04-23 09:41:27,611 print_size 111 :
+ /usr/lib/python3.8/traceback.py:288: size=847 KiB (+97.5 KiB), count=10358 (+1203), average=84 B
+
+processing.datutils.test_utils 2020-04-23 09:41:27,613 print_size 111 :
+ /usr/lib/python3.8/traceback.py:359: size=922 KiB (+67.7 KiB), count=11439 (+799), average=83 B
+
+processing.datutils.test_utils 2020-04-23 09:41:27,615 print_size 111 :
+ /home/henry/pydocs/processing/gdoc.py:41: size=474 KiB (+41.4 KiB), count=4328 (+364), average=112 B
+
+processing.datutils.test_utils 2020-04-23 09:41:27,616 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:159: size=343 KiB (+29.2 KiB), count=4606 (+392), average=76 B
+
+processing.datutils.test_utils 2020-04-23 09:41:27,618 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:850: size=338 KiB (+29.1 KiB), count=4671 (+390), average=74 B
+
+processing.datutils.test_utils 2020-04-23 09:41:27,619 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:93: size=324 KiB (+27.6 KiB), count=329 (+28), average=1008 B
+
+processing.datutils.test_utils 2020-04-23 09:41:27,621 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client_reqrep.py:363: size=324 KiB (+27.6 KiB), count=329 (+28), average=1008 B
+
+processing.datutils.test_utils 2020-04-23 09:41:27,623 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:161: size=274 KiB (+23.3 KiB), count=4606 (+392), average=61 B
+
+processing.datutils.test_utils 2020-04-23 09:41:27,624 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:158: size=274 KiB (+23.3 KiB), count=4606 (+392), average=61 B
+
+processing.datutils.test_utils 2020-04-23 09:41:27,625 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:108: size=271 KiB (+23.1 KiB), count=4606 (+392), average=60 B
+
+processing.datutils.test_utils 2020-04-23 09:41:27,681 print_size 119 :
+ /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+51/1115 at 2020-04-23 09:41:27.681476
+dumped: 0
+
+processing.datutils.test_utils 2020-04-23 09:41:27,683 print_size 122 :
+ 
+
+asyncio 2020-04-23 09:41:27,685 _run_once 1854 :
+ Executing <Task pending name='Task-23' coro=<TestUtil.print_size() running at /home/henry/pydocs/processing/datutils/test_utils.py:142> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7ff9eee81af0>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> created at /home/henry/pydocs/processing/get_files.py:229> took 1.079 seconds
+
+processing.gdoc 2020-04-23 09:41:28,109 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:28,111 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:29,133 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:30,360 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:31,538 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:31,997 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:32,410 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:33,292 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:33,564 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:33,843 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:35,440 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:35,651 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:36,516 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:37,733 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:39,020 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:39,377 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:39,781 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:40,577 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:40,877 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:41,420 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:42,749 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:43,063 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:44,081 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:45,069 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:46,392 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:46,793 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:47,154 get_last_revision 35 :
+ code not 200
+
+processing.datutils.test_utils 2020-04-23 09:41:47,695 print_size 108 :
+ 
+
+Memory usage: 170468 (kb)
+
+processing.datutils.test_utils 2020-04-23 09:41:48,794 print_size 111 :
+ /usr/lib/python3.8/traceback.py:359: size=1066 KiB (+143 KiB), count=13230 (+1791), average=82 B
+
+processing.datutils.test_utils 2020-04-23 09:41:48,795 print_size 111 :
+ /usr/lib/python3.8/traceback.py:288: size=969 KiB (+122 KiB), count=11847 (+1489), average=84 B
+
+processing.datutils.test_utils 2020-04-23 09:41:48,797 print_size 111 :
+ /home/henry/pydocs/processing/gdoc.py:41: size=516 KiB (+41.4 KiB), count=4692 (+364), average=113 B
+
+processing.datutils.test_utils 2020-04-23 09:41:48,798 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:850: size=367 KiB (+29.3 KiB), count=5064 (+393), average=74 B
+
+processing.datutils.test_utils 2020-04-23 09:41:48,800 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:159: size=372 KiB (+28.2 KiB), count=4984 (+378), average=76 B
+
+processing.datutils.test_utils 2020-04-23 09:41:48,802 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client_reqrep.py:363: size=351 KiB (+27.6 KiB), count=357 (+28), average=1008 B
+
+processing.datutils.test_utils 2020-04-23 09:41:48,805 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:93: size=350 KiB (+26.6 KiB), count=356 (+27), average=1008 B
+
+processing.datutils.test_utils 2020-04-23 09:41:48,806 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:161: size=296 KiB (+22.5 KiB), count=4984 (+378), average=61 B
+
+processing.datutils.test_utils 2020-04-23 09:41:48,808 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:158: size=296 KiB (+22.5 KiB), count=4984 (+378), average=61 B
+
+processing.datutils.test_utils 2020-04-23 09:41:48,810 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:108: size=294 KiB (+22.3 KiB), count=4984 (+378), average=60 B
+
+processing.datutils.test_utils 2020-04-23 09:41:48,873 print_size 119 :
+ /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+51/1115 at 2020-04-23 09:41:48.873674
+dumped: 0
+
+processing.datutils.test_utils 2020-04-23 09:41:48,875 print_size 122 :
+ 
+
+asyncio 2020-04-23 09:41:48,877 _run_once 1854 :
+ Executing <Task pending name='Task-23' coro=<TestUtil.print_size() running at /home/henry/pydocs/processing/datutils/test_utils.py:142> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7ff9ece97bb0>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> created at /home/henry/pydocs/processing/get_files.py:229> took 1.183 seconds
+
+processing.gdoc 2020-04-23 09:41:48,881 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:49,202 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:49,248 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:50,077 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:50,416 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:51,454 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:52,610 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:53,693 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:54,237 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:54,564 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:56,166 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:56,579 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:56,581 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:57,480 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:57,805 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:41:58,748 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:00,171 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:01,249 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:01,622 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:02,104 get_last_revision 35 :
+ code not 200
+
+asyncio 2020-04-23 09:42:03,595 _getaddrinfo_debug 805 :
+ Get address info www.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1>
+
+processing.gdoc 2020-04-23 09:42:03,595 get_last_revision 35 :
+ code not 200
+
+asyncio 2020-04-23 09:42:03,637 _getaddrinfo_debug 815 :
+ Getting address info www.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1> took 40.913ms: [(<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('172.217.14.202', 443)), (<AddressFamily.AF_INET6: 10>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('2607:f8b0:400a:800::200a', 443, 0, 0))]
+
+asyncio 2020-04-23 09:42:03,661 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9ed5c25e0> starts SSL handshake
+
+asyncio 2020-04-23 09:42:03,690 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9ed5c25e0>: SSL handshake took 28.6 ms
+
+asyncio 2020-04-23 09:42:03,690 create_connection 1057 :
+ <asyncio.TransportSocket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 52806), raddr=('172.217.14.202', 443)> connected to 172.217.14.202:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7ff9ecab2640>, <aiohttp.client_proto.ResponseHandler object at 0x7ff9ed5ca760>)
+
+processing.gdoc 2020-04-23 09:42:03,948 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:04,155 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:04,760 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:05,276 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:06,202 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:07,633 get_last_revision 35 :
+ code not 200
+
+processing.datutils.test_utils 2020-04-23 09:42:08,889 print_size 108 :
+ 
+
+Memory usage: 170468 (kb)
+
+processing.datutils.test_utils 2020-04-23 09:42:10,025 print_size 111 :
+ /usr/lib/python3.8/traceback.py:359: size=1220 KiB (+154 KiB), count=15171 (+1941), average=82 B
+
+processing.datutils.test_utils 2020-04-23 09:42:10,027 print_size 111 :
+ /usr/lib/python3.8/traceback.py:288: size=1101 KiB (+132 KiB), count=13466 (+1619), average=84 B
+
+processing.datutils.test_utils 2020-04-23 09:42:10,029 print_size 111 :
+ /home/henry/pydocs/processing/gdoc.py:41: size=557 KiB (+41.0 KiB), count=5056 (+364), average=113 B
+
+processing.datutils.test_utils 2020-04-23 09:42:10,030 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:850: size=398 KiB (+30.5 KiB), count=5459 (+395), average=75 B
+
+processing.datutils.test_utils 2020-04-23 09:42:10,033 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:159: size=400 KiB (+28.2 KiB), count=5362 (+378), average=76 B
+
+processing.datutils.test_utils 2020-04-23 09:42:10,035 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client_reqrep.py:363: size=379 KiB (+27.6 KiB), count=385 (+28), average=1008 B
+
+processing.datutils.test_utils 2020-04-23 09:42:10,037 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:93: size=377 KiB (+26.6 KiB), count=383 (+27), average=1008 B
+
+processing.datutils.test_utils 2020-04-23 09:42:10,039 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:161: size=319 KiB (+22.5 KiB), count=5362 (+378), average=61 B
+
+processing.datutils.test_utils 2020-04-23 09:42:10,040 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:158: size=319 KiB (+22.5 KiB), count=5362 (+378), average=61 B
+
+processing.datutils.test_utils 2020-04-23 09:42:10,041 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:108: size=316 KiB (+22.3 KiB), count=5362 (+378), average=60 B
+
+processing.datutils.test_utils 2020-04-23 09:42:10,101 print_size 119 :
+ /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+51/1115 at 2020-04-23 09:42:10.101813
+dumped: 0
+
+processing.datutils.test_utils 2020-04-23 09:42:10,103 print_size 122 :
+ 
+
+asyncio 2020-04-23 09:42:10,105 _run_once 1854 :
+ Executing <Task pending name='Task-23' coro=<TestUtil.print_size() running at /home/henry/pydocs/processing/datutils/test_utils.py:142> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7ff9ecac76d0>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> created at /home/henry/pydocs/processing/get_files.py:229> took 1.217 seconds
+
+processing.gdoc 2020-04-23 09:42:10,110 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:10,113 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:10,502 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:10,911 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:11,271 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:11,530 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:12,140 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:12,754 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:13,778 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:15,008 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:17,465 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:17,496 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:17,874 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:18,282 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:18,900 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:18,903 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:19,513 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:20,225 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:21,143 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:22,380 get_last_revision 35 :
+ code not 200
+
+asyncio 2020-04-23 09:42:24,624 _read_ready__on_eof 869 :
+ <_SelectorSocketTransport fd=13 read=polling write=<idle, bufsize=0>> received EOF
+
+asyncio 2020-04-23 09:42:24,624 eof_received 567 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9ed8bd3a0> received EOF
+
+processing.gdoc 2020-04-23 09:42:24,767 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:25,043 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:25,140 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:25,657 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:26,272 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:26,275 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:26,885 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:27,704 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:28,524 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:29,753 get_last_revision 35 :
+ code not 200
+
+processing.datutils.test_utils 2020-04-23 09:42:30,116 print_size 108 :
+ 
+
+Memory usage: 171776 (kb)
+
+processing.datutils.test_utils 2020-04-23 09:42:31,309 print_size 111 :
+ /usr/lib/python3.8/traceback.py:288: size=1193 KiB (+91.6 KiB), count=14601 (+1135), average=84 B
+
+processing.datutils.test_utils 2020-04-23 09:42:31,311 print_size 111 :
+ /usr/lib/python3.8/traceback.py:359: size=1282 KiB (+62.3 KiB), count=15899 (+728), average=83 B
+
+processing.datutils.test_utils 2020-04-23 09:42:31,313 print_size 111 :
+ /home/henry/pydocs/processing/gdoc.py:41: size=598 KiB (+41.4 KiB), count=5420 (+364), average=113 B
+
+processing.datutils.test_utils 2020-04-23 09:42:31,315 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:159: size=431 KiB (+31.3 KiB), count=5782 (+420), average=76 B
+
+processing.datutils.test_utils 2020-04-23 09:42:31,316 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:93: size=407 KiB (+29.5 KiB), count=413 (+30), average=1008 B
+
+processing.datutils.test_utils 2020-04-23 09:42:31,319 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:850: size=426 KiB (+28.0 KiB), count=5844 (+385), average=75 B
+
+processing.datutils.test_utils 2020-04-23 09:42:31,321 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client_reqrep.py:363: size=407 KiB (+27.6 KiB), count=413 (+28), average=1008 B
+
+processing.datutils.test_utils 2020-04-23 09:42:31,323 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:161: size=344 KiB (+25.0 KiB), count=5782 (+420), average=61 B
+
+processing.datutils.test_utils 2020-04-23 09:42:31,324 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:158: size=344 KiB (+25.0 KiB), count=5782 (+420), average=61 B
+
+processing.datutils.test_utils 2020-04-23 09:42:31,325 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:108: size=341 KiB (+24.8 KiB), count=5782 (+420), average=60 B
+
+processing.datutils.test_utils 2020-04-23 09:42:31,395 print_size 119 :
+ /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+51/1115 at 2020-04-23 09:42:31.395712
+dumped: 0
+
+processing.datutils.test_utils 2020-04-23 09:42:31,397 print_size 122 :
+ 
+
+asyncio 2020-04-23 09:42:31,400 _run_once 1854 :
+ Executing <Task pending name='Task-23' coro=<TestUtil.print_size() running at /home/henry/pydocs/processing/datutils/test_utils.py:142> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7ff9ed15f6a0>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> created at /home/henry/pydocs/processing/get_files.py:229> took 1.284 seconds
+
+asyncio 2020-04-23 09:42:32,148 _getaddrinfo_debug 805 :
+ Get address info www.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1>
+
+asyncio 2020-04-23 09:42:32,150 _getaddrinfo_debug 815 :
+ Getting address info www.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1> took 1.245ms: [(<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('172.217.14.202', 443)), (<AddressFamily.AF_INET6: 10>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('2607:f8b0:400a:800::200a', 443, 0, 0))]
+
+asyncio 2020-04-23 09:42:32,174 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9ec4f4fa0> starts SSL handshake
+
+processing.gdoc 2020-04-23 09:42:32,186 get_last_revision 35 :
+ code not 200
+
+asyncio 2020-04-23 09:42:32,205 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7ff9ec4f4fa0>: SSL handshake took 30.7 ms
+
+asyncio 2020-04-23 09:42:32,206 create_connection 1057 :
+ <asyncio.TransportSocket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 52808), raddr=('172.217.14.202', 443)> connected to 172.217.14.202:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7ff9ed03f3a0>, <aiohttp.client_proto.ResponseHandler object at 0x7ff9ed178880>)
+
+processing.gdoc 2020-04-23 09:42:32,620 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:33,030 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:33,116 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:33,645 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:33,648 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:34,463 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:35,342 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:37,945 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:39,583 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:39,993 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:40,403 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:40,421 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:41,017 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:41,021 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:41,837 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:41,839 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:42,656 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:45,318 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:46,957 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:47,366 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:47,775 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:47,831 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:48,596 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:48,599 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:49,208 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:49,212 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:50,029 get_last_revision 35 :
+ code not 200
+
+processing.datutils.test_utils 2020-04-23 09:42:51,417 print_size 108 :
+ 
+
+Memory usage: 174968 (kb)
+
+processing.datutils.test_utils 2020-04-23 09:42:52,695 print_size 111 :
+ /usr/lib/python3.8/traceback.py:359: size=1437 KiB (+155 KiB), count=17827 (+1928), average=83 B
+
+processing.datutils.test_utils 2020-04-23 09:42:52,697 print_size 111 :
+ /usr/lib/python3.8/traceback.py:288: size=1324 KiB (+131 KiB), count=16205 (+1604), average=84 B
+
+processing.datutils.test_utils 2020-04-23 09:42:52,698 print_size 111 :
+ /home/henry/pydocs/processing/gdoc.py:41: size=637 KiB (+39.5 KiB), count=5784 (+364), average=113 B
+
+processing.datutils.test_utils 2020-04-23 09:42:52,699 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:850: size=455 KiB (+29.4 KiB), count=6236 (+392), average=75 B
+
+processing.datutils.test_utils 2020-04-23 09:42:52,701 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:159: size=460 KiB (+29.2 KiB), count=6174 (+392), average=76 B
+
+processing.datutils.test_utils 2020-04-23 09:42:52,703 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:93: size=434 KiB (+27.6 KiB), count=441 (+28), average=1008 B
+
+processing.datutils.test_utils 2020-04-23 09:42:52,706 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client_reqrep.py:363: size=434 KiB (+27.6 KiB), count=441 (+28), average=1008 B
+
+processing.datutils.test_utils 2020-04-23 09:42:52,708 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:161: size=367 KiB (+23.3 KiB), count=6174 (+392), average=61 B
+
+processing.datutils.test_utils 2020-04-23 09:42:52,710 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:158: size=367 KiB (+23.3 KiB), count=6174 (+392), average=61 B
+
+processing.datutils.test_utils 2020-04-23 09:42:52,713 print_size 111 :
+ /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:108: size=364 KiB (+23.1 KiB), count=6174 (+392), average=60 B
+
+processing.datutils.test_utils 2020-04-23 09:42:52,783 print_size 119 :
+ /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+51/1115 at 2020-04-23 09:42:52.783680
+dumped: 0
+
+processing.datutils.test_utils 2020-04-23 09:42:52,785 print_size 122 :
+ 
+
+asyncio 2020-04-23 09:42:52,787 _run_once 1854 :
+ Executing <Task pending name='Task-23' coro=<TestUtil.print_size() running at /home/henry/pydocs/processing/datutils/test_utils.py:142> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7ff9eeade8e0>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> created at /home/henry/pydocs/processing/get_files.py:229> took 1.370 seconds
+
+processing.gdoc 2020-04-23 09:42:53,306 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:54,739 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:54,793 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:55,149 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:55,353 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:55,969 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:55,972 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:56,581 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:56,599 get_last_revision 35 :
+ code not 200
+
+processing.gdoc 2020-04-23 09:42:57,401 get_last_revision 35 :
+ code not 200
+

@@ -18,6 +18,7 @@ fi
 if [ "$2" = "o" ]
 then
     echo "openshift"
-    docker tag henry2833/pydocs:$1 default-route-openshift-image-registry.apps.us-east-2.starter.openshift-online.com/pydocs/pydocs:$1
-    docker push default-route-openshift-image-registry.apps.us-east-2.starter.openshift-online.com/pydocs/pydocs:$1
+    opens=default-route-openshift-image-registry.apps.us-east-2.starter.openshift-online.com/pydocs/pydocs
+    docker tag henry2833/pydocs:$1 $opens:$1
+    docker push $opens:$1
 fi

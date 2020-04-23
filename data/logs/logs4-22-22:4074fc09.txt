@@ -1,0 +1,461 @@
+__main__ 2020-04-22 22:40:21,122 start 16 :
+ start
+
+processing.get_files 2020-04-22 22:40:21,124 loadFiles 292 :
+ Start loadFiles, 527e4afc-4598-400f-8536-afa5324f0ba4 root
+
+google.auth.transport.requests 2020-04-22 22:40:21,126 __call__ 117 :
+ Making request: POST https://oauth2.googleapis.com/token
+
+urllib3.connectionpool 2020-04-22 22:40:21,133 _new_conn 817 :
+ Starting new HTTPS connection (1): oauth2.googleapis.com
+
+urllib3.connectionpool 2020-04-22 22:40:21,253 _make_request 393 :
+ https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+
+asyncio 2020-04-22 22:40:21,255 __init__ 59 :
+ Using selector: EpollSelector
+
+processing.datutils.test_utils 2020-04-22 22:40:21,934 print_size 108 :
+ 
+
+Memory usage: 108332 (kb)
+
+processing.datutils.test_utils 2020-04-22 22:40:22,076 print_size 111 :
+ /usr/lib/python3.8/tracemalloc.py:532: size=82.0 KiB (+81.9 KiB), count=1485 (+1484), average=57 B
+
+processing.datutils.test_utils 2020-04-22 22:40:22,077 print_size 111 :
+ /usr/lib/python3.8/inspect.py:744: size=0 B (-36.8 KiB), count=0 (-673)
+
+processing.datutils.test_utils 2020-04-22 22:40:22,079 print_size 111 :
+ /usr/lib/python3.8/sre_parse.py:220: size=0 B (-13.1 KiB), count=0 (-240)
+
+processing.datutils.test_utils 2020-04-22 22:40:22,080 print_size 111 :
+ /usr/lib/python3.8/sre_parse.py:529: size=0 B (-12.7 KiB), count=0 (-233)
+
+processing.datutils.test_utils 2020-04-22 22:40:22,081 print_size 111 :
+ /usr/lib/python3.8/sre_parse.py:599: size=0 B (-3472 B), count=0 (-62)
+
+processing.datutils.test_utils 2020-04-22 22:40:22,083 print_size 111 :
+ /usr/lib/python3.8/sre_parse.py:680: size=0 B (-3192 B), count=0 (-57)
+
+processing.datutils.test_utils 2020-04-22 22:40:22,085 print_size 111 :
+ /usr/lib/python3.8/sre_parse.py:618: size=0 B (-2800 B), count=0 (-50)
+
+processing.datutils.test_utils 2020-04-22 22:40:22,087 print_size 111 :
+ /usr/lib/python3.8/sre_parse.py:490: size=0 B (-2128 B), count=0 (-38)
+
+processing.datutils.test_utils 2020-04-22 22:40:22,088 print_size 111 :
+ /usr/lib/python3.8/sre_parse.py:840: size=0 B (-1968 B), count=0 (-32)
+
+processing.datutils.test_utils 2020-04-22 22:40:22,089 print_size 111 :
+ /usr/lib/python3.8/sre_parse.py:567: size=0 B (-1848 B), count=0 (-33)
+
+processing.datutils.test_utils 2020-04-22 22:40:22,127 print_size 119 :
+ /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/0 at 2020-04-22 22:40:22.127396
+dumped: 0
+
+processing.datutils.test_utils 2020-04-22 22:40:22,129 print_size 122 :
+ BEGIN2020-04-22 22:40:21.081815
+
+
+asyncio 2020-04-22 22:40:22,131 _run_once 1854 :
+ Executing <Task pending name='Task-23' coro=<TestUtil.print_size() running at /home/henry/pydocs/processing/datutils/test_utils.py:142> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fa20d7e5c10>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> created at /home/henry/pydocs/processing/get_files.py:251> took 0.204 seconds
+
+processing.get_files 2020-04-22 22:40:22,132 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:40:22,134 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:40:22,136 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:40:22,138 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:40:22,140 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+asyncio 2020-04-22 22:40:22,351 _getaddrinfo_debug 805 :
+ Get address info www.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1>
+
+asyncio 2020-04-22 22:40:22,353 _getaddrinfo_debug 815 :
+ Getting address info www.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1> took 1.519ms: [(<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('172.217.3.170', 443)), (<AddressFamily.AF_INET6: 10>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('2607:f8b0:400a:809::200a', 443, 0, 0))]
+
+asyncio 2020-04-22 22:40:22,379 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa1ea49f4c0> starts SSL handshake
+
+processing.get_files 2020-04-22 22:40:22,388 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+asyncio 2020-04-22 22:40:22,410 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa1ea49f4c0>: SSL handshake took 30.6 ms
+
+asyncio 2020-04-22 22:40:22,411 create_connection 1057 :
+ <asyncio.TransportSocket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 52910), raddr=('172.217.3.170', 443)> connected to 172.217.3.170:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7fa1ea0a9ac0>, <aiohttp.client_proto.ResponseHandler object at 0x7fa20d714520>)
+
+processing.datutils.test_utils 2020-04-22 22:40:22,449 tryGetQueue 196 :
+ getIdswaiting 1 2
+
+processing.datutils.test_utils 2020-04-22 22:40:22,457 tryGetQueue 196 :
+ getIdswaiting 1 2
+
+processing.datutils.test_utils 2020-04-22 22:40:22,459 tryGetQueue 196 :
+ getIdswaiting 1 2
+
+processing.datutils.test_utils 2020-04-22 22:40:22,559 tryGetQueue 196 :
+ getIdswaiting 1 2
+
+processing.datutils.test_utils 2020-04-22 22:40:22,595 tryGetQueue 196 :
+ getIdswaiting 1 2
+
+processing.get_files 2020-04-22 22:40:22,812 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:40:22,826 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:40:22,840 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:40:22,882 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.datutils.test_utils 2020-04-22 22:40:22,901 tryGetQueue 196 :
+ getIdswaiting 1 2
+
+processing.get_files 2020-04-22 22:40:22,935 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:40:22,996 getRevision 197 :
+ getRevision looping
+
+processing.get_files 2020-04-22 22:40:22,998 getRevision 209 :
+ not google doc
+
+asyncio 2020-04-22 22:40:23,035 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa1ea048100> starts SSL handshake
+
+asyncio 2020-04-22 22:40:23,070 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa1ea048100>: SSL handshake took 34.1 ms
+
+asyncio 2020-04-22 22:40:23,071 create_connection 1057 :
+ <asyncio.TransportSocket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 52912), raddr=('172.217.3.170', 443)> connected to 172.217.3.170:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7fa1ea3b6d00>, <aiohttp.client_proto.ResponseHandler object at 0x7fa1ea4a1940>)
+
+asyncio 2020-04-22 22:40:23,096 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa1ea072160> starts SSL handshake
+
+asyncio 2020-04-22 22:40:23,128 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa1ea072160>: SSL handshake took 31.8 ms
+
+asyncio 2020-04-22 22:40:23,129 create_connection 1057 :
+ <asyncio.TransportSocket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 52914), raddr=('172.217.3.170', 443)> connected to 172.217.3.170:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7fa1ea06d640>, <aiohttp.client_proto.ResponseHandler object at 0x7fa1ea3b6e80>)
+
+asyncio 2020-04-22 22:40:23,199 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa1ea072df0> starts SSL handshake
+
+asyncio 2020-04-22 22:40:23,226 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa1ea072df0>: SSL handshake took 26.5 ms
+
+asyncio 2020-04-22 22:40:23,227 create_connection 1057 :
+ <asyncio.TransportSocket fd=14, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 52916), raddr=('172.217.3.170', 443)> connected to 172.217.3.170:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7fa1ea047220>, <aiohttp.client_proto.ResponseHandler object at 0x7fa1ea4a1220>)
+
+asyncio 2020-04-22 22:40:23,231 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa1ea072eb0> starts SSL handshake
+
+asyncio 2020-04-22 22:40:23,263 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa1ea072eb0>: SSL handshake took 32.0 ms
+
+asyncio 2020-04-22 22:40:23,264 create_connection 1057 :
+ <asyncio.TransportSocket fd=15, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 52918), raddr=('172.217.3.170', 443)> connected to 172.217.3.170:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7fa1ea047ac0>, <aiohttp.client_proto.ResponseHandler object at 0x7fa1ea06db20>)
+
+processing.get_files 2020-04-22 22:40:23,371 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:40:23,512 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:40:23,518 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:40:23,567 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:40:23,827 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:40:23,868 getRevision 197 :
+ getRevision looping
+
+processing.gdoc 2020-04-22 22:40:23,872 async_init 12 :
+ async init called
+
+processing.get_files 2020-04-22 22:40:24,024 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:40:24,199 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:40:24,337 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:40:24,396 getRevision 197 :
+ getRevision looping
+
+processing.get_files 2020-04-22 22:40:24,434 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:40:24,515 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:40:24,522 getRevision 197 :
+ getRevision looping
+
+processing.get_files 2020-04-22 22:40:24,886 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:40:24,991 getRevision 197 :
+ getRevision looping
+
+processing.get_files 2020-04-22 22:40:25,112 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:40:25,142 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:40:25,198 getRevision 197 :
+ getRevision looping
+
+processing.get_files 2020-04-22 22:40:25,539 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:40:25,542 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:40:25,755 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:40:25,988 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:40:26,009 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:40:26,213 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:40:26,551 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:40:26,594 getRevision 197 :
+ getRevision looping
+
+processing.get_files 2020-04-22 22:40:26,622 getRevision 197 :
+ getRevision looping
+
+processing.get_files 2020-04-22 22:40:26,723 getRevision 197 :
+ getRevision looping
+
+processing.get_files 2020-04-22 22:40:26,745 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:40:26,974 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:40:27,096 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:40:27,383 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:40:27,445 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:40:27,475 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:40:27,763 getRevision 197 :
+ getRevision looping
+
+processing.get_files 2020-04-22 22:40:27,848 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.gdoc 2020-04-22 22:40:27,921 async_init 12 :
+ async init called
+
+processing.get_files 2020-04-22 22:40:27,927 getRevision 209 :
+ not google doc
+
+processing.get_files 2020-04-22 22:40:27,937 getRevision 209 :
+ not google doc
+
+asyncio 2020-04-22 22:40:27,974 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa1ea301d90> starts SSL handshake
+
+asyncio 2020-04-22 22:40:27,975 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa1ea301ee0> starts SSL handshake
+
+processing.get_files 2020-04-22 22:40:27,976 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:40:28,001 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+asyncio 2020-04-22 22:40:28,004 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa1ea301ee0>: SSL handshake took 28.9 ms
+
+asyncio 2020-04-22 22:40:28,005 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa1ea301d90>: SSL handshake took 31.3 ms
+
+asyncio 2020-04-22 22:40:28,006 create_connection 1057 :
+ <asyncio.TransportSocket fd=17, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 52922), raddr=('172.217.3.170', 443)> connected to 172.217.3.170:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7fa1ea3304c0>, <aiohttp.client_proto.ResponseHandler object at 0x7fa1ea330400>)
+
+asyncio 2020-04-22 22:40:28,008 create_connection 1057 :
+ <asyncio.TransportSocket fd=16, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 52920), raddr=('172.217.3.170', 443)> connected to 172.217.3.170:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7fa1ea330880>, <aiohttp.client_proto.ResponseHandler object at 0x7fa1ea043580>)
+
+asyncio 2020-04-22 22:40:28,115 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa1ea43c8e0> starts SSL handshake
+
+asyncio 2020-04-22 22:40:28,146 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa1ea43c8e0>: SSL handshake took 30.8 ms
+
+asyncio 2020-04-22 22:40:28,147 create_connection 1057 :
+ <asyncio.TransportSocket fd=18, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 52924), raddr=('172.217.3.170', 443)> connected to 172.217.3.170:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7fa1ea43ef40>, <aiohttp.client_proto.ResponseHandler object at 0x7fa1ea313be0>)
+
+asyncio 2020-04-22 22:40:28,155 _getaddrinfo_debug 805 :
+ Get address info driveactivity.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1>
+
+asyncio 2020-04-22 22:40:28,158 _getaddrinfo_debug 815 :
+ Getting address info driveactivity.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1> took 2.845ms: [(<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('172.217.3.202', 443)), (<AddressFamily.AF_INET6: 10>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('2607:f8b0:400a:801::200a', 443, 0, 0))]
+
+asyncio 2020-04-22 22:40:28,188 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa1ea048850> starts SSL handshake
+
+asyncio 2020-04-22 22:40:28,192 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa1ea450ac0> starts SSL handshake
+
+processing.gdoc 2020-04-22 22:40:28,198 get_last_revision 32 :
+ {'kind': 'drive#revisionList', 'revisions': [{'kind': 'drive#revision', 'id': '1', 'mimeType': 'application/vnd.google-apps.document', 'modifiedTime': '2017-06-09T06:12:56.453Z'}, {'kind': 'drive#revision', 'id': '8', 'mimeType': 'application/vnd.google-apps.document', 'modifiedTime': '2020-03-28T19:21:07.456Z'}, {'kind': 'drive#revision', 'id': '14', 'mimeType': 'application/vnd.google-apps.document', 'modifiedTime': '2020-04-17T04:04:56.746Z'}]}
+
+asyncio 2020-04-22 22:40:28,204 _getaddrinfo_debug 805 :
+ Get address info docs.google.com:443, type=<SocketKind.SOCK_STREAM: 1>
+
+asyncio 2020-04-22 22:40:28,206 _getaddrinfo_debug 815 :
+ Getting address info docs.google.com:443, type=<SocketKind.SOCK_STREAM: 1> took 1.400ms: [(<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('216.58.193.78', 443)), (<AddressFamily.AF_INET6: 10>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('2607:f8b0:400a:800::200e', 443, 0, 0))]
+
+asyncio 2020-04-22 22:40:28,219 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa1ea450ac0>: SSL handshake took 27.0 ms
+
+asyncio 2020-04-22 22:40:28,220 create_connection 1057 :
+ <asyncio.TransportSocket fd=20, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 44718), raddr=('172.217.3.202', 443)> connected to 172.217.3.202:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7fa1ea456040>, <aiohttp.client_proto.ResponseHandler object at 0x7fa1ea44afa0>)
+
+asyncio 2020-04-22 22:40:28,223 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa1ea048850>: SSL handshake took 35.1 ms
+
+asyncio 2020-04-22 22:40:28,224 create_connection 1057 :
+ <asyncio.TransportSocket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 44716), raddr=('172.217.3.202', 443)> connected to 172.217.3.202:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7fa1ea44ae80>, <aiohttp.client_proto.ResponseHandler object at 0x7fa1ea43ee20>)
+
+asyncio 2020-04-22 22:40:28,234 _start_handshake 603 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa1ea450dc0> starts SSL handshake
+
+asyncio 2020-04-22 22:40:28,267 _on_handshake_complete 647 :
+ <asyncio.sslproto.SSLProtocol object at 0x7fa1ea450dc0>: SSL handshake took 33.5 ms
+
+asyncio 2020-04-22 22:40:28,268 create_connection 1057 :
+ <asyncio.TransportSocket fd=21, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.38.9', 60188), raddr=('216.58.193.78', 443)> connected to 216.58.193.78:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7fa1ea4567c0>, <aiohttp.client_proto.ResponseHandler object at 0x7fa1ea330b80>)
+
+processing.get_files 2020-04-22 22:40:28,307 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:40:28,328 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:40:28,411 getRevision 197 :
+ getRevision looping
+
+processing.gdoc 2020-04-22 22:40:28,420 download_details 48 :
+ {'chunkedSnapshot': [[{'ty': 'as', 'st': 'text', 'si': 0, 'ei': 1, 'sm': {'ts_un': False, 'ts_un_i': True, 'ts_sc': False, 'ts_st_i': True, 'ts_bgc': None, 'ts_fs_i': True, 'ts_bgc_i': True, 'ts_ff_i': True, 'ts_bd_i': True, 'ts_va_i': True, 'ts_fs': 11.0, 'ts_ff': 'Arial', 'ts_bd': False, 'ts_tw': 400, 'ts_it_i': True, 'ts_fgc': '#000000', 'ts_fgc_i': True, 'ts_it': False, 'ts_va': 'nor', 'ts_st': False, 'ts_sc_i': True}}, {'ty': 'as', 'st': 'text', 'si': 0, 'ei': 1, 'sm': {'ts_un': False, 'ts_un_i': False, 'ts_sc': False, 'ts_it_i': False, 'ts_st_i': False, 'ts_bgc': None, 'ts_fs_i': False, 'ts_bgc_i': False, 'ts_ff_i': False, 'ts_fgc': '#000000', 'ts_fgc_i': False, 'ts_it': False, 'ts_va': 'nor', 'ts_bd_i': False, 'ts_va_i': False, 'ts_fs': 11.0, 'ts_ff': 'Arial', 'ts_st': False, 'ts_sc_i': False, 'ts_bd': False}}]], 'changelog': [[{'ty': 'rplc', 'snapshot': [{'ty': 'is', 'ibi': 1, 's': '\tOne by one, delivery trucks dropped off unprocessed goods onto the loading bay of the factory. The newly arrived crude goods would then go through 12 stages of the factory. Passing through each stage, they would more closely resemble the stream of “processed goods” on the other side: shiny, refined, and identical. The factory had shaped these coarse materials into a single mold, covered them with shiny packaging, and fixed a sticker indicating their quality as a percentage. (This could be a normal factory chain.) This is our current education system. \nUnprocessed goods were young, unique individuals. The factory is a typical high school. The 12 stages of the factory? They were the 12 grades. The quality sticker were students’ GPAs. And the single perfect mold? It is the “good child.” They always listen to adults, cooperate with their peers, never question demands, and are easy to work with. Our schools naturally encourage “good child” behaviour with harsh detentions when students don’t listen to teachers, forceful encouragements to compromise, and grim condemnations when students ever raise a question. Although many parents could dream of having a “good child,” it is rather a disastrous result of our education system. The good child is taught to shut up when there’s a problem. They are taught to blindly follow requests and never challenge them. They are taught to be like a sponge: read and regurgitate; and as a result, never think for themselves.\n'}, {'ty': 'as', 'st': 'document', 'si': 0, 'ei': 0, 'sm': {'ds_mt': 72.00000000000001, 'ds_pw': 595.2755905511812, 'ds_mb': 72.00000000000001, 'ds_mr': 72.00000000000001, 'ds_ml': 72.00000000000001, 'ds_b': {'bg_c': '#ffffff'}, 'ds_ph': 841.8897637795277}}, {'ty': 'as', 'st': 'headings', 'si': 0, 'ei': 0, 'sm': {'hs_h3': {'sdef_ps': {'ps_sb_i': False, 'ps_sa_i': False, 'ps_sa': 0.0, 'ps_sb': 8.0}, 'sdef_ts': {'ts_ff_i': False, 'ts_fgc': '#666666', 'ts_fgc_i': False, 'ts_fs': 12.0, 'ts_ff': 'Trebuchet MS', 'ts_fs_i': False}}, 'hs_h2': {'sdef_ps': {'ps_sb_i': False, 'ps_sa_i': False, 'ps_sa': 0.0, 'ps_sb': 10.0}, 'sdef_ts': {'ts_ff_i': False, 'ts_fs': 13.0, 'ts_ff': 'Trebuchet MS', 'ts_fs_i': False}}, 'hs_t': {'sdef_ps': {'ps_sb_i': False, 'ps_sa_i': False, 'ps_sa': 0.0, 'ps_sb': 0.0}, 'sdef_ts': {'ts_ff_i': False, 'ts_bd_i': True, 'ts_fs': 21.0, 'ts_ff': 'Trebuchet MS', 'ts_bd': False, 'ts_fs_i': False}}, 'hs_h1': {'sdef_ps': {'ps_sb_i': False, 'ps_sa_i': False, 'ps_sa': 0.0, 'ps_sb': 10.0}, 'sdef_ts': {'ts_ff_i': False, 'ts_bd_i': True, 'ts_fs': 16.0, 'ts_ff': 'Trebuchet MS', 'ts_bd': False, 'ts_fs_i': False}}, 'hs_nt': {'sdef_ts': {'ts_ff_i': False, 'ts_ff': 'Times New Roman'}}, 'hs_st': {'sdef_ps': {'ps_sb_i': False, 'ps_sa_i': False, 'ps_sa': 10.0, 'ps_sb': 0.0}, 'sdef_ts': {'ts_ff_i': False, 'ts_fs': 13.0, 'ts_ff': 'Trebuchet MS', 'ts_fs_i': False}}, 'hs_h6': {'sdef_ps': {'ps_sb_i': False, 'ps_sa_i': False, 'ps_sa': 0.0, 'ps_sb': 8.0}, 'sdef_ts': {'ts_ff_i': False, 'ts_fgc': '#666666', 'ts_fgc_i': False, 'ts_it': True, 'ts_bd_i': True, 'ts_fs': 11.0, 'ts_ff': 'Trebuchet MS', 'ts_it_i': False, 'ts_bd': False, 'ts_fs_i': False}}, 'hs_h5': {'sdef_ps': {'ps_sb_i': False, 'ps_sa_i': False, 'ps_sa': 0.0, 'ps_sb': 8.0}, 'sdef_ts': {'ts_ff_i': False, 'ts_fgc': '#666666', 'ts_fgc_i': False, 'ts_bd_i': True, 'ts_ff': 'Trebuchet MS', 'ts_bd': False}}, 'hs_h4': {'sdef_ps': {'ps_sb_i': False, 'ps_sa_i': False, 'ps_sa': 0.0, 'ps_sb': 8.0}, 'sdef_ts': {'ts_ff_i': False, 'ts_fgc': '#666666', 'ts_un': True, 'ts_un_i': False, 'ts_fgc_i': False, 'ts_bd_i': True, 'ts_fs': 11.0, 'ts_ff': 'Trebuchet MS', 'ts_bd': False, 'ts_fs_i': False}}}}, {'ty': 'as', 'st': 'language', 'si': 0, 'ei': 0, 'sm': {'lgs_l': 'en_GB'}}, {'ty': 'as', 'st': 'paragraph', 'si': 559, 'ei': 559, 'sm': {'ps_awao_i': True, 'ps_klt_i': True, 'ps_sm_i': True, 'ps_ls_i': True, 'ps_il_i': True, 'ps_ir_i': True, 'ps_al_i': True, 'ps_bl_i': True, 'ps_sd_i': True, 'ps_sb_i': True, 'ps_sa_i': True, 'ps_br_i': True, 'ps_bbtw_i': True, 'ps_bt_i': True, 'ps_kwn_i': True, 'ps_bb_i': True, 'ps_ifl_i': True}}, {'ty': 'as', 'st': 'paragraph', 'si': 1472, 'ei': 1472, 'sm': {'ps_awao_i': True, 'ps_klt_i': True, 'ps_sm_i': True, 'ps_ls_i': True, 'ps_il_i': True, 'ps_ir_i': True, 'ps_al_i': True, 'ps_bl_i': True, 'ps_sd_i': True, 'ps_sb_i': True, 'ps_ifl': 36.0, 'ps_sa_i': True, 'ps_br_i': True, 'ps_bbtw_i': True, 'ps_bt_i': True, 'ps_kwn_i': True, 'ps_bb_i': True, 'ps_ifl_i': False}}, {'ty': 'as', 'st': 'paragraph', 'si': 1473, 'ei': 1473, 'sm': {'ps_awao_i': True, 'ps_klt_i': True, 'ps_sm_i': True, 'ps_ls_i': True, 'ps_il_i': True, 'ps_ir_i': True, 'ps_al_i': True, 'ps_bl_i': True, 'ps_sd_i': True, 'ps_sb_i': True, 'ps_ifl': 36.0, 'ps_sa_i': True, 'ps_br_i': True, 'ps_bbtw_i': True, 'ps_bt_i': True, 'ps_kwn_i': True, 'ps_bb_i': True, 'ps_ifl_i': False}}, {'ty': 'as', 'st': 'text', 'si': 0, 'ei': 1473, 'sm': {'ts_un': False, 'ts_un_i': True, 'ts_sc': False, 'ts_st_i': True, 'ts_bgc': None, 'ts_fs_i': True, 'ts_bgc_i': True, 'ts_ff_i': True, 'ts_bd_i': True, 'ts_va_i': True, 'ts_fs': 11.0, 'ts_ff': 'Arial', 'ts_bd': False, 'ts_tw': 400, 'ts_it_i': True, 'ts_fgc': '#000000', 'ts_fgc_i': True, 'ts_it': False, 'ts_va': 'nor', 'ts_st': False, 'ts_sc_i': True}}]}, 1496988776453, '06021746285479053909', 1, None, None, None, None], [{'ty': 'mlti', 'mts': [{'ty': 'is', 'ibi': 1473, 's': '\n'}, {'ty': 'as', 'st': 'paragraph', 'si': 1473, 'ei': 1473, 'sm': {'ps_awao_i': True, 'ps_klt_i': True, 'ps_ir': 0.0, 'ps_ls_i': True, 'ps_al_i': True, 'ps_ltr': True, 'ps_rd': '', 'ps_bl_i': True, 'ps_sd_i': True, 'ps_sb_i': True, 'ps_ifl': 36.0, 'ps_sa_i': True, 'ps_shd': False, 'ps_br_i': True, 'ps_klt': False, 'ps_bt_i': True, 'ps_hd': 0, 'ps_kwn_i': True, 'ps_ifl_i': False, 'ps_ts': {'cv': {'op': 'set', 'opValue': []}}, 'ps_bbtw': None, 'ps_lslm': 0, 'ps_bb': None, 'ps_ls': 1.15, 'ps_bl': None, 'ps_kwn': False, 'ps_sm_i': True, 'ps_il_i': True, 'ps_sa': 0.0, 'ps_sb': 0.0, 'ps_br': None, 'ps_ir_i': True, 'ps_sd': None, 'ps_bt': None, 'ps_hdid': '', 'ps_lslm_i': False, 'ps_sm': 0, 'ps_bbtw_i': True, 'ps_al': 0, 'ps_bb_i': True, 'ps_awao': False, 'ps_il': 0.0}}, {'ty': 'is', 'ibi': 1474, 's': 'fd'}]}, 1585423263616, '06021746285479053909', 2, '2efda79a9ab60185', 0, None, None], [{'ty': 'mlti', 'mts': [{'ty': 'is', 'ibi': 1476, 's': 'sfd\n'}, {'ty': 'as', 'st': 'paragraph', 'si': 1479, 'ei': 1479, 'sm': {'ps_awao_i': True, 'ps_klt_i': True, 'ps_ir': 0.0, 'ps_ls_i': True, 'ps_al_i': True, 'ps_ltr': True, 'ps_rd': '', 'ps_bl_i': True, 'ps_sd_i': True, 'ps_sb_i': True, 'ps_ifl': 36.0, 'ps_sa_i': True, 'ps_shd': False, 'ps_br_i': True, 'ps_klt': False, 'ps_bt_i': True, 'ps_hd': 0, 'ps_kwn_i': True, 'ps_ifl_i': False, 'ps_ts': {'cv': {'op': 'set', 'opValue': []}}, 'ps_bbtw': None, 'ps_lslm': 0, 'ps_bb': None, 'ps_ls': 1.15, 'ps_bl': None, 'ps_kwn': False, 'ps_sm_i': True, 'ps_il_i': True, 'ps_sa': 0.0, 'ps_sb': 0.0, 'ps_br': None, 'ps_ir_i': True, 'ps_sd': None, 'ps_bt': None, 'ps_hdid': '', 'ps_lslm_i': False, 'ps_sm': 0, 'ps_bbtw_i': True, 'ps_al': 0, 'ps_bb_i': True, 'ps_awao': False, 'ps_il': 0.0}}, {'ty': 'ds', 'si': 1474, 'ei': 1474}, {'ty': 'is', 'ibi': 1474, 's': 'F'}, {'ty': 'is', 'ibi': 1480, 's': 'sf\n'}, {'ty': 'as', 'st': 'paragraph', 'si': 1482, 'ei': 1482, 'sm': {'ps_awao_i': True, 'ps_klt_i': True, 'ps_ir': 0.0, 'ps_ls_i': True, 'ps_al_i': True, 'ps_ltr': True, 'ps_rd': '', 'ps_bl_i': True, 'ps_sd_i': True, 'ps_sb_i': True, 'ps_ifl': 36.0, 'ps_sa_i': True, 'ps_shd': False, 'ps_br_i': True, 'ps_klt': False, 'ps_bt_i': True, 'ps_hd': 0, 'ps_kwn_i': True, 'ps_ifl_i': False, 'ps_ts': {'cv': {'op': 'set', 'opValue': []}}, 'ps_bbtw': None, 'ps_lslm': 0, 'ps_bb': None, 'ps_ls': 1.15, 'ps_bl': None, 'ps_kwn': False, 'ps_sm_i': True, 'ps_il_i': True, 'ps_sa': 0.0, 'ps_sb': 0.0, 'ps_br': None, 'ps_ir_i': True, 'ps_sd': None, 'ps_bt': None, 'ps_hdid': '', 'ps_lslm_i': False, 'ps_sm': 0, 'ps_bbtw_i': True, 'ps_al': 0, 'ps_bb_i': True, 'ps_awao': False, 'ps_il': 0.0}}, {'ty': 'ds', 'si': 1480, 'ei': 1480}, {'ty': 'is', 'ibi': 1480, 's': 'S'}, {'ty': 'is', 'ibi': 1483, 's': 'ds'}]}, 1585423264473, '06021746285479053909', 3, '2efda79a9ab60185', 1, None, None], [{'ty': 'mlti', 'mts': [{'ty': 'is', 'ibi': 1485, 's': 'fds\n'}, {'ty': 'as', 'st': 'paragraph', 'si': 1488, 'ei': 1488, 'sm': {'ps_awao_i': True, 'ps_klt_i': True, 'ps_ir': 0.0, 'ps_ls_i': True, 'ps_al_i': True, 'ps_ltr': True, 'ps_rd': '', 'ps_bl_i': True, 'ps_sd_i': True, 'ps_sb_i': True, 'ps_ifl': 36.0, 'ps_sa_i': True, 'ps_shd': False, 'ps_br_i': True, 'ps_klt': False, 'ps_bt_i': True, 'ps_hd': 0, 'ps_kwn_i': True, 'ps_ifl_i': False, 'ps_ts': {'cv': {'op': 'set', 'opValue': []}}, 'ps_bbtw': None, 'ps_lslm': 0, 'ps_bb': None, 'ps_ls': 1.15, 'ps_bl': None, 'ps_kwn': False, 'ps_sm_i': True, 'ps_il_i': True, 'ps_sa': 0.0, 'ps_sb': 0.0, 'ps_br': None, 'ps_ir_i': True, 'ps_sd': None, 'ps_bt': None, 'ps_hdid': '', 'ps_lslm_i': False, 'ps_sm': 0, 'ps_bbtw_i': True, 'ps_al': 0, 'ps_bb_i': True, 'ps_awao': False, 'ps_il': 0.0}}, {'ty': 'ds', 'si': 1483, 'ei': 1483}, {'ty': 'is', 'ibi': 1483, 's': 'D'}, {'ty': 'is', 'ibi': 1489, 's': 'fd\n'}, {'ty': 'as', 'st': 'paragraph', 'si': 1491, 'ei': 1491, 'sm': {'ps_awao_i': True, 'ps_klt_i': True, 'ps_ir': 0.0, 'ps_ls_i': True, 'ps_al_i': True, 'ps_ltr': True, 'ps_rd': '', 'ps_bl_i': True, 'ps_sd_i': True, 'ps_sb_i': True, 'ps_ifl': 36.0, 'ps_sa_i': True, 'ps_shd': False, 'ps_br_i': True, 'ps_klt': False, 'ps_bt_i': True, 'ps_hd': 0, 'ps_kwn_i': True, 'ps_ifl_i': False, 'ps_ts': {'cv': {'op': 'set', 'opValue': []}}, 'ps_bbtw': None, 'ps_lslm': 0, 'ps_bb': None, 'ps_ls': 1.15, 'ps_bl': None, 'ps_kwn': False, 'ps_sm_i': True, 'ps_il_i': True, 'ps_sa': 0.0, 'ps_sb': 0.0, 'ps_br': None, 'ps_ir_i': True, 'ps_sd': None, 'ps_bt': None, 'ps_hdid': '', 'ps_lslm_i': False, 'ps_sm': 0, 'ps_bbtw_i': True, 'ps_al': 0, 'ps_bb_i': True, 'ps_awao': False, 'ps_il': 0.0}}, {'ty': 'ds', 'si': 1489, 'ei': 1489}, {'ty': 'is', 'ibi': 1489, 's': 'F'}, {'ty': 'is', 'ibi': 1492, 's': 'f'}]}, 1585423265187, '06021746285479053909', 4, '2efda79a9ab60185', 2, None, None], [{'ty': 'mlti', 'mts': [{'ty': 'is', 'ibi': 1493, 's': 'ds\n'}, {'ty': 'as', 'st': 'paragraph', 'si': 1495, 'ei': 1495, 'sm': {'ps_awao_i': True, 'ps_klt_i': True, 'ps_ir': 0.0, 'ps_ls_i': True, 'ps_al_i': True, 'ps_ltr': True, 'ps_rd': '', 'ps_bl_i': True, 'ps_sd_i': True, 'ps_sb_i': True, 'ps_ifl': 36.0, 'ps_sa_i': True, 'ps_shd': False, 'ps_br_i': True, 'ps_klt': False, 'ps_bt_i': True, 'ps_hd': 0, 'ps_kwn_i': True, 'ps_ifl_i': False, 'ps_ts': {'cv': {'op': 'set', 'opValue': []}}, 'ps_bbtw': None, 'ps_lslm': 0, 'ps_bb': None, 'ps_ls': 1.15, 'ps_bl': None, 'ps_kwn': False, 'ps_sm_i': True, 'ps_il_i': True, 'ps_sa': 0.0, 'ps_sb': 0.0, 'ps_br': None, 'ps_ir_i': True, 'ps_sd': None, 'ps_bt': None, 'ps_hdid': '', 'ps_lslm_i': False, 'ps_sm': 0, 'ps_bbtw_i': True, 'ps_al': 0, 'ps_bb_i': True, 'ps_awao': False, 'ps_il': 0.0}}, {'ty': 'ds', 'si': 1492, 'ei': 1492}, {'ty': 'is', 'ibi': 1492, 's': 'F'}, {'ty': 'is', 'ibi': 1496, 's': 'fds\n'}, {'ty': 'as', 'st': 'paragraph', 'si': 1499, 'ei': 1499, 'sm': {'ps_awao_i': True, 'ps_klt_i': True, 'ps_ir': 0.0, 'ps_ls_i': True, 'ps_al_i': True, 'ps_ltr': True, 'ps_rd': '', 'ps_bl_i': True, 'ps_sd_i': True, 'ps_sb_i': True, 'ps_ifl': 36.0, 'ps_sa_i': True, 'ps_shd': False, 'ps_br_i': True, 'ps_klt': False, 'ps_bt_i': True, 'ps_hd': 0, 'ps_kwn_i': True, 'ps_ifl_i': False, 'ps_ts': {'cv': {'op': 'set', 'opValue': []}}, 'ps_bbtw': None, 'ps_lslm': 0, 'ps_bb': None, 'ps_ls': 1.15, 'ps_bl': None, 'ps_kwn': False, 'ps_sm_i': True, 'ps_il_i': True, 'ps_sa': 0.0, 'ps_sb': 0.0, 'ps_br': None, 'ps_ir_i': True, 'ps_sd': None, 'ps_bt': None, 'ps_hdid': '', 'ps_lslm_i': False, 'ps_sm': 0, 'ps_bbtw_i': True, 'ps_al': 0, 'ps_bb_i': True, 'ps_awao': False, 'ps_il': 0.0}}, {'ty': 'ds', 'si': 1496, 'ei': 1496}, {'ty': 'is', 'ibi': 1496, 's': 'F'}, {'ty': 'is', 'ibi': 1500, 's': 'fds'}]}, 1585423265625, '06021746285479053909', 5, '2efda79a9ab60185', 3, None, None], [{'ty': 'mlti', 'mts': [{'ty': 'is', 'ibi': 1503, 's': '\n'}, {'ty': 'as', 'st': 'paragraph', 'si': 1503, 'ei': 1503, 'sm': {'ps_awao_i': True, 'ps_klt_i': True, 'ps_ir': 0.0, 'ps_ls_i': True, 'ps_al_i': True, 'ps_ltr': True, 'ps_rd': '', 'ps_bl_i': True, 'ps_sd_i': True, 'ps_sb_i': True, 'ps_ifl': 36.0, 'ps_sa_i': True, 'ps_shd': False, 'ps_br_i': True, 'ps_klt': False, 'ps_bt_i': True, 'ps_hd': 0, 'ps_kwn_i': True, 'ps_ifl_i': False, 'ps_ts': {'cv': {'op': 'set', 'opValue': []}}, 'ps_bbtw': None, 'ps_lslm': 0, 'ps_bb': None, 'ps_ls': 1.15, 'ps_bl': None, 'ps_kwn': False, 'ps_sm_i': True, 'ps_il_i': True, 'ps_sa': 0.0, 'ps_sb': 0.0, 'ps_br': None, 'ps_ir_i': True, 'ps_sd': None, 'ps_bt': None, 'ps_hdid': '', 'ps_lslm_i': False, 'ps_sm': 0, 'ps_bbtw_i': True, 'ps_al': 0, 'ps_bb_i': True, 'ps_awao': False, 'ps_il': 0.0}}, {'ty': 'ds', 'si': 1500, 'ei': 1500}, {'ty': 'is', 'ibi': 1500, 's': 'F'}, {'ty': 'is', 'ibi': 1504, 's': 'fds'}]}, 1585423266174, '06021746285479053909', 6, '2efda79a9ab60185', 4, None, None], [{'ty': 'mlti', 'mts': [{'ty': 'is', 'ibi': 1507, 's': '\n'}, {'ty': 'as', 'st': 'paragraph', 'si': 1507, 'ei': 1507, 'sm': {'ps_awao_i': True, 'ps_klt_i': True, 'ps_ir': 0.0, 'ps_ls_i': True, 'ps_al_i': True, 'ps_ltr': True, 'ps_rd': '', 'ps_bl_i': True, 'ps_sd_i': True, 'ps_sb_i': True, 'ps_ifl': 36.0, 'ps_sa_i': True, 'ps_shd': False, 'ps_br_i': True, 'ps_klt': False, 'ps_bt_i': True, 'ps_hd': 0, 'ps_kwn_i': True, 'ps_ifl_i': False, 'ps_ts': {'cv': {'op': 'set', 'opValue': []}}, 'ps_bbtw': None, 'ps_lslm': 0, 'ps_bb': None, 'ps_ls': 1.15, 'ps_bl': None, 'ps_kwn': False, 'ps_sm_i': True, 'ps_il_i': True, 'ps_sa': 0.0, 'ps_sb': 0.0, 'ps_br': None, 'ps_ir_i': True, 'ps_sd': None, 'ps_bt': None, 'ps_hdid': '', 'ps_lslm_i': False, 'ps_sm': 0, 'ps_bbtw_i': True, 'ps_al': 0, 'ps_bb_i': True, 'ps_awao': False, 'ps_il': 0.0}}, {'ty': 'ds', 'si': 1504, 'ei': 1504}, {'ty': 'is', 'ibi': 1504, 's': 'F'}, {'ty': 'is', 'ibi': 1508, 's': 'fdsf\n'}, {'ty': 'as', 'st': 'paragraph', 'si': 1512, 'ei': 1512, 'sm': {'ps_awao_i': True, 'ps_klt_i': True, 'ps_ir': 0.0, 'ps_ls_i': True, 'ps_al_i': True, 'ps_ltr': True, 'ps_rd': '', 'ps_bl_i': True, 'ps_sd_i': True, 'ps_sb_i': True, 'ps_ifl': 36.0, 'ps_sa_i': True, 'ps_shd': False, 'ps_br_i': True, 'ps_klt': False, 'ps_bt_i': True, 'ps_hd': 0, 'ps_kwn_i': True, 'ps_ifl_i': False, 'ps_ts': {'cv': {'op': 'set', 'opValue': []}}, 'ps_bbtw': None, 'ps_lslm': 0, 'ps_bb': None, 'ps_ls': 1.15, 'ps_bl': None, 'ps_kwn': False, 'ps_sm_i': True, 'ps_il_i': True, 'ps_sa': 0.0, 'ps_sb': 0.0, 'ps_br': None, 'ps_ir_i': True, 'ps_sd': None, 'ps_bt': None, 'ps_hdid': '', 'ps_lslm_i': False, 'ps_sm': 0, 'ps_bbtw_i': True, 'ps_al': 0, 'ps_bb_i': True, 'ps_awao': False, 'ps_il': 0.0}}, {'ty': 'ds', 'si': 1508, 'ei': 1508}, {'ty': 'is', 'ibi': 1508, 's': 'F'}]}, 1585423266659, '06021746285479053909', 7, '2efda79a9ab60185', 5, None, None], [{'ty': 'mlti', 'mts': [{'ty': 'is', 'ibi': 1513, 's': 'ds\n'}, {'ty': 'as', 'st': 'paragraph', 'si': 1515, 'ei': 1515, 'sm': {'ps_awao_i': True, 'ps_klt_i': True, 'ps_ir': 0.0, 'ps_ls_i': True, 'ps_al_i': True, 'ps_ltr': True, 'ps_rd': '', 'ps_bl_i': True, 'ps_sd_i': True, 'ps_sb_i': True, 'ps_ifl': 36.0, 'ps_sa_i': True, 'ps_shd': False, 'ps_br_i': True, 'ps_klt': False, 'ps_bt_i': True, 'ps_hd': 0, 'ps_kwn_i': True, 'ps_ifl_i': False, 'ps_ts': {'cv': {'op': 'set', 'opValue': []}}, 'ps_bbtw': None, 'ps_lslm': 0, 'ps_bb': None, 'ps_ls': 1.15, 'ps_bl': None, 'ps_kwn': False, 'ps_sm_i': True, 'ps_il_i': True, 'ps_sa': 0.0, 'ps_sb': 0.0, 'ps_br': None, 'ps_ir_i': True, 'ps_sd': None, 'ps_bt': None, 'ps_hdid': '', 'ps_lslm_i': False, 'ps_sm': 0, 'ps_bbtw_i': True, 'ps_al': 0, 'ps_bb_i': True, 'ps_awao': False, 'ps_il': 0.0}}, {'ty': 'ds', 'si': 1513, 'ei': 1513}, {'ty': 'is', 'ibi': 1513, 's': 'D'}, {'ty': 'is', 'ibi': 1516, 's': 'fsd\n'}, {'ty': 'as', 'st': 'paragraph', 'si': 1519, 'ei': 1519, 'sm': {'ps_awao_i': True, 'ps_klt_i': True, 'ps_ir': 0.0, 'ps_ls_i': True, 'ps_al_i': True, 'ps_ltr': True, 'ps_rd': '', 'ps_bl_i': True, 'ps_sd_i': True, 'ps_sb_i': True, 'ps_ifl': 36.0, 'ps_sa_i': True, 'ps_shd': False, 'ps_br_i': True, 'ps_klt': False, 'ps_bt_i': True, 'ps_hd': 0, 'ps_kwn_i': True, 'ps_ifl_i': False, 'ps_ts': {'cv': {'op': 'set', 'opValue': []}}, 'ps_bbtw': None, 'ps_lslm': 0, 'ps_bb': None, 'ps_ls': 1.15, 'ps_bl': None, 'ps_kwn': False, 'ps_sm_i': True, 'ps_il_i': True, 'ps_sa': 0.0, 'ps_sb': 0.0, 'ps_br': None, 'ps_ir_i': True, 'ps_sd': None, 'ps_bt': None, 'ps_hdid': '', 'ps_lslm_i': False, 'ps_sm': 0, 'ps_bbtw_i': True, 'ps_al': 0, 'ps_bb_i': True, 'ps_awao': False, 'ps_il': 0.0}}, {'ty': 'ds', 'si': 1516, 'ei': 1516}, {'ty': 'is', 'ibi': 1516, 's': 'F'}, {'ty': 'is', 'ibi': 1520, 's': 'f\n'}, {'ty': 'as', 'st': 'paragraph', 'si': 1521, 'ei': 1521, 'sm': {'ps_awao_i': True, 'ps_klt_i': True, 'ps_ir': 0.0, 'ps_ls_i': True, 'ps_al_i': True, 'ps_ltr': True, 'ps_rd': '', 'ps_bl_i': True, 'ps_sd_i': True, 'ps_sb_i': True, 'ps_ifl': 36.0, 'ps_sa_i': True, 'ps_shd': False, 'ps_br_i': True, 'ps_klt': False, 'ps_bt_i': True, 'ps_hd': 0, 'ps_kwn_i': True, 'ps_ifl_i': False, 'ps_ts': {'cv': {'op': 'set', 'opValue': []}}, 'ps_bbtw': None, 'ps_lslm': 0, 'ps_bb': None, 'ps_ls': 1.15, 'ps_bl': None, 'ps_kwn': False, 'ps_sm_i': True, 'ps_il_i': True, 'ps_sa': 0.0, 'ps_sb': 0.0, 'ps_br': None, 'ps_ir_i': True, 'ps_sd': None, 'ps_bt': None, 'ps_hdid': '', 'ps_lslm_i': False, 'ps_sm': 0, 'ps_bbtw_i': True, 'ps_al': 0, 'ps_bb_i': True, 'ps_awao': False, 'ps_il': 0.0}}, {'ty': 'ds', 'si': 1520, 'ei': 1520}, {'ty': 'is', 'ibi': 1520, 's': 'F'}, {'ty': 'is', 'ibi': 1522, 's': 'ds'}]}, 1585423267456, '06021746285479053909', 8, '2efda79a9ab60185', 6, None, None], [{'ty': 'ds', 'si': 1, 'ei': 1386}, 1587096291305, '06021746285479053909', 9, 'b2222107f6839c8', 0, None, None], [{'ty': 'is', 'ibi': 138, 's': "import pickle;import gdocrevisions as gdr;creds=pickle.load(open('creds.pickle', 'rb'));gdr.GoogleDoc('1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ', creds)"}, 1587096292691, '06021746285479053909', 10, 'b2222107f6839c8', 1, None, None], [{'ty': 'ds', 'si': 138, 'ei': 293}, 1587096293939, '06021746285479053909', 11, 'b2222107f6839c8', 2, None, None], [{'ty': 'mlti', 'mts': [{'ty': 'is', 'ibi': 1, 's': '\tOne by one, delivery trucks dropped off unprocessed goods onto the loading bay of the factory. The newly arrived crude goods would then go through 12 stages of the factory. Passing through each stage, they would more closely resemble the stream of “processed goods” on the other side: shiny, refined, and identical. The factory had shaped these coarse materials into a single mold, covered them with shiny packaging, and fixed a sticker indicating their quality as a percentage. (This could be a normal factory chain.) This is our current education system. \nUnprocessed goods were young, unique individuals. The factory is a typical high school. The 12 stages of the factory? They were the 12 grades. The quality sticker were students’ GPAs. And the single perfect mold? It is the “good child.” They always listen to adults, cooperate with their peers, never question demands, and are easy to work with. Our schools naturally encourage “good child” behaviour with harsh detentions when students don’t listen to teachers, forceful encouragements to compromise, and grim condemnations when students ever raise a question. Although many parents could dream of having a “good child,” it is rather a disastrous result of our education system. The good child is taught to shut up when there’s a problem. They are taught to blindly follow requests and never challenge them. They are taught to'}, {'ty': 'as', 'st': 'doco_anchor', 'si': 1, 'ei': 1386, 'sm': {'das_a': {'cv': {'op': 'set', 'opValue': []}}}}, {'ty': 'as', 'st': 'ignore_spellcheck', 'si': 1, 'ei': 1386, 'sm': {'isc_osh': None}}, {'ty': 'as', 'st': 'import_warnings', 'si': 1, 'ei': 1386, 'sm': {'iws_iwids': {'cv': {'op': 'set', 'opValue': []}}}}, {'ty': 'as', 'st': 'link', 'si': 1, 'ei': 1386, 'sm': {'lnks_link': None}}, {'ty': 'as', 'st': 'list', 'si': 559, 'ei': 559, 'sm': {'ls_ts': None, 'ls_id': None, 'ls_nest': 0}}, {'ty': 'as', 'st': 'named_range', 'si': 1, 'ei': 1386, 'sm': {'nrs_ei': {'cv': {'op': 'set', 'opValue': []}}}}, {'ty': 'as', 'st': 'paragraph', 'si': 559, 'ei': 559, 'sm': {'ps_awao_i': True, 'ps_klt_i': True, 'ps_ir': 0.0, 'ps_ls_i': True, 'ps_al_i': True, 'ps_ltr': True, 'ps_rd': '', 'ps_bl_i': True, 'ps_sd_i': True, 'ps_sb_i': True, 'ps_ifl': 0.0, 'ps_sa_i': True, 'ps_shd': False, 'ps_br_i': True, 'ps_klt': False, 'ps_bt_i': True, 'ps_hd': 0, 'ps_kwn_i': True, 'ps_ifl_i': True, 'ps_ts': {'cv': {'op': 'set', 'opValue': []}}, 'ps_bbtw': None, 'ps_lslm': 0, 'ps_bb': None, 'ps_ls': 1.15, 'ps_bl': None, 'ps_kwn': False, 'ps_sm_i': True, 'ps_il_i': True, 'ps_sa': 0.0, 'ps_sb': 0.0, 'ps_br': None, 'ps_ir_i': True, 'ps_sd': None, 'ps_bt': None, 'ps_hdid': '', 'ps_lslm_i': False, 'ps_sm': 0, 'ps_bbtw_i': True, 'ps_al': 0, 'ps_bb_i': True, 'ps_awao': False, 'ps_il': 0.0}}, {'ty': 'as', 'st': 'suppress_feature', 'si': 1, 'ei': 1386, 'sm': {'sfs_sst': False}}, {'ty': 'as', 'st': 'text', 'si': 1, 'ei': 1386, 'sm': {'ts_un': False, 'ts_un_i': True, 'ts_sc': False, 'ts_it_i': True, 'ts_st_i': True, 'ts_bgc': None, 'ts_fs_i': True, 'ts_bgc_i': True, 'ts_ff_i': True, 'ts_fgc': '#000000', 'ts_fgc_i': True, 'ts_it': False, 'ts_va': 'nor', 'ts_bd_i': True, 'ts_va_i': True, 'ts_fs': 11.0, 'ts_ff': 'Arial', 'ts_st': False, 'ts_bd': False, 'ts_sc_i': True, 'ts_tw': 400}}]}, 1587096295022, '06021746285479053909', 12, 'b2222107f6839c8', 3, None, None], [{'ty': 'ds', 'si': 1, 'ei': 1386}, 1587096295811, '06021746285479053909', 13, 'b2222107f6839c8', 4, None, None], [{'ty': 'mlti', 'mts': [{'ty': 'is', 'ibi': 138, 's': '\tOne by one, delivery trucks dropped off unprocessed goods onto the loading bay of the factory. The newly arrived crude goods would then go through 12 stages of the factory. Passing through each stage, they would more closely resemble the stream of “processed goods” on the other side: shiny, refined, and identical. The factory had shaped these coarse materials into a single mold, covered them with shiny packaging, and fixed a sticker indicating their quality as a percentage. (This could be a normal factory chain.) This is our current education system. \nUnprocessed goods were young, unique individuals. The factory is a typical high school. The 12 stages of the factory? They were the 12 grades. The quality sticker were students’ GPAs. And the single perfect mold? It is the “good child.” They always listen to adults, cooperate with their peers, never question demands, and are easy to work with. Our schools naturally encourage “good child” behaviour with harsh detentions when students don’t listen to teachers, forceful encouragements to compromise, and grim condemnations when students ever raise a question. Although many parents could dream of having a “good child,” it is rather a disastrous result of our education system. The good child is taught to shut up when there’s a problem. They are taught to blindly follow requests and never challenge them. They are taught to'}, {'ty': 'as', 'st': 'paragraph', 'si': 696, 'ei': 696, 'sm': {'ps_awao_i': True, 'ps_klt_i': True, 'ps_ir': 0.0, 'ps_ls_i': True, 'ps_al_i': True, 'ps_ltr': True, 'ps_rd': '', 'ps_bl_i': True, 'ps_sd_i': True, 'ps_sb_i': True, 'ps_ifl': 36.0, 'ps_sa_i': True, 'ps_shd': False, 'ps_br_i': True, 'ps_klt': False, 'ps_bt_i': True, 'ps_hd': 0, 'ps_kwn_i': True, 'ps_ifl_i': False, 'ps_ts': {'cv': {'op': 'set', 'opValue': []}}, 'ps_bbtw': None, 'ps_lslm': 0, 'ps_bb': None, 'ps_ls': 1.15, 'ps_bl': None, 'ps_kwn': False, 'ps_sm_i': True, 'ps_il_i': True, 'ps_sa': 0.0, 'ps_sb': 0.0, 'ps_br': None, 'ps_ir_i': True, 'ps_sd': None, 'ps_bt': None, 'ps_hdid': '', 'ps_lslm_i': False, 'ps_sm': 0, 'ps_bbtw_i': True, 'ps_al': 0, 'ps_bb_i': True, 'ps_awao': False, 'ps_il': 0.0}}, {'ty': 'as', 'st': 'paragraph', 'si': 1524, 'ei': 1524, 'sm': {'ps_awao_i': True, 'ps_klt_i': True, 'ps_ls_i': True, 'ps_al_i': True, 'ps_ltr': True, 'ps_rd': '', 'ps_bl_i': True, 'ps_sd_i': True, 'ps_sb_i': True, 'ps_ifl': 36.0, 'ps_sa_i': True, 'ps_shd': False, 'ps_br_i': True, 'ps_bt_i': True, 'ps_hd': 0, 'ps_kwn_i': True, 'ps_ifl_i': False, 'ps_ts': {'cv': {'op': 'set', 'opValue': []}}, 'ps_sm_i': True, 'ps_il_i': True, 'ps_ir_i': True, 'ps_hdid': '', 'ps_lslm_i': True, 'ps_bbtw_i': True, 'ps_bb_i': True}}, {'ty': 'as', 'st': 'doco_anchor', 'si': 138, 'ei': 1523, 'sm': {'das_a': {'cv': {'op': 'set', 'opValue': []}}}}, {'ty': 'as', 'st': 'ignore_spellcheck', 'si': 138, 'ei': 1523, 'sm': {'isc_osh': None}}, {'ty': 'as', 'st': 'import_warnings', 'si': 138, 'ei': 1523, 'sm': {'iws_iwids': {'cv': {'op': 'set', 'opValue': []}}}}, {'ty': 'as', 'st': 'link', 'si': 138, 'ei': 1523, 'sm': {'lnks_link': None}}, {'ty': 'as', 'st': 'text', 'si': 138, 'ei': 696, 'sm': {'ts_ff_i': True, 'ts_un_i': True, 'ts_fgc_i': True, 'ts_bd_i': True, 'ts_va_i': True, 'ts_it_i': True, 'ts_sc_i': True, 'ts_st_i': True, 'ts_tw': 400, 'ts_fs_i': True, 'ts_bgc_i': True}}, {'ty': 'as', 'st': 'text', 'si': 697, 'ei': 1523, 'sm': {'ts_ff_i': True, 'ts_un_i': True, 'ts_fgc_i': True, 'ts_bd_i': True, 'ts_va_i': True, 'ts_it_i': True, 'ts_sc_i': True, 'ts_st_i': True, 'ts_tw': 400, 'ts_fs_i': True, 'ts_bgc_i': True}}]}, 1587096296746, '06021746285479053909', 14, 'b2222107f6839c8', 5, None, None]]}
+
+processing.get_files 2020-04-22 22:40:28,431 getRevision 218 :
+ google doc
+
+googleapiclient.discovery 2020-04-22 22:40:28,467 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 22:40:28,743 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ?alt=json
+
+googleapiclient.discovery 2020-04-22 22:40:28,964 _retrieve_discovery_doc 280 :
+ URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
+
+googleapiclient.discovery 2020-04-22 22:40:29,172 method 911 :
+ URL being requested: GET https://www.googleapis.com/drive/v3/files/1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ/revisions?alt=json
+
+urllib3.util.retry 2020-04-22 22:40:29,518 from_int 200 :
+ Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+
+urllib3.connectionpool 2020-04-22 22:40:29,540 _new_conn 817 :
+ Starting new HTTPS connection (1): docs.google.com
+
+urllib3.connectionpool 2020-04-22 22:40:29,802 _make_request 393 :
+ https://docs.google.com:443 "GET /document/d/1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ/revisions/load?id=1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ&start=1&end=14 HTTP/1.1" 200 None
+
+processing.get_files 2020-04-22 22:40:29,840 getRevision 222 :
+ done gdoc
+
+processing.get_files 2020-04-22 22:40:29,841 getRevision 197 :
+ getRevision looping
+
+asyncio 2020-04-22 22:40:29,844 _run_once 1854 :
+ Executing <Task pending name='Task-20' coro=<getRevision() running at /home/henry/pydocs/processing/get_files.py:198> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fa1eac83610>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> cb=[gather.<locals>._done_callback() at /usr/lib/python3.8/asyncio/tasks.py:751] created at /home/henry/pydocs/processing/get_files.py:247> took 1.426 seconds
+
+processing.get_files 2020-04-22 22:40:29,850 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:40:29,853 getRevision 197 :
+ getRevision looping
+
+processing.get_files 2020-04-22 22:40:29,856 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:40:30,156 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:40:30,208 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:40:30,354 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:40:30,554 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:40:30,912 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:40:31,119 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+processing.get_files 2020-04-22 22:40:31,148 getIdsRecursive 86 :
+ getIdsRecursive looping
+
+root 2020-04-22 22:40:31,191 handle_exception 74 :
+ Custom Uncaught exception
+Traceback (most recent call last):
+  File "dsds.py", line 34, in <module>
+    start()
+  File "dsds.py", line 31, in start
+    loadFiles(uid, workingPath, fileid, creds)
+  File "/home/henry/pydocs/processing/get_files.py", line 317, in loadFiles
+    loop.run_until_complete(asyncio.gather(startTask))
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+    return future.result()
+  File "/home/henry/pydocs/processing/get_files.py", line 255, in start
+    await asyncio.gather(*revisionExplorer)
+  File "/home/henry/pydocs/processing/get_files.py", line 214, in getRevision
+    await gd.async_init(fileId, session, headers)
+  File "/home/henry/pydocs/processing/gdoc.py", line 18, in async_init
+    await self.download_details(self.last_revision_id)
+AttributeError: 'GDoc' object has no attribute 'last_revision_id'

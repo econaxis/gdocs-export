@@ -1,5 +1,4 @@
 import random
-from memory_profiler import profile
 from datetime import datetime
 import sys
 from queue import Queue
@@ -197,7 +196,7 @@ def start(userid, path):
 
 
     for i in range(30):
-        time.sleep(random.uniform(1, 4))
+        time.sleep(random.uniform(0, 10))
         scoped_sess = scoped_session(_session)
         x = threading.Thread(
             target=commit, args=(
