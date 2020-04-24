@@ -1,11 +1,13 @@
 import pandas as pd
+import os
+import ujson as json
 import sys
 #from memory_profiler import profile
 import gc
 import resource
 from processing.throttler import Throttle
 import configlog
-#import tracemalloc
+import tracemalloc
 import numpy as np
 import random
 from math import log
@@ -20,20 +22,19 @@ import math
 from google.auth.transport.requests import Request
 import logging
 
-#tracemalloc.start(10)
 
 logger = logging.getLogger(__name__)
 
 class TestUtil:
+
+
     fileCounter = 0
     creds = None
     headers = {}
-    consecutiveErrors = 0
     pathedFiles = {}
     workingPath = None
     pickleIndex = []
-    maxSize = 0
-    throttle = None
+
 
     @classmethod
     def refresh_creds(cls, creds):
@@ -69,22 +70,23 @@ class TestUtil:
 
     @classmethod
     async def print_size(cls, files, endEvent):
-        #cls.snapshot = tracemalloc.take_snapshot()
+        if ("FLASKDBG" in os.environ):
+            tracemalloc.start(10)
+            cls.snapshot = tracemalloc.take_snapshot()
         while not endEvent.is_set():
-            logger.info('%sMemory usage: %s (kb)%s','-'*15,resource.getrusage(resource.RUSAGE_SELF).ru_maxrss, '-'*15)
+            logger.warning('%sMemory usage: %s (kb)%s','-'*15,resource.getrusage(resource.RUSAGE_SELF).ru_maxrss, '-'*15)
 
+            if("FLASKDBG" in os.environ):
+                sns = tracemalloc.take_snapshot()
+                for i in sns.compare_to(cls.snapshot, 'lineno')[0:10]:
+                    logger.info(i)
 
-            #sns = tracemalloc.take_snapshot()
-            #for i in sns.compare_to(cls.snapshot, 'lineno')[0:10]:
-                #logger.warning(i)
+                logger.info('%s%s%s','\n'*2, '-'*30, '\n'*2)
 
-            #logger.warning('-'*10)
+                for i in sns.statistics('lineno')[0:10]:
+                    logger.info(i)
 
-            #for i in sns.statistics('lineno')[0:10]:
-                #logger.warning(i)
-
-            #cls.snapshot = sns
-
+                cls.snapshot = sns
 
             gc.collect()
 
@@ -92,11 +94,8 @@ class TestUtil:
             logger.info("%s\n%d/%d at %s\ndumped: %d",cls.workingPath,len(cls.pathedFiles), totsize, datetime.now().__str__(),
                     cls.fileCounter)
 
-            if(random.randint(0, 100) > 97):
-                print("resetting counter")
-                cls.throttle.reset()
 
-            if(len(cls.pathedFiles)>10):
+            if(len(cls.pathedFiles)>20):
                 cls.fileCounter +=1
                 _filename = cls.workingPath + str(cls.fileCounter) + '.pathed'
                 pickle.dump(cls.pathedFiles, open(_filename, 'wb'))
@@ -105,9 +104,10 @@ class TestUtil:
                 cls.pickleIndex.append(_filename)
 
 
-            for i in range(2):
-                print(f"{i*6} out of 12 till next output      ", end = "\r", flush = True)
-                await asyncio.sleep(6)
+            _sleep_time = 40
+            for i in range(3):
+                print(f"{i*_sleep_time/3} out of {_sleep_time} till next output      ", end = "\r", flush = True)
+                await asyncio.sleep(_sleep_time/3)
 
 
 
@@ -115,7 +115,8 @@ class TestUtil:
     @classmethod
     async def handleResponse(cls, response, fileTuple = None, queue = None):
         try:
-            rev = await response.json()
+            rev = await response.text()
+            rev = json.loads(rev)
             assert response.status == 200, "Response not 200"
             return rev
         except:

@@ -36,7 +36,7 @@ acThrottle = None
 
 SEED_ID = "root"
 
-workerInstances = 14
+workerInstances = 3
 
 ACCEPTED_TYPES = { "application/vnd.google-apps.presentation", "application/vnd.google-apps.spreadsheet", "application/vnd.google-apps.document", "application/pdf"}
 
@@ -158,7 +158,7 @@ async def queryDriveActivity(fileTuple, files, session, headers):
 async def getRevision(files: asyncio.Queue, session: aiohttp.ClientSession, headers, endEvent):
 
     # Await random amount for more staggered requesting (?)
-    await asyncio.sleep(random.uniform(0, 6))
+    await asyncio.sleep(random.uniform(0, 30))
     while not endEvent.is_set():
         logger.debug("getRevision looping")
         await acThrottle.acquire()
@@ -188,8 +188,8 @@ async def getRevision(files: asyncio.Queue, session: aiohttp.ClientSession, head
             #dates = TestUtil.pathedFiles[(*path,)]
             #getgdoc(TestUtil.creds, fileId, dates)
 
-    secs = 30
-    logger.warning("getRevision task has ended, waiting for {x} seconds for all other tasks to finish", x = secs)
+    secs = 60
+    logger.warning(f"getRevision task has ended, waiting for {secs} seconds for all other tasks to finish")
     await asyncio.sleep(secs)
     endEvent.set()
     logger.warning("Close event has been set. Expect print task to finish soon")
