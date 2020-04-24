@@ -1,6 +1,6 @@
 docker build -t henry2833/pydocs:$1 .
 
-if [ "$2" = "y" ]
+if [ "$2" = "y" ] || [ "$2" = "a" ]
 then
   echo "pushing to registry"
   docker tag henry2833/pydocs:$1 registry.heroku.com/pydocs123/$3
@@ -8,14 +8,14 @@ then
   heroku container:release $3
 fi
 
-if [ "$2" = "p" ]
+if [ "$2" = "p" ] || [ "$2" = "a" ]
 then
   echo "pushing"
   docker push henry2833/pydocs:$1
 fi
 
 
-if [ "$2" = "o" ]
+if [ "$2" = "o" ] || [ "$2" = "a" ]
 then
     echo "openshift"
     opens=default-route-openshift-image-registry.apps.us-east-2.starter.openshift-online.com/pydocs/pydocs

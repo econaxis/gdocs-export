@@ -78,9 +78,9 @@ def handle_exception(exc_type, exc_value, exc_traceback):
 
     logger.critical("exiting! from sshook")
 
-    logger.info("sending to default hook")
+    #logger.info("sending to default hook")
     #sys.__excepthook__(exc_type, exc_value, exc_traceback)
-    return
+    return 0 
 
 
 sys.excepthook = handle_exception

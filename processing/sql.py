@@ -22,7 +22,7 @@ PARAMS = os.environ["SQL_CONN"]
 
 logging.debug(PARAMS)
 
-ENGINE = sqlal.create_engine("mssql+pyodbc:///?odbc_connect=%s" % PARAMS, pool_size=29, echo = False, max_overflow=300)
+ENGINE = sqlal.create_engine("mssql+pyodbc:///?odbc_connect=%s" % PARAMS, pool_size=5, echo = False, max_overflow=300)
 #ENGINE = sqlal.create_engine('sqlite+pysqlite:///test.db', echo = True)
 logger = logging.getLogger(__name__)
 

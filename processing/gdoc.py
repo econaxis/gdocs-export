@@ -1,7 +1,7 @@
 import aiohttp
 from datetime import datetime
 import asyncio
-import json
+import ujson as json
 import logging
 
 logger = logging.getLogger(__name__)
@@ -31,6 +31,7 @@ class GDoc():
         logger.debug("after await %s", self.last_revision_id)
 
         dates = await self.download_details(self.last_revision_id)
+
         return dates
 
 
@@ -47,7 +48,8 @@ class GDoc():
                     await asyncio.sleep(7)
                     await self.get_last_revision(retry = True)
                 else:
-                    rev = await response.json()
+                    rev = await response.text()
+                    rev = json.loads(rev)
                     self.last_revision_id = rev["revisions"][-1]["id"]
                     logger.debug("last revision id %s", self.last_revision_id)
                     return 0
@@ -60,15 +62,17 @@ class GDoc():
 
         try:
             async with self.session.get(url = url, headers = self.headers) as response:
-                if(response.status != 200):
-                    return -1
+                
+                assert response.status == 200
 
                 text = await response.text()
                 revision_details = json.loads(text[5:])
 
                 logger.log(1, revision_details['changelog'])
 
-                dates = [datetime.fromtimestamp(x[1]/1e3) for x in revision_details['changelog']]
+                dates = [None]*len(revision_details['changelog'])
+                for count,x in enumerate(revision_details['changelog']):
+                    dates[count] =datetime.fromtimestamp(x[1]/1e3) 
 
                 return dates
         except:
