@@ -1,0 +1,62 @@
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Files|files) _configure_property(owner, RelationshipProperty)
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Files|files) _configure_property(dates, RelationshipProperty)
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Files|files) _configure_property(name, RelationshipProperty)
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Files|files) _configure_property(id, Column)
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Files|files) _configure_property(fileId, Column)
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Files|files) _configure_property(lastModDate, Column)
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Files|files) _configure_property(parent_id, Column)
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Files|files) _configure_property(isFile, Column)
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Files|files) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<files>, primary_key=True, nullable=False)])
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Files|files) constructed
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Owner|owner) _configure_property(files, RelationshipProperty)
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Owner|owner) _configure_property(id, Column)
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Owner|owner) _configure_property(name, Column)
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Owner|owner) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<owner>, primary_key=True, nullable=False)])
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Owner|owner) constructed
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Dates|dates) _configure_property(files, RelationshipProperty)
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Dates|dates) _configure_property(id, Column)
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Dates|dates) _configure_property(fileId, Column)
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Dates|dates) _configure_property(bins, Column)
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Dates|dates) _configure_property(values, Column)
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Dates|dates) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<dates>, primary_key=True, nullable=False)])
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Dates|dates) constructed
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Closure|closure) _configure_property(files_relationship, RelationshipProperty)
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Closure|closure) _configure_property(parent_relationship, RelationshipProperty)
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Closure|closure) _configure_property(owner, RelationshipProperty)
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Closure|closure) _configure_property(id, Column)
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Closure|closure) _configure_property(parent, Column)
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Closure|closure) _configure_property(child, Column)
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Closure|closure) _configure_property(owner_id, Column)
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Closure|closure) _configure_property(depth, Column)
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Closure|closure) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<closure>, primary_key=True, nullable=False)])
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Closure|closure) constructed
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Filename|filename) _configure_property(files, RelationshipProperty)
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Filename|filename) _configure_property(owner, RelationshipProperty)
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Filename|filename) _configure_property(id, Column)
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Filename|filename) _configure_property(fileId, Column)
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Filename|filename) _configure_property(fileName, Column)
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Filename|filename) _configure_property(owner_id, Column)
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Filename|filename) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<filename>, primary_key=True, nullable=False)])
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Filename|filename) constructed
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Tasks|tasks) _configure_property(id, Column)
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Tasks|tasks) _configure_property(path, Column)
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Tasks|tasks) _configure_property(creds, Column)
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Tasks|tasks) _configure_property(fileid, Column)
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Tasks|tasks) _configure_property(userid, Column)
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Tasks|tasks) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<tasks>, primary_key=True, nullable=False)])
+mapper.p:26,12:21:14:_log:1998:pXFgBw -- (Tasks|tasks) constructed
+configlo:26,12:21:14:handle_exception:87:pXFgBw -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 193, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/henry/pydocs/processing/sql.py", line 28, in <module>
+    ENGINE = sqlal.create_engine('sqlite:///foo.db', pool_size = 100)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/__init__.py", line 479, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/strategies.py", line 164, in create
+    raise TypeError(
+TypeError: Invalid argument(s) 'pool_size' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components.
+configlo:26,12:21:14:mp_sendmail:120:pXFgBw -- sending mail
+configlo:26,12:21:15:handle_exception:91:pXFgBw -- exiting! from sshook

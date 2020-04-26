@@ -1,0 +1,278 @@
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Files|files) _configure_property(owner, RelationshipProperty)
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Files|files) _configure_property(dates, RelationshipProperty)
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Files|files) _configure_property(name, RelationshipProperty)
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Files|files) _configure_property(id, Column)
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Files|files) _configure_property(fileId, Column)
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Files|files) _configure_property(lastModDate, Column)
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Files|files) _configure_property(parent_id, Column)
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Files|files) _configure_property(isFile, Column)
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Files|files) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<files>, primary_key=True, nullable=False)])
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Files|files) constructed
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Owner|owner) _configure_property(files, RelationshipProperty)
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Owner|owner) _configure_property(id, Column)
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Owner|owner) _configure_property(name, Column)
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Owner|owner) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<owner>, primary_key=True, nullable=False)])
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Owner|owner) constructed
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Dates|dates) _configure_property(files, RelationshipProperty)
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Dates|dates) _configure_property(id, Column)
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Dates|dates) _configure_property(fileId, Column)
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Dates|dates) _configure_property(bins, Column)
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Dates|dates) _configure_property(values, Column)
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Dates|dates) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<dates>, primary_key=True, nullable=False)])
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Dates|dates) constructed
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Closure|closure) _configure_property(files_relationship, RelationshipProperty)
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Closure|closure) _configure_property(parent_relationship, RelationshipProperty)
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Closure|closure) _configure_property(owner, RelationshipProperty)
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Closure|closure) _configure_property(id, Column)
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Closure|closure) _configure_property(parent, Column)
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Closure|closure) _configure_property(child, Column)
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Closure|closure) _configure_property(owner_id, Column)
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Closure|closure) _configure_property(depth, Column)
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Closure|closure) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<closure>, primary_key=True, nullable=False)])
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Closure|closure) constructed
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Filename|filename) _configure_property(files, RelationshipProperty)
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Filename|filename) _configure_property(owner, RelationshipProperty)
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Filename|filename) _configure_property(id, Column)
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Filename|filename) _configure_property(fileId, Column)
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Filename|filename) _configure_property(fileName, Column)
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Filename|filename) _configure_property(owner_id, Column)
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Filename|filename) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<filename>, primary_key=True, nullable=False)])
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Filename|filename) constructed
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Tasks|tasks) _configure_property(id, Column)
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Tasks|tasks) _configure_property(path, Column)
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Tasks|tasks) _configure_property(creds, Column)
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Tasks|tasks) _configure_property(fileid, Column)
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Tasks|tasks) _configure_property(userid, Column)
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Tasks|tasks) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<tasks>, primary_key=True, nullable=False)])
+mapper.p:26,12:14:35:_log:1998:3pl62w -- (Tasks|tasks) constructed
+base.py:26,12:14:36:__connect:653:3pl62w -- Created new connection <pyodbc.Connection object at 0x7f8263f17030>
+base.py:26,12:14:36:_execute_context:1205:3pl62w -- SELECT CAST(SERVERPROPERTY('ProductVersion') AS VARCHAR)
+base.py:26,12:14:36:_execute_context:1207:3pl62w -- ()
+result.p:26,12:14:36:_init_metadata:809:3pl62w -- Col ('',)
+result.p:26,12:14:36:process_rows:1249:3pl62w -- Row ('12.0.2000.8',)
+base.py:26,12:14:36:_execute_context:1205:3pl62w -- SELECT schema_name()
+base.py:26,12:14:36:_execute_context:1207:3pl62w -- ()
+result.p:26,12:14:36:_init_metadata:809:3pl62w -- Col ('',)
+result.p:26,12:14:36:process_rows:1249:3pl62w -- Row ('dbo',)
+base.py:26,12:14:37:_cursor_execute:1311:3pl62w -- SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+base.py:26,12:14:37:_cursor_execute:1312:3pl62w -- ()
+base.py:26,12:14:37:_cursor_execute:1311:3pl62w -- SELECT CAST('test unicode returns' AS NVARCHAR(60)) AS anon_1
+base.py:26,12:14:37:_cursor_execute:1312:3pl62w -- ()
+base.py:26,12:14:37:checkout:507:3pl62w -- Connection <pyodbc.Connection object at 0x7f8263f17030> checked out from pool
+base.py:26,12:14:37:_execute_context:1205:3pl62w -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:26,12:14:37:_execute_context:1207:3pl62w -- ('files', 'dbo')
+result.p:26,12:14:37:_init_metadata:809:3pl62w -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:26,12:14:37:process_rows:1249:3pl62w -- Row ('dbo', 'files', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:26,12:14:37:_execute_context:1205:3pl62w -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:26,12:14:37:_execute_context:1207:3pl62w -- ('owner', 'dbo')
+result.p:26,12:14:37:_init_metadata:809:3pl62w -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:26,12:14:37:process_rows:1249:3pl62w -- Row ('dbo', 'owner', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:26,12:14:37:_execute_context:1205:3pl62w -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:26,12:14:37:_execute_context:1207:3pl62w -- ('dates', 'dbo')
+result.p:26,12:14:37:_init_metadata:809:3pl62w -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:26,12:14:37:process_rows:1249:3pl62w -- Row ('dbo', 'dates', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:26,12:14:37:_execute_context:1205:3pl62w -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:26,12:14:37:_execute_context:1207:3pl62w -- ('closure', 'dbo')
+result.p:26,12:14:37:_init_metadata:809:3pl62w -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:26,12:14:37:process_rows:1249:3pl62w -- Row ('dbo', 'closure', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:26,12:14:38:_execute_context:1205:3pl62w -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:26,12:14:38:_execute_context:1207:3pl62w -- ('filename', 'dbo')
+result.p:26,12:14:38:_init_metadata:809:3pl62w -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:26,12:14:38:process_rows:1249:3pl62w -- Row ('dbo', 'filename', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:26,12:14:38:_execute_context:1205:3pl62w -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:26,12:14:38:_execute_context:1207:3pl62w -- ('tasks', 'dbo')
+result.p:26,12:14:38:_init_metadata:809:3pl62w -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:26,12:14:38:process_rows:1249:3pl62w -- Row ('dbo', 'tasks', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:26,12:14:38:_finalize_fairy:684:3pl62w -- Connection <pyodbc.Connection object at 0x7f8263f17030> being returned to pool
+base.py:26,12:14:38:_reset:872:3pl62w -- Connection <pyodbc.Connection object at 0x7f8263f17030> rollback-on-return
+base.py:26,12:14:38:checkout:507:3pl62w -- Connection <pyodbc.Connection object at 0x7f8263f17030> checked out from pool
+sql.py:26,12:14:38:start:154:3pl62w -- STARTING SQL testing2020-04-26 12:14:38.456232 /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+sql.py:26,12:14:38:start:156:3pl62w -- setting sys except hook
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Files|files) _post_configure_properties() started
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Files|files) initialize prop owner
+relation:26,12:14:38:_log_joins:2426:3pl62w -- Files.owner setup primary join owner.id = files.parent_id
+relation:26,12:14:38:_log_joins:2427:3pl62w -- Files.owner setup secondary join None
+relation:26,12:14:38:_log_joins:2428:3pl62w -- Files.owner synchronize pairs [(owner.id => files.parent_id)]
+relation:26,12:14:38:_log_joins:2435:3pl62w -- Files.owner secondary synchronize pairs []
+relation:26,12:14:38:_log_joins:2443:3pl62w -- Files.owner local/remote pairs [(files.parent_id / owner.id)]
+relation:26,12:14:38:_log_joins:2450:3pl62w -- Files.owner remote columns [owner.id]
+relation:26,12:14:38:_log_joins:2455:3pl62w -- Files.owner local columns [files.parent_id]
+relation:26,12:14:38:_log_joins:2460:3pl62w -- Files.owner relationship direction symbol('MANYTOONE')
+strategi:26,12:14:38:__init__:547:3pl62w -- Files.owner lazy loading clause owner.id = :param_1
+strategi:26,12:14:38:__init__:572:3pl62w -- Files.owner will use query.get() to optimize instance loads
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Files|files) initialize prop dates
+relation:26,12:14:38:_log_joins:2426:3pl62w -- Files.dates setup primary join files.id = dates."fileId"
+relation:26,12:14:38:_log_joins:2427:3pl62w -- Files.dates setup secondary join None
+relation:26,12:14:38:_log_joins:2428:3pl62w -- Files.dates synchronize pairs [(files.id => dates.fileId)]
+relation:26,12:14:38:_log_joins:2435:3pl62w -- Files.dates secondary synchronize pairs []
+relation:26,12:14:38:_log_joins:2443:3pl62w -- Files.dates local/remote pairs [(files.id / dates.fileId)]
+relation:26,12:14:38:_log_joins:2450:3pl62w -- Files.dates remote columns [dates.fileId]
+relation:26,12:14:38:_log_joins:2455:3pl62w -- Files.dates local columns [files.id]
+relation:26,12:14:38:_log_joins:2460:3pl62w -- Files.dates relationship direction symbol('ONETOMANY')
+strategi:26,12:14:38:__init__:547:3pl62w -- Files.dates lazy loading clause :param_1 = dates."fileId"
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Files|files) initialize prop name
+relation:26,12:14:38:_log_joins:2426:3pl62w -- Files.name setup primary join files.id = filename."fileId"
+relation:26,12:14:38:_log_joins:2427:3pl62w -- Files.name setup secondary join None
+relation:26,12:14:38:_log_joins:2428:3pl62w -- Files.name synchronize pairs [(files.id => filename.fileId)]
+relation:26,12:14:38:_log_joins:2435:3pl62w -- Files.name secondary synchronize pairs []
+relation:26,12:14:38:_log_joins:2443:3pl62w -- Files.name local/remote pairs [(files.id / filename.fileId)]
+relation:26,12:14:38:_log_joins:2450:3pl62w -- Files.name remote columns [filename.fileId]
+relation:26,12:14:38:_log_joins:2455:3pl62w -- Files.name local columns [files.id]
+relation:26,12:14:38:_log_joins:2460:3pl62w -- Files.name relationship direction symbol('ONETOMANY')
+strategi:26,12:14:38:__init__:547:3pl62w -- Files.name lazy loading clause :param_1 = filename."fileId"
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Files|files) initialize prop id
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Files|files) initialize prop fileId
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Files|files) initialize prop lastModDate
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Files|files) initialize prop parent_id
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Files|files) initialize prop isFile
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Files|files) _post_configure_properties() complete
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Owner|owner) _post_configure_properties() started
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Owner|owner) initialize prop files
+relation:26,12:14:38:_log_joins:2426:3pl62w -- Owner.files setup primary join owner.id = files.parent_id
+relation:26,12:14:38:_log_joins:2427:3pl62w -- Owner.files setup secondary join None
+relation:26,12:14:38:_log_joins:2428:3pl62w -- Owner.files synchronize pairs [(owner.id => files.parent_id)]
+relation:26,12:14:38:_log_joins:2435:3pl62w -- Owner.files secondary synchronize pairs []
+relation:26,12:14:38:_log_joins:2443:3pl62w -- Owner.files local/remote pairs [(owner.id / files.parent_id)]
+relation:26,12:14:38:_log_joins:2450:3pl62w -- Owner.files remote columns [files.parent_id]
+relation:26,12:14:38:_log_joins:2455:3pl62w -- Owner.files local columns [owner.id]
+relation:26,12:14:38:_log_joins:2460:3pl62w -- Owner.files relationship direction symbol('ONETOMANY')
+strategi:26,12:14:38:__init__:547:3pl62w -- Owner.files lazy loading clause :param_1 = files.parent_id
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Owner|owner) initialize prop id
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Owner|owner) initialize prop name
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Owner|owner) _post_configure_properties() complete
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Dates|dates) _post_configure_properties() started
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Dates|dates) initialize prop files
+relation:26,12:14:38:_log_joins:2426:3pl62w -- Dates.files setup primary join files.id = dates."fileId"
+relation:26,12:14:38:_log_joins:2427:3pl62w -- Dates.files setup secondary join None
+relation:26,12:14:38:_log_joins:2428:3pl62w -- Dates.files synchronize pairs [(files.id => dates.fileId)]
+relation:26,12:14:38:_log_joins:2435:3pl62w -- Dates.files secondary synchronize pairs []
+relation:26,12:14:38:_log_joins:2443:3pl62w -- Dates.files local/remote pairs [(dates.fileId / files.id)]
+relation:26,12:14:38:_log_joins:2450:3pl62w -- Dates.files remote columns [files.id]
+relation:26,12:14:38:_log_joins:2455:3pl62w -- Dates.files local columns [dates.fileId]
+relation:26,12:14:38:_log_joins:2460:3pl62w -- Dates.files relationship direction symbol('MANYTOONE')
+strategi:26,12:14:38:__init__:547:3pl62w -- Dates.files lazy loading clause files.id = :param_1
+strategi:26,12:14:38:__init__:572:3pl62w -- Dates.files will use query.get() to optimize instance loads
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Dates|dates) initialize prop id
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Dates|dates) initialize prop fileId
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Dates|dates) initialize prop bins
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Dates|dates) initialize prop values
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Dates|dates) _post_configure_properties() complete
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Closure|closure) _post_configure_properties() started
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Closure|closure) initialize prop files_relationship
+relation:26,12:14:38:_log_joins:2426:3pl62w -- Closure.files_relationship setup primary join files.id = closure.child
+relation:26,12:14:38:_log_joins:2427:3pl62w -- Closure.files_relationship setup secondary join None
+relation:26,12:14:38:_log_joins:2428:3pl62w -- Closure.files_relationship synchronize pairs [(files.id => closure.child)]
+relation:26,12:14:38:_log_joins:2435:3pl62w -- Closure.files_relationship secondary synchronize pairs []
+relation:26,12:14:38:_log_joins:2443:3pl62w -- Closure.files_relationship local/remote pairs [(closure.child / files.id)]
+relation:26,12:14:38:_log_joins:2450:3pl62w -- Closure.files_relationship remote columns [files.id]
+relation:26,12:14:38:_log_joins:2455:3pl62w -- Closure.files_relationship local columns [closure.child]
+relation:26,12:14:38:_log_joins:2460:3pl62w -- Closure.files_relationship relationship direction symbol('MANYTOONE')
+strategi:26,12:14:38:__init__:547:3pl62w -- Closure.files_relationship lazy loading clause files.id = :param_1
+strategi:26,12:14:38:__init__:572:3pl62w -- Closure.files_relationship will use query.get() to optimize instance loads
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Closure|closure) initialize prop parent_relationship
+relation:26,12:14:38:_log_joins:2426:3pl62w -- Closure.parent_relationship setup primary join files.id = closure.parent
+relation:26,12:14:38:_log_joins:2427:3pl62w -- Closure.parent_relationship setup secondary join None
+relation:26,12:14:38:_log_joins:2428:3pl62w -- Closure.parent_relationship synchronize pairs [(files.id => closure.parent)]
+relation:26,12:14:38:_log_joins:2435:3pl62w -- Closure.parent_relationship secondary synchronize pairs []
+relation:26,12:14:38:_log_joins:2443:3pl62w -- Closure.parent_relationship local/remote pairs [(closure.parent / files.id)]
+relation:26,12:14:38:_log_joins:2450:3pl62w -- Closure.parent_relationship remote columns [files.id]
+relation:26,12:14:38:_log_joins:2455:3pl62w -- Closure.parent_relationship local columns [closure.parent]
+relation:26,12:14:38:_log_joins:2460:3pl62w -- Closure.parent_relationship relationship direction symbol('MANYTOONE')
+strategi:26,12:14:38:__init__:547:3pl62w -- Closure.parent_relationship lazy loading clause files.id = :param_1
+strategi:26,12:14:38:__init__:572:3pl62w -- Closure.parent_relationship will use query.get() to optimize instance loads
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Closure|closure) initialize prop owner
+relation:26,12:14:38:_log_joins:2426:3pl62w -- Closure.owner setup primary join owner.id = closure.owner_id
+relation:26,12:14:38:_log_joins:2427:3pl62w -- Closure.owner setup secondary join None
+relation:26,12:14:38:_log_joins:2428:3pl62w -- Closure.owner synchronize pairs [(owner.id => closure.owner_id)]
+relation:26,12:14:38:_log_joins:2435:3pl62w -- Closure.owner secondary synchronize pairs []
+relation:26,12:14:38:_log_joins:2443:3pl62w -- Closure.owner local/remote pairs [(closure.owner_id / owner.id)]
+relation:26,12:14:38:_log_joins:2450:3pl62w -- Closure.owner remote columns [owner.id]
+relation:26,12:14:38:_log_joins:2455:3pl62w -- Closure.owner local columns [closure.owner_id]
+relation:26,12:14:38:_log_joins:2460:3pl62w -- Closure.owner relationship direction symbol('MANYTOONE')
+strategi:26,12:14:38:__init__:547:3pl62w -- Closure.owner lazy loading clause owner.id = :param_1
+strategi:26,12:14:38:__init__:572:3pl62w -- Closure.owner will use query.get() to optimize instance loads
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Closure|closure) initialize prop id
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Closure|closure) initialize prop parent
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Closure|closure) initialize prop child
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Closure|closure) initialize prop owner_id
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Closure|closure) initialize prop depth
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Closure|closure) _post_configure_properties() complete
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Filename|filename) _post_configure_properties() started
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Filename|filename) initialize prop files
+relation:26,12:14:38:_log_joins:2426:3pl62w -- Filename.files setup primary join files.id = filename."fileId"
+relation:26,12:14:38:_log_joins:2427:3pl62w -- Filename.files setup secondary join None
+relation:26,12:14:38:_log_joins:2428:3pl62w -- Filename.files synchronize pairs [(files.id => filename.fileId)]
+relation:26,12:14:38:_log_joins:2435:3pl62w -- Filename.files secondary synchronize pairs []
+relation:26,12:14:38:_log_joins:2443:3pl62w -- Filename.files local/remote pairs [(filename.fileId / files.id)]
+relation:26,12:14:38:_log_joins:2450:3pl62w -- Filename.files remote columns [files.id]
+relation:26,12:14:38:_log_joins:2455:3pl62w -- Filename.files local columns [filename.fileId]
+relation:26,12:14:38:_log_joins:2460:3pl62w -- Filename.files relationship direction symbol('MANYTOONE')
+strategi:26,12:14:38:__init__:547:3pl62w -- Filename.files lazy loading clause files.id = :param_1
+strategi:26,12:14:38:__init__:572:3pl62w -- Filename.files will use query.get() to optimize instance loads
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Filename|filename) initialize prop owner
+relation:26,12:14:38:_log_joins:2426:3pl62w -- Filename.owner setup primary join owner.id = filename.owner_id
+relation:26,12:14:38:_log_joins:2427:3pl62w -- Filename.owner setup secondary join None
+relation:26,12:14:38:_log_joins:2428:3pl62w -- Filename.owner synchronize pairs [(owner.id => filename.owner_id)]
+relation:26,12:14:38:_log_joins:2435:3pl62w -- Filename.owner secondary synchronize pairs []
+relation:26,12:14:38:_log_joins:2443:3pl62w -- Filename.owner local/remote pairs [(filename.owner_id / owner.id)]
+relation:26,12:14:38:_log_joins:2450:3pl62w -- Filename.owner remote columns [owner.id]
+relation:26,12:14:38:_log_joins:2455:3pl62w -- Filename.owner local columns [filename.owner_id]
+relation:26,12:14:38:_log_joins:2460:3pl62w -- Filename.owner relationship direction symbol('MANYTOONE')
+strategi:26,12:14:38:__init__:547:3pl62w -- Filename.owner lazy loading clause owner.id = :param_1
+strategi:26,12:14:38:__init__:572:3pl62w -- Filename.owner will use query.get() to optimize instance loads
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Filename|filename) initialize prop id
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Filename|filename) initialize prop fileId
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Filename|filename) initialize prop fileName
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Filename|filename) initialize prop owner_id
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Filename|filename) _post_configure_properties() complete
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Tasks|tasks) _post_configure_properties() started
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Tasks|tasks) initialize prop id
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Tasks|tasks) initialize prop path
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Tasks|tasks) initialize prop creds
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Tasks|tasks) initialize prop fileid
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Tasks|tasks) initialize prop userid
+mapper.p:26,12:14:38:_log:1998:3pl62w -- (Tasks|tasks) _post_configure_properties() complete
+sql.py:26,12:14:38:start:163:3pl62w -- Owner name: testing2020-04-04 26 AprbEW_McUVgg
+base.py:26,12:14:39:__connect:653:3pl62w -- Created new connection <pyodbc.Connection object at 0x7f8261ad7c70>
+base.py:26,12:14:39:checkout:507:3pl62w -- Connection <pyodbc.Connection object at 0x7f8261ad7c70> checked out from pool
+base.py:26,12:14:39:_begin_impl:711:3pl62w -- BEGIN (implicit)
+base.py:26,12:14:39:_execute_context:1205:3pl62w -- INSERT INTO owner (name) OUTPUT inserted.id VALUES (?)
+base.py:26,12:14:39:_execute_context:1207:3pl62w -- ('testing2020-04-04 26 AprbEW_McUVgg',)
+result.p:26,12:14:39:_init_metadata:809:3pl62w -- Col ('id',)
+result.p:26,12:14:39:process_rows:1249:3pl62w -- Row (136,)
+base.py:26,12:14:39:_commit_impl:753:3pl62w -- COMMIT
+base.py:26,12:14:39:_finalize_fairy:684:3pl62w -- Connection <pyodbc.Connection object at 0x7f8261ad7c70> being returned to pool
+base.py:26,12:14:39:_reset:872:3pl62w -- Connection <pyodbc.Connection object at 0x7f8261ad7c70> rollback-on-return
+configlo:26,12:14:39:handle_exception:87:3pl62w -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 193, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/henry/pydocs/processing/sql.py", line 315, in <module>
+    start("testing" + datetime.now().__str__(), wpath)
+  File "/home/henry/pydocs/processing/sql.py", line 169, in start
+    owner_id = owner.id
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/attributes.py", line 286, in __get__
+    return self.impl.get(instance_state(instance), dict_)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/attributes.py", line 717, in get
+    value = state._load_expired(state, passive)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/state.py", line 652, in _load_expired
+    self.manager.deferred_scalar_loader(self, toload)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/loading.py", line 944, in load_scalar_attributes
+    raise orm_exc.DetachedInstanceError(
+sqlalchemy.orm.exc.DetachedInstanceError: Instance <Owner at 0x7f8263f33340> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: http://sqlalche.me/e/bhk3)
+configlo:26,12:14:39:mp_sendmail:120:3pl62w -- sending mail
+configlo:26,12:14:40:handle_exception:91:3pl62w -- exiting! from sshook

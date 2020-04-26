@@ -21,6 +21,7 @@ logger = logging.getLogger(__name__)
 
 pprint = pprint.PrettyPrinter(indent=4).pprint
 
+timeout = aiohttp.ClientTimeout(total=10)
 
 
 
@@ -66,14 +67,15 @@ async def getIdsRecursive (drive_url, folders: asyncio.Queue,
         (id, path, retries) = folderIdTuple
 
         # Root id is different structure
-        data = None
         if(id == "root"):
             data = dict(corpora="allDrives", includeItemsFromAllDrives='true',
-                        supportsTeamDrives='true')
+                        supportsTeamDrives='true',
+                        fields = 'files/mimeType, files/id, files/name, files/capabilities/canReadRevisions')
         else:
             query = "'" + id + "' in parents"
             data = dict(q=query, corpora="allDrives",
-                        includeItemsFromAllDrives='true', supportsTeamDrives='true')
+                        includeItemsFromAllDrives='true', supportsTeamDrives='true',
+                        fields = 'files/mimeType, files/id, files/name, files/capabilities/canReadRevisions')
 
         try:
             async with session.get(url=drive_url, params=data, headers=headers) as response:
@@ -94,7 +96,6 @@ async def getIdsRecursive (drive_url, folders: asyncio.Queue,
 
         global idmapper
         for resFile in resp["files"]:
-
             ent_name = "".join(["" if c in ['\"', '\'', '\\']
                         else c for c in resFile["name"]]).rstrip()[0:298]
 
@@ -103,6 +104,8 @@ async def getIdsRecursive (drive_url, folders: asyncio.Queue,
             if(resFile["mimeType"] == "application/vnd.google-apps.folder"):
                 await folders.put((id, path + [id], 0))
             elif (resFile["mimeType"] in ACCEPTED_TYPES):
+                if(resFile["capabilities"]["canReadRevisions"] == False):
+                    continue
                 # First element id is not used for naming, only for api calls
                 await files.put([id, resFile["mimeType"], path + [id], 0])
 
@@ -170,14 +173,10 @@ async def getRevision(files: asyncio.Queue, session: aiohttp.ClientSession, head
 
         (fileId, mimeType, path, tried) = fileTuple
 
-        if(len(TestUtil.pathedFiles) > 10):
-            pass
-            #Sleep to avoid xs memory usage
-            #await asyncio.sleep(10)
 
-
-        if(mimeType != "application/vnd.google-apps.document"):
+        if(mimeType != "application/vnd.google-apps.document" or True):
             logger.debug("not google doc")
+            pass
             await queryDriveActivity(fileTuple, files, session, headers)
         else:
             gd = GDoc()
@@ -222,13 +221,13 @@ async def start():
     await folders.put([SEED_ID, ["root"], 0])
 
 
-    async with aiohttp.ClientSession() as session:
+    async with aiohttp.ClientSession(timeout = timeout) as session:
         # Generate list of Workers to explore folder structure
 
         endEvent = asyncio.Event()
 
-        fileExplorers = [loop.create_task(getIdsRecursive("https://www.googleapis.com/drive/v3/files",
-                                                             folders, files, session, TestUtil.headers)) for i in range(1)]
+        fileExplorers = [loop.create_task(getIdsRecursive("https://www.googleapis.com/drive/v3/files", \
+                                         folders, files, session, TestUtil.headers)) for i in range(1)]
 
         revisionExplorer = [loop.create_task(getRevision(files, session, TestUtil.headers, endEvent))
                             for i in range(workerInstances)]

@@ -25,6 +25,7 @@ token = datetime.now().strftime("%d-%H.%f") + scrt
 PARAMS = os.environ["SQL_CONN"]
 
 ENGINE = sqlal.create_engine("mssql+pyodbc:///?odbc_connect=%s" % PARAMS, pool_size=15, echo = False, max_overflow=300)
+#ENGINE = sqlal.create_engine('sqlite:///foo.db')
 
 logger = logging.getLogger(__name__)
 
@@ -42,7 +43,7 @@ def report(lt_files, print_event):
         logger.info("lt_files size %d ", lt_files.qsize())
         time.sleep(30)
 
-        if random.random() < 0.5:
+        if random.random() < 0.33:
             p = configlog.sendmail(True)
             time.sleep(10)
             p.join()
@@ -109,8 +110,11 @@ def commit(q, _type = None, add = False):
 
 
 def load_from_dict(lt_files, fileid_obj_map):
-    time.sleep(random.uniform(5, 40))
     sess = v_scoped_session()
+
+    key = secrets.token_urlsafe(3)
+    time.sleep(random.uniform(0, 10))
+
     counter = 0
     lt_dates = Queue()
 
@@ -144,7 +148,9 @@ def load_from_dict(lt_files, fileid_obj_map):
             sess.commit()
 
 def start(userid, path):
+
     sess = v_scoped_session()
+
     logger.info("STARTING SQL %s %s", userid, path)
 
     logger.debug("setting sys except hook")
@@ -158,6 +164,11 @@ def start(userid, path):
     sess.add(owner)
     sess.commit()
 
+    global owner_id
+    owner_id = owner.id
+
+    v_scoped_session.remove()
+
     logger.info("Added owner row, name: %s id: %s", owner.name, owner.id)
 
     files = {}
@@ -166,7 +177,7 @@ def start(userid, path):
     procs = []
 
 
-    for n in names[0:2]:
+    for n in names:
         files.update(pickle.load(open(n, 'rb')))
         continue
 
@@ -198,26 +209,41 @@ def start(userid, path):
             last_mod = None
 
         file_obj = Files(fileId = fileId + ":"+token + secrets.token_urlsafe(3),
-                lastModDate = last_mod, owner = owner, isFile = True)
+                lastModDate = last_mod, parent_id = owner_id, isFile = True)
 
         fileid_obj_map[fileId] = file_obj
 
         lt_files.put((file_obj, files[f]))
 
-    logger.debug("len of id map %d len of files %d", len(fileid_obj_map), lt_files.qsize())
+    logger.info("len of id map %d len of files %d", len(fileid_obj_map), lt_files.qsize())
 
-   # sess.bulk_save_objects(lt_files)
+    sess.expunge_all()
+
 
     print_event = threading.Event()
 
     pr = threading.Thread(target = report, args = (lt_files, print_event))
     pr.start()
 
-    load_from_dict(lt_files, fileid_obj_map)
     p = threading.Thread(target = load_from_dict, args = (lt_files, fileid_obj_map))
+    p1 = threading.Thread(target = load_from_dict, args = (lt_files, fileid_obj_map))
+    p2 = threading.Thread(target = load_from_dict, args = (lt_files, fileid_obj_map))
+    p3 = threading.Thread(target = load_from_dict, args = (lt_files, fileid_obj_map))
+
+
     p.start()
-    logger.info("starting bulk save for lt_files")
+    time.sleep(5)
+    p1.start()
+    time.sleep(5)
+    p2.start()
+    time.sleep(5)
+    p3.start()
+
+
     p.join()
+    p1.join()
+    p2.join()
+    p3.join()
 
 
 
@@ -240,18 +266,18 @@ def start(userid, path):
         try:
             file_obj = fileid_obj_map[c[0]]
         except:
-            file_obj = Files(fileId = c[0] + ":" + token, lastModDate = None, owner = owner, isFile = False)
+            file_obj = Files(fileId = c[0] + ":" + token, lastModDate = None, parent_id = owner_id, isFile = False)
             fileid_obj_map[c[0]] = file_obj
             lt_files.append(file_obj)
 
         try:
             file_obj1 = fileid_obj_map[c[1]]
         except:
-            file_obj1 = Files(fileId = c[1] + ":" + token, lastModDate = None, owner = owner, isFile = False)
+            file_obj1 = Files(fileId = c[1] + ":" + token, lastModDate = None, parent_id = owner_id, isFile = False)
             fileid_obj_map[c[1]] = file_obj1
             lt_files.append(file_obj1)
 
-        lt_closure.append(Closure(parent_relationship = file_obj, files_relationship = fileid_obj_map[c[1]], owner = owner, depth = c[2]))
+        lt_closure.append(Closure(parent_relationship = file_obj, files_relationship = fileid_obj_map[c[1]], parent_id = owner_id, depth = c[2]))
         logger.debug("adding lt_closure")
         add_count[0]+=1
 
@@ -262,18 +288,19 @@ def start(userid, path):
             file_obj = fileid_obj_map[n]
         except:
             #Folder type
-            file_obj = Files(fileId = n + token, lastModDate = None, owner = owner, isFile = False)
+            file_obj = Files(fileId = n + token, lastModDate = None, parent_id = owner_id, isFile = False)
             fileid_obj_map[n] = file_obj
-            lt_files.append(file_obj)
+            lt_files.put(file_obj)
 
-        lt_filenames.append(Filename(fileName = idmapper[n], files = file_obj, owner = owner))
+        lt_filenames.append(Filename(fileName = idmapper[n], files = file_obj, owner_id = owner_id))
         logger.debug("adding lt_filenames")
         add_count[1]+=1
 
     logger.debug("flushing lt_filenames, lt_closure")
-    adder(lt_filenames)
 
-    adder(lt_closure)
+    adder(lt_filenames, sess)
+
+    adder(lt_closure, sess)
 
     sess.flush()
 

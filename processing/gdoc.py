@@ -1,4 +1,5 @@
 import requests
+import textwrap
 import time
 from pprint import pformat
 import random
@@ -7,10 +8,15 @@ import asyncio
 import ujson as json
 import logging
 
+
+from types import SimpleNamespace
+
 logger = logging.getLogger(__name__)
 
 base_url = 'https://docs.google.com/document/d/{file_id}/revisions/load?id={file_id}&start=1&end={end}'
 url = 'https://www.googleapis.com/drive/v3/files/{}/revisions'
+
+timeout = aiohttp.ClientTimeout(total=15)
 
 class GDoc():
 
@@ -40,10 +46,15 @@ class GDoc():
     async def get_last_revision(self, retry = False):
 
         try:
-            async with self.session.get(url=url.format(self.fileId), headers=self.headers) as response:
+            async with self.session.get(url=url.format(self.fileId), 
+                    headers=self.headers, timeout = timeout) as response:
+
                 code = response.status
                 if code != 200:
-                    #logger.debug(await response.text())
+                    logtext = await response.text()
+                    logtext = textwrap.wrap(logtext, 1000)
+                    _temp = [logger.log(1, pformat(x)) for x in logtext]
+
                     if retry:
                         return -1
                     await asyncio.sleep(7)
@@ -61,26 +72,28 @@ class GDoc():
     def download_details(self,  pipe, done_event):
 
         #Retries
-        for i in range(5):
+        for i in range(1, 3):
             url = base_url.format(file_id=self.fileId, end=self.last_revision_id)
 
             dates = []
 
+            response = SimpleNamespace(text = "Blank Filler. This will show when response is undefined")
             try:
-                response = requests.get(url = url, headers = self.headers)
+                response = requests.get(url = url, headers = self.headers, timeout = 5*i)
                 assert response.status_code == 200
             except:
-                logger.debug("Cannot get revisions.json", exc_info = True)
+                logtext = response.text
 
-                for i in pformat(response.text):
-                    logger.debug(i)
-                time.sleep(random.uniform(15, 20*i))
+                logtext = textwrap.wrap(logtext, 1000)
+                _temp = [logger.log(1, pformat(x)) for x in logtext]
+
+                logger.debug("sleeping up to %d", 20*i)
+                time.sleep(random.uniform(5, 20*i))
                 continue
 
             text = response.text
             revision_details = json.loads(text[5:])
 
-            logger.log(1, revision_details['changelog'])
 
             dates = [None]*len(revision_details['changelog'])
 
@@ -88,11 +101,11 @@ class GDoc():
                 dates[count] = x[1]/1e3
 
             pipe.send(dates)
-            done_event.set()
             pipe.close()
+            done_event.set()
             return
 
         pipe.send([])
-        done_event.set()
         pipe.close()
+        done_event.set()
         return
