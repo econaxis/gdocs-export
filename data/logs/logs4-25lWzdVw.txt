@@ -1,5 +1,0 @@
-configlo:25,16:25:15:sendmail:103:lWzdVw -- sending mail
-configlo:25,16:25:36:sendmail:103:lWzdVw -- sending mail
-configlo:25,16:25:37:sendmail:103:lWzdVw -- sending mail
-configlo:25,16:25:37:sendmail:103:lWzdVw -- sending mail
-configlo:25,16:25:38:sendmail:103:lWzdVw -- sending mail
