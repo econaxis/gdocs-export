@@ -26,7 +26,7 @@ filelog = FileHandler(logFile)
 stream = StreamHandler()
 
 stream.setLevel(logging.INFO)
-filelog.setLevel(logging.DEBUG)
+filelog.setLevel(logging.NOTSET)
 
 def semidisable(logg):
     logg.propagate=False

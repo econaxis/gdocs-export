@@ -24,7 +24,7 @@ from google.auth.transport.requests import Request
 import logging
 
 
-if (random.random() < 0.2 ):
+if (random.random() < 1 ):
     os.environ["PROFILE"] = "true"
 
 
@@ -80,7 +80,10 @@ class TestUtil:
         if ("PROFILE" in os.environ):
             tracemalloc.start()
             cls.snapshot = tracemalloc.take_snapshot()
+
         while not endEvent.is_set():
+            gc.collect()
+
             logger.warning('\n\n%sMemory usage: %s (kb)%s%d mins since start','-'*15,resource.getrusage(resource.RUSAGE_SELF).ru_maxrss, '-'*15,
                     (time.time() - cls.starttime)/60)
 
@@ -96,7 +99,6 @@ class TestUtil:
 
                 cls.snapshot = sns
 
-            gc.collect()
 
             totsize = files.qsize() + len(cls.pathedFiles) + cls.processedcount
 
@@ -106,20 +108,17 @@ class TestUtil:
                     ,cls.fileCounter)
 
             #Temp var for thread
-            p = None
+            p = configlog.sendmail(return_thread = True)
 
-            if len(cls.pathedFiles)>20:
-                cls.dump_files()
+            _sleep_time = 3
+            for i in range(10:
+                if len(cls.pathedFiles)>3:
+                    cls.dump_files()
+                await asyncio.sleep(_sleep_time / 10)
 
-                p = configlog.sendmail(return_thread = True)
-
-
-            _sleep_time = 30
-            for i in range(3):
-                #print(f"{i*_sleep_time/3} out of {_sleep_time} till next output      ", end = "\r", flush = True)
-                await asyncio.sleep(_sleep_time/3)
 
             if p:
+                logger.debug("awaiting email task join")
                 p.join()
 
     @classmethod
@@ -141,11 +140,7 @@ class TestUtil:
         p = Process(target = mp_dump, args = (histo, _filename,))
         p.start();
 
-
-
         #Dumped histo
-
-
         logger.info("histed files at %s, length %d", _filename, length)
 
         cls.pathedFiles = {}

@@ -1,0 +1,565 @@
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Files|files) _configure_property(owner, RelationshipProperty)
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Files|files) _configure_property(dates, RelationshipProperty)
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Files|files) _configure_property(name, RelationshipProperty)
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Files|files) _configure_property(id, Column)
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Files|files) _configure_property(fileId, Column)
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Files|files) _configure_property(lastModDate, Column)
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Files|files) _configure_property(parent_id, Column)
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Files|files) _configure_property(isFile, Column)
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Files|files) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<files>, primary_key=True, nullable=False)])
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Files|files) constructed
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Owner|owner) _configure_property(files, RelationshipProperty)
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Owner|owner) _configure_property(id, Column)
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Owner|owner) _configure_property(name, Column)
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Owner|owner) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<owner>, primary_key=True, nullable=False)])
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Owner|owner) constructed
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Dates|dates) _configure_property(files, RelationshipProperty)
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Dates|dates) _configure_property(id, Column)
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Dates|dates) _configure_property(fileId, Column)
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Dates|dates) _configure_property(bins, Column)
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Dates|dates) _configure_property(values, Column)
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Dates|dates) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<dates>, primary_key=True, nullable=False)])
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Dates|dates) constructed
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Closure|closure) _configure_property(files_relationship, RelationshipProperty)
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Closure|closure) _configure_property(parent_relationship, RelationshipProperty)
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Closure|closure) _configure_property(owner, RelationshipProperty)
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Closure|closure) _configure_property(id, Column)
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Closure|closure) _configure_property(parent, Column)
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Closure|closure) _configure_property(child, Column)
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Closure|closure) _configure_property(owner_id, Column)
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Closure|closure) _configure_property(depth, Column)
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Closure|closure) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<closure>, primary_key=True, nullable=False)])
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Closure|closure) constructed
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Filename|filename) _configure_property(files, RelationshipProperty)
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Filename|filename) _configure_property(owner, RelationshipProperty)
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Filename|filename) _configure_property(id, Column)
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Filename|filename) _configure_property(fileId, Column)
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Filename|filename) _configure_property(fileName, Column)
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Filename|filename) _configure_property(owner_id, Column)
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Filename|filename) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<filename>, primary_key=True, nullable=False)])
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Filename|filename) constructed
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Tasks|tasks) _configure_property(id, Column)
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Tasks|tasks) _configure_property(path, Column)
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Tasks|tasks) _configure_property(creds, Column)
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Tasks|tasks) _configure_property(fileid, Column)
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Tasks|tasks) _configure_property(userid, Column)
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Tasks|tasks) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<tasks>, primary_key=True, nullable=False)])
+mapper.p:26,12:17:35:_log:1998:dR9hUA -- (Tasks|tasks) constructed
+base.py:26,12:17:36:__connect:653:dR9hUA -- Created new connection <pyodbc.Connection object at 0x7f1492369030>
+base.py:26,12:17:36:_execute_context:1205:dR9hUA -- SELECT CAST(SERVERPROPERTY('ProductVersion') AS VARCHAR)
+base.py:26,12:17:36:_execute_context:1207:dR9hUA -- ()
+result.p:26,12:17:36:_init_metadata:809:dR9hUA -- Col ('',)
+result.p:26,12:17:36:process_rows:1249:dR9hUA -- Row ('12.0.2000.8',)
+base.py:26,12:17:36:_execute_context:1205:dR9hUA -- SELECT schema_name()
+base.py:26,12:17:36:_execute_context:1207:dR9hUA -- ()
+result.p:26,12:17:36:_init_metadata:809:dR9hUA -- Col ('',)
+result.p:26,12:17:36:process_rows:1249:dR9hUA -- Row ('dbo',)
+base.py:26,12:17:36:_cursor_execute:1311:dR9hUA -- SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+base.py:26,12:17:36:_cursor_execute:1312:dR9hUA -- ()
+base.py:26,12:17:37:_cursor_execute:1311:dR9hUA -- SELECT CAST('test unicode returns' AS NVARCHAR(60)) AS anon_1
+base.py:26,12:17:37:_cursor_execute:1312:dR9hUA -- ()
+base.py:26,12:17:37:checkout:507:dR9hUA -- Connection <pyodbc.Connection object at 0x7f1492369030> checked out from pool
+base.py:26,12:17:37:_execute_context:1205:dR9hUA -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:26,12:17:37:_execute_context:1207:dR9hUA -- ('files', 'dbo')
+result.p:26,12:17:37:_init_metadata:809:dR9hUA -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:26,12:17:37:process_rows:1249:dR9hUA -- Row ('dbo', 'files', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:26,12:17:37:_execute_context:1205:dR9hUA -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:26,12:17:37:_execute_context:1207:dR9hUA -- ('owner', 'dbo')
+result.p:26,12:17:37:_init_metadata:809:dR9hUA -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:26,12:17:37:process_rows:1249:dR9hUA -- Row ('dbo', 'owner', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:26,12:17:37:_execute_context:1205:dR9hUA -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:26,12:17:37:_execute_context:1207:dR9hUA -- ('dates', 'dbo')
+result.p:26,12:17:37:_init_metadata:809:dR9hUA -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:26,12:17:37:process_rows:1249:dR9hUA -- Row ('dbo', 'dates', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:26,12:17:37:_execute_context:1205:dR9hUA -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:26,12:17:37:_execute_context:1207:dR9hUA -- ('closure', 'dbo')
+result.p:26,12:17:37:_init_metadata:809:dR9hUA -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:26,12:17:37:process_rows:1249:dR9hUA -- Row ('dbo', 'closure', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:26,12:17:37:_execute_context:1205:dR9hUA -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:26,12:17:37:_execute_context:1207:dR9hUA -- ('filename', 'dbo')
+result.p:26,12:17:37:_init_metadata:809:dR9hUA -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:26,12:17:37:process_rows:1249:dR9hUA -- Row ('dbo', 'filename', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:26,12:17:38:_execute_context:1205:dR9hUA -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:26,12:17:38:_execute_context:1207:dR9hUA -- ('tasks', 'dbo')
+result.p:26,12:17:38:_init_metadata:809:dR9hUA -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:26,12:17:38:process_rows:1249:dR9hUA -- Row ('dbo', 'tasks', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:26,12:17:38:_finalize_fairy:684:dR9hUA -- Connection <pyodbc.Connection object at 0x7f1492369030> being returned to pool
+base.py:26,12:17:38:_reset:872:dR9hUA -- Connection <pyodbc.Connection object at 0x7f1492369030> rollback-on-return
+base.py:26,12:17:38:checkout:507:dR9hUA -- Connection <pyodbc.Connection object at 0x7f1492369030> checked out from pool
+sql.py:26,12:17:38:start:154:dR9hUA -- STARTING SQL testing2020-04-26 12:17:38.301556 /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+sql.py:26,12:17:38:start:156:dR9hUA -- setting sys except hook
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Files|files) _post_configure_properties() started
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Files|files) initialize prop owner
+relation:26,12:17:38:_log_joins:2426:dR9hUA -- Files.owner setup primary join owner.id = files.parent_id
+relation:26,12:17:38:_log_joins:2427:dR9hUA -- Files.owner setup secondary join None
+relation:26,12:17:38:_log_joins:2428:dR9hUA -- Files.owner synchronize pairs [(owner.id => files.parent_id)]
+relation:26,12:17:38:_log_joins:2435:dR9hUA -- Files.owner secondary synchronize pairs []
+relation:26,12:17:38:_log_joins:2443:dR9hUA -- Files.owner local/remote pairs [(files.parent_id / owner.id)]
+relation:26,12:17:38:_log_joins:2450:dR9hUA -- Files.owner remote columns [owner.id]
+relation:26,12:17:38:_log_joins:2455:dR9hUA -- Files.owner local columns [files.parent_id]
+relation:26,12:17:38:_log_joins:2460:dR9hUA -- Files.owner relationship direction symbol('MANYTOONE')
+strategi:26,12:17:38:__init__:547:dR9hUA -- Files.owner lazy loading clause owner.id = :param_1
+strategi:26,12:17:38:__init__:572:dR9hUA -- Files.owner will use query.get() to optimize instance loads
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Files|files) initialize prop dates
+relation:26,12:17:38:_log_joins:2426:dR9hUA -- Files.dates setup primary join files.id = dates."fileId"
+relation:26,12:17:38:_log_joins:2427:dR9hUA -- Files.dates setup secondary join None
+relation:26,12:17:38:_log_joins:2428:dR9hUA -- Files.dates synchronize pairs [(files.id => dates.fileId)]
+relation:26,12:17:38:_log_joins:2435:dR9hUA -- Files.dates secondary synchronize pairs []
+relation:26,12:17:38:_log_joins:2443:dR9hUA -- Files.dates local/remote pairs [(files.id / dates.fileId)]
+relation:26,12:17:38:_log_joins:2450:dR9hUA -- Files.dates remote columns [dates.fileId]
+relation:26,12:17:38:_log_joins:2455:dR9hUA -- Files.dates local columns [files.id]
+relation:26,12:17:38:_log_joins:2460:dR9hUA -- Files.dates relationship direction symbol('ONETOMANY')
+strategi:26,12:17:38:__init__:547:dR9hUA -- Files.dates lazy loading clause :param_1 = dates."fileId"
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Files|files) initialize prop name
+relation:26,12:17:38:_log_joins:2426:dR9hUA -- Files.name setup primary join files.id = filename."fileId"
+relation:26,12:17:38:_log_joins:2427:dR9hUA -- Files.name setup secondary join None
+relation:26,12:17:38:_log_joins:2428:dR9hUA -- Files.name synchronize pairs [(files.id => filename.fileId)]
+relation:26,12:17:38:_log_joins:2435:dR9hUA -- Files.name secondary synchronize pairs []
+relation:26,12:17:38:_log_joins:2443:dR9hUA -- Files.name local/remote pairs [(files.id / filename.fileId)]
+relation:26,12:17:38:_log_joins:2450:dR9hUA -- Files.name remote columns [filename.fileId]
+relation:26,12:17:38:_log_joins:2455:dR9hUA -- Files.name local columns [files.id]
+relation:26,12:17:38:_log_joins:2460:dR9hUA -- Files.name relationship direction symbol('ONETOMANY')
+strategi:26,12:17:38:__init__:547:dR9hUA -- Files.name lazy loading clause :param_1 = filename."fileId"
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Files|files) initialize prop id
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Files|files) initialize prop fileId
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Files|files) initialize prop lastModDate
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Files|files) initialize prop parent_id
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Files|files) initialize prop isFile
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Files|files) _post_configure_properties() complete
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Owner|owner) _post_configure_properties() started
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Owner|owner) initialize prop files
+relation:26,12:17:38:_log_joins:2426:dR9hUA -- Owner.files setup primary join owner.id = files.parent_id
+relation:26,12:17:38:_log_joins:2427:dR9hUA -- Owner.files setup secondary join None
+relation:26,12:17:38:_log_joins:2428:dR9hUA -- Owner.files synchronize pairs [(owner.id => files.parent_id)]
+relation:26,12:17:38:_log_joins:2435:dR9hUA -- Owner.files secondary synchronize pairs []
+relation:26,12:17:38:_log_joins:2443:dR9hUA -- Owner.files local/remote pairs [(owner.id / files.parent_id)]
+relation:26,12:17:38:_log_joins:2450:dR9hUA -- Owner.files remote columns [files.parent_id]
+relation:26,12:17:38:_log_joins:2455:dR9hUA -- Owner.files local columns [owner.id]
+relation:26,12:17:38:_log_joins:2460:dR9hUA -- Owner.files relationship direction symbol('ONETOMANY')
+strategi:26,12:17:38:__init__:547:dR9hUA -- Owner.files lazy loading clause :param_1 = files.parent_id
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Owner|owner) initialize prop id
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Owner|owner) initialize prop name
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Owner|owner) _post_configure_properties() complete
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Dates|dates) _post_configure_properties() started
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Dates|dates) initialize prop files
+relation:26,12:17:38:_log_joins:2426:dR9hUA -- Dates.files setup primary join files.id = dates."fileId"
+relation:26,12:17:38:_log_joins:2427:dR9hUA -- Dates.files setup secondary join None
+relation:26,12:17:38:_log_joins:2428:dR9hUA -- Dates.files synchronize pairs [(files.id => dates.fileId)]
+relation:26,12:17:38:_log_joins:2435:dR9hUA -- Dates.files secondary synchronize pairs []
+relation:26,12:17:38:_log_joins:2443:dR9hUA -- Dates.files local/remote pairs [(dates.fileId / files.id)]
+relation:26,12:17:38:_log_joins:2450:dR9hUA -- Dates.files remote columns [files.id]
+relation:26,12:17:38:_log_joins:2455:dR9hUA -- Dates.files local columns [dates.fileId]
+relation:26,12:17:38:_log_joins:2460:dR9hUA -- Dates.files relationship direction symbol('MANYTOONE')
+strategi:26,12:17:38:__init__:547:dR9hUA -- Dates.files lazy loading clause files.id = :param_1
+strategi:26,12:17:38:__init__:572:dR9hUA -- Dates.files will use query.get() to optimize instance loads
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Dates|dates) initialize prop id
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Dates|dates) initialize prop fileId
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Dates|dates) initialize prop bins
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Dates|dates) initialize prop values
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Dates|dates) _post_configure_properties() complete
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Closure|closure) _post_configure_properties() started
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Closure|closure) initialize prop files_relationship
+relation:26,12:17:38:_log_joins:2426:dR9hUA -- Closure.files_relationship setup primary join files.id = closure.child
+relation:26,12:17:38:_log_joins:2427:dR9hUA -- Closure.files_relationship setup secondary join None
+relation:26,12:17:38:_log_joins:2428:dR9hUA -- Closure.files_relationship synchronize pairs [(files.id => closure.child)]
+relation:26,12:17:38:_log_joins:2435:dR9hUA -- Closure.files_relationship secondary synchronize pairs []
+relation:26,12:17:38:_log_joins:2443:dR9hUA -- Closure.files_relationship local/remote pairs [(closure.child / files.id)]
+relation:26,12:17:38:_log_joins:2450:dR9hUA -- Closure.files_relationship remote columns [files.id]
+relation:26,12:17:38:_log_joins:2455:dR9hUA -- Closure.files_relationship local columns [closure.child]
+relation:26,12:17:38:_log_joins:2460:dR9hUA -- Closure.files_relationship relationship direction symbol('MANYTOONE')
+strategi:26,12:17:38:__init__:547:dR9hUA -- Closure.files_relationship lazy loading clause files.id = :param_1
+strategi:26,12:17:38:__init__:572:dR9hUA -- Closure.files_relationship will use query.get() to optimize instance loads
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Closure|closure) initialize prop parent_relationship
+relation:26,12:17:38:_log_joins:2426:dR9hUA -- Closure.parent_relationship setup primary join files.id = closure.parent
+relation:26,12:17:38:_log_joins:2427:dR9hUA -- Closure.parent_relationship setup secondary join None
+relation:26,12:17:38:_log_joins:2428:dR9hUA -- Closure.parent_relationship synchronize pairs [(files.id => closure.parent)]
+relation:26,12:17:38:_log_joins:2435:dR9hUA -- Closure.parent_relationship secondary synchronize pairs []
+relation:26,12:17:38:_log_joins:2443:dR9hUA -- Closure.parent_relationship local/remote pairs [(closure.parent / files.id)]
+relation:26,12:17:38:_log_joins:2450:dR9hUA -- Closure.parent_relationship remote columns [files.id]
+relation:26,12:17:38:_log_joins:2455:dR9hUA -- Closure.parent_relationship local columns [closure.parent]
+relation:26,12:17:38:_log_joins:2460:dR9hUA -- Closure.parent_relationship relationship direction symbol('MANYTOONE')
+strategi:26,12:17:38:__init__:547:dR9hUA -- Closure.parent_relationship lazy loading clause files.id = :param_1
+strategi:26,12:17:38:__init__:572:dR9hUA -- Closure.parent_relationship will use query.get() to optimize instance loads
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Closure|closure) initialize prop owner
+relation:26,12:17:38:_log_joins:2426:dR9hUA -- Closure.owner setup primary join owner.id = closure.owner_id
+relation:26,12:17:38:_log_joins:2427:dR9hUA -- Closure.owner setup secondary join None
+relation:26,12:17:38:_log_joins:2428:dR9hUA -- Closure.owner synchronize pairs [(owner.id => closure.owner_id)]
+relation:26,12:17:38:_log_joins:2435:dR9hUA -- Closure.owner secondary synchronize pairs []
+relation:26,12:17:38:_log_joins:2443:dR9hUA -- Closure.owner local/remote pairs [(closure.owner_id / owner.id)]
+relation:26,12:17:38:_log_joins:2450:dR9hUA -- Closure.owner remote columns [owner.id]
+relation:26,12:17:38:_log_joins:2455:dR9hUA -- Closure.owner local columns [closure.owner_id]
+relation:26,12:17:38:_log_joins:2460:dR9hUA -- Closure.owner relationship direction symbol('MANYTOONE')
+strategi:26,12:17:38:__init__:547:dR9hUA -- Closure.owner lazy loading clause owner.id = :param_1
+strategi:26,12:17:38:__init__:572:dR9hUA -- Closure.owner will use query.get() to optimize instance loads
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Closure|closure) initialize prop id
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Closure|closure) initialize prop parent
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Closure|closure) initialize prop child
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Closure|closure) initialize prop owner_id
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Closure|closure) initialize prop depth
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Closure|closure) _post_configure_properties() complete
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Filename|filename) _post_configure_properties() started
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Filename|filename) initialize prop files
+relation:26,12:17:38:_log_joins:2426:dR9hUA -- Filename.files setup primary join files.id = filename."fileId"
+relation:26,12:17:38:_log_joins:2427:dR9hUA -- Filename.files setup secondary join None
+relation:26,12:17:38:_log_joins:2428:dR9hUA -- Filename.files synchronize pairs [(files.id => filename.fileId)]
+relation:26,12:17:38:_log_joins:2435:dR9hUA -- Filename.files secondary synchronize pairs []
+relation:26,12:17:38:_log_joins:2443:dR9hUA -- Filename.files local/remote pairs [(filename.fileId / files.id)]
+relation:26,12:17:38:_log_joins:2450:dR9hUA -- Filename.files remote columns [files.id]
+relation:26,12:17:38:_log_joins:2455:dR9hUA -- Filename.files local columns [filename.fileId]
+relation:26,12:17:38:_log_joins:2460:dR9hUA -- Filename.files relationship direction symbol('MANYTOONE')
+strategi:26,12:17:38:__init__:547:dR9hUA -- Filename.files lazy loading clause files.id = :param_1
+strategi:26,12:17:38:__init__:572:dR9hUA -- Filename.files will use query.get() to optimize instance loads
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Filename|filename) initialize prop owner
+relation:26,12:17:38:_log_joins:2426:dR9hUA -- Filename.owner setup primary join owner.id = filename.owner_id
+relation:26,12:17:38:_log_joins:2427:dR9hUA -- Filename.owner setup secondary join None
+relation:26,12:17:38:_log_joins:2428:dR9hUA -- Filename.owner synchronize pairs [(owner.id => filename.owner_id)]
+relation:26,12:17:38:_log_joins:2435:dR9hUA -- Filename.owner secondary synchronize pairs []
+relation:26,12:17:38:_log_joins:2443:dR9hUA -- Filename.owner local/remote pairs [(filename.owner_id / owner.id)]
+relation:26,12:17:38:_log_joins:2450:dR9hUA -- Filename.owner remote columns [owner.id]
+relation:26,12:17:38:_log_joins:2455:dR9hUA -- Filename.owner local columns [filename.owner_id]
+relation:26,12:17:38:_log_joins:2460:dR9hUA -- Filename.owner relationship direction symbol('MANYTOONE')
+strategi:26,12:17:38:__init__:547:dR9hUA -- Filename.owner lazy loading clause owner.id = :param_1
+strategi:26,12:17:38:__init__:572:dR9hUA -- Filename.owner will use query.get() to optimize instance loads
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Filename|filename) initialize prop id
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Filename|filename) initialize prop fileId
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Filename|filename) initialize prop fileName
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Filename|filename) initialize prop owner_id
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Filename|filename) _post_configure_properties() complete
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Tasks|tasks) _post_configure_properties() started
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Tasks|tasks) initialize prop id
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Tasks|tasks) initialize prop path
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Tasks|tasks) initialize prop creds
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Tasks|tasks) initialize prop fileid
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Tasks|tasks) initialize prop userid
+mapper.p:26,12:17:38:_log:1998:dR9hUA -- (Tasks|tasks) _post_configure_properties() complete
+sql.py:26,12:17:38:start:163:dR9hUA -- Owner name: testing2020-04-04 26 ApryFLAeKSISg
+base.py:26,12:17:38:__connect:653:dR9hUA -- Created new connection <pyodbc.Connection object at 0x7f148ff28b90>
+base.py:26,12:17:38:checkout:507:dR9hUA -- Connection <pyodbc.Connection object at 0x7f148ff28b90> checked out from pool
+base.py:26,12:17:38:_begin_impl:711:dR9hUA -- BEGIN (implicit)
+base.py:26,12:17:38:_execute_context:1205:dR9hUA -- INSERT INTO owner (name) OUTPUT inserted.id VALUES (?)
+base.py:26,12:17:38:_execute_context:1207:dR9hUA -- ('testing2020-04-04 26 ApryFLAeKSISg',)
+result.p:26,12:17:39:_init_metadata:809:dR9hUA -- Col ('id',)
+result.p:26,12:17:39:process_rows:1249:dR9hUA -- Row (138,)
+base.py:26,12:17:39:_commit_impl:753:dR9hUA -- COMMIT
+base.py:26,12:17:39:_finalize_fairy:684:dR9hUA -- Connection <pyodbc.Connection object at 0x7f148ff28b90> being returned to pool
+base.py:26,12:17:39:_reset:872:dR9hUA -- Connection <pyodbc.Connection object at 0x7f148ff28b90> rollback-on-return
+path_reg:26,12:17:39:set:83:dR9hUA -- set 'memoized_setups' on path 'CachingEntityRegistry((<Mapper at 0x7f149248cd00; Owner>,))' to '{}'
+base.py:26,12:17:39:checkout:507:dR9hUA -- Connection <pyodbc.Connection object at 0x7f148ff28b90> checked out from pool
+base.py:26,12:17:39:_begin_impl:711:dR9hUA -- BEGIN (implicit)
+base.py:26,12:17:39:_execute_context:1205:dR9hUA -- SELECT owner.id AS owner_id, owner.name AS owner_name 
+FROM owner 
+WHERE owner.id = ?
+base.py:26,12:17:39:_execute_context:1207:dR9hUA -- (138,)
+result.p:26,12:17:39:_init_metadata:809:dR9hUA -- Col ('owner_id', 'owner_name')
+result.p:26,12:17:39:process_rows:1249:dR9hUA -- Row (138, 'testing2020-04-04 26 ApryFLAeKSISg')
+base.py:26,12:17:39:_finalize_fairy:684:dR9hUA -- Connection <pyodbc.Connection object at 0x7f148ff28b90> being returned to pool
+base.py:26,12:17:39:_reset:872:dR9hUA -- Connection <pyodbc.Connection object at 0x7f148ff28b90> rollback-on-return, via agent
+base.py:26,12:17:39:_rollback_impl:731:dR9hUA -- ROLLBACK
+sql.py:26,12:17:39:start:172:dR9hUA -- Added owner row, name: testing2020-04-04 26 ApryFLAeKSISg id: 138
+sql.py:26,12:17:39:start:199:dR9hUA -- File: 0B4Fujvv5Mfqbb2d0TnNhcFhhREdadmRaaEI3QzVabnE2NE5v
+sql.py:26,12:17:39:start:199:dR9hUA -- File: 10GJz3CIxCa6CT11Y-kg8f30atim8xSyx
+sql.py:26,12:17:39:start:199:dR9hUA -- File: 1kMTGenwbpJUMiYZMSDbDg_tcROM5USl6
+sql.py:26,12:17:39:start:199:dR9hUA -- File: 1QNNRjwRnVqieEoA5i9CdaSCyT_6Bi4vkmGO8YuZHytU
+sql.py:26,12:17:39:start:199:dR9hUA -- File: 15T7jFID6g5L9jNgtFSqVnNVFuqL7BqlHq9w9uB3CamE
+sql.py:26,12:17:39:start:199:dR9hUA -- File: 1cGlmEaWYTHdD_Y3vlkIMMkZhdmosSZo_rQYxcSBoDbQ
+sql.py:26,12:17:39:start:199:dR9hUA -- File: 1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ
+sql.py:26,12:17:39:start:199:dR9hUA -- File: 1B37ygx-Iwh0EpS1c5fqpbK6AqE39m6ao4WD4uMWknzc
+sql.py:26,12:17:39:start:199:dR9hUA -- File: 1VmB8_0x000GHL4Tbza6LarQMec0Z0esW
+sql.py:26,12:17:39:start:199:dR9hUA -- File: 15JWTM6GKGzGaum2h7EvaoJXszPRWFSdINZ4fq6l87LI
+sql.py:26,12:17:39:start:199:dR9hUA -- File: 1o6ARVj7jhE2K_VNnX2BYajR2XBX1kdMu
+sql.py:26,12:17:39:start:199:dR9hUA -- File: 1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s
+sql.py:26,12:17:39:start:199:dR9hUA -- File: 1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08
+sql.py:26,12:17:39:start:199:dR9hUA -- File: 14fGVD8kN7ZTYHhthuk5QFTw2j-OnV9QV6BJvuLedIik
+sql.py:26,12:17:39:start:199:dR9hUA -- File: 1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4
+sql.py:26,12:17:39:start:199:dR9hUA -- File: 1C09g5-ATBpXNJOmH8ANwCnq7Pk6vClzI1lmFYcqaH6A
+sql.py:26,12:17:39:start:199:dR9hUA -- File: 17U5RL60qPqJRSKZgj9HpNG0xIgrUI1_buueGhgcZaGs
+sql.py:26,12:17:39:start:199:dR9hUA -- File: 1D48Gz6hmPkE6sATNqYoA3P3Hdjtq1y2zHRjrh1kH64I
+sql.py:26,12:17:39:start:199:dR9hUA -- File: 1jRrZTHn-oge2sTqxli8Um026xuniXAeezLZn4B2zVSg
+sql.py:26,12:17:39:start:199:dR9hUA -- File: 1cctIQ_TyhvRFgFVkzjwcfDL1w0i4L2lF-78_WM7Hy6A
+sql.py:26,12:17:39:start:199:dR9hUA -- File: 186ge00t4G7kcx1QdCIHxRhTnZfzpSTGDgfAXkdbD_Ig
+sql.py:26,12:17:39:start:199:dR9hUA -- File: 18Fo4vEnjNw9SuVSM0FprUH3bFdl4oVP31YM5H-VH3fs
+sql.py:26,12:17:39:start:199:dR9hUA -- File: 15e68EIS9xXe5Yvzju4GtkyhFKJ_UgUA9juJKiUpPeUA
+sql.py:26,12:17:39:start:199:dR9hUA -- File: 1sF1pFtL8fsnQBBAoTt8P7YGOVZVr6-6a4BLeU3PBncI
+sql.py:26,12:17:39:start:199:dR9hUA -- File: 1kJg8DrOx2wxRXUGvNKc0X_t2GyFMglwXImurNUjTni0
+sql.py:26,12:17:39:start:199:dR9hUA -- File: 1G1g252JtmrFnXI5HaLLEafe8apipzquYwQQ0hbQIaho
+sql.py:26,12:17:39:start:199:dR9hUA -- File: 17U5RL60qPqJRSKZgj9HpNG0xIgrUI1_buueGhgcZaGs
+sql.py:26,12:17:39:start:201:dR9hUA -- duplicated fileid found, skipping
+sql.py:26,12:17:39:start:199:dR9hUA -- File: 1wfaH9BSg8wrDaKXR54KK1y8pd-miEOQNj3E8GL6fTfg
+sql.py:26,12:17:39:start:199:dR9hUA -- File: 1LuJ1Ln_dAc7n3Qj0zNE4yuYfFG6NEgxO-hsDA9M4qpQ
+sql.py:26,12:17:39:start:199:dR9hUA -- File: 15Fi6RHQtC8H-GOJC_gjiED_9rNxtCdahEGtLvBUZcv4
+sql.py:26,12:17:39:start:199:dR9hUA -- File: 1H1aSubiwctKw-qMV6t1aGlfooY2Qn9V6Y01phHpg-kw
+sql.py:26,12:17:39:start:199:dR9hUA -- File: 1WbGMwYDyqP6aCDpf5fBbR7sneMicXtvEtfm3Z4k0Vzs
+sql.py:26,12:17:39:start:199:dR9hUA -- File: 1HFZFqPRWqIwvxrXnRg_7i3LXlFfCzPkf
+sql.py:26,12:17:39:start:199:dR9hUA -- File: 16wh_FgWE8Y0tUpAdIte4WyuB91_ypCySi82lvdhAiFY
+sql.py:26,12:17:39:start:199:dR9hUA -- File: 0B4Fujvv5MfqbYzVpOFdBTTNIdFE
+sql.py:26,12:17:39:start:199:dR9hUA -- File: 1WKk8W5cG-CYKBYN_cWpAdziiPVhvQZEAarnPwf58z4Y
+sql.py:26,12:17:39:start:199:dR9hUA -- File: 1MQLjux58byegkybU7J0OZLYCh1xUaMI0lIhSuDoklVk
+sql.py:26,12:17:39:start:199:dR9hUA -- File: 17VDFogW5NTpbqj4jbMOtBoyFV_TZymMjKozpNpezSCc
+sql.py:26,12:17:39:start:199:dR9hUA -- File: 1YJPVyeYstaXiTguoSGCe_Kb3y4yv49N224nUrfLo7rU
+sql.py:26,12:17:39:start:199:dR9hUA -- File: 1PscMFhdtA31Nh7ELmM18NqjUfLDeGiexKI6q-lI0fKY
+sql.py:26,12:17:39:start:199:dR9hUA -- File: 1YlY2MTwu_I6PGWgmkNqFXYJVvNSQKMi7j0WulyoD75w
+sql.py:26,12:17:39:start:199:dR9hUA -- File: 1Gxvc-37IOivNHIPUJBI1v3jf5e-Hwcby_VZbN-k-Bfc
+sql.py:26,12:17:39:start:199:dR9hUA -- File: 1VrK4o4hKCSJyT8P4hKL9la_FO7-29hcBJMJDsvjXo2A
+sql.py:26,12:17:39:start:218:dR9hUA -- len of id map 42 len of files 42
+sql.py:26,12:17:39:report:42:dR9hUA -- lt_files size 42 
+sql.py:26,12:17:41:load_from_dict:124:dR9hUA -- kADj 0B4Fujvv5Mfqbb2d0TnNhcFhhREdadmRaaEI3QzVabnE2NE5v:26-12.607668yFLAeKSISg0zgm
+sql.py:26,12:17:41:load_from_dict:124:dR9hUA -- kADj 10GJz3CIxCa6CT11Y-kg8f30atim8xSyx:26-12.607668yFLAeKSISglMSm
+sql.py:26,12:17:41:load_from_dict:124:dR9hUA -- kADj 1kMTGenwbpJUMiYZMSDbDg_tcROM5USl6:26-12.607668yFLAeKSISgir8p
+sql.py:26,12:17:41:load_from_dict:124:dR9hUA -- kADj 1QNNRjwRnVqieEoA5i9CdaSCyT_6Bi4vkmGO8YuZHytU:26-12.607668yFLAeKSISgLiTo
+sql.py:26,12:17:41:load_from_dict:124:dR9hUA -- kADj 15T7jFID6g5L9jNgtFSqVnNVFuqL7BqlHq9w9uB3CamE:26-12.607668yFLAeKSISgj6uW
+sql.py:26,12:17:41:load_from_dict:124:dR9hUA -- kADj 1cGlmEaWYTHdD_Y3vlkIMMkZhdmosSZo_rQYxcSBoDbQ:26-12.607668yFLAeKSISgKPhM
+sql.py:26,12:17:41:load_from_dict:124:dR9hUA -- kADj 1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ:26-12.607668yFLAeKSISgrrkc
+sql.py:26,12:17:41:load_from_dict:124:dR9hUA -- kADj 1B37ygx-Iwh0EpS1c5fqpbK6AqE39m6ao4WD4uMWknzc:26-12.607668yFLAeKSISg5hXQ
+sql.py:26,12:17:41:load_from_dict:124:dR9hUA -- kADj 1VmB8_0x000GHL4Tbza6LarQMec0Z0esW:26-12.607668yFLAeKSISgALaq
+sql.py:26,12:17:41:load_from_dict:124:dR9hUA -- kADj 15JWTM6GKGzGaum2h7EvaoJXszPRWFSdINZ4fq6l87LI:26-12.607668yFLAeKSISgK-_b
+base.py:26,12:17:41:checkout:507:dR9hUA -- Connection <pyodbc.Connection object at 0x7f148ff28b90> checked out from pool
+base.py:26,12:17:41:_begin_impl:711:dR9hUA -- BEGIN (implicit)
+base.py:26,12:17:41:_execute_context:1205:dR9hUA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,12:17:41:_execute_context:1207:dR9hUA -- ('0B4Fujvv5Mfqbb2d0TnNhcFhhREdadmRaaEI3QzVabnE2NE5v:26-12.607668yFLAeKSISg0zgm', datetime.datetime(2020, 4, 16, 20, 10, 48, 919000), 138, 1)
+result.p:26,12:17:41:_init_metadata:809:dR9hUA -- Col ('id',)
+result.p:26,12:17:41:process_rows:1249:dR9hUA -- Row (15139,)
+base.py:26,12:17:42:_execute_context:1205:dR9hUA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,12:17:42:_execute_context:1207:dR9hUA -- ('10GJz3CIxCa6CT11Y-kg8f30atim8xSyx:26-12.607668yFLAeKSISglMSm', datetime.datetime(2020, 4, 16, 20, 10, 48, 927000), 138, 1)
+result.p:26,12:17:42:_init_metadata:809:dR9hUA -- Col ('id',)
+result.p:26,12:17:42:process_rows:1249:dR9hUA -- Row (15140,)
+base.py:26,12:17:42:_execute_context:1205:dR9hUA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,12:17:42:_execute_context:1207:dR9hUA -- ('1kMTGenwbpJUMiYZMSDbDg_tcROM5USl6:26-12.607668yFLAeKSISgir8p', datetime.datetime(2020, 4, 16, 20, 10, 49, 13000), 138, 1)
+result.p:26,12:17:42:_init_metadata:809:dR9hUA -- Col ('id',)
+result.p:26,12:17:42:process_rows:1249:dR9hUA -- Row (15141,)
+base.py:26,12:17:42:_execute_context:1205:dR9hUA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,12:17:42:_execute_context:1207:dR9hUA -- ('1QNNRjwRnVqieEoA5i9CdaSCyT_6Bi4vkmGO8YuZHytU:26-12.607668yFLAeKSISgLiTo', datetime.datetime(2020, 4, 16, 20, 10, 49, 2000), 138, 1)
+result.p:26,12:17:42:_init_metadata:809:dR9hUA -- Col ('id',)
+result.p:26,12:17:42:process_rows:1249:dR9hUA -- Row (15142,)
+base.py:26,12:17:42:_execute_context:1205:dR9hUA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,12:17:42:_execute_context:1207:dR9hUA -- ('15T7jFID6g5L9jNgtFSqVnNVFuqL7BqlHq9w9uB3CamE:26-12.607668yFLAeKSISgj6uW', datetime.datetime(2020, 3, 8, 18, 39, 41, 379000), 138, 1)
+result.p:26,12:17:42:_init_metadata:809:dR9hUA -- Col ('id',)
+result.p:26,12:17:42:process_rows:1249:dR9hUA -- Row (15143,)
+base.py:26,12:17:42:_execute_context:1205:dR9hUA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,12:17:42:_execute_context:1207:dR9hUA -- ('1cGlmEaWYTHdD_Y3vlkIMMkZhdmosSZo_rQYxcSBoDbQ:26-12.607668yFLAeKSISgKPhM', datetime.datetime(2020, 4, 23, 14, 38, 4, 583000), 138, 1)
+result.p:26,12:17:42:_init_metadata:809:dR9hUA -- Col ('id',)
+result.p:26,12:17:42:process_rows:1249:dR9hUA -- Row (15144,)
+base.py:26,12:17:42:_execute_context:1205:dR9hUA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,12:17:42:_execute_context:1207:dR9hUA -- ('1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ:26-12.607668yFLAeKSISgrrkc', datetime.datetime(2020, 4, 16, 21, 4, 56, 746000), 138, 1)
+result.p:26,12:17:42:_init_metadata:809:dR9hUA -- Col ('id',)
+result.p:26,12:17:42:process_rows:1249:dR9hUA -- Row (15145,)
+base.py:26,12:17:42:_execute_context:1205:dR9hUA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,12:17:42:_execute_context:1207:dR9hUA -- ('1B37ygx-Iwh0EpS1c5fqpbK6AqE39m6ao4WD4uMWknzc:26-12.607668yFLAeKSISg5hXQ', datetime.datetime(2020, 4, 4, 0, 34, 8, 478000), 138, 1)
+result.p:26,12:17:43:_init_metadata:809:dR9hUA -- Col ('id',)
+result.p:26,12:17:43:process_rows:1249:dR9hUA -- Row (15146,)
+base.py:26,12:17:43:_execute_context:1205:dR9hUA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,12:17:43:_execute_context:1207:dR9hUA -- ('1VmB8_0x000GHL4Tbza6LarQMec0Z0esW:26-12.607668yFLAeKSISgALaq', datetime.datetime(2020, 2, 20, 20, 7, 29, 659000), 138, 1)
+result.p:26,12:17:43:_init_metadata:809:dR9hUA -- Col ('id',)
+result.p:26,12:17:43:process_rows:1249:dR9hUA -- Row (15147,)
+base.py:26,12:17:43:_execute_context:1205:dR9hUA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,12:17:43:_execute_context:1207:dR9hUA -- ('15JWTM6GKGzGaum2h7EvaoJXszPRWFSdINZ4fq6l87LI:26-12.607668yFLAeKSISgK-_b', datetime.datetime(2020, 2, 19, 16, 18, 19, 58000), 138, 1)
+result.p:26,12:17:43:_init_metadata:809:dR9hUA -- Col ('id',)
+result.p:26,12:17:43:process_rows:1249:dR9hUA -- Row (15148,)
+base.py:26,12:17:43:_commit_impl:753:dR9hUA -- COMMIT
+base.py:26,12:17:43:_finalize_fairy:684:dR9hUA -- Connection <pyodbc.Connection object at 0x7f148ff28b90> being returned to pool
+base.py:26,12:17:43:_reset:872:dR9hUA -- Connection <pyodbc.Connection object at 0x7f148ff28b90> rollback-on-return
+path_reg:26,12:17:43:set:83:dR9hUA -- set 'memoized_setups' on path 'CachingEntityRegistry((<Mapper at 0x7f149248c3d0; Files>,))' to '{}'
+base.py:26,12:17:43:checkout:507:dR9hUA -- Connection <pyodbc.Connection object at 0x7f148ff28b90> checked out from pool
+base.py:26,12:17:43:_begin_impl:711:dR9hUA -- BEGIN (implicit)
+base.py:26,12:17:43:_execute_context:1205:dR9hUA -- SELECT files.id AS files_id, files.[fileId] AS [files_fileId], files.[lastModDate] AS [files_lastModDate], files.parent_id AS files_parent_id, files.[isFile] AS [files_isFile] 
+FROM files 
+WHERE files.id = ?
+base.py:26,12:17:43:_execute_context:1207:dR9hUA -- (15139,)
+result.p:26,12:17:43:_init_metadata:809:dR9hUA -- Col ('files_id', 'files_fileId', 'files_lastModDate', 'files_parent_id', 'files_isFile')
+result.p:26,12:17:43:process_rows:1249:dR9hUA -- Row (15139, '0B4Fujvv5Mfqbb2d0TnNhcFhhREdadmRaaEI3QzVabnE2NE5v:26-12.607668yFLAeKSISg0zgm', datetime.datetime(2020, 4, 16, 20, 10, 48, 920000), 138, True)
+path_reg:26,12:17:43:set:83:dR9hUA -- set 'memoized_setups' on path 'CachingEntityRegistry((<Mapper at 0x7f149248c3d0; Files>,))' to '{}'
+base.py:26,12:17:43:_execute_context:1205:dR9hUA -- SELECT files.id AS files_id, files.[fileId] AS [files_fileId], files.[lastModDate] AS [files_lastModDate], files.parent_id AS files_parent_id, files.[isFile] AS [files_isFile] 
+FROM files 
+WHERE files.id = ?
+base.py:26,12:17:43:_execute_context:1207:dR9hUA -- (15140,)
+result.p:26,12:17:43:_init_metadata:809:dR9hUA -- Col ('files_id', 'files_fileId', 'files_lastModDate', 'files_parent_id', 'files_isFile')
+result.p:26,12:17:43:process_rows:1249:dR9hUA -- Row (15140, '10GJz3CIxCa6CT11Y-kg8f30atim8xSyx:26-12.607668yFLAeKSISglMSm', datetime.datetime(2020, 4, 16, 20, 10, 48, 927000), 138, True)
+path_reg:26,12:17:43:set:83:dR9hUA -- set 'memoized_setups' on path 'CachingEntityRegistry((<Mapper at 0x7f149248c3d0; Files>,))' to '{}'
+base.py:26,12:17:43:_execute_context:1205:dR9hUA -- SELECT files.id AS files_id, files.[fileId] AS [files_fileId], files.[lastModDate] AS [files_lastModDate], files.parent_id AS files_parent_id, files.[isFile] AS [files_isFile] 
+FROM files 
+WHERE files.id = ?
+base.py:26,12:17:43:_execute_context:1207:dR9hUA -- (15141,)
+result.p:26,12:17:44:_init_metadata:809:dR9hUA -- Col ('files_id', 'files_fileId', 'files_lastModDate', 'files_parent_id', 'files_isFile')
+result.p:26,12:17:44:process_rows:1249:dR9hUA -- Row (15141, '1kMTGenwbpJUMiYZMSDbDg_tcROM5USl6:26-12.607668yFLAeKSISgir8p', datetime.datetime(2020, 4, 16, 20, 10, 49, 13000), 138, True)
+path_reg:26,12:17:44:set:83:dR9hUA -- set 'memoized_setups' on path 'CachingEntityRegistry((<Mapper at 0x7f149248c3d0; Files>,))' to '{}'
+base.py:26,12:17:44:_execute_context:1205:dR9hUA -- SELECT files.id AS files_id, files.[fileId] AS [files_fileId], files.[lastModDate] AS [files_lastModDate], files.parent_id AS files_parent_id, files.[isFile] AS [files_isFile] 
+FROM files 
+WHERE files.id = ?
+base.py:26,12:17:44:_execute_context:1207:dR9hUA -- (15142,)
+result.p:26,12:17:44:_init_metadata:809:dR9hUA -- Col ('files_id', 'files_fileId', 'files_lastModDate', 'files_parent_id', 'files_isFile')
+result.p:26,12:17:44:process_rows:1249:dR9hUA -- Row (15142, '1QNNRjwRnVqieEoA5i9CdaSCyT_6Bi4vkmGO8YuZHytU:26-12.607668yFLAeKSISgLiTo', datetime.datetime(2020, 4, 16, 20, 10, 49, 3000), 138, True)
+path_reg:26,12:17:44:set:83:dR9hUA -- set 'memoized_setups' on path 'CachingEntityRegistry((<Mapper at 0x7f149248c3d0; Files>,))' to '{}'
+base.py:26,12:17:44:_execute_context:1205:dR9hUA -- SELECT files.id AS files_id, files.[fileId] AS [files_fileId], files.[lastModDate] AS [files_lastModDate], files.parent_id AS files_parent_id, files.[isFile] AS [files_isFile] 
+FROM files 
+WHERE files.id = ?
+base.py:26,12:17:44:_execute_context:1207:dR9hUA -- (15143,)
+result.p:26,12:17:44:_init_metadata:809:dR9hUA -- Col ('files_id', 'files_fileId', 'files_lastModDate', 'files_parent_id', 'files_isFile')
+result.p:26,12:17:44:process_rows:1249:dR9hUA -- Row (15143, '15T7jFID6g5L9jNgtFSqVnNVFuqL7BqlHq9w9uB3CamE:26-12.607668yFLAeKSISgj6uW', datetime.datetime(2020, 3, 8, 18, 39, 41, 380000), 138, True)
+path_reg:26,12:17:44:set:83:dR9hUA -- set 'memoized_setups' on path 'CachingEntityRegistry((<Mapper at 0x7f149248c3d0; Files>,))' to '{}'
+base.py:26,12:17:44:_execute_context:1205:dR9hUA -- SELECT files.id AS files_id, files.[fileId] AS [files_fileId], files.[lastModDate] AS [files_lastModDate], files.parent_id AS files_parent_id, files.[isFile] AS [files_isFile] 
+FROM files 
+WHERE files.id = ?
+base.py:26,12:17:44:_execute_context:1207:dR9hUA -- (15144,)
+result.p:26,12:17:44:_init_metadata:809:dR9hUA -- Col ('files_id', 'files_fileId', 'files_lastModDate', 'files_parent_id', 'files_isFile')
+result.p:26,12:17:44:process_rows:1249:dR9hUA -- Row (15144, '1cGlmEaWYTHdD_Y3vlkIMMkZhdmosSZo_rQYxcSBoDbQ:26-12.607668yFLAeKSISgKPhM', datetime.datetime(2020, 4, 23, 14, 38, 4, 583000), 138, True)
+path_reg:26,12:17:44:set:83:dR9hUA -- set 'memoized_setups' on path 'CachingEntityRegistry((<Mapper at 0x7f149248c3d0; Files>,))' to '{}'
+base.py:26,12:17:44:_execute_context:1205:dR9hUA -- SELECT files.id AS files_id, files.[fileId] AS [files_fileId], files.[lastModDate] AS [files_lastModDate], files.parent_id AS files_parent_id, files.[isFile] AS [files_isFile] 
+FROM files 
+WHERE files.id = ?
+base.py:26,12:17:44:_execute_context:1207:dR9hUA -- (15145,)
+result.p:26,12:17:44:_init_metadata:809:dR9hUA -- Col ('files_id', 'files_fileId', 'files_lastModDate', 'files_parent_id', 'files_isFile')
+result.p:26,12:17:44:process_rows:1249:dR9hUA -- Row (15145, '1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ:26-12.607668yFLAeKSISgrrkc', datetime.datetime(2020, 4, 16, 21, 4, 56, 747000), 138, True)
+path_reg:26,12:17:44:set:83:dR9hUA -- set 'memoized_setups' on path 'CachingEntityRegistry((<Mapper at 0x7f149248c3d0; Files>,))' to '{}'
+base.py:26,12:17:44:_execute_context:1205:dR9hUA -- SELECT files.id AS files_id, files.[fileId] AS [files_fileId], files.[lastModDate] AS [files_lastModDate], files.parent_id AS files_parent_id, files.[isFile] AS [files_isFile] 
+FROM files 
+WHERE files.id = ?
+base.py:26,12:17:44:_execute_context:1207:dR9hUA -- (15146,)
+result.p:26,12:17:44:_init_metadata:809:dR9hUA -- Col ('files_id', 'files_fileId', 'files_lastModDate', 'files_parent_id', 'files_isFile')
+result.p:26,12:17:44:process_rows:1249:dR9hUA -- Row (15146, '1B37ygx-Iwh0EpS1c5fqpbK6AqE39m6ao4WD4uMWknzc:26-12.607668yFLAeKSISg5hXQ', datetime.datetime(2020, 4, 4, 0, 34, 8, 477000), 138, True)
+path_reg:26,12:17:44:set:83:dR9hUA -- set 'memoized_setups' on path 'CachingEntityRegistry((<Mapper at 0x7f149248c3d0; Files>,))' to '{}'
+base.py:26,12:17:44:_execute_context:1205:dR9hUA -- SELECT files.id AS files_id, files.[fileId] AS [files_fileId], files.[lastModDate] AS [files_lastModDate], files.parent_id AS files_parent_id, files.[isFile] AS [files_isFile] 
+FROM files 
+WHERE files.id = ?
+base.py:26,12:17:44:_execute_context:1207:dR9hUA -- (15147,)
+result.p:26,12:17:45:_init_metadata:809:dR9hUA -- Col ('files_id', 'files_fileId', 'files_lastModDate', 'files_parent_id', 'files_isFile')
+result.p:26,12:17:45:process_rows:1249:dR9hUA -- Row (15147, '1VmB8_0x000GHL4Tbza6LarQMec0Z0esW:26-12.607668yFLAeKSISgALaq', datetime.datetime(2020, 2, 20, 20, 7, 29, 660000), 138, True)
+path_reg:26,12:17:45:set:83:dR9hUA -- set 'memoized_setups' on path 'CachingEntityRegistry((<Mapper at 0x7f149248c3d0; Files>,))' to '{}'
+base.py:26,12:17:45:_execute_context:1205:dR9hUA -- SELECT files.id AS files_id, files.[fileId] AS [files_fileId], files.[lastModDate] AS [files_lastModDate], files.parent_id AS files_parent_id, files.[isFile] AS [files_isFile] 
+FROM files 
+WHERE files.id = ?
+base.py:26,12:17:45:_execute_context:1207:dR9hUA -- (15148,)
+result.p:26,12:17:45:_init_metadata:809:dR9hUA -- Col ('files_id', 'files_fileId', 'files_lastModDate', 'files_parent_id', 'files_isFile')
+result.p:26,12:17:45:process_rows:1249:dR9hUA -- Row (15148, '15JWTM6GKGzGaum2h7EvaoJXszPRWFSdINZ4fq6l87LI:26-12.607668yFLAeKSISgK-_b', datetime.datetime(2020, 2, 19, 16, 18, 19, 57000), 138, True)
+sql.py:26,12:17:45:load_from_dict:143:dR9hUA -- len dates: 287
+sql.py:26,12:17:45:commit:78:dR9hUA -- iters: 70, len: 287
+sql.py:26,12:17:45:commit:78:dR9hUA -- iters: 70, len: 287
+sql.py:26,12:17:45:commit:78:dR9hUA -- iters: 70, len: 287
+sql.py:26,12:17:45:commit:78:dR9hUA -- iters: 70, len: 287
+sql.py:26,12:17:45:commit:87:dR9hUA -- flushing, len: 217
+sql.py:26,12:17:45:commit:78:dR9hUA -- iters: 70, len: 217
+sql.py:26,12:17:45:commit:78:dR9hUA -- iters: 70, len: 217
+sql.py:26,12:17:45:commit:78:dR9hUA -- iters: 70, len: 217
+sql.py:26,12:17:45:commit:87:dR9hUA -- flushing, len: 147
+sql.py:26,12:17:45:commit:78:dR9hUA -- iters: 70, len: 147
+sql.py:26,12:17:45:commit:78:dR9hUA -- iters: 70, len: 147
+sql.py:26,12:17:45:commit:78:dR9hUA -- iters: 70, len: 147
+sql.py:26,12:17:45:commit:87:dR9hUA -- flushing, len: 77
+sql.py:26,12:17:45:commit:78:dR9hUA -- iters: 70, len: 77
+sql.py:26,12:17:45:commit:87:dR9hUA -- flushing, len: 7
+sql.py:26,12:17:45:commit:78:dR9hUA -- iters: 70, len: 7
+sql.py:26,12:17:45:commit:78:dR9hUA -- iters: 70, len: 7
+sql.py:26,12:17:45:commit:78:dR9hUA -- iters: 70, len: 7
+sql.py:26,12:17:45:commit:78:dR9hUA -- iters: 70, len: 7
+sql.py:26,12:17:45:commit:78:dR9hUA -- iters: 70, len: 7
+sql.py:26,12:17:45:commit:78:dR9hUA -- iters: 70, len: 7
+sql.py:26,12:17:45:commit:78:dR9hUA -- iters: 70, len: 7
+sql.py:26,12:17:45:commit:97:dR9hUA -- while loop done
+sql.py:26,12:17:45:commit:78:dR9hUA -- iters: 70, len: 0
+sql.py:26,12:17:45:commit:78:dR9hUA -- iters: 70, len: 0
+sql.py:26,12:17:45:commit:78:dR9hUA -- iters: 70, len: 0
+sql.py:26,12:17:45:commit:78:dR9hUA -- iters: 70, len: 0
+sql.py:26,12:17:45:commit:78:dR9hUA -- iters: 70, len: 0
+sql.py:26,12:17:45:commit:78:dR9hUA -- iters: 70, len: 0
+sql.py:26,12:17:45:commit:78:dR9hUA -- iters: 70, len: 0
+sql.py:26,12:17:45:commit:78:dR9hUA -- iters: 70, len: 0
+sql.py:26,12:17:45:commit:78:dR9hUA -- iters: 70, len: 0
+sql.py:26,12:17:45:commit:78:dR9hUA -- iters: 70, len: 0
+sql.py:26,12:17:45:commit:78:dR9hUA -- iters: 70, len: 0
+sql.py:26,12:17:45:commit:78:dR9hUA -- iters: 70, len: 0
+sql.py:26,12:17:45:commit:78:dR9hUA -- iters: 70, len: 0
+sql.py:26,12:17:45:commit:78:dR9hUA -- iters: 70, len: 0
+sql.py:26,12:17:45:commit:78:dR9hUA -- iters: 70, len: 0
+sql.py:26,12:17:45:commit:78:dR9hUA -- iters: 70, len: 0
+sql.py:26,12:17:45:commit:78:dR9hUA -- iters: 70, len: 0
+sql.py:26,12:17:45:commit:97:dR9hUA -- while loop done
+sql.py:26,12:17:45:commit:97:dR9hUA -- while loop done
+sql.py:26,12:17:45:commit:97:dR9hUA -- while loop done
+sql.py:26,12:17:45:commit:97:dR9hUA -- while loop done
+sql.py:26,12:17:45:commit:97:dR9hUA -- while loop done
+sql.py:26,12:17:45:commit:97:dR9hUA -- while loop done
+sql.py:26,12:17:45:commit:97:dR9hUA -- while loop done
+sql.py:26,12:17:45:commit:97:dR9hUA -- while loop done
+sql.py:26,12:17:45:commit:97:dR9hUA -- while loop done
+sql.py:26,12:17:45:commit:97:dR9hUA -- while loop done
+sql.py:26,12:17:45:commit:97:dR9hUA -- while loop done
+sql.py:26,12:17:45:commit:97:dR9hUA -- while loop done
+sql.py:26,12:17:45:commit:97:dR9hUA -- while loop done
+sql.py:26,12:17:45:commit:105:dR9hUA -- commit func done
+sql.py:26,12:17:45:commit:97:dR9hUA -- while loop done
+sql.py:26,12:17:45:commit:97:dR9hUA -- while loop done
+sql.py:26,12:17:45:commit:97:dR9hUA -- while loop done
+sql.py:26,12:17:45:commit:97:dR9hUA -- while loop done
+sql.py:26,12:17:45:commit:97:dR9hUA -- while loop done
+sql.py:26,12:17:45:commit:97:dR9hUA -- while loop done
+sql.py:26,12:17:45:commit:97:dR9hUA -- while loop done
+sql.py:26,12:17:45:commit:97:dR9hUA -- while loop done
+sql.py:26,12:17:45:commit:97:dR9hUA -- while loop done
+sql.py:26,12:17:45:commit:97:dR9hUA -- while loop done
+sql.py:26,12:17:45:commit:97:dR9hUA -- while loop done
+sql.py:26,12:17:45:commit:97:dR9hUA -- while loop done
+sql.py:26,12:17:45:commit:97:dR9hUA -- while loop done
+sql.py:26,12:17:45:commit:97:dR9hUA -- while loop done
+sql.py:26,12:17:45:commit:97:dR9hUA -- while loop done
+sql.py:26,12:17:45:commit:97:dR9hUA -- while loop done
+sql.py:26,12:17:45:commit:97:dR9hUA -- while loop done
+sql.py:26,12:17:45:commit:105:dR9hUA -- commit func done
+sql.py:26,12:17:45:commit:105:dR9hUA -- commit func done
+sql.py:26,12:17:45:commit:105:dR9hUA -- commit func done
+sql.py:26,12:17:45:commit:105:dR9hUA -- commit func done
+sql.py:26,12:17:45:commit:105:dR9hUA -- commit func done
+sql.py:26,12:17:45:commit:105:dR9hUA -- commit func done
+sql.py:26,12:17:45:commit:105:dR9hUA -- commit func done
+sql.py:26,12:17:45:commit:105:dR9hUA -- commit func done
+sql.py:26,12:17:45:commit:105:dR9hUA -- commit func done
+sql.py:26,12:17:45:commit:105:dR9hUA -- commit func done
+sql.py:26,12:17:45:commit:105:dR9hUA -- commit func done
+sql.py:26,12:17:45:commit:105:dR9hUA -- commit func done
+sql.py:26,12:17:45:commit:105:dR9hUA -- commit func done
+sql.py:26,12:17:45:commit:105:dR9hUA -- commit func done
+sql.py:26,12:17:45:commit:105:dR9hUA -- commit func done
+sql.py:26,12:17:45:commit:105:dR9hUA -- commit func done
+sql.py:26,12:17:45:commit:105:dR9hUA -- commit func done
+sql.py:26,12:17:45:commit:105:dR9hUA -- commit func done
+sql.py:26,12:17:45:commit:105:dR9hUA -- commit func done
+sql.py:26,12:17:45:commit:105:dR9hUA -- commit func done
+sql.py:26,12:17:45:commit:105:dR9hUA -- commit func done
+sql.py:26,12:17:45:commit:105:dR9hUA -- commit func done
+sql.py:26,12:17:45:commit:105:dR9hUA -- commit func done
+sql.py:26,12:17:45:commit:105:dR9hUA -- commit func done
+sql.py:26,12:17:45:commit:105:dR9hUA -- commit func done
+sql.py:26,12:17:45:commit:105:dR9hUA -- commit func done
+sql.py:26,12:17:45:commit:105:dR9hUA -- commit func done
+sql.py:26,12:17:45:commit:105:dR9hUA -- commit func done
+sql.py:26,12:17:45:commit:105:dR9hUA -- commit func done
+sql.py:26,12:17:45:commit:105:dR9hUA -- commit func done
+base.py:26,12:17:45:__connect:653:dR9hUA -- Created new connection <pyodbc.Connection object at 0x7f148c610b90>
+base.py:26,12:17:45:checkout:507:dR9hUA -- Connection <pyodbc.Connection object at 0x7f148c610b90> checked out from pool
+base.py:26,12:17:45:_begin_impl:711:dR9hUA -- BEGIN (implicit)
+base.py:26,12:17:45:_execute_context:1205:dR9hUA -- INSERT INTO dates ([fileId], bins, [values]) VALUES (?, ?, ?)
+base.py:26,12:17:45:_execute_context:1207:dR9hUA -- ((15142, 1586455152.1182396, 0), (15142, 1586474482.3268385, 0), (15142, 1586493812.535437, 0), (15142, 1586513142.744036, 0), (15142, 1586532472.9526348, 0), (15142, 1586551803.1612337, 0), (15142, 1586571133.3698323, 0), (15142, 1586590463.5784311, 0)  ... displaying 10 of 70 total bound parameter sets ...  (15145, 1509465202.339723, 0), (15145, 1510851471.8826923, 0))
+base.py:26,12:17:45:__connect:653:dR9hUA -- Created new connection <pyodbc.Connection object at 0x7f148c610c70>
+base.py:26,12:17:45:checkout:507:dR9hUA -- Connection <pyodbc.Connection object at 0x7f148c610c70> checked out from pool
+base.py:26,12:17:45:_begin_impl:711:dR9hUA -- BEGIN (implicit)
+base.py:26,12:17:45:_execute_context:1205:dR9hUA -- INSERT INTO dates ([fileId], bins, [values]) VALUES (?, ?, ?)
+base.py:26,12:17:45:_execute_context:1207:dR9hUA -- ((15145, 1512237741.4256616, 0), (15145, 1513624010.9686308, 0), (15145, 1515010280.5116, 0), (15145, 1516396550.0545692, 0), (15145, 1517782819.5975385, 0), (15145, 1519169089.1405077, 0), (15145, 1520555358.683477, 0), (15145, 1521941628.2264462, 0)  ... displaying 10 of 70 total bound parameter sets ...  (15147, 1582258032.7695, 1), (15148, 1581746864.644, 9))
+base.py:26,12:17:45:__connect:653:dR9hUA -- Created new connection <pyodbc.Connection object at 0x7f148c610ab0>
+base.py:26,12:17:45:checkout:507:dR9hUA -- Connection <pyodbc.Connection object at 0x7f148c610ab0> checked out from pool
+base.py:26,12:17:45:_begin_impl:711:dR9hUA -- BEGIN (implicit)
+base.py:26,12:17:45:_execute_context:1205:dR9hUA -- INSERT INTO dates ([fileId], bins, [values]) VALUES (?, ?, ?)
+base.py:26,12:17:45:_execute_context:1207:dR9hUA -- ((15142, 1585102037.5163233, 0), (15142, 1585121367.7249222, 0), (15142, 1585140697.933521, 0), (15142, 1585160028.1421196, 0), (15142, 1585179358.3507185, 0), (15142, 1585198688.5593174, 0), (15142, 1585218018.7679162, 0), (15142, 1585237348.976515, 0)  ... displaying 10 of 70 total bound parameter sets ...  (15142, 1586416491.701042, 0), (15142, 1586435821.9096408, 0))
+base.py:26,12:17:45:__connect:653:dR9hUA -- Created new connection <pyodbc.Connection object at 0x7f148c6109d0>
+base.py:26,12:17:45:checkout:507:dR9hUA -- Connection <pyodbc.Connection object at 0x7f148c6109d0> checked out from pool
+base.py:26,12:17:45:_begin_impl:711:dR9hUA -- BEGIN (implicit)
+base.py:26,12:17:45:_execute_context:1205:dR9hUA -- INSERT INTO dates ([fileId], bins, [values]) VALUES (?, ?, ?)
+base.py:26,12:17:45:_execute_context:1207:dR9hUA -- ((15139, 1516947285.287, 2), (15139, 1552020167.103, 1), (15140, 1536966208.701, 2), (15140, 1562029628.8140001, 1), (15141, 1559195720.97, 2), (15141, 1573144384.9915, 1), (15142, 1583864904.166, 7), (15142, 1583884234.3745987, 16)  ... displaying 10 of 70 total bound parameter sets ...  (15142, 1585063377.0991256, 0), (15142, 1585082707.3077245, 0))
