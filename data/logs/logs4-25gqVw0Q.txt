@@ -1,0 +1,17 @@
+sql.py:25,22:00:55:start:168:gqVw0Q -- STARTING SQL testing2020-04-25 22:00:55.358817 /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+sql.py:25,22:00:55:start:170:gqVw0Q -- setting sys except hook
+sql.py:25,22:00:55:start:180:gqVw0Q -- Owner name: testing2020-04-04 25 AprrQlgyJVd5w
+sql.py:25,22:00:56:start:184:gqVw0Q -- Added owner row, name: testing2020-04-04 25 AprrQlgyJVd5w id: 77
+configlo:25,22:00:56:handle_exception:82:gqVw0Q -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 193, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/henry/pydocs/processing/sql.py", line 264, in <module>
+    start("testing" + datetime.now().__str__(), wpath)
+  File "/home/henry/pydocs/processing/sql.py", line 190, in start
+    load_from_files(pickle.load(open(n, 'rb')), scoped_session())
+NameError: name 'load_from_files' is not defined
+configlo:25,22:00:56:mp_sendmail:115:gqVw0Q -- sending mail
+configlo:25,22:00:57:handle_exception:86:gqVw0Q -- exiting! from sshook

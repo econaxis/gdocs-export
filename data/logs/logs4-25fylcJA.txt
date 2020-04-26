@@ -1,0 +1,17 @@
+sql.py:25,22:07:53:start:169:fylcJA -- STARTING SQL testing2020-04-25 22:07:53.491205 /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+sql.py:25,22:07:53:start:171:fylcJA -- setting sys except hook
+sql.py:25,22:07:53:start:179:fylcJA -- Owner name: testing2020-04-04 25 Apri_tZ1eCBkQ
+sql.py:25,22:07:54:start:183:fylcJA -- Added owner row, name: testing2020-04-04 25 Apri_tZ1eCBkQ id: 82
+configlo:25,22:07:54:handle_exception:82:fylcJA -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 193, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/henry/pydocs/processing/sql.py", line 267, in <module>
+    start("testing" + datetime.now().__str__(), wpath)
+  File "/home/henry/pydocs/processing/sql.py", line 190, in start
+    procs.append(mp.Process(target = load_from_dict, args = (pickle.load(open(n, 'rb')), scoped_session(), owner)))
+NameError: name 'mp' is not defined
+configlo:25,22:07:54:mp_sendmail:115:fylcJA -- sending mail
+configlo:25,22:07:55:handle_exception:86:fylcJA -- exiting! from sshook

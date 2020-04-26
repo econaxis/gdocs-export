@@ -1,4 +1,5 @@
-from sqlalchemy import create_engine, MetaData, Column, Integer, String, Table, DateTime, ForeignKey, PrimaryKeyConstraint, Boolean
+from sqlalchemy import create_engine, MetaData, Column, Integer, String, Table, DateTime, ForeignKey, PrimaryKeyConstraint, Boolean, \
+        PickleType, Float
 from sqlalchemy.ext.declarative import declarative_base, declared_attr
 from sqlalchemy.orm import *
 from sqlalchemy.sql import *
@@ -10,8 +11,10 @@ Base = declarative_base()
 class Files(Base):
     __tablename__ = "files"
     id = Column(Integer, primary_key=True, unique=True, autoincrement=True)
-    fileId = Column(String(200),unique=True)
+    fileId = Column(String(300),unique=True)
+
     lastModDate = Column(DateTime)
+
     parent_id = Column(Integer, ForeignKey('owner.id'))
     isFile = Column(Boolean)
 
@@ -27,7 +30,7 @@ class Files(Base):
 class Owner(Base):
     __tablename__ = "owner"
     id = Column(Integer, primary_key=True, unique=True, autoincrement=True)
-    name = Column(String(40), unique=True)
+    name = Column(String(50), unique=True)
 
     files = relationship("Files", back_populates="owner")
 
@@ -40,10 +43,14 @@ class Dates(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
 
     fileId = Column(Integer, ForeignKey('files.id'))
-    moddate = Column(DateTime)
 
+    bins = Column(Float)
+    values = Column(Integer)
+
+
+
+    #Relationships
     files= relationship("Files", back_populates="dates")
-
     __table_args__ = (
         PrimaryKeyConstraint(name='dates_pk', mssql_clustered=False),
     )
@@ -86,6 +93,14 @@ class Filename(Base):
         PrimaryKeyConstraint(name='filename_pk', mssql_clustered=False),
     )
 
+
+class Tasks(Base):
+    __tablename__ = 'tasks'
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    path = Column(String(600))
+    creds = Column(PickleType)
+    fileid = Column(String(600))
+    userid = Column(String(600))
 
 def create(engine, sess):
     print("creating" * 100)

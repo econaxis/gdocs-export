@@ -1,0 +1,70 @@
+sql.py:25,12:44:20:<module>:24:UVOrkQ -- Driver%3D%7BODBC+Driver+17+for+SQL+Server%7D%3BServer%3Dtcp%3Apydoc-db.database.windows.net%2C1433%3BDatabase%3Dpydoc-db%3BUid%3Dhenry2833%3BPwd%3D%7BInfoip32%7D%3BEncrypt%3Dyes%3BTrustServerCertificate%3Dno%3BConnection+Timeout%3D30%3B
+dsds.py:25,12:44:22:start:18:UVOrkQ -- start
+get_file:25,12:44:22:loadFiles:266:UVOrkQ -- Start loadFiles, 527e4afc-4598-400f-8536-afa5324f0ba4 1ytJocI9f4gvmpnwLNNfpQzRPhcFs5EzR
+requests:25,12:44:22:__call__:117:UVOrkQ -- Making request: POST https://oauth2.googleapis.com/token
+connecti:25,12:44:22:_new_conn:817:UVOrkQ -- Starting new HTTPS connection (1): oauth2.googleapis.com
+connecti:25,12:44:23:_make_request:393:UVOrkQ -- https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+selector:25,12:44:23:__init__:59:UVOrkQ -- Using selector: EpollSelector
+test_uti:25,12:44:23:print_size:82:UVOrkQ -- ---------------Memory usage: 94972 (kb)---------------0 mins since start
+test_uti:25,12:44:23:print_size:100:UVOrkQ -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/0 at 2020-04-25 12:44:23.093669
+dumped: 0
+get_file:25,12:44:23:getIdsRecursive:53:UVOrkQ -- getIdsRecursive looping
+get_file:25,12:44:23:getIdsRecursive:53:UVOrkQ -- getIdsRecursive looping
+get_file:25,12:44:23:getIdsRecursive:53:UVOrkQ -- getIdsRecursive looping
+test_uti:25,12:44:23:tryGetQueue:201:UVOrkQ -- getIdswaiting 1 10
+test_uti:25,12:44:23:tryGetQueue:201:UVOrkQ -- getIdswaiting 1 10
+get_file:25,12:44:24:getIdsRecursive:53:UVOrkQ -- getIdsRecursive looping
+test_uti:25,12:44:24:tryGetQueue:201:UVOrkQ -- getIdswaiting 1 10
+get_file:25,12:44:24:getRevision:163:UVOrkQ -- getRevision looping
+gdoc.py:25,12:44:24:async_init:24:UVOrkQ -- async init called
+gdoc.py:25,12:44:24:get_last_revision:54:UVOrkQ -- last revision id 546
+gdoc.py:25,12:44:24:async_init:31:UVOrkQ -- after await 546
+get_file:25,12:44:24:getRevision:187:UVOrkQ -- google doc
+get_file:25,12:44:24:getRevision:163:UVOrkQ -- getRevision looping
+gdoc.py:25,12:44:24:async_init:24:UVOrkQ -- async init called
+gdoc.py:25,12:44:25:get_last_revision:54:UVOrkQ -- last revision id 2502
+gdoc.py:25,12:44:25:async_init:31:UVOrkQ -- after await 2502
+get_file:25,12:44:25:getRevision:187:UVOrkQ -- google doc
+get_file:25,12:44:25:getRevision:163:UVOrkQ -- getRevision looping
+get_file:25,12:44:29:getRevision:163:UVOrkQ -- getRevision looping
+gdoc.py:25,12:44:29:async_init:24:UVOrkQ -- async init called
+test_uti:25,12:44:29:tryGetQueue:201:UVOrkQ -- getRevisionwaiting 1 10
+gdoc.py:25,12:44:29:get_last_revision:54:UVOrkQ -- last revision id 647
+gdoc.py:25,12:44:29:async_init:31:UVOrkQ -- after await 647
+get_file:25,12:44:29:getRevision:187:UVOrkQ -- google doc
+get_file:25,12:44:29:getRevision:163:UVOrkQ -- getRevision looping
+test_uti:25,12:44:29:tryGetQueue:201:UVOrkQ -- getRevisionwaiting 1 10
+get_file:25,12:44:30:getRevision:163:UVOrkQ -- getRevision looping
+test_uti:25,12:44:32:tryGetQueue:201:UVOrkQ -- getIdswaiting 2 10
+test_uti:25,12:44:33:print_size:82:UVOrkQ -- ---------------Memory usage: 101880 (kb)---------------0 mins since start
+test_uti:25,12:44:33:print_size:100:UVOrkQ -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:44:33.123496
+dumped: 0
+get_file:25,12:44:33:getRevision:163:UVOrkQ -- getRevision looping
+test_uti:25,12:44:34:tryGetQueue:201:UVOrkQ -- getIdswaiting 2 10
+test_uti:25,12:44:35:tryGetQueue:201:UVOrkQ -- getRevisionwaiting 1 10
+test_uti:25,12:44:35:tryGetQueue:201:UVOrkQ -- getRevisionwaiting 1 10
+get_file:25,12:44:36:getRevision:163:UVOrkQ -- getRevision looping
+test_uti:25,12:44:36:tryGetQueue:201:UVOrkQ -- getRevisionwaiting 1 10
+get_file:25,12:44:37:getRevision:163:UVOrkQ -- getRevision looping
+get_file:25,12:44:38:getRevision:163:UVOrkQ -- getRevision looping
+test_uti:25,12:44:39:tryGetQueue:201:UVOrkQ -- getRevisionwaiting 2 10
+get_file:25,12:44:39:getRevision:163:UVOrkQ -- getRevision looping
+get_file:25,12:44:39:getRevision:163:UVOrkQ -- getRevision looping
+get_file:25,12:44:39:getRevision:163:UVOrkQ -- getRevision looping
+test_uti:25,12:44:41:tryGetQueue:201:UVOrkQ -- getRevisionwaiting 1 10
+test_uti:25,12:44:41:tryGetQueue:201:UVOrkQ -- getRevisionwaiting 1 10
+test_uti:25,12:44:41:tryGetQueue:201:UVOrkQ -- getRevisionwaiting 1 10
+test_uti:25,12:44:41:tryGetQueue:201:UVOrkQ -- getIdswaiting 2 10
+test_uti:25,12:44:43:print_size:82:UVOrkQ -- ---------------Memory usage: 101880 (kb)---------------0 mins since start
+test_uti:25,12:44:43:print_size:100:UVOrkQ -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:44:43.153172
+dumped: 0
+test_uti:25,12:44:44:tryGetQueue:201:UVOrkQ -- getIdswaiting 3 10
+test_uti:25,12:44:45:tryGetQueue:201:UVOrkQ -- getRevisionwaiting 2 10
+test_uti:25,12:44:45:tryGetQueue:201:UVOrkQ -- getRevisionwaiting 2 10
+test_uti:25,12:44:47:tryGetQueue:201:UVOrkQ -- getRevisionwaiting 1 10
+test_uti:25,12:44:47:tryGetQueue:201:UVOrkQ -- getRevisionwaiting 1 10
+test_uti:25,12:44:48:tryGetQueue:201:UVOrkQ -- getIdswaiting 3 10
+test_uti:25,12:44:48:tryGetQueue:201:UVOrkQ -- getIdswaiting 3 10

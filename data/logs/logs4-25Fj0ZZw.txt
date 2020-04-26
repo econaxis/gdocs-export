@@ -1,0 +1,1883 @@
+dsds.py:25,18:18:56:start:18:Fj0ZZw -- start
+get_file:25,18:19:01:loadFiles:280:Fj0ZZw -- Start loadFiles, 527e4afc-4598-400f-8536-afa5324f0ba4 0B4Fujvv5MfqbVElBU01fZUxHcUk
+requests:25,18:19:01:__call__:117:Fj0ZZw -- Making request: POST https://oauth2.googleapis.com/token
+connecti:25,18:19:01:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): oauth2.googleapis.com
+connecti:25,18:19:01:_make_request:393:Fj0ZZw -- https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+selector:25,18:19:01:__init__:59:Fj0ZZw -- Using selector: EpollSelector
+test_uti:25,18:19:01:print_size:82:Fj0ZZw -- ---------------Memory usage: 92120 (kb)---------------0 mins since start
+test_uti:25,18:19:01:print_size:88:Fj0ZZw -- /usr/lib/python3.8/tracemalloc.py:397: size=512 B (+512 B), count=3 (+3), average=171 B
+test_uti:25,18:19:01:print_size:88:Fj0ZZw -- /usr/lib/python3.8/tracemalloc.py:534: size=472 B (+472 B), count=2 (+2), average=236 B
+test_uti:25,18:19:01:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:82: size=448 B (+448 B), count=1 (+1), average=448 B
+test_uti:25,18:19:01:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:86: size=424 B (+424 B), count=1 (+1), average=424 B
+test_uti:25,18:19:01:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:79: size=0 B (-424 B), count=0 (-1)
+test_uti:25,18:19:01:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:80: size=400 B (+400 B), count=1 (+1), average=400 B
+test_uti:25,18:19:01:print_size:88:Fj0ZZw -- /usr/lib/python3.8/logging/__init__.py:330: size=48 B (+48 B), count=2 (+2), average=24 B
+test_uti:25,18:19:01:print_size:88:Fj0ZZw -- /usr/lib/python3.8/tracemalloc.py:291: size=40 B (+40 B), count=1 (+1), average=40 B
+test_uti:25,18:19:01:print_size:88:Fj0ZZw -- /usr/lib/python3.8/logging/__init__.py:329: size=24 B (+24 B), count=1 (+1), average=24 B
+test_uti:25,18:19:01:print_size:88:Fj0ZZw -- /usr/lib/python3.8/logging/__init__.py:289: size=24 B (+24 B), count=1 (+1), average=24 B
+test_uti:25,18:19:01:print_size:90:Fj0ZZw -- 
+
+------------------------------
+
+
+test_uti:25,18:19:01:print_size:93:Fj0ZZw -- /usr/lib/python3.8/tracemalloc.py:397: size=512 B, count=3, average=171 B
+test_uti:25,18:19:01:print_size:93:Fj0ZZw -- /usr/lib/python3.8/tracemalloc.py:534: size=472 B, count=2, average=236 B
+test_uti:25,18:19:01:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:82: size=448 B, count=1, average=448 B
+test_uti:25,18:19:01:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:86: size=424 B, count=1, average=424 B
+test_uti:25,18:19:01:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:80: size=400 B, count=1, average=400 B
+test_uti:25,18:19:01:print_size:93:Fj0ZZw -- /usr/lib/python3.8/logging/__init__.py:330: size=48 B, count=2, average=24 B
+test_uti:25,18:19:01:print_size:93:Fj0ZZw -- /usr/lib/python3.8/tracemalloc.py:291: size=40 B, count=1, average=40 B
+test_uti:25,18:19:01:print_size:93:Fj0ZZw -- /usr/lib/python3.8/logging/__init__.py:329: size=24 B, count=1, average=24 B
+test_uti:25,18:19:01:print_size:93:Fj0ZZw -- /usr/lib/python3.8/logging/__init__.py:289: size=24 B, count=1, average=24 B
+test_uti:25,18:19:01:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:83: size=24 B, count=1, average=24 B
+test_uti:25,18:19:01:print_size:100:Fj0ZZw -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/0 at 2020-04-25 18:19:01.398328
+dumped: 0
+get_file:25,18:19:02:getIdsRecursive:53:Fj0ZZw -- getIdsRecursive looping
+get_file:25,18:19:02:getIdsRecursive:53:Fj0ZZw -- getIdsRecursive looping
+get_file:25,18:19:03:getIdsRecursive:53:Fj0ZZw -- getIdsRecursive looping
+get_file:25,18:19:03:getIdsRecursive:53:Fj0ZZw -- getIdsRecursive looping
+get_file:25,18:19:03:getIdsRecursive:53:Fj0ZZw -- getIdsRecursive looping
+get_file:25,18:19:04:getIdsRecursive:53:Fj0ZZw -- getIdsRecursive looping
+get_file:25,18:19:04:getIdsRecursive:53:Fj0ZZw -- getIdsRecursive looping
+get_file:25,18:19:04:getIdsRecursive:53:Fj0ZZw -- getIdsRecursive looping
+get_file:25,18:19:05:getIdsRecursive:53:Fj0ZZw -- getIdsRecursive looping
+get_file:25,18:19:05:getRevision:166:Fj0ZZw -- getRevision looping
+gdoc.py:25,18:19:05:async_init:24:Fj0ZZw -- async init called
+get_file:25,18:19:05:getIdsRecursive:53:Fj0ZZw -- getIdsRecursive looping
+get_file:25,18:19:05:getIdsRecursive:53:Fj0ZZw -- getIdsRecursive looping
+gdoc.py:25,18:19:05:get_last_revision:53:Fj0ZZw -- last revision id 394
+gdoc.py:25,18:19:05:async_init:33:Fj0ZZw -- after await 394
+connecti:25,18:19:05:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:19:06:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/1TYIOfz_uzybWgEeexs8iE64jcjt-AmUegOP6KORNaWQ/revisions/load?id=1TYIOfz_uzybWgEeexs8iE64jcjt-AmUegOP6KORNaWQ&start=1&end=394 HTTP/1.1" 200 None
+get_file:25,18:19:06:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:19:06:getRevision:166:Fj0ZZw -- getRevision looping
+gdoc.py:25,18:19:06:async_init:24:Fj0ZZw -- async init called
+test_uti:25,18:19:06:print_size:82:Fj0ZZw -- ---------------Memory usage: 92752 (kb)---------------0 mins since start
+test_uti:25,18:19:06:print_size:88:Fj0ZZw -- <frozen importlib._bootstrap_external>:580: size=80.3 KiB (+80.3 KiB), count=943 (+943), average=87 B
+test_uti:25,18:19:06:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=16.4 KiB (+16.4 KiB), count=191 (+191), average=88 B
+test_uti:25,18:19:06:print_size:88:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=12.8 KiB (+12.8 KiB), count=396 (+396), average=33 B
+test_uti:25,18:19:06:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:108: size=11.5 KiB (+11.5 KiB), count=274 (+274), average=43 B
+test_uti:25,18:19:06:print_size:88:Fj0ZZw -- /usr/lib/python3.8/ssl.py:906: size=10.6 KiB (+10.6 KiB), count=172 (+172), average=63 B
+test_uti:25,18:19:06:print_size:88:Fj0ZZw -- /usr/lib/python3.8/abc.py:102: size=9377 B (+9377 B), count=96 (+96), average=98 B
+test_uti:25,18:19:06:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:100: size=6070 B (+6070 B), count=82 (+82), average=74 B
+test_uti:25,18:19:06:print_size:88:Fj0ZZw -- /usr/lib/python3.8/asyncio/events.py:81: size=5144 B (+5144 B), count=17 (+17), average=303 B
+test_uti:25,18:19:06:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:833: size=4032 B (+4032 B), count=4 (+4), average=1008 B
+test_uti:25,18:19:06:print_size:88:Fj0ZZw -- <frozen importlib._bootstrap>:219: size=3523 B (+3523 B), count=40 (+40), average=88 B
+test_uti:25,18:19:06:print_size:90:Fj0ZZw -- 
+
+------------------------------
+
+
+test_uti:25,18:19:06:print_size:93:Fj0ZZw -- <frozen importlib._bootstrap_external>:580: size=80.3 KiB, count=943, average=87 B
+test_uti:25,18:19:06:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=16.4 KiB, count=191, average=88 B
+test_uti:25,18:19:06:print_size:93:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=12.8 KiB, count=396, average=33 B
+test_uti:25,18:19:06:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:108: size=11.5 KiB, count=274, average=43 B
+test_uti:25,18:19:06:print_size:93:Fj0ZZw -- /usr/lib/python3.8/ssl.py:906: size=10.6 KiB, count=172, average=63 B
+test_uti:25,18:19:06:print_size:93:Fj0ZZw -- /usr/lib/python3.8/abc.py:102: size=9377 B, count=96, average=98 B
+test_uti:25,18:19:06:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:100: size=6070 B, count=82, average=74 B
+test_uti:25,18:19:06:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/events.py:81: size=5144 B, count=17, average=303 B
+test_uti:25,18:19:06:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:833: size=4032 B, count=4, average=1008 B
+test_uti:25,18:19:06:print_size:93:Fj0ZZw -- <frozen importlib._bootstrap>:219: size=3523 B, count=40, average=88 B
+test_uti:25,18:19:06:print_size:100:Fj0ZZw -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+1/69 at 2020-04-25 18:19:06.625124
+dumped: 0
+get_file:25,18:19:06:getIdsRecursive:53:Fj0ZZw -- getIdsRecursive looping
+test_uti:25,18:19:06:tryGetQueue:226:Fj0ZZw -- getIdswaiting 1 5
+get_file:25,18:19:07:getRevision:166:Fj0ZZw -- getRevision looping
+gdoc.py:25,18:19:07:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:19:07:get_last_revision:53:Fj0ZZw -- last revision id 1336
+gdoc.py:25,18:19:07:async_init:33:Fj0ZZw -- after await 1336
+connecti:25,18:19:07:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:19:07:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/19Fu317bfo0V7yOIkfLvKtAU-UJYLf8d2Soy-jTvq1uc/revisions/load?id=19Fu317bfo0V7yOIkfLvKtAU-UJYLf8d2Soy-jTvq1uc&start=1&end=1336 HTTP/1.1" 200 None
+get_file:25,18:19:08:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:19:08:getRevision:166:Fj0ZZw -- getRevision looping
+gdoc.py:25,18:19:08:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:19:08:get_last_revision:53:Fj0ZZw -- last revision id 12
+gdoc.py:25,18:19:08:async_init:33:Fj0ZZw -- after await 12
+connecti:25,18:19:08:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:19:09:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/1Ux4BA5BVJTcsGcTcGp8CtB85ahlWp0h83AGvrtAhnTg/revisions/load?id=1Ux4BA5BVJTcsGcTcGp8CtB85ahlWp0h83AGvrtAhnTg&start=1&end=12 HTTP/1.1" 200 None
+get_file:25,18:19:09:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:19:09:getRevision:166:Fj0ZZw -- getRevision looping
+get_file:25,18:19:09:getRevision:183:Fj0ZZw -- not google doc
+gdoc.py:25,18:19:09:get_last_revision:53:Fj0ZZw -- last revision id 1946
+gdoc.py:25,18:19:09:async_init:33:Fj0ZZw -- after await 1946
+connecti:25,18:19:09:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:19:09:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/1eXJKzIcZCM6pAdVLLrvEyIwQBDDrtm8dComeZ_W7uOI/revisions/load?id=1eXJKzIcZCM6pAdVLLrvEyIwQBDDrtm8dComeZ_W7uOI&start=1&end=1946 HTTP/1.1" 200 None
+get_file:25,18:19:09:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:19:09:getRevision:166:Fj0ZZw -- getRevision looping
+get_file:25,18:19:10:getRevision:166:Fj0ZZw -- getRevision looping
+test_uti:25,18:19:11:print_size:82:Fj0ZZw -- ---------------Memory usage: 92752 (kb)---------------0 mins since start
+test_uti:25,18:19:11:print_size:88:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=119 KiB (+106 KiB), count=3694 (+3298), average=33 B
+test_uti:25,18:19:11:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=30.9 KiB (+14.5 KiB), count=369 (+178), average=86 B
+test_uti:25,18:19:11:print_size:88:Fj0ZZw -- /usr/lib/python3.8/ssl.py:906: size=15.9 KiB (+5367 B), count=257 (+85), average=63 B
+test_uti:25,18:19:11:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:148: size=4936 B (+4936 B), count=43 (+43), average=115 B
+test_uti:25,18:19:11:print_size:88:Fj0ZZw -- <frozen importlib._bootstrap_external>:580: size=75.9 KiB (-4512 B), count=909 (-34), average=86 B
+test_uti:25,18:19:11:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:833: size=0 B (-4032 B), count=0 (-4)
+test_uti:25,18:19:11:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:850: size=504 B (-2552 B), count=3 (-9), average=168 B
+test_uti:25,18:19:11:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:103: size=4632 B (+2424 B), count=1 (+0), average=4632 B
+test_uti:25,18:19:11:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client_reqrep.py:363: size=1008 B (-2016 B), count=1 (-2), average=1008 B
+test_uti:25,18:19:11:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client_reqrep.py:385: size=478 B (-2016 B), count=2 (-2), average=239 B
+test_uti:25,18:19:11:print_size:90:Fj0ZZw -- 
+
+------------------------------
+
+
+test_uti:25,18:19:11:print_size:93:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=119 KiB, count=3694, average=33 B
+test_uti:25,18:19:11:print_size:93:Fj0ZZw -- <frozen importlib._bootstrap_external>:580: size=75.9 KiB, count=909, average=86 B
+test_uti:25,18:19:11:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=30.9 KiB, count=369, average=86 B
+test_uti:25,18:19:11:print_size:93:Fj0ZZw -- /usr/lib/python3.8/ssl.py:906: size=15.9 KiB, count=257, average=63 B
+test_uti:25,18:19:11:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:108: size=11.9 KiB, count=282, average=43 B
+test_uti:25,18:19:11:print_size:93:Fj0ZZw -- /usr/lib/python3.8/abc.py:102: size=9377 B, count=96, average=98 B
+test_uti:25,18:19:11:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:100: size=6392 B, count=87, average=73 B
+test_uti:25,18:19:11:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/events.py:81: size=5816 B, count=21, average=277 B
+test_uti:25,18:19:11:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:148: size=4936 B, count=43, average=115 B
+test_uti:25,18:19:11:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:103: size=4632 B, count=1, average=4632 B
+test_uti:25,18:19:11:print_size:100:Fj0ZZw -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+5/74 at 2020-04-25 18:19:11.724888
+dumped: 0
+test_uti:25,18:19:11:tryGetQueue:226:Fj0ZZw -- getIdswaiting 2 5
+gdoc.py:25,18:19:13:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:19:13:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:19:13:get_last_revision:53:Fj0ZZw -- last revision id 1394
+gdoc.py:25,18:19:13:async_init:33:Fj0ZZw -- after await 1394
+connecti:25,18:19:13:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:19:14:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/1K6SwyWCOhW6dt906DjOIhJ-ZklpsooCdTyYHGfEZD2s/revisions/load?id=1K6SwyWCOhW6dt906DjOIhJ-ZklpsooCdTyYHGfEZD2s&start=1&end=1394 HTTP/1.1" 200 None
+get_file:25,18:19:14:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:19:14:getRevision:166:Fj0ZZw -- getRevision looping
+gdoc.py:25,18:19:14:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:19:14:get_last_revision:53:Fj0ZZw -- last revision id 1782
+gdoc.py:25,18:19:14:async_init:33:Fj0ZZw -- after await 1782
+connecti:25,18:19:14:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:19:15:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/1ak3AnxwEDfv_EkgRG7Q8U_eglT-eK2W3RtAJqlrtcQA/revisions/load?id=1ak3AnxwEDfv_EkgRG7Q8U_eglT-eK2W3RtAJqlrtcQA&start=1&end=1782 HTTP/1.1" 200 None
+get_file:25,18:19:15:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:19:15:getRevision:166:Fj0ZZw -- getRevision looping
+gdoc.py:25,18:19:16:get_last_revision:53:Fj0ZZw -- last revision id 6533
+gdoc.py:25,18:19:16:async_init:33:Fj0ZZw -- after await 6533
+connecti:25,18:19:16:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:19:17:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/1iTV26x-U2-nngY6gONVklMtrhdfI818IwLM682vpABA/revisions/load?id=1iTV26x-U2-nngY6gONVklMtrhdfI818IwLM682vpABA&start=1&end=6533 HTTP/1.1" 200 None
+get_file:25,18:19:17:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:19:17:getRevision:166:Fj0ZZw -- getRevision looping
+test_uti:25,18:19:17:print_size:82:Fj0ZZw -- ---------------Memory usage: 94424 (kb)---------------0 mins since start
+test_uti:25,18:19:17:print_size:88:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=428 KiB (+308 KiB), count=13408 (+9714), average=33 B
+test_uti:25,18:19:17:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=17.3 KiB (-13.6 KiB), count=208 (-161), average=85 B
+test_uti:25,18:19:17:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:148: size=0 B (-4936 B), count=0 (-43)
+test_uti:25,18:19:17:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:850: size=3160 B (+2656 B), count=9 (+6), average=351 B
+test_uti:25,18:19:17:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/gdoc.py:51: size=3882 B (+2266 B), count=35 (+24), average=111 B
+test_uti:25,18:19:17:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/gdoc.py:40: size=2287 B (+1707 B), count=10 (+6), average=229 B
+test_uti:25,18:19:17:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:874: size=168 B (-1160 B), count=1 (-2), average=168 B
+test_uti:25,18:19:17:print_size:88:Fj0ZZw -- /usr/lib/python3.8/tracemalloc.py:532: size=2080 B (+984 B), count=37 (+17), average=56 B
+test_uti:25,18:19:17:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/connector.py:162: size=944 B (+944 B), count=4 (+4), average=236 B
+test_uti:25,18:19:17:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:477: size=856 B (+856 B), count=2 (+2), average=428 B
+test_uti:25,18:19:17:print_size:90:Fj0ZZw -- 
+
+------------------------------
+
+
+test_uti:25,18:19:17:print_size:93:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=428 KiB, count=13408, average=33 B
+test_uti:25,18:19:17:print_size:93:Fj0ZZw -- <frozen importlib._bootstrap_external>:580: size=75.9 KiB, count=909, average=86 B
+test_uti:25,18:19:17:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=17.3 KiB, count=208, average=85 B
+test_uti:25,18:19:17:print_size:93:Fj0ZZw -- /usr/lib/python3.8/ssl.py:906: size=15.9 KiB, count=257, average=63 B
+test_uti:25,18:19:17:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:108: size=11.5 KiB, count=270, average=44 B
+test_uti:25,18:19:17:print_size:93:Fj0ZZw -- /usr/lib/python3.8/abc.py:102: size=9377 B, count=96, average=98 B
+test_uti:25,18:19:17:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:100: size=6392 B, count=87, average=73 B
+test_uti:25,18:19:17:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/events.py:81: size=5224 B, count=19, average=275 B
+test_uti:25,18:19:17:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:103: size=4632 B, count=1, average=4632 B
+test_uti:25,18:19:17:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/gdoc.py:51: size=3882 B, count=35, average=111 B
+test_uti:25,18:19:17:print_size:100:Fj0ZZw -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+8/74 at 2020-04-25 18:19:17.494753
+dumped: 0
+test_uti:25,18:19:17:dump_files:136:Fj0ZZw -- histed files at /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/1.pathed, length 8
+gdoc.py:25,18:19:19:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:19:19:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:19:19:get_last_revision:53:Fj0ZZw -- last revision id 9
+gdoc.py:25,18:19:19:async_init:33:Fj0ZZw -- after await 9
+connecti:25,18:19:19:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:19:20:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/12x_9WkC_rJJ4iQW5IUNaY9BwAHRM1P6nRBi_oyRq7eI/revisions/load?id=12x_9WkC_rJJ4iQW5IUNaY9BwAHRM1P6nRBi_oyRq7eI&start=1&end=9 HTTP/1.1" 200 None
+get_file:25,18:19:20:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:19:20:getRevision:166:Fj0ZZw -- getRevision looping
+gdoc.py:25,18:19:20:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:19:20:get_last_revision:53:Fj0ZZw -- last revision id 2999
+gdoc.py:25,18:19:20:async_init:33:Fj0ZZw -- after await 2999
+connecti:25,18:19:20:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:19:21:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/1gKBPmWO42yparziEkHbvcBtubHyE_IQwtO1Q8IIrW1c/revisions/load?id=1gKBPmWO42yparziEkHbvcBtubHyE_IQwtO1Q8IIrW1c&start=1&end=2999 HTTP/1.1" 200 None
+get_file:25,18:19:21:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:19:21:getRevision:166:Fj0ZZw -- getRevision looping
+test_uti:25,18:19:21:tryGetQueue:226:Fj0ZZw -- getIdswaiting 3 5
+gdoc.py:25,18:19:21:get_last_revision:53:Fj0ZZw -- last revision id 1
+gdoc.py:25,18:19:21:async_init:33:Fj0ZZw -- after await 1
+connecti:25,18:19:21:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:19:21:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/1FzKITrCYnc_odhNCRNNaZ-PnT7m0f6qI-iDuQG382OY/revisions/load?id=1FzKITrCYnc_odhNCRNNaZ-PnT7m0f6qI-iDuQG382OY&start=1&end=1 HTTP/1.1" 200 None
+get_file:25,18:19:21:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:19:21:getRevision:166:Fj0ZZw -- getRevision looping
+get_file:25,18:19:22:getRevision:166:Fj0ZZw -- getRevision looping
+get_file:25,18:19:22:getRevision:166:Fj0ZZw -- getRevision looping
+test_uti:25,18:19:23:print_size:82:Fj0ZZw -- ---------------Memory usage: 97012 (kb)---------------0 mins since start
+test_uti:25,18:19:23:print_size:88:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=99.7 KiB (-328 KiB), count=3113 (-10295), average=33 B
+test_uti:25,18:19:23:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/gdoc.py:51: size=1021 B (-2861 B), count=8 (-27), average=128 B
+test_uti:25,18:19:23:print_size:88:Fj0ZZw -- <__array_function__ internals>:5: size=2736 B (+2736 B), count=7 (+7), average=391 B
+test_uti:25,18:19:23:print_size:88:Fj0ZZw -- <__array_function__ internals>:4: size=2568 B (+2568 B), count=6 (+6), average=428 B
+test_uti:25,18:19:23:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/throttler.py:51: size=2944 B (+1752 B), count=8 (+4), average=368 B
+test_uti:25,18:19:23:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:850: size=1496 B (-1664 B), count=4 (-5), average=374 B
+test_uti:25,18:19:23:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:862: size=1246 B (+1246 B), count=11 (+11), average=113 B
+test_uti:25,18:19:23:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:324: size=992 B (+992 B), count=2 (+2), average=496 B
+test_uti:25,18:19:23:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/core/function_base.py:137: size=984 B (+984 B), count=2 (+2), average=492 B
+test_uti:25,18:19:23:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:873: size=976 B (+976 B), count=2 (+2), average=488 B
+test_uti:25,18:19:23:print_size:90:Fj0ZZw -- 
+
+------------------------------
+
+
+test_uti:25,18:19:23:print_size:93:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=99.7 KiB, count=3113, average=33 B
+test_uti:25,18:19:23:print_size:93:Fj0ZZw -- <frozen importlib._bootstrap_external>:580: size=75.9 KiB, count=909, average=86 B
+test_uti:25,18:19:23:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=17.0 KiB, count=205, average=85 B
+test_uti:25,18:19:23:print_size:93:Fj0ZZw -- /usr/lib/python3.8/ssl.py:906: size=15.9 KiB, count=257, average=63 B
+test_uti:25,18:19:23:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:108: size=11.0 KiB, count=258, average=44 B
+test_uti:25,18:19:23:print_size:93:Fj0ZZw -- /usr/lib/python3.8/abc.py:102: size=9377 B, count=96, average=98 B
+test_uti:25,18:19:23:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:100: size=6392 B, count=87, average=73 B
+test_uti:25,18:19:23:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/events.py:81: size=5792 B, count=22, average=263 B
+test_uti:25,18:19:23:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:103: size=4632 B, count=1, average=4632 B
+test_uti:25,18:19:23:print_size:93:Fj0ZZw -- <frozen importlib._bootstrap>:219: size=3523 B, count=40, average=88 B
+test_uti:25,18:19:23:print_size:100:Fj0ZZw -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+11/74 at 2020-04-25 18:19:23.700500
+dumped: 1
+gdoc.py:25,18:19:25:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:19:25:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:19:25:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:19:25:get_last_revision:53:Fj0ZZw -- last revision id 1590
+gdoc.py:25,18:19:25:async_init:33:Fj0ZZw -- after await 1590
+connecti:25,18:19:25:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:19:25:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/1VzVAOYcQFfJoPSOGAqpK8xA7OtiUNdq13G3SNRtrq2U/revisions/load?id=1VzVAOYcQFfJoPSOGAqpK8xA7OtiUNdq13G3SNRtrq2U&start=1&end=1590 HTTP/1.1" 200 None
+get_file:25,18:19:26:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:19:26:getRevision:166:Fj0ZZw -- getRevision looping
+gdoc.py:25,18:19:26:get_last_revision:53:Fj0ZZw -- last revision id 229
+gdoc.py:25,18:19:26:async_init:33:Fj0ZZw -- after await 229
+connecti:25,18:19:26:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:19:26:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/1cflNpTbjQqpz-E4GqrehbgvXRayQ6dXE_X_x5tC8gbE/revisions/load?id=1cflNpTbjQqpz-E4GqrehbgvXRayQ6dXE_X_x5tC8gbE&start=1&end=229 HTTP/1.1" 200 None
+get_file:25,18:19:26:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:19:26:getRevision:166:Fj0ZZw -- getRevision looping
+gdoc.py:25,18:19:26:get_last_revision:53:Fj0ZZw -- last revision id 33
+gdoc.py:25,18:19:26:async_init:33:Fj0ZZw -- after await 33
+connecti:25,18:19:26:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:19:27:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/1BU7kF9C-LzvjiV2WBq5Yx6sstmvvYDDOPKYP8jygvKg/revisions/load?id=1BU7kF9C-LzvjiV2WBq5Yx6sstmvvYDDOPKYP8jygvKg&start=1&end=33 HTTP/1.1" 200 None
+get_file:25,18:19:27:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:19:27:getRevision:166:Fj0ZZw -- getRevision looping
+test_uti:25,18:19:28:tryGetQueue:226:Fj0ZZw -- getIdswaiting 4 5
+test_uti:25,18:19:29:print_size:82:Fj0ZZw -- ---------------Memory usage: 97024 (kb)---------------0 mins since start
+test_uti:25,18:19:29:print_size:88:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=157 KiB (+57.5 KiB), count=4872 (+1759), average=33 B
+test_uti:25,18:19:29:print_size:88:Fj0ZZw -- /usr/lib/python3.8/ssl.py:906: size=21.1 KiB (+5423 B), count=343 (+86), average=63 B
+test_uti:25,18:19:29:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:850: size=4488 B (+2992 B), count=12 (+8), average=374 B
+test_uti:25,18:19:29:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/gdoc.py:40: size=3565 B (+1251 B), count=17 (+5), average=210 B
+test_uti:25,18:19:29:print_size:88:Fj0ZZw -- /usr/lib/python3.8/_weakrefset.py:84: size=1624 B (+1152 B), count=7 (+3), average=232 B
+test_uti:25,18:19:29:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:504: size=1560 B (+1040 B), count=3 (+2), average=520 B
+test_uti:25,18:19:29:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/connector.py:162: size=880 B (+880 B), count=3 (+3), average=293 B
+test_uti:25,18:19:29:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/connector.py:935: size=856 B (+856 B), count=2 (+2), average=428 B
+test_uti:25,18:19:29:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:477: size=0 B (-856 B), count=0 (-2)
+test_uti:25,18:19:29:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/helpers.py:493: size=0 B (-816 B), count=0 (-2)
+test_uti:25,18:19:29:print_size:90:Fj0ZZw -- 
+
+------------------------------
+
+
+test_uti:25,18:19:29:print_size:93:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=157 KiB, count=4872, average=33 B
+test_uti:25,18:19:29:print_size:93:Fj0ZZw -- <frozen importlib._bootstrap_external>:580: size=75.9 KiB, count=909, average=86 B
+test_uti:25,18:19:29:print_size:93:Fj0ZZw -- /usr/lib/python3.8/ssl.py:906: size=21.1 KiB, count=343, average=63 B
+test_uti:25,18:19:29:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=16.7 KiB, count=202, average=85 B
+test_uti:25,18:19:29:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:108: size=10.7 KiB, count=250, average=44 B
+test_uti:25,18:19:29:print_size:93:Fj0ZZw -- /usr/lib/python3.8/abc.py:102: size=9377 B, count=96, average=98 B
+test_uti:25,18:19:29:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:100: size=6392 B, count=87, average=73 B
+test_uti:25,18:19:29:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/events.py:81: size=6384 B, count=24, average=266 B
+test_uti:25,18:19:29:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:103: size=4632 B, count=1, average=4632 B
+test_uti:25,18:19:29:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:850: size=4488 B, count=12, average=374 B
+test_uti:25,18:19:29:print_size:100:Fj0ZZw -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+14/74 at 2020-04-25 18:19:29.219428
+dumped: 1
+gdoc.py:25,18:19:31:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:19:31:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:19:31:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:19:31:get_last_revision:53:Fj0ZZw -- last revision id 1868
+gdoc.py:25,18:19:31:async_init:33:Fj0ZZw -- after await 1868
+connecti:25,18:19:31:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:19:32:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/1gWhoOIIk2dcQObAvgYpY8Cx_Qc9YUoqNgXEapMic1Qo/revisions/load?id=1gWhoOIIk2dcQObAvgYpY8Cx_Qc9YUoqNgXEapMic1Qo&start=1&end=1868 HTTP/1.1" 200 None
+get_file:25,18:19:32:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:19:32:getRevision:166:Fj0ZZw -- getRevision looping
+gdoc.py:25,18:19:32:get_last_revision:53:Fj0ZZw -- last revision id 990
+gdoc.py:25,18:19:32:async_init:33:Fj0ZZw -- after await 990
+connecti:25,18:19:32:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:19:33:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/1qC8O9UkkKeZ82f4iVgf2UYL0ZDqm9ny54I45NmQqBK0/revisions/load?id=1qC8O9UkkKeZ82f4iVgf2UYL0ZDqm9ny54I45NmQqBK0&start=1&end=990 HTTP/1.1" 200 None
+get_file:25,18:19:33:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:19:33:getRevision:166:Fj0ZZw -- getRevision looping
+gdoc.py:25,18:19:33:get_last_revision:53:Fj0ZZw -- last revision id 1382
+gdoc.py:25,18:19:33:async_init:33:Fj0ZZw -- after await 1382
+connecti:25,18:19:33:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:19:33:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/1xS96CqWG26lxXRjriQhRXyssvP6FimBkTtA5EIOLfao/revisions/load?id=1xS96CqWG26lxXRjriQhRXyssvP6FimBkTtA5EIOLfao&start=1&end=1382 HTTP/1.1" 200 None
+get_file:25,18:19:34:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:19:34:getRevision:166:Fj0ZZw -- getRevision looping
+test_uti:25,18:19:35:tryGetQueue:226:Fj0ZZw -- getIdswaiting 5 5
+test_uti:25,18:19:35:print_size:82:Fj0ZZw -- ---------------Memory usage: 97024 (kb)---------------0 mins since start
+test_uti:25,18:19:35:print_size:88:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=294 KiB (+137 KiB), count=9118 (+4246), average=33 B
+test_uti:25,18:19:35:print_size:88:Fj0ZZw -- /usr/lib/python3.8/ssl.py:906: size=17.7 KiB (-3551 B), count=290 (-53), average=62 B
+test_uti:25,18:19:35:print_size:88:Fj0ZZw -- /usr/lib/python3.8/urllib/parse.py:397: size=558 B (-2321 B), count=6 (-26), average=93 B
+test_uti:25,18:19:35:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/gdoc.py:40: size=1299 B (-2266 B), count=5 (-12), average=260 B
+test_uti:25,18:19:35:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:850: size=2840 B (-1648 B), count=12 (+0), average=237 B
+test_uti:25,18:19:35:print_size:88:Fj0ZZw -- <string>:1: size=760 B (-1144 B), count=9 (-13), average=84 B
+test_uti:25,18:19:35:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:504: size=520 B (-1040 B), count=1 (-2), average=520 B
+test_uti:25,18:19:35:print_size:88:Fj0ZZw -- /usr/lib/python3.8/asyncio/selector_events.py:856: size=992 B (+992 B), count=1 (+1), average=992 B
+test_uti:25,18:19:35:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client_proto.py:62: size=992 B (+992 B), count=1 (+1), average=992 B
+test_uti:25,18:19:35:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client_reqrep.py:847: size=480 B (-960 B), count=1 (-2), average=480 B
+test_uti:25,18:19:35:print_size:90:Fj0ZZw -- 
+
+------------------------------
+
+
+test_uti:25,18:19:35:print_size:93:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=294 KiB, count=9118, average=33 B
+test_uti:25,18:19:35:print_size:93:Fj0ZZw -- <frozen importlib._bootstrap_external>:580: size=75.9 KiB, count=909, average=86 B
+test_uti:25,18:19:35:print_size:93:Fj0ZZw -- /usr/lib/python3.8/ssl.py:906: size=17.7 KiB, count=290, average=62 B
+test_uti:25,18:19:35:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=16.5 KiB, count=200, average=85 B
+test_uti:25,18:19:35:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:108: size=10.4 KiB, count=242, average=44 B
+test_uti:25,18:19:35:print_size:93:Fj0ZZw -- /usr/lib/python3.8/abc.py:102: size=9377 B, count=96, average=98 B
+test_uti:25,18:19:35:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/events.py:81: size=6776 B, count=25, average=271 B
+test_uti:25,18:19:35:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:100: size=6392 B, count=87, average=73 B
+test_uti:25,18:19:35:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:103: size=4632 B, count=1, average=4632 B
+test_uti:25,18:19:35:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/base_events.py:702: size=4192 B, count=38, average=110 B
+test_uti:25,18:19:35:print_size:100:Fj0ZZw -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+17/74 at 2020-04-25 18:19:35.820774
+dumped: 1
+test_uti:25,18:19:35:dump_files:136:Fj0ZZw -- histed files at /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/2.pathed, length 9
+configlo:25,18:19:35:sendmail:103:Fj0ZZw -- sending mail
+gdoc.py:25,18:19:37:async_init:24:Fj0ZZw -- async init called
+get_file:25,18:19:37:getRevision:183:Fj0ZZw -- not google doc
+gdoc.py:25,18:19:37:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:19:37:get_last_revision:53:Fj0ZZw -- last revision id 271
+gdoc.py:25,18:19:37:async_init:33:Fj0ZZw -- after await 271
+connecti:25,18:19:37:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:19:38:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/14KTZ9MFQGABvko_oR_4LlYTopekxI_fVWLoZQA0N85c/revisions/load?id=14KTZ9MFQGABvko_oR_4LlYTopekxI_fVWLoZQA0N85c&start=1&end=271 HTTP/1.1" 200 None
+get_file:25,18:19:38:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:19:38:getRevision:166:Fj0ZZw -- getRevision looping
+gdoc.py:25,18:19:38:get_last_revision:53:Fj0ZZw -- last revision id 2640
+gdoc.py:25,18:19:38:async_init:33:Fj0ZZw -- after await 2640
+connecti:25,18:19:38:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:19:39:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/1Xm-pyhQ5D_o4tAHRCtX-amvzVhf-d_pGw0ZhdcTL35Q/revisions/load?id=1Xm-pyhQ5D_o4tAHRCtX-amvzVhf-d_pGw0ZhdcTL35Q&start=1&end=2640 HTTP/1.1" 200 None
+get_file:25,18:19:39:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:19:39:getRevision:166:Fj0ZZw -- getRevision looping
+get_file:25,18:19:40:getRevision:166:Fj0ZZw -- getRevision looping
+test_uti:25,18:19:41:print_size:82:Fj0ZZw -- ---------------Memory usage: 97156 (kb)---------------0 mins since start
+test_uti:25,18:19:41:print_size:88:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=199 KiB (-94.7 KiB), count=6190 (-2928), average=33 B
+test_uti:25,18:19:41:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:148: size=13.7 KiB (+13.7 KiB), count=121 (+121), average=116 B
+test_uti:25,18:19:41:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=21.2 KiB (+4753 B), count=283 (+83), average=77 B
+test_uti:25,18:19:41:print_size:88:Fj0ZZw -- /usr/lib/python3.8/ssl.py:906: size=21.1 KiB (+3495 B), count=342 (+52), average=63 B
+test_uti:25,18:19:41:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:862: size=4106 B (+2860 B), count=23 (+12), average=179 B
+test_uti:25,18:19:41:print_size:88:Fj0ZZw -- /usr/lib/python3.8/tracemalloc.py:532: size=4992 B (+2808 B), count=91 (+52), average=55 B
+test_uti:25,18:19:41:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:153: size=1704 B (+1704 B), count=71 (+71), average=24 B
+test_uti:25,18:19:41:print_size:88:Fj0ZZw -- /usr/lib/python3.8/sre_compile.py:780: size=1376 B (+1376 B), count=5 (+5), average=275 B
+test_uti:25,18:19:41:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:863: size=1697 B (+1262 B), count=8 (+5), average=212 B
+test_uti:25,18:19:41:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:840: size=1696 B (+1261 B), count=7 (+4), average=242 B
+test_uti:25,18:19:41:print_size:90:Fj0ZZw -- 
+
+------------------------------
+
+
+test_uti:25,18:19:41:print_size:93:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=199 KiB, count=6190, average=33 B
+test_uti:25,18:19:41:print_size:93:Fj0ZZw -- <frozen importlib._bootstrap_external>:580: size=75.9 KiB, count=909, average=86 B
+test_uti:25,18:19:41:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=21.2 KiB, count=283, average=77 B
+test_uti:25,18:19:41:print_size:93:Fj0ZZw -- /usr/lib/python3.8/ssl.py:906: size=21.1 KiB, count=342, average=63 B
+test_uti:25,18:19:41:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:148: size=13.7 KiB, count=121, average=116 B
+test_uti:25,18:19:41:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:108: size=10120 B, count=230, average=44 B
+test_uti:25,18:19:41:print_size:93:Fj0ZZw -- /usr/lib/python3.8/abc.py:102: size=9062 B, count=91, average=100 B
+test_uti:25,18:19:41:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/events.py:81: size=7312 B, count=26, average=281 B
+test_uti:25,18:19:41:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:100: size=6392 B, count=87, average=73 B
+test_uti:25,18:19:41:print_size:93:Fj0ZZw -- /usr/lib/python3.8/tracemalloc.py:532: size=4992 B, count=91, average=55 B
+test_uti:25,18:19:41:print_size:100:Fj0ZZw -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+20/74 at 2020-04-25 18:19:41.970318
+dumped: 2
+get_file:25,18:19:42:getIdsRecursive:66:Fj0ZZw -- getId task exiting
+gdoc.py:25,18:19:43:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:19:43:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:19:43:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:19:43:get_last_revision:53:Fj0ZZw -- last revision id 8
+gdoc.py:25,18:19:43:async_init:33:Fj0ZZw -- after await 8
+connecti:25,18:19:43:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:19:44:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/1-1y6G4MviqPb0QzFlRjccX3Hlm72FFJS1VppqcHKCTs/revisions/load?id=1-1y6G4MviqPb0QzFlRjccX3Hlm72FFJS1VppqcHKCTs&start=1&end=8 HTTP/1.1" 200 None
+get_file:25,18:19:44:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:19:44:getRevision:166:Fj0ZZw -- getRevision looping
+gdoc.py:25,18:19:44:get_last_revision:53:Fj0ZZw -- last revision id 519
+gdoc.py:25,18:19:44:async_init:33:Fj0ZZw -- after await 519
+connecti:25,18:19:44:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:19:44:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/1V3RqT0n3pc2un7LT3XHJhOLGqmACXSAMSCExEzabbJw/revisions/load?id=1V3RqT0n3pc2un7LT3XHJhOLGqmACXSAMSCExEzabbJw&start=1&end=519 HTTP/1.1" 200 None
+get_file:25,18:19:44:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:19:44:getRevision:166:Fj0ZZw -- getRevision looping
+gdoc.py:25,18:19:44:get_last_revision:53:Fj0ZZw -- last revision id 10467
+gdoc.py:25,18:19:44:async_init:33:Fj0ZZw -- after await 10467
+connecti:25,18:19:44:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:19:45:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/18s8_aXXl5LtTX5ljUkglb7uf3QgbVuGoTlhwf9iHzKw/revisions/load?id=18s8_aXXl5LtTX5ljUkglb7uf3QgbVuGoTlhwf9iHzKw&start=1&end=10467 HTTP/1.1" 200 None
+get_file:25,18:19:45:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:19:45:getRevision:166:Fj0ZZw -- getRevision looping
+test_uti:25,18:19:48:print_size:82:Fj0ZZw -- ---------------Memory usage: 97716 (kb)---------------0 mins since start
+test_uti:25,18:19:48:print_size:88:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=507 KiB (+308 KiB), count=15881 (+9691), average=33 B
+test_uti:25,18:19:48:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:148: size=0 B (-13.7 KiB), count=0 (-121)
+test_uti:25,18:19:48:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=13.6 KiB (-7747 B), count=151 (-132), average=92 B
+test_uti:25,18:19:48:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/gdoc.py:51: size=7567 B (+5508 B), count=70 (+55), average=108 B
+test_uti:25,18:19:48:print_size:88:Fj0ZZw -- /usr/lib/python3.8/tracemalloc.py:532: size=2296 B (-2696 B), count=41 (-50), average=56 B
+test_uti:25,18:19:48:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:850: size=3816 B (+1984 B), count=8 (+2), average=477 B
+test_uti:25,18:19:48:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:162: size=672 B (-1624 B), count=12 (-29), average=56 B
+test_uti:25,18:19:48:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/gdoc.py:40: size=2856 B (+1267 B), count=12 (+5), average=238 B
+test_uti:25,18:19:48:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:159: size=0 B (-1100 B), count=0 (-14)
+test_uti:25,18:19:48:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:93: size=0 B (-1008 B), count=0 (-1)
+test_uti:25,18:19:48:print_size:90:Fj0ZZw -- 
+
+------------------------------
+
+
+test_uti:25,18:19:48:print_size:93:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=507 KiB, count=15881, average=33 B
+test_uti:25,18:19:48:print_size:93:Fj0ZZw -- <frozen importlib._bootstrap_external>:580: size=75.9 KiB, count=909, average=86 B
+test_uti:25,18:19:48:print_size:93:Fj0ZZw -- /usr/lib/python3.8/ssl.py:906: size=21.1 KiB, count=342, average=63 B
+test_uti:25,18:19:48:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=13.6 KiB, count=151, average=92 B
+test_uti:25,18:19:48:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:108: size=9728 B, count=220, average=44 B
+test_uti:25,18:19:48:print_size:93:Fj0ZZw -- /usr/lib/python3.8/abc.py:102: size=9062 B, count=91, average=100 B
+test_uti:25,18:19:48:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/gdoc.py:51: size=7567 B, count=70, average=108 B
+test_uti:25,18:19:48:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/events.py:81: size=7192 B, count=24, average=300 B
+test_uti:25,18:19:48:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:100: size=6392 B, count=87, average=73 B
+test_uti:25,18:19:48:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/base_events.py:702: size=4896 B, count=44, average=111 B
+test_uti:25,18:19:48:print_size:100:Fj0ZZw -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+23/74 at 2020-04-25 18:19:48.352045
+dumped: 2
+gdoc.py:25,18:19:49:async_init:24:Fj0ZZw -- async init called
+get_file:25,18:19:49:getRevision:183:Fj0ZZw -- not google doc
+gdoc.py:25,18:19:49:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:19:49:get_last_revision:53:Fj0ZZw -- last revision id 733
+gdoc.py:25,18:19:49:async_init:33:Fj0ZZw -- after await 733
+connecti:25,18:19:49:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:19:50:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/1KxeMzcqJ7__fOtXnftJ-Pa7r2vlOP2GwzmoDpyt0mBE/revisions/load?id=1KxeMzcqJ7__fOtXnftJ-Pa7r2vlOP2GwzmoDpyt0mBE&start=1&end=733 HTTP/1.1" 200 None
+get_file:25,18:19:50:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:19:50:getRevision:166:Fj0ZZw -- getRevision looping
+gdoc.py:25,18:19:50:get_last_revision:53:Fj0ZZw -- last revision id 667
+gdoc.py:25,18:19:50:async_init:33:Fj0ZZw -- after await 667
+connecti:25,18:19:50:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:19:50:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/19yXrTeWC3zjIWztx7RSpKqHL-dpfVf7PPaOmbKyAPrs/revisions/load?id=19yXrTeWC3zjIWztx7RSpKqHL-dpfVf7PPaOmbKyAPrs&start=1&end=667 HTTP/1.1" 200 None
+get_file:25,18:19:50:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:19:50:getRevision:166:Fj0ZZw -- getRevision looping
+get_file:25,18:19:51:getRevision:166:Fj0ZZw -- getRevision looping
+test_uti:25,18:19:54:print_size:82:Fj0ZZw -- ---------------Memory usage: 98776 (kb)---------------0 mins since start
+test_uti:25,18:19:54:print_size:88:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=491 KiB (-16.5 KiB), count=15353 (-528), average=33 B
+test_uti:25,18:19:54:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:148: size=10.3 KiB (+10.3 KiB), count=91 (+91), average=115 B
+test_uti:25,18:19:54:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=21.5 KiB (+8061 B), count=263 (+112), average=84 B
+test_uti:25,18:19:54:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/gdoc.py:51: size=326 B (-7241 B), count=4 (-66), average=82 B
+test_uti:25,18:19:54:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:153: size=3120 B (+1416 B), count=130 (+59), average=24 B
+test_uti:25,18:19:54:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:874: size=1328 B (+1328 B), count=3 (+3), average=443 B
+test_uti:25,18:19:54:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:850: size=2504 B (-1312 B), count=10 (+2), average=250 B
+test_uti:25,18:19:54:print_size:88:Fj0ZZw -- /usr/lib/python3.8/tracemalloc.py:532: size=1368 B (-928 B), count=25 (-16), average=55 B
+test_uti:25,18:19:54:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/connector.py:634: size=0 B (-928 B), count=0 (-2)
+test_uti:25,18:19:54:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:162: size=1512 B (+840 B), count=27 (+15), average=56 B
+test_uti:25,18:19:54:print_size:90:Fj0ZZw -- 
+
+------------------------------
+
+
+test_uti:25,18:19:54:print_size:93:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=491 KiB, count=15353, average=33 B
+test_uti:25,18:19:54:print_size:93:Fj0ZZw -- <frozen importlib._bootstrap_external>:580: size=75.9 KiB, count=909, average=86 B
+test_uti:25,18:19:54:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=21.5 KiB, count=263, average=84 B
+test_uti:25,18:19:54:print_size:93:Fj0ZZw -- /usr/lib/python3.8/ssl.py:906: size=21.1 KiB, count=342, average=63 B
+test_uti:25,18:19:54:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:148: size=10.3 KiB, count=91, average=115 B
+test_uti:25,18:19:54:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:108: size=9224 B, count=208, average=44 B
+test_uti:25,18:19:54:print_size:93:Fj0ZZw -- /usr/lib/python3.8/abc.py:102: size=9062 B, count=91, average=100 B
+test_uti:25,18:19:54:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/events.py:81: size=7192 B, count=24, average=300 B
+test_uti:25,18:19:54:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:100: size=6392 B, count=87, average=73 B
+test_uti:25,18:19:54:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/base_events.py:702: size=5424 B, count=49, average=111 B
+test_uti:25,18:19:54:print_size:100:Fj0ZZw -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+26/74 at 2020-04-25 18:19:54.206720
+dumped: 2
+test_uti:25,18:19:54:dump_files:136:Fj0ZZw -- histed files at /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/3.pathed, length 9
+configlo:25,18:19:54:sendmail:103:Fj0ZZw -- sending mail
+gdoc.py:25,18:19:54:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:19:54:async_init:24:Fj0ZZw -- async init called
+get_file:25,18:19:54:getRevision:183:Fj0ZZw -- not google doc
+get_file:25,18:19:55:getRevision:166:Fj0ZZw -- getRevision looping
+gdoc.py:25,18:19:55:get_last_revision:53:Fj0ZZw -- last revision id 1593
+gdoc.py:25,18:19:55:async_init:33:Fj0ZZw -- after await 1593
+connecti:25,18:19:55:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:19:56:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/1zyLifTUL_nG8Vm-qDkOCwL5iOSD1DiyDuysUCIgDBXk/revisions/load?id=1zyLifTUL_nG8Vm-qDkOCwL5iOSD1DiyDuysUCIgDBXk&start=1&end=1593 HTTP/1.1" 200 None
+get_file:25,18:19:56:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:19:56:getRevision:166:Fj0ZZw -- getRevision looping
+gdoc.py:25,18:19:56:get_last_revision:53:Fj0ZZw -- last revision id 2233
+gdoc.py:25,18:19:56:async_init:33:Fj0ZZw -- after await 2233
+connecti:25,18:19:56:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:19:57:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/1Rwm5j7Cnfx80BQ5aCjWLNGe5Zsy2eEIcqnHMhaIgwRc/revisions/load?id=1Rwm5j7Cnfx80BQ5aCjWLNGe5Zsy2eEIcqnHMhaIgwRc&start=1&end=2233 HTTP/1.1" 200 None
+get_file:25,18:19:57:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:19:57:getRevision:166:Fj0ZZw -- getRevision looping
+test_uti:25,18:20:00:print_size:82:Fj0ZZw -- ---------------Memory usage: 99492 (kb)---------------0 mins since start
+test_uti:25,18:20:00:print_size:88:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=146 KiB (-345 KiB), count=4608 (-10745), average=32 B
+test_uti:25,18:20:00:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:148: size=0 B (-10.3 KiB), count=0 (-91)
+test_uti:25,18:20:00:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:862: size=9850 B (+5744 B), count=38 (+15), average=259 B
+test_uti:25,18:20:00:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:153: size=48 B (-3072 B), count=2 (-128), average=24 B
+test_uti:25,18:20:00:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:863: size=4025 B (+2328 B), count=15 (+7), average=268 B
+test_uti:25,18:20:00:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:840: size=4016 B (+2320 B), count=13 (+6), average=309 B
+test_uti:25,18:20:00:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:839: size=4016 B (+2320 B), count=13 (+6), average=309 B
+test_uti:25,18:20:00:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=19.5 KiB (-2047 B), count=205 (-58), average=97 B
+test_uti:25,18:20:00:print_size:88:Fj0ZZw -- /usr/lib/python3.8/sre_parse.py:529: size=1456 B (+1456 B), count=26 (+26), average=56 B
+test_uti:25,18:20:00:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/core/_asarray.py:85: size=1936 B (+1272 B), count=8 (+4), average=242 B
+test_uti:25,18:20:00:print_size:90:Fj0ZZw -- 
+
+------------------------------
+
+
+test_uti:25,18:20:00:print_size:93:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=146 KiB, count=4608, average=32 B
+test_uti:25,18:20:00:print_size:93:Fj0ZZw -- <frozen importlib._bootstrap_external>:580: size=75.9 KiB, count=909, average=86 B
+test_uti:25,18:20:00:print_size:93:Fj0ZZw -- /usr/lib/python3.8/ssl.py:906: size=21.1 KiB, count=342, average=63 B
+test_uti:25,18:20:00:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=19.5 KiB, count=205, average=97 B
+test_uti:25,18:20:00:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:862: size=9850 B, count=38, average=259 B
+test_uti:25,18:20:00:print_size:93:Fj0ZZw -- /usr/lib/python3.8/abc.py:102: size=9062 B, count=91, average=100 B
+test_uti:25,18:20:00:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:108: size=8720 B, count=196, average=44 B
+test_uti:25,18:20:00:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/events.py:81: size=7192 B, count=24, average=300 B
+test_uti:25,18:20:00:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:100: size=6392 B, count=87, average=73 B
+test_uti:25,18:20:00:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/base_events.py:702: size=5872 B, count=53, average=111 B
+test_uti:25,18:20:00:print_size:100:Fj0ZZw -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+29/74 at 2020-04-25 18:20:00.576484
+dumped: 3
+get_file:25,18:20:00:getRevision:183:Fj0ZZw -- not google doc
+get_file:25,18:20:00:getRevision:183:Fj0ZZw -- not google doc
+get_file:25,18:20:00:getRevision:183:Fj0ZZw -- not google doc
+get_file:25,18:20:01:getRevision:166:Fj0ZZw -- getRevision looping
+get_file:25,18:20:01:getRevision:166:Fj0ZZw -- getRevision looping
+get_file:25,18:20:01:getRevision:166:Fj0ZZw -- getRevision looping
+test_uti:25,18:20:05:print_size:82:Fj0ZZw -- ---------------Memory usage: 99492 (kb)---------------1 mins since start
+test_uti:25,18:20:05:print_size:88:Fj0ZZw -- /usr/lib/python3.8/ssl.py:906: size=31.7 KiB (+10.6 KiB), count=514 (+172), average=63 B
+test_uti:25,18:20:05:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:874: size=3984 B (+2656 B), count=9 (+6), average=443 B
+test_uti:25,18:20:05:print_size:88:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=143 KiB (-2504 B), count=4509 (-99), average=33 B
+test_uti:25,18:20:05:print_size:88:Fj0ZZw -- /usr/lib/python3.8/tracemalloc.py:532: size=4456 B (+2304 B), count=79 (+40), average=56 B
+test_uti:25,18:20:05:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:714: size=2119 B (+2119 B), count=1 (+1), average=2119 B
+test_uti:25,18:20:05:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:162: size=2912 B (+1680 B), count=52 (+30), average=56 B
+test_uti:25,18:20:05:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=21.1 KiB (+1610 B), count=225 (+20), average=96 B
+test_uti:25,18:20:05:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/connector.py:980: size=2240 B (+1552 B), count=8 (+6), average=280 B
+test_uti:25,18:20:05:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/connector.py:936: size=2136 B (+1496 B), count=8 (+7), average=267 B
+test_uti:25,18:20:05:print_size:88:Fj0ZZw -- /usr/lib/python3.8/sre_parse.py:529: size=0 B (-1456 B), count=0 (-26)
+test_uti:25,18:20:05:print_size:90:Fj0ZZw -- 
+
+------------------------------
+
+
+test_uti:25,18:20:05:print_size:93:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=143 KiB, count=4509, average=33 B
+test_uti:25,18:20:05:print_size:93:Fj0ZZw -- <frozen importlib._bootstrap_external>:580: size=75.9 KiB, count=909, average=86 B
+test_uti:25,18:20:05:print_size:93:Fj0ZZw -- /usr/lib/python3.8/ssl.py:906: size=31.7 KiB, count=514, average=63 B
+test_uti:25,18:20:05:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=21.1 KiB, count=225, average=96 B
+test_uti:25,18:20:05:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:862: size=9850 B, count=38, average=259 B
+test_uti:25,18:20:05:print_size:93:Fj0ZZw -- /usr/lib/python3.8/abc.py:102: size=8999 B, count=90, average=100 B
+test_uti:25,18:20:05:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:108: size=8208 B, count=184, average=45 B
+test_uti:25,18:20:05:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/events.py:81: size=7840 B, count=27, average=290 B
+test_uti:25,18:20:05:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/base_events.py:702: size=6768 B, count=61, average=111 B
+test_uti:25,18:20:05:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:100: size=6392 B, count=87, average=73 B
+test_uti:25,18:20:05:print_size:100:Fj0ZZw -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+32/74 at 2020-04-25 18:20:05.742763
+dumped: 3
+get_file:25,18:20:06:getRevision:183:Fj0ZZw -- not google doc
+get_file:25,18:20:06:getRevision:183:Fj0ZZw -- not google doc
+get_file:25,18:20:06:getRevision:183:Fj0ZZw -- not google doc
+get_file:25,18:20:07:getRevision:166:Fj0ZZw -- getRevision looping
+get_file:25,18:20:07:getRevision:166:Fj0ZZw -- getRevision looping
+get_file:25,18:20:07:getRevision:166:Fj0ZZw -- getRevision looping
+test_uti:25,18:20:10:print_size:82:Fj0ZZw -- ---------------Memory usage: 99492 (kb)---------------1 mins since start
+test_uti:25,18:20:10:print_size:88:Fj0ZZw -- /usr/lib/python3.8/urllib/parse.py:397: size=484 B (-2944 B), count=6 (-32), average=81 B
+test_uti:25,18:20:10:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:714: size=0 B (-2119 B), count=0 (-1)
+test_uti:25,18:20:10:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/gdoc.py:40: size=0 B (-1740 B), count=0 (-12)
+test_uti:25,18:20:10:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/connector.py:980: size=688 B (-1552 B), count=2 (-6), average=344 B
+test_uti:25,18:20:10:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/connector.py:936: size=640 B (-1496 B), count=1 (-7), average=640 B
+test_uti:25,18:20:10:print_size:88:Fj0ZZw -- <string>:1: size=1176 B (-1232 B), count=14 (-14), average=84 B
+test_uti:25,18:20:10:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client_reqrep.py:631: size=1560 B (+1040 B), count=3 (+2), average=520 B
+test_uti:25,18:20:10:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:477: size=1024 B (+1024 B), count=3 (+3), average=341 B
+test_uti:25,18:20:10:print_size:88:Fj0ZZw -- /usr/lib/python3.8/asyncio/base_events.py:924: size=480 B (-1016 B), count=1 (-3), average=480 B
+test_uti:25,18:20:10:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client_reqrep.py:385: size=478 B (-1008 B), count=2 (-1), average=239 B
+test_uti:25,18:20:10:print_size:90:Fj0ZZw -- 
+
+------------------------------
+
+
+test_uti:25,18:20:10:print_size:93:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=143 KiB, count=4509, average=33 B
+test_uti:25,18:20:10:print_size:93:Fj0ZZw -- <frozen importlib._bootstrap_external>:580: size=75.9 KiB, count=909, average=86 B
+test_uti:25,18:20:10:print_size:93:Fj0ZZw -- /usr/lib/python3.8/ssl.py:906: size=31.6 KiB, count=512, average=63 B
+test_uti:25,18:20:10:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=21.1 KiB, count=228, average=95 B
+test_uti:25,18:20:10:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:862: size=9850 B, count=38, average=259 B
+test_uti:25,18:20:10:print_size:93:Fj0ZZw -- /usr/lib/python3.8/abc.py:102: size=8999 B, count=90, average=100 B
+test_uti:25,18:20:10:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:108: size=7688 B, count=172, average=45 B
+test_uti:25,18:20:10:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/base_events.py:702: size=7488 B, count=68, average=110 B
+test_uti:25,18:20:10:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/events.py:81: size=7192 B, count=24, average=300 B
+test_uti:25,18:20:10:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:100: size=6392 B, count=87, average=73 B
+test_uti:25,18:20:10:print_size:100:Fj0ZZw -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+35/74 at 2020-04-25 18:20:10.866003
+dumped: 3
+test_uti:25,18:20:10:dump_files:136:Fj0ZZw -- histed files at /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/4.pathed, length 9
+get_file:25,18:20:12:getRevision:183:Fj0ZZw -- not google doc
+get_file:25,18:20:12:getRevision:183:Fj0ZZw -- not google doc
+get_file:25,18:20:12:getRevision:183:Fj0ZZw -- not google doc
+get_file:25,18:20:12:getRevision:166:Fj0ZZw -- getRevision looping
+get_file:25,18:20:12:getRevision:166:Fj0ZZw -- getRevision looping
+get_file:25,18:20:12:getRevision:166:Fj0ZZw -- getRevision looping
+test_uti:25,18:20:15:print_size:82:Fj0ZZw -- ---------------Memory usage: 99492 (kb)---------------1 mins since start
+test_uti:25,18:20:15:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:148: size=2056 B (+2056 B), count=75 (+75), average=27 B
+test_uti:25,18:20:15:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:162: size=4536 B (+1680 B), count=81 (+30), average=56 B
+test_uti:25,18:20:15:print_size:88:Fj0ZZw -- /usr/lib/python3.8/urllib/parse.py:425: size=480 B (-1040 B), count=6 (-13), average=80 B
+test_uti:25,18:20:15:print_size:88:Fj0ZZw -- /usr/lib/python3.8/asyncio/base_events.py:702: size=8160 B (+672 B), count=74 (+6), average=110 B
+test_uti:25,18:20:15:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:850: size=1008 B (-672 B), count=6 (-4), average=168 B
+test_uti:25,18:20:15:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/throttler.py:51: size=2272 B (-544 B), count=8 (+0), average=284 B
+test_uti:25,18:20:15:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:108: size=7160 B (-528 B), count=160 (-12), average=45 B
+test_uti:25,18:20:15:print_size:88:Fj0ZZw -- /usr/lib/python3.8/urllib/parse.py:397: size=994 B (+510 B), count=12 (+6), average=83 B
+test_uti:25,18:20:15:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:205: size=645 B (+387 B), count=5 (+3), average=129 B
+test_uti:25,18:20:15:print_size:88:Fj0ZZw -- /usr/lib/python3.8/asyncio/base_events.py:422: size=2232 B (-336 B), count=15 (-2), average=149 B
+test_uti:25,18:20:15:print_size:90:Fj0ZZw -- 
+
+------------------------------
+
+
+test_uti:25,18:20:15:print_size:93:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=143 KiB, count=4509, average=33 B
+test_uti:25,18:20:15:print_size:93:Fj0ZZw -- <frozen importlib._bootstrap_external>:580: size=75.9 KiB, count=909, average=86 B
+test_uti:25,18:20:15:print_size:93:Fj0ZZw -- /usr/lib/python3.8/ssl.py:906: size=31.6 KiB, count=512, average=63 B
+test_uti:25,18:20:15:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=20.9 KiB, count=224, average=95 B
+test_uti:25,18:20:15:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:862: size=9870 B, count=41, average=241 B
+test_uti:25,18:20:15:print_size:93:Fj0ZZw -- /usr/lib/python3.8/abc.py:102: size=8999 B, count=90, average=100 B
+test_uti:25,18:20:15:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/base_events.py:702: size=8160 B, count=74, average=110 B
+test_uti:25,18:20:15:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/events.py:81: size=7192 B, count=24, average=300 B
+test_uti:25,18:20:15:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:108: size=7160 B, count=160, average=45 B
+test_uti:25,18:20:15:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:100: size=6392 B, count=87, average=73 B
+test_uti:25,18:20:15:print_size:100:Fj0ZZw -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+38/74 at 2020-04-25 18:20:15.982780
+dumped: 4
+get_file:25,18:20:17:getRevision:183:Fj0ZZw -- not google doc
+get_file:25,18:20:17:getRevision:183:Fj0ZZw -- not google doc
+get_file:25,18:20:17:getRevision:183:Fj0ZZw -- not google doc
+get_file:25,18:20:18:getRevision:166:Fj0ZZw -- getRevision looping
+get_file:25,18:20:18:getRevision:166:Fj0ZZw -- getRevision looping
+get_file:25,18:20:18:getRevision:166:Fj0ZZw -- getRevision looping
+test_uti:25,18:20:20:print_size:82:Fj0ZZw -- ---------------Memory usage: 99492 (kb)---------------1 mins since start
+test_uti:25,18:20:21:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:148: size=0 B (-2056 B), count=0 (-75)
+test_uti:25,18:20:21:print_size:88:Fj0ZZw -- /usr/lib/python3.8/tracemalloc.py:532: size=5880 B (+1920 B), count=105 (+34), average=56 B
+test_uti:25,18:20:21:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:162: size=2856 B (-1680 B), count=51 (-30), average=56 B
+test_uti:25,18:20:21:print_size:88:Fj0ZZw -- /usr/lib/python3.8/asyncio/base_events.py:702: size=8832 B (+672 B), count=80 (+6), average=110 B
+test_uti:25,18:20:21:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:108: size=6632 B (-528 B), count=148 (-12), average=45 B
+test_uti:25,18:20:21:print_size:88:Fj0ZZw -- /usr/lib/python3.8/urllib/parse.py:397: size=1504 B (+510 B), count=18 (+6), average=84 B
+test_uti:25,18:20:21:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:850: size=1512 B (+504 B), count=9 (+3), average=168 B
+test_uti:25,18:20:21:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:205: size=1032 B (+387 B), count=8 (+3), average=129 B
+test_uti:25,18:20:21:print_size:88:Fj0ZZw -- /usr/lib/python3.8/asyncio/events.py:34: size=5056 B (+384 B), count=79 (+6), average=64 B
+test_uti:25,18:20:21:print_size:88:Fj0ZZw -- /usr/lib/python3.8/asyncio/base_events.py:422: size=2568 B (+336 B), count=17 (+2), average=151 B
+test_uti:25,18:20:21:print_size:90:Fj0ZZw -- 
+
+------------------------------
+
+
+test_uti:25,18:20:21:print_size:93:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=143 KiB, count=4509, average=33 B
+test_uti:25,18:20:21:print_size:93:Fj0ZZw -- <frozen importlib._bootstrap_external>:580: size=75.9 KiB, count=909, average=86 B
+test_uti:25,18:20:21:print_size:93:Fj0ZZw -- /usr/lib/python3.8/ssl.py:906: size=31.6 KiB, count=512, average=63 B
+test_uti:25,18:20:21:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=20.9 KiB, count=223, average=96 B
+test_uti:25,18:20:21:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:862: size=9870 B, count=41, average=241 B
+test_uti:25,18:20:21:print_size:93:Fj0ZZw -- /usr/lib/python3.8/abc.py:102: size=8999 B, count=90, average=100 B
+test_uti:25,18:20:21:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/base_events.py:702: size=8832 B, count=80, average=110 B
+test_uti:25,18:20:21:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/events.py:81: size=7192 B, count=24, average=300 B
+test_uti:25,18:20:21:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:108: size=6632 B, count=148, average=45 B
+test_uti:25,18:20:21:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:100: size=6392 B, count=87, average=73 B
+test_uti:25,18:20:21:print_size:100:Fj0ZZw -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+41/74 at 2020-04-25 18:20:21.097252
+dumped: 4
+get_file:25,18:20:23:getRevision:183:Fj0ZZw -- not google doc
+get_file:25,18:20:23:getRevision:183:Fj0ZZw -- not google doc
+gdoc.py:25,18:20:23:async_init:24:Fj0ZZw -- async init called
+get_file:25,18:20:23:getRevision:166:Fj0ZZw -- getRevision looping
+get_file:25,18:20:23:getRevision:166:Fj0ZZw -- getRevision looping
+gdoc.py:25,18:20:25:get_last_revision:53:Fj0ZZw -- last revision id 4897
+gdoc.py:25,18:20:25:async_init:33:Fj0ZZw -- after await 4897
+connecti:25,18:20:25:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:20:25:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/1b-WTM2ekE1k6pPqFt0v7fa-myJ3Yvhg-vFT_zOs-DA4/revisions/load?id=1b-WTM2ekE1k6pPqFt0v7fa-myJ3Yvhg-vFT_zOs-DA4&start=1&end=4897 HTTP/1.1" 200 None
+get_file:25,18:20:26:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:20:26:getRevision:166:Fj0ZZw -- getRevision looping
+test_uti:25,18:20:26:print_size:82:Fj0ZZw -- ---------------Memory usage: 99492 (kb)---------------1 mins since start
+test_uti:25,18:20:26:print_size:88:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=252 KiB (+109 KiB), count=7909 (+3400), average=33 B
+test_uti:25,18:20:26:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=17.6 KiB (-3336 B), count=175 (-48), average=103 B
+test_uti:25,18:20:26:print_size:88:Fj0ZZw -- /usr/lib/python3.8/tracemalloc.py:532: size=3960 B (-1920 B), count=71 (-34), average=56 B
+test_uti:25,18:20:26:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/gdoc.py:51: size=2078 B (+1920 B), count=33 (+30), average=63 B
+test_uti:25,18:20:26:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:874: size=2992 B (-1328 B), count=8 (-3), average=374 B
+test_uti:25,18:20:26:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:162: size=1960 B (-896 B), count=35 (-16), average=56 B
+test_uti:25,18:20:26:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/gdoc.py:40: size=601 B (+601 B), count=2 (+2), average=300 B
+test_uti:25,18:20:26:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/throttler.py:51: size=2816 B (+544 B), count=8 (+0), average=352 B
+test_uti:25,18:20:26:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:108: size=6104 B (-528 B), count=136 (-12), average=45 B
+test_uti:25,18:20:26:print_size:88:Fj0ZZw -- /usr/lib/python3.8/urllib/parse.py:397: size=2030 B (+526 B), count=24 (+6), average=85 B
+test_uti:25,18:20:26:print_size:90:Fj0ZZw -- 
+
+------------------------------
+
+
+test_uti:25,18:20:26:print_size:93:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=252 KiB, count=7909, average=33 B
+test_uti:25,18:20:26:print_size:93:Fj0ZZw -- <frozen importlib._bootstrap_external>:580: size=75.9 KiB, count=909, average=86 B
+test_uti:25,18:20:26:print_size:93:Fj0ZZw -- /usr/lib/python3.8/ssl.py:906: size=31.6 KiB, count=512, average=63 B
+test_uti:25,18:20:26:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=17.6 KiB, count=175, average=103 B
+test_uti:25,18:20:26:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:862: size=9870 B, count=41, average=241 B
+test_uti:25,18:20:26:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/base_events.py:702: size=9232 B, count=83, average=111 B
+test_uti:25,18:20:26:print_size:93:Fj0ZZw -- /usr/lib/python3.8/abc.py:102: size=8999 B, count=90, average=100 B
+test_uti:25,18:20:26:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/events.py:81: size=7192 B, count=24, average=300 B
+test_uti:25,18:20:26:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:100: size=6392 B, count=87, average=73 B
+test_uti:25,18:20:26:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:108: size=6104 B, count=136, average=45 B
+test_uti:25,18:20:26:print_size:100:Fj0ZZw -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+44/74 at 2020-04-25 18:20:26.270869
+dumped: 4
+test_uti:25,18:20:26:dump_files:136:Fj0ZZw -- histed files at /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/5.pathed, length 9
+gdoc.py:25,18:20:28:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:20:28:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:20:28:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:20:29:get_last_revision:53:Fj0ZZw -- last revision id 833
+gdoc.py:25,18:20:29:async_init:33:Fj0ZZw -- after await 833
+connecti:25,18:20:29:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:20:29:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/1UvcAx8uccrerf4uud0w1zvsAsbMSJfyqo298Dh_bq_M/revisions/load?id=1UvcAx8uccrerf4uud0w1zvsAsbMSJfyqo298Dh_bq_M&start=1&end=833 HTTP/1.1" 200 None
+get_file:25,18:20:29:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:20:29:getRevision:166:Fj0ZZw -- getRevision looping
+gdoc.py:25,18:20:29:get_last_revision:53:Fj0ZZw -- last revision id 725
+gdoc.py:25,18:20:29:async_init:33:Fj0ZZw -- after await 725
+connecti:25,18:20:29:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:20:30:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/12msYuSI-rqvfXROgoGjtxN3Y9AlT3SnRTd6Om5xOxmM/revisions/load?id=12msYuSI-rqvfXROgoGjtxN3Y9AlT3SnRTd6Om5xOxmM&start=1&end=725 HTTP/1.1" 200 None
+get_file:25,18:20:30:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:20:30:getRevision:166:Fj0ZZw -- getRevision looping
+gdoc.py:25,18:20:31:get_last_revision:53:Fj0ZZw -- last revision id 6251
+gdoc.py:25,18:20:31:async_init:33:Fj0ZZw -- after await 6251
+connecti:25,18:20:31:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:20:31:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/1i-Tv07oc_5F72OdEdWf91bbLwoFEaXhmjjlo3QOQyrk/revisions/load?id=1i-Tv07oc_5F72OdEdWf91bbLwoFEaXhmjjlo3QOQyrk&start=1&end=6251 HTTP/1.1" 200 None
+get_file:25,18:20:32:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:20:32:getRevision:166:Fj0ZZw -- getRevision looping
+test_uti:25,18:20:32:print_size:82:Fj0ZZw -- ---------------Memory usage: 99492 (kb)---------------1 mins since start
+test_uti:25,18:20:32:print_size:88:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=410 KiB (+158 KiB), count=12810 (+4901), average=33 B
+test_uti:25,18:20:32:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=11.3 KiB (-6520 B), count=123 (-52), average=94 B
+test_uti:25,18:20:32:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/gdoc.py:51: size=5170 B (+3092 B), count=49 (+16), average=106 B
+test_uti:25,18:20:32:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:874: size=336 B (-2656 B), count=2 (-6), average=168 B
+test_uti:25,18:20:32:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:850: size=3816 B (+2136 B), count=8 (-2), average=477 B
+test_uti:25,18:20:32:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/gdoc.py:40: size=2260 B (+1659 B), count=8 (+6), average=282 B
+test_uti:25,18:20:32:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:162: size=672 B (-1288 B), count=12 (-23), average=56 B
+test_uti:25,18:20:32:print_size:88:Fj0ZZw -- /usr/lib/python3.8/tracemalloc.py:532: size=3120 B (-840 B), count=56 (-15), average=56 B
+test_uti:25,18:20:32:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:148: size=784 B (+784 B), count=14 (+14), average=56 B
+test_uti:25,18:20:32:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:156: size=736 B (-584 B), count=12 (-5), average=61 B
+test_uti:25,18:20:32:print_size:90:Fj0ZZw -- 
+
+------------------------------
+
+
+test_uti:25,18:20:32:print_size:93:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=410 KiB, count=12810, average=33 B
+test_uti:25,18:20:32:print_size:93:Fj0ZZw -- <frozen importlib._bootstrap_external>:580: size=75.9 KiB, count=909, average=86 B
+test_uti:25,18:20:32:print_size:93:Fj0ZZw -- /usr/lib/python3.8/ssl.py:906: size=31.6 KiB, count=512, average=63 B
+test_uti:25,18:20:32:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=11.3 KiB, count=123, average=94 B
+test_uti:25,18:20:32:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:862: size=9870 B, count=41, average=241 B
+test_uti:25,18:20:32:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/base_events.py:702: size=9408 B, count=84, average=112 B
+test_uti:25,18:20:32:print_size:93:Fj0ZZw -- /usr/lib/python3.8/abc.py:102: size=8999 B, count=90, average=100 B
+test_uti:25,18:20:32:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/events.py:81: size=7192 B, count=24, average=300 B
+test_uti:25,18:20:32:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:100: size=6392 B, count=87, average=73 B
+test_uti:25,18:20:32:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:108: size=5576 B, count=124, average=45 B
+test_uti:25,18:20:32:print_size:100:Fj0ZZw -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+47/74 at 2020-04-25 18:20:32.262128
+dumped: 5
+gdoc.py:25,18:20:33:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:20:33:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:20:33:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:20:34:get_last_revision:53:Fj0ZZw -- last revision id 309
+gdoc.py:25,18:20:34:async_init:33:Fj0ZZw -- after await 309
+connecti:25,18:20:34:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:20:34:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/1z0qLmI61do7x0qw3rnK74msvcEZ4tEEVVOERiauTuaI/revisions/load?id=1z0qLmI61do7x0qw3rnK74msvcEZ4tEEVVOERiauTuaI&start=1&end=309 HTTP/1.1" 200 None
+get_file:25,18:20:34:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:20:35:getRevision:166:Fj0ZZw -- getRevision looping
+gdoc.py:25,18:20:35:get_last_revision:53:Fj0ZZw -- last revision id 478
+gdoc.py:25,18:20:35:async_init:33:Fj0ZZw -- after await 478
+connecti:25,18:20:35:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:20:35:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/1kzKbaDRw0fxr-yzmfDdTWyiOBuuGprpgdsicAGMD8aw/revisions/load?id=1kzKbaDRw0fxr-yzmfDdTWyiOBuuGprpgdsicAGMD8aw&start=1&end=478 HTTP/1.1" 200 None
+get_file:25,18:20:35:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:20:35:getRevision:166:Fj0ZZw -- getRevision looping
+gdoc.py:25,18:20:36:get_last_revision:53:Fj0ZZw -- last revision id 4443
+gdoc.py:25,18:20:36:async_init:33:Fj0ZZw -- after await 4443
+connecti:25,18:20:36:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:20:37:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/1HdWWgJDh4IA7T550gANGtjqDNvq0AwP0serPT4qI34k/revisions/load?id=1HdWWgJDh4IA7T550gANGtjqDNvq0AwP0serPT4qI34k&start=1&end=4443 HTTP/1.1" 200 None
+get_file:25,18:20:37:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:20:37:getRevision:166:Fj0ZZw -- getRevision looping
+test_uti:25,18:20:37:print_size:82:Fj0ZZw -- ---------------Memory usage: 99492 (kb)---------------1 mins since start
+test_uti:25,18:20:37:print_size:88:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=415 KiB (+4864 B), count=13051 (+241), average=33 B
+test_uti:25,18:20:37:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/gdoc.py:51: size=2218 B (-2952 B), count=24 (-25), average=92 B
+test_uti:25,18:20:37:print_size:88:Fj0ZZw -- /usr/lib/python3.8/tracemalloc.py:532: size=1608 B (-1512 B), count=29 (-27), average=55 B
+test_uti:25,18:20:37:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:148: size=0 B (-784 B), count=0 (-14)
+test_uti:25,18:20:37:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:156: size=0 B (-736 B), count=0 (-12)
+test_uti:25,18:20:37:print_size:88:Fj0ZZw -- /usr/lib/python3.8/urllib/parse.py:397: size=3146 B (+558 B), count=36 (+6), average=87 B
+test_uti:25,18:20:37:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:108: size=5048 B (-528 B), count=112 (-12), average=45 B
+test_uti:25,18:20:37:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:197: size=728 B (+512 B), count=7 (+4), average=104 B
+test_uti:25,18:20:37:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:850: size=4320 B (+504 B), count=11 (+3), average=393 B
+test_uti:25,18:20:37:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:1012: size=456 B (+456 B), count=1 (+1), average=456 B
+test_uti:25,18:20:37:print_size:90:Fj0ZZw -- 
+
+------------------------------
+
+
+test_uti:25,18:20:37:print_size:93:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=415 KiB, count=13051, average=33 B
+test_uti:25,18:20:37:print_size:93:Fj0ZZw -- <frozen importlib._bootstrap_external>:580: size=75.9 KiB, count=909, average=86 B
+test_uti:25,18:20:37:print_size:93:Fj0ZZw -- /usr/lib/python3.8/ssl.py:906: size=31.6 KiB, count=512, average=63 B
+test_uti:25,18:20:37:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=11.0 KiB, count=120, average=94 B
+test_uti:25,18:20:37:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:862: size=9870 B, count=41, average=241 B
+test_uti:25,18:20:37:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/base_events.py:702: size=9744 B, count=87, average=112 B
+test_uti:25,18:20:37:print_size:93:Fj0ZZw -- /usr/lib/python3.8/abc.py:102: size=8999 B, count=90, average=100 B
+test_uti:25,18:20:37:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/events.py:81: size=7192 B, count=24, average=300 B
+test_uti:25,18:20:37:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:100: size=6392 B, count=87, average=73 B
+test_uti:25,18:20:37:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/events.py:34: size=5760 B, count=90, average=64 B
+test_uti:25,18:20:37:print_size:100:Fj0ZZw -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+50/74 at 2020-04-25 18:20:37.746458
+dumped: 5
+gdoc.py:25,18:20:38:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:20:38:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:20:38:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:20:39:get_last_revision:53:Fj0ZZw -- last revision id 463
+gdoc.py:25,18:20:39:async_init:33:Fj0ZZw -- after await 463
+connecti:25,18:20:39:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:20:40:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/1CEbUajiAYrz2tpwIPZdNCVGniK6leqx04Hmva2N4XM4/revisions/load?id=1CEbUajiAYrz2tpwIPZdNCVGniK6leqx04Hmva2N4XM4&start=1&end=463 HTTP/1.1" 200 None
+get_file:25,18:20:40:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:20:40:getRevision:166:Fj0ZZw -- getRevision looping
+gdoc.py:25,18:20:40:get_last_revision:53:Fj0ZZw -- last revision id 22
+gdoc.py:25,18:20:40:async_init:33:Fj0ZZw -- after await 22
+connecti:25,18:20:40:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:20:40:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/1Jzh-bWmP8YOEwSm1WsYvN6c8BDgEzMsWsSYXrZ6uwds/revisions/load?id=1Jzh-bWmP8YOEwSm1WsYvN6c8BDgEzMsWsSYXrZ6uwds&start=1&end=22 HTTP/1.1" 200 None
+get_file:25,18:20:40:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:20:40:getRevision:166:Fj0ZZw -- getRevision looping
+gdoc.py:25,18:20:40:get_last_revision:53:Fj0ZZw -- last revision id 2392
+gdoc.py:25,18:20:40:async_init:33:Fj0ZZw -- after await 2392
+connecti:25,18:20:40:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:20:41:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/1fVc04agXKNKopxuf3yInvn_EXCPuHxfctQqv9rarZIQ/revisions/load?id=1fVc04agXKNKopxuf3yInvn_EXCPuHxfctQqv9rarZIQ&start=1&end=2392 HTTP/1.1" 200 None
+get_file:25,18:20:41:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:20:41:getRevision:166:Fj0ZZw -- getRevision looping
+test_uti:25,18:20:43:print_size:82:Fj0ZZw -- ---------------Memory usage: 99492 (kb)---------------1 mins since start
+test_uti:25,18:20:43:print_size:88:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=508 KiB (+93.0 KiB), count=15934 (+2883), average=33 B
+test_uti:25,18:20:43:print_size:88:Fj0ZZw -- /usr/lib/python3.8/ssl.py:906: size=27.0 KiB (-4655 B), count=439 (-73), average=63 B
+test_uti:25,18:20:43:print_size:88:Fj0ZZw -- /usr/lib/python3.8/urllib/parse.py:397: size=186 B (-2960 B), count=2 (-34), average=93 B
+test_uti:25,18:20:43:print_size:88:Fj0ZZw -- <string>:1: size=760 B (-1496 B), count=9 (-17), average=84 B
+test_uti:25,18:20:43:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:205: size=0 B (-1290 B), count=0 (-10)
+test_uti:25,18:20:43:print_size:88:Fj0ZZw -- /usr/lib/python3.8/urllib/parse.py:458: size=54 B (-918 B), count=1 (-17), average=54 B
+test_uti:25,18:20:43:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/gdoc.py:40: size=1825 B (-870 B), count=5 (-6), average=365 B
+test_uti:25,18:20:43:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/helpers.py:493: size=816 B (+816 B), count=2 (+2), average=408 B
+test_uti:25,18:20:43:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/connector.py:162: size=0 B (-816 B), count=0 (-2)
+test_uti:25,18:20:43:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/gdoc.py:51: size=1457 B (-761 B), count=17 (-7), average=86 B
+test_uti:25,18:20:43:print_size:90:Fj0ZZw -- 
+
+------------------------------
+
+
+test_uti:25,18:20:43:print_size:93:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=508 KiB, count=15934, average=33 B
+test_uti:25,18:20:43:print_size:93:Fj0ZZw -- <frozen importlib._bootstrap_external>:580: size=75.9 KiB, count=909, average=86 B
+test_uti:25,18:20:43:print_size:93:Fj0ZZw -- /usr/lib/python3.8/ssl.py:906: size=27.0 KiB, count=439, average=63 B
+test_uti:25,18:20:43:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=10.8 KiB, count=117, average=94 B
+test_uti:25,18:20:43:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/base_events.py:702: size=10048 B, count=90, average=112 B
+test_uti:25,18:20:43:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:862: size=9870 B, count=41, average=241 B
+test_uti:25,18:20:43:print_size:93:Fj0ZZw -- /usr/lib/python3.8/abc.py:102: size=8999 B, count=90, average=100 B
+test_uti:25,18:20:43:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/events.py:81: size=7192 B, count=24, average=300 B
+test_uti:25,18:20:43:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:100: size=6392 B, count=87, average=73 B
+test_uti:25,18:20:43:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/events.py:34: size=5888 B, count=92, average=64 B
+test_uti:25,18:20:43:print_size:100:Fj0ZZw -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+53/74 at 2020-04-25 18:20:43.504019
+dumped: 5
+test_uti:25,18:20:43:dump_files:136:Fj0ZZw -- histed files at /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/6.pathed, length 9
+gdoc.py:25,18:20:44:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:20:44:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:20:44:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:20:44:get_last_revision:53:Fj0ZZw -- last revision id 1585
+gdoc.py:25,18:20:44:async_init:33:Fj0ZZw -- after await 1585
+connecti:25,18:20:44:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:20:45:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/1U1hoywM09b-AUO7fIR9TflRSsc3Qu3XmxWmzEph3TmE/revisions/load?id=1U1hoywM09b-AUO7fIR9TflRSsc3Qu3XmxWmzEph3TmE&start=1&end=1585 HTTP/1.1" 200 None
+get_file:25,18:20:45:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:20:45:getRevision:166:Fj0ZZw -- getRevision looping
+gdoc.py:25,18:20:45:get_last_revision:53:Fj0ZZw -- last revision id 1883
+gdoc.py:25,18:20:45:async_init:33:Fj0ZZw -- after await 1883
+connecti:25,18:20:45:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:20:46:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/1HOWZp6ESjGoYrybdR0LLcpWVlgxys_LqI8yxEeyFkpY/revisions/load?id=1HOWZp6ESjGoYrybdR0LLcpWVlgxys_LqI8yxEeyFkpY&start=1&end=1883 HTTP/1.1" 200 None
+get_file:25,18:20:46:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:20:46:getRevision:166:Fj0ZZw -- getRevision looping
+gdoc.py:25,18:20:46:get_last_revision:53:Fj0ZZw -- last revision id 3009
+gdoc.py:25,18:20:46:async_init:33:Fj0ZZw -- after await 3009
+connecti:25,18:20:46:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:20:47:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/1_ovH_D4cpuVTDp9z4DtrqQUeTTjLYI5RWrZ06FXx8fg/revisions/load?id=1_ovH_D4cpuVTDp9z4DtrqQUeTTjLYI5RWrZ06FXx8fg&start=1&end=3009 HTTP/1.1" 200 None
+get_file:25,18:20:47:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:20:47:getRevision:166:Fj0ZZw -- getRevision looping
+gdoc.py:25,18:20:49:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:20:49:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:20:49:async_init:24:Fj0ZZw -- async init called
+test_uti:25,18:20:49:print_size:82:Fj0ZZw -- ---------------Memory usage: 99660 (kb)---------------1 mins since start
+test_uti:25,18:20:49:print_size:88:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=289 KiB (-219 KiB), count=8976 (-6958), average=33 B
+test_uti:25,18:20:49:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:833: size=6048 B (+6048 B), count=6 (+6), average=1008 B
+test_uti:25,18:20:49:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:862: size=15.3 KiB (+5836 B), count=54 (+13), average=291 B
+test_uti:25,18:20:49:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client_reqrep.py:385: size=3502 B (+3024 B), count=5 (+3), average=700 B
+test_uti:25,18:20:49:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client_reqrep.py:363: size=3024 B (+3024 B), count=3 (+3), average=1008 B
+test_uti:25,18:20:49:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:863: size=6857 B (+2830 B), count=22 (+6), average=312 B
+test_uti:25,18:20:49:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:840: size=6846 B (+2830 B), count=19 (+6), average=360 B
+test_uti:25,18:20:49:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:839: size=6846 B (+2830 B), count=19 (+6), average=360 B
+test_uti:25,18:20:49:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/gdoc.py:40: size=3943 B (+2118 B), count=17 (+12), average=232 B
+test_uti:25,18:20:49:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:188: size=2032 B (+1576 B), count=6 (+5), average=339 B
+test_uti:25,18:20:49:print_size:90:Fj0ZZw -- 
+
+------------------------------
+
+
+test_uti:25,18:20:49:print_size:93:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=289 KiB, count=8976, average=33 B
+test_uti:25,18:20:49:print_size:93:Fj0ZZw -- <frozen importlib._bootstrap_external>:580: size=75.9 KiB, count=909, average=86 B
+test_uti:25,18:20:49:print_size:93:Fj0ZZw -- /usr/lib/python3.8/ssl.py:906: size=26.3 KiB, count=427, average=63 B
+test_uti:25,18:20:49:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:862: size=15.3 KiB, count=54, average=291 B
+test_uti:25,18:20:49:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/base_events.py:702: size=10.5 KiB, count=96, average=112 B
+test_uti:25,18:20:49:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=10.3 KiB, count=111, average=95 B
+test_uti:25,18:20:49:print_size:93:Fj0ZZw -- /usr/lib/python3.8/abc.py:102: size=8999 B, count=90, average=100 B
+test_uti:25,18:20:49:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/events.py:81: size=7192 B, count=24, average=300 B
+test_uti:25,18:20:49:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:863: size=6857 B, count=22, average=312 B
+test_uti:25,18:20:49:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:840: size=6846 B, count=19, average=360 B
+test_uti:25,18:20:49:print_size:100:Fj0ZZw -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+56/71 at 2020-04-25 18:20:49.635421
+dumped: 6
+gdoc.py:25,18:20:50:get_last_revision:53:Fj0ZZw -- last revision id 2981
+gdoc.py:25,18:20:50:async_init:33:Fj0ZZw -- after await 2981
+connecti:25,18:20:50:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:20:50:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/1JK8IsrP_wGm2CMPI2TbhvrrYTfzAebH5h56mDeQugoo/revisions/load?id=1JK8IsrP_wGm2CMPI2TbhvrrYTfzAebH5h56mDeQugoo&start=1&end=2981 HTTP/1.1" 200 None
+get_file:25,18:20:50:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:20:50:getRevision:166:Fj0ZZw -- getRevision looping
+gdoc.py:25,18:20:50:get_last_revision:53:Fj0ZZw -- last revision id 1538
+gdoc.py:25,18:20:50:async_init:33:Fj0ZZw -- after await 1538
+connecti:25,18:20:50:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:20:52:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/1cX0p4FkT_mRKMngyAqtysHHhT0t8EXJLvv0IYzoS4sU/revisions/load?id=1cX0p4FkT_mRKMngyAqtysHHhT0t8EXJLvv0IYzoS4sU&start=1&end=1538 HTTP/1.1" 200 None
+get_file:25,18:20:52:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:20:52:getRevision:166:Fj0ZZw -- getRevision looping
+gdoc.py:25,18:20:52:get_last_revision:53:Fj0ZZw -- last revision id 2988
+gdoc.py:25,18:20:52:async_init:33:Fj0ZZw -- after await 2988
+connecti:25,18:20:52:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:20:52:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/1WVRprv2UdMlSY1fciu82upcO_aVl7lOnIFAm3XzHZ1Y/revisions/load?id=1WVRprv2UdMlSY1fciu82upcO_aVl7lOnIFAm3XzHZ1Y&start=1&end=2988 HTTP/1.1" 200 None
+get_file:25,18:20:52:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:20:52:getRevision:166:Fj0ZZw -- getRevision looping
+gdoc.py:25,18:20:54:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:20:54:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:20:54:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:20:55:get_last_revision:53:Fj0ZZw -- last revision id 679
+gdoc.py:25,18:20:55:async_init:33:Fj0ZZw -- after await 679
+connecti:25,18:20:55:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:20:55:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/1bJZoExEi-jg9c7EimHL4Uc3XPLQsrmCZM_Dz_1M5OVg/revisions/load?id=1bJZoExEi-jg9c7EimHL4Uc3XPLQsrmCZM_Dz_1M5OVg&start=1&end=679 HTTP/1.1" 200 None
+get_file:25,18:20:55:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:20:55:getRevision:166:Fj0ZZw -- getRevision looping
+gdoc.py:25,18:20:55:get_last_revision:53:Fj0ZZw -- last revision id 1243
+gdoc.py:25,18:20:55:async_init:33:Fj0ZZw -- after await 1243
+connecti:25,18:20:55:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:20:56:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/1QCHW4IQHA2vCa1Yoxak6ciYnhE7qlwNW_fnOoSBMEG0/revisions/load?id=1QCHW4IQHA2vCa1Yoxak6ciYnhE7qlwNW_fnOoSBMEG0&start=1&end=1243 HTTP/1.1" 200 None
+get_file:25,18:20:56:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:20:56:getRevision:166:Fj0ZZw -- getRevision looping
+gdoc.py:25,18:20:56:get_last_revision:53:Fj0ZZw -- last revision id 677
+gdoc.py:25,18:20:56:async_init:33:Fj0ZZw -- after await 677
+connecti:25,18:20:56:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:20:57:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/1KfPb3dCRNiKJ-_mj-L5IdTZYQRTQo6xd2jDkCL94W1w/revisions/load?id=1KfPb3dCRNiKJ-_mj-L5IdTZYQRTQo6xd2jDkCL94W1w&start=1&end=677 HTTP/1.1" 200 None
+get_file:25,18:20:57:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:20:57:getRevision:166:Fj0ZZw -- getRevision looping
+test_uti:25,18:20:57:print_size:82:Fj0ZZw -- ---------------Memory usage: 99660 (kb)---------------1 mins since start
+test_uti:25,18:20:57:print_size:88:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=535 KiB (+247 KiB), count=16601 (+7625), average=33 B
+test_uti:25,18:20:57:print_size:88:Fj0ZZw -- /usr/lib/python3.8/ssl.py:906: size=17.4 KiB (-9110 B), count=285 (-142), average=63 B
+test_uti:25,18:20:57:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:833: size=0 B (-6048 B), count=0 (-6)
+test_uti:25,18:20:57:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/gdoc.py:51: size=3818 B (+3429 B), count=36 (+33), average=106 B
+test_uti:25,18:20:57:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client_reqrep.py:385: size=478 B (-3024 B), count=2 (-3), average=239 B
+test_uti:25,18:20:57:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client_reqrep.py:363: size=0 B (-3024 B), count=0 (-3)
+test_uti:25,18:20:57:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/throttler.py:51: size=3472 B (+1856 B), count=8 (+5), average=434 B
+test_uti:25,18:20:57:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/gdoc.py:30: size=992 B (-1856 B), count=2 (-5), average=496 B
+test_uti:25,18:20:57:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:167: size=2672 B (+1424 B), count=8 (+5), average=334 B
+test_uti:25,18:20:57:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:188: size=608 B (-1424 B), count=1 (-5), average=608 B
+test_uti:25,18:20:57:print_size:90:Fj0ZZw -- 
+
+------------------------------
+
+
+test_uti:25,18:20:57:print_size:93:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=535 KiB, count=16601, average=33 B
+test_uti:25,18:20:57:print_size:93:Fj0ZZw -- <frozen importlib._bootstrap_external>:580: size=75.9 KiB, count=909, average=86 B
+test_uti:25,18:20:57:print_size:93:Fj0ZZw -- /usr/lib/python3.8/ssl.py:906: size=17.4 KiB, count=285, average=63 B
+test_uti:25,18:20:57:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:862: size=15.3 KiB, count=54, average=291 B
+test_uti:25,18:20:57:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/base_events.py:702: size=10.7 KiB, count=98, average=112 B
+test_uti:25,18:20:57:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=10.0 KiB, count=108, average=95 B
+test_uti:25,18:20:57:print_size:93:Fj0ZZw -- /usr/lib/python3.8/abc.py:102: size=8999 B, count=90, average=100 B
+test_uti:25,18:20:57:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/events.py:81: size=7192 B, count=24, average=300 B
+test_uti:25,18:20:57:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:863: size=6857 B, count=22, average=312 B
+test_uti:25,18:20:57:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:840: size=6846 B, count=19, average=360 B
+test_uti:25,18:20:57:print_size:100:Fj0ZZw -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+62/74 at 2020-04-25 18:20:57.324241
+dumped: 6
+test_uti:25,18:20:57:dump_files:136:Fj0ZZw -- histed files at /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/7.pathed, length 9
+configlo:25,18:20:57:sendmail:103:Fj0ZZw -- sending mail
+gdoc.py:25,18:20:59:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:20:59:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:20:59:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:21:00:get_last_revision:53:Fj0ZZw -- last revision id 1419
+gdoc.py:25,18:21:00:async_init:33:Fj0ZZw -- after await 1419
+connecti:25,18:21:00:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:21:00:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/1qzyADvsj4voj5Gk1RxlbUhvMUx52JS_4Lz0Rub4nDAI/revisions/load?id=1qzyADvsj4voj5Gk1RxlbUhvMUx52JS_4Lz0Rub4nDAI&start=1&end=1419 HTTP/1.1" 200 None
+get_file:25,18:21:00:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:21:00:getRevision:166:Fj0ZZw -- getRevision looping
+gdoc.py:25,18:21:00:get_last_revision:53:Fj0ZZw -- last revision id 13
+gdoc.py:25,18:21:00:async_init:33:Fj0ZZw -- after await 13
+connecti:25,18:21:00:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:21:01:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/15l9f_tZzB4B4ByKbuD5fJa0bwdk_YqiSmSg62w5TU4E/revisions/load?id=15l9f_tZzB4B4ByKbuD5fJa0bwdk_YqiSmSg62w5TU4E&start=1&end=13 HTTP/1.1" 200 None
+get_file:25,18:21:01:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:21:01:getRevision:166:Fj0ZZw -- getRevision looping
+gdoc.py:25,18:21:01:get_last_revision:53:Fj0ZZw -- last revision id 713
+gdoc.py:25,18:21:01:async_init:33:Fj0ZZw -- after await 713
+connecti:25,18:21:01:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:21:02:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/1fb6O0E3ND3FngBsYCfiFvTf5C7xDmIyjFbxCEQGeQK0/revisions/load?id=1fb6O0E3ND3FngBsYCfiFvTf5C7xDmIyjFbxCEQGeQK0&start=1&end=713 HTTP/1.1" 200 None
+get_file:25,18:21:02:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:21:02:getRevision:166:Fj0ZZw -- getRevision looping
+test_uti:25,18:21:03:print_size:82:Fj0ZZw -- ---------------Memory usage: 99660 (kb)---------------2 mins since start
+test_uti:25,18:21:03:print_size:88:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=93.9 KiB (-441 KiB), count=2931 (-13670), average=33 B
+test_uti:25,18:21:03:print_size:88:Fj0ZZw -- /usr/lib/python3.8/tracemalloc.py:532: size=5592 B (+4152 B), count=103 (+77), average=54 B
+test_uti:25,18:21:03:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/gdoc.py:51: size=632 B (-3186 B), count=9 (-27), average=70 B
+test_uti:25,18:21:03:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:862: size=18.0 KiB (+2712 B), count=58 (+4), average=318 B
+test_uti:25,18:21:03:print_size:88:Fj0ZZw -- /usr/lib/python3.8/sre_parse.py:529: size=1848 B (+1848 B), count=33 (+33), average=56 B
+test_uti:25,18:21:03:print_size:88:Fj0ZZw -- /usr/lib/python3.8/ssl.py:906: size=15.9 KiB (-1624 B), count=257 (-28), average=63 B
+test_uti:25,18:21:03:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:863: size=8213 B (+1356 B), count=24 (+2), average=342 B
+test_uti:25,18:21:03:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:840: size=8202 B (+1356 B), count=21 (+2), average=391 B
+test_uti:25,18:21:03:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:839: size=8202 B (+1356 B), count=21 (+2), average=391 B
+test_uti:25,18:21:03:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:162: size=672 B (-1232 B), count=12 (-22), average=56 B
+test_uti:25,18:21:03:print_size:90:Fj0ZZw -- 
+
+------------------------------
+
+
+test_uti:25,18:21:03:print_size:93:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=93.9 KiB, count=2931, average=33 B
+test_uti:25,18:21:03:print_size:93:Fj0ZZw -- <frozen importlib._bootstrap_external>:580: size=75.9 KiB, count=909, average=86 B
+test_uti:25,18:21:03:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:862: size=18.0 KiB, count=58, average=318 B
+test_uti:25,18:21:03:print_size:93:Fj0ZZw -- /usr/lib/python3.8/ssl.py:906: size=15.9 KiB, count=257, average=63 B
+test_uti:25,18:21:03:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/base_events.py:702: size=10.9 KiB, count=100, average=112 B
+test_uti:25,18:21:03:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=10007 B, count=105, average=95 B
+test_uti:25,18:21:03:print_size:93:Fj0ZZw -- /usr/lib/python3.8/abc.py:102: size=8999 B, count=90, average=100 B
+test_uti:25,18:21:03:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:863: size=8213 B, count=24, average=342 B
+test_uti:25,18:21:03:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:840: size=8202 B, count=21, average=391 B
+test_uti:25,18:21:03:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:839: size=8202 B, count=21, average=391 B
+test_uti:25,18:21:03:print_size:100:Fj0ZZw -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+65/74 at 2020-04-25 18:21:03.886104
+dumped: 7
+gdoc.py:25,18:21:05:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:21:05:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:21:05:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:21:05:get_last_revision:53:Fj0ZZw -- last revision id 2
+gdoc.py:25,18:21:05:async_init:33:Fj0ZZw -- after await 2
+connecti:25,18:21:05:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:21:05:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/1aOrKFEEEphoSmQXNpvXYE8OVqfpq4Cm0_pavpJnHNhg/revisions/load?id=1aOrKFEEEphoSmQXNpvXYE8OVqfpq4Cm0_pavpJnHNhg&start=1&end=2 HTTP/1.1" 200 None
+get_file:25,18:21:05:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:21:05:getRevision:166:Fj0ZZw -- getRevision looping
+gdoc.py:25,18:21:05:get_last_revision:53:Fj0ZZw -- last revision id 4438
+gdoc.py:25,18:21:05:async_init:33:Fj0ZZw -- after await 4438
+connecti:25,18:21:05:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:21:06:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/15A7uqZ5m_7jqIYz5NVUyM0cmStEbSTcezN7qTo0wwXA/revisions/load?id=15A7uqZ5m_7jqIYz5NVUyM0cmStEbSTcezN7qTo0wwXA&start=1&end=4438 HTTP/1.1" 200 None
+get_file:25,18:21:07:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:21:07:getRevision:166:Fj0ZZw -- getRevision looping
+gdoc.py:25,18:21:07:get_last_revision:53:Fj0ZZw -- last revision id 526
+gdoc.py:25,18:21:07:async_init:33:Fj0ZZw -- after await 526
+connecti:25,18:21:07:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:21:07:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/1tEY2XbnyEkH5bOQ0y0HmWgJ2vZ5tKsrjh7qZYjdWAyg/revisions/load?id=1tEY2XbnyEkH5bOQ0y0HmWgJ2vZ5tKsrjh7qZYjdWAyg&start=1&end=526 HTTP/1.1" 200 None
+get_file:25,18:21:07:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:21:07:getRevision:166:Fj0ZZw -- getRevision looping
+test_uti:25,18:21:09:print_size:82:Fj0ZZw -- ---------------Memory usage: 99660 (kb)---------------2 mins since start
+test_uti:25,18:21:09:print_size:88:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=226 KiB (+132 KiB), count=7123 (+4192), average=32 B
+test_uti:25,18:21:09:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/gdoc.py:51: size=6317 B (+5685 B), count=57 (+48), average=111 B
+test_uti:25,18:21:09:print_size:88:Fj0ZZw -- /usr/lib/python3.8/sre_parse.py:529: size=0 B (-1848 B), count=0 (-33)
+test_uti:25,18:21:09:print_size:88:Fj0ZZw -- /usr/lib/python3.8/tracemalloc.py:532: size=4072 B (-1520 B), count=73 (-30), average=56 B
+test_uti:25,18:21:09:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:850: size=4320 B (+672 B), count=11 (+4), average=393 B
+test_uti:25,18:21:09:print_size:88:Fj0ZZw -- /usr/lib/python3.8/urllib/parse.py:397: size=2976 B (+558 B), count=32 (+6), average=93 B
+test_uti:25,18:21:09:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:108: size=1840 B (-552 B), count=40 (-12), average=46 B
+test_uti:25,18:21:09:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:148: size=0 B (-392 B), count=0 (-7)
+test_uti:25,18:21:09:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client_reqrep.py:847: size=1480 B (-360 B), count=3 (+0), average=493 B
+test_uti:25,18:21:09:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/gdoc.py:40: size=4112 B (+347 B), count=20 (+3), average=206 B
+test_uti:25,18:21:09:print_size:90:Fj0ZZw -- 
+
+------------------------------
+
+
+test_uti:25,18:21:09:print_size:93:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=226 KiB, count=7123, average=32 B
+test_uti:25,18:21:09:print_size:93:Fj0ZZw -- <frozen importlib._bootstrap_external>:580: size=75.9 KiB, count=909, average=86 B
+test_uti:25,18:21:09:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:862: size=18.0 KiB, count=58, average=318 B
+test_uti:25,18:21:09:print_size:93:Fj0ZZw -- /usr/lib/python3.8/ssl.py:906: size=15.9 KiB, count=257, average=63 B
+test_uti:25,18:21:09:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/base_events.py:702: size=11.2 KiB, count=103, average=112 B
+test_uti:25,18:21:09:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=9752 B, count=102, average=96 B
+test_uti:25,18:21:09:print_size:93:Fj0ZZw -- /usr/lib/python3.8/abc.py:102: size=8999 B, count=90, average=100 B
+test_uti:25,18:21:09:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:863: size=8213 B, count=24, average=342 B
+test_uti:25,18:21:09:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:840: size=8202 B, count=21, average=391 B
+test_uti:25,18:21:09:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:839: size=8202 B, count=21, average=391 B
+test_uti:25,18:21:09:print_size:100:Fj0ZZw -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+68/74 at 2020-04-25 18:21:09.410656
+dumped: 7
+gdoc.py:25,18:21:10:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:21:10:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:21:10:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:21:11:get_last_revision:53:Fj0ZZw -- last revision id 26
+gdoc.py:25,18:21:11:async_init:33:Fj0ZZw -- after await 26
+connecti:25,18:21:11:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:21:11:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/1WFJYasE9LmtyBf776a2oSGIC_ITRZNZNrHnJbByiHz8/revisions/load?id=1WFJYasE9LmtyBf776a2oSGIC_ITRZNZNrHnJbByiHz8&start=1&end=26 HTTP/1.1" 200 None
+get_file:25,18:21:11:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:21:11:getRevision:166:Fj0ZZw -- getRevision looping
+gdoc.py:25,18:21:11:get_last_revision:53:Fj0ZZw -- last revision id 1315
+gdoc.py:25,18:21:11:async_init:33:Fj0ZZw -- after await 1315
+connecti:25,18:21:11:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:21:12:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/160R40mTuqkKNjME0oJVZAEM0186W6yAjl0SBUMSIIFY/revisions/load?id=160R40mTuqkKNjME0oJVZAEM0186W6yAjl0SBUMSIIFY&start=1&end=1315 HTTP/1.1" 200 None
+get_file:25,18:21:12:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:21:12:getRevision:166:Fj0ZZw -- getRevision looping
+gdoc.py:25,18:21:12:get_last_revision:53:Fj0ZZw -- last revision id 2154
+gdoc.py:25,18:21:12:async_init:33:Fj0ZZw -- after await 2154
+connecti:25,18:21:12:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:21:12:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/19qZnBERiKqL8I8xdBdLdgD7fOFZsNL1NDdcz3TJ9Gkg/revisions/load?id=19qZnBERiKqL8I8xdBdLdgD7fOFZsNL1NDdcz3TJ9Gkg&start=1&end=2154 HTTP/1.1" 200 None
+get_file:25,18:21:13:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:21:13:getRevision:166:Fj0ZZw -- getRevision looping
+test_uti:25,18:21:14:print_size:82:Fj0ZZw -- ---------------Memory usage: 99660 (kb)---------------2 mins since start
+test_uti:25,18:21:14:print_size:88:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=337 KiB (+112 KiB), count=10624 (+3501), average=33 B
+test_uti:25,18:21:14:print_size:88:Fj0ZZw -- /usr/lib/python3.8/asyncio/base_events.py:702: size=976 B (-10.3 KiB), count=9 (-94), average=108 B
+test_uti:25,18:21:14:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/gdoc.py:51: size=3249 B (-3068 B), count=32 (-25), average=102 B
+test_uti:25,18:21:15:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/helpers.py:531: size=84 B (-2632 B), count=3 (-94), average=28 B
+test_uti:25,18:21:15:print_size:88:Fj0ZZw -- /usr/lib/python3.8/tracemalloc.py:532: size=1560 B (-2512 B), count=28 (-45), average=56 B
+test_uti:25,18:21:15:print_size:88:Fj0ZZw -- /usr/lib/python3.8/asyncio/base_events.py:705: size=0 B (-848 B), count=0 (-1)
+test_uti:25,18:21:15:print_size:88:Fj0ZZw -- /usr/lib/python3.8/urllib/parse.py:397: size=3534 B (+558 B), count=38 (+6), average=93 B
+test_uti:25,18:21:15:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:108: size=1288 B (-552 B), count=28 (-12), average=46 B
+test_uti:25,18:21:15:print_size:88:Fj0ZZw -- /usr/lib/python3.8/tracemalloc.py:479: size=432 B (-408 B), count=1 (-1), average=432 B
+test_uti:25,18:21:15:print_size:88:Fj0ZZw -- /usr/lib/python3.8/tracemalloc.py:475: size=408 B (+408 B), count=1 (+1), average=408 B
+test_uti:25,18:21:15:print_size:90:Fj0ZZw -- 
+
+------------------------------
+
+
+test_uti:25,18:21:15:print_size:93:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=337 KiB, count=10624, average=33 B
+test_uti:25,18:21:15:print_size:93:Fj0ZZw -- <frozen importlib._bootstrap_external>:580: size=75.9 KiB, count=909, average=86 B
+test_uti:25,18:21:15:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:862: size=18.0 KiB, count=58, average=318 B
+test_uti:25,18:21:15:print_size:93:Fj0ZZw -- /usr/lib/python3.8/ssl.py:906: size=15.9 KiB, count=257, average=63 B
+test_uti:25,18:21:15:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=9497 B, count=99, average=96 B
+test_uti:25,18:21:15:print_size:93:Fj0ZZw -- /usr/lib/python3.8/abc.py:102: size=8999 B, count=90, average=100 B
+test_uti:25,18:21:15:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:863: size=8213 B, count=24, average=342 B
+test_uti:25,18:21:15:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:840: size=8202 B, count=21, average=391 B
+test_uti:25,18:21:15:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:839: size=8202 B, count=21, average=391 B
+test_uti:25,18:21:15:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/events.py:81: size=7192 B, count=24, average=300 B
+test_uti:25,18:21:15:print_size:100:Fj0ZZw -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+71/74 at 2020-04-25 18:21:15.138572
+dumped: 7
+test_uti:25,18:21:15:dump_files:136:Fj0ZZw -- histed files at /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/8.pathed, length 9
+gdoc.py:25,18:21:15:async_init:24:Fj0ZZw -- async init called
+gdoc.py:25,18:21:15:async_init:24:Fj0ZZw -- async init called
+get_file:25,18:21:15:getRevision:183:Fj0ZZw -- not google doc
+gdoc.py:25,18:21:16:get_last_revision:53:Fj0ZZw -- last revision id 707
+gdoc.py:25,18:21:16:async_init:33:Fj0ZZw -- after await 707
+connecti:25,18:21:16:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:21:16:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/1WrjmluBbaNBS8u_WZmREl02_oMy2zv6Kcdte82zR5yk/revisions/load?id=1WrjmluBbaNBS8u_WZmREl02_oMy2zv6Kcdte82zR5yk&start=1&end=707 HTTP/1.1" 200 None
+get_file:25,18:21:16:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:21:16:getRevision:166:Fj0ZZw -- getRevision looping
+gdoc.py:25,18:21:16:get_last_revision:53:Fj0ZZw -- last revision id 1953
+gdoc.py:25,18:21:16:async_init:33:Fj0ZZw -- after await 1953
+connecti:25,18:21:16:_new_conn:817:Fj0ZZw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:21:17:_make_request:393:Fj0ZZw -- https://docs.google.com:443 "GET /document/d/1A7VHFEYQVj0bigcnBi3pn4NngcNXxH35Croy3zrdvLY/revisions/load?id=1A7VHFEYQVj0bigcnBi3pn4NngcNXxH35Croy3zrdvLY&start=1&end=1953 HTTP/1.1" 200 None
+get_file:25,18:21:17:getRevision:198:Fj0ZZw -- google doc
+get_file:25,18:21:17:getRevision:166:Fj0ZZw -- getRevision looping
+get_file:25,18:21:18:getRevision:166:Fj0ZZw -- getRevision looping
+test_uti:25,18:21:20:print_size:82:Fj0ZZw -- ---------------Memory usage: 99660 (kb)---------------2 mins since start
+test_uti:25,18:21:20:print_size:88:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=197 KiB (-141 KiB), count=6143 (-4481), average=33 B
+test_uti:25,18:21:20:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:148: size=15.9 KiB (+15.9 KiB), count=141 (+141), average=116 B
+test_uti:25,18:21:20:print_size:88:Fj0ZZw -- /usr/lib/python3.8/asyncio/events.py:34: size=1280 B (-5440 B), count=20 (-85), average=64 B
+test_uti:25,18:21:20:print_size:88:Fj0ZZw -- /usr/lib/python3.8/ssl.py:906: size=21.1 KiB (+5367 B), count=342 (+85), average=63 B
+test_uti:25,18:21:20:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=14.1 KiB (+4953 B), count=177 (+78), average=82 B
+test_uti:25,18:21:20:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/gdoc.py:40: size=553 B (-3882 B), count=2 (-21), average=276 B
+test_uti:25,18:21:20:print_size:88:Fj0ZZw -- /usr/lib/python3.8/urllib/parse.py:397: size=516 B (-3018 B), count=6 (-32), average=86 B
+test_uti:25,18:21:20:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/gdoc.py:51: size=379 B (-2870 B), count=5 (-27), average=76 B
+test_uti:25,18:21:20:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:862: size=20.8 KiB (+2868 B), count=68 (+10), average=313 B
+test_uti:25,18:21:20:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:850: size=1832 B (-2488 B), count=6 (-5), average=305 B
+test_uti:25,18:21:20:print_size:90:Fj0ZZw -- 
+
+------------------------------
+
+
+test_uti:25,18:21:20:print_size:93:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=197 KiB, count=6143, average=33 B
+test_uti:25,18:21:20:print_size:93:Fj0ZZw -- <frozen importlib._bootstrap_external>:580: size=75.9 KiB, count=909, average=86 B
+test_uti:25,18:21:20:print_size:93:Fj0ZZw -- /usr/lib/python3.8/ssl.py:906: size=21.1 KiB, count=342, average=63 B
+test_uti:25,18:21:20:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:862: size=20.8 KiB, count=68, average=313 B
+test_uti:25,18:21:20:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:148: size=15.9 KiB, count=141, average=116 B
+test_uti:25,18:21:20:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=14.1 KiB, count=177, average=82 B
+test_uti:25,18:21:20:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:863: size=9491 B, count=28, average=339 B
+test_uti:25,18:21:20:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:840: size=9480 B, count=25, average=379 B
+test_uti:25,18:21:20:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:839: size=9480 B, count=25, average=379 B
+test_uti:25,18:21:20:print_size:93:Fj0ZZw -- /usr/lib/python3.8/abc.py:102: size=8999 B, count=90, average=100 B
+test_uti:25,18:21:20:print_size:100:Fj0ZZw -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+74/74 at 2020-04-25 18:21:20.319961
+dumped: 8
+test_uti:25,18:21:20:tryGetQueue:226:Fj0ZZw -- getRevisionwaiting 1 5
+test_uti:25,18:21:20:tryGetQueue:226:Fj0ZZw -- getRevisionwaiting 1 5
+test_uti:25,18:21:20:tryGetQueue:226:Fj0ZZw -- getRevisionwaiting 1 5
+test_uti:25,18:21:24:tryGetQueue:226:Fj0ZZw -- getRevisionwaiting 2 5
+test_uti:25,18:21:25:print_size:82:Fj0ZZw -- ---------------Memory usage: 99660 (kb)---------------2 mins since start
+test_uti:25,18:21:25:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:148: size=0 B (-15.9 KiB), count=0 (-141)
+test_uti:25,18:21:25:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=9242 B (-5208 B), count=96 (-81), average=96 B
+test_uti:25,18:21:25:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:227: size=2344 B (+1896 B), count=10 (+9), average=234 B
+test_uti:25,18:21:25:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:169: size=2088 B (+1576 B), count=6 (+5), average=348 B
+test_uti:25,18:21:25:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:167: size=1144 B (-1576 B), count=3 (-5), average=381 B
+test_uti:25,18:21:25:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:162: size=0 B (-1512 B), count=0 (-27)
+test_uti:25,18:21:25:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/throttler.py:51: size=2104 B (-1368 B), count=3 (-5), average=701 B
+test_uti:25,18:21:25:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:850: size=504 B (-1328 B), count=3 (-3), average=168 B
+test_uti:25,18:21:25:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:222: size=1600 B (+1176 B), count=6 (+5), average=267 B
+test_uti:25,18:21:25:print_size:88:Fj0ZZw -- /usr/lib/python3.8/urllib/parse.py:425: size=240 B (-1120 B), count=3 (-14), average=80 B
+test_uti:25,18:21:25:print_size:90:Fj0ZZw -- 
+
+------------------------------
+
+
+test_uti:25,18:21:25:print_size:93:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=197 KiB, count=6137, average=33 B
+test_uti:25,18:21:25:print_size:93:Fj0ZZw -- <frozen importlib._bootstrap_external>:580: size=75.9 KiB, count=909, average=86 B
+test_uti:25,18:21:25:print_size:93:Fj0ZZw -- /usr/lib/python3.8/ssl.py:906: size=21.1 KiB, count=342, average=63 B
+test_uti:25,18:21:25:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:862: size=20.8 KiB, count=68, average=313 B
+test_uti:25,18:21:25:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:863: size=9491 B, count=28, average=339 B
+test_uti:25,18:21:25:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:840: size=9480 B, count=25, average=379 B
+test_uti:25,18:21:25:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:839: size=9480 B, count=25, average=379 B
+test_uti:25,18:21:25:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=9242 B, count=96, average=96 B
+test_uti:25,18:21:25:print_size:93:Fj0ZZw -- /usr/lib/python3.8/abc.py:102: size=8999 B, count=90, average=100 B
+test_uti:25,18:21:25:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/events.py:81: size=7712 B, count=25, average=308 B
+test_uti:25,18:21:25:print_size:100:Fj0ZZw -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+74/74 at 2020-04-25 18:21:25.472946
+dumped: 8
+test_uti:25,18:21:25:tryGetQueue:226:Fj0ZZw -- getRevisionwaiting 1 5
+test_uti:25,18:21:27:tryGetQueue:226:Fj0ZZw -- getRevisionwaiting 3 5
+test_uti:25,18:21:28:tryGetQueue:226:Fj0ZZw -- getRevisionwaiting 2 5
+test_uti:25,18:21:29:tryGetQueue:226:Fj0ZZw -- getRevisionwaiting 2 5
+test_uti:25,18:21:30:print_size:82:Fj0ZZw -- ---------------Memory usage: 99660 (kb)---------------2 mins since start
+test_uti:25,18:21:30:print_size:88:Fj0ZZw -- /usr/lib/python3.8/tracemalloc.py:532: size=480 B (-1656 B), count=9 (-29), average=53 B
+test_uti:25,18:21:30:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/throttler.py:51: size=992 B (-1112 B), count=1 (-2), average=992 B
+test_uti:25,18:21:30:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:222: size=2648 B (+1048 B), count=8 (+2), average=331 B
+test_uti:25,18:21:30:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/helpers.py:493: size=816 B (+816 B), count=2 (+2), average=408 B
+test_uti:25,18:21:30:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/tcp_helpers.py:42: size=0 B (-816 B), count=0 (-2)
+test_uti:25,18:21:30:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:227: size=2976 B (+632 B), count=13 (+3), average=229 B
+test_uti:25,18:21:30:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:169: size=2720 B (+632 B), count=8 (+2), average=340 B
+test_uti:25,18:21:30:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:167: size=520 B (-624 B), count=1 (-2), average=520 B
+test_uti:25,18:21:30:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/connector.py:636: size=56 B (-520 B), count=1 (-2), average=56 B
+test_uti:25,18:21:30:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/connector.py:354: size=464 B (+464 B), count=1 (+1), average=464 B
+test_uti:25,18:21:30:print_size:90:Fj0ZZw -- 
+
+------------------------------
+
+
+test_uti:25,18:21:30:print_size:93:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=197 KiB, count=6137, average=33 B
+test_uti:25,18:21:30:print_size:93:Fj0ZZw -- <frozen importlib._bootstrap_external>:580: size=75.9 KiB, count=909, average=86 B
+test_uti:25,18:21:30:print_size:93:Fj0ZZw -- /usr/lib/python3.8/ssl.py:906: size=21.1 KiB, count=342, average=63 B
+test_uti:25,18:21:30:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:862: size=20.8 KiB, count=68, average=313 B
+test_uti:25,18:21:30:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:863: size=9491 B, count=28, average=339 B
+test_uti:25,18:21:30:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:840: size=9480 B, count=25, average=379 B
+test_uti:25,18:21:30:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:839: size=9480 B, count=25, average=379 B
+test_uti:25,18:21:30:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=9242 B, count=96, average=96 B
+test_uti:25,18:21:30:print_size:93:Fj0ZZw -- /usr/lib/python3.8/abc.py:102: size=8999 B, count=90, average=100 B
+test_uti:25,18:21:30:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/events.py:81: size=7712 B, count=25, average=308 B
+test_uti:25,18:21:30:print_size:100:Fj0ZZw -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+74/74 at 2020-04-25 18:21:30.587843
+dumped: 8
+test_uti:25,18:21:33:tryGetQueue:226:Fj0ZZw -- getRevisionwaiting 2 5
+test_uti:25,18:21:35:tryGetQueue:226:Fj0ZZw -- getRevisionwaiting 4 5
+test_uti:25,18:21:35:print_size:82:Fj0ZZw -- ---------------Memory usage: 99660 (kb)---------------2 mins since start
+test_uti:25,18:21:35:print_size:88:Fj0ZZw -- /usr/lib/python3.8/tracemalloc.py:532: size=600 B (+120 B), count=11 (+2), average=55 B
+test_uti:25,18:21:35:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/connector.py:637: size=0 B (-112 B), count=0 (-2)
+test_uti:25,18:21:35:print_size:88:Fj0ZZw -- <attrs generated hash aiohttp.client_reqrep.ConnectionKey>:2: size=0 B (-104 B), count=0 (-1)
+test_uti:25,18:21:35:print_size:88:Fj0ZZw -- /usr/lib/python3.8/asyncio/events.py:106: size=64 B (-64 B), count=1 (-1), average=64 B
+test_uti:25,18:21:35:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/connector.py:636: size=0 B (-56 B), count=0 (-1)
+test_uti:25,18:21:35:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/connector.py:339: size=0 B (-56 B), count=0 (-1)
+test_uti:25,18:21:35:print_size:88:Fj0ZZw -- /usr/lib/python3.8/asyncio/base_events.py:687: size=448 B (-48 B), count=12 (-1), average=37 B
+test_uti:25,18:21:35:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:112: size=48 B (+48 B), count=1 (+1), average=48 B
+test_uti:25,18:21:35:print_size:88:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=197 KiB (+0 B), count=6137 (+0), average=33 B
+test_uti:25,18:21:35:print_size:88:Fj0ZZw -- <frozen importlib._bootstrap_external>:580: size=75.9 KiB (+0 B), count=909 (+0), average=86 B
+test_uti:25,18:21:35:print_size:90:Fj0ZZw -- 
+
+------------------------------
+
+
+test_uti:25,18:21:35:print_size:93:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=197 KiB, count=6137, average=33 B
+test_uti:25,18:21:35:print_size:93:Fj0ZZw -- <frozen importlib._bootstrap_external>:580: size=75.9 KiB, count=909, average=86 B
+test_uti:25,18:21:35:print_size:93:Fj0ZZw -- /usr/lib/python3.8/ssl.py:906: size=21.1 KiB, count=342, average=63 B
+test_uti:25,18:21:35:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:862: size=20.8 KiB, count=68, average=313 B
+test_uti:25,18:21:35:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:863: size=9491 B, count=28, average=339 B
+test_uti:25,18:21:35:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:840: size=9480 B, count=25, average=379 B
+test_uti:25,18:21:35:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:839: size=9480 B, count=25, average=379 B
+test_uti:25,18:21:35:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=9242 B, count=96, average=96 B
+test_uti:25,18:21:35:print_size:93:Fj0ZZw -- /usr/lib/python3.8/abc.py:102: size=8999 B, count=90, average=100 B
+test_uti:25,18:21:35:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/events.py:81: size=7712 B, count=25, average=308 B
+test_uti:25,18:21:35:print_size:100:Fj0ZZw -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+74/74 at 2020-04-25 18:21:35.708351
+dumped: 8
+test_uti:25,18:21:36:tryGetQueue:226:Fj0ZZw -- getRevisionwaiting 3 5
+test_uti:25,18:21:36:tryGetQueue:226:Fj0ZZw -- getRevisionwaiting 3 5
+test_uti:25,18:21:40:print_size:82:Fj0ZZw -- ---------------Memory usage: 99660 (kb)---------------2 mins since start
+test_uti:25,18:21:40:print_size:88:Fj0ZZw -- /usr/lib/python3.8/tracemalloc.py:532: size=432 B (-168 B), count=8 (-3), average=54 B
+test_uti:25,18:21:40:print_size:88:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=197 KiB (+0 B), count=6137 (+0), average=33 B
+test_uti:25,18:21:40:print_size:88:Fj0ZZw -- <frozen importlib._bootstrap_external>:580: size=75.9 KiB (+0 B), count=909 (+0), average=86 B
+test_uti:25,18:21:40:print_size:88:Fj0ZZw -- /usr/lib/python3.8/ssl.py:906: size=21.1 KiB (+0 B), count=342 (+0), average=63 B
+test_uti:25,18:21:40:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:862: size=20.8 KiB (+0 B), count=68 (+0), average=313 B
+test_uti:25,18:21:40:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:863: size=9491 B (+0 B), count=28 (+0), average=339 B
+test_uti:25,18:21:40:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:840: size=9480 B (+0 B), count=25 (+0), average=379 B
+test_uti:25,18:21:40:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:839: size=9480 B (+0 B), count=25 (+0), average=379 B
+test_uti:25,18:21:40:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=9242 B (+0 B), count=96 (+0), average=96 B
+test_uti:25,18:21:40:print_size:88:Fj0ZZw -- /usr/lib/python3.8/abc.py:102: size=8999 B (+0 B), count=90 (+0), average=100 B
+test_uti:25,18:21:40:print_size:90:Fj0ZZw -- 
+
+------------------------------
+
+
+test_uti:25,18:21:40:print_size:93:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=197 KiB, count=6137, average=33 B
+test_uti:25,18:21:40:print_size:93:Fj0ZZw -- <frozen importlib._bootstrap_external>:580: size=75.9 KiB, count=909, average=86 B
+test_uti:25,18:21:40:print_size:93:Fj0ZZw -- /usr/lib/python3.8/ssl.py:906: size=21.1 KiB, count=342, average=63 B
+test_uti:25,18:21:40:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:862: size=20.8 KiB, count=68, average=313 B
+test_uti:25,18:21:40:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:863: size=9491 B, count=28, average=339 B
+test_uti:25,18:21:40:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:840: size=9480 B, count=25, average=379 B
+test_uti:25,18:21:40:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:839: size=9480 B, count=25, average=379 B
+test_uti:25,18:21:40:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=9242 B, count=96, average=96 B
+test_uti:25,18:21:40:print_size:93:Fj0ZZw -- /usr/lib/python3.8/abc.py:102: size=8999 B, count=90, average=100 B
+test_uti:25,18:21:40:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/events.py:81: size=7712 B, count=25, average=308 B
+test_uti:25,18:21:40:print_size:100:Fj0ZZw -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+74/74 at 2020-04-25 18:21:40.833891
+dumped: 8
+test_uti:25,18:21:40:tryGetQueue:226:Fj0ZZw -- getRevisionwaiting 3 5
+test_uti:25,18:21:42:tryGetQueue:226:Fj0ZZw -- getRevisionwaiting 4 5
+test_uti:25,18:21:42:tryGetQueue:226:Fj0ZZw -- getRevisionwaiting 5 5
+test_uti:25,18:21:43:tryGetQueue:226:Fj0ZZw -- getRevisionwaiting 4 5
+test_uti:25,18:21:45:tryGetQueue:226:Fj0ZZw -- getRevisionwaiting 5 5
+test_uti:25,18:21:45:print_size:82:Fj0ZZw -- ---------------Memory usage: 99660 (kb)---------------2 mins since start
+test_uti:25,18:21:45:print_size:88:Fj0ZZw -- /usr/lib/python3.8/ssl.py:906: size=7576 B (-13.7 KiB), count=132 (-210), average=57 B
+test_uti:25,18:21:45:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/locks.py:22: size=528 B (-1056 B), count=1 (-2), average=528 B
+test_uti:25,18:21:45:print_size:88:Fj0ZZw -- /usr/lib/python3.8/ssl.py:837: size=88 B (-950 B), count=1 (-12), average=88 B
+test_uti:25,18:21:45:print_size:88:Fj0ZZw -- /usr/lib/python3.8/logging/__init__.py:284: size=909 B (+909 B), count=2 (+2), average=454 B
+test_uti:25,18:21:45:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/streams.py:112: size=64 B (-864 B), count=1 (-7), average=64 B
+test_uti:25,18:21:45:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:182: size=192 B (-736 B), count=3 (-5), average=64 B
+test_uti:25,18:21:45:print_size:88:Fj0ZZw -- /usr/lib/python3.8/asyncio/sslproto.py:429: size=64 B (-696 B), count=1 (-6), average=64 B
+test_uti:25,18:21:45:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/streams.py:542: size=128 B (-632 B), count=2 (-5), average=64 B
+test_uti:25,18:21:45:print_size:88:Fj0ZZw -- /usr/lib/python3.8/typing.py:870: size=0 B (-576 B), count=0 (-8)
+test_uti:25,18:21:45:print_size:88:Fj0ZZw -- /usr/lib/python3.8/ssl.py:925: size=192 B (-572 B), count=3 (-9), average=64 B
+test_uti:25,18:21:45:print_size:90:Fj0ZZw -- 
+
+------------------------------
+
+
+test_uti:25,18:21:45:print_size:93:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=197 KiB, count=6137, average=33 B
+test_uti:25,18:21:45:print_size:93:Fj0ZZw -- <frozen importlib._bootstrap_external>:580: size=75.9 KiB, count=909, average=86 B
+test_uti:25,18:21:45:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:862: size=20.8 KiB, count=68, average=313 B
+test_uti:25,18:21:45:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:863: size=9491 B, count=28, average=339 B
+test_uti:25,18:21:45:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:840: size=9480 B, count=25, average=379 B
+test_uti:25,18:21:45:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:839: size=9480 B, count=25, average=379 B
+test_uti:25,18:21:45:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=9242 B, count=96, average=96 B
+test_uti:25,18:21:45:print_size:93:Fj0ZZw -- /usr/lib/python3.8/abc.py:102: size=8999 B, count=90, average=100 B
+test_uti:25,18:21:45:print_size:93:Fj0ZZw -- /usr/lib/python3.8/ssl.py:906: size=7576 B, count=132, average=57 B
+test_uti:25,18:21:45:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/events.py:81: size=7416 B, count=28, average=265 B
+test_uti:25,18:21:45:print_size:100:Fj0ZZw -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+74/74 at 2020-04-25 18:21:45.945438
+dumped: 8
+get_file:25,18:21:49:getRevision:171:Fj0ZZw -- getRevision task exiting
+get_file:25,18:21:49:getRevision:205:Fj0ZZw -- getRevision task has ended, waiting for 30 seconds for all other tasks to finish
+get_file:25,18:21:49:getRevision:171:Fj0ZZw -- getRevision task exiting
+get_file:25,18:21:49:getRevision:205:Fj0ZZw -- getRevision task has ended, waiting for 30 seconds for all other tasks to finish
+test_uti:25,18:21:49:tryGetQueue:226:Fj0ZZw -- getRevisionwaiting 4 5
+test_uti:25,18:21:49:tryGetQueue:226:Fj0ZZw -- getRevisionwaiting 5 5
+test_uti:25,18:21:50:print_size:82:Fj0ZZw -- ---------------Memory usage: 99660 (kb)---------------2 mins since start
+test_uti:25,18:21:50:print_size:88:Fj0ZZw -- /usr/lib/python3.8/tracemalloc.py:532: size=8624 B (+8192 B), count=160 (+152), average=54 B
+test_uti:25,18:21:50:print_size:88:Fj0ZZw -- /usr/lib/python3.8/ssl.py:906: size=0 B (-7576 B), count=0 (-132)
+test_uti:25,18:21:50:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:227: size=1712 B (-1264 B), count=7 (-6), average=245 B
+test_uti:25,18:21:50:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:206: size=1216 B (+1216 B), count=4 (+4), average=304 B
+test_uti:25,18:21:50:print_size:88:Fj0ZZw -- /usr/lib/python3.8/asyncio/selector_events.py:755: size=0 B (-760 B), count=0 (-7)
+test_uti:25,18:21:50:print_size:88:Fj0ZZw -- /usr/lib/python3.8/asyncio/sslproto.py:437: size=0 B (-592 B), count=0 (-6)
+test_uti:25,18:21:50:print_size:88:Fj0ZZw -- /usr/lib/python3.8/asyncio/selector_events.py:624: size=0 B (-584 B), count=0 (-12)
+test_uti:25,18:21:50:print_size:88:Fj0ZZw -- /usr/lib/python3.8/asyncio/selector_events.py:619: size=0 B (-532 B), count=0 (-11)
+test_uti:25,18:21:51:print_size:88:Fj0ZZw -- /usr/lib/python3.8/asyncio/events.py:34: size=960 B (-512 B), count=15 (-8), average=64 B
+test_uti:25,18:21:51:print_size:88:Fj0ZZw -- /usr/lib/python3.8/tracemalloc.py:131: size=448 B (+448 B), count=1 (+1), average=448 B
+test_uti:25,18:21:51:print_size:90:Fj0ZZw -- 
+
+------------------------------
+
+
+test_uti:25,18:21:51:print_size:93:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=197 KiB, count=6137, average=33 B
+test_uti:25,18:21:51:print_size:93:Fj0ZZw -- <frozen importlib._bootstrap_external>:580: size=75.9 KiB, count=909, average=86 B
+test_uti:25,18:21:51:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:862: size=20.8 KiB, count=68, average=313 B
+test_uti:25,18:21:51:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:863: size=9491 B, count=28, average=339 B
+test_uti:25,18:21:51:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:840: size=9480 B, count=25, average=379 B
+test_uti:25,18:21:51:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:839: size=9480 B, count=25, average=379 B
+test_uti:25,18:21:51:print_size:93:Fj0ZZw -- /usr/lib/python3.8/abc.py:102: size=8999 B, count=90, average=100 B
+test_uti:25,18:21:51:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=8906 B, count=94, average=95 B
+test_uti:25,18:21:51:print_size:93:Fj0ZZw -- /usr/lib/python3.8/tracemalloc.py:532: size=8624 B, count=160, average=54 B
+test_uti:25,18:21:51:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/events.py:81: size=7304 B, count=26, average=281 B
+test_uti:25,18:21:51:print_size:100:Fj0ZZw -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+74/74 at 2020-04-25 18:21:51.057418
+dumped: 8
+test_uti:25,18:21:55:tryGetQueue:226:Fj0ZZw -- getRevisionwaiting 5 5
+test_uti:25,18:21:56:print_size:82:Fj0ZZw -- ---------------Memory usage: 99660 (kb)---------------2 mins since start
+test_uti:25,18:21:56:print_size:88:Fj0ZZw -- /usr/lib/python3.8/tracemalloc.py:532: size=432 B (-8192 B), count=8 (-152), average=54 B
+test_uti:25,18:21:56:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:222: size=1040 B (-1496 B), count=4 (-2), average=260 B
+test_uti:25,18:21:56:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:169: size=1872 B (-608 B), count=5 (-1), average=374 B
+test_uti:25,18:21:56:print_size:88:Fj0ZZw -- /usr/lib/python3.8/asyncio/events.py:81: size=7192 B (-112 B), count=24 (-2), average=300 B
+test_uti:25,18:21:56:print_size:88:Fj0ZZw -- /usr/lib/python3.8/asyncio/base_events.py:687: size=424 B (-48 B), count=11 (-1), average=39 B
+test_uti:25,18:21:56:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:112: size=48 B (+48 B), count=1 (+1), average=48 B
+test_uti:25,18:21:56:print_size:88:Fj0ZZw -- /usr/lib/python3.8/asyncio/base_events.py:506: size=41 B (+41 B), count=2 (+2), average=20 B
+test_uti:25,18:21:56:print_size:88:Fj0ZZw -- /usr/lib/python3.8/logging/__init__.py:330: size=48 B (-24 B), count=2 (-1), average=24 B
+test_uti:25,18:21:56:print_size:88:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=197 KiB (+0 B), count=6137 (+0), average=33 B
+test_uti:25,18:21:56:print_size:88:Fj0ZZw -- <frozen importlib._bootstrap_external>:580: size=75.9 KiB (+0 B), count=909 (+0), average=86 B
+test_uti:25,18:21:56:print_size:90:Fj0ZZw -- 
+
+------------------------------
+
+
+test_uti:25,18:21:56:print_size:93:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=197 KiB, count=6137, average=33 B
+test_uti:25,18:21:56:print_size:93:Fj0ZZw -- <frozen importlib._bootstrap_external>:580: size=75.9 KiB, count=909, average=86 B
+test_uti:25,18:21:56:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:862: size=20.8 KiB, count=68, average=313 B
+test_uti:25,18:21:56:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:863: size=9491 B, count=28, average=339 B
+test_uti:25,18:21:56:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:840: size=9480 B, count=25, average=379 B
+test_uti:25,18:21:56:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:839: size=9480 B, count=25, average=379 B
+test_uti:25,18:21:56:print_size:93:Fj0ZZw -- /usr/lib/python3.8/abc.py:102: size=8999 B, count=90, average=100 B
+test_uti:25,18:21:56:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=8906 B, count=94, average=95 B
+test_uti:25,18:21:56:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/events.py:81: size=7192 B, count=24, average=300 B
+test_uti:25,18:21:56:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:100: size=6392 B, count=87, average=73 B
+test_uti:25,18:21:56:print_size:100:Fj0ZZw -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+74/74 at 2020-04-25 18:21:56.172979
+dumped: 8
+get_file:25,18:21:58:getRevision:171:Fj0ZZw -- getRevision task exiting
+get_file:25,18:21:58:getRevision:205:Fj0ZZw -- getRevision task has ended, waiting for 30 seconds for all other tasks to finish
+get_file:25,18:21:59:getRevision:171:Fj0ZZw -- getRevision task exiting
+get_file:25,18:21:59:getRevision:205:Fj0ZZw -- getRevision task has ended, waiting for 30 seconds for all other tasks to finish
+test_uti:25,18:22:01:print_size:82:Fj0ZZw -- ---------------Memory usage: 99660 (kb)---------------2 mins since start
+test_uti:25,18:22:01:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:227: size=448 B (-1264 B), count=1 (-6), average=448 B
+test_uti:25,18:22:01:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:206: size=2432 B (+1216 B), count=8 (+4), average=304 B
+test_uti:25,18:22:01:print_size:88:Fj0ZZw -- /usr/lib/python3.8/tracemalloc.py:121: size=448 B (+448 B), count=1 (+1), average=448 B
+test_uti:25,18:22:01:print_size:88:Fj0ZZw -- /usr/lib/python3.8/tracemalloc.py:131: size=0 B (-448 B), count=0 (-1)
+test_uti:25,18:22:01:print_size:88:Fj0ZZw -- /usr/lib/python3.8/asyncio/queues.py:186: size=0 B (-288 B), count=0 (-4)
+test_uti:25,18:22:01:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:169: size=1632 B (-240 B), count=3 (-2), average=544 B
+test_uti:25,18:22:01:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:108: size=384 B (-176 B), count=8 (-4), average=48 B
+test_uti:25,18:22:01:print_size:88:Fj0ZZw -- /usr/lib/python3.8/asyncio/events.py:81: size=7304 B (+112 B), count=26 (+2), average=281 B
+test_uti:25,18:22:01:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:222: size=928 B (-112 B), count=2 (-2), average=464 B
+test_uti:25,18:22:01:print_size:88:Fj0ZZw -- /usr/lib/python3.8/logging/__init__.py:330: size=72 B (+24 B), count=3 (+1), average=24 B
+test_uti:25,18:22:01:print_size:90:Fj0ZZw -- 
+
+------------------------------
+
+
+test_uti:25,18:22:01:print_size:93:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=197 KiB, count=6137, average=33 B
+test_uti:25,18:22:01:print_size:93:Fj0ZZw -- <frozen importlib._bootstrap_external>:580: size=75.9 KiB, count=909, average=86 B
+test_uti:25,18:22:01:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:862: size=20.8 KiB, count=68, average=313 B
+test_uti:25,18:22:01:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:863: size=9491 B, count=28, average=339 B
+test_uti:25,18:22:01:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:840: size=9480 B, count=25, average=379 B
+test_uti:25,18:22:01:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:839: size=9480 B, count=25, average=379 B
+test_uti:25,18:22:01:print_size:93:Fj0ZZw -- /usr/lib/python3.8/abc.py:102: size=8999 B, count=90, average=100 B
+test_uti:25,18:22:01:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=8906 B, count=94, average=95 B
+test_uti:25,18:22:01:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/events.py:81: size=7304 B, count=26, average=281 B
+test_uti:25,18:22:01:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:100: size=6392 B, count=87, average=73 B
+test_uti:25,18:22:01:print_size:100:Fj0ZZw -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+74/74 at 2020-04-25 18:22:01.282876
+dumped: 8
+test_uti:25,18:22:06:print_size:82:Fj0ZZw -- ---------------Memory usage: 99660 (kb)---------------3 mins since start
+test_uti:25,18:22:06:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:169: size=608 B (-1024 B), count=1 (-2), average=608 B
+test_uti:25,18:22:06:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:222: size=424 B (-504 B), count=1 (-1), average=424 B
+test_uti:25,18:22:06:print_size:88:Fj0ZZw -- /usr/lib/python3.8/tracemalloc.py:131: size=448 B (+448 B), count=1 (+1), average=448 B
+test_uti:25,18:22:06:print_size:88:Fj0ZZw -- /usr/lib/python3.8/tracemalloc.py:121: size=0 B (-448 B), count=0 (-1)
+test_uti:25,18:22:06:print_size:88:Fj0ZZw -- /usr/lib/python3.8/asyncio/events.py:81: size=7192 B (-112 B), count=24 (-2), average=300 B
+test_uti:25,18:22:06:print_size:88:Fj0ZZw -- /usr/lib/python3.8/logging/__init__.py:330: size=48 B (-24 B), count=2 (-1), average=24 B
+test_uti:25,18:22:06:print_size:88:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=197 KiB (+0 B), count=6137 (+0), average=33 B
+test_uti:25,18:22:06:print_size:88:Fj0ZZw -- <frozen importlib._bootstrap_external>:580: size=75.9 KiB (+0 B), count=909 (+0), average=86 B
+test_uti:25,18:22:06:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:862: size=20.8 KiB (+0 B), count=68 (+0), average=313 B
+test_uti:25,18:22:06:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:863: size=9491 B (+0 B), count=28 (+0), average=339 B
+test_uti:25,18:22:06:print_size:90:Fj0ZZw -- 
+
+------------------------------
+
+
+test_uti:25,18:22:06:print_size:93:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=197 KiB, count=6137, average=33 B
+test_uti:25,18:22:06:print_size:93:Fj0ZZw -- <frozen importlib._bootstrap_external>:580: size=75.9 KiB, count=909, average=86 B
+test_uti:25,18:22:06:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:862: size=20.8 KiB, count=68, average=313 B
+test_uti:25,18:22:06:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:863: size=9491 B, count=28, average=339 B
+test_uti:25,18:22:06:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:840: size=9480 B, count=25, average=379 B
+test_uti:25,18:22:06:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:839: size=9480 B, count=25, average=379 B
+test_uti:25,18:22:06:print_size:93:Fj0ZZw -- /usr/lib/python3.8/abc.py:102: size=8999 B, count=90, average=100 B
+test_uti:25,18:22:06:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=8906 B, count=94, average=95 B
+test_uti:25,18:22:06:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/events.py:81: size=7192 B, count=24, average=300 B
+test_uti:25,18:22:06:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:100: size=6392 B, count=87, average=73 B
+test_uti:25,18:22:06:print_size:100:Fj0ZZw -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+74/74 at 2020-04-25 18:22:06.403738
+dumped: 8
+test_uti:25,18:22:11:print_size:82:Fj0ZZw -- ---------------Memory usage: 99660 (kb)---------------3 mins since start
+test_uti:25,18:22:11:print_size:88:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=197 KiB (+0 B), count=6137 (+0), average=33 B
+test_uti:25,18:22:11:print_size:88:Fj0ZZw -- <frozen importlib._bootstrap_external>:580: size=75.9 KiB (+0 B), count=909 (+0), average=86 B
+test_uti:25,18:22:11:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:862: size=20.8 KiB (+0 B), count=68 (+0), average=313 B
+test_uti:25,18:22:11:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:863: size=9491 B (+0 B), count=28 (+0), average=339 B
+test_uti:25,18:22:11:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:840: size=9480 B (+0 B), count=25 (+0), average=379 B
+test_uti:25,18:22:11:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:839: size=9480 B (+0 B), count=25 (+0), average=379 B
+test_uti:25,18:22:11:print_size:88:Fj0ZZw -- /usr/lib/python3.8/abc.py:102: size=8999 B (+0 B), count=90 (+0), average=100 B
+test_uti:25,18:22:11:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=8906 B (+0 B), count=94 (+0), average=95 B
+test_uti:25,18:22:11:print_size:88:Fj0ZZw -- /usr/lib/python3.8/asyncio/events.py:81: size=7192 B (+0 B), count=24 (+0), average=300 B
+test_uti:25,18:22:11:print_size:88:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:100: size=6392 B (+0 B), count=87 (+0), average=73 B
+test_uti:25,18:22:11:print_size:90:Fj0ZZw -- 
+
+------------------------------
+
+
+test_uti:25,18:22:11:print_size:93:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=197 KiB, count=6137, average=33 B
+test_uti:25,18:22:11:print_size:93:Fj0ZZw -- <frozen importlib._bootstrap_external>:580: size=75.9 KiB, count=909, average=86 B
+test_uti:25,18:22:11:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:862: size=20.8 KiB, count=68, average=313 B
+test_uti:25,18:22:11:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:863: size=9491 B, count=28, average=339 B
+test_uti:25,18:22:11:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:840: size=9480 B, count=25, average=379 B
+test_uti:25,18:22:11:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:839: size=9480 B, count=25, average=379 B
+test_uti:25,18:22:11:print_size:93:Fj0ZZw -- /usr/lib/python3.8/abc.py:102: size=8999 B, count=90, average=100 B
+test_uti:25,18:22:11:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=8906 B, count=94, average=95 B
+test_uti:25,18:22:11:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/events.py:81: size=7192 B, count=24, average=300 B
+test_uti:25,18:22:11:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:100: size=6392 B, count=87, average=73 B
+test_uti:25,18:22:11:print_size:100:Fj0ZZw -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+74/74 at 2020-04-25 18:22:11.530935
+dumped: 8
+test_uti:25,18:22:16:print_size:82:Fj0ZZw -- ---------------Memory usage: 99660 (kb)---------------3 mins since start
+test_uti:25,18:22:16:print_size:88:Fj0ZZw -- /usr/lib/python3.8/tracemalloc.py:121: size=448 B (+448 B), count=1 (+1), average=448 B
+test_uti:25,18:22:16:print_size:88:Fj0ZZw -- /usr/lib/python3.8/tracemalloc.py:131: size=0 B (-448 B), count=0 (-1)
+test_uti:25,18:22:16:print_size:88:Fj0ZZw -- /usr/lib/python3.8/tracemalloc.py:93: size=136 B (+136 B), count=2 (+2), average=68 B
+test_uti:25,18:22:16:print_size:88:Fj0ZZw -- /usr/lib/python3.8/asyncio/base_events.py:702: size=1536 B (-112 B), count=14 (-1), average=110 B
+test_uti:25,18:22:16:print_size:88:Fj0ZZw -- /usr/lib/python3.8/tracemalloc.py:50: size=97 B (+97 B), count=2 (+2), average=48 B
+test_uti:25,18:22:16:print_size:88:Fj0ZZw -- /usr/lib/python3.8/asyncio/base_events.py:687: size=400 B (-24 B), count=10 (-1), average=40 B
+test_uti:25,18:22:16:print_size:88:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=197 KiB (+0 B), count=6137 (+0), average=33 B
+test_uti:25,18:22:16:print_size:88:Fj0ZZw -- <frozen importlib._bootstrap_external>:580: size=75.9 KiB (+0 B), count=909 (+0), average=86 B
+test_uti:25,18:22:16:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:862: size=20.8 KiB (+0 B), count=68 (+0), average=313 B
+test_uti:25,18:22:16:print_size:88:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:863: size=9491 B (+0 B), count=28 (+0), average=339 B
+test_uti:25,18:22:16:print_size:90:Fj0ZZw -- 
+
+------------------------------
+
+
+test_uti:25,18:22:16:print_size:93:Fj0ZZw -- /usr/lib/python3.8/multiprocessing/connection.py:251: size=197 KiB, count=6137, average=33 B
+test_uti:25,18:22:16:print_size:93:Fj0ZZw -- <frozen importlib._bootstrap_external>:580: size=75.9 KiB, count=909, average=86 B
+test_uti:25,18:22:16:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:862: size=20.8 KiB, count=68, average=313 B
+test_uti:25,18:22:16:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:863: size=9491 B, count=28, average=339 B
+test_uti:25,18:22:16:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:840: size=9480 B, count=25, average=379 B
+test_uti:25,18:22:16:print_size:93:Fj0ZZw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/numpy/lib/histograms.py:839: size=9480 B, count=25, average=379 B
+test_uti:25,18:22:16:print_size:93:Fj0ZZw -- /usr/lib/python3.8/abc.py:102: size=8999 B, count=90, average=100 B
+test_uti:25,18:22:16:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/datutils/test_utils.py:156: size=8906 B, count=94, average=95 B
+test_uti:25,18:22:16:print_size:93:Fj0ZZw -- /usr/lib/python3.8/asyncio/events.py:81: size=7192 B, count=24, average=300 B
+test_uti:25,18:22:16:print_size:93:Fj0ZZw -- /home/henry/pydocs/processing/get_files.py:100: size=6392 B, count=87, average=73 B
+test_uti:25,18:22:16:print_size:100:Fj0ZZw -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+74/74 at 2020-04-25 18:22:16.642371
+dumped: 8
+get_file:25,18:22:19:getRevision:208:Fj0ZZw -- Close event has been set. Expect print task to finish soon
+get_file:25,18:22:19:getRevision:210:Fj0ZZw -- getrev return
+get_file:25,18:22:19:getRevision:208:Fj0ZZw -- Close event has been set. Expect print task to finish soon
+get_file:25,18:22:19:getRevision:210:Fj0ZZw -- getrev return
+get_file:25,18:22:28:getRevision:208:Fj0ZZw -- Close event has been set. Expect print task to finish soon
+get_file:25,18:22:28:getRevision:210:Fj0ZZw -- getrev return
+get_file:25,18:22:29:getRevision:208:Fj0ZZw -- Close event has been set. Expect print task to finish soon
+get_file:25,18:22:29:getRevision:210:Fj0ZZw -- getrev return
+get_file:25,18:22:29:start:244:Fj0ZZw -- await gather revisions done
+get_file:25,18:22:29:start:249:Fj0ZZw -- cancelled throttler
+get_file:25,18:22:29:loadFiles:307:Fj0ZZw -- loop done
+test_uti:25,18:22:29:dump_files:136:Fj0ZZw -- histed files at /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/9.pathed, length 3
+get_file:25,18:22:29:loadFiles:324:Fj0ZZw -- dumped pickle files
+sql.py:25,18:22:29:<module>:24:Fj0ZZw -- Driver%3D%7BODBC+Driver+17+for+SQL+Server%7D%3BServer%3Dtcp%3Apydoc-db.database.windows.net%2C1433%3BDatabase%3Dpydocs%3BUid%3Dhenry2833%3BPwd%3D%7BInfoip32%7D%3BEncrypt%3Dyes%3BTrustServerCertificate%3Dno%3BConnection+Timeout%3D30%3B
+sql.py:25,18:22:32:start:109:Fj0ZZw -- STARTING SQL 527e4afc-4598-400f-8536-afa5324f0ba4 /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+sql.py:25,18:22:32:start:111:Fj0ZZw -- setting sys except hook
+sql.py:25,18:22:32:start:121:Fj0ZZw -- Owner name: 527e4afc-4598-404 25 AprCp0wxDQEYQ
+sql.py:25,18:22:33:start:125:Fj0ZZw -- Added owner row, name: 527e4afc-4598-404 25 AprCp0wxDQEYQ id: 26
+sql.py:25,18:22:33:start:137:Fj0ZZw -- Finished loading pickles
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1TYIOfz_uzybWgEeexs8iE64jcjt-AmUegOP6KORNaWQ
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 19Fu317bfo0V7yOIkfLvKtAU-UJYLf8d2Soy-jTvq1uc
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1Ux4BA5BVJTcsGcTcGp8CtB85ahlWp0h83AGvrtAhnTg
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1eXJKzIcZCM6pAdVLLrvEyIwQBDDrtm8dComeZ_W7uOI
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1nOYHEZQN_i8dc6gZNDqguGEmCIU7IX62qngQE0Yvy7o
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1K6SwyWCOhW6dt906DjOIhJ-ZklpsooCdTyYHGfEZD2s
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1ak3AnxwEDfv_EkgRG7Q8U_eglT-eK2W3RtAJqlrtcQA
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1iTV26x-U2-nngY6gONVklMtrhdfI818IwLM682vpABA
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 12x_9WkC_rJJ4iQW5IUNaY9BwAHRM1P6nRBi_oyRq7eI
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1gKBPmWO42yparziEkHbvcBtubHyE_IQwtO1Q8IIrW1c
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1FzKITrCYnc_odhNCRNNaZ-PnT7m0f6qI-iDuQG382OY
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1VzVAOYcQFfJoPSOGAqpK8xA7OtiUNdq13G3SNRtrq2U
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1cflNpTbjQqpz-E4GqrehbgvXRayQ6dXE_X_x5tC8gbE
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1BU7kF9C-LzvjiV2WBq5Yx6sstmvvYDDOPKYP8jygvKg
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1gWhoOIIk2dcQObAvgYpY8Cx_Qc9YUoqNgXEapMic1Qo
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1qC8O9UkkKeZ82f4iVgf2UYL0ZDqm9ny54I45NmQqBK0
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1xS96CqWG26lxXRjriQhRXyssvP6FimBkTtA5EIOLfao
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 14KTZ9MFQGABvko_oR_4LlYTopekxI_fVWLoZQA0N85c
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1Xm-pyhQ5D_o4tAHRCtX-amvzVhf-d_pGw0ZhdcTL35Q
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 11VemHYI4DaBG0dTfSBEDkWrOlvYV7B2TxCQkotLFhy8
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1-1y6G4MviqPb0QzFlRjccX3Hlm72FFJS1VppqcHKCTs
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1V3RqT0n3pc2un7LT3XHJhOLGqmACXSAMSCExEzabbJw
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 18s8_aXXl5LtTX5ljUkglb7uf3QgbVuGoTlhwf9iHzKw
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1KxeMzcqJ7__fOtXnftJ-Pa7r2vlOP2GwzmoDpyt0mBE
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 19yXrTeWC3zjIWztx7RSpKqHL-dpfVf7PPaOmbKyAPrs
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1HLjWGnWf_XNICjybIlh_C5E1DjjOyLIl8lkXEx8Reu8
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 0B4Fujvv5MfqbcThuWDlsamUzRWs
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1zyLifTUL_nG8Vm-qDkOCwL5iOSD1DiyDuysUCIgDBXk
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1Rwm5j7Cnfx80BQ5aCjWLNGe5Zsy2eEIcqnHMhaIgwRc
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 0B4Fujvv5MfqbLXBKUEpYMjlUa2c
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 0B4Fujvv5MfqbMW9TNERCYW1Tc1U
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 0B4Fujvv5MfqbZXBjWUZzVHM5NHc
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 0B4Fujvv5MfqbQlZtbVBaZ1lReUE
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 0B4Fujvv5MfqbX2RMejlDSkc4bHc
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 0B4Fujvv5MfqbSVFwbnNzeWFNcjA
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 0B4Fujvv5MfqbZ2JkT01HODJadzQ
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 0B4Fujvv5MfqbbFBMeWczTXVKX3M
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 0B4Fujvv5MfqbS1dYbGZBNUhFREE
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 0B4Fujvv5MfqbY1Q1TjU0LWxhOGM
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 0B4Fujvv5MfqbQ3RjQW1kUkVHRzg
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 0B4Fujvv5Mfqbd1AtVU1TNmJ6b28
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 0B4Fujvv5MfqbUkVUYXBYU0pKdlE
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 0B4Fujvv5MfqbbVdyZ0dIeFRJNWc
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1b-WTM2ekE1k6pPqFt0v7fa-myJ3Yvhg-vFT_zOs-DA4
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1UvcAx8uccrerf4uud0w1zvsAsbMSJfyqo298Dh_bq_M
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 12msYuSI-rqvfXROgoGjtxN3Y9AlT3SnRTd6Om5xOxmM
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1i-Tv07oc_5F72OdEdWf91bbLwoFEaXhmjjlo3QOQyrk
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1z0qLmI61do7x0qw3rnK74msvcEZ4tEEVVOERiauTuaI
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1kzKbaDRw0fxr-yzmfDdTWyiOBuuGprpgdsicAGMD8aw
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1HdWWgJDh4IA7T550gANGtjqDNvq0AwP0serPT4qI34k
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1CEbUajiAYrz2tpwIPZdNCVGniK6leqx04Hmva2N4XM4
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1Jzh-bWmP8YOEwSm1WsYvN6c8BDgEzMsWsSYXrZ6uwds
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1fVc04agXKNKopxuf3yInvn_EXCPuHxfctQqv9rarZIQ
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1U1hoywM09b-AUO7fIR9TflRSsc3Qu3XmxWmzEph3TmE
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1HOWZp6ESjGoYrybdR0LLcpWVlgxys_LqI8yxEeyFkpY
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1_ovH_D4cpuVTDp9z4DtrqQUeTTjLYI5RWrZ06FXx8fg
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1JK8IsrP_wGm2CMPI2TbhvrrYTfzAebH5h56mDeQugoo
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1cX0p4FkT_mRKMngyAqtysHHhT0t8EXJLvv0IYzoS4sU
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1WVRprv2UdMlSY1fciu82upcO_aVl7lOnIFAm3XzHZ1Y
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1bJZoExEi-jg9c7EimHL4Uc3XPLQsrmCZM_Dz_1M5OVg
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1QCHW4IQHA2vCa1Yoxak6ciYnhE7qlwNW_fnOoSBMEG0
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1KfPb3dCRNiKJ-_mj-L5IdTZYQRTQo6xd2jDkCL94W1w
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1qzyADvsj4voj5Gk1RxlbUhvMUx52JS_4Lz0Rub4nDAI
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 15l9f_tZzB4B4ByKbuD5fJa0bwdk_YqiSmSg62w5TU4E
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1fb6O0E3ND3FngBsYCfiFvTf5C7xDmIyjFbxCEQGeQK0
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1aOrKFEEEphoSmQXNpvXYE8OVqfpq4Cm0_pavpJnHNhg
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 15A7uqZ5m_7jqIYz5NVUyM0cmStEbSTcezN7qTo0wwXA
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1tEY2XbnyEkH5bOQ0y0HmWgJ2vZ5tKsrjh7qZYjdWAyg
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1WFJYasE9LmtyBf776a2oSGIC_ITRZNZNrHnJbByiHz8
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 160R40mTuqkKNjME0oJVZAEM0186W6yAjl0SBUMSIIFY
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 19qZnBERiKqL8I8xdBdLdgD7fOFZsNL1NDdcz3TJ9Gkg
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1WrjmluBbaNBS8u_WZmREl02_oMy2zv6Kcdte82zR5yk
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1A7VHFEYQVj0bigcnBi3pn4NngcNXxH35Croy3zrdvLY
+sql.py:25,18:22:33:start:155:Fj0ZZw -- File: 1NO1CVAUsBSgghggdLH2X4YQ2XNaEkDmr7vK156pSCxk
+sql.py:25,18:22:33:start:175:Fj0ZZw -- len of id map 74 len of files 74
+sql.py:25,18:22:33:start:180:Fj0ZZw -- starting bulk save
+sql.py:25,18:22:33:adder:81:Fj0ZZw -- rem 60/74
+sql.py:25,18:22:48:adder:84:Fj0ZZw -- flushing adder
+sql.py:25,18:22:48:start:182:Fj0ZZw -- bulked save done
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 698
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 699
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 700
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 701
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 702
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 703
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 704
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 705
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 706
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 707
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 708
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 709
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 710
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 711
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 712
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 713
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 714
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 715
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 716
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 717
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 718
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 719
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 720
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 721
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 722
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 723
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 724
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 725
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 726
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 727
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 728
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 729
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 730
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 731
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 732
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 733
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 734
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 735
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 736
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 737
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 738
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 739
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 740
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 741
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 742
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 743
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 744
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 745
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 746
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 747
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 748
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 749
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 750
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 751
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 752
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 753
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 754
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 755
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 756
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 757
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 758
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 759
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 760
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 761
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 762
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 763
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 764
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 765
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 766
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 767
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 768
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 769
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 770
+sql.py:25,18:22:48:start:187:Fj0ZZw -- File added, id: 771
+sql.py:25,18:22:48:start:189:Fj0ZZw -- sess flush done
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 698, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 699, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 700, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 701, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 702, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 703, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 704, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 705, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 706, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 707, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 708, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 709, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 710, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 711, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 712, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 713, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 714, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 715, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 716, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 717, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 718, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 719, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 720, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 721, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 722, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 723, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 724, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 725, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 726, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 727, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 728, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 729, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 730, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 731, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 732, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 733, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 734, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 735, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 736, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 737, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 738, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 739, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 740, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 741, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 742, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 743, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 744, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 745, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 746, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 747, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 748, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 749, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 750, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 751, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 752, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 753, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 754, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 755, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 756, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 757, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 758, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 759, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 760, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 761, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 762, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 763, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 764, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 765, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 766, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 767, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 768, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 769, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 770, dates to be added 2
+sql.py:25,18:22:48:start:198:Fj0ZZw -- adding dates for file: 771, dates to be added 2
+sql.py:25,18:22:48:start:208:Fj0ZZw -- len dates: 4810
+sql.py:25,18:22:48:commit:44:Fj0ZZw -- iters: 100, len: 4810
+sql.py:25,18:22:48:commit:53:Fj0ZZw -- flushing, len: 4710
+sql.py:25,18:22:58:commit:53:Fj0ZZw -- flushing, len: 4610
+sql.py:25,18:23:08:commit:53:Fj0ZZw -- flushing, len: 4510
+sql.py:25,18:23:19:commit:53:Fj0ZZw -- flushing, len: 4410
+sql.py:25,18:23:29:commit:53:Fj0ZZw -- flushing, len: 4310
+configlo:25,18:23:31:handle_exception:82:Fj0ZZw -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/encodings/utf_16_le.py", line 15, in decode
+    def decode(input, errors='strict'):
+KeyboardInterrupt
+
+The above exception was the direct cause of the following exception:
+
+KeyboardInterrupt: decoding with 'utf-16le' codec failed (KeyboardInterrupt: )
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2916, in _bulk_save_mappings
+    persistence._bulk_insert(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 95, in _bulk_insert
+    _emit_insert_statements(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 1083, in _emit_insert_statements
+    c = cached_connections[connection].execute(statement, multiparams)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 984, in execute
+    return meth(self, multiparams, params)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 293, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1097, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1287, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1485, in _handle_dbapi_exception
+    util.raise_(exc_info[1], with_traceback=exc_info[2])
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1227, in _execute_context
+    self.dialect.do_executemany(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/dialects/mssql/pyodbc.py", line 412, in do_executemany
+    super(MSDialect_pyodbc, self).do_executemany(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 587, in do_executemany
+    cursor.executemany(statement, parameters)
+SystemError: <class 'pyodbc.Error'> returned a result with an error set
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 733, in _rollback_impl
+    self.engine.dialect.do_rollback(self.connection)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 540, in do_rollback
+    dbapi_connection.rollback()
+pyodbc.OperationalError: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLEndTran)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "dsds.py", line 37, in <module>
+    start()
+  File "dsds.py", line 34, in start
+    loadFiles(uid, workingPath, fileid, creds)
+  File "/home/henry/pydocs/processing/get_files.py", line 331, in loadFiles
+    processing.sql.start(USER_ID, _workingPath)
+  File "/home/henry/pydocs/processing/sql.py", line 212, in start
+    commit(lt_dates, sess, Dates)
+  File "/home/henry/pydocs/processing/sql.py", line 57, in commit
+    sess.bulk_insert_mappings(_type, _temp)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2831, in bulk_insert_mappings
+    self._bulk_save_mappings(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2928, in _bulk_save_mappings
+    transaction.rollback(_capture_exception=True)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 81, in __exit__
+    compat.raise_(value, with_traceback=traceback)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2928, in _bulk_save_mappings
+    transaction.rollback(_capture_exception=True)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 573, in rollback
+    util.raise_(rollback_err[1], with_traceback=rollback_err[2])
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 533, in rollback
+    t[1].rollback()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1725, in rollback
+    self._do_rollback()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1763, in _do_rollback
+    self.connection._rollback_impl()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 735, in _rollback_impl
+    self._handle_dbapi_exception(e, None, None, None, None)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1481, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 733, in _rollback_impl
+    self.engine.dialect.do_rollback(self.connection)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 540, in do_rollback
+    dbapi_connection.rollback()
+sqlalchemy.exc.OperationalError: (pyodbc.OperationalError) ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLEndTran)')
+(Background on this error at: http://sqlalche.me/e/e3q8)
+configlo:25,18:23:31:sendmail:103:Fj0ZZw -- sending mail
+configlo:25,18:23:32:handle_exception:86:Fj0ZZw -- exiting! from sshook

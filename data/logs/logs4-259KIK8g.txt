@@ -1,0 +1,17 @@
+sql.py:25,21:40:34:start:103:9KIK8g -- STARTING SQL testing2020-04-25 21:40:34.854683 /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+sql.py:25,21:40:34:start:105:9KIK8g -- setting sys except hook
+sql.py:25,21:40:34:start:115:9KIK8g -- Owner name: testing2020-04-04 25 AprosdK_dBvnQ
+sql.py:25,21:40:35:start:119:9KIK8g -- Added owner row, name: testing2020-04-04 25 AprosdK_dBvnQ id: 73
+configlo:25,21:40:35:handle_exception:82:9KIK8g -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 193, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/henry/pydocs/processing/sql.py", line 271, in <module>
+    start("testing" + datetime.now().__str__(), wpath)
+  File "/home/henry/pydocs/processing/sql.py", line 125, in start
+    files.update(pickle.load(open(n, 'rb')))
+IsADirectoryError: [Errno 21] Is a directory: '/'
+configlo:25,21:40:35:mp_sendmail:115:9KIK8g -- sending mail
+configlo:25,21:40:37:handle_exception:86:9KIK8g -- exiting! from sshook

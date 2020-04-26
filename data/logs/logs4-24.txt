@@ -1,0 +1,1994 @@
+sql.py:04-24 15:45:25:<module>:24 -- Driver%3D%7BODBC+Driver+17+for+SQL+Server%7D%3BServer%3Dtcp%3Apydoc-db.database.windows.net%2C1433%3BDatabase%3Dpydoc-db%3BUid%3Dhenry2833%3BPwd%3D%7BInfoip32%7D%3BEncrypt%3Dyes%3BTrustServerCertificate%3Dno%3BConnection+Timeout%3D30%3B
+sql.py:04-24 18:46:30:<module>:24 -- Driver%3D%7BODBC+Driver+17+for+SQL+Server%7D%3BServer%3Dtcp%3Apydoc-db.database.windows.net%2C1433%3BDatabase%3Dpydoc-db%3BUid%3Dhenry2833%3BPwd%3D%7BInfoip32%7D%3BEncrypt%3Dyes%3BTrustServerCertificate%3Dno%3BConnection+Timeout%3D30%3B
+sql.py:04-24 18:47:36:<module>:24 -- Driver%3D%7BODBC+Driver+17+for+SQL+Server%7D%3BServer%3Dtcp%3Apydoc-db.database.windows.net%2C1433%3BDatabase%3Dpydoc-db%3BUid%3Dhenry2833%3BPwd%3D%7BInfoip32%7D%3BEncrypt%3Dyes%3BTrustServerCertificate%3Dno%3BConnection+Timeout%3D30%3B
+sql.py:04-24 18:48:02:<module>:24 -- Driver%3D%7BODBC+Driver+17+for+SQL+Server%7D%3BServer%3Dtcp%3Apydoc-db.database.windows.net%2C1433%3BDatabase%3Dpydoc-db%3BUid%3Dhenry2833%3BPwd%3D%7BInfoip32%7D%3BEncrypt%3Dyes%3BTrustServerCertificate%3Dno%3BConnection+Timeout%3D30%3B
+sql.py:04-24 18:48:19:<module>:24 -- Driver%3D%7BODBC+Driver+17+for+SQL+Server%7D%3BServer%3Dtcp%3Apydoc-db.database.windows.net%2C1433%3BDatabase%3Dpydoc-db%3BUid%3Dhenry2833%3BPwd%3D%7BInfoip32%7D%3BEncrypt%3Dyes%3BTrustServerCertificate%3Dno%3BConnection+Timeout%3D30%3B
+base.py:04-24 18:48:22:_execute_context:1205 -- SELECT CAST(SERVERPROPERTY('ProductVersion') AS VARCHAR)
+base.py:04-24 18:48:22:_execute_context:1207 -- ()
+result.p:04-24 18:48:23:_init_metadata:809 -- Col ('',)
+result.p:04-24 18:48:23:process_rows:1249 -- Row ('12.0.2000.8',)
+base.py:04-24 18:48:23:_execute_context:1205 -- SELECT schema_name()
+base.py:04-24 18:48:23:_execute_context:1207 -- ()
+result.p:04-24 18:48:23:_init_metadata:809 -- Col ('',)
+result.p:04-24 18:48:23:process_rows:1249 -- Row ('dbo',)
+base.py:04-24 18:48:24:_cursor_execute:1311 -- SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+base.py:04-24 18:48:24:_cursor_execute:1312 -- ()
+base.py:04-24 18:48:24:_cursor_execute:1311 -- SELECT CAST('test unicode returns' AS NVARCHAR(60)) AS anon_1
+base.py:04-24 18:48:24:_cursor_execute:1312 -- ()
+base.py:04-24 18:48:25:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 18:48:25:_execute_context:1207 -- ('files', 'dbo')
+result.p:04-24 18:48:26:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 18:48:26:process_rows:1249 -- Row ('dbo', 'files', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:04-24 18:48:26:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 18:48:26:_execute_context:1207 -- ('owner', 'dbo')
+result.p:04-24 18:48:27:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 18:48:27:process_rows:1249 -- Row ('dbo', 'owner', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:04-24 18:48:27:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 18:48:27:_execute_context:1207 -- ('dates', 'dbo')
+result.p:04-24 18:48:28:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 18:48:28:process_rows:1249 -- Row ('dbo', 'dates', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:04-24 18:48:28:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 18:48:28:_execute_context:1207 -- ('closure', 'dbo')
+result.p:04-24 18:48:29:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 18:48:29:process_rows:1249 -- Row ('dbo', 'closure', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:04-24 18:48:29:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 18:48:29:_execute_context:1207 -- ('filename', 'dbo')
+result.p:04-24 18:48:30:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 18:48:30:process_rows:1249 -- Row ('dbo', 'filename', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:04-24 18:48:30:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 18:48:30:_execute_context:1207 -- ('tasks', 'dbo')
+result.p:04-24 18:48:33:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+base.py:04-24 18:48:33:_execute_context:1205 -- 
+CREATE TABLE tasks (
+	id INTEGER NOT NULL IDENTITY(1,1), 
+	path VARCHAR(600) NULL, 
+	creds VARBINARY(max) NULL, 
+	fileid VARCHAR(600) NULL, 
+	userid VARCHAR(600) NULL, 
+	PRIMARY KEY (id)
+)
+
+
+base.py:04-24 18:48:33:_execute_context:1207 -- ()
+base.py:04-24 18:48:35:_commit_impl:753 -- COMMIT
+dsds.py:04-24 18:48:35:start:19 -- start
+dsds.py:04-24 18:48:35:start:24 -- (52428800, 104857600)
+get_file:04-24 18:48:35:loadFiles:265 -- Start loadFiles, 527e4afc-4598-400f-8536-afa5324f0ba4 root
+requests:04-24 18:48:35:__call__:117 -- Making request: POST https://oauth2.googleapis.com/token
+connecti:04-24 18:48:35:_new_conn:817 -- Starting new HTTPS connection (1): oauth2.googleapis.com
+configlo:04-24 18:48:35:handle_exception:79 -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 309, in ssl_wrap_socket
+    context.load_verify_locations(ca_certs, ca_cert_dir)
+OSError: [Errno 12] Cannot allocate memory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/requests/adapters.py", line 430, in send
+    resp = conn.urlopen(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/urllib3/connectionpool.py", line 597, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/urllib3/connectionpool.py", line 345, in _make_request
+    self._validate_conn(conn)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/urllib3/connectionpool.py", line 844, in _validate_conn
+    conn.connect()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/urllib3/connection.py", line 319, in connect
+    self.sock = ssl_wrap_socket(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 311, in ssl_wrap_socket
+    raise SSLError(e)
+urllib3.exceptions.SSLError: [Errno 12] Cannot allocate memory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/google/auth/transport/requests.py", line 118, in __call__
+    response = self.session.request(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/requests/sessions.py", line 502, in request
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/requests/sessions.py", line 612, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/requests/adapters.py", line 514, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: [Errno 12] Cannot allocate memory
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "dsds.py", line 43, in <module>
+    start()
+  File "dsds.py", line 40, in start
+    loadFiles(uid, workingPath, fileid, creds)
+  File "/home/henry/pydocs/processing/get_files.py", line 274, in loadFiles
+    TestUtil.refresh_creds(_creds)
+  File "/home/henry/pydocs/processing/datutils/test_utils.py", line 49, in refresh_creds
+    cls.creds.refresh(Request())
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/google/oauth2/credentials.py", line 124, in refresh
+    _client.refresh_grant(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/google/oauth2/_client.py", line 237, in refresh_grant
+    response_data = _token_endpoint_request(request, token_uri, body)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/google/oauth2/_client.py", line 105, in _token_endpoint_request
+    response = request(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/google/auth/transport/requests.py", line 124, in __call__
+    six.raise_from(new_exc, caught_exc)
+  File "<string>", line 3, in raise_from
+google.auth.exceptions.TransportError: [Errno 12] Cannot allocate memory
+sql.py:04-24 18:51:03:<module>:24 -- Driver%3D%7BODBC+Driver+17+for+SQL+Server%7D%3BServer%3Dtcp%3Apydoc-db.database.windows.net%2C1433%3BDatabase%3Dpydoc-db%3BUid%3Dhenry2833%3BPwd%3D%7BInfoip32%7D%3BEncrypt%3Dyes%3BTrustServerCertificate%3Dno%3BConnection+Timeout%3D30%3B
+sql.py:04-24 18:52:04:<module>:24 -- Driver%3D%7BODBC+Driver+17+for+SQL+Server%7D%3BServer%3Dtcp%3Apydoc-db.database.windows.net%2C1433%3BDatabase%3Dpydoc-db%3BUid%3Dhenry2833%3BPwd%3D%7BInfoip32%7D%3BEncrypt%3Dyes%3BTrustServerCertificate%3Dno%3BConnection+Timeout%3D30%3B
+base.py:04-24 18:52:10:_execute_context:1205 -- SELECT CAST(SERVERPROPERTY('ProductVersion') AS VARCHAR)
+base.py:04-24 18:52:10:_execute_context:1207 -- ()
+result.p:04-24 18:52:11:_init_metadata:809 -- Col ('',)
+result.p:04-24 18:52:11:process_rows:1249 -- Row ('12.0.2000.8',)
+base.py:04-24 18:52:11:_execute_context:1205 -- SELECT schema_name()
+base.py:04-24 18:52:11:_execute_context:1207 -- ()
+result.p:04-24 18:52:12:_init_metadata:809 -- Col ('',)
+result.p:04-24 18:52:12:process_rows:1249 -- Row ('dbo',)
+base.py:04-24 18:52:12:_cursor_execute:1311 -- SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+base.py:04-24 18:52:12:_cursor_execute:1312 -- ()
+base.py:04-24 18:52:14:_cursor_execute:1311 -- SELECT CAST('test unicode returns' AS NVARCHAR(60)) AS anon_1
+base.py:04-24 18:52:14:_cursor_execute:1312 -- ()
+base.py:04-24 18:52:16:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 18:52:16:_execute_context:1207 -- ('files', 'dbo')
+result.p:04-24 18:52:17:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 18:52:17:process_rows:1249 -- Row ('dbo', 'files', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:04-24 18:52:18:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 18:52:18:_execute_context:1207 -- ('owner', 'dbo')
+result.p:04-24 18:52:20:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 18:52:20:process_rows:1249 -- Row ('dbo', 'owner', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:04-24 18:52:21:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 18:52:22:_execute_context:1207 -- ('dates', 'dbo')
+result.p:04-24 18:52:26:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 18:52:26:process_rows:1249 -- Row ('dbo', 'dates', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:04-24 18:52:27:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 18:52:27:_execute_context:1207 -- ('closure', 'dbo')
+result.p:04-24 18:52:28:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 18:52:28:process_rows:1249 -- Row ('dbo', 'closure', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:04-24 18:52:31:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 18:52:31:_execute_context:1207 -- ('filename', 'dbo')
+result.p:04-24 18:52:35:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 18:52:35:process_rows:1249 -- Row ('dbo', 'filename', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:04-24 18:52:35:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 18:52:35:_execute_context:1207 -- ('tasks', 'dbo')
+result.p:04-24 18:52:36:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 18:52:36:process_rows:1249 -- Row ('dbo', 'tasks', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+dsds.py:04-24 18:52:36:start:19 -- start
+dsds.py:04-24 18:52:36:start:24 -- (157286400, 314572800)
+get_file:04-24 18:52:36:loadFiles:265 -- Start loadFiles, 527e4afc-4598-400f-8536-afa5324f0ba4 root
+requests:04-24 18:52:36:__call__:117 -- Making request: POST https://oauth2.googleapis.com/token
+connecti:04-24 18:52:36:_new_conn:817 -- Starting new HTTPS connection (1): oauth2.googleapis.com
+configlo:04-24 18:52:36:handle_exception:79 -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 309, in ssl_wrap_socket
+    context.load_verify_locations(ca_certs, ca_cert_dir)
+OSError: [Errno 12] Cannot allocate memory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/requests/adapters.py", line 430, in send
+    resp = conn.urlopen(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/urllib3/connectionpool.py", line 597, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/urllib3/connectionpool.py", line 345, in _make_request
+    self._validate_conn(conn)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/urllib3/connectionpool.py", line 844, in _validate_conn
+    conn.connect()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/urllib3/connection.py", line 319, in connect
+    self.sock = ssl_wrap_socket(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 311, in ssl_wrap_socket
+    raise SSLError(e)
+urllib3.exceptions.SSLError: [Errno 12] Cannot allocate memory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/google/auth/transport/requests.py", line 118, in __call__
+    response = self.session.request(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/requests/sessions.py", line 502, in request
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/requests/sessions.py", line 612, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/requests/adapters.py", line 514, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: [Errno 12] Cannot allocate memory
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "dsds.py", line 43, in <module>
+    start()
+  File "dsds.py", line 40, in start
+    loadFiles(uid, workingPath, fileid, creds)
+  File "/home/henry/pydocs/processing/get_files.py", line 274, in loadFiles
+    TestUtil.refresh_creds(_creds)
+  File "/home/henry/pydocs/processing/datutils/test_utils.py", line 49, in refresh_creds
+    cls.creds.refresh(Request())
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/google/oauth2/credentials.py", line 124, in refresh
+    _client.refresh_grant(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/google/oauth2/_client.py", line 237, in refresh_grant
+    response_data = _token_endpoint_request(request, token_uri, body)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/google/oauth2/_client.py", line 105, in _token_endpoint_request
+    response = request(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/google/auth/transport/requests.py", line 124, in __call__
+    six.raise_from(new_exc, caught_exc)
+  File "<string>", line 3, in raise_from
+google.auth.exceptions.TransportError: [Errno 12] Cannot allocate memory
+sql.py:04-24 18:55:39:<module>:24 -- Driver%3D%7BODBC+Driver+17+for+SQL+Server%7D%3BServer%3Dtcp%3Apydoc-db.database.windows.net%2C1433%3BDatabase%3Dpydoc-db%3BUid%3Dhenry2833%3BPwd%3D%7BInfoip32%7D%3BEncrypt%3Dyes%3BTrustServerCertificate%3Dno%3BConnection+Timeout%3D30%3B
+base.py:04-24 18:55:42:_execute_context:1205 -- SELECT CAST(SERVERPROPERTY('ProductVersion') AS VARCHAR)
+base.py:04-24 18:55:42:_execute_context:1207 -- ()
+result.p:04-24 18:55:42:_init_metadata:809 -- Col ('',)
+result.p:04-24 18:55:42:process_rows:1249 -- Row ('12.0.2000.8',)
+base.py:04-24 18:55:42:_execute_context:1205 -- SELECT schema_name()
+base.py:04-24 18:55:42:_execute_context:1207 -- ()
+result.p:04-24 18:55:43:_init_metadata:809 -- Col ('',)
+result.p:04-24 18:55:43:process_rows:1249 -- Row ('dbo',)
+base.py:04-24 18:55:43:_cursor_execute:1311 -- SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+base.py:04-24 18:55:43:_cursor_execute:1312 -- ()
+base.py:04-24 18:55:44:_cursor_execute:1311 -- SELECT CAST('test unicode returns' AS NVARCHAR(60)) AS anon_1
+base.py:04-24 18:55:44:_cursor_execute:1312 -- ()
+base.py:04-24 18:55:46:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 18:55:46:_execute_context:1207 -- ('files', 'dbo')
+result.p:04-24 18:55:46:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 18:55:46:process_rows:1249 -- Row ('dbo', 'files', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:04-24 18:55:46:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 18:55:46:_execute_context:1207 -- ('owner', 'dbo')
+result.p:04-24 18:55:47:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 18:55:47:process_rows:1249 -- Row ('dbo', 'owner', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:04-24 18:55:47:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 18:55:47:_execute_context:1207 -- ('dates', 'dbo')
+result.p:04-24 18:55:48:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 18:55:48:process_rows:1249 -- Row ('dbo', 'dates', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:04-24 18:55:49:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 18:55:49:_execute_context:1207 -- ('closure', 'dbo')
+result.p:04-24 18:55:49:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 18:55:49:process_rows:1249 -- Row ('dbo', 'closure', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:04-24 18:55:49:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 18:55:49:_execute_context:1207 -- ('filename', 'dbo')
+result.p:04-24 18:55:50:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 18:55:50:process_rows:1249 -- Row ('dbo', 'filename', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:04-24 18:55:50:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 18:55:50:_execute_context:1207 -- ('tasks', 'dbo')
+result.p:04-24 18:55:50:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 18:55:50:process_rows:1249 -- Row ('dbo', 'tasks', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+dsds.py:04-24 18:55:52:start:19 -- start
+dsds.py:04-24 18:55:52:start:24 -- (251658240, 314572800)
+get_file:04-24 18:55:52:loadFiles:265 -- Start loadFiles, 527e4afc-4598-400f-8536-afa5324f0ba4 root
+requests:04-24 18:55:52:__call__:117 -- Making request: POST https://oauth2.googleapis.com/token
+connecti:04-24 18:55:52:_new_conn:817 -- Starting new HTTPS connection (1): oauth2.googleapis.com
+configlo:04-24 18:55:52:handle_exception:79 -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 309, in ssl_wrap_socket
+    context.load_verify_locations(ca_certs, ca_cert_dir)
+OSError: [Errno 12] Cannot allocate memory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/requests/adapters.py", line 430, in send
+    resp = conn.urlopen(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/urllib3/connectionpool.py", line 597, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/urllib3/connectionpool.py", line 345, in _make_request
+    self._validate_conn(conn)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/urllib3/connectionpool.py", line 844, in _validate_conn
+    conn.connect()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/urllib3/connection.py", line 319, in connect
+    self.sock = ssl_wrap_socket(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 311, in ssl_wrap_socket
+    raise SSLError(e)
+urllib3.exceptions.SSLError: [Errno 12] Cannot allocate memory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/google/auth/transport/requests.py", line 118, in __call__
+    response = self.session.request(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/requests/sessions.py", line 502, in request
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/requests/sessions.py", line 612, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/requests/adapters.py", line 514, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: [Errno 12] Cannot allocate memory
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "dsds.py", line 43, in <module>
+    start()
+  File "dsds.py", line 40, in start
+    loadFiles(uid, workingPath, fileid, creds)
+  File "/home/henry/pydocs/processing/get_files.py", line 274, in loadFiles
+    TestUtil.refresh_creds(_creds)
+  File "/home/henry/pydocs/processing/datutils/test_utils.py", line 49, in refresh_creds
+    cls.creds.refresh(Request())
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/google/oauth2/credentials.py", line 124, in refresh
+    _client.refresh_grant(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/google/oauth2/_client.py", line 237, in refresh_grant
+    response_data = _token_endpoint_request(request, token_uri, body)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/google/oauth2/_client.py", line 105, in _token_endpoint_request
+    response = request(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/google/auth/transport/requests.py", line 124, in __call__
+    six.raise_from(new_exc, caught_exc)
+  File "<string>", line 3, in raise_from
+google.auth.exceptions.TransportError: [Errno 12] Cannot allocate memory
+sql.py:04-24 18:56:46:<module>:24 -- Driver%3D%7BODBC+Driver+17+for+SQL+Server%7D%3BServer%3Dtcp%3Apydoc-db.database.windows.net%2C1433%3BDatabase%3Dpydoc-db%3BUid%3Dhenry2833%3BPwd%3D%7BInfoip32%7D%3BEncrypt%3Dyes%3BTrustServerCertificate%3Dno%3BConnection+Timeout%3D30%3B
+base.py:04-24 18:56:51:_execute_context:1205 -- SELECT CAST(SERVERPROPERTY('ProductVersion') AS VARCHAR)
+base.py:04-24 18:56:51:_execute_context:1207 -- ()
+result.p:04-24 18:56:51:_init_metadata:809 -- Col ('',)
+result.p:04-24 18:56:51:process_rows:1249 -- Row ('12.0.2000.8',)
+base.py:04-24 18:56:51:_execute_context:1205 -- SELECT schema_name()
+base.py:04-24 18:56:51:_execute_context:1207 -- ()
+result.p:04-24 18:56:51:_init_metadata:809 -- Col ('',)
+result.p:04-24 18:56:51:process_rows:1249 -- Row ('dbo',)
+base.py:04-24 18:56:52:_cursor_execute:1311 -- SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+base.py:04-24 18:56:52:_cursor_execute:1312 -- ()
+base.py:04-24 18:56:53:_cursor_execute:1311 -- SELECT CAST('test unicode returns' AS NVARCHAR(60)) AS anon_1
+base.py:04-24 18:56:53:_cursor_execute:1312 -- ()
+base.py:04-24 18:56:54:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 18:56:54:_execute_context:1207 -- ('files', 'dbo')
+result.p:04-24 18:56:54:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 18:56:54:process_rows:1249 -- Row ('dbo', 'files', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:04-24 18:56:55:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 18:56:55:_execute_context:1207 -- ('owner', 'dbo')
+result.p:04-24 18:56:56:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 18:56:56:process_rows:1249 -- Row ('dbo', 'owner', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:04-24 18:56:57:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 18:56:57:_execute_context:1207 -- ('dates', 'dbo')
+result.p:04-24 18:56:57:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 18:56:57:process_rows:1249 -- Row ('dbo', 'dates', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:04-24 18:56:58:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 18:56:58:_execute_context:1207 -- ('closure', 'dbo')
+result.p:04-24 18:56:58:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 18:56:58:process_rows:1249 -- Row ('dbo', 'closure', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:04-24 18:56:59:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 18:56:59:_execute_context:1207 -- ('filename', 'dbo')
+result.p:04-24 18:57:00:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 18:57:00:process_rows:1249 -- Row ('dbo', 'filename', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:04-24 18:57:00:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 18:57:00:_execute_context:1207 -- ('tasks', 'dbo')
+result.p:04-24 18:57:01:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 18:57:01:process_rows:1249 -- Row ('dbo', 'tasks', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+dsds.py:04-24 18:57:02:start:19 -- start
+dsds.py:04-24 18:57:02:start:24 -- (2516582400, 3145728000)
+get_file:04-24 18:57:02:loadFiles:265 -- Start loadFiles, 527e4afc-4598-400f-8536-afa5324f0ba4 root
+requests:04-24 18:57:02:__call__:117 -- Making request: POST https://oauth2.googleapis.com/token
+connecti:04-24 18:57:02:_new_conn:817 -- Starting new HTTPS connection (1): oauth2.googleapis.com
+connecti:04-24 18:57:02:_make_request:393 -- https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+selector:04-24 18:57:02:__init__:59 -- Using selector: EpollSelector
+test_uti:04-24 18:57:02:print_size:82 -- ---------------Memory usage: 99584 (kb)---------------0 mins since start
+test_uti:04-24 18:57:02:print_size:88 -- /usr/lib/python3.8/tracemalloc.py:397: size=512 B (+512 B), count=3 (+3), average=171 B
+test_uti:04-24 18:57:02:print_size:88 -- /usr/lib/python3.8/tracemalloc.py:534: size=472 B (+472 B), count=2 (+2), average=236 B
+test_uti:04-24 18:57:02:print_size:88 -- /home/henry/pydocs/processing/datutils/test_utils.py:86: size=424 B (+424 B), count=1 (+1), average=424 B
+test_uti:04-24 18:57:02:print_size:88 -- /home/henry/pydocs/processing/datutils/test_utils.py:79: size=0 B (-424 B), count=0 (-1)
+test_uti:04-24 18:57:02:print_size:88 -- /home/henry/pydocs/processing/datutils/test_utils.py:80: size=400 B (+400 B), count=1 (+1), average=400 B
+test_uti:04-24 18:57:02:print_size:88 -- /usr/lib/python3.8/logging/__init__.py:330: size=48 B (+48 B), count=2 (+2), average=24 B
+test_uti:04-24 18:57:02:print_size:88 -- /usr/lib/python3.8/tracemalloc.py:291: size=40 B (+40 B), count=1 (+1), average=40 B
+test_uti:04-24 18:57:02:print_size:88 -- /usr/lib/python3.8/logging/__init__.py:329: size=24 B (+24 B), count=1 (+1), average=24 B
+test_uti:04-24 18:57:02:print_size:88 -- /usr/lib/python3.8/logging/__init__.py:289: size=24 B (+24 B), count=1 (+1), average=24 B
+test_uti:04-24 18:57:02:print_size:88 -- /home/henry/pydocs/processing/datutils/test_utils.py:83: size=24 B (+24 B), count=1 (+1), average=24 B
+test_uti:04-24 18:57:02:print_size:90 -- 
+
+------------------------------
+
+
+test_uti:04-24 18:57:02:print_size:93 -- /usr/lib/python3.8/tracemalloc.py:397: size=512 B, count=3, average=171 B
+test_uti:04-24 18:57:02:print_size:93 -- /usr/lib/python3.8/tracemalloc.py:534: size=472 B, count=2, average=236 B
+test_uti:04-24 18:57:02:print_size:93 -- /home/henry/pydocs/processing/datutils/test_utils.py:86: size=424 B, count=1, average=424 B
+test_uti:04-24 18:57:02:print_size:93 -- /home/henry/pydocs/processing/datutils/test_utils.py:80: size=400 B, count=1, average=400 B
+test_uti:04-24 18:57:02:print_size:93 -- /usr/lib/python3.8/logging/__init__.py:330: size=48 B, count=2, average=24 B
+test_uti:04-24 18:57:02:print_size:93 -- /usr/lib/python3.8/tracemalloc.py:291: size=40 B, count=1, average=40 B
+test_uti:04-24 18:57:02:print_size:93 -- /usr/lib/python3.8/logging/__init__.py:329: size=24 B, count=1, average=24 B
+test_uti:04-24 18:57:02:print_size:93 -- /usr/lib/python3.8/logging/__init__.py:289: size=24 B, count=1, average=24 B
+test_uti:04-24 18:57:02:print_size:93 -- /home/henry/pydocs/processing/datutils/test_utils.py:83: size=24 B, count=1, average=24 B
+test_uti:04-24 18:57:02:print_size:100 -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/0 at 2020-04-24 18:57:02.261542
+dumped: 0
+get_file:04-24 18:57:02:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:02:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:02:getIdsRecursive:53 -- getIdsRecursive looping
+test_uti:04-24 18:57:02:tryGetQueue:198 -- getIdswaiting 1 10
+test_uti:04-24 18:57:02:tryGetQueue:198 -- getIdswaiting 1 10
+get_file:04-24 18:57:02:getRevision:163 -- getRevision looping
+test_uti:04-24 18:57:02:tryGetQueue:198 -- getRevisionwaiting 1 10
+get_file:04-24 18:57:03:getRevision:163 -- getRevision looping
+test_uti:04-24 18:57:03:tryGetQueue:198 -- getRevisionwaiting 1 10
+get_file:04-24 18:57:03:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:04:getRevision:163 -- getRevision looping
+get_file:04-24 18:57:05:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:07:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:08:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:08:getIdsRecursive:53 -- getIdsRecursive looping
+gdoc.py:04-24 18:57:08:async_init:24 -- async init called
+get_file:04-24 18:57:08:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:09:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:09:getIdsRecursive:53 -- getIdsRecursive looping
+gdoc.py:04-24 18:57:09:get_last_revision:54 -- last revision id 1784
+gdoc.py:04-24 18:57:09:async_init:31 -- after await 1784
+get_file:04-24 18:57:09:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:09:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:09:getRevision:186 -- google doc
+get_file:04-24 18:57:09:getRevision:163 -- getRevision looping
+get_file:04-24 18:57:09:getRevision:179 -- not google doc
+get_file:04-24 18:57:10:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:10:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:10:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:10:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:10:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:11:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:11:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:11:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:12:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:12:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:12:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:12:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:12:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:12:getRevision:163 -- getRevision looping
+gdoc.py:04-24 18:57:12:async_init:24 -- async init called
+get_file:04-24 18:57:13:getIdsRecursive:53 -- getIdsRecursive looping
+gdoc.py:04-24 18:57:13:get_last_revision:44 -- code not 200
+get_file:04-24 18:57:13:getIdsRecursive:53 -- getIdsRecursive looping
+gdoc.py:04-24 18:57:13:async_init:24 -- async init called
+get_file:04-24 18:57:13:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:13:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:13:getRevision:163 -- getRevision looping
+gdoc.py:04-24 18:57:14:get_last_revision:54 -- last revision id 14
+gdoc.py:04-24 18:57:14:async_init:31 -- after await 14
+get_file:04-24 18:57:14:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:14:getRevision:179 -- not google doc
+get_file:04-24 18:57:14:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:14:getRevision:186 -- google doc
+get_file:04-24 18:57:14:getRevision:163 -- getRevision looping
+get_file:04-24 18:57:14:getRevision:179 -- not google doc
+get_file:04-24 18:57:14:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:14:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:15:getRevision:163 -- getRevision looping
+get_file:04-24 18:57:15:getRevision:179 -- not google doc
+get_file:04-24 18:57:15:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:15:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:15:getRevision:163 -- getRevision looping
+get_file:04-24 18:57:15:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:15:getRevision:163 -- getRevision looping
+get_file:04-24 18:57:15:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:15:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:15:getRevision:163 -- getRevision looping
+get_file:04-24 18:57:16:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:16:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:16:getRevision:163 -- getRevision looping
+get_file:04-24 18:57:16:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:16:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:16:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:16:getRevision:163 -- getRevision looping
+get_file:04-24 18:57:16:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:16:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:16:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:17:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:17:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:17:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:17:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:17:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:18:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:18:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:18:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:18:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:18:getRevision:179 -- not google doc
+get_file:04-24 18:57:18:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:19:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:19:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:19:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:19:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:19:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:19:getIdsRecursive:53 -- getIdsRecursive looping
+gdoc.py:04-24 18:57:20:async_init:24 -- async init called
+gdoc.py:04-24 18:57:20:async_init:24 -- async init called
+gdoc.py:04-24 18:57:20:async_init:24 -- async init called
+get_file:04-24 18:57:20:getIdsRecursive:53 -- getIdsRecursive looping
+gdoc.py:04-24 18:57:20:get_last_revision:44 -- code not 200
+gdoc.py:04-24 18:57:20:async_init:31 -- after await 1
+get_file:04-24 18:57:20:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:20:getRevision:163 -- getRevision looping
+gdoc.py:04-24 18:57:20:download_details:79 -- revisions failed
+gdoc.py:04-24 18:57:20:download_details:80 -- Cannot get revisions.json
+Traceback (most recent call last):
+  File "/home/henry/pydocs/processing/gdoc.py", line 66, in download_details
+    assert response.status == 200
+AssertionError
+get_file:04-24 18:57:20:getRevision:186 -- google doc
+get_file:04-24 18:57:20:getRevision:163 -- getRevision looping
+get_file:04-24 18:57:20:getRevision:163 -- getRevision looping
+get_file:04-24 18:57:20:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:20:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:20:getIdsRecursive:53 -- getIdsRecursive looping
+gdoc.py:04-24 18:57:21:get_last_revision:54 -- last revision id 546
+gdoc.py:04-24 18:57:21:async_init:31 -- after await 546
+gdoc.py:04-24 18:57:21:get_last_revision:54 -- last revision id 647
+gdoc.py:04-24 18:57:21:async_init:31 -- after await 647
+get_file:04-24 18:57:21:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:21:getRevision:186 -- google doc
+get_file:04-24 18:57:21:getRevision:163 -- getRevision looping
+get_file:04-24 18:57:21:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:21:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:21:getRevision:186 -- google doc
+get_file:04-24 18:57:21:getRevision:163 -- getRevision looping
+get_file:04-24 18:57:22:getIdsRecursive:53 -- getIdsRecursive looping
+gdoc.py:04-24 18:57:22:get_last_revision:54 -- last revision id 2502
+gdoc.py:04-24 18:57:22:async_init:31 -- after await 2502
+get_file:04-24 18:57:22:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:22:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:22:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:22:getRevision:186 -- google doc
+get_file:04-24 18:57:22:getRevision:163 -- getRevision looping
+get_file:04-24 18:57:22:getRevision:163 -- getRevision looping
+get_file:04-24 18:57:22:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:23:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:23:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:23:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:23:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:23:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:24:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:24:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:24:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:24:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:24:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:25:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:25:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:25:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:25:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:25:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:25:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:26:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:26:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:26:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:27:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:27:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:27:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:27:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:27:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:27:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:28:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:28:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:28:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:29:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:29:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:29:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:29:getRevision:163 -- getRevision looping
+get_file:04-24 18:57:29:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:29:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:29:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:30:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:30:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:30:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:31:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:31:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:31:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:31:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:31:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:32:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:32:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:32:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:32:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:32:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:33:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:33:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:33:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:34:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:34:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:34:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:34:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:34:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:34:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:35:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:35:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:35:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:35:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:35:getIdsRecursive:53 -- getIdsRecursive looping
+gdoc.py:04-24 18:57:35:async_init:24 -- async init called
+get_file:04-24 18:57:35:getRevision:179 -- not google doc
+get_file:04-24 18:57:35:getRevision:179 -- not google doc
+get_file:04-24 18:57:36:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:36:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:36:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:36:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:37:getRevision:163 -- getRevision looping
+get_file:04-24 18:57:37:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:37:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:37:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:37:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:37:getRevision:163 -- getRevision looping
+get_file:04-24 18:57:37:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:37:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:37:getIdsRecursive:53 -- getIdsRecursive looping
+gdoc.py:04-24 18:57:38:get_last_revision:54 -- last revision id 3059
+gdoc.py:04-24 18:57:38:async_init:31 -- after await 3059
+get_file:04-24 18:57:38:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:38:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:38:getRevision:186 -- google doc
+get_file:04-24 18:57:38:getRevision:163 -- getRevision looping
+get_file:04-24 18:57:38:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:38:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:39:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:39:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:39:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:41:getRevision:179 -- not google doc
+get_file:04-24 18:57:41:getRevision:179 -- not google doc
+get_file:04-24 18:57:41:getRevision:179 -- not google doc
+get_file:04-24 18:57:41:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:41:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:41:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:42:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:42:getIdsRecursive:53 -- getIdsRecursive looping
+test_uti:04-24 18:57:42:print_size:82 -- ---------------Memory usage: 115592 (kb)---------------0 mins since start
+test_uti:04-24 18:57:42:print_size:88 -- /home/henry/pydocs/processing/gdoc.py:75: size=334 KiB (+334 KiB), count=8553 (+8553), average=40 B
+test_uti:04-24 18:57:42:print_size:88 -- /home/henry/pydocs/processing/datutils/test_utils.py:128: size=193 KiB (+193 KiB), count=2448 (+2448), average=81 B
+test_uti:04-24 18:57:42:print_size:88 -- /home/henry/pydocs/processing/get_files.py:108: size=177 KiB (+177 KiB), count=3992 (+3992), average=45 B
+test_uti:04-24 18:57:42:print_size:88 -- /home/henry/pydocs/processing/get_files.py:100: size=81.0 KiB (+81.0 KiB), count=1046 (+1046), average=79 B
+test_uti:04-24 18:57:42:print_size:88 -- /home/henry/pydocs/processing/gdoc.py:73: size=67.1 KiB (+67.1 KiB), count=12 (+12), average=5729 B
+test_uti:04-24 18:57:42:print_size:88 -- /usr/lib/python3.8/ssl.py:906: size=58.5 KiB (+58.5 KiB), count=960 (+960), average=62 B
+test_uti:04-24 18:57:42:print_size:88 -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/iso8601/iso8601.py:203: size=52.0 KiB (+52.0 KiB), count=1110 (+1110), average=48 B
+test_uti:04-24 18:57:42:print_size:88 -- /home/henry/pydocs/processing/get_files.py:103: size=36.0 KiB (+36.0 KiB), count=1 (+1), average=36.0 KiB
+test_uti:04-24 18:57:42:print_size:88 -- /usr/lib/python3.8/abc.py:102: size=28.4 KiB (+28.4 KiB), count=377 (+377), average=77 B
+test_uti:04-24 18:57:42:print_size:88 -- /home/henry/pydocs/processing/gdoc.py:69: size=17.6 KiB (+17.6 KiB), count=181 (+181), average=100 B
+test_uti:04-24 18:57:42:print_size:90 -- 
+
+------------------------------
+
+
+test_uti:04-24 18:57:42:print_size:93 -- /home/henry/pydocs/processing/gdoc.py:75: size=334 KiB, count=8553, average=40 B
+test_uti:04-24 18:57:42:print_size:93 -- /home/henry/pydocs/processing/datutils/test_utils.py:128: size=193 KiB, count=2448, average=81 B
+test_uti:04-24 18:57:42:print_size:93 -- /home/henry/pydocs/processing/get_files.py:108: size=177 KiB, count=3992, average=45 B
+test_uti:04-24 18:57:42:print_size:93 -- /home/henry/pydocs/processing/get_files.py:100: size=81.0 KiB, count=1046, average=79 B
+test_uti:04-24 18:57:42:print_size:93 -- /home/henry/pydocs/processing/gdoc.py:73: size=67.1 KiB, count=12, average=5729 B
+test_uti:04-24 18:57:42:print_size:93 -- /usr/lib/python3.8/ssl.py:906: size=58.5 KiB, count=960, average=62 B
+test_uti:04-24 18:57:42:print_size:93 -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/iso8601/iso8601.py:203: size=52.0 KiB, count=1110, average=48 B
+test_uti:04-24 18:57:42:print_size:93 -- /home/henry/pydocs/processing/get_files.py:103: size=36.0 KiB, count=1, average=36.0 KiB
+test_uti:04-24 18:57:42:print_size:93 -- /usr/lib/python3.8/abc.py:102: size=28.4 KiB, count=377, average=77 B
+test_uti:04-24 18:57:42:print_size:93 -- /home/henry/pydocs/processing/gdoc.py:69: size=17.6 KiB, count=181, average=100 B
+test_uti:04-24 18:57:42:print_size:100 -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+14/1009 at 2020-04-24 18:57:42.388557
+dumped: 0
+test_uti:04-24 18:57:42:print_size:111 -- dumped pathed files at /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/1.pathed, length 14
+get_file:04-24 18:57:42:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:42:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:42:getRevision:163 -- getRevision looping
+get_file:04-24 18:57:42:getRevision:163 -- getRevision looping
+get_file:04-24 18:57:42:getRevision:163 -- getRevision looping
+get_file:04-24 18:57:42:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:43:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:43:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:43:getRevision:179 -- not google doc
+gdoc.py:04-24 18:57:43:async_init:24 -- async init called
+get_file:04-24 18:57:43:getRevision:179 -- not google doc
+get_file:04-24 18:57:43:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:43:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:43:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:43:getIdsRecursive:53 -- getIdsRecursive looping
+gdoc.py:04-24 18:57:43:get_last_revision:54 -- last revision id 626
+gdoc.py:04-24 18:57:43:async_init:31 -- after await 626
+get_file:04-24 18:57:44:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:44:getRevision:163 -- getRevision looping
+get_file:04-24 18:57:44:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:44:getRevision:186 -- google doc
+get_file:04-24 18:57:44:getRevision:163 -- getRevision looping
+get_file:04-24 18:57:44:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:45:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:45:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:45:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:46:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:46:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:46:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:46:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:47:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:47:getIdsRecursive:53 -- getIdsRecursive looping
+gdoc.py:04-24 18:57:47:async_init:24 -- async init called
+gdoc.py:04-24 18:57:47:async_init:24 -- async init called
+get_file:04-24 18:57:47:getRevision:179 -- not google doc
+get_file:04-24 18:57:47:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:47:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:47:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:47:getIdsRecursive:53 -- getIdsRecursive looping
+gdoc.py:04-24 18:57:48:get_last_revision:44 -- code not 200
+gdoc.py:04-24 18:57:48:get_last_revision:44 -- code not 200
+get_file:04-24 18:57:48:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:48:getRevision:163 -- getRevision looping
+get_file:04-24 18:57:48:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:48:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:48:getIdsRecursive:53 -- getIdsRecursive looping
+gdoc.py:04-24 18:57:48:async_init:24 -- async init called
+gdoc.py:04-24 18:57:48:async_init:24 -- async init called
+gdoc.py:04-24 18:57:48:async_init:24 -- async init called
+get_file:04-24 18:57:48:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:48:getIdsRecursive:53 -- getIdsRecursive looping
+gdoc.py:04-24 18:57:49:get_last_revision:44 -- code not 200
+get_file:04-24 18:57:49:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:49:getRevision:163 -- getRevision looping
+get_file:04-24 18:57:49:getIdsRecursive:53 -- getIdsRecursive looping
+gdoc.py:04-24 18:57:49:get_last_revision:54 -- last revision id 1
+gdoc.py:04-24 18:57:49:async_init:31 -- after await 1
+gdoc.py:04-24 18:57:49:get_last_revision:54 -- last revision id 3
+gdoc.py:04-24 18:57:49:async_init:31 -- after await 3
+get_file:04-24 18:57:49:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:49:getRevision:186 -- google doc
+get_file:04-24 18:57:49:getRevision:163 -- getRevision looping
+get_file:04-24 18:57:49:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:49:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:49:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:50:getRevision:186 -- google doc
+get_file:04-24 18:57:50:getRevision:163 -- getRevision looping
+get_file:04-24 18:57:50:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:50:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:50:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:50:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:50:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:50:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:50:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:51:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:51:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:51:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:51:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:52:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:52:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:52:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:52:getIdsRecursive:53 -- getIdsRecursive looping
+get_file:04-24 18:57:52:getIdsRecursive:53 -- getIdsRecursive looping
+test_uti:04-24 18:57:52:tryGetQueue:198 -- getIdswaiting 1 10
+test_uti:04-24 18:57:52:tryGetQueue:198 -- getIdswaiting 1 10
+gdoc.py:04-24 18:57:54:async_init:24 -- async init called
+get_file:04-24 18:57:54:getRevision:179 -- not google doc
+get_file:04-24 18:57:54:getRevision:179 -- not google doc
+get_file:04-24 18:57:54:getIdsRecursive:53 -- getIdsRecursive looping
+test_uti:04-24 18:57:54:tryGetQueue:198 -- getIdswaiting 1 10
+gdoc.py:04-24 18:57:54:get_last_revision:44 -- code not 200
+gdoc.py:04-24 18:57:55:get_last_revision:44 -- code not 200
+gdoc.py:04-24 18:57:55:async_init:31 -- after await 1
+gdoc.py:04-24 18:57:55:get_last_revision:44 -- code not 200
+gdoc.py:04-24 18:57:55:async_init:31 -- after await 1
+get_file:04-24 18:57:55:getRevision:163 -- getRevision looping
+gdoc.py:04-24 18:57:56:download_details:79 -- revisions failed
+gdoc.py:04-24 18:57:56:download_details:80 -- Cannot get revisions.json
+Traceback (most recent call last):
+  File "/home/henry/pydocs/processing/gdoc.py", line 66, in download_details
+    assert response.status == 200
+AssertionError
+get_file:04-24 18:57:56:getRevision:186 -- google doc
+get_file:04-24 18:57:56:getRevision:163 -- getRevision looping
+gdoc.py:04-24 18:57:56:download_details:79 -- revisions failed
+gdoc.py:04-24 18:57:56:download_details:80 -- Cannot get revisions.json
+Traceback (most recent call last):
+  File "/home/henry/pydocs/processing/gdoc.py", line 66, in download_details
+    assert response.status == 200
+AssertionError
+get_file:04-24 18:57:56:getRevision:186 -- google doc
+get_file:04-24 18:57:56:getRevision:163 -- getRevision looping
+get_file:04-24 18:57:56:getRevision:163 -- getRevision looping
+gdoc.py:04-24 18:57:56:get_last_revision:44 -- code not 200
+gdoc.py:04-24 18:57:56:async_init:31 -- after await 1
+gdoc.py:04-24 18:57:57:download_details:79 -- revisions failed
+gdoc.py:04-24 18:57:57:download_details:80 -- Cannot get revisions.json
+Traceback (most recent call last):
+  File "/home/henry/pydocs/processing/gdoc.py", line 66, in download_details
+    assert response.status == 200
+AssertionError
+get_file:04-24 18:57:57:getRevision:186 -- google doc
+get_file:04-24 18:57:57:getRevision:163 -- getRevision looping
+gdoc.py:04-24 18:58:01:get_last_revision:44 -- code not 200
+gdoc.py:04-24 18:58:01:async_init:31 -- after await 1
+gdoc.py:04-24 18:58:02:download_details:79 -- revisions failed
+gdoc.py:04-24 18:58:02:download_details:80 -- Cannot get revisions.json
+Traceback (most recent call last):
+  File "/home/henry/pydocs/processing/gdoc.py", line 66, in download_details
+    assert response.status == 200
+AssertionError
+get_file:04-24 18:58:02:getRevision:186 -- google doc
+get_file:04-24 18:58:02:getRevision:163 -- getRevision looping
+test_uti:04-24 18:58:06:tryGetQueue:198 -- getIdswaiting 2 10
+test_uti:04-24 18:58:08:tryGetQueue:198 -- getIdswaiting 2 10
+test_uti:04-24 18:58:08:tryGetQueue:198 -- getIdswaiting 2 10
+gdoc.py:04-24 18:58:09:async_init:24 -- async init called
+gdoc.py:04-24 18:58:09:async_init:24 -- async init called
+gdoc.py:04-24 18:58:09:async_init:24 -- async init called
+gdoc.py:04-24 18:58:14:get_last_revision:54 -- last revision id 908
+gdoc.py:04-24 18:58:14:async_init:31 -- after await 908
+gdoc.py:04-24 18:58:14:get_last_revision:54 -- last revision id 2586
+gdoc.py:04-24 18:58:14:async_init:31 -- after await 2586
+gdoc.py:04-24 18:58:14:get_last_revision:54 -- last revision id 9391
+gdoc.py:04-24 18:58:14:async_init:31 -- after await 9391
+get_file:04-24 18:58:14:getRevision:186 -- google doc
+get_file:04-24 18:58:14:getRevision:163 -- getRevision looping
+get_file:04-24 18:58:14:getRevision:186 -- google doc
+get_file:04-24 18:58:14:getRevision:163 -- getRevision looping
+get_file:04-24 18:58:15:getRevision:186 -- google doc
+get_file:04-24 18:58:15:getRevision:163 -- getRevision looping
+gdoc.py:04-24 18:58:15:async_init:24 -- async init called
+gdoc.py:04-24 18:58:15:async_init:24 -- async init called
+get_file:04-24 18:58:15:getRevision:179 -- not google doc
+test_uti:04-24 18:58:15:tryGetQueue:198 -- getIdswaiting 3 10
+get_file:04-24 18:58:20:getRevision:179 -- not google doc
+get_file:04-24 18:58:20:getRevision:179 -- not google doc
+get_file:04-24 18:58:20:getRevision:179 -- not google doc
+gdoc.py:04-24 18:58:20:get_last_revision:54 -- last revision id 1592
+gdoc.py:04-24 18:58:20:async_init:31 -- after await 1592
+get_file:04-24 18:58:20:getRevision:163 -- getRevision looping
+gdoc.py:04-24 18:58:20:get_last_revision:54 -- last revision id 1948
+gdoc.py:04-24 18:58:20:async_init:31 -- after await 1948
+get_file:04-24 18:58:20:getRevision:186 -- google doc
+get_file:04-24 18:58:20:getRevision:163 -- getRevision looping
+get_file:04-24 18:58:20:getRevision:186 -- google doc
+get_file:04-24 18:58:20:getRevision:163 -- getRevision looping
+test_uti:04-24 18:58:20:tryGetQueue:198 -- getIdswaiting 3 10
+get_file:04-24 18:58:21:getRevision:163 -- getRevision looping
+get_file:04-24 18:58:21:getRevision:163 -- getRevision looping
+get_file:04-24 18:58:21:getRevision:163 -- getRevision looping
+test_uti:04-24 18:58:22:print_size:82 -- ---------------Memory usage: 182160 (kb)---------------1 mins since start
+test_uti:04-24 18:58:22:print_size:88 -- /home/henry/pydocs/processing/gdoc.py:75: size=666 KiB (+332 KiB), count=17056 (+8503), average=40 B
+test_uti:04-24 18:58:22:print_size:88 -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/iso8601/iso8601.py:203: size=164 KiB (+112 KiB), count=3504 (+2394), average=48 B
+test_uti:04-24 18:58:22:print_size:88 -- /home/henry/pydocs/processing/gdoc.py:73: size=134 KiB (+66.5 KiB), count=16 (+4), average=8556 B
+test_uti:04-24 18:58:22:print_size:88 -- /home/henry/pydocs/processing/datutils/test_utils.py:128: size=223 KiB (+29.5 KiB), count=2823 (+375), average=81 B
+test_uti:04-24 18:58:22:print_size:88 -- /usr/lib/python3.8/ssl.py:906: size=82.5 KiB (+24.0 KiB), count=1369 (+409), average=62 B
+test_uti:04-24 18:58:22:print_size:88 -- /home/henry/pydocs/processing/get_files.py:108: size=201 KiB (+23.5 KiB), count=4452 (+460), average=46 B
+test_uti:04-24 18:58:22:print_size:88 -- /home/henry/pydocs/processing/get_files.py:155: size=29.8 KiB (+20.3 KiB), count=13 (+5), average=2343 B
+test_uti:04-24 18:58:22:print_size:88 -- <string>:1: size=2296 B (-12.4 KiB), count=28 (-160), average=82 B
+test_uti:04-24 18:58:22:print_size:88 -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:833: size=0 B (-10.8 KiB), count=0 (-11)
+test_uti:04-24 18:58:22:print_size:88 -- /home/henry/pydocs/processing/get_files.py:148: size=12.7 KiB (+10000 B), count=106 (+88), average=123 B
+test_uti:04-24 18:58:22:print_size:90 -- 
+
+------------------------------
+
+
+test_uti:04-24 18:58:22:print_size:93 -- /home/henry/pydocs/processing/gdoc.py:75: size=666 KiB, count=17056, average=40 B
+test_uti:04-24 18:58:22:print_size:93 -- /home/henry/pydocs/processing/datutils/test_utils.py:128: size=223 KiB, count=2823, average=81 B
+test_uti:04-24 18:58:22:print_size:93 -- /home/henry/pydocs/processing/get_files.py:108: size=201 KiB, count=4452, average=46 B
+test_uti:04-24 18:58:22:print_size:93 -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/iso8601/iso8601.py:203: size=164 KiB, count=3504, average=48 B
+test_uti:04-24 18:58:22:print_size:93 -- /home/henry/pydocs/processing/gdoc.py:73: size=134 KiB, count=16, average=8556 B
+test_uti:04-24 18:58:22:print_size:93 -- /home/henry/pydocs/processing/get_files.py:100: size=84.2 KiB, count=1092, average=79 B
+test_uti:04-24 18:58:22:print_size:93 -- /usr/lib/python3.8/ssl.py:906: size=82.5 KiB, count=1369, average=62 B
+test_uti:04-24 18:58:22:print_size:93 -- /home/henry/pydocs/processing/get_files.py:103: size=36.0 KiB, count=1, average=36.0 KiB
+test_uti:04-24 18:58:22:print_size:93 -- /home/henry/pydocs/processing/get_files.py:155: size=29.8 KiB, count=13, average=2343 B
+test_uti:04-24 18:58:22:print_size:93 -- /usr/lib/python3.8/abc.py:102: size=28.2 KiB, count=374, average=77 B
+test_uti:04-24 18:58:22:print_size:100 -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+37/1146 at 2020-04-24 18:58:22.621570
+dumped: 1
+test_uti:04-24 18:58:22:print_size:111 -- dumped pathed files at /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/2.pathed, length 23
+test_uti:04-24 18:58:22:tryGetQueue:198 -- getIdswaiting 3 10
+gdoc.py:04-24 18:58:25:async_init:24 -- async init called
+gdoc.py:04-24 18:58:25:async_init:24 -- async init called
+gdoc.py:04-24 18:58:25:async_init:24 -- async init called
+gdoc.py:04-24 18:58:26:async_init:24 -- async init called
+get_file:04-24 18:58:26:getRevision:179 -- not google doc
+get_file:04-24 18:58:26:getRevision:179 -- not google doc
+gdoc.py:04-24 18:58:26:get_last_revision:54 -- last revision id 36
+gdoc.py:04-24 18:58:26:async_init:31 -- after await 36
+gdoc.py:04-24 18:58:26:get_last_revision:54 -- last revision id 2
+gdoc.py:04-24 18:58:26:async_init:31 -- after await 2
+gdoc.py:04-24 18:58:26:get_last_revision:54 -- last revision id 6
+gdoc.py:04-24 18:58:26:async_init:31 -- after await 6
+get_file:04-24 18:58:26:getRevision:186 -- google doc
+get_file:04-24 18:58:26:getRevision:163 -- getRevision looping
+get_file:04-24 18:58:26:getRevision:186 -- google doc
+get_file:04-24 18:58:26:getRevision:163 -- getRevision looping
+get_file:04-24 18:58:26:getRevision:186 -- google doc
+get_file:04-24 18:58:26:getRevision:163 -- getRevision looping
+test_uti:04-24 18:58:28:tryGetQueue:198 -- getIdswaiting 4 10
+get_file:04-24 18:58:29:getRevision:163 -- getRevision looping
+gdoc.py:04-24 18:58:29:get_last_revision:54 -- last revision id 929
+gdoc.py:04-24 18:58:29:async_init:31 -- after await 929
+get_file:04-24 18:58:29:getRevision:186 -- google doc
+get_file:04-24 18:58:29:getRevision:163 -- getRevision looping
+get_file:04-24 18:58:29:getRevision:163 -- getRevision looping
+test_uti:04-24 18:58:30:tryGetQueue:198 -- getIdswaiting 4 10
+gdoc.py:04-24 18:58:30:async_init:24 -- async init called
+get_file:04-24 18:58:30:getRevision:179 -- not google doc
+gdoc.py:04-24 18:58:30:async_init:24 -- async init called
+gdoc.py:04-24 18:58:31:async_init:24 -- async init called
+gdoc.py:04-24 18:58:31:async_init:24 -- async init called
+gdoc.py:04-24 18:58:31:async_init:24 -- async init called
+test_uti:04-24 18:58:31:tryGetQueue:198 -- getIdswaiting 4 10
+get_file:04-24 18:58:31:getRevision:163 -- getRevision looping
+gdoc.py:04-24 18:58:32:get_last_revision:54 -- last revision id 919
+gdoc.py:04-24 18:58:32:async_init:31 -- after await 919
+gdoc.py:04-24 18:58:32:get_last_revision:54 -- last revision id 567
+gdoc.py:04-24 18:58:32:async_init:31 -- after await 567
+get_file:04-24 18:58:32:getRevision:186 -- google doc
+get_file:04-24 18:58:32:getRevision:163 -- getRevision looping
+gdoc.py:04-24 18:58:32:get_last_revision:54 -- last revision id 747
+gdoc.py:04-24 18:58:32:async_init:31 -- after await 747
+get_file:04-24 18:58:32:getRevision:186 -- google doc
+get_file:04-24 18:58:32:getRevision:163 -- getRevision looping
+gdoc.py:04-24 18:58:32:get_last_revision:54 -- last revision id 1580
+gdoc.py:04-24 18:58:32:async_init:31 -- after await 1580
+gdoc.py:04-24 18:58:32:get_last_revision:54 -- last revision id 2372
+gdoc.py:04-24 18:58:33:async_init:31 -- after await 2372
+get_file:04-24 18:58:33:getRevision:186 -- google doc
+get_file:04-24 18:58:33:getRevision:163 -- getRevision looping
+get_file:04-24 18:58:33:getRevision:186 -- google doc
+get_file:04-24 18:58:33:getRevision:163 -- getRevision looping
+get_file:04-24 18:58:33:getRevision:186 -- google doc
+get_file:04-24 18:58:33:getRevision:163 -- getRevision looping
+test_uti:04-24 18:58:39:tryGetQueue:198 -- getIdswaiting 5 10
+test_uti:04-24 18:58:43:tryGetQueue:198 -- getIdswaiting 5 10
+test_uti:04-24 18:58:45:tryGetQueue:198 -- getIdswaiting 5 10
+gdoc.py:04-24 18:58:46:async_init:24 -- async init called
+get_file:04-24 18:58:46:getRevision:179 -- not google doc
+gdoc.py:04-24 18:58:46:async_init:24 -- async init called
+gdoc.py:04-24 18:58:47:get_last_revision:54 -- last revision id 188
+gdoc.py:04-24 18:58:47:async_init:31 -- after await 188
+gdoc.py:04-24 18:58:47:get_last_revision:54 -- last revision id 1028
+gdoc.py:04-24 18:58:47:async_init:31 -- after await 1028
+test_uti:04-24 18:58:47:tryGetQueue:198 -- getIdswaiting 6 10
+get_file:04-24 18:58:48:getRevision:186 -- google doc
+get_file:04-24 18:58:48:getRevision:163 -- getRevision looping
+get_file:04-24 18:58:48:getRevision:163 -- getRevision looping
+get_file:04-24 18:58:48:getRevision:186 -- google doc
+get_file:04-24 18:58:48:getRevision:163 -- getRevision looping
+test_uti:04-24 18:58:49:tryGetQueue:198 -- getIdswaiting 6 10
+test_uti:04-24 18:58:50:tryGetQueue:198 -- getIdswaiting 6 10
+gdoc.py:04-24 18:58:51:async_init:24 -- async init called
+get_file:04-24 18:58:51:getRevision:179 -- not google doc
+gdoc.py:04-24 18:58:51:async_init:24 -- async init called
+gdoc.py:04-24 18:58:52:get_last_revision:44 -- code not 200
+gdoc.py:04-24 18:58:52:get_last_revision:44 -- code not 200
+get_file:04-24 18:58:53:getRevision:163 -- getRevision looping
+get_file:04-24 18:58:56:getRevision:179 -- not google doc
+gdoc.py:04-24 18:58:56:async_init:24 -- async init called
+get_file:04-24 18:58:56:getRevision:179 -- not google doc
+test_uti:04-24 18:58:57:tryGetQueue:198 -- getIdswaiting 7 10
+gdoc.py:04-24 18:58:57:get_last_revision:54 -- last revision id 551
+gdoc.py:04-24 18:58:57:async_init:31 -- after await 551
+get_file:04-24 18:58:57:getRevision:163 -- getRevision looping
+get_file:04-24 18:58:58:getRevision:186 -- google doc
+get_file:04-24 18:58:58:getRevision:163 -- getRevision looping
+get_file:04-24 18:58:58:getRevision:163 -- getRevision looping
+gdoc.py:04-24 18:59:00:get_last_revision:44 -- code not 200
+gdoc.py:04-24 18:59:00:async_init:31 -- after await 1
+gdoc.py:04-24 18:59:00:get_last_revision:44 -- code not 200
+gdoc.py:04-24 18:59:00:async_init:31 -- after await 1
+gdoc.py:04-24 18:59:00:download_details:79 -- revisions failed
+gdoc.py:04-24 18:59:00:download_details:80 -- Cannot get revisions.json
+Traceback (most recent call last):
+  File "/home/henry/pydocs/processing/gdoc.py", line 66, in download_details
+    assert response.status == 200
+AssertionError
+get_file:04-24 18:59:00:getRevision:186 -- google doc
+get_file:04-24 18:59:00:getRevision:163 -- getRevision looping
+gdoc.py:04-24 18:59:00:download_details:79 -- revisions failed
+gdoc.py:04-24 18:59:00:download_details:80 -- Cannot get revisions.json
+Traceback (most recent call last):
+  File "/home/henry/pydocs/processing/gdoc.py", line 66, in download_details
+    assert response.status == 200
+AssertionError
+get_file:04-24 18:59:00:getRevision:186 -- google doc
+get_file:04-24 18:59:00:getRevision:163 -- getRevision looping
+gdoc.py:04-24 18:59:01:async_init:24 -- async init called
+get_file:04-24 18:59:01:getRevision:179 -- not google doc
+gdoc.py:04-24 18:59:01:async_init:24 -- async init called
+test_uti:04-24 18:59:01:tryGetQueue:198 -- getIdswaiting 7 10
+gdoc.py:04-24 18:59:02:get_last_revision:44 -- code not 200
+gdoc.py:04-24 18:59:02:get_last_revision:44 -- code not 200
+test_uti:04-24 18:59:02:print_size:82 -- ---------------Memory usage: 182160 (kb)---------------2 mins since start
+test_uti:04-24 18:59:02:print_size:88 -- /home/henry/pydocs/processing/gdoc.py:75: size=349 KiB (-318 KiB), count=8926 (-8130), average=40 B
+test_uti:04-24 18:59:02:print_size:88 -- /home/henry/pydocs/processing/datutils/test_utils.py:110: size=197 KiB (+197 KiB), count=3881 (+3880), average=52 B
+test_uti:04-24 18:59:02:print_size:88 -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/iso8601/iso8601.py:203: size=4048 B (-160 KiB), count=84 (-3420), average=48 B
+test_uti:04-24 18:59:02:print_size:88 -- /home/henry/pydocs/processing/gdoc.py:73: size=70.4 KiB (-63.2 KiB), count=25 (+9), average=2885 B
+test_uti:04-24 18:59:02:print_size:88 -- /usr/lib/python3.8/ssl.py:906: size=27.0 KiB (-55.5 KiB), count=438 (-931), average=63 B
+test_uti:04-24 18:59:02:print_size:88 -- /home/henry/pydocs/processing/get_files.py:155: size=880 B (-28.9 KiB), count=7 (-6), average=126 B
+test_uti:04-24 18:59:02:print_size:88 -- /home/henry/pydocs/processing/gdoc.py:69: size=24.0 KiB (+14.5 KiB), count=275 (+147), average=89 B
+test_uti:04-24 18:59:02:print_size:88 -- /home/henry/pydocs/processing/get_files.py:148: size=1976 B (-10.8 KiB), count=13 (-93), average=152 B
+test_uti:04-24 18:59:02:print_size:88 -- /usr/lib/python3.8/tracemalloc.py:532: size=3544 B (-5472 B), count=62 (-97), average=57 B
+test_uti:04-24 18:59:02:print_size:88 -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:714: size=7358 B (+4968 B), count=6 (+3), average=1226 B
+test_uti:04-24 18:59:02:print_size:90 -- 
+
+------------------------------
+
+
+test_uti:04-24 18:59:02:print_size:93 -- /home/henry/pydocs/processing/gdoc.py:75: size=349 KiB, count=8926, average=40 B
+test_uti:04-24 18:59:02:print_size:93 -- /home/henry/pydocs/processing/datutils/test_utils.py:128: size=223 KiB, count=2799, average=82 B
+test_uti:04-24 18:59:02:print_size:93 -- /home/henry/pydocs/processing/get_files.py:108: size=197 KiB, count=4366, average=46 B
+test_uti:04-24 18:59:02:print_size:93 -- /home/henry/pydocs/processing/datutils/test_utils.py:110: size=197 KiB, count=3881, average=52 B
+test_uti:04-24 18:59:02:print_size:93 -- /home/henry/pydocs/processing/get_files.py:100: size=84.2 KiB, count=1092, average=79 B
+test_uti:04-24 18:59:02:print_size:93 -- /home/henry/pydocs/processing/gdoc.py:73: size=70.4 KiB, count=25, average=2885 B
+test_uti:04-24 18:59:02:print_size:93 -- /home/henry/pydocs/processing/get_files.py:103: size=36.0 KiB, count=1, average=36.0 KiB
+test_uti:04-24 18:59:02:print_size:93 -- /usr/lib/python3.8/abc.py:102: size=28.2 KiB, count=374, average=77 B
+test_uti:04-24 18:59:02:print_size:93 -- /usr/lib/python3.8/ssl.py:906: size=27.0 KiB, count=438, average=63 B
+test_uti:04-24 18:59:02:print_size:93 -- /home/henry/pydocs/processing/gdoc.py:69: size=24.0 KiB, count=275, average=89 B
+test_uti:04-24 18:59:02:print_size:100 -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+57/1146 at 2020-04-24 18:59:02.880321
+dumped: 2
+test_uti:04-24 18:59:02:print_size:111 -- dumped pathed files at /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/3.pathed, length 20
+get_file:04-24 18:59:03:getRevision:163 -- getRevision looping
+gdoc.py:04-24 18:59:06:async_init:24 -- async init called
+get_file:04-24 18:59:06:getRevision:179 -- not google doc
+gdoc.py:04-24 18:59:06:async_init:24 -- async init called
+get_file:04-24 18:59:06:getRevision:179 -- not google doc
+get_file:04-24 18:59:07:getRevision:179 -- not google doc
+gdoc.py:04-24 18:59:07:get_last_revision:54 -- last revision id 48
+gdoc.py:04-24 18:59:07:async_init:31 -- after await 48
+gdoc.py:04-24 18:59:07:get_last_revision:54 -- last revision id 14
+gdoc.py:04-24 18:59:07:async_init:31 -- after await 14
+test_uti:04-24 18:59:07:tryGetQueue:198 -- getIdswaiting 7 10
+get_file:04-24 18:59:07:getRevision:186 -- google doc
+get_file:04-24 18:59:07:getRevision:163 -- getRevision looping
+gdoc.py:04-24 18:59:07:async_init:24 -- async init called
+get_file:04-24 18:59:08:getRevision:163 -- getRevision looping
+get_file:04-24 18:59:08:getRevision:186 -- google doc
+get_file:04-24 18:59:08:getRevision:163 -- getRevision looping
+get_file:04-24 18:59:08:getRevision:163 -- getRevision looping
+get_file:04-24 18:59:08:getRevision:163 -- getRevision looping
+gdoc.py:04-24 18:59:08:get_last_revision:54 -- last revision id 1
+gdoc.py:04-24 18:59:08:async_init:31 -- after await 1
+test_uti:04-24 18:59:09:tryGetQueue:198 -- getIdswaiting 8 10
+get_file:04-24 18:59:09:getRevision:186 -- google doc
+get_file:04-24 18:59:09:getRevision:163 -- getRevision looping
+gdoc.py:04-24 18:59:09:get_last_revision:44 -- code not 200
+gdoc.py:04-24 18:59:09:async_init:31 -- after await 1
+test_uti:04-24 18:59:09:tryGetQueue:198 -- getIdswaiting 8 10
+gdoc.py:04-24 18:59:09:get_last_revision:44 -- code not 200
+gdoc.py:04-24 18:59:09:async_init:31 -- after await 1
+gdoc.py:04-24 18:59:11:download_details:79 -- revisions failed
+gdoc.py:04-24 18:59:11:download_details:80 -- Cannot get revisions.json
+Traceback (most recent call last):
+  File "/home/henry/pydocs/processing/gdoc.py", line 66, in download_details
+    assert response.status == 200
+AssertionError
+get_file:04-24 18:59:11:getRevision:186 -- google doc
+get_file:04-24 18:59:11:getRevision:163 -- getRevision looping
+gdoc.py:04-24 18:59:11:download_details:79 -- revisions failed
+gdoc.py:04-24 18:59:11:download_details:80 -- Cannot get revisions.json
+Traceback (most recent call last):
+  File "/home/henry/pydocs/processing/gdoc.py", line 66, in download_details
+    assert response.status == 200
+AssertionError
+get_file:04-24 18:59:11:getRevision:186 -- google doc
+get_file:04-24 18:59:11:getRevision:163 -- getRevision looping
+gdoc.py:04-24 18:59:11:async_init:24 -- async init called
+get_file:04-24 18:59:11:getRevision:179 -- not google doc
+get_file:04-24 18:59:11:getRevision:179 -- not google doc
+gdoc.py:04-24 18:59:11:async_init:24 -- async init called
+gdoc.py:04-24 18:59:11:async_init:24 -- async init called
+get_file:04-24 18:59:11:getRevision:179 -- not google doc
+test_uti:04-24 18:59:13:tryGetQueue:198 -- getIdswaiting 9 10
+gdoc.py:04-24 18:59:13:get_last_revision:54 -- last revision id 1
+gdoc.py:04-24 18:59:13:async_init:31 -- after await 1
+gdoc.py:04-24 18:59:13:get_last_revision:44 -- code not 200
+gdoc.py:04-24 18:59:13:get_last_revision:54 -- last revision id 89
+gdoc.py:04-24 18:59:13:async_init:31 -- after await 89
+test_uti:04-24 18:59:15:tryGetQueue:198 -- getIdswaiting 9 10
+get_file:04-24 18:59:15:getRevision:186 -- google doc
+get_file:04-24 18:59:15:getRevision:163 -- getRevision looping
+get_file:04-24 18:59:15:getRevision:163 -- getRevision looping
+get_file:04-24 18:59:15:getRevision:163 -- getRevision looping
+get_file:04-24 18:59:15:getRevision:163 -- getRevision looping
+get_file:04-24 18:59:15:getRevision:186 -- google doc
+get_file:04-24 18:59:15:getRevision:163 -- getRevision looping
+test_uti:04-24 18:59:16:tryGetQueue:198 -- getIdswaiting 8 10
+test_uti:04-24 18:59:19:tryGetQueue:198 -- getIdswaiting 10 10
+gdoc.py:04-24 18:59:21:get_last_revision:44 -- code not 200
+gdoc.py:04-24 18:59:21:async_init:31 -- after await 1
+gdoc.py:04-24 18:59:22:download_details:79 -- revisions failed
+gdoc.py:04-24 18:59:22:download_details:80 -- Cannot get revisions.json
+Traceback (most recent call last):
+  File "/home/henry/pydocs/processing/gdoc.py", line 66, in download_details
+    assert response.status == 200
+AssertionError
+get_file:04-24 18:59:22:getRevision:186 -- google doc
+get_file:04-24 18:59:22:getRevision:163 -- getRevision looping
+get_file:04-24 18:59:26:getRevision:179 -- not google doc
+get_file:04-24 18:59:26:getRevision:179 -- not google doc
+gdoc.py:04-24 18:59:26:async_init:24 -- async init called
+gdoc.py:04-24 18:59:29:get_last_revision:54 -- last revision id 1
+gdoc.py:04-24 18:59:29:async_init:31 -- after await 1
+get_file:04-24 18:59:29:getRevision:186 -- google doc
+get_file:04-24 18:59:29:getRevision:163 -- getRevision looping
+test_uti:04-24 18:59:29:tryGetQueue:198 -- getIdswaiting 9 10
+get_file:04-24 18:59:29:getRevision:163 -- getRevision looping
+get_file:04-24 18:59:29:getRevision:163 -- getRevision looping
+test_uti:04-24 18:59:30:tryGetQueue:198 -- getIdswaiting 10 10
+gdoc.py:04-24 18:59:31:async_init:24 -- async init called
+gdoc.py:04-24 18:59:31:async_init:24 -- async init called
+gdoc.py:04-24 18:59:31:async_init:24 -- async init called
+gdoc.py:04-24 18:59:33:get_last_revision:54 -- last revision id 1
+gdoc.py:04-24 18:59:33:async_init:31 -- after await 1
+gdoc.py:04-24 18:59:33:get_last_revision:54 -- last revision id 1
+gdoc.py:04-24 18:59:33:async_init:31 -- after await 1
+gdoc.py:04-24 18:59:33:get_last_revision:54 -- last revision id 44
+gdoc.py:04-24 18:59:33:async_init:31 -- after await 44
+get_file:04-24 18:59:33:getRevision:186 -- google doc
+get_file:04-24 18:59:33:getRevision:163 -- getRevision looping
+get_file:04-24 18:59:34:getRevision:186 -- google doc
+get_file:04-24 18:59:34:getRevision:163 -- getRevision looping
+get_file:04-24 18:59:34:getRevision:186 -- google doc
+get_file:04-24 18:59:34:getRevision:163 -- getRevision looping
+test_uti:04-24 18:59:34:tryGetQueue:198 -- getIdswaiting 10 10
+gdoc.py:04-24 18:59:35:async_init:24 -- async init called
+gdoc.py:04-24 18:59:35:async_init:24 -- async init called
+gdoc.py:04-24 18:59:35:async_init:24 -- async init called
+gdoc.py:04-24 18:59:37:get_last_revision:54 -- last revision id 1
+gdoc.py:04-24 18:59:37:async_init:31 -- after await 1
+gdoc.py:04-24 18:59:37:get_last_revision:54 -- last revision id 1
+gdoc.py:04-24 18:59:37:async_init:31 -- after await 1
+get_file:04-24 18:59:37:getIdsRecursive:66 -- getId task exiting
+get_file:04-24 18:59:37:getRevision:186 -- google doc
+get_file:04-24 18:59:37:getRevision:163 -- getRevision looping
+get_file:04-24 18:59:37:getRevision:186 -- google doc
+get_file:04-24 18:59:37:getRevision:163 -- getRevision looping
+gdoc.py:04-24 18:59:37:get_last_revision:54 -- last revision id 1
+gdoc.py:04-24 18:59:37:async_init:31 -- after await 1
+get_file:04-24 18:59:39:getRevision:186 -- google doc
+get_file:04-24 18:59:39:getRevision:163 -- getRevision looping
+gdoc.py:04-24 18:59:40:async_init:24 -- async init called
+gdoc.py:04-24 18:59:40:async_init:24 -- async init called
+gdoc.py:04-24 18:59:40:async_init:24 -- async init called
+get_file:04-24 18:59:41:getIdsRecursive:66 -- getId task exiting
+gdoc.py:04-24 18:59:41:get_last_revision:54 -- last revision id 1
+gdoc.py:04-24 18:59:41:async_init:31 -- after await 1
+gdoc.py:04-24 18:59:41:get_last_revision:54 -- last revision id 1
+gdoc.py:04-24 18:59:41:async_init:31 -- after await 1
+gdoc.py:04-24 18:59:41:get_last_revision:54 -- last revision id 1
+gdoc.py:04-24 18:59:41:async_init:31 -- after await 1
+test_uti:04-24 18:59:42:print_size:82 -- ---------------Memory usage: 182160 (kb)---------------2 mins since start
+test_uti:04-24 18:59:42:print_size:88 -- /home/henry/pydocs/processing/gdoc.py:75: size=30.1 KiB (-319 KiB), count=771 (-8155), average=40 B
+test_uti:04-24 18:59:42:print_size:88 -- /home/henry/pydocs/processing/datutils/test_utils.py:110: size=89.4 KiB (-107 KiB), count=1907 (-1974), average=48 B
+test_uti:04-24 18:59:42:print_size:88 -- /usr/lib/python3.8/tracemalloc.py:532: size=79.2 KiB (+75.8 KiB), count=1554 (+1492), average=52 B
+test_uti:04-24 18:59:42:print_size:88 -- /usr/lib/python3.8/ssl.py:906: size=93.3 KiB (+66.2 KiB), count=1544 (+1106), average=62 B
+test_uti:04-24 18:59:42:print_size:88 -- /home/henry/pydocs/processing/gdoc.py:73: size=6944 B (-63.7 KiB), count=27 (+2), average=257 B
+test_uti:04-24 18:59:42:print_size:88 -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/streams.py:483: size=60.7 KiB (+60.7 KiB), count=1 (+1), average=60.7 KiB
+test_uti:04-24 18:59:42:print_size:88 -- /home/henry/pydocs/processing/datutils/test_utils.py:128: size=207 KiB (-16.2 KiB), count=2589 (-210), average=82 B
+test_uti:04-24 18:59:42:print_size:88 -- /usr/lib/python3.8/asyncio/base_events.py:702: size=10.4 KiB (+6656 B), count=97 (+60), average=110 B
+test_uti:04-24 18:59:42:print_size:88 -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/http_parser.py:714: size=1128 B (-6230 B), count=2 (-4), average=564 B
+test_uti:04-24 18:59:42:print_size:88 -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:833: size=7056 B (+5040 B), count=7 (+5), average=1008 B
+test_uti:04-24 18:59:42:print_size:90 -- 
+
+------------------------------
+
+
+test_uti:04-24 18:59:43:print_size:93 -- /home/henry/pydocs/processing/datutils/test_utils.py:128: size=207 KiB, count=2589, average=82 B
+test_uti:04-24 18:59:43:print_size:93 -- /home/henry/pydocs/processing/get_files.py:108: size=194 KiB, count=4276, average=46 B
+test_uti:04-24 18:59:43:print_size:93 -- /usr/lib/python3.8/ssl.py:906: size=93.3 KiB, count=1544, average=62 B
+test_uti:04-24 18:59:43:print_size:93 -- /home/henry/pydocs/processing/datutils/test_utils.py:110: size=89.4 KiB, count=1907, average=48 B
+test_uti:04-24 18:59:43:print_size:93 -- /home/henry/pydocs/processing/get_files.py:100: size=84.2 KiB, count=1092, average=79 B
+test_uti:04-24 18:59:43:print_size:93 -- /usr/lib/python3.8/tracemalloc.py:532: size=79.2 KiB, count=1554, average=52 B
+test_uti:04-24 18:59:43:print_size:93 -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/streams.py:483: size=60.7 KiB, count=1, average=60.7 KiB
+test_uti:04-24 18:59:43:print_size:93 -- /home/henry/pydocs/processing/get_files.py:103: size=36.0 KiB, count=1, average=36.0 KiB
+test_uti:04-24 18:59:43:print_size:93 -- /home/henry/pydocs/processing/gdoc.py:75: size=30.1 KiB, count=771, average=40 B
+test_uti:04-24 18:59:43:print_size:93 -- /usr/lib/python3.8/abc.py:102: size=28.2 KiB, count=374, average=77 B
+test_uti:04-24 18:59:43:print_size:100 -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+79/1147 at 2020-04-24 18:59:43.053453
+dumped: 3
+test_uti:04-24 18:59:43:print_size:111 -- dumped pathed files at /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/4.pathed, length 22
+get_file:04-24 18:59:43:getRevision:186 -- google doc
+get_file:04-24 18:59:43:getRevision:163 -- getRevision looping
+get_file:04-24 18:59:43:getRevision:186 -- google doc
+get_file:04-24 18:59:43:getRevision:163 -- getRevision looping
+get_file:04-24 18:59:43:getRevision:186 -- google doc
+get_file:04-24 18:59:43:getRevision:163 -- getRevision looping
+gdoc.py:04-24 18:59:44:async_init:24 -- async init called
+gdoc.py:04-24 18:59:44:async_init:24 -- async init called
+gdoc.py:04-24 18:59:44:async_init:24 -- async init called
+gdoc.py:04-24 18:59:45:async_init:24 -- async init called
+gdoc.py:04-24 18:59:45:async_init:24 -- async init called
+gdoc.py:04-24 18:59:45:async_init:24 -- async init called
+gdoc.py:04-24 18:59:45:get_last_revision:54 -- last revision id 1
+gdoc.py:04-24 18:59:45:async_init:31 -- after await 1
+gdoc.py:04-24 18:59:45:get_last_revision:54 -- last revision id 1
+gdoc.py:04-24 18:59:45:async_init:31 -- after await 1
+gdoc.py:04-24 18:59:45:get_last_revision:54 -- last revision id 1
+gdoc.py:04-24 18:59:45:async_init:31 -- after await 1
+get_file:04-24 18:59:45:getRevision:186 -- google doc
+get_file:04-24 18:59:45:getRevision:163 -- getRevision looping
+gdoc.py:04-24 18:59:45:get_last_revision:54 -- last revision id 1
+gdoc.py:04-24 18:59:45:async_init:31 -- after await 1
+get_file:04-24 18:59:45:getRevision:186 -- google doc
+get_file:04-24 18:59:45:getRevision:163 -- getRevision looping
+get_file:04-24 18:59:45:getRevision:186 -- google doc
+get_file:04-24 18:59:45:getRevision:163 -- getRevision looping
+gdoc.py:04-24 18:59:45:get_last_revision:54 -- last revision id 1
+gdoc.py:04-24 18:59:45:async_init:31 -- after await 1
+gdoc.py:04-24 18:59:45:get_last_revision:54 -- last revision id 1
+gdoc.py:04-24 18:59:45:async_init:31 -- after await 1
+get_file:04-24 18:59:46:getRevision:186 -- google doc
+get_file:04-24 18:59:46:getRevision:163 -- getRevision looping
+gdoc.py:04-24 18:59:49:async_init:24 -- async init called
+gdoc.py:04-24 18:59:49:async_init:24 -- async init called
+gdoc.py:04-24 18:59:49:async_init:24 -- async init called
+get_file:04-24 18:59:49:getRevision:186 -- google doc
+get_file:04-24 18:59:49:getRevision:163 -- getRevision looping
+get_file:04-24 18:59:49:getRevision:186 -- google doc
+get_file:04-24 18:59:49:getRevision:163 -- getRevision looping
+gdoc.py:04-24 18:59:49:async_init:24 -- async init called
+gdoc.py:04-24 18:59:49:async_init:24 -- async init called
+gdoc.py:04-24 18:59:49:async_init:24 -- async init called
+gdoc.py:04-24 18:59:49:get_last_revision:54 -- last revision id 1
+gdoc.py:04-24 18:59:49:async_init:31 -- after await 1
+get_file:04-24 18:59:51:getRevision:186 -- google doc
+get_file:04-24 18:59:51:getRevision:163 -- getRevision looping
+gdoc.py:04-24 18:59:51:get_last_revision:54 -- last revision id 1
+gdoc.py:04-24 18:59:51:async_init:31 -- after await 1
+gdoc.py:04-24 18:59:51:get_last_revision:54 -- last revision id 1
+gdoc.py:04-24 18:59:51:async_init:31 -- after await 1
+gdoc.py:04-24 18:59:51:get_last_revision:54 -- last revision id 1
+gdoc.py:04-24 18:59:51:async_init:31 -- after await 1
+gdoc.py:04-24 18:59:51:get_last_revision:54 -- last revision id 1809
+gdoc.py:04-24 18:59:51:async_init:31 -- after await 1809
+get_file:04-24 18:59:51:getRevision:186 -- google doc
+get_file:04-24 18:59:51:getRevision:163 -- getRevision looping
+get_file:04-24 18:59:51:getRevision:186 -- google doc
+get_file:04-24 18:59:51:getRevision:163 -- getRevision looping
+get_file:04-24 18:59:51:getRevision:186 -- google doc
+get_file:04-24 18:59:51:getRevision:163 -- getRevision looping
+get_file:04-24 18:59:51:getRevision:186 -- google doc
+get_file:04-24 18:59:51:getRevision:163 -- getRevision looping
+gdoc.py:04-24 18:59:51:get_last_revision:54 -- last revision id 17628
+gdoc.py:04-24 18:59:51:async_init:31 -- after await 17628
+get_file:04-24 18:59:51:getIdsRecursive:66 -- getId task exiting
+get_file:04-24 18:59:54:getRevision:186 -- google doc
+get_file:04-24 18:59:54:getRevision:163 -- getRevision looping
+gdoc.py:04-24 19:00:03:async_init:24 -- async init called
+gdoc.py:04-24 19:00:03:async_init:24 -- async init called
+gdoc.py:04-24 19:00:03:async_init:24 -- async init called
+gdoc.py:04-24 19:00:07:get_last_revision:54 -- last revision id 5701
+gdoc.py:04-24 19:00:07:async_init:31 -- after await 5701
+gdoc.py:04-24 19:00:07:get_last_revision:54 -- last revision id 743
+gdoc.py:04-24 19:00:07:async_init:31 -- after await 743
+gdoc.py:04-24 19:00:07:get_last_revision:54 -- last revision id 8354
+gdoc.py:04-24 19:00:07:async_init:31 -- after await 8354
+get_file:04-24 19:00:07:getRevision:186 -- google doc
+get_file:04-24 19:00:07:getRevision:163 -- getRevision looping
+get_file:04-24 19:00:07:getRevision:186 -- google doc
+get_file:04-24 19:00:07:getRevision:163 -- getRevision looping
+gdoc.py:04-24 19:00:08:async_init:24 -- async init called
+gdoc.py:04-24 19:00:08:async_init:24 -- async init called
+gdoc.py:04-24 19:00:08:async_init:24 -- async init called
+gdoc.py:04-24 19:00:09:get_last_revision:54 -- last revision id 1281
+gdoc.py:04-24 19:00:09:async_init:31 -- after await 1281
+get_file:04-24 19:00:09:getRevision:186 -- google doc
+get_file:04-24 19:00:09:getRevision:163 -- getRevision looping
+gdoc.py:04-24 19:00:11:get_last_revision:54 -- last revision id 9094
+gdoc.py:04-24 19:00:11:async_init:31 -- after await 9094
+gdoc.py:04-24 19:00:11:get_last_revision:54 -- last revision id 14424
+gdoc.py:04-24 19:00:11:async_init:31 -- after await 14424
+get_file:04-24 19:00:11:getRevision:186 -- google doc
+get_file:04-24 19:00:11:getRevision:163 -- getRevision looping
+get_file:04-24 19:00:12:getRevision:186 -- google doc
+get_file:04-24 19:00:12:getRevision:163 -- getRevision looping
+gdoc.py:04-24 19:00:13:async_init:24 -- async init called
+gdoc.py:04-24 19:00:13:async_init:24 -- async init called
+gdoc.py:04-24 19:00:13:async_init:24 -- async init called
+gdoc.py:04-24 19:00:14:get_last_revision:54 -- last revision id 153
+gdoc.py:04-24 19:00:14:async_init:31 -- after await 153
+gdoc.py:04-24 19:00:14:get_last_revision:54 -- last revision id 2977
+gdoc.py:04-24 19:00:14:async_init:31 -- after await 2977
+gdoc.py:04-24 19:00:14:get_last_revision:54 -- last revision id 1358
+gdoc.py:04-24 19:00:14:async_init:31 -- after await 1358
+get_file:04-24 19:00:14:getRevision:186 -- google doc
+get_file:04-24 19:00:14:getRevision:163 -- getRevision looping
+get_file:04-24 19:00:14:getRevision:186 -- google doc
+get_file:04-24 19:00:14:getRevision:163 -- getRevision looping
+get_file:04-24 19:00:14:getRevision:186 -- google doc
+get_file:04-24 19:00:14:getRevision:163 -- getRevision looping
+get_file:04-24 19:00:15:getRevision:186 -- google doc
+get_file:04-24 19:00:15:getRevision:163 -- getRevision looping
+gdoc.py:04-24 19:00:17:async_init:24 -- async init called
+gdoc.py:04-24 19:00:17:async_init:24 -- async init called
+get_file:04-24 19:00:17:getRevision:179 -- not google doc
+gdoc.py:04-24 19:00:18:get_last_revision:54 -- last revision id 1159
+gdoc.py:04-24 19:00:18:async_init:31 -- after await 1159
+get_file:04-24 19:00:18:getRevision:186 -- google doc
+get_file:04-24 19:00:18:getRevision:163 -- getRevision looping
+gdoc.py:04-24 19:00:19:get_last_revision:54 -- last revision id 1374
+gdoc.py:04-24 19:00:19:async_init:31 -- after await 1374
+get_file:04-24 19:00:19:getRevision:163 -- getRevision looping
+get_file:04-24 19:00:19:getRevision:186 -- google doc
+get_file:04-24 19:00:19:getRevision:163 -- getRevision looping
+gdoc.py:04-24 19:00:22:async_init:24 -- async init called
+gdoc.py:04-24 19:00:22:async_init:24 -- async init called
+gdoc.py:04-24 19:00:22:async_init:24 -- async init called
+test_uti:04-24 19:00:23:print_size:82 -- ---------------Memory usage: 358680 (kb)---------------3 mins since start
+test_uti:04-24 19:00:23:print_size:88 -- /home/henry/pydocs/processing/gdoc.py:75: size=2581 KiB (+2551 KiB), count=66069 (+65298), average=40 B
+test_uti:04-24 19:00:23:print_size:88 -- /home/henry/pydocs/processing/gdoc.py:73: size=518 KiB (+511 KiB), count=53 (+26), average=10001 B
+test_uti:04-24 19:00:23:print_size:88 -- /home/henry/pydocs/processing/datutils/test_utils.py:110: size=58 B (-89.3 KiB), count=1 (-1906), average=58 B
+test_uti:04-24 19:00:23:print_size:88 -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/streams.py:483: size=0 B (-60.7 KiB), count=0 (-1)
+test_uti:04-24 19:00:23:print_size:88 -- /usr/lib/python3.8/tracemalloc.py:532: size=41.6 KiB (-37.6 KiB), count=870 (-684), average=49 B
+test_uti:04-24 19:00:23:print_size:88 -- /usr/lib/python3.8/ssl.py:906: size=82.3 KiB (-10.9 KiB), count=1377 (-167), average=61 B
+test_uti:04-24 19:00:23:print_size:88 -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client_reqrep.py:631: size=1920 B (-4632 B), count=6 (-5), average=320 B
+test_uti:04-24 19:00:23:print_size:88 -- /home/henry/pydocs/processing/datutils/test_utils.py:128: size=202 KiB (-4445 B), count=2530 (-59), average=82 B
+test_uti:04-24 19:00:23:print_size:88 -- /home/henry/pydocs/processing/get_files.py:108: size=189 KiB (-4424 B), count=4170 (-106), average=47 B
+test_uti:04-24 19:00:23:print_size:88 -- /usr/lib/python3.8/asyncio/base_events.py:702: size=6464 B (-4208 B), count=58 (-39), average=111 B
+test_uti:04-24 19:00:23:print_size:90 -- 
+
+------------------------------
+
+
+test_uti:04-24 19:00:23:print_size:93 -- /home/henry/pydocs/processing/gdoc.py:75: size=2581 KiB, count=66069, average=40 B
+test_uti:04-24 19:00:23:print_size:93 -- /home/henry/pydocs/processing/gdoc.py:73: size=518 KiB, count=53, average=10001 B
+test_uti:04-24 19:00:23:print_size:93 -- /home/henry/pydocs/processing/datutils/test_utils.py:128: size=202 KiB, count=2530, average=82 B
+test_uti:04-24 19:00:23:print_size:93 -- /home/henry/pydocs/processing/get_files.py:108: size=189 KiB, count=4170, average=47 B
+test_uti:04-24 19:00:23:print_size:93 -- /home/henry/pydocs/processing/get_files.py:100: size=84.2 KiB, count=1092, average=79 B
+test_uti:04-24 19:00:23:print_size:93 -- /usr/lib/python3.8/ssl.py:906: size=82.3 KiB, count=1377, average=61 B
+test_uti:04-24 19:00:23:print_size:93 -- /usr/lib/python3.8/tracemalloc.py:532: size=41.6 KiB, count=870, average=49 B
+test_uti:04-24 19:00:23:print_size:93 -- /home/henry/pydocs/processing/get_files.py:103: size=36.0 KiB, count=1, average=36.0 KiB
+test_uti:04-24 19:00:23:print_size:93 -- /usr/lib/python3.8/abc.py:102: size=28.2 KiB, count=374, average=77 B
+test_uti:04-24 19:00:23:print_size:93 -- /home/henry/pydocs/processing/gdoc.py:69: size=25.3 KiB, count=298, average=87 B
+test_uti:04-24 19:00:23:print_size:100 -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+106/1147 at 2020-04-24 19:00:23.404531
+dumped: 4
+test_uti:04-24 19:00:23:print_size:111 -- dumped pathed files at /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/5.pathed, length 27
+gdoc.py:04-24 19:00:24:get_last_revision:54 -- last revision id 1009
+gdoc.py:04-24 19:00:24:async_init:31 -- after await 1009
+gdoc.py:04-24 19:00:24:get_last_revision:54 -- last revision id 1414
+gdoc.py:04-24 19:00:24:async_init:31 -- after await 1414
+get_file:04-24 19:00:24:getRevision:186 -- google doc
+get_file:04-24 19:00:24:getRevision:163 -- getRevision looping
+get_file:04-24 19:00:24:getRevision:186 -- google doc
+get_file:04-24 19:00:24:getRevision:163 -- getRevision looping
+gdoc.py:04-24 19:00:25:get_last_revision:54 -- last revision id 21798
+gdoc.py:04-24 19:00:25:async_init:31 -- after await 21798
+gdoc.py:04-24 19:00:26:async_init:24 -- async init called
+gdoc.py:04-24 19:00:26:async_init:24 -- async init called
+gdoc.py:04-24 19:00:26:async_init:24 -- async init called
+gdoc.py:04-24 19:00:27:async_init:24 -- async init called
+gdoc.py:04-24 19:00:27:async_init:24 -- async init called
+gdoc.py:04-24 19:00:27:async_init:24 -- async init called
+gdoc.py:04-24 19:00:27:get_last_revision:54 -- last revision id 709
+gdoc.py:04-24 19:00:27:async_init:31 -- after await 709
+gdoc.py:04-24 19:00:28:get_last_revision:54 -- last revision id 2132
+gdoc.py:04-24 19:00:28:async_init:31 -- after await 2132
+get_file:04-24 19:00:28:getRevision:186 -- google doc
+get_file:04-24 19:00:28:getRevision:163 -- getRevision looping
+gdoc.py:04-24 19:00:28:get_last_revision:54 -- last revision id 956
+gdoc.py:04-24 19:00:28:async_init:31 -- after await 956
+get_file:04-24 19:00:28:getRevision:186 -- google doc
+get_file:04-24 19:00:28:getRevision:163 -- getRevision looping
+gdoc.py:04-24 19:00:28:get_last_revision:54 -- last revision id 1409
+gdoc.py:04-24 19:00:28:async_init:31 -- after await 1409
+gdoc.py:04-24 19:00:28:get_last_revision:54 -- last revision id 1585
+gdoc.py:04-24 19:00:28:async_init:31 -- after await 1585
+get_file:04-24 19:00:28:getRevision:186 -- google doc
+get_file:04-24 19:00:28:getRevision:163 -- getRevision looping
+get_file:04-24 19:00:29:getRevision:186 -- google doc
+get_file:04-24 19:00:29:getRevision:163 -- getRevision looping
+get_file:04-24 19:00:29:getRevision:186 -- google doc
+get_file:04-24 19:00:29:getRevision:163 -- getRevision looping
+gdoc.py:04-24 19:00:29:get_last_revision:54 -- last revision id 7809
+gdoc.py:04-24 19:00:29:async_init:31 -- after await 7809
+get_file:04-24 19:00:30:getRevision:186 -- google doc
+get_file:04-24 19:00:30:getRevision:163 -- getRevision looping
+get_file:04-24 19:00:31:getRevision:186 -- google doc
+get_file:04-24 19:00:31:getRevision:163 -- getRevision looping
+gdoc.py:04-24 19:00:31:async_init:24 -- async init called
+gdoc.py:04-24 19:00:31:async_init:24 -- async init called
+gdoc.py:04-24 19:00:31:async_init:24 -- async init called
+gdoc.py:04-24 19:00:31:get_last_revision:54 -- last revision id 546
+gdoc.py:04-24 19:00:31:async_init:31 -- after await 546
+gdoc.py:04-24 19:00:31:get_last_revision:54 -- last revision id 647
+gdoc.py:04-24 19:00:31:async_init:31 -- after await 647
+gdoc.py:04-24 19:00:31:get_last_revision:54 -- last revision id 2502
+gdoc.py:04-24 19:00:31:async_init:31 -- after await 2502
+get_file:04-24 19:00:32:getRevision:186 -- google doc
+get_file:04-24 19:00:32:getRevision:163 -- getRevision looping
+get_file:04-24 19:00:32:getRevision:186 -- google doc
+get_file:04-24 19:00:32:getRevision:163 -- getRevision looping
+get_file:04-24 19:00:32:getRevision:186 -- google doc
+get_file:04-24 19:00:32:getRevision:163 -- getRevision looping
+gdoc.py:04-24 19:00:32:async_init:24 -- async init called
+gdoc.py:04-24 19:00:32:async_init:24 -- async init called
+gdoc.py:04-24 19:00:32:async_init:24 -- async init called
+gdoc.py:04-24 19:00:32:get_last_revision:54 -- last revision id 1216
+gdoc.py:04-24 19:00:32:async_init:31 -- after await 1216
+gdoc.py:04-24 19:00:32:get_last_revision:54 -- last revision id 955
+gdoc.py:04-24 19:00:32:async_init:31 -- after await 955
+gdoc.py:04-24 19:00:33:get_last_revision:54 -- last revision id 2164
+gdoc.py:04-24 19:00:33:async_init:31 -- after await 2164
+get_file:04-24 19:00:33:getRevision:186 -- google doc
+get_file:04-24 19:00:33:getRevision:163 -- getRevision looping
+get_file:04-24 19:00:33:getRevision:186 -- google doc
+get_file:04-24 19:00:33:getRevision:163 -- getRevision looping
+get_file:04-24 19:00:33:getRevision:186 -- google doc
+get_file:04-24 19:00:33:getRevision:163 -- getRevision looping
+get_file:04-24 19:00:46:getRevision:179 -- not google doc
+gdoc.py:04-24 19:00:46:async_init:24 -- async init called
+get_file:04-24 19:00:46:getRevision:179 -- not google doc
+gdoc.py:04-24 19:00:46:get_last_revision:54 -- last revision id 908
+gdoc.py:04-24 19:00:46:async_init:31 -- after await 908
+get_file:04-24 19:00:46:getRevision:186 -- google doc
+get_file:04-24 19:00:46:getRevision:163 -- getRevision looping
+get_file:04-24 19:00:47:getRevision:163 -- getRevision looping
+get_file:04-24 19:00:47:getRevision:163 -- getRevision looping
+gdoc.py:04-24 19:00:50:async_init:24 -- async init called
+get_file:04-24 19:00:50:getRevision:179 -- not google doc
+get_file:04-24 19:00:50:getRevision:179 -- not google doc
+gdoc.py:04-24 19:00:51:get_last_revision:54 -- last revision id 919
+gdoc.py:04-24 19:00:51:async_init:31 -- after await 919
+get_file:04-24 19:00:51:getRevision:186 -- google doc
+get_file:04-24 19:00:51:getRevision:163 -- getRevision looping
+get_file:04-24 19:00:52:getRevision:163 -- getRevision looping
+get_file:04-24 19:00:52:getRevision:163 -- getRevision looping
+get_file:04-24 19:00:55:getRevision:179 -- not google doc
+get_file:04-24 19:00:55:getRevision:179 -- not google doc
+get_file:04-24 19:00:55:getRevision:179 -- not google doc
+get_file:04-24 19:00:56:getRevision:163 -- getRevision looping
+get_file:04-24 19:00:56:getRevision:163 -- getRevision looping
+get_file:04-24 19:00:56:getRevision:163 -- getRevision looping
+gdoc.py:04-24 19:00:59:async_init:24 -- async init called
+gdoc.py:04-24 19:00:59:async_init:24 -- async init called
+gdoc.py:04-24 19:00:59:async_init:24 -- async init called
+gdoc.py:04-24 19:01:00:get_last_revision:54 -- last revision id 747
+gdoc.py:04-24 19:01:00:async_init:31 -- after await 747
+gdoc.py:04-24 19:01:00:get_last_revision:54 -- last revision id 929
+gdoc.py:04-24 19:01:00:async_init:31 -- after await 929
+gdoc.py:04-24 19:01:00:get_last_revision:54 -- last revision id 567
+gdoc.py:04-24 19:01:00:async_init:31 -- after await 567
+get_file:04-24 19:01:00:getRevision:186 -- google doc
+get_file:04-24 19:01:00:getRevision:163 -- getRevision looping
+get_file:04-24 19:01:00:getRevision:186 -- google doc
+get_file:04-24 19:01:00:getRevision:163 -- getRevision looping
+get_file:04-24 19:01:01:getRevision:186 -- google doc
+get_file:04-24 19:01:01:getRevision:163 -- getRevision looping
+test_uti:04-24 19:01:03:print_size:82 -- ---------------Memory usage: 358680 (kb)---------------4 mins since start
+test_uti:04-24 19:01:03:print_size:88 -- /home/henry/pydocs/processing/gdoc.py:75: size=1989 KiB (-592 KiB), count=50922 (-15147), average=40 B
+test_uti:04-24 19:01:03:print_size:88 -- /home/henry/pydocs/processing/gdoc.py:73: size=399 KiB (-119 KiB), count=41 (-12), average=9964 B
+test_uti:04-24 19:01:03:print_size:88 -- /usr/lib/python3.8/tracemalloc.py:532: size=3272 B (-38.4 KiB), count=58 (-812), average=56 B
+test_uti:04-24 19:01:03:print_size:88 -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:833: size=0 B (-6048 B), count=0 (-6)
+test_uti:04-24 19:01:03:print_size:88 -- /usr/lib/python3.8/ssl.py:906: size=77.5 KiB (-4902 B), count=1289 (-88), average=62 B
+test_uti:04-24 19:01:03:print_size:88 -- /home/henry/pydocs/processing/get_files.py:108: size=185 KiB (-4296 B), count=4068 (-102), average=47 B
+test_uti:04-24 19:01:03:print_size:88 -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client_reqrep.py:385: size=478 B (-3024 B), count=2 (-3), average=239 B
+test_uti:04-24 19:01:03:print_size:88 -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client_reqrep.py:363: size=0 B (-3024 B), count=0 (-3)
+test_uti:04-24 19:01:03:print_size:88 -- /home/henry/pydocs/processing/gdoc.py:41: size=580 B (-2888 B), count=4 (-10), average=145 B
+test_uti:04-24 19:01:03:print_size:88 -- /usr/lib/python3.8/asyncio/base_events.py:702: size=3664 B (-2800 B), count=33 (-25), average=111 B
+test_uti:04-24 19:01:03:print_size:90 -- 
+
+------------------------------
+
+
+test_uti:04-24 19:01:03:print_size:93 -- /home/henry/pydocs/processing/gdoc.py:75: size=1989 KiB, count=50922, average=40 B
+test_uti:04-24 19:01:03:print_size:93 -- /home/henry/pydocs/processing/gdoc.py:73: size=399 KiB, count=41, average=9964 B
+test_uti:04-24 19:01:03:print_size:93 -- /home/henry/pydocs/processing/datutils/test_utils.py:128: size=200 KiB, count=2506, average=82 B
+test_uti:04-24 19:01:03:print_size:93 -- /home/henry/pydocs/processing/get_files.py:108: size=185 KiB, count=4068, average=47 B
+test_uti:04-24 19:01:03:print_size:93 -- /home/henry/pydocs/processing/get_files.py:100: size=84.2 KiB, count=1092, average=79 B
+test_uti:04-24 19:01:03:print_size:93 -- /usr/lib/python3.8/ssl.py:906: size=77.5 KiB, count=1289, average=62 B
+test_uti:04-24 19:01:03:print_size:93 -- /home/henry/pydocs/processing/get_files.py:103: size=36.0 KiB, count=1, average=36.0 KiB
+test_uti:04-24 19:01:03:print_size:93 -- /usr/lib/python3.8/abc.py:102: size=28.2 KiB, count=374, average=77 B
+test_uti:04-24 19:01:03:print_size:93 -- /home/henry/pydocs/processing/gdoc.py:69: size=27.5 KiB, count=336, average=84 B
+test_uti:04-24 19:01:03:print_size:93 -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/streams.py:121: size=15.3 KiB, count=37, average=423 B
+test_uti:04-24 19:01:03:print_size:100 -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+131/1148 at 2020-04-24 19:01:03.901971
+dumped: 5
+test_uti:04-24 19:01:04:print_size:111 -- dumped pathed files at /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/6.pathed, length 25
+get_file:04-24 19:01:04:getRevision:179 -- not google doc
+gdoc.py:04-24 19:01:04:async_init:24 -- async init called
+gdoc.py:04-24 19:01:04:async_init:24 -- async init called
+gdoc.py:04-24 19:01:04:get_last_revision:54 -- last revision id 551
+gdoc.py:04-24 19:01:04:async_init:31 -- after await 551
+gdoc.py:04-24 19:01:04:get_last_revision:54 -- last revision id 188
+gdoc.py:04-24 19:01:04:async_init:31 -- after await 188
+get_file:04-24 19:01:05:getRevision:186 -- google doc
+get_file:04-24 19:01:05:getRevision:163 -- getRevision looping
+get_file:04-24 19:01:05:getRevision:186 -- google doc
+get_file:04-24 19:01:05:getRevision:163 -- getRevision looping
+get_file:04-24 19:01:05:getRevision:163 -- getRevision looping
+gdoc.py:04-24 19:01:07:async_init:24 -- async init called
+gdoc.py:04-24 19:01:07:async_init:24 -- async init called
+gdoc.py:04-24 19:01:07:async_init:24 -- async init called
+gdoc.py:04-24 19:01:08:get_last_revision:54 -- last revision id 153
+gdoc.py:04-24 19:01:08:async_init:31 -- after await 153
+gdoc.py:04-24 19:01:08:get_last_revision:54 -- last revision id 14424
+gdoc.py:04-24 19:01:08:async_init:31 -- after await 14424
+gdoc.py:04-24 19:01:09:async_init:24 -- async init called
+gdoc.py:04-24 19:01:09:async_init:24 -- async init called
+gdoc.py:04-24 19:01:09:async_init:24 -- async init called
+get_file:04-24 19:01:09:getRevision:186 -- google doc
+get_file:04-24 19:01:09:getRevision:163 -- getRevision looping
+get_file:04-24 19:01:09:getRevision:186 -- google doc
+get_file:04-24 19:01:09:getRevision:163 -- getRevision looping
+gdoc.py:04-24 19:01:09:get_last_revision:54 -- last revision id 5701
+gdoc.py:04-24 19:01:09:async_init:31 -- after await 5701
+gdoc.py:04-24 19:01:09:get_last_revision:54 -- last revision id 17628
+gdoc.py:04-24 19:01:09:async_init:31 -- after await 17628
+gdoc.py:04-24 19:01:09:get_last_revision:54 -- last revision id 1809
+gdoc.py:04-24 19:01:09:async_init:31 -- after await 1809
+get_file:04-24 19:01:09:getRevision:186 -- google doc
+get_file:04-24 19:01:09:getRevision:163 -- getRevision looping
+get_file:04-24 19:01:09:getRevision:186 -- google doc
+get_file:04-24 19:01:09:getRevision:163 -- getRevision looping
+get_file:04-24 19:01:10:getRevision:186 -- google doc
+get_file:04-24 19:01:10:getRevision:163 -- getRevision looping
+gdoc.py:04-24 19:01:12:async_init:24 -- async init called
+gdoc.py:04-24 19:01:12:async_init:24 -- async init called
+gdoc.py:04-24 19:01:12:async_init:24 -- async init called
+gdoc.py:04-24 19:01:12:get_last_revision:54 -- last revision id 9094
+gdoc.py:04-24 19:01:12:async_init:31 -- after await 9094
+gdoc.py:04-24 19:01:13:async_init:24 -- async init called
+gdoc.py:04-24 19:01:13:async_init:24 -- async init called
+gdoc.py:04-24 19:01:13:async_init:24 -- async init called
+gdoc.py:04-24 19:01:13:get_last_revision:54 -- last revision id 1159
+gdoc.py:04-24 19:01:13:async_init:31 -- after await 1159
+gdoc.py:04-24 19:01:13:get_last_revision:54 -- last revision id 1358
+gdoc.py:04-24 19:01:13:async_init:31 -- after await 1358
+gdoc.py:04-24 19:01:13:get_last_revision:54 -- last revision id 2977
+gdoc.py:04-24 19:01:13:async_init:31 -- after await 2977
+get_file:04-24 19:01:14:getRevision:186 -- google doc
+get_file:04-24 19:01:14:getRevision:163 -- getRevision looping
+get_file:04-24 19:01:14:getRevision:186 -- google doc
+get_file:04-24 19:01:14:getRevision:163 -- getRevision looping
+get_file:04-24 19:01:14:getRevision:186 -- google doc
+get_file:04-24 19:01:14:getRevision:163 -- getRevision looping
+gdoc.py:04-24 19:01:14:get_last_revision:54 -- last revision id 743
+gdoc.py:04-24 19:01:14:async_init:31 -- after await 743
+gdoc.py:04-24 19:01:19:get_last_revision:54 -- last revision id 1281
+gdoc.py:04-24 19:01:19:async_init:31 -- after await 1281
+get_file:04-24 19:01:19:getRevision:186 -- google doc
+get_file:04-24 19:01:19:getRevision:163 -- getRevision looping
+gdoc.py:04-24 19:01:19:get_last_revision:54 -- last revision id 8354
+gdoc.py:04-24 19:01:19:async_init:31 -- after await 8354
+get_file:04-24 19:01:19:getRevision:186 -- google doc
+get_file:04-24 19:01:19:getRevision:163 -- getRevision looping
+get_file:04-24 19:01:19:getRevision:186 -- google doc
+get_file:04-24 19:01:19:getRevision:163 -- getRevision looping
+get_file:04-24 19:01:21:getRevision:186 -- google doc
+get_file:04-24 19:01:21:getRevision:163 -- getRevision looping
+gdoc.py:04-24 19:01:26:async_init:24 -- async init called
+get_file:04-24 19:01:26:getRevision:179 -- not google doc
+gdoc.py:04-24 19:01:26:async_init:24 -- async init called
+gdoc.py:04-24 19:01:31:async_init:24 -- async init called
+gdoc.py:04-24 19:01:31:async_init:24 -- async init called
+gdoc.py:04-24 19:01:31:async_init:24 -- async init called
+gdoc.py:04-24 19:01:31:get_last_revision:54 -- last revision id 1374
+gdoc.py:04-24 19:01:31:async_init:31 -- after await 1374
+gdoc.py:04-24 19:01:31:get_last_revision:54 -- last revision id 1414
+gdoc.py:04-24 19:01:31:async_init:31 -- after await 1414
+get_file:04-24 19:01:31:getRevision:186 -- google doc
+get_file:04-24 19:01:31:getRevision:163 -- getRevision looping
+get_file:04-24 19:01:31:getRevision:186 -- google doc
+get_file:04-24 19:01:31:getRevision:163 -- getRevision looping
+gdoc.py:04-24 19:01:31:get_last_revision:54 -- last revision id 956
+gdoc.py:04-24 19:01:31:async_init:31 -- after await 956
+gdoc.py:04-24 19:01:31:get_last_revision:54 -- last revision id 1009
+gdoc.py:04-24 19:01:31:async_init:31 -- after await 1009
+get_file:04-24 19:01:31:getRevision:163 -- getRevision looping
+gdoc.py:04-24 19:01:32:get_last_revision:54 -- last revision id 21798
+gdoc.py:04-24 19:01:32:async_init:31 -- after await 21798
+get_file:04-24 19:01:32:getRevision:186 -- google doc
+get_file:04-24 19:01:32:getRevision:163 -- getRevision looping
+get_file:04-24 19:01:32:getRevision:186 -- google doc
+get_file:04-24 19:01:32:getRevision:163 -- getRevision looping
+sql.py:04-24 19:02:02:<module>:24 -- Driver%3D%7BODBC+Driver+17+for+SQL+Server%7D%3BServer%3Dtcp%3Apydoc-db.database.windows.net%2C1433%3BDatabase%3Dpydoc-db%3BUid%3Dhenry2833%3BPwd%3D%7BInfoip32%7D%3BEncrypt%3Dyes%3BTrustServerCertificate%3Dno%3BConnection+Timeout%3D30%3B
+base.py:04-24 19:02:06:_execute_context:1205 -- SELECT CAST(SERVERPROPERTY('ProductVersion') AS VARCHAR)
+base.py:04-24 19:02:06:_execute_context:1207 -- ()
+result.p:04-24 19:02:06:_init_metadata:809 -- Col ('',)
+result.p:04-24 19:02:06:process_rows:1249 -- Row ('12.0.2000.8',)
+base.py:04-24 19:02:06:_execute_context:1205 -- SELECT schema_name()
+base.py:04-24 19:02:06:_execute_context:1207 -- ()
+result.p:04-24 19:02:08:_init_metadata:809 -- Col ('',)
+result.p:04-24 19:02:08:process_rows:1249 -- Row ('dbo',)
+base.py:04-24 19:02:09:_cursor_execute:1311 -- SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+base.py:04-24 19:02:09:_cursor_execute:1312 -- ()
+base.py:04-24 19:02:09:_cursor_execute:1311 -- SELECT CAST('test unicode returns' AS NVARCHAR(60)) AS anon_1
+base.py:04-24 19:02:09:_cursor_execute:1312 -- ()
+base.py:04-24 19:02:13:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 19:02:13:_execute_context:1207 -- ('files', 'dbo')
+result.p:04-24 19:02:13:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 19:02:13:process_rows:1249 -- Row ('dbo', 'files', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:04-24 19:02:14:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 19:02:14:_execute_context:1207 -- ('owner', 'dbo')
+result.p:04-24 19:02:15:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 19:02:15:process_rows:1249 -- Row ('dbo', 'owner', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:04-24 19:02:17:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 19:02:17:_execute_context:1207 -- ('dates', 'dbo')
+result.p:04-24 19:02:18:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 19:02:18:process_rows:1249 -- Row ('dbo', 'dates', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:04-24 19:02:19:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 19:02:19:_execute_context:1207 -- ('closure', 'dbo')
+result.p:04-24 19:02:19:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 19:02:19:process_rows:1249 -- Row ('dbo', 'closure', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:04-24 19:02:20:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 19:02:20:_execute_context:1207 -- ('filename', 'dbo')
+result.p:04-24 19:02:21:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 19:02:21:process_rows:1249 -- Row ('dbo', 'filename', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:04-24 19:02:21:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 19:02:21:_execute_context:1207 -- ('tasks', 'dbo')
+result.p:04-24 19:02:22:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 19:02:22:process_rows:1249 -- Row ('dbo', 'tasks', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+dsds.py:04-24 19:02:23:start:19 -- start
+dsds.py:04-24 19:02:23:start:24 -- (240000000, 300000000)
+get_file:04-24 19:02:23:loadFiles:265 -- Start loadFiles, 527e4afc-4598-400f-8536-afa5324f0ba4 root
+requests:04-24 19:02:23:__call__:117 -- Making request: POST https://oauth2.googleapis.com/token
+connecti:04-24 19:02:23:_new_conn:817 -- Starting new HTTPS connection (1): oauth2.googleapis.com
+configlo:04-24 19:02:23:handle_exception:79 -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 309, in ssl_wrap_socket
+    context.load_verify_locations(ca_certs, ca_cert_dir)
+OSError: [Errno 12] Cannot allocate memory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/requests/adapters.py", line 430, in send
+    resp = conn.urlopen(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/urllib3/connectionpool.py", line 597, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/urllib3/connectionpool.py", line 345, in _make_request
+    self._validate_conn(conn)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/urllib3/connectionpool.py", line 844, in _validate_conn
+    conn.connect()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/urllib3/connection.py", line 319, in connect
+    self.sock = ssl_wrap_socket(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 311, in ssl_wrap_socket
+    raise SSLError(e)
+urllib3.exceptions.SSLError: [Errno 12] Cannot allocate memory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/google/auth/transport/requests.py", line 118, in __call__
+    response = self.session.request(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/requests/sessions.py", line 502, in request
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/requests/sessions.py", line 612, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/requests/adapters.py", line 514, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: [Errno 12] Cannot allocate memory
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "dsds.py", line 43, in <module>
+    start()
+  File "dsds.py", line 40, in start
+    loadFiles(uid, workingPath, fileid, creds)
+  File "/home/henry/pydocs/processing/get_files.py", line 274, in loadFiles
+    TestUtil.refresh_creds(_creds)
+  File "/home/henry/pydocs/processing/datutils/test_utils.py", line 49, in refresh_creds
+    cls.creds.refresh(Request())
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/google/oauth2/credentials.py", line 124, in refresh
+    _client.refresh_grant(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/google/oauth2/_client.py", line 237, in refresh_grant
+    response_data = _token_endpoint_request(request, token_uri, body)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/google/oauth2/_client.py", line 105, in _token_endpoint_request
+    response = request(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/google/auth/transport/requests.py", line 124, in __call__
+    six.raise_from(new_exc, caught_exc)
+  File "<string>", line 3, in raise_from
+google.auth.exceptions.TransportError: [Errno 12] Cannot allocate memory
+sql.py:04-24 20:45:36:<module>:24 -- Driver%3D%7BODBC+Driver+17+for+SQL+Server%7D%3BServer%3Dtcp%3Apydoc-db.database.windows.net%2C1433%3BDatabase%3Dpydoc-db%3BUid%3Dhenry2833%3BPwd%3D%7BInfoip32%7D%3BEncrypt%3Dyes%3BTrustServerCertificate%3Dno%3BConnection+Timeout%3D30%3B
+base.py:04-24 20:45:38:_execute_context:1205 -- SELECT CAST(SERVERPROPERTY('ProductVersion') AS VARCHAR)
+base.py:04-24 20:45:38:_execute_context:1207 -- ()
+result.p:04-24 20:45:38:_init_metadata:809 -- Col ('',)
+result.p:04-24 20:45:38:process_rows:1249 -- Row ('12.0.2000.8',)
+base.py:04-24 20:45:38:_execute_context:1205 -- SELECT schema_name()
+base.py:04-24 20:45:38:_execute_context:1207 -- ()
+result.p:04-24 20:45:39:_init_metadata:809 -- Col ('',)
+result.p:04-24 20:45:39:process_rows:1249 -- Row ('dbo',)
+base.py:04-24 20:45:39:_cursor_execute:1311 -- SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+base.py:04-24 20:45:39:_cursor_execute:1312 -- ()
+base.py:04-24 20:45:39:_cursor_execute:1311 -- SELECT CAST('test unicode returns' AS NVARCHAR(60)) AS anon_1
+base.py:04-24 20:45:39:_cursor_execute:1312 -- ()
+base.py:04-24 20:45:40:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 20:45:40:_execute_context:1207 -- ('files', 'dbo')
+result.p:04-24 20:45:40:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 20:45:40:process_rows:1249 -- Row ('dbo', 'files', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:04-24 20:45:41:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 20:45:41:_execute_context:1207 -- ('owner', 'dbo')
+result.p:04-24 20:45:41:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 20:45:41:process_rows:1249 -- Row ('dbo', 'owner', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:04-24 20:45:41:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 20:45:41:_execute_context:1207 -- ('dates', 'dbo')
+result.p:04-24 20:45:42:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 20:45:42:process_rows:1249 -- Row ('dbo', 'dates', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:04-24 20:45:42:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 20:45:42:_execute_context:1207 -- ('closure', 'dbo')
+result.p:04-24 20:45:42:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 20:45:42:process_rows:1249 -- Row ('dbo', 'closure', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:04-24 20:45:43:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 20:45:43:_execute_context:1207 -- ('filename', 'dbo')
+result.p:04-24 20:45:43:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 20:45:43:process_rows:1249 -- Row ('dbo', 'filename', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:04-24 20:45:43:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 20:45:43:_execute_context:1207 -- ('tasks', 'dbo')
+result.p:04-24 20:45:44:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 20:45:44:process_rows:1249 -- Row ('dbo', 'tasks', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+dsds.py:04-24 20:45:44:start:19 -- start
+dsds.py:04-24 20:45:44:start:24 -- (160000000, 200000000)
+get_file:04-24 20:45:44:loadFiles:265 -- Start loadFiles, 527e4afc-4598-400f-8536-afa5324f0ba4 root
+requests:04-24 20:45:44:__call__:117 -- Making request: POST https://oauth2.googleapis.com/token
+connecti:04-24 20:45:44:_new_conn:817 -- Starting new HTTPS connection (1): oauth2.googleapis.com
+configlo:04-24 20:45:44:handle_exception:79 -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 309, in ssl_wrap_socket
+    context.load_verify_locations(ca_certs, ca_cert_dir)
+OSError: [Errno 12] Cannot allocate memory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/requests/adapters.py", line 430, in send
+    resp = conn.urlopen(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/urllib3/connectionpool.py", line 597, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/urllib3/connectionpool.py", line 345, in _make_request
+    self._validate_conn(conn)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/urllib3/connectionpool.py", line 844, in _validate_conn
+    conn.connect()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/urllib3/connection.py", line 319, in connect
+    self.sock = ssl_wrap_socket(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 311, in ssl_wrap_socket
+    raise SSLError(e)
+urllib3.exceptions.SSLError: [Errno 12] Cannot allocate memory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/google/auth/transport/requests.py", line 118, in __call__
+    response = self.session.request(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/requests/sessions.py", line 502, in request
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/requests/sessions.py", line 612, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/requests/adapters.py", line 514, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: [Errno 12] Cannot allocate memory
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "dsds.py", line 43, in <module>
+    start()
+  File "dsds.py", line 40, in start
+    loadFiles(uid, workingPath, fileid, creds)
+  File "/home/henry/pydocs/processing/get_files.py", line 274, in loadFiles
+    TestUtil.refresh_creds(_creds)
+  File "/home/henry/pydocs/processing/datutils/test_utils.py", line 49, in refresh_creds
+    cls.creds.refresh(Request())
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/google/oauth2/credentials.py", line 124, in refresh
+    _client.refresh_grant(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/google/oauth2/_client.py", line 237, in refresh_grant
+    response_data = _token_endpoint_request(request, token_uri, body)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/google/oauth2/_client.py", line 105, in _token_endpoint_request
+    response = request(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/google/auth/transport/requests.py", line 124, in __call__
+    six.raise_from(new_exc, caught_exc)
+  File "<string>", line 3, in raise_from
+google.auth.exceptions.TransportError: [Errno 12] Cannot allocate memory
+sql.py:04-24 20:49:08:<module>:24 -- Driver%3D%7BODBC+Driver+17+for+SQL+Server%7D%3BServer%3Dtcp%3Apydoc-db.database.windows.net%2C1433%3BDatabase%3Dpydoc-db%3BUid%3Dhenry2833%3BPwd%3D%7BInfoip32%7D%3BEncrypt%3Dyes%3BTrustServerCertificate%3Dno%3BConnection+Timeout%3D30%3B
+base.py:04-24 20:49:10:_execute_context:1205 -- SELECT CAST(SERVERPROPERTY('ProductVersion') AS VARCHAR)
+base.py:04-24 20:49:10:_execute_context:1207 -- ()
+result.p:04-24 20:49:11:_init_metadata:809 -- Col ('',)
+result.p:04-24 20:49:11:process_rows:1249 -- Row ('12.0.2000.8',)
+base.py:04-24 20:49:11:_execute_context:1205 -- SELECT schema_name()
+base.py:04-24 20:49:11:_execute_context:1207 -- ()
+result.p:04-24 20:49:11:_init_metadata:809 -- Col ('',)
+result.p:04-24 20:49:11:process_rows:1249 -- Row ('dbo',)
+base.py:04-24 20:49:11:_cursor_execute:1311 -- SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+base.py:04-24 20:49:11:_cursor_execute:1312 -- ()
+base.py:04-24 20:49:12:_cursor_execute:1311 -- SELECT CAST('test unicode returns' AS NVARCHAR(60)) AS anon_1
+base.py:04-24 20:49:12:_cursor_execute:1312 -- ()
+base.py:04-24 20:49:12:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 20:49:12:_execute_context:1207 -- ('files', 'dbo')
+result.p:04-24 20:49:13:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 20:49:13:process_rows:1249 -- Row ('dbo', 'files', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:04-24 20:49:13:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 20:49:13:_execute_context:1207 -- ('owner', 'dbo')
+result.p:04-24 20:49:14:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 20:49:14:process_rows:1249 -- Row ('dbo', 'owner', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:04-24 20:49:14:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 20:49:14:_execute_context:1207 -- ('dates', 'dbo')
+result.p:04-24 20:49:14:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 20:49:14:process_rows:1249 -- Row ('dbo', 'dates', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:04-24 20:49:15:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 20:49:15:_execute_context:1207 -- ('closure', 'dbo')
+result.p:04-24 20:49:15:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 20:49:15:process_rows:1249 -- Row ('dbo', 'closure', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:04-24 20:49:15:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 20:49:15:_execute_context:1207 -- ('filename', 'dbo')
+result.p:04-24 20:49:16:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 20:49:16:process_rows:1249 -- Row ('dbo', 'filename', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:04-24 20:49:16:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 20:49:16:_execute_context:1207 -- ('tasks', 'dbo')
+result.p:04-24 20:49:16:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 20:49:16:process_rows:1249 -- Row ('dbo', 'tasks', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+dsds.py:04-24 20:49:17:start:19 -- start
+configlo:04-24 20:49:17:handle_exception:79 -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "dsds.py", line 45, in <module>
+    start()
+  File "dsds.py", line 22, in start
+    limits = (int(_lim*0.5), int(lim))
+NameError: name 'lim' is not defined
+configlo:04-24 20:49:20:handle_exception:83 -- exiting! from sshook
+sql.py:04-24 20:59:54:<module>:24 -- Driver%3D%7BODBC+Driver+17+for+SQL+Server%7D%3BServer%3Dtcp%3Apydoc-db.database.windows.net%2C1433%3BDatabase%3Dpydoc-db%3BUid%3Dhenry2833%3BPwd%3D%7BInfoip32%7D%3BEncrypt%3Dyes%3BTrustServerCertificate%3Dno%3BConnection+Timeout%3D30%3B
+base.py:04-24 20:59:56:_execute_context:1205 -- SELECT CAST(SERVERPROPERTY('ProductVersion') AS VARCHAR)
+base.py:04-24 20:59:56:_execute_context:1207 -- ()
+result.p:04-24 20:59:56:_init_metadata:809 -- Col ('',)
+result.p:04-24 20:59:56:process_rows:1249 -- Row ('12.0.2000.8',)
+base.py:04-24 20:59:56:_execute_context:1205 -- SELECT schema_name()
+base.py:04-24 20:59:56:_execute_context:1207 -- ()
+result.p:04-24 20:59:57:_init_metadata:809 -- Col ('',)
+result.p:04-24 20:59:57:process_rows:1249 -- Row ('dbo',)
+base.py:04-24 20:59:57:_cursor_execute:1311 -- SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+base.py:04-24 20:59:57:_cursor_execute:1312 -- ()
+base.py:04-24 20:59:57:_cursor_execute:1311 -- SELECT CAST('test unicode returns' AS NVARCHAR(60)) AS anon_1
+base.py:04-24 20:59:57:_cursor_execute:1312 -- ()
+base.py:04-24 20:59:58:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 20:59:58:_execute_context:1207 -- ('files', 'dbo')
+result.p:04-24 20:59:59:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 20:59:59:process_rows:1249 -- Row ('dbo', 'files', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:04-24 20:59:59:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 20:59:59:_execute_context:1207 -- ('owner', 'dbo')
+result.p:04-24 20:59:59:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 20:59:59:process_rows:1249 -- Row ('dbo', 'owner', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:04-24 20:59:59:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 20:59:59:_execute_context:1207 -- ('dates', 'dbo')
+result.p:04-24 21:00:00:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 21:00:00:process_rows:1249 -- Row ('dbo', 'dates', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:04-24 21:00:00:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 21:00:00:_execute_context:1207 -- ('closure', 'dbo')
+result.p:04-24 21:00:00:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 21:00:00:process_rows:1249 -- Row ('dbo', 'closure', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:04-24 21:00:01:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 21:00:01:_execute_context:1207 -- ('filename', 'dbo')
+result.p:04-24 21:00:01:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 21:00:01:process_rows:1249 -- Row ('dbo', 'filename', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:04-24 21:00:01:_execute_context:1205 -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:04-24 21:00:01:_execute_context:1207 -- ('tasks', 'dbo')
+result.p:04-24 21:00:02:_init_metadata:809 -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:04-24 21:00:02:process_rows:1249 -- Row ('dbo', 'tasks', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+dsds.py:04-24 21:00:02:start:19 -- start
+dsds.py:04-24 21:00:02:start:26 -- (100000000, 200000000)
+get_file:04-24 21:00:02:loadFiles:265 -- Start loadFiles, 527e4afc-4598-400f-8536-afa5324f0ba4 root
+requests:04-24 21:00:02:__call__:117 -- Making request: POST https://oauth2.googleapis.com/token
+connecti:04-24 21:00:02:_new_conn:817 -- Starting new HTTPS connection (1): oauth2.googleapis.com
+configlo:04-24 21:00:02:handle_exception:79 -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/urllib3/connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/urllib3/connectionpool.py", line 597, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/urllib3/connectionpool.py", line 345, in _make_request
+    self._validate_conn(conn)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/urllib3/connectionpool.py", line 844, in _validate_conn
+    conn.connect()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/urllib3/connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/urllib3/connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x7fdd47035970>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/requests/adapters.py", line 430, in send
+    resp = conn.urlopen(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/urllib3/connectionpool.py", line 648, in urlopen
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7fdd47035970>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/google/auth/transport/requests.py", line 118, in __call__
+    response = self.session.request(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/requests/sessions.py", line 502, in request
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/requests/sessions.py", line 612, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/requests/adapters.py", line 504, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7fdd47035970>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "dsds.py", line 45, in <module>
+    start()
+  File "dsds.py", line 42, in start
+    loadFiles(uid, workingPath, fileid, creds)
+  File "/home/henry/pydocs/processing/get_files.py", line 274, in loadFiles
+    TestUtil.refresh_creds(_creds)
+  File "/home/henry/pydocs/processing/datutils/test_utils.py", line 49, in refresh_creds
+    cls.creds.refresh(Request())
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/google/oauth2/credentials.py", line 124, in refresh
+    _client.refresh_grant(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/google/oauth2/_client.py", line 237, in refresh_grant
+    response_data = _token_endpoint_request(request, token_uri, body)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/google/oauth2/_client.py", line 105, in _token_endpoint_request
+    response = request(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/google/auth/transport/requests.py", line 124, in __call__
+    six.raise_from(new_exc, caught_exc)
+  File "<string>", line 3, in raise_from
+google.auth.exceptions.TransportError: HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7fdd47035970>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))

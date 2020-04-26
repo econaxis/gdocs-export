@@ -1,4 +1,5 @@
 import random
+import secrets
 from datetime import datetime
 import sys
 from queue import Queue
@@ -7,6 +8,7 @@ import time
 import threading
 import secrets
 import sqlalchemy as sqlal
+import multiprocessing as mp
 from sqlalchemy import create_engine, MetaData
 from sqlalchemy.orm import sessionmaker, scoped_session
 import pprint
@@ -17,28 +19,61 @@ from logging import FileHandler
 import configlog
 from processing.models import Owner, Files, Closure, Dates, Base, Filename
 
+scrt = secrets.token_urlsafe(7)
+token = datetime.now().strftime("%d-%H.%f") + scrt
 
 PARAMS = os.environ["SQL_CONN"]
 
-logging.debug(PARAMS)
+ENGINE = sqlal.create_engine("mssql+pyodbc:///?odbc_connect=%s" % PARAMS, pool_size=15, echo = False, max_overflow=300)
 
-ENGINE = sqlal.create_engine("mssql+pyodbc:///?odbc_connect=%s" % PARAMS, pool_size=5, echo = False, max_overflow=300)
-#ENGINE = sqlal.create_engine('sqlite+pysqlite:///test.db', echo = True)
 logger = logging.getLogger(__name__)
 
 Base.metadata.create_all(bind=ENGINE)
 
 CONN = ENGINE.connect()
 
-_session = sessionmaker(bind=ENGINE, autoflush=True)
-sess = _session()
-scoped_sess = scoped_session(_session)
+_session = sessionmaker(bind=ENGINE)
 
-def commit(q, sess, _type = None, add = False):
-    logger.info("process begin sleep")
+v_scoped_session = scoped_session(_session)
+
+
+def report(lt_files, print_event):
+    while not print_event.is_set():
+        logger.info("lt_files size %d ", lt_files.qsize())
+        time.sleep(30)
+
+        if random.random() < 0.5:
+            p = configlog.sendmail(True)
+            time.sleep(10)
+            p.join()
+
+def adder(queue, sess):
+    counter = 0
+
+    for i in queue:
+        counter+=1
+        sess.add(i)
+        if(counter%60==0):
+            logger.info("rem %d/%d", counter, len(queue))
+            sess.flush()
+
+    logger.info("flushing adder")
+    sess.flush()
+    return
+    while(not queue.empty()):
+        counter +=1
+        sess.add(queue.get_nowait())
+        if(counter %50 == 0):
+            sess.flush()
+    sess.flush()
+
+
+
+def commit(q, _type = None, add = False):
+    sess = v_scoped_session()
     _temp = []
     counter = 0
-    iters = round(q.qsize() / 10000)
+    iters = round(q.qsize() / 1400)
     iters = max(iters, 70)
     logger.info("iters: %d, len: %d", iters, q.qsize())
     while (q.qsize()):
@@ -49,7 +84,6 @@ def commit(q, sess, _type = None, add = False):
             break
 
         if (counter % iters == 0):
-            time.sleep(random.uniform(0, 1))
             logger.info("flushing, len: %d", q.qsize())
             if(add):
                 sess.bulk_save_objects(_temp)
@@ -59,48 +93,68 @@ def commit(q, sess, _type = None, add = False):
             logger.info("committing")
             sess.commit()
             _temp = []
-            logger.info("done flushing")
 
-
-    logger.info("while loop done")
-
-    if(add):
+    logger.debug('while loop done')
+    if(_temp and add):
         sess.bulk_save_objects(_temp)
-    else:
+    elif _temp and add:
         sess.bulk_insert_mappings(_type, _temp)
 
     sess.commit()
+    v_scoped_session.remove()
     logger.debug("commit func done")
-
-
-
-def adder(queue, sess):
-    counter = 0
-
-    for i in queue:
-        counter+=1
-        sess.add(i)
-        if(counter%90==0):
-            logger.info("rem %d/%d", counter, len(queue))
-            sess.flush()
-
-    logger.info("committing")
-    sess.commit()
     return
-    while(not queue.empty()):
+
+
+
+
+def load_from_dict(lt_files, fileid_obj_map):
+    time.sleep(random.uniform(5, 40))
+    sess = v_scoped_session()
+    counter = 0
+    lt_dates = Queue()
+
+    files = []
+
+    while(lt_files.qsize()):
+        file_model, file_data = lt_files.get_nowait()
+
+        files.append((file_model, file_data))
+        sess.add(file_model)
+
         counter +=1
-        sess.add(queue.get_nowait())
-        if(counter %50 == 0):
-            sess.flush()
-    sess.flush()
+        if(counter % 10 == 0):
+            sess.commit()
+
+            for m, d in files:
+                fileid = m.id
+                bins = d[1][:-1]
+                values = d[0]
+
+                for counter, _bin_date in enumerate(bins):
+                    lt_dates.put(dict(fileId = fileid, bins = bins[counter], values = values[counter]))
+
+            files = []
+
+            logger.info(f"len dates: {lt_dates.qsize()}")
+
+            p = [threading.Thread(target = commit, args = (lt_dates, Dates)) for i in range(35)]
+            _t = [x.start() for x in p]
+            _t = [x.join() for x in p]
+            sess.commit()
 
 def start(userid, path):
+    sess = v_scoped_session()
     logger.info("STARTING SQL %s %s", userid, path)
-    import secrets
-    scrt = secrets.token_urlsafe(7)
+
+    logger.debug("setting sys except hook")
+
+    #Likely a bug? Excepthook not getting called, have to set again
+
     temp = name=userid[0:15] + datetime.now().strftime("%m %d %h") + scrt
-    token = datetime.now().strftime("%d-%H.%f") + scrt
     owner = Owner(name=temp[0:39])
+
+    logger.debug(f"Owner name: {temp[0:39]}")
     sess.add(owner)
     sess.commit()
 
@@ -109,102 +163,78 @@ def start(userid, path):
     files = {}
 
     names = pickle.load(open(path+'pickleIndex', 'rb'))
-    for n in names:
+    procs = []
+
+
+    for n in names[0:2]:
         files.update(pickle.load(open(n, 'rb')))
+        continue
+
+        '''
+        procs.append(threading.Thread(target = load_from_dict, args = (pickle.load(open(n, 'rb')), owner)))
+        procs[-1].start()
+        procs[-1].join()
+        '''
+
+
+    lt_files = Queue()
+    lt_dates = Queue()
+    #fileid_obj_map maps gdrive fileids to file objects defined in models
+    fileid_obj_map = {}
+
+    #FILES
+    for f in files:
+        fileId = f[-1]
+        logger.info("File: %s", fileId)
+        if(fileId in fileid_obj_map):
+            logger.info("duplicated fileid found, skipping")
+            continue
+
+        if(files[f]):
+            bin_edges = files[f][1]
+            #Get last bin edge, convert to datetime
+            last_mod = datetime.fromtimestamp(bin_edges[-1])
+        else:
+            last_mod = None
+
+        file_obj = Files(fileId = fileId + ":"+token + secrets.token_urlsafe(3),
+                lastModDate = last_mod, owner = owner, isFile = True)
+
+        fileid_obj_map[fileId] = file_obj
+
+        lt_files.put((file_obj, files[f]))
+
+    logger.debug("len of id map %d len of files %d", len(fileid_obj_map), lt_files.qsize())
+
+   # sess.bulk_save_objects(lt_files)
+
+    print_event = threading.Event()
+
+    pr = threading.Thread(target = report, args = (lt_files, print_event))
+    pr.start()
+
+    load_from_dict(lt_files, fileid_obj_map)
+    p = threading.Thread(target = load_from_dict, args = (lt_files, fileid_obj_map))
+    p.start()
+    logger.info("starting bulk save for lt_files")
+    p.join()
+
+
 
 
 
     clos = pickle.load(open(path + 'closure.pickle', 'rb'))
     idmapper = pickle.load(open(path + 'idmapper.pickle', 'rb'))
 
-    logger.info("Finished loading pickles")
+    logger.debug("Finished loading pickles")
 
 
-    lt_files = []
-    lt_dates = Queue()
     lt_closure = []
     lt_filenames = []
 
 
-    tdManage = []
 
-    #fileid_obj_map maps gdrive fileids to file objects defined in models
-    fileid_obj_map = {}
-
-    for f in files:
-        fileId = f[-1]
-        logger.warning("File: %s", fileId)
-        if(fileId in fileid_obj_map):
-            logger.warning("duplicaed fileid found, skipping")
-            continue
-
-        if(files[f]):
-            last_mod = files[f][0]
-        else:
-            last_mod = None
-
-        file_obj = Files(fileId = fileId + ":"+token,
-                lastModDate = last_mod, owner = owner, isFile = True)
-
-        fileid_obj_map[fileId] = file_obj
-
-        lt_files.append(file_obj)
-
-    #logger.debug("len of id map %d len of q %d", len(fileid_obj_map), lt_files.qsize())
-
-   # sess.bulk_save_objects(lt_files)
-
-
-    logger.info("starting bulk save")
-    adder(lt_files, sess)
-    logger.info("bulked save done")
-    
-    '''
-    for i in range(25):
-        scoped_sess = scoped_session(_session)
-        x = threading.Thread(
-            target=commit, args=(
-                lt_files, scoped_sess, Files,  True))
-        tdManage.append(x)
-        x.start()
-        logger.debug('starting new thread')
-
-    for i in tdManage:
-        logger.debug("joining")
-        i.join()
-    
-    logger.debug('joining done')
-    tdManage = []
-    '''
-
-    sess.flush()
-
-    for i in lt_files:
-        print(i.id)
-
-    logger.info('sess flush done')
-
-    for f in files:
-        gdriveid = f[-1]
-        file_obj = fileid_obj_map[gdriveid]
-
-        for d in files[f]:
-            fileid = file_obj.id
-            lt_dates.put(dict(moddate = d, fileId = fileid))
-
-    logger.info('starting thread for dates')
-
-
-    for i in range(30):
-        time.sleep(random.uniform(0, 10))
-        scoped_sess = scoped_session(_session)
-        x = threading.Thread(
-            target=commit, args=(
-                lt_dates, scoped_sess, Dates))
-        tdManage.append(x)
-        x.start()
-
-
+    add_count = [0, 0]
 
     for c in clos:
         try:
@@ -222,6 +252,8 @@ def start(userid, path):
             lt_files.append(file_obj1)
 
         lt_closure.append(Closure(parent_relationship = file_obj, files_relationship = fileid_obj_map[c[1]], owner = owner, depth = c[2]))
+        logger.debug("adding lt_closure")
+        add_count[0]+=1
 
     sess.flush()
 
@@ -235,52 +267,30 @@ def start(userid, path):
             lt_files.append(file_obj)
 
         lt_filenames.append(Filename(fileName = idmapper[n], files = file_obj, owner = owner))
+        logger.debug("adding lt_filenames")
+        add_count[1]+=1
+
+    logger.debug("flushing lt_filenames, lt_closure")
+    adder(lt_filenames)
+
+    adder(lt_closure)
 
     sess.flush()
 
+    logger.warning("Done all filename, closure")
 
-    adder(lt_filenames, sess)
-    sess.commit()
-    adder(lt_closure, sess)
-
-    for i in tdManage:
-        logger.debug('joining')
-        i.join()
 
     sess.commit()
+
+    logger.info(f"sql done, added closure: {add_count[0]}, added filename: {add_count[1]}")
+
+    print_event.set()
+
+    pr.join()
 
     return
 
 
-
-
-    for i in range(thread_count):
-        scoped_sess = scoped_session(_session)
-
-        x = threading.Thread(
-            target=commit, args=(
-                lt_files, scoped_sess, Files))
-        tdManage.append(x)
-        x.start()
-
-    for i in range(thread_count):
-        scoped_sess = scoped_session(_session)
-        scoped_sess1 = scoped_session(_session)
-
-        x = threading.Thread( target=commit, args=( lt_closure, scoped_sess, Closure))
-        x1 = threading.Thread( target=commit, args=( lt_filenames, scoped_sess1, Filename))
-
-        tdManage.append(x)
-        tdManage.append(x1)
-        x1.start()
-        x.start()
-
-    for x in tdManage:
-        logger.info("donse")
-        x.join()
-
-
-    print("userid: ", userid)
 
 if __name__ == '__main__':
    # Owner.__table__.insert(bind = engine).values([dict(name = "default")])

@@ -57,28 +57,32 @@ def getNormalBubbleData(sess, userid):
     #Function should ideally be run only once per user, because of cache.memoize
 
     #Get all the files with their counts of edits and last modified time
-    allFiles = sess.query(Files.id, Dates.moddate).join(Dates).join(Owner).filter(Owner.id == userid).subquery()
+    allFiles = sess.query(Files.id, Dates.values.label('values')).join(Dates).join(Owner).filter(Owner.id == userid).subquery()
 
     #TESTING: no owner query
     #allFiles = sess.query(Files.id, Dates.moddate).join(Dates).join(Owner).subquery()
 
     #Group by id
-    times = sess.query(allFiles.c.id, func.count('*').label('count'),
-            func.max(allFiles.c.moddate).label('max')).group_by(allFiles.c.id).subquery()
+    times = sess.query(allFiles.c.id, func.sum(allFiles.c.values).label('count')) \
+            .group_by(allFiles.c.id).subquery()
 
 
     #Join id to filename
     #per element in count: (filename, file.id, count, last mod date)
-    count = sess.query(Filename.fileName, times.c.id, times.c.count, times.c.max).join(times).all()
+    #per elemnt in count: (id, count, filename, lastmoddate)
+    count = sess.query(times.c.id, times.c.count, Filename.fileName, Files.lastModDate).join(Filename, Filename.id == times.c.id) \
+            .join(Files, Files.id == times.c.id).all()
+
+    #count = sess.query(times, Filename.fileName, Files.lastModDate, t_modtimes.c.id, times.c.count).join(times).all()
 
 
     activity = {}
     activity["time"] = [x[3] for x in count]
-    activity["files"] = [x[0] for x in count]
-    activity["marker"] = [log(x[2], 2) * 1.3 for x in count]
+    activity["files"] = [x[2] for x in count]
+    activity["marker"] = [log(x[1], 2) * 1.3 for x in count]
 
     #Custom represents file.id
-    activity["custom"] = [x[1] for x in count]
+    activity["custom"] = [x[0] for x in count]
 
     for counter, f in enumerate(activity["custom"]):
         # idIndexMapper indexes filename and corresponding index

@@ -1,0 +1,149 @@
+dsds.py:25,18:11:02:start:18:8ExoOw -- start
+get_file:25,18:11:09:loadFiles:283:8ExoOw -- Start loadFiles, 527e4afc-4598-400f-8536-afa5324f0ba4 0B4Fujvv5MfqbVElBU01fZUxHcUk
+requests:25,18:11:09:__call__:117:8ExoOw -- Making request: POST https://oauth2.googleapis.com/token
+connecti:25,18:11:09:_new_conn:817:8ExoOw -- Starting new HTTPS connection (1): oauth2.googleapis.com
+connecti:25,18:11:09:_make_request:393:8ExoOw -- https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+selector:25,18:11:09:__init__:59:8ExoOw -- Using selector: EpollSelector
+test_uti:25,18:11:09:print_size:82:8ExoOw -- ---------------Memory usage: 87924 (kb)---------------0 mins since start
+test_uti:25,18:11:09:print_size:88:8ExoOw -- /usr/lib/python3.8/tracemalloc.py:397: size=512 B (+512 B), count=3 (+3), average=171 B
+test_uti:25,18:11:09:print_size:88:8ExoOw -- /usr/lib/python3.8/tracemalloc.py:534: size=472 B (+472 B), count=2 (+2), average=236 B
+test_uti:25,18:11:09:print_size:88:8ExoOw -- /home/henry/pydocs/processing/datutils/test_utils.py:82: size=448 B (+448 B), count=1 (+1), average=448 B
+test_uti:25,18:11:09:print_size:88:8ExoOw -- /home/henry/pydocs/processing/datutils/test_utils.py:86: size=424 B (+424 B), count=1 (+1), average=424 B
+test_uti:25,18:11:09:print_size:88:8ExoOw -- /home/henry/pydocs/processing/datutils/test_utils.py:79: size=0 B (-424 B), count=0 (-1)
+test_uti:25,18:11:09:print_size:88:8ExoOw -- /home/henry/pydocs/processing/datutils/test_utils.py:80: size=400 B (+400 B), count=1 (+1), average=400 B
+test_uti:25,18:11:09:print_size:88:8ExoOw -- /usr/lib/python3.8/logging/__init__.py:330: size=48 B (+48 B), count=2 (+2), average=24 B
+test_uti:25,18:11:09:print_size:88:8ExoOw -- /usr/lib/python3.8/tracemalloc.py:291: size=40 B (+40 B), count=1 (+1), average=40 B
+test_uti:25,18:11:09:print_size:88:8ExoOw -- /usr/lib/python3.8/logging/__init__.py:329: size=24 B (+24 B), count=1 (+1), average=24 B
+test_uti:25,18:11:09:print_size:88:8ExoOw -- /usr/lib/python3.8/logging/__init__.py:289: size=24 B (+24 B), count=1 (+1), average=24 B
+test_uti:25,18:11:09:print_size:90:8ExoOw -- 
+
+------------------------------
+
+
+test_uti:25,18:11:09:print_size:93:8ExoOw -- /usr/lib/python3.8/tracemalloc.py:397: size=512 B, count=3, average=171 B
+test_uti:25,18:11:09:print_size:93:8ExoOw -- /usr/lib/python3.8/tracemalloc.py:534: size=472 B, count=2, average=236 B
+test_uti:25,18:11:09:print_size:93:8ExoOw -- /home/henry/pydocs/processing/datutils/test_utils.py:82: size=448 B, count=1, average=448 B
+test_uti:25,18:11:09:print_size:93:8ExoOw -- /home/henry/pydocs/processing/datutils/test_utils.py:86: size=424 B, count=1, average=424 B
+test_uti:25,18:11:09:print_size:93:8ExoOw -- /home/henry/pydocs/processing/datutils/test_utils.py:80: size=400 B, count=1, average=400 B
+test_uti:25,18:11:09:print_size:93:8ExoOw -- /usr/lib/python3.8/logging/__init__.py:330: size=48 B, count=2, average=24 B
+test_uti:25,18:11:09:print_size:93:8ExoOw -- /usr/lib/python3.8/tracemalloc.py:291: size=40 B, count=1, average=40 B
+test_uti:25,18:11:09:print_size:93:8ExoOw -- /usr/lib/python3.8/logging/__init__.py:329: size=24 B, count=1, average=24 B
+test_uti:25,18:11:09:print_size:93:8ExoOw -- /usr/lib/python3.8/logging/__init__.py:289: size=24 B, count=1, average=24 B
+test_uti:25,18:11:09:print_size:93:8ExoOw -- /home/henry/pydocs/processing/datutils/test_utils.py:83: size=24 B, count=1, average=24 B
+test_uti:25,18:11:09:print_size:100:8ExoOw -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/0 at 2020-04-25 18:11:09.560593
+dumped: 0
+get_file:25,18:11:10:getIdsRecursive:53:8ExoOw -- getIdsRecursive looping
+get_file:25,18:11:10:getIdsRecursive:53:8ExoOw -- getIdsRecursive looping
+get_file:25,18:11:11:getIdsRecursive:53:8ExoOw -- getIdsRecursive looping
+get_file:25,18:11:11:getIdsRecursive:53:8ExoOw -- getIdsRecursive looping
+get_file:25,18:11:11:getIdsRecursive:53:8ExoOw -- getIdsRecursive looping
+get_file:25,18:11:12:getIdsRecursive:53:8ExoOw -- getIdsRecursive looping
+get_file:25,18:11:12:getIdsRecursive:53:8ExoOw -- getIdsRecursive looping
+get_file:25,18:11:13:getIdsRecursive:53:8ExoOw -- getIdsRecursive looping
+get_file:25,18:11:13:getRevision:166:8ExoOw -- getRevision looping
+gdoc.py:25,18:11:13:async_init:24:8ExoOw -- async init called
+get_file:25,18:11:13:getIdsRecursive:53:8ExoOw -- getIdsRecursive looping
+get_file:25,18:11:13:getIdsRecursive:53:8ExoOw -- getIdsRecursive looping
+gdoc.py:25,18:11:14:get_last_revision:53:8ExoOw -- last revision id 394
+gdoc.py:25,18:11:14:async_init:33:8ExoOw -- after await 394
+connecti:25,18:11:14:_new_conn:817:8ExoOw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:11:14:_make_request:393:8ExoOw -- https://docs.google.com:443 "GET /document/d/1TYIOfz_uzybWgEeexs8iE64jcjt-AmUegOP6KORNaWQ/revisions/load?id=1TYIOfz_uzybWgEeexs8iE64jcjt-AmUegOP6KORNaWQ&start=1&end=394 HTTP/1.1" 200 None
+gdoc.py:25,18:11:14:download_details:68:8ExoOw -- Cannot get revisions.json
+Traceback (most recent call last):
+  File "/home/henry/pydocs/processing/gdoc.py", line 66, in download_details
+    assert response.status == 200
+AttributeError: 'Response' object has no attribute 'status'
+get_file:25,18:11:14:getRevision:198:8ExoOw -- []
+get_file:25,18:11:14:getRevision:201:8ExoOw -- google doc
+get_file:25,18:11:14:getRevision:166:8ExoOw -- getRevision looping
+gdoc.py:25,18:11:14:async_init:24:8ExoOw -- async init called
+get_file:25,18:11:14:getIdsRecursive:53:8ExoOw -- getIdsRecursive looping
+test_uti:25,18:11:14:print_size:82:8ExoOw -- ---------------Memory usage: 88600 (kb)---------------0 mins since start
+test_uti:25,18:11:14:print_size:88:8ExoOw -- <frozen importlib._bootstrap_external>:580: size=79.5 KiB (+79.5 KiB), count=939 (+939), average=87 B
+test_uti:25,18:11:14:print_size:88:8ExoOw -- /home/henry/pydocs/processing/datutils/test_utils.py:158: size=16.4 KiB (+16.4 KiB), count=191 (+191), average=88 B
+test_uti:25,18:11:14:print_size:88:8ExoOw -- /home/henry/pydocs/processing/get_files.py:108: size=11.5 KiB (+11.5 KiB), count=274 (+274), average=43 B
+test_uti:25,18:11:14:print_size:88:8ExoOw -- /usr/lib/python3.8/ssl.py:906: size=10.6 KiB (+10.6 KiB), count=172 (+172), average=63 B
+test_uti:25,18:11:14:print_size:88:8ExoOw -- /usr/lib/python3.8/abc.py:102: size=9629 B (+9629 B), count=100 (+100), average=96 B
+test_uti:25,18:11:14:print_size:88:8ExoOw -- /home/henry/pydocs/processing/get_files.py:100: size=6070 B (+6070 B), count=82 (+82), average=74 B
+test_uti:25,18:11:14:print_size:88:8ExoOw -- /usr/lib/python3.8/asyncio/events.py:81: size=5144 B (+5144 B), count=17 (+17), average=303 B
+test_uti:25,18:11:14:print_size:88:8ExoOw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:833: size=4032 B (+4032 B), count=4 (+4), average=1008 B
+test_uti:25,18:11:14:print_size:88:8ExoOw -- <frozen importlib._bootstrap>:219: size=3523 B (+3523 B), count=40 (+40), average=88 B
+test_uti:25,18:11:14:print_size:88:8ExoOw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:850: size=3056 B (+3056 B), count=12 (+12), average=255 B
+test_uti:25,18:11:14:print_size:90:8ExoOw -- 
+
+------------------------------
+
+
+test_uti:25,18:11:14:print_size:93:8ExoOw -- <frozen importlib._bootstrap_external>:580: size=79.5 KiB, count=939, average=87 B
+test_uti:25,18:11:14:print_size:93:8ExoOw -- /home/henry/pydocs/processing/datutils/test_utils.py:158: size=16.4 KiB, count=191, average=88 B
+test_uti:25,18:11:14:print_size:93:8ExoOw -- /home/henry/pydocs/processing/get_files.py:108: size=11.5 KiB, count=274, average=43 B
+test_uti:25,18:11:14:print_size:93:8ExoOw -- /usr/lib/python3.8/ssl.py:906: size=10.6 KiB, count=172, average=63 B
+test_uti:25,18:11:14:print_size:93:8ExoOw -- /usr/lib/python3.8/abc.py:102: size=9629 B, count=100, average=96 B
+test_uti:25,18:11:14:print_size:93:8ExoOw -- /home/henry/pydocs/processing/get_files.py:100: size=6070 B, count=82, average=74 B
+test_uti:25,18:11:14:print_size:93:8ExoOw -- /usr/lib/python3.8/asyncio/events.py:81: size=5144 B, count=17, average=303 B
+test_uti:25,18:11:14:print_size:93:8ExoOw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:833: size=4032 B, count=4, average=1008 B
+test_uti:25,18:11:14:print_size:93:8ExoOw -- <frozen importlib._bootstrap>:219: size=3523 B, count=40, average=88 B
+test_uti:25,18:11:14:print_size:93:8ExoOw -- /home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/aiohttp/client.py:850: size=3056 B, count=12, average=255 B
+test_uti:25,18:11:14:print_size:100:8ExoOw -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+1/69 at 2020-04-25 18:11:14.644962
+dumped: 0
+get_file:25,18:11:14:getIdsRecursive:53:8ExoOw -- getIdsRecursive looping
+test_uti:25,18:11:14:tryGetQueue:228:8ExoOw -- getIdswaiting 1 5
+gdoc.py:25,18:11:14:get_last_revision:53:8ExoOw -- last revision id 1336
+gdoc.py:25,18:11:14:async_init:33:8ExoOw -- after await 1336
+connecti:25,18:11:14:_new_conn:817:8ExoOw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:11:15:_make_request:393:8ExoOw -- https://docs.google.com:443 "GET /document/d/19Fu317bfo0V7yOIkfLvKtAU-UJYLf8d2Soy-jTvq1uc/revisions/load?id=19Fu317bfo0V7yOIkfLvKtAU-UJYLf8d2Soy-jTvq1uc&start=1&end=1336 HTTP/1.1" 200 None
+gdoc.py:25,18:11:15:download_details:68:8ExoOw -- Cannot get revisions.json
+Traceback (most recent call last):
+  File "/home/henry/pydocs/processing/gdoc.py", line 66, in download_details
+    assert response.status == 200
+AttributeError: 'Response' object has no attribute 'status'
+get_file:25,18:11:15:getRevision:198:8ExoOw -- []
+get_file:25,18:11:15:getRevision:201:8ExoOw -- google doc
+get_file:25,18:11:15:getRevision:166:8ExoOw -- getRevision looping
+gdoc.py:25,18:11:15:async_init:24:8ExoOw -- async init called
+gdoc.py:25,18:11:15:get_last_revision:53:8ExoOw -- last revision id 1946
+gdoc.py:25,18:11:15:async_init:33:8ExoOw -- after await 1946
+connecti:25,18:11:15:_new_conn:817:8ExoOw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:11:16:_make_request:393:8ExoOw -- https://docs.google.com:443 "GET /document/d/1eXJKzIcZCM6pAdVLLrvEyIwQBDDrtm8dComeZ_W7uOI/revisions/load?id=1eXJKzIcZCM6pAdVLLrvEyIwQBDDrtm8dComeZ_W7uOI&start=1&end=1946 HTTP/1.1" 200 None
+gdoc.py:25,18:11:16:download_details:68:8ExoOw -- Cannot get revisions.json
+Traceback (most recent call last):
+  File "/home/henry/pydocs/processing/gdoc.py", line 66, in download_details
+    assert response.status == 200
+AttributeError: 'Response' object has no attribute 'status'
+get_file:25,18:11:16:getRevision:198:8ExoOw -- []
+get_file:25,18:11:16:getRevision:201:8ExoOw -- google doc
+get_file:25,18:11:16:getRevision:166:8ExoOw -- getRevision looping
+gdoc.py:25,18:11:16:async_init:24:8ExoOw -- async init called
+gdoc.py:25,18:11:16:get_last_revision:53:8ExoOw -- last revision id 12
+gdoc.py:25,18:11:16:async_init:33:8ExoOw -- after await 12
+connecti:25,18:11:16:_new_conn:817:8ExoOw -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:11:17:_make_request:393:8ExoOw -- https://docs.google.com:443 "GET /document/d/1Ux4BA5BVJTcsGcTcGp8CtB85ahlWp0h83AGvrtAhnTg/revisions/load?id=1Ux4BA5BVJTcsGcTcGp8CtB85ahlWp0h83AGvrtAhnTg&start=1&end=12 HTTP/1.1" 200 None
+gdoc.py:25,18:11:17:download_details:68:8ExoOw -- Cannot get revisions.json
+Traceback (most recent call last):
+  File "/home/henry/pydocs/processing/gdoc.py", line 66, in download_details
+    assert response.status == 200
+AttributeError: 'Response' object has no attribute 'status'
+get_file:25,18:11:17:getRevision:198:8ExoOw -- []
+get_file:25,18:11:17:getRevision:201:8ExoOw -- google doc
+get_file:25,18:11:17:getRevision:166:8ExoOw -- getRevision looping
+get_file:25,18:11:17:getRevision:183:8ExoOw -- not google doc
+configlo:25,18:11:17:handle_exception:82:8ExoOw -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "dsds.py", line 37, in <module>
+    start()
+  File "dsds.py", line 34, in start
+    loadFiles(uid, workingPath, fileid, creds)
+  File "/home/henry/pydocs/processing/get_files.py", line 308, in loadFiles
+    loop.run_until_complete(asyncio.gather(startTask))
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 603, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 570, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 1823, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/usr/lib/python3.8/selectors.py", line 468, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+configlo:25,18:11:17:sendmail:103:8ExoOw -- sending mail

@@ -1,0 +1,11 @@
+configlo:25,20:30:23:handle_exception:82:I4pcFQ -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 193, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/henry/pydocs/processing/sql.py", line 35, in <module>
+    sess = scoped_session(_session)
+TypeError: __call__() takes 1 positional argument but 2 were given
+configlo:25,20:30:23:mp_sendmail:115:I4pcFQ -- sending mail
+configlo:25,20:30:24:handle_exception:86:I4pcFQ -- exiting! from sshook

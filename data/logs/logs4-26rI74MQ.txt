@@ -1,0 +1,261 @@
+sql.py:26,09:04:03:start:177:rI74MQ -- STARTING SQL testing2020-04-26 09:04:03.106934 /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+sql.py:26,09:04:03:start:179:rI74MQ -- setting sys except hook
+sql.py:26,09:04:03:start:186:rI74MQ -- Owner name: testing2020-04-04 26 Aprgu632ZZ5pw
+sql.py:26,09:04:04:start:190:rI74MQ -- Added owner row, name: testing2020-04-04 26 Aprgu632ZZ5pw id: 117
+sql.py:26,09:04:04:load_from_dict:111:rI74MQ -- File: 0B4Fujvv5Mfqbb2d0TnNhcFhhREdadmRaaEI3QzVabnE2NE5v
+sql.py:26,09:04:04:load_from_dict:111:rI74MQ -- File: 1QNNRjwRnVqieEoA5i9CdaSCyT_6Bi4vkmGO8YuZHytU
+sql.py:26,09:04:04:load_from_dict:111:rI74MQ -- File: 1cGlmEaWYTHdD_Y3vlkIMMkZhdmosSZo_rQYxcSBoDbQ
+sql.py:26,09:04:04:load_from_dict:111:rI74MQ -- File: 1G-K37QbHDgyLsJaUjRsROtLZZkj1fmqyC5YyHzOh-_Q
+sql.py:26,09:04:04:load_from_dict:111:rI74MQ -- File: 1cIWwf3nZ2RAeriW8GerxZHY9nirLdcc968-GgSnRkjQ
+sql.py:26,09:04:04:load_from_dict:111:rI74MQ -- File: 16wsJnYBwdOHbuGROxWDFe2Tcf1w8T49TwWnGvq5OjXY
+sql.py:26,09:04:04:load_from_dict:111:rI74MQ -- File: 1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ
+sql.py:26,09:04:04:load_from_dict:111:rI74MQ -- File: 12NnsHOjtevUATb-yYIgDFFLyYajiHxhJ6xHiJnIXj-8
+sql.py:26,09:04:04:load_from_dict:111:rI74MQ -- File: 1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4
+sql.py:26,09:04:04:load_from_dict:111:rI74MQ -- File: 1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08
+sql.py:26,09:04:04:load_from_dict:111:rI74MQ -- File: 1C09g5-ATBpXNJOmH8ANwCnq7Pk6vClzI1lmFYcqaH6A
+sql.py:26,09:04:04:load_from_dict:111:rI74MQ -- File: 1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s
+sql.py:26,09:04:04:load_from_dict:111:rI74MQ -- File: 17MhIJt6Bl2HnDLFiNZPRh7UOx-Co9FMvPWBsRnJRfsM
+sql.py:26,09:04:04:load_from_dict:111:rI74MQ -- File: 1B37ygx-Iwh0EpS1c5fqpbK6AqE39m6ao4WD4uMWknzc
+sql.py:26,09:04:04:load_from_dict:111:rI74MQ -- File: 1jRrZTHn-oge2sTqxli8Um026xuniXAeezLZn4B2zVSg
+sql.py:26,09:04:04:load_from_dict:111:rI74MQ -- File: 1D48Gz6hmPkE6sATNqYoA3P3Hdjtq1y2zHRjrh1kH64I
+sql.py:26,09:04:04:load_from_dict:111:rI74MQ -- File: 1cctIQ_TyhvRFgFVkzjwcfDL1w0i4L2lF-78_WM7Hy6A
+sql.py:26,09:04:04:load_from_dict:111:rI74MQ -- File: 1o6ARVj7jhE2K_VNnX2BYajR2XBX1kdMu
+sql.py:26,09:04:04:load_from_dict:111:rI74MQ -- File: 15e68EIS9xXe5Yvzju4GtkyhFKJ_UgUA9juJKiUpPeUA
+sql.py:26,09:04:04:load_from_dict:111:rI74MQ -- File: 186ge00t4G7kcx1QdCIHxRhTnZfzpSTGDgfAXkdbD_Ig
+sql.py:26,09:04:04:load_from_dict:111:rI74MQ -- File: 1wfaH9BSg8wrDaKXR54KK1y8pd-miEOQNj3E8GL6fTfg
+sql.py:26,09:04:04:load_from_dict:111:rI74MQ -- File: 1G1g252JtmrFnXI5HaLLEafe8apipzquYwQQ0hbQIaho
+sql.py:26,09:04:04:load_from_dict:111:rI74MQ -- File: 1sF1pFtL8fsnQBBAoTt8P7YGOVZVr6-6a4BLeU3PBncI
+sql.py:26,09:04:04:load_from_dict:111:rI74MQ -- File: 1LuJ1Ln_dAc7n3Qj0zNE4yuYfFG6NEgxO-hsDA9M4qpQ
+sql.py:26,09:04:04:load_from_dict:111:rI74MQ -- File: 15Fi6RHQtC8H-GOJC_gjiED_9rNxtCdahEGtLvBUZcv4
+sql.py:26,09:04:04:load_from_dict:111:rI74MQ -- File: 1H1aSubiwctKw-qMV6t1aGlfooY2Qn9V6Y01phHpg-kw
+sql.py:26,09:04:04:load_from_dict:111:rI74MQ -- File: 1WbGMwYDyqP6aCDpf5fBbR7sneMicXtvEtfm3Z4k0Vzs
+sql.py:26,09:04:04:load_from_dict:111:rI74MQ -- File: 16wh_FgWE8Y0tUpAdIte4WyuB91_ypCySi82lvdhAiFY
+sql.py:26,09:04:04:load_from_dict:111:rI74MQ -- File: 1WKk8W5cG-CYKBYN_cWpAdziiPVhvQZEAarnPwf58z4Y
+sql.py:26,09:04:04:load_from_dict:111:rI74MQ -- File: 1YJPVyeYstaXiTguoSGCe_Kb3y4yv49N224nUrfLo7rU
+sql.py:26,09:04:04:load_from_dict:111:rI74MQ -- File: 1PscMFhdtA31Nh7ELmM18NqjUfLDeGiexKI6q-lI0fKY
+sql.py:26,09:04:04:load_from_dict:111:rI74MQ -- File: 1YlY2MTwu_I6PGWgmkNqFXYJVvNSQKMi7j0WulyoD75w
+sql.py:26,09:04:04:load_from_dict:111:rI74MQ -- File: 1Gxvc-37IOivNHIPUJBI1v3jf5e-Hwcby_VZbN-k-Bfc
+sql.py:26,09:04:04:load_from_dict:111:rI74MQ -- File: 1T1Sj69DxCTpEQI2pH0O04l_PSx1V3xsxYOnkiHPEPis
+sql.py:26,09:04:04:load_from_dict:130:rI74MQ -- len of id map 34 len of files 34
+sql.py:26,09:04:04:load_from_dict:135:rI74MQ -- starting bulk save for lt_files
+sql.py:26,09:04:10:load_from_dict:141:rI74MQ -- bulked save done for lt_files
+sql.py:26,09:04:10:load_from_dict:148:rI74MQ -- sess flush done
+sql.py:26,09:04:10:load_from_dict:157:rI74MQ -- adding dates for file: 13567
+sql.py:26,09:04:10:load_from_dict:157:rI74MQ -- adding dates for file: 13568
+sql.py:26,09:04:10:load_from_dict:157:rI74MQ -- adding dates for file: 13569
+sql.py:26,09:04:10:load_from_dict:157:rI74MQ -- adding dates for file: 13570
+sql.py:26,09:04:10:load_from_dict:157:rI74MQ -- adding dates for file: 13571
+sql.py:26,09:04:11:load_from_dict:157:rI74MQ -- adding dates for file: 13572
+sql.py:26,09:04:11:load_from_dict:157:rI74MQ -- adding dates for file: 13573
+sql.py:26,09:04:11:load_from_dict:157:rI74MQ -- adding dates for file: 13574
+sql.py:26,09:04:11:load_from_dict:157:rI74MQ -- adding dates for file: 13575
+sql.py:26,09:04:11:load_from_dict:157:rI74MQ -- adding dates for file: 13576
+sql.py:26,09:04:11:load_from_dict:157:rI74MQ -- adding dates for file: 13577
+sql.py:26,09:04:12:load_from_dict:157:rI74MQ -- adding dates for file: 13578
+sql.py:26,09:04:12:load_from_dict:157:rI74MQ -- adding dates for file: 13579
+sql.py:26,09:04:12:load_from_dict:157:rI74MQ -- adding dates for file: 13580
+sql.py:26,09:04:12:load_from_dict:157:rI74MQ -- adding dates for file: 13581
+sql.py:26,09:04:13:load_from_dict:157:rI74MQ -- adding dates for file: 13582
+sql.py:26,09:04:13:load_from_dict:157:rI74MQ -- adding dates for file: 13583
+sql.py:26,09:04:13:load_from_dict:157:rI74MQ -- adding dates for file: 13584
+sql.py:26,09:04:13:load_from_dict:157:rI74MQ -- adding dates for file: 13585
+sql.py:26,09:04:13:load_from_dict:157:rI74MQ -- adding dates for file: 13586
+sql.py:26,09:04:14:load_from_dict:157:rI74MQ -- adding dates for file: 13587
+sql.py:26,09:04:14:load_from_dict:157:rI74MQ -- adding dates for file: 13588
+sql.py:26,09:04:14:load_from_dict:157:rI74MQ -- adding dates for file: 13589
+sql.py:26,09:04:14:load_from_dict:157:rI74MQ -- adding dates for file: 13590
+sql.py:26,09:04:14:load_from_dict:157:rI74MQ -- adding dates for file: 13591
+sql.py:26,09:04:15:load_from_dict:157:rI74MQ -- adding dates for file: 13592
+sql.py:26,09:04:15:load_from_dict:157:rI74MQ -- adding dates for file: 13593
+sql.py:26,09:04:15:load_from_dict:157:rI74MQ -- adding dates for file: 13594
+sql.py:26,09:04:15:load_from_dict:157:rI74MQ -- adding dates for file: 13595
+sql.py:26,09:04:15:load_from_dict:157:rI74MQ -- adding dates for file: 13596
+sql.py:26,09:04:16:load_from_dict:157:rI74MQ -- adding dates for file: 13597
+sql.py:26,09:04:16:load_from_dict:157:rI74MQ -- adding dates for file: 13598
+sql.py:26,09:04:16:load_from_dict:157:rI74MQ -- adding dates for file: 13599
+sql.py:26,09:04:16:load_from_dict:157:rI74MQ -- adding dates for file: 13600
+sql.py:26,09:04:16:load_from_dict:167:rI74MQ -- len dates: 5582
+sql.py:26,09:04:16:commit:47:rI74MQ -- iters: 125, len: 5582
+sql.py:26,09:04:16:commit:47:rI74MQ -- iters: 125, len: 5582
+sql.py:26,09:04:16:commit:47:rI74MQ -- iters: 125, len: 5582
+sql.py:26,09:04:16:commit:47:rI74MQ -- iters: 125, len: 5582
+sql.py:26,09:04:16:commit:56:rI74MQ -- flushing, len: 5457
+sql.py:26,09:04:16:commit:47:rI74MQ -- iters: 125, len: 5457
+sql.py:26,09:04:16:commit:47:rI74MQ -- iters: 125, len: 5457
+sql.py:26,09:04:16:commit:47:rI74MQ -- iters: 125, len: 5457
+sql.py:26,09:04:16:commit:56:rI74MQ -- flushing, len: 5332
+sql.py:26,09:04:16:commit:47:rI74MQ -- iters: 125, len: 5332
+sql.py:26,09:04:16:commit:47:rI74MQ -- iters: 125, len: 5332
+sql.py:26,09:04:16:commit:56:rI74MQ -- flushing, len: 5207
+sql.py:26,09:04:16:commit:47:rI74MQ -- iters: 125, len: 5207
+sql.py:26,09:04:16:commit:47:rI74MQ -- iters: 125, len: 5207
+sql.py:26,09:04:16:commit:47:rI74MQ -- iters: 125, len: 5207
+sql.py:26,09:04:16:commit:47:rI74MQ -- iters: 125, len: 5207
+sql.py:26,09:04:16:commit:47:rI74MQ -- iters: 125, len: 5207
+sql.py:26,09:04:16:commit:56:rI74MQ -- flushing, len: 5082
+sql.py:26,09:04:16:commit:47:rI74MQ -- iters: 125, len: 5082
+sql.py:26,09:04:16:commit:47:rI74MQ -- iters: 125, len: 5082
+sql.py:26,09:04:16:commit:47:rI74MQ -- iters: 125, len: 5082
+sql.py:26,09:04:16:commit:47:rI74MQ -- iters: 125, len: 5082
+sql.py:26,09:04:16:commit:47:rI74MQ -- iters: 125, len: 5082
+sql.py:26,09:04:16:commit:56:rI74MQ -- flushing, len: 4957
+sql.py:26,09:04:16:commit:47:rI74MQ -- iters: 125, len: 4957
+sql.py:26,09:04:16:commit:56:rI74MQ -- flushing, len: 4832
+sql.py:26,09:04:16:commit:47:rI74MQ -- iters: 125, len: 4832
+sql.py:26,09:04:16:commit:47:rI74MQ -- iters: 125, len: 4832
+sql.py:26,09:04:16:commit:47:rI74MQ -- iters: 125, len: 4832
+sql.py:26,09:04:16:commit:47:rI74MQ -- iters: 125, len: 4832
+sql.py:26,09:04:16:commit:47:rI74MQ -- iters: 125, len: 4832
+sql.py:26,09:04:16:commit:56:rI74MQ -- flushing, len: 4707
+sql.py:26,09:04:16:commit:56:rI74MQ -- flushing, len: 4582
+sql.py:26,09:04:16:commit:56:rI74MQ -- flushing, len: 4457
+sql.py:26,09:04:16:commit:56:rI74MQ -- flushing, len: 4332
+sql.py:26,09:04:16:commit:56:rI74MQ -- flushing, len: 4207
+sql.py:26,09:04:16:commit:56:rI74MQ -- flushing, len: 4082
+sql.py:26,09:04:16:commit:56:rI74MQ -- flushing, len: 3957
+sql.py:26,09:04:16:commit:56:rI74MQ -- flushing, len: 3832
+sql.py:26,09:04:16:commit:56:rI74MQ -- flushing, len: 3707
+sql.py:26,09:04:16:commit:56:rI74MQ -- flushing, len: 3582
+sql.py:26,09:04:16:commit:56:rI74MQ -- flushing, len: 3457
+sql.py:26,09:04:16:commit:56:rI74MQ -- flushing, len: 3332
+sql.py:26,09:04:16:commit:56:rI74MQ -- flushing, len: 3207
+sql.py:26,09:04:16:commit:56:rI74MQ -- flushing, len: 3082
+sql.py:26,09:04:16:commit:56:rI74MQ -- flushing, len: 2957
+sql.py:26,09:04:16:commit:56:rI74MQ -- flushing, len: 2832
+sql.py:26,09:04:16:commit:56:rI74MQ -- flushing, len: 2707
+sql.py:26,09:04:16:commit:56:rI74MQ -- flushing, len: 2582
+sql.py:26,09:04:16:commit:56:rI74MQ -- flushing, len: 2457
+sql.py:26,09:04:37:commit:62:rI74MQ -- committing
+sql.py:26,09:04:37:commit:56:rI74MQ -- flushing, len: 2332
+sql.py:26,09:04:37:commit:62:rI74MQ -- committing
+sql.py:26,09:04:38:commit:56:rI74MQ -- flushing, len: 2207
+sql.py:26,09:04:38:commit:62:rI74MQ -- committing
+sql.py:26,09:04:38:commit:62:rI74MQ -- committing
+sql.py:26,09:04:38:commit:62:rI74MQ -- committing
+sql.py:26,09:04:38:commit:62:rI74MQ -- committing
+sql.py:26,09:04:38:commit:62:rI74MQ -- committing
+sql.py:26,09:04:38:commit:62:rI74MQ -- committing
+sql.py:26,09:04:38:commit:56:rI74MQ -- flushing, len: 2082
+sql.py:26,09:04:38:commit:62:rI74MQ -- committing
+sql.py:26,09:04:38:commit:56:rI74MQ -- flushing, len: 1957
+sql.py:26,09:04:38:commit:56:rI74MQ -- flushing, len: 1832
+sql.py:26,09:04:38:commit:56:rI74MQ -- flushing, len: 1707
+sql.py:26,09:04:38:commit:56:rI74MQ -- flushing, len: 1582
+sql.py:26,09:04:38:commit:62:rI74MQ -- committing
+sql.py:26,09:04:38:commit:62:rI74MQ -- committing
+sql.py:26,09:04:38:commit:62:rI74MQ -- committing
+sql.py:26,09:04:38:commit:56:rI74MQ -- flushing, len: 1457
+sql.py:26,09:04:38:commit:62:rI74MQ -- committing
+sql.py:26,09:04:38:commit:62:rI74MQ -- committing
+sql.py:26,09:04:38:commit:62:rI74MQ -- committing
+sql.py:26,09:04:38:commit:56:rI74MQ -- flushing, len: 1332
+sql.py:26,09:04:38:commit:62:rI74MQ -- committing
+sql.py:26,09:04:38:commit:62:rI74MQ -- committing
+sql.py:26,09:04:38:commit:62:rI74MQ -- committing
+sql.py:26,09:04:38:commit:56:rI74MQ -- flushing, len: 1207
+sql.py:26,09:04:38:commit:56:rI74MQ -- flushing, len: 1082
+sql.py:26,09:04:38:commit:56:rI74MQ -- flushing, len: 957
+sql.py:26,09:04:38:commit:62:rI74MQ -- committing
+sql.py:26,09:04:38:commit:56:rI74MQ -- flushing, len: 832
+sql.py:26,09:04:38:commit:56:rI74MQ -- flushing, len: 707
+sql.py:26,09:04:38:commit:56:rI74MQ -- flushing, len: 582
+sql.py:26,09:04:38:commit:62:rI74MQ -- committing
+sql.py:26,09:04:38:commit:56:rI74MQ -- flushing, len: 457
+sql.py:26,09:04:38:commit:56:rI74MQ -- flushing, len: 332
+sql.py:26,09:04:38:commit:56:rI74MQ -- flushing, len: 207
+sql.py:26,09:04:38:commit:56:rI74MQ -- flushing, len: 82
+sql.py:26,09:04:38:commit:62:rI74MQ -- committing
+sql.py:26,09:04:38:commit:62:rI74MQ -- committing
+sql.py:26,09:04:38:commit:66:rI74MQ -- while loop done
+sql.py:26,09:04:38:commit:74:rI74MQ -- commit func done
+sql.py:26,09:04:39:commit:62:rI74MQ -- committing
+sql.py:26,09:04:39:commit:62:rI74MQ -- committing
+sql.py:26,09:04:39:commit:66:rI74MQ -- while loop done
+sql.py:26,09:04:39:commit:74:rI74MQ -- commit func done
+sql.py:26,09:04:39:commit:62:rI74MQ -- committing
+sql.py:26,09:04:39:commit:66:rI74MQ -- while loop done
+sql.py:26,09:04:39:commit:74:rI74MQ -- commit func done
+sql.py:26,09:04:39:commit:66:rI74MQ -- while loop done
+sql.py:26,09:04:39:commit:74:rI74MQ -- commit func done
+sql.py:26,09:04:39:commit:66:rI74MQ -- while loop done
+sql.py:26,09:04:39:commit:74:rI74MQ -- commit func done
+sql.py:26,09:04:39:commit:66:rI74MQ -- while loop done
+sql.py:26,09:04:39:commit:74:rI74MQ -- commit func done
+sql.py:26,09:04:53:commit:62:rI74MQ -- committing
+sql.py:26,09:04:53:commit:62:rI74MQ -- committing
+sql.py:26,09:04:53:commit:66:rI74MQ -- while loop done
+sql.py:26,09:04:53:commit:74:rI74MQ -- commit func done
+sql.py:26,09:04:53:commit:66:rI74MQ -- while loop done
+sql.py:26,09:04:53:commit:74:rI74MQ -- commit func done
+sql.py:26,09:04:54:commit:62:rI74MQ -- committing
+sql.py:26,09:04:54:commit:66:rI74MQ -- while loop done
+sql.py:26,09:04:54:commit:74:rI74MQ -- commit func done
+sql.py:26,09:04:54:commit:62:rI74MQ -- committing
+sql.py:26,09:04:54:commit:62:rI74MQ -- committing
+sql.py:26,09:04:54:commit:66:rI74MQ -- while loop done
+sql.py:26,09:04:54:commit:74:rI74MQ -- commit func done
+sql.py:26,09:04:54:commit:62:rI74MQ -- committing
+sql.py:26,09:04:54:commit:62:rI74MQ -- committing
+sql.py:26,09:04:54:commit:62:rI74MQ -- committing
+sql.py:26,09:04:54:commit:66:rI74MQ -- while loop done
+sql.py:26,09:04:54:commit:74:rI74MQ -- commit func done
+sql.py:26,09:04:54:commit:62:rI74MQ -- committing
+sql.py:26,09:04:54:commit:62:rI74MQ -- committing
+sql.py:26,09:04:54:commit:66:rI74MQ -- while loop done
+sql.py:26,09:04:54:commit:74:rI74MQ -- commit func done
+sql.py:26,09:04:54:commit:62:rI74MQ -- committing
+sql.py:26,09:04:54:commit:66:rI74MQ -- while loop done
+sql.py:26,09:04:54:commit:74:rI74MQ -- commit func done
+sql.py:26,09:04:54:commit:62:rI74MQ -- committing
+sql.py:26,09:04:54:commit:62:rI74MQ -- committing
+sql.py:26,09:04:54:commit:66:rI74MQ -- while loop done
+sql.py:26,09:04:54:commit:74:rI74MQ -- commit func done
+sql.py:26,09:04:54:commit:66:rI74MQ -- while loop done
+sql.py:26,09:04:54:commit:74:rI74MQ -- commit func done
+sql.py:26,09:04:54:commit:66:rI74MQ -- while loop done
+sql.py:26,09:04:54:commit:74:rI74MQ -- commit func done
+sql.py:26,09:04:54:commit:62:rI74MQ -- committing
+sql.py:26,09:04:54:commit:66:rI74MQ -- while loop done
+sql.py:26,09:04:54:commit:74:rI74MQ -- commit func done
+sql.py:26,09:04:54:commit:62:rI74MQ -- committing
+sql.py:26,09:04:54:commit:66:rI74MQ -- while loop done
+sql.py:26,09:04:54:commit:66:rI74MQ -- while loop done
+sql.py:26,09:04:54:commit:74:rI74MQ -- commit func done
+sql.py:26,09:04:54:commit:74:rI74MQ -- commit func done
+sql.py:26,09:04:54:commit:66:rI74MQ -- while loop done
+sql.py:26,09:04:54:commit:74:rI74MQ -- commit func done
+sql.py:26,09:04:54:commit:62:rI74MQ -- committing
+sql.py:26,09:04:54:commit:66:rI74MQ -- while loop done
+sql.py:26,09:04:54:commit:74:rI74MQ -- commit func done
+sql.py:26,09:04:54:commit:62:rI74MQ -- committing
+sql.py:26,09:04:54:commit:66:rI74MQ -- while loop done
+sql.py:26,09:04:54:commit:74:rI74MQ -- commit func done
+sql.py:26,09:04:54:commit:66:rI74MQ -- while loop done
+sql.py:26,09:04:54:commit:74:rI74MQ -- commit func done
+sql.py:26,09:04:55:commit:62:rI74MQ -- committing
+sql.py:26,09:04:55:commit:62:rI74MQ -- committing
+sql.py:26,09:04:55:commit:66:rI74MQ -- while loop done
+sql.py:26,09:04:55:commit:74:rI74MQ -- commit func done
+sql.py:26,09:04:55:commit:66:rI74MQ -- while loop done
+sql.py:26,09:04:55:commit:74:rI74MQ -- commit func done
+sql.py:26,09:04:59:start:212:rI74MQ -- Finished loading pickles
+configlo:26,09:04:59:handle_exception:82:rI74MQ -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "/home/henry/pydocs/processing/sql.py", line 245, in start
+    file_obj = fileid_obj_map[n]
+NameError: name 'fileid_obj_map' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 193, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/henry/pydocs/processing/sql.py", line 280, in <module>
+    start("testing" + datetime.now().__str__(), wpath)
+  File "/home/henry/pydocs/processing/sql.py", line 249, in start
+    fileid_obj_map[n] = file_obj
+NameError: name 'fileid_obj_map' is not defined
+configlo:26,09:04:59:mp_sendmail:115:rI74MQ -- sending mail
+configlo:26,09:05:00:handle_exception:86:rI74MQ -- exiting! from sshook

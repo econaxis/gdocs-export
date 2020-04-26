@@ -1,4 +1,5 @@
 import logging
+import sqlalchemy
 from processing.datutils.test_utils import TestUtil
 import smtplib, ssl
 import time
@@ -9,11 +10,16 @@ from logging import FileHandler, StreamHandler
 from logging.handlers import SysLogHandler
 from datetime import datetime
 import secrets
+import urllib.request
+
+
+token = secrets.token_urlsafe(4)
 
 os.environ["TZ"]="America/Vancouver"
+time.tzset()
 
 
-logFile = "data/logs/logs{}.txt".format(datetime.now().strftime("%-m-%d"))
+logFile = "data/logs/logs{}{}.txt".format(datetime.now().strftime("%-m-%d"), token)
 
 syslog = SysLogHandler(address=('logs2.papertrailapp.com', 49905))
 filelog = FileHandler(logFile)
@@ -38,7 +44,8 @@ class bcolors:
     UNDERLINE = '\033[4m'
 
 
-formatter =logging.Formatter(f"%(filename).8s:%(asctime)s:%(funcName)s:%(lineno)d -- %(message)s", "%m-%d %H:%M:%S")
+myip = urllib.request.urlopen('https://ident.me').read().decode('utf8')
+formatter =logging.Formatter(f"%(filename).8s:%(asctime)s:%(funcName)s:%(lineno)d:{token} -- %(message)s", "%d,%H:%M:%S")
 
 #syslog = SysLogHandler(address=('syslog-a.logdna.com', 49905))
 
@@ -55,14 +62,19 @@ logger.addHandler(syslog)
 logger.addHandler(filelog)
 logger.addHandler(stream)
 
-logger.setLevel(logging.DEBUG)
+logger.setLevel(logging.NOTSET)
 
 
 semidisable( logging.getLogger("googleapiclient"))
 semidisable( logging.getLogger("asyncio"))
 semidisable( logging.getLogger('urllib3'))
 semidisable( logging.getLogger('gdocrevisions.operation'))
-semidisable( logging.getLogger('sqlalchemy.engine'))
+
+sqlal = logging.getLogger('sqlalchemy')
+sqlal.setLevel(logging.DEBUG)
+sqlal.propagate = False
+sqlal.addHandler(filelog)
+#semidisable( logging.getLogger('sqlalchemy.engine'))
 
 
 
@@ -91,13 +103,26 @@ from email import encoders
 from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+import multiprocessing as mp
 
-def sendmail():
-    subject = "PYDOCS LOGS"
-    body = "Automatically generated logging"
-    sender_email = "martinliu24@gmail.com"
+def sendmail(return_thread = False):
+    p = mp.Process(target = mp_sendmail, args = ())
+    p.start()
+
+    if return_thread:
+        return p
+    else:
+        p.join()
+        return
+
+
+def mp_sendmail():
+    logger.info("sending mail")
+    subject = f"PYDOCS LOGS from {myip}::{token}"
+    body = f"Automatically generated logging from {myip}\nSent date: {datetime.now().__str__()}"
+    sender_email = "postmaster@sandboxafcb93d604f547c984f76fd927c84de2.mailgun.org"
     receiver_email = "henry2833+py@gmail.com"
-    password = "henryrage"
+    password = "efa1a3633640e1dd88cb3bc01f934dab"
 
     # Create a multipart message and set headers
     message = MIMEMultipart()
@@ -111,7 +136,7 @@ def sendmail():
 
 
     # Open PDF file in binary mode
-    with open(logFile, "rb") as attachment:
+    with open(logFile, 'r') as attachment:
         # Add file as application/octet-stream
         # Email client can usually download this automatically as attachment
         part = MIMEBase("application", "octet-stream")
@@ -131,7 +156,8 @@ def sendmail():
     text = message.as_string()
 
     # Log in to server using secure context and send email
-    context = ssl.create_default_context()
-    with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
+    with smtplib.SMTP("smtp.mailgun.org", 587) as server:
         server.login(sender_email, password)
         server.sendmail(sender_email, receiver_email, text)
+
+    return

@@ -1,0 +1,235 @@
+dsds.py:25,15:14:41:start:18:CQyk3A -- start
+get_file:25,15:14:41:loadFiles:266:CQyk3A -- Start loadFiles, 527e4afc-4598-400f-8536-afa5324f0ba4 1ytJocI9f4gvmpnwLNNfpQzRPhcFs5EzR
+requests:25,15:14:41:__call__:117:CQyk3A -- Making request: POST https://oauth2.googleapis.com/token
+connecti:25,15:14:41:_new_conn:817:CQyk3A -- Starting new HTTPS connection (1): oauth2.googleapis.com
+connecti:25,15:14:41:_make_request:393:CQyk3A -- https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+selector:25,15:14:41:__init__:59:CQyk3A -- Using selector: EpollSelector
+test_uti:25,15:14:41:print_size:82:CQyk3A -- ---------------Memory usage: 87236 (kb)---------------0 mins since start
+test_uti:25,15:14:41:print_size:100:CQyk3A -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/0 at 2020-04-25 15:14:41.957537
+dumped: 0
+get_file:25,15:14:41:getIdsRecursive:52:CQyk3A -- getIdsRecursive looping
+get_file:25,15:14:42:getIdsRecursive:52:CQyk3A -- getIdsRecursive looping
+get_file:25,15:14:42:getIdsRecursive:52:CQyk3A -- getIdsRecursive looping
+test_uti:25,15:14:42:tryGetQueue:226:CQyk3A -- getIdswaiting 1 1
+test_uti:25,15:14:42:tryGetQueue:226:CQyk3A -- getIdswaiting 1 1
+get_file:25,15:14:42:getIdsRecursive:52:CQyk3A -- getIdsRecursive looping
+test_uti:25,15:14:42:print_size:82:CQyk3A -- ---------------Memory usage: 87440 (kb)---------------0 mins since start
+test_uti:25,15:14:42:print_size:100:CQyk3A -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/3 at 2020-04-25 15:14:42.980348
+dumped: 0
+test_uti:25,15:14:43:tryGetQueue:226:CQyk3A -- getIdswaiting 1 1
+get_file:25,15:14:43:getRevision:163:CQyk3A -- getRevision looping
+gdoc.py:25,15:14:43:async_init:24:CQyk3A -- async init called
+test_uti:25,15:14:43:print_size:82:CQyk3A -- ---------------Memory usage: 87440 (kb)---------------0 mins since start
+test_uti:25,15:14:44:print_size:100:CQyk3A -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/2 at 2020-04-25 15:14:44.008365
+dumped: 0
+gdoc.py:25,15:14:44:get_last_revision:54:CQyk3A -- last revision id 546
+gdoc.py:25,15:14:44:async_init:31:CQyk3A -- after await 546
+get_file:25,15:14:44:getRevision:187:CQyk3A -- google doc
+get_file:25,15:14:44:getRevision:163:CQyk3A -- getRevision looping
+gdoc.py:25,15:14:44:async_init:24:CQyk3A -- async init called
+test_uti:25,15:14:45:print_size:82:CQyk3A -- ---------------Memory usage: 89220 (kb)---------------0 mins since start
+test_uti:25,15:14:45:print_size:100:CQyk3A -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+1/2 at 2020-04-25 15:14:45.035592
+dumped: 0
+gdoc.py:25,15:14:45:get_last_revision:54:CQyk3A -- last revision id 2502
+gdoc.py:25,15:14:45:async_init:31:CQyk3A -- after await 2502
+get_file:25,15:14:45:getRevision:187:CQyk3A -- google doc
+get_file:25,15:14:45:getRevision:163:CQyk3A -- getRevision looping
+test_uti:25,15:14:46:print_size:82:CQyk3A -- ---------------Memory usage: 94268 (kb)---------------0 mins since start
+test_uti:25,15:14:46:print_size:100:CQyk3A -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+2/3 at 2020-04-25 15:14:46.062158
+dumped: 0
+get_file:25,15:14:46:getIdsRecursive:65:CQyk3A -- getId task exiting
+test_uti:25,15:14:47:print_size:82:CQyk3A -- ---------------Memory usage: 94268 (kb)---------------0 mins since start
+test_uti:25,15:14:47:print_size:100:CQyk3A -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+2/3 at 2020-04-25 15:14:47.090014
+dumped: 0
+gdoc.py:25,15:14:47:async_init:24:CQyk3A -- async init called
+test_uti:25,15:14:48:print_size:82:CQyk3A -- ---------------Memory usage: 94268 (kb)---------------0 mins since start
+test_uti:25,15:14:48:print_size:100:CQyk3A -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+2/2 at 2020-04-25 15:14:48.119305
+dumped: 0
+gdoc.py:25,15:14:48:get_last_revision:54:CQyk3A -- last revision id 647
+gdoc.py:25,15:14:48:async_init:31:CQyk3A -- after await 647
+get_file:25,15:14:48:getRevision:187:CQyk3A -- google doc
+get_file:25,15:14:48:getRevision:163:CQyk3A -- getRevision looping
+test_uti:25,15:14:48:tryGetQueue:226:CQyk3A -- getRevisionwaiting 1 1
+get_file:25,15:14:48:getRevision:163:CQyk3A -- getRevision looping
+test_uti:25,15:14:48:tryGetQueue:226:CQyk3A -- getRevisionwaiting 1 1
+test_uti:25,15:14:49:print_size:82:CQyk3A -- ---------------Memory usage: 94268 (kb)---------------0 mins since start
+test_uti:25,15:14:49:print_size:100:CQyk3A -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 15:14:49.146831
+dumped: 0
+get_file:25,15:14:49:getRevision:163:CQyk3A -- getRevision looping
+test_uti:25,15:14:50:print_size:82:CQyk3A -- ---------------Memory usage: 94268 (kb)---------------0 mins since start
+test_uti:25,15:14:50:print_size:100:CQyk3A -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 15:14:50.171743
+dumped: 0
+get_file:25,15:14:50:getRevision:163:CQyk3A -- getRevision looping
+test_uti:25,15:14:51:print_size:82:CQyk3A -- ---------------Memory usage: 94268 (kb)---------------0 mins since start
+test_uti:25,15:14:51:print_size:100:CQyk3A -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 15:14:51.198877
+dumped: 0
+get_file:25,15:14:51:getIdsRecursive:65:CQyk3A -- getId task exiting
+test_uti:25,15:14:52:print_size:82:CQyk3A -- ---------------Memory usage: 94268 (kb)---------------0 mins since start
+test_uti:25,15:14:52:print_size:100:CQyk3A -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 15:14:52.224160
+dumped: 0
+get_file:25,15:14:52:getIdsRecursive:65:CQyk3A -- getId task exiting
+test_uti:25,15:14:53:print_size:82:CQyk3A -- ---------------Memory usage: 94268 (kb)---------------0 mins since start
+test_uti:25,15:14:53:print_size:100:CQyk3A -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 15:14:53.248770
+dumped: 0
+test_uti:25,15:14:53:tryGetQueue:226:CQyk3A -- getRevisionwaiting 1 1
+test_uti:25,15:14:53:tryGetQueue:226:CQyk3A -- getRevisionwaiting 1 1
+test_uti:25,15:14:54:print_size:82:CQyk3A -- ---------------Memory usage: 94268 (kb)---------------0 mins since start
+test_uti:25,15:14:54:print_size:100:CQyk3A -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 15:14:54.277782
+dumped: 0
+get_file:25,15:14:55:getRevision:163:CQyk3A -- getRevision looping
+test_uti:25,15:14:55:tryGetQueue:226:CQyk3A -- getRevisionwaiting 1 1
+test_uti:25,15:14:55:print_size:82:CQyk3A -- ---------------Memory usage: 94268 (kb)---------------0 mins since start
+test_uti:25,15:14:55:print_size:100:CQyk3A -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 15:14:55.303691
+dumped: 0
+test_uti:25,15:14:56:print_size:82:CQyk3A -- ---------------Memory usage: 94268 (kb)---------------0 mins since start
+test_uti:25,15:14:56:print_size:100:CQyk3A -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 15:14:56.327917
+dumped: 0
+get_file:25,15:14:57:getRevision:163:CQyk3A -- getRevision looping
+test_uti:25,15:14:57:print_size:82:CQyk3A -- ---------------Memory usage: 94268 (kb)---------------0 mins since start
+test_uti:25,15:14:57:print_size:100:CQyk3A -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 15:14:57.354219
+dumped: 0
+get_file:25,15:14:57:getRevision:163:CQyk3A -- getRevision looping
+get_file:25,15:14:57:getRevision:163:CQyk3A -- getRevision looping
+get_file:25,15:14:58:getRevision:163:CQyk3A -- getRevision looping
+test_uti:25,15:14:58:print_size:82:CQyk3A -- ---------------Memory usage: 94268 (kb)---------------0 mins since start
+test_uti:25,15:14:58:print_size:100:CQyk3A -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 15:14:58.381357
+dumped: 0
+get_file:25,15:14:58:getRevision:168:CQyk3A -- getRevision task exiting
+get_file:25,15:14:58:getRevision:193:CQyk3A -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+test_uti:25,15:14:59:print_size:82:CQyk3A -- ---------------Memory usage: 94268 (kb)---------------0 mins since start
+test_uti:25,15:14:59:print_size:100:CQyk3A -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 15:14:59.409335
+dumped: 0
+get_file:25,15:14:59:getRevision:168:CQyk3A -- getRevision task exiting
+get_file:25,15:14:59:getRevision:193:CQyk3A -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+test_uti:25,15:14:59:tryGetQueue:226:CQyk3A -- getRevisionwaiting 1 1
+test_uti:25,15:14:59:tryGetQueue:226:CQyk3A -- getRevisionwaiting 1 1
+test_uti:25,15:14:59:tryGetQueue:226:CQyk3A -- getRevisionwaiting 1 1
+test_uti:25,15:15:00:print_size:82:CQyk3A -- ---------------Memory usage: 94268 (kb)---------------0 mins since start
+test_uti:25,15:15:00:print_size:100:CQyk3A -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 15:15:00.436630
+dumped: 0
+get_file:25,15:15:00:getRevision:168:CQyk3A -- getRevision task exiting
+get_file:25,15:15:00:getRevision:193:CQyk3A -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,15:15:01:getRevision:196:CQyk3A -- Close event has been set. Expect print task to finish soon
+get_file:25,15:15:02:getRevision:196:CQyk3A -- Close event has been set. Expect print task to finish soon
+get_file:25,15:15:03:getRevision:196:CQyk3A -- Close event has been set. Expect print task to finish soon
+get_file:25,15:15:04:getRevision:168:CQyk3A -- getRevision task exiting
+get_file:25,15:15:04:getRevision:193:CQyk3A -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+test_uti:25,15:15:05:tryGetQueue:226:CQyk3A -- getRevisionwaiting 1 1
+get_file:25,15:15:06:getRevision:168:CQyk3A -- getRevision task exiting
+get_file:25,15:15:06:getRevision:193:CQyk3A -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,15:15:06:getRevision:168:CQyk3A -- getRevision task exiting
+get_file:25,15:15:06:getRevision:193:CQyk3A -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,15:15:06:getRevision:193:CQyk3A -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,15:15:06:getRevision:168:CQyk3A -- getRevision task exiting
+get_file:25,15:15:06:getRevision:193:CQyk3A -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,15:15:07:getRevision:168:CQyk3A -- getRevision task exiting
+get_file:25,15:15:07:getRevision:193:CQyk3A -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,15:15:07:getRevision:196:CQyk3A -- Close event has been set. Expect print task to finish soon
+get_file:25,15:15:09:getRevision:196:CQyk3A -- Close event has been set. Expect print task to finish soon
+get_file:25,15:15:09:getRevision:196:CQyk3A -- Close event has been set. Expect print task to finish soon
+get_file:25,15:15:09:getRevision:196:CQyk3A -- Close event has been set. Expect print task to finish soon
+get_file:25,15:15:09:getRevision:196:CQyk3A -- Close event has been set. Expect print task to finish soon
+get_file:25,15:15:10:getRevision:196:CQyk3A -- Close event has been set. Expect print task to finish soon
+get_file:25,15:15:18:getRevision:168:CQyk3A -- getRevision task exiting
+get_file:25,15:15:18:getRevision:193:CQyk3A -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,15:15:21:getRevision:196:CQyk3A -- Close event has been set. Expect print task to finish soon
+get_file:25,15:15:21:start:231:CQyk3A -- await gather revisions done
+get_file:25,15:15:21:start:238:CQyk3A -- cancelled throttler
+get_file:25,15:15:21:loadFiles:293:CQyk3A -- loop done
+test_uti:25,15:15:21:dump_files:137:CQyk3A -- histed files at /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/1.pathed, length 3
+get_file:25,15:15:21:loadFiles:310:CQyk3A -- dumped pickle files
+sql.py:25,15:15:21:<module>:24:CQyk3A -- Driver%3D%7BODBC+Driver+17+for+SQL+Server%7D%3BServer%3Dtcp%3Apydoc-db.database.windows.net%2C1433%3BDatabase%3Dpydocs%3BUid%3Dhenry2833%3BPwd%3D%7BInfoip32%7D%3BEncrypt%3Dyes%3BTrustServerCertificate%3Dno%3BConnection+Timeout%3D30%3B
+sql.py:25,15:15:24:start:111:CQyk3A -- STARTING SQL 527e4afc-4598-400f-8536-afa5324f0ba4 /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+sql.py:25,15:15:24:start:113:CQyk3A -- setting sys except hook
+sql.py:25,15:15:24:start:123:CQyk3A -- Owner name: 527e4afc-4598-404 25 AprrpeX9dKfZg
+sql.py:25,15:15:25:start:127:CQyk3A -- Added owner row, name: 527e4afc-4598-404 25 AprrpeX9dKfZg id: 6
+sql.py:25,15:15:25:start:139:CQyk3A -- Finished loading pickles
+sql.py:25,15:15:25:start:157:CQyk3A -- File: 1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s
+sql.py:25,15:15:25:start:157:CQyk3A -- File: 1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08
+sql.py:25,15:15:25:start:157:CQyk3A -- File: 1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4
+sql.py:25,15:15:25:start:177:CQyk3A -- len of id map 3 len of files 3
+sql.py:25,15:15:25:start:182:CQyk3A -- starting bulk save
+sql.py:25,15:15:25:adder:86:CQyk3A -- flushing adder
+sql.py:25,15:15:26:start:184:CQyk3A -- bulked save done
+sql.py:25,15:15:26:start:189:CQyk3A -- File added, id: 1
+sql.py:25,15:15:26:start:189:CQyk3A -- File added, id: 2
+sql.py:25,15:15:26:start:189:CQyk3A -- File added, id: 3
+sql.py:25,15:15:26:start:191:CQyk3A -- sess flush done
+sql.py:25,15:15:26:start:200:CQyk3A -- adding dates for file: 1, dates to be added 2
+sql.py:25,15:15:26:start:205:CQyk3A -- [1580798526.504, 1580798743.99725, 1580798961.4905, 1580799178.9837499, 1580799396.477, 1580799613.9702501, 1580799831.4635, 1580800048.95675]
+sql.py:25,15:15:26:start:206:CQyk3A -- [134, 95, 37, 56, 66, 52, 37, 69]
+sql.py:25,15:15:26:start:209:CQyk3A -- bin: 1580798526 val 134
+sql.py:25,15:15:26:start:209:CQyk3A -- bin: 1580798743 val 95
+sql.py:25,15:15:26:start:209:CQyk3A -- bin: 1580798961 val 37
+sql.py:25,15:15:26:start:209:CQyk3A -- bin: 1580799178 val 56
+sql.py:25,15:15:26:start:209:CQyk3A -- bin: 1580799396 val 66
+sql.py:25,15:15:26:start:209:CQyk3A -- bin: 1580799613 val 52
+sql.py:25,15:15:26:start:209:CQyk3A -- bin: 1580799831 val 37
+sql.py:25,15:15:26:start:209:CQyk3A -- bin: 1580800048 val 69
+sql.py:25,15:15:26:start:200:CQyk3A -- adding dates for file: 2, dates to be added 2
+sql.py:25,15:15:26:start:205:CQyk3A -- [1552437584.445, 1552715059.6961427, 1552992534.9472857, 1553270010.1984286, 1553547485.4495714, 1553824960.700714, 1554102435.951857, 1554379911.203, 1554657386.4541428, 1554934861.7052855, 1555212336.9564285, 1555489812.2075715, 1555767287.4587142, 1556044762.709857]
+sql.py:25,15:15:26:start:206:CQyk3A -- [1153, 0, 0, 0, 0, 0, 0, 811, 0, 0, 0, 0, 0, 538]
+sql.py:25,15:15:26:start:209:CQyk3A -- bin: 1552437584 val 1153
+sql.py:25,15:15:26:start:209:CQyk3A -- bin: 1552715059 val 0
+sql.py:25,15:15:26:start:209:CQyk3A -- bin: 1552992534 val 0
+sql.py:25,15:15:26:start:209:CQyk3A -- bin: 1553270010 val 0
+sql.py:25,15:15:26:start:209:CQyk3A -- bin: 1553547485 val 0
+sql.py:25,15:15:26:start:209:CQyk3A -- bin: 1553824960 val 0
+sql.py:25,15:15:26:start:209:CQyk3A -- bin: 1554102435 val 0
+sql.py:25,15:15:26:start:209:CQyk3A -- bin: 1554379911 val 811
+sql.py:25,15:15:26:start:209:CQyk3A -- bin: 1554657386 val 0
+sql.py:25,15:15:26:start:209:CQyk3A -- bin: 1554934861 val 0
+sql.py:25,15:15:26:start:209:CQyk3A -- bin: 1555212336 val 0
+sql.py:25,15:15:26:start:209:CQyk3A -- bin: 1555489812 val 0
+sql.py:25,15:15:26:start:209:CQyk3A -- bin: 1555767287 val 0
+sql.py:25,15:15:26:start:209:CQyk3A -- bin: 1556044762 val 538
+sql.py:25,15:15:26:start:200:CQyk3A -- adding dates for file: 3, dates to be added 2
+sql.py:25,15:15:26:start:205:CQyk3A -- [1586235205.136, 1586235476.1370769, 1586235747.1381538, 1586236018.1392307, 1586236289.1403077, 1586236560.1413846, 1586236831.1424615, 1586237102.1435385, 1586237373.1446154, 1586237644.1456923, 1586237915.1467693, 1586238186.1478462, 1586238457.1489232]
+sql.py:25,15:15:26:start:206:CQyk3A -- [69, 0, 20, 0, 6, 28, 107, 51, 80, 69, 47, 80, 90]
+sql.py:25,15:15:26:start:209:CQyk3A -- bin: 1586235205 val 69
+sql.py:25,15:15:26:start:209:CQyk3A -- bin: 1586235476 val 0
+sql.py:25,15:15:26:start:209:CQyk3A -- bin: 1586235747 val 20
+sql.py:25,15:15:26:start:209:CQyk3A -- bin: 1586236018 val 0
+sql.py:25,15:15:26:start:209:CQyk3A -- bin: 1586236289 val 6
+sql.py:25,15:15:26:start:209:CQyk3A -- bin: 1586236560 val 28
+sql.py:25,15:15:26:start:209:CQyk3A -- bin: 1586236831 val 107
+sql.py:25,15:15:26:start:209:CQyk3A -- bin: 1586237102 val 51
+sql.py:25,15:15:26:start:209:CQyk3A -- bin: 1586237373 val 80
+sql.py:25,15:15:26:start:209:CQyk3A -- bin: 1586237644 val 69
+sql.py:25,15:15:26:start:209:CQyk3A -- bin: 1586237915 val 47
+sql.py:25,15:15:26:start:209:CQyk3A -- bin: 1586238186 val 80
+sql.py:25,15:15:26:start:209:CQyk3A -- bin: 1586238457 val 90
+sql.py:25,15:15:26:start:213:CQyk3A -- len dates: 35
+sql.py:25,15:15:32:commit:43:CQyk3A -- iters: 20, len: 35
+sql.py:25,15:15:32:commit:52:CQyk3A -- flushing, len: 15
+sql.py:25,15:15:45:commit:43:CQyk3A -- iters: 20, len: 15
+sql.py:25,15:15:45:commit:64:CQyk3A -- while loop done
+sql.py:25,15:15:55:commit:43:CQyk3A -- iters: 20, len: 0
+sql.py:25,15:15:55:commit:64:CQyk3A -- while loop done
+sql.py:25,15:15:56:commit:72:CQyk3A -- commit func done
+sql.py:25,15:16:03:commit:43:CQyk3A -- iters: 20, len: 0
+sql.py:25,15:16:03:commit:64:CQyk3A -- while loop done
+sql.py:25,15:16:04:commit:72:CQyk3A -- commit func done
+sql.py:25,15:16:10:commit:43:CQyk3A -- iters: 20, len: 0
+sql.py:25,15:16:10:start:228:CQyk3A -- joining
+sql.py:25,15:16:10:commit:64:CQyk3A -- while loop done
+sql.py:25,15:16:11:commit:72:CQyk3A -- commit func done

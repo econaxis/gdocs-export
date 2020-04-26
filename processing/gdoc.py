@@ -1,5 +1,8 @@
+import requests
+import time
+from pprint import pformat
+import random
 import aiohttp
-from datetime import datetime
 import asyncio
 import ujson as json
 import logging
@@ -25,14 +28,13 @@ class GDoc():
         self.fileId = fileId
         self.session = session
         self.headers = headers
+        self.last_revision_id = 1
 
         code = await self.get_last_revision()
 
+
         logger.debug("after await %s", self.last_revision_id)
 
-        dates = await self.download_details(self.last_revision_id)
-
-        return dates
 
 
     async def get_last_revision(self, retry = False):
@@ -41,7 +43,6 @@ class GDoc():
             async with self.session.get(url=url.format(self.fileId), headers=self.headers) as response:
                 code = response.status
                 if code != 200:
-                    logger.debug("code not 200")
                     #logger.debug(await response.text())
                     if retry:
                         return -1
@@ -57,24 +58,41 @@ class GDoc():
             logger.exception("cannot get last revision id")
 
 
-    async def download_details(self, endid):
-        url = base_url.format(file_id=self.fileId, end=endid)
+    def download_details(self,  pipe, done_event):
 
-        try:
-            async with self.session.get(url = url, headers = self.headers) as response:
-                
-                assert response.status == 200
+        #Retries
+        for i in range(5):
+            url = base_url.format(file_id=self.fileId, end=self.last_revision_id)
 
-                text = await response.text()
-                revision_details = json.loads(text[5:])
+            dates = []
 
-                logger.log(1, revision_details['changelog'])
+            try:
+                response = requests.get(url = url, headers = self.headers)
+                assert response.status_code == 200
+            except:
+                logger.debug("Cannot get revisions.json", exc_info = True)
 
-                dates = [None]*len(revision_details['changelog'])
-                for count,x in enumerate(revision_details['changelog']):
-                    dates[count] =datetime.fromtimestamp(x[1]/1e3) 
+                for i in pformat(response.text):
+                    logger.debug(i)
+                time.sleep(random.uniform(15, 20*i))
+                continue
 
-                return dates
-        except:
-            logger.exception("Cannot get revisions.json")
-            return []
+            text = response.text
+            revision_details = json.loads(text[5:])
+
+            logger.log(1, revision_details['changelog'])
+
+            dates = [None]*len(revision_details['changelog'])
+
+            for count,x in enumerate(revision_details['changelog']):
+                dates[count] = x[1]/1e3
+
+            pipe.send(dates)
+            done_event.set()
+            pipe.close()
+            return
+
+        pipe.send([])
+        done_event.set()
+        pipe.close()
+        return

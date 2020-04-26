@@ -1,0 +1,60 @@
+dsds.py:25,18:13:57:start:18:x5oHzg -- start
+get_file:25,18:13:58:loadFiles:282:x5oHzg -- Start loadFiles, 527e4afc-4598-400f-8536-afa5324f0ba4 0B4Fujvv5MfqbVElBU01fZUxHcUk
+requests:25,18:13:58:__call__:117:x5oHzg -- Making request: POST https://oauth2.googleapis.com/token
+connecti:25,18:13:58:_new_conn:817:x5oHzg -- Starting new HTTPS connection (1): oauth2.googleapis.com
+connecti:25,18:13:59:_make_request:393:x5oHzg -- https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+selector:25,18:13:59:__init__:59:x5oHzg -- Using selector: EpollSelector
+test_uti:25,18:13:59:print_size:82:x5oHzg -- ---------------Memory usage: 94300 (kb)---------------0 mins since start
+test_uti:25,18:13:59:print_size:100:x5oHzg -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/0 at 2020-04-25 18:13:59.175257
+dumped: 0
+get_file:25,18:13:59:getIdsRecursive:53:x5oHzg -- getIdsRecursive looping
+get_file:25,18:13:59:getIdsRecursive:53:x5oHzg -- getIdsRecursive looping
+get_file:25,18:14:00:getIdsRecursive:53:x5oHzg -- getIdsRecursive looping
+get_file:25,18:14:00:getIdsRecursive:53:x5oHzg -- getIdsRecursive looping
+get_file:25,18:14:01:getIdsRecursive:53:x5oHzg -- getIdsRecursive looping
+get_file:25,18:14:01:getIdsRecursive:53:x5oHzg -- getIdsRecursive looping
+get_file:25,18:14:01:getIdsRecursive:53:x5oHzg -- getIdsRecursive looping
+get_file:25,18:14:02:getIdsRecursive:53:x5oHzg -- getIdsRecursive looping
+get_file:25,18:14:02:getIdsRecursive:53:x5oHzg -- getIdsRecursive looping
+get_file:25,18:14:03:getIdsRecursive:53:x5oHzg -- getIdsRecursive looping
+get_file:25,18:14:04:getIdsRecursive:53:x5oHzg -- getIdsRecursive looping
+test_uti:25,18:14:04:print_size:82:x5oHzg -- ---------------Memory usage: 94536 (kb)---------------0 mins since start
+test_uti:25,18:14:04:print_size:100:x5oHzg -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/70 at 2020-04-25 18:14:04.215433
+dumped: 0
+get_file:25,18:14:04:getIdsRecursive:53:x5oHzg -- getIdsRecursive looping
+test_uti:25,18:14:04:tryGetQueue:228:x5oHzg -- getIdswaiting 1 5
+get_file:25,18:14:05:getRevision:166:x5oHzg -- getRevision looping
+gdoc.py:25,18:14:05:async_init:24:x5oHzg -- async init called
+gdoc.py:25,18:14:05:get_last_revision:53:x5oHzg -- last revision id 394
+gdoc.py:25,18:14:05:async_init:33:x5oHzg -- after await 394
+connecti:25,18:14:05:_new_conn:817:x5oHzg -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,18:14:06:_make_request:393:x5oHzg -- https://docs.google.com:443 "GET /document/d/1TYIOfz_uzybWgEeexs8iE64jcjt-AmUegOP6KORNaWQ/revisions/load?id=1TYIOfz_uzybWgEeexs8iE64jcjt-AmUegOP6KORNaWQ&start=1&end=394 HTTP/1.1" 200 None
+configlo:25,18:14:25:handle_exception:82:x5oHzg -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "dsds.py", line 37, in <module>
+    start()
+  File "dsds.py", line 34, in start
+    loadFiles(uid, workingPath, fileid, creds)
+  File "/home/henry/pydocs/processing/get_files.py", line 307, in loadFiles
+    loop.run_until_complete(asyncio.gather(startTask))
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 603, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 570, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 1859, in _run_once
+    handle._run()
+  File "/usr/lib/python3.8/asyncio/events.py", line 81, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/henry/pydocs/processing/get_files.py", line 194, in getRevision
+    dates = parent_conn.recv()
+  File "/usr/lib/python3.8/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+  File "/usr/lib/python3.8/multiprocessing/connection.py", line 414, in _recv_bytes
+    buf = self._recv(4)
+  File "/usr/lib/python3.8/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+KeyboardInterrupt
+configlo:25,18:14:25:sendmail:103:x5oHzg -- sending mail
+configlo:25,18:14:26:handle_exception:86:x5oHzg -- exiting! from sshook

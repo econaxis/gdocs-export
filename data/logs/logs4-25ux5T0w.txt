@@ -1,0 +1,164 @@
+sql.py:25,13:32:01:<module>:24:ux5T0w -- Driver%3D%7BODBC+Driver+17+for+SQL+Server%7D%3BServer%3Dtcp%3Apydoc-db.database.windows.net%2C1433%3BDatabase%3Dpydoc-db%3BUid%3Dhenry2833%3BPwd%3D%7BInfoip32%7D%3BEncrypt%3Dyes%3BTrustServerCertificate%3Dno%3BConnection+Timeout%3D30%3B
+dsds.py:25,13:32:04:start:18:ux5T0w -- start
+get_file:25,13:32:04:loadFiles:267:ux5T0w -- Start loadFiles, 527e4afc-4598-400f-8536-afa5324f0ba4 1ytJocI9f4gvmpnwLNNfpQzRPhcFs5EzR
+requests:25,13:32:04:__call__:117:ux5T0w -- Making request: POST https://oauth2.googleapis.com/token
+connecti:25,13:32:04:_new_conn:817:ux5T0w -- Starting new HTTPS connection (1): oauth2.googleapis.com
+connecti:25,13:32:04:_make_request:393:ux5T0w -- https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+selector:25,13:32:04:__init__:59:ux5T0w -- Using selector: EpollSelector
+test_uti:25,13:32:04:print_size:82:ux5T0w -- ---------------Memory usage: 96120 (kb)---------------0 mins since start
+test_uti:25,13:32:04:print_size:100:ux5T0w -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/0 at 2020-04-25 13:32:04.974269
+dumped: 0
+get_file:25,13:32:04:getIdsRecursive:53:ux5T0w -- getIdsRecursive looping
+get_file:25,13:32:05:getRevision:164:ux5T0w -- getRevision looping
+test_uti:25,13:32:05:tryGetQueue:229:ux5T0w -- getRevisionwaiting 1 1
+get_file:25,13:32:05:getIdsRecursive:53:ux5T0w -- getIdsRecursive looping
+test_uti:25,13:32:05:tryGetQueue:229:ux5T0w -- getIdswaiting 1 1
+get_file:25,13:32:05:getIdsRecursive:53:ux5T0w -- getIdsRecursive looping
+get_file:25,13:32:05:getRevision:164:ux5T0w -- getRevision looping
+gdoc.py:25,13:32:05:async_init:24:ux5T0w -- async init called
+test_uti:25,13:32:05:tryGetQueue:229:ux5T0w -- getIdswaiting 1 1
+get_file:25,13:32:05:getIdsRecursive:53:ux5T0w -- getIdsRecursive looping
+gdoc.py:25,13:32:05:get_last_revision:54:ux5T0w -- last revision id 546
+gdoc.py:25,13:32:05:async_init:31:ux5T0w -- after await 546
+test_uti:25,13:32:05:tryGetQueue:229:ux5T0w -- getIdswaiting 1 1
+test_uti:25,13:32:05:print_size:82:ux5T0w -- ---------------Memory usage: 96320 (kb)---------------0 mins since start
+test_uti:25,13:32:06:print_size:100:ux5T0w -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/2 at 2020-04-25 13:32:06.005689
+dumped: 0
+get_file:25,13:32:06:getRevision:188:ux5T0w -- google doc
+get_file:25,13:32:06:getRevision:164:ux5T0w -- getRevision looping
+test_uti:25,13:32:07:print_size:82:ux5T0w -- ---------------Memory usage: 98140 (kb)---------------0 mins since start
+test_uti:25,13:32:07:print_size:100:ux5T0w -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+1/3 at 2020-04-25 13:32:07.034930
+dumped: 0
+test_uti:25,13:32:08:print_size:82:ux5T0w -- ---------------Memory usage: 98140 (kb)---------------0 mins since start
+test_uti:25,13:32:08:print_size:100:ux5T0w -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+1/3 at 2020-04-25 13:32:08.067543
+dumped: 0
+test_uti:25,13:32:09:print_size:82:ux5T0w -- ---------------Memory usage: 98140 (kb)---------------0 mins since start
+test_uti:25,13:32:09:print_size:100:ux5T0w -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+1/3 at 2020-04-25 13:32:09.097381
+dumped: 0
+get_file:25,13:32:09:getIdsRecursive:66:ux5T0w -- getId task exiting
+test_uti:25,13:32:10:print_size:82:ux5T0w -- ---------------Memory usage: 98140 (kb)---------------0 mins since start
+test_uti:25,13:32:10:print_size:100:ux5T0w -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+1/3 at 2020-04-25 13:32:10.131355
+dumped: 0
+get_file:25,13:32:10:getRevision:164:ux5T0w -- getRevision looping
+gdoc.py:25,13:32:10:async_init:24:ux5T0w -- async init called
+gdoc.py:25,13:32:10:async_init:24:ux5T0w -- async init called
+test_uti:25,13:32:11:print_size:82:ux5T0w -- ---------------Memory usage: 98140 (kb)---------------0 mins since start
+test_uti:25,13:32:11:print_size:100:ux5T0w -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+1/1 at 2020-04-25 13:32:11.160176
+dumped: 0
+gdoc.py:25,13:32:11:get_last_revision:54:ux5T0w -- last revision id 2502
+gdoc.py:25,13:32:11:async_init:31:ux5T0w -- after await 2502
+gdoc.py:25,13:32:11:get_last_revision:54:ux5T0w -- last revision id 647
+gdoc.py:25,13:32:11:async_init:31:ux5T0w -- after await 647
+get_file:25,13:32:11:getRevision:164:ux5T0w -- getRevision looping
+test_uti:25,13:32:11:tryGetQueue:229:ux5T0w -- getRevisionwaiting 1 1
+get_file:25,13:32:11:getRevision:188:ux5T0w -- google doc
+get_file:25,13:32:11:getRevision:164:ux5T0w -- getRevision looping
+get_file:25,13:32:11:getRevision:188:ux5T0w -- google doc
+get_file:25,13:32:11:getRevision:164:ux5T0w -- getRevision looping
+test_uti:25,13:32:12:print_size:82:ux5T0w -- ---------------Memory usage: 103196 (kb)---------------0 mins since start
+test_uti:25,13:32:12:print_size:100:ux5T0w -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 13:32:12.191244
+dumped: 0
+test_uti:25,13:32:13:print_size:82:ux5T0w -- ---------------Memory usage: 103196 (kb)---------------0 mins since start
+test_uti:25,13:32:13:print_size:100:ux5T0w -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 13:32:13.220846
+dumped: 0
+test_uti:25,13:32:14:print_size:82:ux5T0w -- ---------------Memory usage: 103196 (kb)---------------0 mins since start
+test_uti:25,13:32:14:print_size:100:ux5T0w -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 13:32:14.250451
+dumped: 0
+test_uti:25,13:32:15:print_size:82:ux5T0w -- ---------------Memory usage: 103196 (kb)---------------0 mins since start
+test_uti:25,13:32:15:print_size:100:ux5T0w -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 13:32:15.281328
+dumped: 0
+get_file:25,13:32:15:getIdsRecursive:66:ux5T0w -- getId task exiting
+get_file:25,13:32:15:getIdsRecursive:66:ux5T0w -- getId task exiting
+test_uti:25,13:32:16:print_size:82:ux5T0w -- ---------------Memory usage: 103196 (kb)---------------0 mins since start
+test_uti:25,13:32:16:print_size:100:ux5T0w -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 13:32:16.316529
+dumped: 0
+test_uti:25,13:32:16:tryGetQueue:229:ux5T0w -- getRevisionwaiting 1 1
+test_uti:25,13:32:16:tryGetQueue:229:ux5T0w -- getRevisionwaiting 1 1
+test_uti:25,13:32:17:print_size:82:ux5T0w -- ---------------Memory usage: 103196 (kb)---------------0 mins since start
+test_uti:25,13:32:17:print_size:100:ux5T0w -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 13:32:17.351242
+dumped: 0
+get_file:25,13:32:18:getRevision:164:ux5T0w -- getRevision looping
+test_uti:25,13:32:18:tryGetQueue:229:ux5T0w -- getRevisionwaiting 1 1
+test_uti:25,13:32:18:print_size:82:ux5T0w -- ---------------Memory usage: 103196 (kb)---------------0 mins since start
+test_uti:25,13:32:18:print_size:100:ux5T0w -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 13:32:18.382504
+dumped: 0
+test_uti:25,13:32:19:print_size:82:ux5T0w -- ---------------Memory usage: 103196 (kb)---------------0 mins since start
+test_uti:25,13:32:19:print_size:100:ux5T0w -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 13:32:19.412548
+dumped: 0
+test_uti:25,13:32:20:print_size:82:ux5T0w -- ---------------Memory usage: 103196 (kb)---------------0 mins since start
+test_uti:25,13:32:20:print_size:100:ux5T0w -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 13:32:20.442138
+dumped: 0
+get_file:25,13:32:20:getRevision:164:ux5T0w -- getRevision looping
+get_file:25,13:32:20:getRevision:169:ux5T0w -- getRevision task exiting
+get_file:25,13:32:20:getRevision:194:ux5T0w -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+test_uti:25,13:32:21:print_size:82:ux5T0w -- ---------------Memory usage: 103196 (kb)---------------0 mins since start
+test_uti:25,13:32:21:print_size:100:ux5T0w -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 13:32:21.471446
+dumped: 0
+get_file:25,13:32:21:getRevision:169:ux5T0w -- getRevision task exiting
+get_file:25,13:32:21:getRevision:194:ux5T0w -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,13:32:22:getRevision:164:ux5T0w -- getRevision looping
+test_uti:25,13:32:22:print_size:82:ux5T0w -- ---------------Memory usage: 103196 (kb)---------------0 mins since start
+test_uti:25,13:32:22:print_size:100:ux5T0w -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 13:32:22.499986
+dumped: 0
+test_uti:25,13:32:22:tryGetQueue:229:ux5T0w -- getRevisionwaiting 1 1
+test_uti:25,13:32:22:tryGetQueue:229:ux5T0w -- getRevisionwaiting 1 1
+test_uti:25,13:32:23:print_size:82:ux5T0w -- ---------------Memory usage: 103196 (kb)---------------0 mins since start
+test_uti:25,13:32:23:print_size:100:ux5T0w -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 13:32:23.532441
+dumped: 0
+get_file:25,13:32:23:getRevision:197:ux5T0w -- Close event has been set. Expect print task to finish soon
+get_file:25,13:32:24:getRevision:194:ux5T0w -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,13:32:24:getRevision:197:ux5T0w -- Close event has been set. Expect print task to finish soon
+get_file:25,13:32:25:getRevision:194:ux5T0w -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,13:32:26:getRevision:169:ux5T0w -- getRevision task exiting
+get_file:25,13:32:26:getRevision:194:ux5T0w -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,13:32:26:getRevision:169:ux5T0w -- getRevision task exiting
+get_file:25,13:32:26:getRevision:194:ux5T0w -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,13:32:27:getRevision:169:ux5T0w -- getRevision task exiting
+get_file:25,13:32:27:getRevision:194:ux5T0w -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,13:32:27:getRevision:197:ux5T0w -- Close event has been set. Expect print task to finish soon
+get_file:25,13:32:28:getRevision:197:ux5T0w -- Close event has been set. Expect print task to finish soon
+get_file:25,13:32:29:getRevision:169:ux5T0w -- getRevision task exiting
+get_file:25,13:32:29:getRevision:194:ux5T0w -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,13:32:29:getRevision:197:ux5T0w -- Close event has been set. Expect print task to finish soon
+get_file:25,13:32:29:getRevision:197:ux5T0w -- Close event has been set. Expect print task to finish soon
+get_file:25,13:32:30:getRevision:197:ux5T0w -- Close event has been set. Expect print task to finish soon
+get_file:25,13:32:31:getRevision:194:ux5T0w -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,13:32:32:getRevision:197:ux5T0w -- Close event has been set. Expect print task to finish soon
+get_file:25,13:32:34:getRevision:197:ux5T0w -- Close event has been set. Expect print task to finish soon
+get_file:25,13:32:41:getRevision:169:ux5T0w -- getRevision task exiting
+get_file:25,13:32:41:getRevision:194:ux5T0w -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,13:32:44:getRevision:197:ux5T0w -- Close event has been set. Expect print task to finish soon
+get_file:25,13:32:44:start:232:ux5T0w -- await gather revisions done
+get_file:25,13:32:44:start:239:ux5T0w -- cancelled throttler
+get_file:25,13:32:44:loadFiles:294:ux5T0w -- loop done
+configlo:25,13:32:44:handle_exception:81:ux5T0w -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "dsds.py", line 37, in <module>
+    start()
+  File "dsds.py", line 34, in start
+    loadFiles(uid, workingPath, fileid, creds)
+  File "/home/henry/pydocs/processing/get_files.py", line 297, in loadFiles
+    TestUtil.dump_files()
+  File "/home/henry/pydocs/processing/datutils/test_utils.py", line 125, in dump_files
+    histo[i] = compute_hist(cls.pathedFiles[i])
+NameError: name 'compute_hist' is not defined
+configlo:25,13:32:46:handle_exception:85:ux5T0w -- exiting! from sshook

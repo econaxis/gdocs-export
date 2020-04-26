@@ -1,0 +1,786 @@
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Files|files) _configure_property(owner, RelationshipProperty)
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Files|files) _configure_property(dates, RelationshipProperty)
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Files|files) _configure_property(name, RelationshipProperty)
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Files|files) _configure_property(id, Column)
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Files|files) _configure_property(fileId, Column)
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Files|files) _configure_property(lastModDate, Column)
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Files|files) _configure_property(parent_id, Column)
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Files|files) _configure_property(isFile, Column)
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Files|files) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<files>, primary_key=True, nullable=False)])
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Files|files) constructed
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Owner|owner) _configure_property(files, RelationshipProperty)
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Owner|owner) _configure_property(id, Column)
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Owner|owner) _configure_property(name, Column)
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Owner|owner) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<owner>, primary_key=True, nullable=False)])
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Owner|owner) constructed
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Dates|dates) _configure_property(files, RelationshipProperty)
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Dates|dates) _configure_property(id, Column)
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Dates|dates) _configure_property(fileId, Column)
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Dates|dates) _configure_property(bins, Column)
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Dates|dates) _configure_property(values, Column)
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Dates|dates) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<dates>, primary_key=True, nullable=False)])
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Dates|dates) constructed
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Closure|closure) _configure_property(files_relationship, RelationshipProperty)
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Closure|closure) _configure_property(parent_relationship, RelationshipProperty)
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Closure|closure) _configure_property(owner, RelationshipProperty)
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Closure|closure) _configure_property(id, Column)
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Closure|closure) _configure_property(parent, Column)
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Closure|closure) _configure_property(child, Column)
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Closure|closure) _configure_property(owner_id, Column)
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Closure|closure) _configure_property(depth, Column)
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Closure|closure) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<closure>, primary_key=True, nullable=False)])
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Closure|closure) constructed
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Filename|filename) _configure_property(files, RelationshipProperty)
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Filename|filename) _configure_property(owner, RelationshipProperty)
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Filename|filename) _configure_property(id, Column)
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Filename|filename) _configure_property(fileId, Column)
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Filename|filename) _configure_property(fileName, Column)
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Filename|filename) _configure_property(owner_id, Column)
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Filename|filename) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<filename>, primary_key=True, nullable=False)])
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Filename|filename) constructed
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Tasks|tasks) _configure_property(id, Column)
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Tasks|tasks) _configure_property(path, Column)
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Tasks|tasks) _configure_property(creds, Column)
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Tasks|tasks) _configure_property(fileid, Column)
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Tasks|tasks) _configure_property(userid, Column)
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Tasks|tasks) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<tasks>, primary_key=True, nullable=False)])
+mapper.p:26,10:42:22:_log:1998:PEcwMA -- (Tasks|tasks) constructed
+base.py:26,10:42:24:__connect:653:PEcwMA -- Created new connection <pyodbc.Connection object at 0x7f93b072b030>
+base.py:26,10:42:24:_execute_context:1205:PEcwMA -- SELECT CAST(SERVERPROPERTY('ProductVersion') AS VARCHAR)
+base.py:26,10:42:24:_execute_context:1207:PEcwMA -- ()
+result.p:26,10:42:24:_init_metadata:809:PEcwMA -- Col ('',)
+result.p:26,10:42:24:process_rows:1249:PEcwMA -- Row ('12.0.2000.8',)
+base.py:26,10:42:24:_execute_context:1205:PEcwMA -- SELECT schema_name()
+base.py:26,10:42:24:_execute_context:1207:PEcwMA -- ()
+result.p:26,10:42:24:_init_metadata:809:PEcwMA -- Col ('',)
+result.p:26,10:42:24:process_rows:1249:PEcwMA -- Row ('dbo',)
+base.py:26,10:42:24:_cursor_execute:1311:PEcwMA -- SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+base.py:26,10:42:24:_cursor_execute:1312:PEcwMA -- ()
+base.py:26,10:42:24:_cursor_execute:1311:PEcwMA -- SELECT CAST('test unicode returns' AS NVARCHAR(60)) AS anon_1
+base.py:26,10:42:24:_cursor_execute:1312:PEcwMA -- ()
+base.py:26,10:42:24:checkout:507:PEcwMA -- Connection <pyodbc.Connection object at 0x7f93b072b030> checked out from pool
+base.py:26,10:42:24:_execute_context:1205:PEcwMA -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:26,10:42:24:_execute_context:1207:PEcwMA -- ('files', 'dbo')
+result.p:26,10:42:24:_init_metadata:809:PEcwMA -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:26,10:42:24:process_rows:1249:PEcwMA -- Row ('dbo', 'files', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:26,10:42:24:_execute_context:1205:PEcwMA -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:26,10:42:24:_execute_context:1207:PEcwMA -- ('owner', 'dbo')
+result.p:26,10:42:24:_init_metadata:809:PEcwMA -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:26,10:42:24:process_rows:1249:PEcwMA -- Row ('dbo', 'owner', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:26,10:42:24:_execute_context:1205:PEcwMA -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:26,10:42:24:_execute_context:1207:PEcwMA -- ('dates', 'dbo')
+result.p:26,10:42:24:_init_metadata:809:PEcwMA -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:26,10:42:24:process_rows:1249:PEcwMA -- Row ('dbo', 'dates', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:26,10:42:25:_execute_context:1205:PEcwMA -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:26,10:42:25:_execute_context:1207:PEcwMA -- ('closure', 'dbo')
+result.p:26,10:42:25:_init_metadata:809:PEcwMA -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:26,10:42:25:process_rows:1249:PEcwMA -- Row ('dbo', 'closure', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:26,10:42:25:_execute_context:1205:PEcwMA -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:26,10:42:25:_execute_context:1207:PEcwMA -- ('filename', 'dbo')
+result.p:26,10:42:25:_init_metadata:809:PEcwMA -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:26,10:42:25:process_rows:1249:PEcwMA -- Row ('dbo', 'filename', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:26,10:42:25:_execute_context:1205:PEcwMA -- SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME] 
+FROM [INFORMATION_SCHEMA].[COLUMNS] 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+base.py:26,10:42:25:_execute_context:1207:PEcwMA -- ('tasks', 'dbo')
+result.p:26,10:42:25:_init_metadata:809:PEcwMA -- Col ('TABLE_SCHEMA', 'TABLE_NAME', 'COLUMN_NAME', 'IS_NULLABLE', 'DATA_TYPE', 'ORDINAL_POSITION', 'CHARACTER_MAXIMUM_LENGTH', 'NUMERIC_PRECISION', 'NUMERIC_SCALE', 'COLUMN_DEFAULT', 'COLLATION_NAME')
+result.p:26,10:42:25:process_rows:1249:PEcwMA -- Row ('dbo', 'tasks', 'id', 'NO', 'int', 1, None, 10, 0, None, None)
+base.py:26,10:42:25:_finalize_fairy:684:PEcwMA -- Connection <pyodbc.Connection object at 0x7f93b072b030> being returned to pool
+base.py:26,10:42:25:_reset:872:PEcwMA -- Connection <pyodbc.Connection object at 0x7f93b072b030> rollback-on-return
+base.py:26,10:42:25:checkout:507:PEcwMA -- Connection <pyodbc.Connection object at 0x7f93b072b030> checked out from pool
+sql.py:26,10:42:25:start:147:PEcwMA -- STARTING SQL testing2020-04-26 10:42:25.704362 /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+sql.py:26,10:42:25:start:149:PEcwMA -- setting sys except hook
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Files|files) _post_configure_properties() started
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Files|files) initialize prop owner
+relation:26,10:42:25:_log_joins:2426:PEcwMA -- Files.owner setup primary join owner.id = files.parent_id
+relation:26,10:42:25:_log_joins:2427:PEcwMA -- Files.owner setup secondary join None
+relation:26,10:42:25:_log_joins:2428:PEcwMA -- Files.owner synchronize pairs [(owner.id => files.parent_id)]
+relation:26,10:42:25:_log_joins:2435:PEcwMA -- Files.owner secondary synchronize pairs []
+relation:26,10:42:25:_log_joins:2443:PEcwMA -- Files.owner local/remote pairs [(files.parent_id / owner.id)]
+relation:26,10:42:25:_log_joins:2450:PEcwMA -- Files.owner remote columns [owner.id]
+relation:26,10:42:25:_log_joins:2455:PEcwMA -- Files.owner local columns [files.parent_id]
+relation:26,10:42:25:_log_joins:2460:PEcwMA -- Files.owner relationship direction symbol('MANYTOONE')
+strategi:26,10:42:25:__init__:547:PEcwMA -- Files.owner lazy loading clause owner.id = :param_1
+strategi:26,10:42:25:__init__:572:PEcwMA -- Files.owner will use query.get() to optimize instance loads
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Files|files) initialize prop dates
+relation:26,10:42:25:_log_joins:2426:PEcwMA -- Files.dates setup primary join files.id = dates."fileId"
+relation:26,10:42:25:_log_joins:2427:PEcwMA -- Files.dates setup secondary join None
+relation:26,10:42:25:_log_joins:2428:PEcwMA -- Files.dates synchronize pairs [(files.id => dates.fileId)]
+relation:26,10:42:25:_log_joins:2435:PEcwMA -- Files.dates secondary synchronize pairs []
+relation:26,10:42:25:_log_joins:2443:PEcwMA -- Files.dates local/remote pairs [(files.id / dates.fileId)]
+relation:26,10:42:25:_log_joins:2450:PEcwMA -- Files.dates remote columns [dates.fileId]
+relation:26,10:42:25:_log_joins:2455:PEcwMA -- Files.dates local columns [files.id]
+relation:26,10:42:25:_log_joins:2460:PEcwMA -- Files.dates relationship direction symbol('ONETOMANY')
+strategi:26,10:42:25:__init__:547:PEcwMA -- Files.dates lazy loading clause :param_1 = dates."fileId"
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Files|files) initialize prop name
+relation:26,10:42:25:_log_joins:2426:PEcwMA -- Files.name setup primary join files.id = filename."fileId"
+relation:26,10:42:25:_log_joins:2427:PEcwMA -- Files.name setup secondary join None
+relation:26,10:42:25:_log_joins:2428:PEcwMA -- Files.name synchronize pairs [(files.id => filename.fileId)]
+relation:26,10:42:25:_log_joins:2435:PEcwMA -- Files.name secondary synchronize pairs []
+relation:26,10:42:25:_log_joins:2443:PEcwMA -- Files.name local/remote pairs [(files.id / filename.fileId)]
+relation:26,10:42:25:_log_joins:2450:PEcwMA -- Files.name remote columns [filename.fileId]
+relation:26,10:42:25:_log_joins:2455:PEcwMA -- Files.name local columns [files.id]
+relation:26,10:42:25:_log_joins:2460:PEcwMA -- Files.name relationship direction symbol('ONETOMANY')
+strategi:26,10:42:25:__init__:547:PEcwMA -- Files.name lazy loading clause :param_1 = filename."fileId"
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Files|files) initialize prop id
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Files|files) initialize prop fileId
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Files|files) initialize prop lastModDate
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Files|files) initialize prop parent_id
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Files|files) initialize prop isFile
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Files|files) _post_configure_properties() complete
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Owner|owner) _post_configure_properties() started
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Owner|owner) initialize prop files
+relation:26,10:42:25:_log_joins:2426:PEcwMA -- Owner.files setup primary join owner.id = files.parent_id
+relation:26,10:42:25:_log_joins:2427:PEcwMA -- Owner.files setup secondary join None
+relation:26,10:42:25:_log_joins:2428:PEcwMA -- Owner.files synchronize pairs [(owner.id => files.parent_id)]
+relation:26,10:42:25:_log_joins:2435:PEcwMA -- Owner.files secondary synchronize pairs []
+relation:26,10:42:25:_log_joins:2443:PEcwMA -- Owner.files local/remote pairs [(owner.id / files.parent_id)]
+relation:26,10:42:25:_log_joins:2450:PEcwMA -- Owner.files remote columns [files.parent_id]
+relation:26,10:42:25:_log_joins:2455:PEcwMA -- Owner.files local columns [owner.id]
+relation:26,10:42:25:_log_joins:2460:PEcwMA -- Owner.files relationship direction symbol('ONETOMANY')
+strategi:26,10:42:25:__init__:547:PEcwMA -- Owner.files lazy loading clause :param_1 = files.parent_id
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Owner|owner) initialize prop id
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Owner|owner) initialize prop name
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Owner|owner) _post_configure_properties() complete
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Dates|dates) _post_configure_properties() started
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Dates|dates) initialize prop files
+relation:26,10:42:25:_log_joins:2426:PEcwMA -- Dates.files setup primary join files.id = dates."fileId"
+relation:26,10:42:25:_log_joins:2427:PEcwMA -- Dates.files setup secondary join None
+relation:26,10:42:25:_log_joins:2428:PEcwMA -- Dates.files synchronize pairs [(files.id => dates.fileId)]
+relation:26,10:42:25:_log_joins:2435:PEcwMA -- Dates.files secondary synchronize pairs []
+relation:26,10:42:25:_log_joins:2443:PEcwMA -- Dates.files local/remote pairs [(dates.fileId / files.id)]
+relation:26,10:42:25:_log_joins:2450:PEcwMA -- Dates.files remote columns [files.id]
+relation:26,10:42:25:_log_joins:2455:PEcwMA -- Dates.files local columns [dates.fileId]
+relation:26,10:42:25:_log_joins:2460:PEcwMA -- Dates.files relationship direction symbol('MANYTOONE')
+strategi:26,10:42:25:__init__:547:PEcwMA -- Dates.files lazy loading clause files.id = :param_1
+strategi:26,10:42:25:__init__:572:PEcwMA -- Dates.files will use query.get() to optimize instance loads
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Dates|dates) initialize prop id
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Dates|dates) initialize prop fileId
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Dates|dates) initialize prop bins
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Dates|dates) initialize prop values
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Dates|dates) _post_configure_properties() complete
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Closure|closure) _post_configure_properties() started
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Closure|closure) initialize prop files_relationship
+relation:26,10:42:25:_log_joins:2426:PEcwMA -- Closure.files_relationship setup primary join files.id = closure.child
+relation:26,10:42:25:_log_joins:2427:PEcwMA -- Closure.files_relationship setup secondary join None
+relation:26,10:42:25:_log_joins:2428:PEcwMA -- Closure.files_relationship synchronize pairs [(files.id => closure.child)]
+relation:26,10:42:25:_log_joins:2435:PEcwMA -- Closure.files_relationship secondary synchronize pairs []
+relation:26,10:42:25:_log_joins:2443:PEcwMA -- Closure.files_relationship local/remote pairs [(closure.child / files.id)]
+relation:26,10:42:25:_log_joins:2450:PEcwMA -- Closure.files_relationship remote columns [files.id]
+relation:26,10:42:25:_log_joins:2455:PEcwMA -- Closure.files_relationship local columns [closure.child]
+relation:26,10:42:25:_log_joins:2460:PEcwMA -- Closure.files_relationship relationship direction symbol('MANYTOONE')
+strategi:26,10:42:25:__init__:547:PEcwMA -- Closure.files_relationship lazy loading clause files.id = :param_1
+strategi:26,10:42:25:__init__:572:PEcwMA -- Closure.files_relationship will use query.get() to optimize instance loads
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Closure|closure) initialize prop parent_relationship
+relation:26,10:42:25:_log_joins:2426:PEcwMA -- Closure.parent_relationship setup primary join files.id = closure.parent
+relation:26,10:42:25:_log_joins:2427:PEcwMA -- Closure.parent_relationship setup secondary join None
+relation:26,10:42:25:_log_joins:2428:PEcwMA -- Closure.parent_relationship synchronize pairs [(files.id => closure.parent)]
+relation:26,10:42:25:_log_joins:2435:PEcwMA -- Closure.parent_relationship secondary synchronize pairs []
+relation:26,10:42:25:_log_joins:2443:PEcwMA -- Closure.parent_relationship local/remote pairs [(closure.parent / files.id)]
+relation:26,10:42:25:_log_joins:2450:PEcwMA -- Closure.parent_relationship remote columns [files.id]
+relation:26,10:42:25:_log_joins:2455:PEcwMA -- Closure.parent_relationship local columns [closure.parent]
+relation:26,10:42:25:_log_joins:2460:PEcwMA -- Closure.parent_relationship relationship direction symbol('MANYTOONE')
+strategi:26,10:42:25:__init__:547:PEcwMA -- Closure.parent_relationship lazy loading clause files.id = :param_1
+strategi:26,10:42:25:__init__:572:PEcwMA -- Closure.parent_relationship will use query.get() to optimize instance loads
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Closure|closure) initialize prop owner
+relation:26,10:42:25:_log_joins:2426:PEcwMA -- Closure.owner setup primary join owner.id = closure.owner_id
+relation:26,10:42:25:_log_joins:2427:PEcwMA -- Closure.owner setup secondary join None
+relation:26,10:42:25:_log_joins:2428:PEcwMA -- Closure.owner synchronize pairs [(owner.id => closure.owner_id)]
+relation:26,10:42:25:_log_joins:2435:PEcwMA -- Closure.owner secondary synchronize pairs []
+relation:26,10:42:25:_log_joins:2443:PEcwMA -- Closure.owner local/remote pairs [(closure.owner_id / owner.id)]
+relation:26,10:42:25:_log_joins:2450:PEcwMA -- Closure.owner remote columns [owner.id]
+relation:26,10:42:25:_log_joins:2455:PEcwMA -- Closure.owner local columns [closure.owner_id]
+relation:26,10:42:25:_log_joins:2460:PEcwMA -- Closure.owner relationship direction symbol('MANYTOONE')
+strategi:26,10:42:25:__init__:547:PEcwMA -- Closure.owner lazy loading clause owner.id = :param_1
+strategi:26,10:42:25:__init__:572:PEcwMA -- Closure.owner will use query.get() to optimize instance loads
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Closure|closure) initialize prop id
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Closure|closure) initialize prop parent
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Closure|closure) initialize prop child
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Closure|closure) initialize prop owner_id
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Closure|closure) initialize prop depth
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Closure|closure) _post_configure_properties() complete
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Filename|filename) _post_configure_properties() started
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Filename|filename) initialize prop files
+relation:26,10:42:25:_log_joins:2426:PEcwMA -- Filename.files setup primary join files.id = filename."fileId"
+relation:26,10:42:25:_log_joins:2427:PEcwMA -- Filename.files setup secondary join None
+relation:26,10:42:25:_log_joins:2428:PEcwMA -- Filename.files synchronize pairs [(files.id => filename.fileId)]
+relation:26,10:42:25:_log_joins:2435:PEcwMA -- Filename.files secondary synchronize pairs []
+relation:26,10:42:25:_log_joins:2443:PEcwMA -- Filename.files local/remote pairs [(filename.fileId / files.id)]
+relation:26,10:42:25:_log_joins:2450:PEcwMA -- Filename.files remote columns [files.id]
+relation:26,10:42:25:_log_joins:2455:PEcwMA -- Filename.files local columns [filename.fileId]
+relation:26,10:42:25:_log_joins:2460:PEcwMA -- Filename.files relationship direction symbol('MANYTOONE')
+strategi:26,10:42:25:__init__:547:PEcwMA -- Filename.files lazy loading clause files.id = :param_1
+strategi:26,10:42:25:__init__:572:PEcwMA -- Filename.files will use query.get() to optimize instance loads
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Filename|filename) initialize prop owner
+relation:26,10:42:25:_log_joins:2426:PEcwMA -- Filename.owner setup primary join owner.id = filename.owner_id
+relation:26,10:42:25:_log_joins:2427:PEcwMA -- Filename.owner setup secondary join None
+relation:26,10:42:25:_log_joins:2428:PEcwMA -- Filename.owner synchronize pairs [(owner.id => filename.owner_id)]
+relation:26,10:42:25:_log_joins:2435:PEcwMA -- Filename.owner secondary synchronize pairs []
+relation:26,10:42:25:_log_joins:2443:PEcwMA -- Filename.owner local/remote pairs [(filename.owner_id / owner.id)]
+relation:26,10:42:25:_log_joins:2450:PEcwMA -- Filename.owner remote columns [owner.id]
+relation:26,10:42:25:_log_joins:2455:PEcwMA -- Filename.owner local columns [filename.owner_id]
+relation:26,10:42:25:_log_joins:2460:PEcwMA -- Filename.owner relationship direction symbol('MANYTOONE')
+strategi:26,10:42:25:__init__:547:PEcwMA -- Filename.owner lazy loading clause owner.id = :param_1
+strategi:26,10:42:25:__init__:572:PEcwMA -- Filename.owner will use query.get() to optimize instance loads
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Filename|filename) initialize prop id
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Filename|filename) initialize prop fileId
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Filename|filename) initialize prop fileName
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Filename|filename) initialize prop owner_id
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Filename|filename) _post_configure_properties() complete
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Tasks|tasks) _post_configure_properties() started
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Tasks|tasks) initialize prop id
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Tasks|tasks) initialize prop path
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Tasks|tasks) initialize prop creds
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Tasks|tasks) initialize prop fileid
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Tasks|tasks) initialize prop userid
+mapper.p:26,10:42:25:_log:1998:PEcwMA -- (Tasks|tasks) _post_configure_properties() complete
+sql.py:26,10:42:25:start:156:PEcwMA -- Owner name: testing2020-04-04 26 Apr70z0ZU93bA
+base.py:26,10:42:26:__connect:653:PEcwMA -- Created new connection <pyodbc.Connection object at 0x7f93ae26bb90>
+base.py:26,10:42:26:checkout:507:PEcwMA -- Connection <pyodbc.Connection object at 0x7f93ae26bb90> checked out from pool
+base.py:26,10:42:26:_begin_impl:711:PEcwMA -- BEGIN (implicit)
+base.py:26,10:42:26:_execute_context:1205:PEcwMA -- INSERT INTO owner (name) OUTPUT inserted.id VALUES (?)
+base.py:26,10:42:26:_execute_context:1207:PEcwMA -- ('testing2020-04-04 26 Apr70z0ZU93bA',)
+result.p:26,10:42:26:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:26:process_rows:1249:PEcwMA -- Row (127,)
+base.py:26,10:42:26:_commit_impl:753:PEcwMA -- COMMIT
+base.py:26,10:42:26:_finalize_fairy:684:PEcwMA -- Connection <pyodbc.Connection object at 0x7f93ae26bb90> being returned to pool
+base.py:26,10:42:26:_reset:872:PEcwMA -- Connection <pyodbc.Connection object at 0x7f93ae26bb90> rollback-on-return
+path_reg:26,10:42:26:set:83:PEcwMA -- set 'memoized_setups' on path 'CachingEntityRegistry((<Mapper at 0x7f93b07d4c40; Owner>,))' to '{}'
+base.py:26,10:42:26:checkout:507:PEcwMA -- Connection <pyodbc.Connection object at 0x7f93ae26bb90> checked out from pool
+base.py:26,10:42:26:_begin_impl:711:PEcwMA -- BEGIN (implicit)
+base.py:26,10:42:26:_execute_context:1205:PEcwMA -- SELECT owner.id AS owner_id, owner.name AS owner_name 
+FROM owner 
+WHERE owner.id = ?
+base.py:26,10:42:26:_execute_context:1207:PEcwMA -- (127,)
+result.p:26,10:42:26:_init_metadata:809:PEcwMA -- Col ('owner_id', 'owner_name')
+result.p:26,10:42:26:process_rows:1249:PEcwMA -- Row (127, 'testing2020-04-04 26 Apr70z0ZU93bA')
+sql.py:26,10:42:26:start:160:PEcwMA -- Added owner row, name: testing2020-04-04 26 Apr70z0ZU93bA id: 127
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 0B4Fujvv5Mfqbb2d0TnNhcFhhREdadmRaaEI3QzVabnE2NE5v
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1QNNRjwRnVqieEoA5i9CdaSCyT_6Bi4vkmGO8YuZHytU
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1cGlmEaWYTHdD_Y3vlkIMMkZhdmosSZo_rQYxcSBoDbQ
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1G-K37QbHDgyLsJaUjRsROtLZZkj1fmqyC5YyHzOh-_Q
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1cIWwf3nZ2RAeriW8GerxZHY9nirLdcc968-GgSnRkjQ
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 16wsJnYBwdOHbuGROxWDFe2Tcf1w8T49TwWnGvq5OjXY
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 12NnsHOjtevUATb-yYIgDFFLyYajiHxhJ6xHiJnIXj-8
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1C09g5-ATBpXNJOmH8ANwCnq7Pk6vClzI1lmFYcqaH6A
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 17MhIJt6Bl2HnDLFiNZPRh7UOx-Co9FMvPWBsRnJRfsM
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1B37ygx-Iwh0EpS1c5fqpbK6AqE39m6ao4WD4uMWknzc
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1jRrZTHn-oge2sTqxli8Um026xuniXAeezLZn4B2zVSg
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1D48Gz6hmPkE6sATNqYoA3P3Hdjtq1y2zHRjrh1kH64I
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1cctIQ_TyhvRFgFVkzjwcfDL1w0i4L2lF-78_WM7Hy6A
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1o6ARVj7jhE2K_VNnX2BYajR2XBX1kdMu
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 15e68EIS9xXe5Yvzju4GtkyhFKJ_UgUA9juJKiUpPeUA
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 186ge00t4G7kcx1QdCIHxRhTnZfzpSTGDgfAXkdbD_Ig
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1wfaH9BSg8wrDaKXR54KK1y8pd-miEOQNj3E8GL6fTfg
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1G1g252JtmrFnXI5HaLLEafe8apipzquYwQQ0hbQIaho
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1sF1pFtL8fsnQBBAoTt8P7YGOVZVr6-6a4BLeU3PBncI
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1LuJ1Ln_dAc7n3Qj0zNE4yuYfFG6NEgxO-hsDA9M4qpQ
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 15Fi6RHQtC8H-GOJC_gjiED_9rNxtCdahEGtLvBUZcv4
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1H1aSubiwctKw-qMV6t1aGlfooY2Qn9V6Y01phHpg-kw
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1WbGMwYDyqP6aCDpf5fBbR7sneMicXtvEtfm3Z4k0Vzs
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 16wh_FgWE8Y0tUpAdIte4WyuB91_ypCySi82lvdhAiFY
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1WKk8W5cG-CYKBYN_cWpAdziiPVhvQZEAarnPwf58z4Y
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1YJPVyeYstaXiTguoSGCe_Kb3y4yv49N224nUrfLo7rU
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1PscMFhdtA31Nh7ELmM18NqjUfLDeGiexKI6q-lI0fKY
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1YlY2MTwu_I6PGWgmkNqFXYJVvNSQKMi7j0WulyoD75w
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1Gxvc-37IOivNHIPUJBI1v3jf5e-Hwcby_VZbN-k-Bfc
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1T1Sj69DxCTpEQI2pH0O04l_PSx1V3xsxYOnkiHPEPis
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1VrK4o4hKCSJyT8P4hKL9la_FO7-29hcBJMJDsvjXo2A
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1TxO4rhqIX6VUqO2bLJNkukbTpEDNVYSHD0X9hOzi88o
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1bVHzlp_4wGefhP9sx5GvI7ZR_ArSbtX0LaFmfZTeB8Y
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 11L4quB0D_Ttk0WMkddrcn_r8OmWG5Y7xEWgALTBoNvg
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ
+sql.py:26,10:42:26:start:189:PEcwMA -- duplicated fileid found, skipping
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1ZSCKTVjGJu6pUx7auNWEyfs83DLJtOeA3AbwuGuY8kI
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1R9fH_VyHSB3k-yCrmzD5fzj25Ga8neQLtKLceiEhdt0
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1gS0ZLEc-tkOVw-QM-oeezt-ATZgZt_g5wDuW2U4KvF8
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1ECJHKZpyfd75nEg20CQdICaWhZzri2SX_mQjfIFN-Wk
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1SGPIbZAmFYwIakoHevrYhHMwAf6xNIbMuS1zeULYsTQ
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1adckvxMM48z9k3sSG_JP2w-9T5WOqLNocASrGMkmaEs
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1cZg8adblMjYv0HOMh9qeEGR5Hhx59fhEAYD_mG1tfL0
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1_BIMsBsouGOgicFcBVR7gHXNHaSP4iVZGb6ezTcaHg8
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1x8Vlo2OmIPQX7_XYCRzaAG2DgEULR8QVA588B6rCcOg
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1jqJ0-FMfB3RjcqrSJxckdoC-jzHHMa3nLcRMP6CquRQ
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1F6-Z7HfxAQ-F5SIBuApsQr141gOfpxG4y3_h7W7xN0E
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1VSIZknJPJGRXuMPnSk9gjDStnMEXty0XJR1KO4z7QBk
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 16Tz6lbS7tdWBUhgseZCx0va0xBAayzOSSDSH-T20xRA
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1wqRmLVKxvm7w--kMAMGzVAjoILC593KzG-z6AFTdt_8
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1h1FUpGxFne9y7IFDVl7IQZGCPE1vhm3rJbCf5WgovQo
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1b1ARGMmgTYWTMHAnv5biEbQKVzTLLQ3vt2n2YLicEws
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1XGCuTdCzlBbB5B0rAu29ButWuims-VeTYBdfozFaFPk
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1ecDoneIykl54KGJhMUpcvdNKg350pGauVB9v0uCuFbI
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1ZIuPeHFKHzM1yn1G47W92JbGijyxWqaOfKhkejWXMdA
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 12K516OwpugshsvDcQqP4cSvg-ku6pJuAJGfrEmbDqGc
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1a7puy4GkUsAx2u9lu1i3MnxJAx0JyFPFozhkGYlCT5I
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1jEPinYNleGwKDF0SJddLTTeVvYZbF40sbV5FxvJyNCU
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1e7IjM7tgdUxRQcmg2bbYvLArkghX129Cz_lOLFpnF34
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1JQ-JszbkA6JHylaBr1ZDWeMXTy2X6fM2evDEJo-W3U4
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1Ez54_TKEcG-xUH_lCEW1711SozJ2_cSeBgiuGKjE8Pk
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 12bPKEMHnfEBwlDfZnXYlPZRRwnRiHPVtDkcBZqNxBA4
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 125AyhViQoEQKg-wVD4y2hv82aynGTyK7SmeqVHpXvQs
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1B6ePg9Ixtc4xqKL4D0_JO80n8GL83WpztJKJGaH-6S0
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1LyrolWAEdF9g6y9DyEk_FIH8B7V1cGDowMv8NvVTjow
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1gvFEgWgxaLnNlgLpfwtdH_-UVEY1rglxelRy307hjns
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 19qkWrA-moW3LlnMEtT1VSoCGU5TpOwB_17goJbrvWHM
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1F5C4F51m7TcoiVU-U3s2TERMRIMoe_RxQFA8GBf6-64
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1RFm8X0JkBTJj7iR7YLxsrpzbiBTMANScjSeDO9l2aQw
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1Visfq9vleQOXgJ3svv3Yj5A3qf3GOY4VMIcq4E7J5q0
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1kIbHXyKc4uI2MzuXFMhT73ZIAPnP32_jW1kv2yMNoUU
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1AOfGsW5I-aG8b0WdSsq4IqMlGiDqDYUCUQfFoEJ1ll4
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1XJ5BlIal28QXAMwFOiNr81G7U0xElvy16JUj-39MTrU
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 18vcbSvvx_xRDIq0vUFjpKkYGdu00l5XbORDG5EKfWNw
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1iwD0UOBkgdB5Jnza1szyk2RCaNpOfito5Be0lD0HGvk
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1kn3xhSXmFhPNdSs3J-4x4F95PXucVOdAJAwycd591Ns
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1iMp4WTH5NG-vtb4UkJiqLA7D3ck7MkjS2Mu9gw8rOKs
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1b6qJW2miNoybz6Y2_UdB51prtkzfFmWcKbbZ6YpSAbg
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1LvrNb0X-i_B-0eXh_cLDTHGqGukf5UcyNwtVIzimL4E
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1DGlo99pbjGwp3lZne4o98aEBS-oC_FaPV0BGUOHCrNo
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1_wRTbPygF0D0H8VlY-aHjCKTKBQ_Yr8jhCaemuGypXg
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1DE8JkISOGvpaUbmFRqQ_zVwh-29QmyD1t7ap73cr0KU
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1NpHQsdIiUQJTN0Bwdl__Kn69Ix3I3FEZM-6XWD-hCQ4
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1RMi1U6KwIBwORi6hYYv4HQiypu8bD1obKFyiCthf7pw
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1MQSAawInjoU_bWoc22FZS1s-qXWkPZNXwZDM-lFUoU0
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1fZgygLRoHAb-498SXVjIXpGUIvLGU9qeRU63qzQx9nQ
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1pWqW84PU9HyaS_FLl_qn80OAdv0gFum7_FkO6a82EyE
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1R6xbWkbfzsQajjjcXW8tMQWAHqG2Kw6fUzCtSVa3rKI
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1ohuX_SQlBRAEoBP1lszH7C5sU4UixwKTJsjyRB4hSWw
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s
+sql.py:26,10:42:26:start:189:PEcwMA -- duplicated fileid found, skipping
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08
+sql.py:26,10:42:26:start:189:PEcwMA -- duplicated fileid found, skipping
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4
+sql.py:26,10:42:26:start:189:PEcwMA -- duplicated fileid found, skipping
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1NBVW6zOvYcoTmGZ46HZosMmV2SVNURBvf4WOm1ydcTk
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 186ge00t4G7kcx1QdCIHxRhTnZfzpSTGDgfAXkdbD_Ig
+sql.py:26,10:42:26:start:189:PEcwMA -- duplicated fileid found, skipping
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1WbGMwYDyqP6aCDpf5fBbR7sneMicXtvEtfm3Z4k0Vzs
+sql.py:26,10:42:26:start:189:PEcwMA -- duplicated fileid found, skipping
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 16wh_FgWE8Y0tUpAdIte4WyuB91_ypCySi82lvdhAiFY
+sql.py:26,10:42:26:start:189:PEcwMA -- duplicated fileid found, skipping
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1YlY2MTwu_I6PGWgmkNqFXYJVvNSQKMi7j0WulyoD75w
+sql.py:26,10:42:26:start:189:PEcwMA -- duplicated fileid found, skipping
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1WKk8W5cG-CYKBYN_cWpAdziiPVhvQZEAarnPwf58z4Y
+sql.py:26,10:42:26:start:189:PEcwMA -- duplicated fileid found, skipping
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1T1Sj69DxCTpEQI2pH0O04l_PSx1V3xsxYOnkiHPEPis
+sql.py:26,10:42:26:start:189:PEcwMA -- duplicated fileid found, skipping
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 125AyhViQoEQKg-wVD4y2hv82aynGTyK7SmeqVHpXvQs
+sql.py:26,10:42:26:start:189:PEcwMA -- duplicated fileid found, skipping
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1gvFEgWgxaLnNlgLpfwtdH_-UVEY1rglxelRy307hjns
+sql.py:26,10:42:26:start:189:PEcwMA -- duplicated fileid found, skipping
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1LyrolWAEdF9g6y9DyEk_FIH8B7V1cGDowMv8NvVTjow
+sql.py:26,10:42:26:start:189:PEcwMA -- duplicated fileid found, skipping
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 19qkWrA-moW3LlnMEtT1VSoCGU5TpOwB_17goJbrvWHM
+sql.py:26,10:42:26:start:189:PEcwMA -- duplicated fileid found, skipping
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1F5C4F51m7TcoiVU-U3s2TERMRIMoe_RxQFA8GBf6-64
+sql.py:26,10:42:26:start:189:PEcwMA -- duplicated fileid found, skipping
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1RFm8X0JkBTJj7iR7YLxsrpzbiBTMANScjSeDO9l2aQw
+sql.py:26,10:42:26:start:189:PEcwMA -- duplicated fileid found, skipping
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1XJ5BlIal28QXAMwFOiNr81G7U0xElvy16JUj-39MTrU
+sql.py:26,10:42:26:start:189:PEcwMA -- duplicated fileid found, skipping
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1Visfq9vleQOXgJ3svv3Yj5A3qf3GOY4VMIcq4E7J5q0
+sql.py:26,10:42:26:start:189:PEcwMA -- duplicated fileid found, skipping
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1kIbHXyKc4uI2MzuXFMhT73ZIAPnP32_jW1kv2yMNoUU
+sql.py:26,10:42:26:start:189:PEcwMA -- duplicated fileid found, skipping
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1AOfGsW5I-aG8b0WdSsq4IqMlGiDqDYUCUQfFoEJ1ll4
+sql.py:26,10:42:26:start:189:PEcwMA -- duplicated fileid found, skipping
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 18vcbSvvx_xRDIq0vUFjpKkYGdu00l5XbORDG5EKfWNw
+sql.py:26,10:42:26:start:189:PEcwMA -- duplicated fileid found, skipping
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1kn3xhSXmFhPNdSs3J-4x4F95PXucVOdAJAwycd591Ns
+sql.py:26,10:42:26:start:189:PEcwMA -- duplicated fileid found, skipping
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1iMp4WTH5NG-vtb4UkJiqLA7D3ck7MkjS2Mu9gw8rOKs
+sql.py:26,10:42:26:start:189:PEcwMA -- duplicated fileid found, skipping
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1b6qJW2miNoybz6Y2_UdB51prtkzfFmWcKbbZ6YpSAbg
+sql.py:26,10:42:26:start:189:PEcwMA -- duplicated fileid found, skipping
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1LvrNb0X-i_B-0eXh_cLDTHGqGukf5UcyNwtVIzimL4E
+sql.py:26,10:42:26:start:189:PEcwMA -- duplicated fileid found, skipping
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1_wRTbPygF0D0H8VlY-aHjCKTKBQ_Yr8jhCaemuGypXg
+sql.py:26,10:42:26:start:189:PEcwMA -- duplicated fileid found, skipping
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1DGlo99pbjGwp3lZne4o98aEBS-oC_FaPV0BGUOHCrNo
+sql.py:26,10:42:26:start:189:PEcwMA -- duplicated fileid found, skipping
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1DE8JkISOGvpaUbmFRqQ_zVwh-29QmyD1t7ap73cr0KU
+sql.py:26,10:42:26:start:189:PEcwMA -- duplicated fileid found, skipping
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1NpHQsdIiUQJTN0Bwdl__Kn69Ix3I3FEZM-6XWD-hCQ4
+sql.py:26,10:42:26:start:189:PEcwMA -- duplicated fileid found, skipping
+sql.py:26,10:42:26:start:187:PEcwMA -- File: 1RMi1U6KwIBwORi6hYYv4HQiypu8bD1obKFyiCthf7pw
+sql.py:26,10:42:26:start:189:PEcwMA -- duplicated fileid found, skipping
+sql.py:26,10:42:26:start:206:PEcwMA -- len of id map 92 len of files 92
+sql.py:26,10:42:26:report:42:PEcwMA -- lt_files size 92 
+base.py:26,10:42:27:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:27:_execute_context:1207:PEcwMA -- ('0B4Fujvv5Mfqbb2d0TnNhcFhhREdadmRaaEI3QzVabnE2NE5v:26-10.78522870z0ZU93bA9Zef', datetime.datetime(2020, 4, 16, 20, 10, 48, 919000), 127, 1)
+result.p:26,10:42:27:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:27:process_rows:1249:PEcwMA -- Row (14847,)
+base.py:26,10:42:27:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:27:_execute_context:1207:PEcwMA -- ('1QNNRjwRnVqieEoA5i9CdaSCyT_6Bi4vkmGO8YuZHytU:26-10.78522870z0ZU93bA9clM', datetime.datetime(2020, 4, 16, 20, 10, 49, 2000), 127, 1)
+result.p:26,10:42:27:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:27:process_rows:1249:PEcwMA -- Row (14848,)
+base.py:26,10:42:27:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:27:_execute_context:1207:PEcwMA -- ('1cGlmEaWYTHdD_Y3vlkIMMkZhdmosSZo_rQYxcSBoDbQ:26-10.78522870z0ZU93bAWb0B', datetime.datetime(2020, 4, 23, 14, 38, 4, 583000), 127, 1)
+result.p:26,10:42:27:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:27:process_rows:1249:PEcwMA -- Row (14849,)
+base.py:26,10:42:27:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:27:_execute_context:1207:PEcwMA -- ('1G-K37QbHDgyLsJaUjRsROtLZZkj1fmqyC5YyHzOh-_Q:26-10.78522870z0ZU93bAG7T5', datetime.datetime(2020, 3, 25, 23, 57, 29, 487000), 127, 1)
+result.p:26,10:42:27:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:27:process_rows:1249:PEcwMA -- Row (14850,)
+base.py:26,10:42:27:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:27:_execute_context:1207:PEcwMA -- ('1cIWwf3nZ2RAeriW8GerxZHY9nirLdcc968-GgSnRkjQ:26-10.78522870z0ZU93bAX0NH', datetime.datetime(2020, 1, 17, 10, 30, 39, 243000), 127, 1)
+result.p:26,10:42:27:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:27:process_rows:1249:PEcwMA -- Row (14851,)
+base.py:26,10:42:27:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:27:_execute_context:1207:PEcwMA -- ('16wsJnYBwdOHbuGROxWDFe2Tcf1w8T49TwWnGvq5OjXY:26-10.78522870z0ZU93bAwMII', datetime.datetime(2015, 7, 6, 16, 38, 1, 618000), 127, 1)
+result.p:26,10:42:27:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:27:process_rows:1249:PEcwMA -- Row (14852,)
+base.py:26,10:42:28:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:28:_execute_context:1207:PEcwMA -- ('1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ:26-10.78522870z0ZU93bAsXlK', datetime.datetime(2020, 4, 16, 21, 4, 56, 746000), 127, 1)
+result.p:26,10:42:28:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:28:process_rows:1249:PEcwMA -- Row (14853,)
+base.py:26,10:42:28:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:28:_execute_context:1207:PEcwMA -- ('12NnsHOjtevUATb-yYIgDFFLyYajiHxhJ6xHiJnIXj-8:26-10.78522870z0ZU93bA_OXI', datetime.datetime(2020, 3, 30, 11, 20, 51, 634000), 127, 1)
+result.p:26,10:42:28:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:28:process_rows:1249:PEcwMA -- Row (14854,)
+base.py:26,10:42:28:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:28:_execute_context:1207:PEcwMA -- ('1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4:26-10.78522870z0ZU93bA_fN2', datetime.datetime(2020, 4, 6, 22, 52, 8, 150000), 127, 1)
+result.p:26,10:42:28:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:28:process_rows:1249:PEcwMA -- Row (14855,)
+base.py:26,10:42:28:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:28:_execute_context:1207:PEcwMA -- ('1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08:26-10.78522870z0ZU93bAQdWZ', datetime.datetime(2019, 4, 26, 16, 43, 57, 961000), 127, 1)
+result.p:26,10:42:28:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:28:process_rows:1249:PEcwMA -- Row (14856,)
+base.py:26,10:42:28:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:28:_execute_context:1207:PEcwMA -- ('1C09g5-ATBpXNJOmH8ANwCnq7Pk6vClzI1lmFYcqaH6A:26-10.78522870z0ZU93bACltm', datetime.datetime(2020, 4, 12, 22, 54, 48, 227000), 127, 1)
+result.p:26,10:42:28:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:28:process_rows:1249:PEcwMA -- Row (14857,)
+base.py:26,10:42:28:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:28:_execute_context:1207:PEcwMA -- ('1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s:26-10.78522870z0ZU93bAo5Fl', datetime.datetime(2020, 2, 3, 23, 11, 6, 450000), 127, 1)
+result.p:26,10:42:28:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:28:process_rows:1249:PEcwMA -- Row (14858,)
+base.py:26,10:42:29:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:29:_execute_context:1207:PEcwMA -- ('17MhIJt6Bl2HnDLFiNZPRh7UOx-Co9FMvPWBsRnJRfsM:26-10.78522870z0ZU93bA_KXc', datetime.datetime(2020, 3, 12, 9, 48, 26, 31000), 127, 1)
+result.p:26,10:42:29:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:29:process_rows:1249:PEcwMA -- Row (14859,)
+base.py:26,10:42:29:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:29:_execute_context:1207:PEcwMA -- ('1B37ygx-Iwh0EpS1c5fqpbK6AqE39m6ao4WD4uMWknzc:26-10.78522870z0ZU93bAsRoU', datetime.datetime(2020, 4, 4, 0, 34, 8, 478000), 127, 1)
+result.p:26,10:42:29:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:29:process_rows:1249:PEcwMA -- Row (14860,)
+base.py:26,10:42:29:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:29:_execute_context:1207:PEcwMA -- ('1jRrZTHn-oge2sTqxli8Um026xuniXAeezLZn4B2zVSg:26-10.78522870z0ZU93bAx6fM', datetime.datetime(2020, 3, 31, 17, 41, 12, 369000), 127, 1)
+result.p:26,10:42:29:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:29:process_rows:1249:PEcwMA -- Row (14861,)
+base.py:26,10:42:29:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:29:_execute_context:1207:PEcwMA -- ('1D48Gz6hmPkE6sATNqYoA3P3Hdjtq1y2zHRjrh1kH64I:26-10.78522870z0ZU93bAkEcD', datetime.datetime(2020, 3, 27, 22, 35, 29, 646000), 127, 1)
+result.p:26,10:42:29:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:29:process_rows:1249:PEcwMA -- Row (14862,)
+base.py:26,10:42:29:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:29:_execute_context:1207:PEcwMA -- ('1cctIQ_TyhvRFgFVkzjwcfDL1w0i4L2lF-78_WM7Hy6A:26-10.78522870z0ZU93bAFEjr', datetime.datetime(2020, 3, 27, 22, 27, 32, 387000), 127, 1)
+result.p:26,10:42:29:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:29:process_rows:1249:PEcwMA -- Row (14863,)
+base.py:26,10:42:29:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:29:_execute_context:1207:PEcwMA -- ('1o6ARVj7jhE2K_VNnX2BYajR2XBX1kdMu:26-10.78522870z0ZU93bAMqxH', datetime.datetime(2020, 2, 18, 9, 0, 27, 574000), 127, 1)
+result.p:26,10:42:29:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:29:process_rows:1249:PEcwMA -- Row (14864,)
+base.py:26,10:42:30:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:30:_execute_context:1207:PEcwMA -- ('15e68EIS9xXe5Yvzju4GtkyhFKJ_UgUA9juJKiUpPeUA:26-10.78522870z0ZU93bAic4W', datetime.datetime(2020, 3, 2, 14, 27, 54, 74000), 127, 1)
+result.p:26,10:42:30:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:30:process_rows:1249:PEcwMA -- Row (14865,)
+base.py:26,10:42:30:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:30:_execute_context:1207:PEcwMA -- ('186ge00t4G7kcx1QdCIHxRhTnZfzpSTGDgfAXkdbD_Ig:26-10.78522870z0ZU93bABaaq', datetime.datetime(2020, 3, 8, 17, 28, 49, 736000), 127, 1)
+result.p:26,10:42:30:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:30:process_rows:1249:PEcwMA -- Row (14866,)
+base.py:26,10:42:30:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:30:_execute_context:1207:PEcwMA -- ('1wfaH9BSg8wrDaKXR54KK1y8pd-miEOQNj3E8GL6fTfg:26-10.78522870z0ZU93bAibHG', datetime.datetime(2020, 2, 24, 10, 19, 21, 943000), 127, 1)
+result.p:26,10:42:30:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:30:process_rows:1249:PEcwMA -- Row (14867,)
+base.py:26,10:42:30:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:30:_execute_context:1207:PEcwMA -- ('1G1g252JtmrFnXI5HaLLEafe8apipzquYwQQ0hbQIaho:26-10.78522870z0ZU93bAUd1w', datetime.datetime(2020, 2, 27, 13, 4, 1, 471000), 127, 1)
+result.p:26,10:42:30:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:30:process_rows:1249:PEcwMA -- Row (14868,)
+base.py:26,10:42:30:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:30:_execute_context:1207:PEcwMA -- ('1sF1pFtL8fsnQBBAoTt8P7YGOVZVr6-6a4BLeU3PBncI:26-10.78522870z0ZU93bApYHE', datetime.datetime(2018, 12, 16, 23, 34, 3, 790000), 127, 1)
+result.p:26,10:42:30:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:30:process_rows:1249:PEcwMA -- Row (14869,)
+base.py:26,10:42:30:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:30:_execute_context:1207:PEcwMA -- ('1LuJ1Ln_dAc7n3Qj0zNE4yuYfFG6NEgxO-hsDA9M4qpQ:26-10.78522870z0ZU93bABgyP', datetime.datetime(2020, 2, 18, 8, 55, 28, 314000), 127, 1)
+result.p:26,10:42:30:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:30:process_rows:1249:PEcwMA -- Row (14870,)
+base.py:26,10:42:31:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:31:_execute_context:1207:PEcwMA -- ('15Fi6RHQtC8H-GOJC_gjiED_9rNxtCdahEGtLvBUZcv4:26-10.78522870z0ZU93bAFfGf', datetime.datetime(2020, 2, 17, 17, 20, 17, 28000), 127, 1)
+result.p:26,10:42:31:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:31:process_rows:1249:PEcwMA -- Row (14871,)
+base.py:26,10:42:31:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:31:_execute_context:1207:PEcwMA -- ('1H1aSubiwctKw-qMV6t1aGlfooY2Qn9V6Y01phHpg-kw:26-10.78522870z0ZU93bAvRbr', datetime.datetime(2020, 2, 17, 17, 8, 7, 167000), 127, 1)
+result.p:26,10:42:31:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:31:process_rows:1249:PEcwMA -- Row (14872,)
+base.py:26,10:42:31:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:31:_execute_context:1207:PEcwMA -- ('1WbGMwYDyqP6aCDpf5fBbR7sneMicXtvEtfm3Z4k0Vzs:26-10.78522870z0ZU93bAX41l', datetime.datetime(2020, 2, 14, 21, 53, 59, 830000), 127, 1)
+result.p:26,10:42:31:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:31:process_rows:1249:PEcwMA -- Row (14873,)
+base.py:26,10:42:31:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:31:_execute_context:1207:PEcwMA -- ('16wh_FgWE8Y0tUpAdIte4WyuB91_ypCySi82lvdhAiFY:26-10.78522870z0ZU93bARB0q', datetime.datetime(2020, 2, 4, 14, 26, 46, 767000), 127, 1)
+result.p:26,10:42:31:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:31:process_rows:1249:PEcwMA -- Row (14874,)
+base.py:26,10:42:31:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:31:_execute_context:1207:PEcwMA -- ('1WKk8W5cG-CYKBYN_cWpAdziiPVhvQZEAarnPwf58z4Y:26-10.78522870z0ZU93bAmUCx', datetime.datetime(2020, 2, 4, 14, 24, 7, 543000), 127, 1)
+result.p:26,10:42:31:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:31:process_rows:1249:PEcwMA -- Row (14875,)
+base.py:26,10:42:31:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:31:_execute_context:1207:PEcwMA -- ('1YJPVyeYstaXiTguoSGCe_Kb3y4yv49N224nUrfLo7rU:26-10.78522870z0ZU93bAlXz5', datetime.datetime(2020, 1, 30, 13, 46, 44, 658000), 127, 1)
+sql.py:26,10:42:32:report:42:PEcwMA -- lt_files size 82 
+result.p:26,10:42:32:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:32:process_rows:1249:PEcwMA -- Row (14876,)
+base.py:26,10:42:32:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:32:_execute_context:1207:PEcwMA -- ('1PscMFhdtA31Nh7ELmM18NqjUfLDeGiexKI6q-lI0fKY:26-10.78522870z0ZU93bARUhH', datetime.datetime(2020, 1, 28, 14, 26, 20, 571000), 127, 1)
+result.p:26,10:42:32:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:32:process_rows:1249:PEcwMA -- Row (14877,)
+base.py:26,10:42:32:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:32:_execute_context:1207:PEcwMA -- ('1YlY2MTwu_I6PGWgmkNqFXYJVvNSQKMi7j0WulyoD75w:26-10.78522870z0ZU93bAuvm2', datetime.datetime(2020, 1, 15, 17, 16, 57, 876000), 127, 1)
+result.p:26,10:42:32:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:32:process_rows:1249:PEcwMA -- Row (14878,)
+base.py:26,10:42:32:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:32:_execute_context:1207:PEcwMA -- ('1Gxvc-37IOivNHIPUJBI1v3jf5e-Hwcby_VZbN-k-Bfc:26-10.78522870z0ZU93bACpW3', datetime.datetime(2020, 1, 28, 12, 29, 17, 579000), 127, 1)
+result.p:26,10:42:32:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:32:process_rows:1249:PEcwMA -- Row (14879,)
+base.py:26,10:42:32:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:32:_execute_context:1207:PEcwMA -- ('1T1Sj69DxCTpEQI2pH0O04l_PSx1V3xsxYOnkiHPEPis:26-10.78522870z0ZU93bAIIW0', datetime.datetime(2020, 1, 20, 17, 26, 34, 278000), 127, 1)
+result.p:26,10:42:32:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:32:process_rows:1249:PEcwMA -- Row (14880,)
+base.py:26,10:42:32:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:32:_execute_context:1207:PEcwMA -- ('1VrK4o4hKCSJyT8P4hKL9la_FO7-29hcBJMJDsvjXo2A:26-10.78522870z0ZU93bAg2oU', datetime.datetime(2020, 1, 11, 14, 40, 8, 96000), 127, 1)
+result.p:26,10:42:32:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:32:process_rows:1249:PEcwMA -- Row (14881,)
+base.py:26,10:42:32:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:32:_execute_context:1207:PEcwMA -- ('1TxO4rhqIX6VUqO2bLJNkukbTpEDNVYSHD0X9hOzi88o:26-10.78522870z0ZU93bAFCwL', datetime.datetime(2020, 1, 4, 13, 25, 43, 959000), 127, 1)
+result.p:26,10:42:33:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:33:process_rows:1249:PEcwMA -- Row (14882,)
+base.py:26,10:42:33:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:33:_execute_context:1207:PEcwMA -- ('1bVHzlp_4wGefhP9sx5GvI7ZR_ArSbtX0LaFmfZTeB8Y:26-10.78522870z0ZU93bAQzIu', datetime.datetime(2019, 12, 28, 16, 59, 34, 570000), 127, 1)
+result.p:26,10:42:33:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:33:process_rows:1249:PEcwMA -- Row (14883,)
+base.py:26,10:42:33:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:33:_execute_context:1207:PEcwMA -- ('11L4quB0D_Ttk0WMkddrcn_r8OmWG5Y7xEWgALTBoNvg:26-10.78522870z0ZU93bAwZgh', datetime.datetime(1969, 12, 31, 16, 0, 1), 127, 1)
+result.p:26,10:42:33:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:33:process_rows:1249:PEcwMA -- Row (14884,)
+base.py:26,10:42:33:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:33:_execute_context:1207:PEcwMA -- ('1ZSCKTVjGJu6pUx7auNWEyfs83DLJtOeA3AbwuGuY8kI:26-10.78522870z0ZU93bAZcQq', datetime.datetime(2019, 12, 13, 16, 44, 14, 854000), 127, 1)
+result.p:26,10:42:33:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:33:process_rows:1249:PEcwMA -- Row (14885,)
+base.py:26,10:42:33:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:33:_execute_context:1207:PEcwMA -- ('1R9fH_VyHSB3k-yCrmzD5fzj25Ga8neQLtKLceiEhdt0:26-10.78522870z0ZU93bA9nVi', datetime.datetime(2019, 12, 13, 16, 44, 2, 37000), 127, 1)
+result.p:26,10:42:33:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:33:process_rows:1249:PEcwMA -- Row (14886,)
+base.py:26,10:42:33:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:33:_execute_context:1207:PEcwMA -- ('1gS0ZLEc-tkOVw-QM-oeezt-ATZgZt_g5wDuW2U4KvF8:26-10.78522870z0ZU93bAcPVT', datetime.datetime(2017, 6, 15, 23, 12, 57, 935000), 127, 1)
+result.p:26,10:42:33:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:33:process_rows:1249:PEcwMA -- Row (14887,)
+base.py:26,10:42:34:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:34:_execute_context:1207:PEcwMA -- ('1ECJHKZpyfd75nEg20CQdICaWhZzri2SX_mQjfIFN-Wk:26-10.78522870z0ZU93bAkEZD', datetime.datetime(2017, 6, 13, 14, 23, 27, 577000), 127, 1)
+result.p:26,10:42:34:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:34:process_rows:1249:PEcwMA -- Row (14888,)
+base.py:26,10:42:34:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:34:_execute_context:1207:PEcwMA -- ('1SGPIbZAmFYwIakoHevrYhHMwAf6xNIbMuS1zeULYsTQ:26-10.78522870z0ZU93bASx2X', datetime.datetime(1969, 12, 31, 16, 0, 1), 127, 1)
+result.p:26,10:42:34:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:34:process_rows:1249:PEcwMA -- Row (14889,)
+base.py:26,10:42:34:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:34:_execute_context:1207:PEcwMA -- ('1adckvxMM48z9k3sSG_JP2w-9T5WOqLNocASrGMkmaEs:26-10.78522870z0ZU93bAQQIv', datetime.datetime(2017, 5, 26, 23, 58, 59, 866000), 127, 1)
+result.p:26,10:42:34:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:34:process_rows:1249:PEcwMA -- Row (14890,)
+base.py:26,10:42:34:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:34:_execute_context:1207:PEcwMA -- ('1cZg8adblMjYv0HOMh9qeEGR5Hhx59fhEAYD_mG1tfL0:26-10.78522870z0ZU93bA9Ui0', datetime.datetime(2017, 5, 26, 23, 58, 52, 577000), 127, 1)
+result.p:26,10:42:34:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:34:process_rows:1249:PEcwMA -- Row (14891,)
+base.py:26,10:42:35:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:35:_execute_context:1207:PEcwMA -- ('1_BIMsBsouGOgicFcBVR7gHXNHaSP4iVZGb6ezTcaHg8:26-10.78522870z0ZU93bADxaZ', datetime.datetime(2017, 5, 25, 23, 58, 54, 525000), 127, 1)
+result.p:26,10:42:35:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:35:process_rows:1249:PEcwMA -- Row (14892,)
+base.py:26,10:42:35:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:35:_execute_context:1207:PEcwMA -- ('1x8Vlo2OmIPQX7_XYCRzaAG2DgEULR8QVA588B6rCcOg:26-10.78522870z0ZU93bAxI3p', datetime.datetime(2017, 5, 24, 23, 58, 55, 732000), 127, 1)
+result.p:26,10:42:35:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:35:process_rows:1249:PEcwMA -- Row (14893,)
+base.py:26,10:42:35:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:35:_execute_context:1207:PEcwMA -- ('1jqJ0-FMfB3RjcqrSJxckdoC-jzHHMa3nLcRMP6CquRQ:26-10.78522870z0ZU93bAaJTv', datetime.datetime(2017, 5, 19, 23, 58, 56, 195000), 127, 1)
+result.p:26,10:42:35:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:35:process_rows:1249:PEcwMA -- Row (14894,)
+base.py:26,10:42:35:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:35:_execute_context:1207:PEcwMA -- ('1F6-Z7HfxAQ-F5SIBuApsQr141gOfpxG4y3_h7W7xN0E:26-10.78522870z0ZU93bArUWz', datetime.datetime(2017, 5, 18, 23, 58, 56, 933000), 127, 1)
+result.p:26,10:42:35:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:35:process_rows:1249:PEcwMA -- Row (14895,)
+base.py:26,10:42:35:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:35:_execute_context:1207:PEcwMA -- ('1VSIZknJPJGRXuMPnSk9gjDStnMEXty0XJR1KO4z7QBk:26-10.78522870z0ZU93bAggzi', datetime.datetime(2017, 5, 8, 23, 59, 2, 588000), 127, 1)
+result.p:26,10:42:35:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:35:process_rows:1249:PEcwMA -- Row (14896,)
+base.py:26,10:42:35:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:35:_execute_context:1207:PEcwMA -- ('16Tz6lbS7tdWBUhgseZCx0va0xBAayzOSSDSH-T20xRA:26-10.78522870z0ZU93bAyMiL', datetime.datetime(1969, 12, 31, 16, 0, 1), 127, 1)
+result.p:26,10:42:35:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:35:process_rows:1249:PEcwMA -- Row (14897,)
+base.py:26,10:42:36:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:36:_execute_context:1207:PEcwMA -- ('1wqRmLVKxvm7w--kMAMGzVAjoILC593KzG-z6AFTdt_8:26-10.78522870z0ZU93bAoN6E', datetime.datetime(2017, 5, 3, 23, 58, 49, 337000), 127, 1)
+result.p:26,10:42:36:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:36:process_rows:1249:PEcwMA -- Row (14898,)
+base.py:26,10:42:36:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:36:_execute_context:1207:PEcwMA -- ('1h1FUpGxFne9y7IFDVl7IQZGCPE1vhm3rJbCf5WgovQo:26-10.78522870z0ZU93bARXx0', datetime.datetime(2017, 5, 4, 23, 58, 53, 589000), 127, 1)
+result.p:26,10:42:36:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:36:process_rows:1249:PEcwMA -- Row (14899,)
+base.py:26,10:42:36:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:36:_execute_context:1207:PEcwMA -- ('1b1ARGMmgTYWTMHAnv5biEbQKVzTLLQ3vt2n2YLicEws:26-10.78522870z0ZU93bA8HCh', datetime.datetime(2017, 5, 1, 23, 58, 56, 856000), 127, 1)
+result.p:26,10:42:36:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:36:process_rows:1249:PEcwMA -- Row (14900,)
+base.py:26,10:42:36:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:36:_execute_context:1207:PEcwMA -- ('1XGCuTdCzlBbB5B0rAu29ButWuims-VeTYBdfozFaFPk:26-10.78522870z0ZU93bAb9wW', datetime.datetime(2017, 5, 2, 23, 12, 56, 745000), 127, 1)
+result.p:26,10:42:36:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:36:process_rows:1249:PEcwMA -- Row (14901,)
+base.py:26,10:42:36:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:36:_execute_context:1207:PEcwMA -- ('1ecDoneIykl54KGJhMUpcvdNKg350pGauVB9v0uCuFbI:26-10.78522870z0ZU93bAudg4', datetime.datetime(2017, 5, 1, 23, 58, 50, 316000), 127, 1)
+result.p:26,10:42:36:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:36:process_rows:1249:PEcwMA -- Row (14902,)
+base.py:26,10:42:36:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:36:_execute_context:1207:PEcwMA -- ('1ZIuPeHFKHzM1yn1G47W92JbGijyxWqaOfKhkejWXMdA:26-10.78522870z0ZU93bADJqY', datetime.datetime(2017, 5, 1, 23, 12, 53, 613000), 127, 1)
+result.p:26,10:42:36:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:36:process_rows:1249:PEcwMA -- Row (14903,)
+sql.py:26,10:42:37:report:42:PEcwMA -- lt_files size 82 
+base.py:26,10:42:37:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:37:_execute_context:1207:PEcwMA -- ('12K516OwpugshsvDcQqP4cSvg-ku6pJuAJGfrEmbDqGc:26-10.78522870z0ZU93bAMUf5', datetime.datetime(2017, 4, 24, 23, 12, 55, 428000), 127, 1)
+result.p:26,10:42:37:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:37:process_rows:1249:PEcwMA -- Row (14904,)
+base.py:26,10:42:37:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:37:_execute_context:1207:PEcwMA -- ('1a7puy4GkUsAx2u9lu1i3MnxJAx0JyFPFozhkGYlCT5I:26-10.78522870z0ZU93bAqJL_', datetime.datetime(2017, 4, 23, 23, 13, 1, 833000), 127, 1)
+result.p:26,10:42:37:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:37:process_rows:1249:PEcwMA -- Row (14905,)
+base.py:26,10:42:37:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:37:_execute_context:1207:PEcwMA -- ('1jEPinYNleGwKDF0SJddLTTeVvYZbF40sbV5FxvJyNCU:26-10.78522870z0ZU93bA_NDB', datetime.datetime(2017, 4, 20, 23, 58, 50, 201000), 127, 1)
+result.p:26,10:42:37:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:37:process_rows:1249:PEcwMA -- Row (14906,)
+base.py:26,10:42:37:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:37:_execute_context:1207:PEcwMA -- ('1e7IjM7tgdUxRQcmg2bbYvLArkghX129Cz_lOLFpnF34:26-10.78522870z0ZU93bA_j1K', datetime.datetime(2017, 5, 29, 23, 58, 48, 155000), 127, 1)
+result.p:26,10:42:37:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:37:process_rows:1249:PEcwMA -- Row (14907,)
+base.py:26,10:42:37:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:37:_execute_context:1207:PEcwMA -- ('1JQ-JszbkA6JHylaBr1ZDWeMXTy2X6fM2evDEJo-W3U4:26-10.78522870z0ZU93bAo3I6', datetime.datetime(1969, 12, 31, 16, 0, 1), 127, 1)
+result.p:26,10:42:37:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:37:process_rows:1249:PEcwMA -- Row (14908,)
+base.py:26,10:42:37:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:37:_execute_context:1207:PEcwMA -- ('1Ez54_TKEcG-xUH_lCEW1711SozJ2_cSeBgiuGKjE8Pk:26-10.78522870z0ZU93bAbMxd', datetime.datetime(1969, 12, 31, 16, 0, 1), 127, 1)
+result.p:26,10:42:37:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:37:process_rows:1249:PEcwMA -- Row (14909,)
+base.py:26,10:42:38:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:38:_execute_context:1207:PEcwMA -- ('12bPKEMHnfEBwlDfZnXYlPZRRwnRiHPVtDkcBZqNxBA4:26-10.78522870z0ZU93bA1nRZ', datetime.datetime(2017, 4, 19, 23, 58, 46, 755000), 127, 1)
+result.p:26,10:42:38:_init_metadata:809:PEcwMA -- Col ('id',)
+result.p:26,10:42:38:process_rows:1249:PEcwMA -- Row (14910,)
+base.py:26,10:42:38:_execute_context:1205:PEcwMA -- INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)
+base.py:26,10:42:38:_execute_context:1207:PEcwMA -- ('125AyhViQoEQKg-wVD4y2hv82aynGTyK7SmeqVHpXvQs:26-10.78522870z0ZU93bApXnf', datetime.datetime(2017, 8, 11, 11, 45, 54, 889000), 127, 1)
+base.py:26,10:42:38:_rollback_impl:731:PEcwMA -- ROLLBACK
+base.py:26,10:42:38:invalidate:570:PEcwMA -- Invalidate connection <pyodbc.Connection object at 0x7f93ae26bb90> (reason: OperationalError:('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLEndTran)'))
+base.py:26,10:42:38:_close_connection:267:PEcwMA -- Closing connection <pyodbc.Connection object at 0x7f93ae26bb90>
+configlo:26,10:42:38:handle_exception:87:PEcwMA -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/encodings/utf_16_le.py", line 15, in decode
+    def decode(input, errors='strict'):
+KeyboardInterrupt
+
+The above exception was the direct cause of the following exception:
+
+KeyboardInterrupt: decoding with 'utf-16le' codec failed (KeyboardInterrupt: )
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2597, in _flush
+    flush_context.execute()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 586, in execute
+    persistence.save_obj(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 239, in save_obj
+    _emit_insert_statements(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 1135, in _emit_insert_statements
+    result = cached_connections[connection].execute(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 984, in execute
+    return meth(self, multiparams, params)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 293, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1097, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1287, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1485, in _handle_dbapi_exception
+    util.raise_(exc_info[1], with_traceback=exc_info[2])
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1247, in _execute_context
+    self.dialect.do_execute(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+SystemError: <class 'pyodbc.Error'> returned a result with an error set
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 733, in _rollback_impl
+    self.engine.dialect.do_rollback(self.connection)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 540, in do_rollback
+    dbapi_connection.rollback()
+pyodbc.OperationalError: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLEndTran)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 193, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/henry/pydocs/processing/sql.py", line 300, in <module>
+    start("testing" + datetime.now().__str__(), wpath)
+  File "/home/henry/pydocs/processing/sql.py", line 215, in start
+    load_from_dict(lt_files, fileid_obj_map)
+  File "/home/henry/pydocs/processing/sql.py", line 126, in load_from_dict
+    sess.commit()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1036, in commit
+    self.transaction.commit()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 503, in commit
+    self._prepare_impl()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 482, in _prepare_impl
+    self.session.flush()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2496, in flush
+    self._flush(objects)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2637, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 81, in __exit__
+    compat.raise_(value, with_traceback=traceback)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2637, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 573, in rollback
+    util.raise_(rollback_err[1], with_traceback=rollback_err[2])
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 533, in rollback
+    t[1].rollback()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1725, in rollback
+    self._do_rollback()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1763, in _do_rollback
+    self.connection._rollback_impl()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 735, in _rollback_impl
+    self._handle_dbapi_exception(e, None, None, None, None)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1481, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 733, in _rollback_impl
+    self.engine.dialect.do_rollback(self.connection)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 540, in do_rollback
+    dbapi_connection.rollback()
+sqlalchemy.exc.OperationalError: (pyodbc.OperationalError) ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLEndTran)')
+(Background on this error at: http://sqlalche.me/e/e3q8)
+configlo:26,10:42:38:mp_sendmail:120:PEcwMA -- sending mail
