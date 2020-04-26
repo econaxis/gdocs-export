@@ -1,0 +1,795 @@
+sql.py:25,12:44:51:<module>:24:wGpq7g -- Driver%3D%7BODBC+Driver+17+for+SQL+Server%7D%3BServer%3Dtcp%3Apydoc-db.database.windows.net%2C1433%3BDatabase%3Dpydoc-db%3BUid%3Dhenry2833%3BPwd%3D%7BInfoip32%7D%3BEncrypt%3Dyes%3BTrustServerCertificate%3Dno%3BConnection+Timeout%3D30%3B
+dsds.py:25,12:44:55:start:18:wGpq7g -- start
+get_file:25,12:44:55:loadFiles:266:wGpq7g -- Start loadFiles, 527e4afc-4598-400f-8536-afa5324f0ba4 1ytJocI9f4gvmpnwLNNfpQzRPhcFs5EzR
+requests:25,12:44:55:__call__:117:wGpq7g -- Making request: POST https://oauth2.googleapis.com/token
+connecti:25,12:44:55:_new_conn:817:wGpq7g -- Starting new HTTPS connection (1): oauth2.googleapis.com
+connecti:25,12:44:55:_make_request:393:wGpq7g -- https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+selector:25,12:44:55:__init__:59:wGpq7g -- Using selector: EpollSelector
+test_uti:25,12:44:55:print_size:82:wGpq7g -- ---------------Memory usage: 96284 (kb)---------------0 mins since start
+test_uti:25,12:44:55:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/0 at 2020-04-25 12:44:55.575386
+dumped: 0
+get_file:25,12:44:55:getIdsRecursive:53:wGpq7g -- getIdsRecursive looping
+get_file:25,12:44:55:getIdsRecursive:53:wGpq7g -- getIdsRecursive looping
+get_file:25,12:44:56:getIdsRecursive:53:wGpq7g -- getIdsRecursive looping
+test_uti:25,12:44:56:tryGetQueue:201:wGpq7g -- getIdswaiting 1 10
+test_uti:25,12:44:56:tryGetQueue:201:wGpq7g -- getIdswaiting 1 10
+get_file:25,12:44:56:getIdsRecursive:53:wGpq7g -- getIdsRecursive looping
+test_uti:25,12:44:56:tryGetQueue:201:wGpq7g -- getIdswaiting 1 10
+test_uti:25,12:44:56:print_size:82:wGpq7g -- ---------------Memory usage: 96488 (kb)---------------0 mins since start
+test_uti:25,12:44:56:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/3 at 2020-04-25 12:44:56.602886
+dumped: 0
+test_uti:25,12:44:57:print_size:82:wGpq7g -- ---------------Memory usage: 96488 (kb)---------------0 mins since start
+test_uti:25,12:44:57:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/3 at 2020-04-25 12:44:57.631673
+dumped: 0
+get_file:25,12:44:57:getRevision:163:wGpq7g -- getRevision looping
+gdoc.py:25,12:44:57:async_init:24:wGpq7g -- async init called
+gdoc.py:25,12:44:58:get_last_revision:54:wGpq7g -- last revision id 546
+gdoc.py:25,12:44:58:async_init:31:wGpq7g -- after await 546
+get_file:25,12:44:58:getRevision:187:wGpq7g -- google doc
+get_file:25,12:44:58:getRevision:163:wGpq7g -- getRevision looping
+gdoc.py:25,12:44:58:async_init:24:wGpq7g -- async init called
+test_uti:25,12:44:58:print_size:82:wGpq7g -- ---------------Memory usage: 98060 (kb)---------------0 mins since start
+test_uti:25,12:44:58:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+1/2 at 2020-04-25 12:44:58.661236
+dumped: 0
+gdoc.py:25,12:44:58:get_last_revision:54:wGpq7g -- last revision id 2502
+gdoc.py:25,12:44:58:async_init:31:wGpq7g -- after await 2502
+get_file:25,12:44:59:getRevision:163:wGpq7g -- getRevision looping
+get_file:25,12:44:59:getRevision:187:wGpq7g -- google doc
+get_file:25,12:44:59:getRevision:163:wGpq7g -- getRevision looping
+test_uti:25,12:44:59:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:44:59:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+2/3 at 2020-04-25 12:44:59.690355
+dumped: 0
+test_uti:25,12:45:00:tryGetQueue:201:wGpq7g -- getIdswaiting 2 10
+test_uti:25,12:45:00:tryGetQueue:201:wGpq7g -- getIdswaiting 2 10
+get_file:25,12:45:00:getRevision:163:wGpq7g -- getRevision looping
+test_uti:25,12:45:00:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:00:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+2/3 at 2020-04-25 12:45:00.718298
+dumped: 0
+gdoc.py:25,12:45:01:async_init:24:wGpq7g -- async init called
+test_uti:25,12:45:01:tryGetQueue:201:wGpq7g -- getRevisionwaiting 1 10
+test_uti:25,12:45:01:tryGetQueue:201:wGpq7g -- getRevisionwaiting 1 10
+test_uti:25,12:45:01:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:01:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+2/2 at 2020-04-25 12:45:01.746875
+dumped: 0
+gdoc.py:25,12:45:01:get_last_revision:54:wGpq7g -- last revision id 647
+gdoc.py:25,12:45:01:async_init:31:wGpq7g -- after await 647
+get_file:25,12:45:02:getRevision:163:wGpq7g -- getRevision looping
+get_file:25,12:45:02:getRevision:187:wGpq7g -- google doc
+get_file:25,12:45:02:getRevision:163:wGpq7g -- getRevision looping
+get_file:25,12:45:02:getRevision:163:wGpq7g -- getRevision looping
+test_uti:25,12:45:02:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:02:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:02.776934
+dumped: 0
+get_file:25,12:45:03:getRevision:163:wGpq7g -- getRevision looping
+test_uti:25,12:45:03:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:03:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:03.804908
+dumped: 0
+test_uti:25,12:45:04:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:04:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:04.834190
+dumped: 0
+test_uti:25,12:45:05:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:05:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:05.862892
+dumped: 0
+test_uti:25,12:45:06:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:06:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:06.892758
+dumped: 0
+get_file:25,12:45:07:getRevision:163:wGpq7g -- getRevision looping
+test_uti:25,12:45:07:tryGetQueue:201:wGpq7g -- getIdswaiting 3 10
+test_uti:25,12:45:07:tryGetQueue:201:wGpq7g -- getRevisionwaiting 1 10
+test_uti:25,12:45:07:tryGetQueue:201:wGpq7g -- getRevisionwaiting 1 10
+test_uti:25,12:45:07:tryGetQueue:201:wGpq7g -- getRevisionwaiting 1 10
+test_uti:25,12:45:07:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:07:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:07.920275
+dumped: 0
+test_uti:25,12:45:08:tryGetQueue:201:wGpq7g -- getRevisionwaiting 2 10
+test_uti:25,12:45:08:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:08:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:08.950069
+dumped: 0
+test_uti:25,12:45:09:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:09:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:09.979337
+dumped: 0
+test_uti:25,12:45:10:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:11:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:11.009013
+dumped: 0
+test_uti:25,12:45:11:tryGetQueue:201:wGpq7g -- getIdswaiting 2 10
+test_uti:25,12:45:11:tryGetQueue:201:wGpq7g -- getIdswaiting 3 10
+test_uti:25,12:45:12:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:12:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:12.039059
+dumped: 0
+test_uti:25,12:45:13:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:13:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:13.069153
+dumped: 0
+test_uti:25,12:45:13:tryGetQueue:201:wGpq7g -- getRevisionwaiting 1 10
+test_uti:25,12:45:13:tryGetQueue:201:wGpq7g -- getRevisionwaiting 1 10
+test_uti:25,12:45:14:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:14:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:14.098821
+dumped: 0
+test_uti:25,12:45:15:tryGetQueue:201:wGpq7g -- getRevisionwaiting 2 10
+test_uti:25,12:45:15:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:15:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:15.133433
+dumped: 0
+test_uti:25,12:45:16:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:16:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:16.163297
+dumped: 0
+get_file:25,12:45:16:getRevision:163:wGpq7g -- getRevision looping
+test_uti:25,12:45:16:tryGetQueue:201:wGpq7g -- getRevisionwaiting 1 10
+test_uti:25,12:45:17:tryGetQueue:201:wGpq7g -- getRevisionwaiting 2 10
+test_uti:25,12:45:17:tryGetQueue:201:wGpq7g -- getIdswaiting 4 10
+test_uti:25,12:45:17:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:17:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:17.191765
+dumped: 0
+test_uti:25,12:45:18:tryGetQueue:201:wGpq7g -- getRevisionwaiting 2 10
+test_uti:25,12:45:18:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:18:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:18.220047
+dumped: 0
+test_uti:25,12:45:19:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:19:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:19.250672
+dumped: 0
+test_uti:25,12:45:20:tryGetQueue:201:wGpq7g -- getRevisionwaiting 2 10
+test_uti:25,12:45:20:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:20:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:20.279677
+dumped: 0
+test_uti:25,12:45:20:tryGetQueue:201:wGpq7g -- getIdswaiting 4 10
+test_uti:25,12:45:21:tryGetQueue:201:wGpq7g -- getRevisionwaiting 2 10
+test_uti:25,12:45:21:tryGetQueue:201:wGpq7g -- getRevisionwaiting 2 10
+test_uti:25,12:45:21:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:21:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:21.308561
+dumped: 0
+test_uti:25,12:45:21:tryGetQueue:201:wGpq7g -- getRevisionwaiting 3 10
+test_uti:25,12:45:21:tryGetQueue:201:wGpq7g -- getRevisionwaiting 3 10
+get_file:25,12:45:22:getRevision:163:wGpq7g -- getRevision looping
+test_uti:25,12:45:22:tryGetQueue:201:wGpq7g -- getRevisionwaiting 1 10
+test_uti:25,12:45:22:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:22:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:22.338304
+dumped: 0
+test_uti:25,12:45:23:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:23:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:23.367081
+dumped: 0
+test_uti:25,12:45:23:tryGetQueue:201:wGpq7g -- getRevisionwaiting 3 10
+get_file:25,12:45:23:getRevision:163:wGpq7g -- getRevision looping
+test_uti:25,12:45:23:tryGetQueue:201:wGpq7g -- getRevisionwaiting 1 10
+test_uti:25,12:45:24:tryGetQueue:201:wGpq7g -- getIdswaiting 5 10
+test_uti:25,12:45:24:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:24:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:24.396274
+dumped: 0
+test_uti:25,12:45:24:tryGetQueue:201:wGpq7g -- getRevisionwaiting 3 10
+test_uti:25,12:45:24:tryGetQueue:201:wGpq7g -- getRevisionwaiting 3 10
+test_uti:25,12:45:25:tryGetQueue:201:wGpq7g -- getIdswaiting 3 10
+test_uti:25,12:45:25:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:25:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:25.425636
+dumped: 0
+test_uti:25,12:45:26:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:26:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:26.455245
+dumped: 0
+test_uti:25,12:45:27:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:27:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:27.485997
+dumped: 0
+test_uti:25,12:45:27:tryGetQueue:201:wGpq7g -- getRevisionwaiting 2 10
+test_uti:25,12:45:28:tryGetQueue:201:wGpq7g -- getRevisionwaiting 2 10
+test_uti:25,12:45:28:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:28:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:28.515370
+dumped: 0
+test_uti:25,12:45:29:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:29:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:29.543356
+dumped: 0
+test_uti:25,12:45:30:tryGetQueue:201:wGpq7g -- getRevisionwaiting 4 10
+test_uti:25,12:45:30:tryGetQueue:201:wGpq7g -- getRevisionwaiting 4 10
+test_uti:25,12:45:30:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:30:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:30.574787
+dumped: 0
+test_uti:25,12:45:31:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:31:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:31.603280
+dumped: 0
+test_uti:25,12:45:32:tryGetQueue:201:wGpq7g -- getRevisionwaiting 2 10
+test_uti:25,12:45:32:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:32:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:32.634242
+dumped: 0
+test_uti:25,12:45:33:tryGetQueue:201:wGpq7g -- getIdswaiting 4 10
+test_uti:25,12:45:33:tryGetQueue:201:wGpq7g -- getRevisionwaiting 3 10
+test_uti:25,12:45:33:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:33:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:33.663974
+dumped: 0
+test_uti:25,12:45:34:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:34:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:34.694417
+dumped: 0
+test_uti:25,12:45:35:tryGetQueue:201:wGpq7g -- getIdswaiting 5 10
+test_uti:25,12:45:35:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:35:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:35.723497
+dumped: 0
+test_uti:25,12:45:36:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:36:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:36.751624
+dumped: 0
+test_uti:25,12:45:36:tryGetQueue:201:wGpq7g -- getRevisionwaiting 3 10
+test_uti:25,12:45:37:tryGetQueue:201:wGpq7g -- getRevisionwaiting 4 10
+test_uti:25,12:45:37:tryGetQueue:201:wGpq7g -- getRevisionwaiting 3 10
+test_uti:25,12:45:37:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:37:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:37.780414
+dumped: 0
+test_uti:25,12:45:38:tryGetQueue:201:wGpq7g -- getRevisionwaiting 5 10
+test_uti:25,12:45:38:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:38:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:38.809551
+dumped: 0
+test_uti:25,12:45:39:tryGetQueue:201:wGpq7g -- getRevisionwaiting 4 10
+test_uti:25,12:45:39:tryGetQueue:201:wGpq7g -- getRevisionwaiting 5 10
+test_uti:25,12:45:39:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:39:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:39.843625
+dumped: 0
+test_uti:25,12:45:40:tryGetQueue:201:wGpq7g -- getRevisionwaiting 4 10
+test_uti:25,12:45:40:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:40:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:40.875347
+dumped: 0
+test_uti:25,12:45:41:tryGetQueue:201:wGpq7g -- getIdswaiting 5 10
+test_uti:25,12:45:41:tryGetQueue:201:wGpq7g -- getRevisionwaiting 4 10
+test_uti:25,12:45:41:tryGetQueue:201:wGpq7g -- getIdswaiting 6 10
+test_uti:25,12:45:41:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:41:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:41.904800
+dumped: 0
+test_uti:25,12:45:42:tryGetQueue:201:wGpq7g -- getRevisionwaiting 4 10
+test_uti:25,12:45:42:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:42:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:42.937363
+dumped: 0
+test_uti:25,12:45:43:tryGetQueue:201:wGpq7g -- getRevisionwaiting 4 10
+test_uti:25,12:45:43:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:43:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:43.969677
+dumped: 0
+test_uti:25,12:45:44:tryGetQueue:201:wGpq7g -- getRevisionwaiting 3 10
+test_uti:25,12:45:44:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:45:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:45.000622
+dumped: 0
+test_uti:25,12:45:46:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:46:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:46.032187
+dumped: 0
+test_uti:25,12:45:46:tryGetQueue:201:wGpq7g -- getIdswaiting 6 10
+test_uti:25,12:45:46:tryGetQueue:201:wGpq7g -- getRevisionwaiting 3 10
+test_uti:25,12:45:46:tryGetQueue:201:wGpq7g -- getRevisionwaiting 5 10
+test_uti:25,12:45:47:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:47:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:47.064856
+dumped: 0
+test_uti:25,12:45:48:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:48:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:48.103765
+dumped: 0
+test_uti:25,12:45:49:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:49:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:49.138402
+dumped: 0
+test_uti:25,12:45:49:tryGetQueue:201:wGpq7g -- getRevisionwaiting 5 10
+test_uti:25,12:45:50:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:50:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:50.179747
+dumped: 0
+test_uti:25,12:45:50:tryGetQueue:201:wGpq7g -- getRevisionwaiting 5 10
+test_uti:25,12:45:51:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:51:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:51.217699
+dumped: 0
+test_uti:25,12:45:51:tryGetQueue:201:wGpq7g -- getIdswaiting 7 10
+test_uti:25,12:45:52:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:52:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:52.250700
+dumped: 0
+test_uti:25,12:45:52:tryGetQueue:201:wGpq7g -- getRevisionwaiting 5 10
+test_uti:25,12:45:52:tryGetQueue:201:wGpq7g -- getRevisionwaiting 4 10
+test_uti:25,12:45:53:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:53:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:53.285097
+dumped: 0
+test_uti:25,12:45:53:tryGetQueue:201:wGpq7g -- getRevisionwaiting 6 10
+test_uti:25,12:45:54:tryGetQueue:201:wGpq7g -- getRevisionwaiting 6 10
+test_uti:25,12:45:54:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:54:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:54.317460
+dumped: 0
+test_uti:25,12:45:55:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------0 mins since start
+test_uti:25,12:45:55:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:55.347870
+dumped: 0
+test_uti:25,12:45:56:tryGetQueue:201:wGpq7g -- getIdswaiting 6 10
+test_uti:25,12:45:56:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------1 mins since start
+test_uti:25,12:45:56:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:56.377261
+dumped: 0
+test_uti:25,12:45:57:tryGetQueue:201:wGpq7g -- getRevisionwaiting 6 10
+test_uti:25,12:45:57:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------1 mins since start
+test_uti:25,12:45:57:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:57.407010
+dumped: 0
+test_uti:25,12:45:57:tryGetQueue:201:wGpq7g -- getRevisionwaiting 7 10
+test_uti:25,12:45:58:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------1 mins since start
+test_uti:25,12:45:58:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:58.437253
+dumped: 0
+test_uti:25,12:45:58:tryGetQueue:201:wGpq7g -- getRevisionwaiting 5 10
+test_uti:25,12:45:59:tryGetQueue:201:wGpq7g -- getIdswaiting 8 10
+test_uti:25,12:45:59:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------1 mins since start
+test_uti:25,12:45:59:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:45:59.467181
+dumped: 0
+test_uti:25,12:46:00:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------1 mins since start
+test_uti:25,12:46:00:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:46:00.499967
+dumped: 0
+test_uti:25,12:46:01:tryGetQueue:201:wGpq7g -- getRevisionwaiting 6 10
+test_uti:25,12:46:01:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------1 mins since start
+test_uti:25,12:46:01:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:46:01.529357
+dumped: 0
+test_uti:25,12:46:01:tryGetQueue:201:wGpq7g -- getRevisionwaiting 5 10
+test_uti:25,12:46:02:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------1 mins since start
+test_uti:25,12:46:02:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:46:02.558934
+dumped: 0
+test_uti:25,12:46:03:tryGetQueue:201:wGpq7g -- getRevisionwaiting 6 10
+test_uti:25,12:46:03:tryGetQueue:201:wGpq7g -- getIdswaiting 7 10
+test_uti:25,12:46:03:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------1 mins since start
+test_uti:25,12:46:03:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:46:03.596324
+dumped: 0
+test_uti:25,12:46:04:tryGetQueue:201:wGpq7g -- getIdswaiting 7 10
+test_uti:25,12:46:04:tryGetQueue:201:wGpq7g -- getRevisionwaiting 4 10
+test_uti:25,12:46:04:tryGetQueue:201:wGpq7g -- getRevisionwaiting 7 10
+test_uti:25,12:46:04:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------1 mins since start
+test_uti:25,12:46:04:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:46:04.633000
+dumped: 0
+test_uti:25,12:46:05:tryGetQueue:201:wGpq7g -- getRevisionwaiting 6 10
+test_uti:25,12:46:05:tryGetQueue:201:wGpq7g -- getRevisionwaiting 5 10
+test_uti:25,12:46:05:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------1 mins since start
+test_uti:25,12:46:05:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:46:05.664471
+dumped: 0
+test_uti:25,12:46:06:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------1 mins since start
+test_uti:25,12:46:06:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:46:06.694873
+dumped: 0
+test_uti:25,12:46:07:tryGetQueue:201:wGpq7g -- getIdswaiting 9 10
+test_uti:25,12:46:07:tryGetQueue:201:wGpq7g -- getRevisionwaiting 7 10
+test_uti:25,12:46:07:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------1 mins since start
+test_uti:25,12:46:07:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:46:07.726720
+dumped: 0
+test_uti:25,12:46:08:tryGetQueue:201:wGpq7g -- getRevisionwaiting 6 10
+test_uti:25,12:46:08:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------1 mins since start
+test_uti:25,12:46:08:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:46:08.758566
+dumped: 0
+test_uti:25,12:46:09:tryGetQueue:201:wGpq7g -- getRevisionwaiting 6 10
+test_uti:25,12:46:09:tryGetQueue:201:wGpq7g -- getRevisionwaiting 8 10
+test_uti:25,12:46:09:tryGetQueue:201:wGpq7g -- getRevisionwaiting 7 10
+test_uti:25,12:46:09:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------1 mins since start
+test_uti:25,12:46:09:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:46:09.792774
+dumped: 0
+test_uti:25,12:46:10:tryGetQueue:201:wGpq7g -- getIdswaiting 8 10
+test_uti:25,12:46:10:tryGetQueue:201:wGpq7g -- getRevisionwaiting 7 10
+test_uti:25,12:46:10:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------1 mins since start
+test_uti:25,12:46:10:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:46:10.823916
+dumped: 0
+test_uti:25,12:46:11:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------1 mins since start
+test_uti:25,12:46:11:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:46:11.858894
+dumped: 0
+test_uti:25,12:46:12:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------1 mins since start
+test_uti:25,12:46:12:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:46:12.888711
+dumped: 0
+test_uti:25,12:46:13:tryGetQueue:201:wGpq7g -- getRevisionwaiting 7 10
+test_uti:25,12:46:13:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------1 mins since start
+test_uti:25,12:46:13:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:46:13.921814
+dumped: 0
+test_uti:25,12:46:14:tryGetQueue:201:wGpq7g -- getIdswaiting 9 10
+test_uti:25,12:46:14:tryGetQueue:201:wGpq7g -- getIdswaiting 8 10
+test_uti:25,12:46:14:tryGetQueue:201:wGpq7g -- getRevisionwaiting 5 10
+test_uti:25,12:46:14:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------1 mins since start
+test_uti:25,12:46:14:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:46:14.952961
+dumped: 0
+test_uti:25,12:46:15:tryGetQueue:201:wGpq7g -- getRevisionwaiting 8 10
+test_uti:25,12:46:15:tryGetQueue:201:wGpq7g -- getIdswaiting 10 10
+test_uti:25,12:46:15:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------1 mins since start
+test_uti:25,12:46:15:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:46:15.983920
+dumped: 0
+test_uti:25,12:46:16:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------1 mins since start
+test_uti:25,12:46:17:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:46:17.017448
+dumped: 0
+test_uti:25,12:46:17:tryGetQueue:201:wGpq7g -- getRevisionwaiting 8 10
+test_uti:25,12:46:17:tryGetQueue:201:wGpq7g -- getRevisionwaiting 8 10
+test_uti:25,12:46:18:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------1 mins since start
+test_uti:25,12:46:18:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:46:18.048892
+dumped: 0
+test_uti:25,12:46:19:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------1 mins since start
+test_uti:25,12:46:19:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:46:19.080851
+dumped: 0
+test_uti:25,12:46:19:tryGetQueue:201:wGpq7g -- getRevisionwaiting 8 10
+test_uti:25,12:46:19:tryGetQueue:201:wGpq7g -- getRevisionwaiting 7 10
+test_uti:25,12:46:20:tryGetQueue:201:wGpq7g -- getRevisionwaiting 8 10
+test_uti:25,12:46:20:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------1 mins since start
+test_uti:25,12:46:20:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:46:20.114684
+dumped: 0
+test_uti:25,12:46:21:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------1 mins since start
+test_uti:25,12:46:21:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:46:21.149552
+dumped: 0
+test_uti:25,12:46:21:tryGetQueue:201:wGpq7g -- getRevisionwaiting 6 10
+test_uti:25,12:46:22:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------1 mins since start
+test_uti:25,12:46:22:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:46:22.179179
+dumped: 0
+test_uti:25,12:46:23:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------1 mins since start
+test_uti:25,12:46:23:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:46:23.207975
+dumped: 0
+test_uti:25,12:46:23:tryGetQueue:201:wGpq7g -- getRevisionwaiting 7 10
+test_uti:25,12:46:24:tryGetQueue:201:wGpq7g -- getIdswaiting 10 10
+test_uti:25,12:46:24:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------1 mins since start
+test_uti:25,12:46:24:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:46:24.236926
+dumped: 0
+test_uti:25,12:46:24:tryGetQueue:201:wGpq7g -- getRevisionwaiting 9 10
+test_uti:25,12:46:25:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------1 mins since start
+test_uti:25,12:46:25:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:46:25.270894
+dumped: 0
+test_uti:25,12:46:26:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------1 mins since start
+test_uti:25,12:46:26:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:46:26.303565
+dumped: 0
+test_uti:25,12:46:27:tryGetQueue:201:wGpq7g -- getRevisionwaiting 6 10
+test_uti:25,12:46:27:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------1 mins since start
+test_uti:25,12:46:27:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:46:27.336262
+dumped: 0
+test_uti:25,12:46:27:tryGetQueue:201:wGpq7g -- getRevisionwaiting 9 10
+test_uti:25,12:46:28:tryGetQueue:201:wGpq7g -- getRevisionwaiting 7 10
+test_uti:25,12:46:28:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------1 mins since start
+test_uti:25,12:46:28:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:46:28.373722
+dumped: 0
+test_uti:25,12:46:29:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------1 mins since start
+test_uti:25,12:46:29:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:46:29.408614
+dumped: 0
+test_uti:25,12:46:29:tryGetQueue:201:wGpq7g -- getRevisionwaiting 9 10
+test_uti:25,12:46:29:tryGetQueue:201:wGpq7g -- getRevisionwaiting 9 10
+get_file:25,12:46:30:getIdsRecursive:66:wGpq7g -- getId task exiting
+test_uti:25,12:46:30:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------1 mins since start
+test_uti:25,12:46:30:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:46:30.439501
+dumped: 0
+test_uti:25,12:46:30:tryGetQueue:201:wGpq7g -- getRevisionwaiting 7 10
+test_uti:25,12:46:31:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------1 mins since start
+test_uti:25,12:46:31:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:46:31.470981
+dumped: 0
+test_uti:25,12:46:32:tryGetQueue:201:wGpq7g -- getIdswaiting 9 10
+get_file:25,12:46:32:getIdsRecursive:66:wGpq7g -- getId task exiting
+test_uti:25,12:46:32:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------1 mins since start
+test_uti:25,12:46:32:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:46:32.501811
+dumped: 0
+test_uti:25,12:46:33:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------1 mins since start
+test_uti:25,12:46:33:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:46:33.530764
+dumped: 0
+test_uti:25,12:46:34:tryGetQueue:201:wGpq7g -- getRevisionwaiting 10 10
+test_uti:25,12:46:34:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------1 mins since start
+test_uti:25,12:46:34:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:46:34.564110
+dumped: 0
+test_uti:25,12:46:35:tryGetQueue:201:wGpq7g -- getRevisionwaiting 8 10
+test_uti:25,12:46:35:tryGetQueue:201:wGpq7g -- getRevisionwaiting 8 10
+test_uti:25,12:46:35:tryGetQueue:201:wGpq7g -- getRevisionwaiting 10 10
+test_uti:25,12:46:35:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------1 mins since start
+test_uti:25,12:46:35:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:46:35.595287
+dumped: 0
+test_uti:25,12:46:35:tryGetQueue:201:wGpq7g -- getRevisionwaiting 8 10
+test_uti:25,12:46:36:tryGetQueue:201:wGpq7g -- getRevisionwaiting 8 10
+test_uti:25,12:46:36:tryGetQueue:201:wGpq7g -- getRevisionwaiting 9 10
+test_uti:25,12:46:36:tryGetQueue:201:wGpq7g -- getRevisionwaiting 9 10
+test_uti:25,12:46:36:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------1 mins since start
+test_uti:25,12:46:36:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:46:36.624388
+dumped: 0
+test_uti:25,12:46:37:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------1 mins since start
+test_uti:25,12:46:37:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:46:37.654916
+dumped: 0
+test_uti:25,12:46:38:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------1 mins since start
+test_uti:25,12:46:38:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:46:38.686045
+dumped: 0
+get_file:25,12:46:39:getRevision:168:wGpq7g -- getRevision task exiting
+get_file:25,12:46:39:getRevision:193:wGpq7g -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+test_uti:25,12:46:39:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------1 mins since start
+test_uti:25,12:46:39:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:46:39.719838
+dumped: 0
+test_uti:25,12:46:40:tryGetQueue:201:wGpq7g -- getIdswaiting 10 10
+test_uti:25,12:46:40:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------1 mins since start
+test_uti:25,12:46:40:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:46:40.753126
+dumped: 0
+test_uti:25,12:46:41:print_size:82:wGpq7g -- ---------------Memory usage: 103228 (kb)---------------1 mins since start
+test_uti:25,12:46:41:print_size:100:wGpq7g -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:46:41.783813
+dumped: 0
+test_uti:25,12:46:42:tryGetQueue:201:wGpq7g -- getRevisionwaiting 10 10
+get_file:25,12:46:42:getRevision:196:wGpq7g -- Close event has been set. Expect print task to finish soon
+test_uti:25,12:46:43:tryGetQueue:201:wGpq7g -- getRevisionwaiting 10 10
+test_uti:25,12:46:43:tryGetQueue:201:wGpq7g -- getRevisionwaiting 9 10
+test_uti:25,12:46:44:tryGetQueue:201:wGpq7g -- getRevisionwaiting 9 10
+test_uti:25,12:46:44:tryGetQueue:201:wGpq7g -- getRevisionwaiting 9 10
+test_uti:25,12:46:46:tryGetQueue:201:wGpq7g -- getRevisionwaiting 10 10
+get_file:25,12:46:46:getRevision:168:wGpq7g -- getRevision task exiting
+get_file:25,12:46:46:getRevision:193:wGpq7g -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,12:46:49:getIdsRecursive:66:wGpq7g -- getId task exiting
+test_uti:25,12:46:49:tryGetQueue:201:wGpq7g -- getRevisionwaiting 9 10
+get_file:25,12:46:49:getRevision:196:wGpq7g -- Close event has been set. Expect print task to finish soon
+get_file:25,12:46:49:getRevision:168:wGpq7g -- getRevision task exiting
+get_file:25,12:46:49:getRevision:193:wGpq7g -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+test_uti:25,12:46:50:tryGetQueue:201:wGpq7g -- getRevisionwaiting 10 10
+get_file:25,12:46:50:getRevision:168:wGpq7g -- getRevision task exiting
+get_file:25,12:46:50:getRevision:193:wGpq7g -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+test_uti:25,12:46:51:tryGetQueue:201:wGpq7g -- getRevisionwaiting 10 10
+get_file:25,12:46:52:getRevision:196:wGpq7g -- Close event has been set. Expect print task to finish soon
+get_file:25,12:46:53:getRevision:196:wGpq7g -- Close event has been set. Expect print task to finish soon
+get_file:25,12:46:53:getRevision:168:wGpq7g -- getRevision task exiting
+get_file:25,12:46:53:getRevision:193:wGpq7g -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,12:46:56:getRevision:196:wGpq7g -- Close event has been set. Expect print task to finish soon
+test_uti:25,12:46:58:tryGetQueue:201:wGpq7g -- getRevisionwaiting 10 10
+get_file:25,12:47:00:getRevision:168:wGpq7g -- getRevision task exiting
+get_file:25,12:47:00:getRevision:193:wGpq7g -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+test_uti:25,12:47:01:tryGetQueue:201:wGpq7g -- getRevisionwaiting 10 10
+get_file:25,12:47:01:getRevision:168:wGpq7g -- getRevision task exiting
+get_file:25,12:47:01:getRevision:193:wGpq7g -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+test_uti:25,12:47:03:tryGetQueue:201:wGpq7g -- getRevisionwaiting 10 10
+get_file:25,12:47:03:getRevision:196:wGpq7g -- Close event has been set. Expect print task to finish soon
+get_file:25,12:47:04:getRevision:168:wGpq7g -- getRevision task exiting
+get_file:25,12:47:04:getRevision:193:wGpq7g -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,12:47:04:getRevision:196:wGpq7g -- Close event has been set. Expect print task to finish soon
+get_file:25,12:47:07:getRevision:196:wGpq7g -- Close event has been set. Expect print task to finish soon
+get_file:25,12:47:16:getRevision:168:wGpq7g -- getRevision task exiting
+get_file:25,12:47:16:getRevision:193:wGpq7g -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,12:47:19:getRevision:196:wGpq7g -- Close event has been set. Expect print task to finish soon
+get_file:25,12:47:20:getRevision:168:wGpq7g -- getRevision task exiting
+get_file:25,12:47:20:getRevision:193:wGpq7g -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,12:47:23:getRevision:196:wGpq7g -- Close event has been set. Expect print task to finish soon
+get_file:25,12:47:23:start:231:wGpq7g -- await gather revisions done
+get_file:25,12:47:23:start:238:wGpq7g -- cancelled throttler
+get_file:25,12:47:23:loadFiles:293:wGpq7g -- loop done
+sql.py:25,12:47:23:start:97:wGpq7g -- STARTING SQL 527e4afc-4598-400f-8536-afa5324f0ba4 /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+sql.py:25,12:47:23:start:99:wGpq7g -- setting sys except hook
+sql.py:25,12:47:23:start:109:wGpq7g -- Owner name: 527e4afc-4598-404 25 AprqVuOKCTUWg
+sql.py:25,12:47:25:start:113:wGpq7g -- Added owner row, name: 527e4afc-4598-404 25 AprqVuOKCTUWg id: 344
+sql.py:25,12:47:25:start:126:wGpq7g -- Finished loading pickles
+sql.py:25,12:47:25:start:159:wGpq7g -- len of id map 0 len of files 0
+sql.py:25,12:47:25:start:164:wGpq7g -- starting bulk save
+sql.py:25,12:47:25:adder:86:wGpq7g -- flushing adder
+sql.py:25,12:47:25:start:166:wGpq7g -- bulked save done
+sql.py:25,12:47:25:start:173:wGpq7g -- sess flush done
+sql.py:25,12:47:25:start:185:wGpq7g -- starting thread for dates
+sql.py:25,12:47:27:commit:43:wGpq7g -- iters: 20, len: 0
+sql.py:25,12:47:27:commit:64:wGpq7g -- while loop done
+sql.py:25,12:47:28:commit:72:wGpq7g -- commit func done
+sql.py:25,12:47:29:commit:43:wGpq7g -- iters: 20, len: 0
+sql.py:25,12:47:29:commit:64:wGpq7g -- while loop done
+sql.py:25,12:47:30:commit:72:wGpq7g -- commit func done
+sql.py:25,12:47:31:commit:43:wGpq7g -- iters: 20, len: 0
+sql.py:25,12:47:31:commit:64:wGpq7g -- while loop done
+sql.py:25,12:47:31:commit:72:wGpq7g -- commit func done
+sql.py:25,12:47:36:commit:43:wGpq7g -- iters: 20, len: 0
+sql.py:25,12:47:36:commit:64:wGpq7g -- while loop done
+sql.py:25,12:47:37:commit:72:wGpq7g -- commit func done
+sql.py:25,12:47:41:commit:43:wGpq7g -- iters: 20, len: 0
+sql.py:25,12:47:41:commit:64:wGpq7g -- while loop done
+sql.py:25,12:47:41:commit:72:wGpq7g -- commit func done
+sql.py:25,12:47:42:commit:43:wGpq7g -- iters: 20, len: 0
+sql.py:25,12:47:42:commit:64:wGpq7g -- while loop done
+sql.py:25,12:47:43:commit:72:wGpq7g -- commit func done
+sql.py:25,12:47:44:commit:43:wGpq7g -- iters: 20, len: 0
+sql.py:25,12:47:44:commit:64:wGpq7g -- while loop done
+sql.py:25,12:47:44:commit:72:wGpq7g -- commit func done
+sql.py:25,12:47:52:commit:43:wGpq7g -- iters: 20, len: 0
+sql.py:25,12:47:52:commit:64:wGpq7g -- while loop done
+sql.py:25,12:47:52:commit:72:wGpq7g -- commit func done
+sql.py:25,12:47:58:commit:43:wGpq7g -- iters: 20, len: 0
+sql.py:25,12:47:58:commit:64:wGpq7g -- while loop done
+sql.py:25,12:47:58:commit:72:wGpq7g -- commit func done
+sql.py:25,12:48:00:commit:43:wGpq7g -- iters: 20, len: 0
+sql.py:25,12:48:00:commit:64:wGpq7g -- while loop done
+sql.py:25,12:48:00:commit:72:wGpq7g -- commit func done
+sql.py:25,12:48:04:commit:43:wGpq7g -- iters: 20, len: 0
+sql.py:25,12:48:04:commit:64:wGpq7g -- while loop done
+sql.py:25,12:48:04:commit:72:wGpq7g -- commit func done
+sql.py:25,12:48:06:commit:43:wGpq7g -- iters: 20, len: 0
+sql.py:25,12:48:06:commit:64:wGpq7g -- while loop done
+sql.py:25,12:48:06:commit:72:wGpq7g -- commit func done
+sql.py:25,12:48:07:commit:43:wGpq7g -- iters: 20, len: 0
+sql.py:25,12:48:07:commit:64:wGpq7g -- while loop done
+sql.py:25,12:48:07:commit:72:wGpq7g -- commit func done
+sql.py:25,12:48:12:commit:43:wGpq7g -- iters: 20, len: 0
+sql.py:25,12:48:12:commit:64:wGpq7g -- while loop done
+sql.py:25,12:48:12:commit:72:wGpq7g -- commit func done
+sql.py:25,12:48:16:commit:43:wGpq7g -- iters: 20, len: 0
+sql.py:25,12:48:16:commit:64:wGpq7g -- while loop done
+sql.py:25,12:48:16:commit:72:wGpq7g -- commit func done
+sql.py:25,12:48:24:commit:43:wGpq7g -- iters: 20, len: 0
+sql.py:25,12:48:24:commit:64:wGpq7g -- while loop done
+sql.py:25,12:48:24:commit:72:wGpq7g -- commit func done
+sql.py:25,12:48:26:commit:43:wGpq7g -- iters: 20, len: 0
+sql.py:25,12:48:26:commit:64:wGpq7g -- while loop done
+sql.py:25,12:48:27:commit:72:wGpq7g -- commit func done
+sql.py:25,12:48:27:commit:43:wGpq7g -- iters: 20, len: 0
+sql.py:25,12:48:27:commit:64:wGpq7g -- while loop done
+sql.py:25,12:48:28:commit:72:wGpq7g -- commit func done
+sql.py:25,12:48:35:commit:43:wGpq7g -- iters: 20, len: 0
+sql.py:25,12:48:35:commit:64:wGpq7g -- while loop done
+sql.py:25,12:48:35:commit:72:wGpq7g -- commit func done
+sql.py:25,12:48:39:commit:43:wGpq7g -- iters: 20, len: 0
+sql.py:25,12:48:39:commit:64:wGpq7g -- while loop done
+sql.py:25,12:48:39:commit:72:wGpq7g -- commit func done
+sql.py:25,12:48:42:commit:43:wGpq7g -- iters: 20, len: 0
+sql.py:25,12:48:42:commit:64:wGpq7g -- while loop done
+sql.py:25,12:48:42:commit:72:wGpq7g -- commit func done
+sql.py:25,12:48:50:commit:43:wGpq7g -- iters: 20, len: 0
+sql.py:25,12:48:50:commit:64:wGpq7g -- while loop done
+sql.py:25,12:48:50:commit:72:wGpq7g -- commit func done
+sql.py:25,12:48:53:commit:43:wGpq7g -- iters: 20, len: 0
+sql.py:25,12:48:53:commit:64:wGpq7g -- while loop done
+sql.py:25,12:48:53:commit:72:wGpq7g -- commit func done
+sql.py:25,12:48:55:commit:43:wGpq7g -- iters: 20, len: 0
+sql.py:25,12:48:55:commit:64:wGpq7g -- while loop done
+sql.py:25,12:48:55:commit:72:wGpq7g -- commit func done
+sql.py:25,12:48:58:commit:43:wGpq7g -- iters: 20, len: 0
+sql.py:25,12:48:58:commit:64:wGpq7g -- while loop done
+sql.py:25,12:48:58:commit:72:wGpq7g -- commit func done
+sql.py:25,12:49:04:commit:43:wGpq7g -- iters: 20, len: 0
+sql.py:25,12:49:04:commit:64:wGpq7g -- while loop done
+sql.py:25,12:49:04:commit:72:wGpq7g -- commit func done
+sql.py:25,12:49:05:commit:43:wGpq7g -- iters: 20, len: 0
+sql.py:25,12:49:05:commit:64:wGpq7g -- while loop done
+sql.py:25,12:49:05:commit:72:wGpq7g -- commit func done
+sql.py:25,12:49:11:commit:43:wGpq7g -- iters: 20, len: 0
+sql.py:25,12:49:11:commit:64:wGpq7g -- while loop done
+sql.py:25,12:49:11:commit:72:wGpq7g -- commit func done
+sql.py:25,12:49:14:commit:43:wGpq7g -- iters: 20, len: 0
+sql.py:25,12:49:14:commit:64:wGpq7g -- while loop done
+sql.py:25,12:49:15:commit:72:wGpq7g -- commit func done
+sql.py:25,12:49:22:commit:43:wGpq7g -- iters: 20, len: 0
+sql.py:25,12:49:22:start:200:wGpq7g -- joining
+sql.py:25,12:49:22:commit:64:wGpq7g -- while loop done
+sql.py:25,12:49:22:start:200:wGpq7g -- joining
+sql.py:25,12:49:22:start:200:wGpq7g -- joining
+sql.py:25,12:49:22:start:200:wGpq7g -- joining
+sql.py:25,12:49:22:start:200:wGpq7g -- joining
+sql.py:25,12:49:22:start:200:wGpq7g -- joining
+sql.py:25,12:49:22:start:200:wGpq7g -- joining
+sql.py:25,12:49:22:start:200:wGpq7g -- joining
+sql.py:25,12:49:22:start:200:wGpq7g -- joining
+sql.py:25,12:49:22:start:200:wGpq7g -- joining
+sql.py:25,12:49:22:start:200:wGpq7g -- joining
+sql.py:25,12:49:22:start:200:wGpq7g -- joining
+sql.py:25,12:49:22:start:200:wGpq7g -- joining
+sql.py:25,12:49:22:start:200:wGpq7g -- joining
+sql.py:25,12:49:22:start:200:wGpq7g -- joining
+sql.py:25,12:49:22:start:200:wGpq7g -- joining
+sql.py:25,12:49:22:start:200:wGpq7g -- joining
+sql.py:25,12:49:22:start:200:wGpq7g -- joining
+sql.py:25,12:49:22:start:200:wGpq7g -- joining
+sql.py:25,12:49:22:start:200:wGpq7g -- joining
+sql.py:25,12:49:22:start:200:wGpq7g -- joining
+sql.py:25,12:49:22:start:200:wGpq7g -- joining
+sql.py:25,12:49:22:start:200:wGpq7g -- joining
+sql.py:25,12:49:22:start:200:wGpq7g -- joining
+sql.py:25,12:49:22:start:200:wGpq7g -- joining
+sql.py:25,12:49:22:start:200:wGpq7g -- joining
+sql.py:25,12:49:22:start:200:wGpq7g -- joining
+sql.py:25,12:49:22:start:200:wGpq7g -- joining
+sql.py:25,12:49:22:start:200:wGpq7g -- joining
+sql.py:25,12:49:22:start:200:wGpq7g -- joining
+sql.py:25,12:49:23:commit:72:wGpq7g -- commit func done
+sql.py:25,12:49:23:start:223:wGpq7g -- adding lt_closure
+sql.py:25,12:49:23:start:223:wGpq7g -- adding lt_closure
+sql.py:25,12:49:23:start:223:wGpq7g -- adding lt_closure
+sql.py:25,12:49:23:start:223:wGpq7g -- adding lt_closure
+sql.py:25,12:49:23:start:223:wGpq7g -- adding lt_closure
+sql.py:25,12:49:23:start:223:wGpq7g -- adding lt_closure
+sql.py:25,12:49:24:start:238:wGpq7g -- adding lt_filenames
+sql.py:25,12:49:24:start:238:wGpq7g -- adding lt_filenames
+sql.py:25,12:49:24:start:238:wGpq7g -- adding lt_filenames
+sql.py:25,12:49:24:start:238:wGpq7g -- adding lt_filenames
+sql.py:25,12:49:24:start:241:wGpq7g -- flushing lt_filenames, lt_closure
+sql.py:25,12:49:24:adder:86:wGpq7g -- flushing adder
+sql.py:25,12:49:25:adder:86:wGpq7g -- flushing adder
+sql.py:25,12:49:26:start:247:wGpq7g -- Done all filename, closure
+sql.py:25,12:49:26:start:250:wGpq7g -- joining
+sql.py:25,12:49:26:start:250:wGpq7g -- joining
+sql.py:25,12:49:26:start:250:wGpq7g -- joining
+sql.py:25,12:49:26:start:250:wGpq7g -- joining
+sql.py:25,12:49:26:start:250:wGpq7g -- joining
+sql.py:25,12:49:26:start:250:wGpq7g -- joining
+sql.py:25,12:49:26:start:250:wGpq7g -- joining
+sql.py:25,12:49:26:start:250:wGpq7g -- joining
+sql.py:25,12:49:26:start:250:wGpq7g -- joining
+sql.py:25,12:49:26:start:250:wGpq7g -- joining
+sql.py:25,12:49:26:start:250:wGpq7g -- joining
+sql.py:25,12:49:26:start:250:wGpq7g -- joining
+sql.py:25,12:49:26:start:250:wGpq7g -- joining
+sql.py:25,12:49:26:start:250:wGpq7g -- joining
+sql.py:25,12:49:26:start:250:wGpq7g -- joining
+sql.py:25,12:49:26:start:250:wGpq7g -- joining
+sql.py:25,12:49:26:start:250:wGpq7g -- joining
+sql.py:25,12:49:26:start:250:wGpq7g -- joining
+sql.py:25,12:49:26:start:250:wGpq7g -- joining
+sql.py:25,12:49:26:start:250:wGpq7g -- joining
+sql.py:25,12:49:26:start:250:wGpq7g -- joining
+sql.py:25,12:49:26:start:250:wGpq7g -- joining
+sql.py:25,12:49:26:start:250:wGpq7g -- joining
+sql.py:25,12:49:26:start:250:wGpq7g -- joining
+sql.py:25,12:49:26:start:250:wGpq7g -- joining
+sql.py:25,12:49:26:start:250:wGpq7g -- joining
+sql.py:25,12:49:26:start:250:wGpq7g -- joining
+sql.py:25,12:49:26:start:250:wGpq7g -- joining
+sql.py:25,12:49:26:start:250:wGpq7g -- joining
+sql.py:25,12:49:26:start:250:wGpq7g -- joining
+sql.py:25,12:49:26:start:255:wGpq7g -- sql done, added closure: 6, added filename: 4
+get_file:25,12:49:28:loadFiles:318:wGpq7g -- Program ended successfully

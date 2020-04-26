@@ -1,0 +1,2278 @@
+sql.py:25,20:27:22:start:99:WDteFA -- STARTING SQL testing2020-04-25 20:27:22.392616 /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+sql.py:25,20:27:22:start:101:WDteFA -- setting sys except hook
+sql.py:25,20:27:22:start:111:WDteFA -- Owner name: testing2020-04-04 25 AprgbYIUDC5ow
+sql.py:25,20:27:23:start:115:WDteFA -- Added owner row, name: testing2020-04-04 25 AprgbYIUDC5ow id: 35
+sql.py:25,20:27:23:start:127:WDteFA -- Finished loading pickles
+sql.py:25,20:27:23:start:145:WDteFA -- File: 0B4Fujvv5Mfqbb2d0TnNhcFhhREdadmRaaEI3QzVabnE2NE5v
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1QNNRjwRnVqieEoA5i9CdaSCyT_6Bi4vkmGO8YuZHytU
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1cGlmEaWYTHdD_Y3vlkIMMkZhdmosSZo_rQYxcSBoDbQ
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1G-K37QbHDgyLsJaUjRsROtLZZkj1fmqyC5YyHzOh-_Q
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1cIWwf3nZ2RAeriW8GerxZHY9nirLdcc968-GgSnRkjQ
+sql.py:25,20:27:23:start:145:WDteFA -- File: 16wsJnYBwdOHbuGROxWDFe2Tcf1w8T49TwWnGvq5OjXY
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ
+sql.py:25,20:27:23:start:145:WDteFA -- File: 12NnsHOjtevUATb-yYIgDFFLyYajiHxhJ6xHiJnIXj-8
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1C09g5-ATBpXNJOmH8ANwCnq7Pk6vClzI1lmFYcqaH6A
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s
+sql.py:25,20:27:23:start:145:WDteFA -- File: 17MhIJt6Bl2HnDLFiNZPRh7UOx-Co9FMvPWBsRnJRfsM
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1B37ygx-Iwh0EpS1c5fqpbK6AqE39m6ao4WD4uMWknzc
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1jRrZTHn-oge2sTqxli8Um026xuniXAeezLZn4B2zVSg
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1D48Gz6hmPkE6sATNqYoA3P3Hdjtq1y2zHRjrh1kH64I
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1cctIQ_TyhvRFgFVkzjwcfDL1w0i4L2lF-78_WM7Hy6A
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1o6ARVj7jhE2K_VNnX2BYajR2XBX1kdMu
+sql.py:25,20:27:23:start:145:WDteFA -- File: 15e68EIS9xXe5Yvzju4GtkyhFKJ_UgUA9juJKiUpPeUA
+sql.py:25,20:27:23:start:145:WDteFA -- File: 186ge00t4G7kcx1QdCIHxRhTnZfzpSTGDgfAXkdbD_Ig
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1wfaH9BSg8wrDaKXR54KK1y8pd-miEOQNj3E8GL6fTfg
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1G1g252JtmrFnXI5HaLLEafe8apipzquYwQQ0hbQIaho
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1sF1pFtL8fsnQBBAoTt8P7YGOVZVr6-6a4BLeU3PBncI
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1LuJ1Ln_dAc7n3Qj0zNE4yuYfFG6NEgxO-hsDA9M4qpQ
+sql.py:25,20:27:23:start:145:WDteFA -- File: 15Fi6RHQtC8H-GOJC_gjiED_9rNxtCdahEGtLvBUZcv4
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1H1aSubiwctKw-qMV6t1aGlfooY2Qn9V6Y01phHpg-kw
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1WbGMwYDyqP6aCDpf5fBbR7sneMicXtvEtfm3Z4k0Vzs
+sql.py:25,20:27:23:start:145:WDteFA -- File: 16wh_FgWE8Y0tUpAdIte4WyuB91_ypCySi82lvdhAiFY
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1WKk8W5cG-CYKBYN_cWpAdziiPVhvQZEAarnPwf58z4Y
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1YJPVyeYstaXiTguoSGCe_Kb3y4yv49N224nUrfLo7rU
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1PscMFhdtA31Nh7ELmM18NqjUfLDeGiexKI6q-lI0fKY
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1YlY2MTwu_I6PGWgmkNqFXYJVvNSQKMi7j0WulyoD75w
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1Gxvc-37IOivNHIPUJBI1v3jf5e-Hwcby_VZbN-k-Bfc
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1T1Sj69DxCTpEQI2pH0O04l_PSx1V3xsxYOnkiHPEPis
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1VrK4o4hKCSJyT8P4hKL9la_FO7-29hcBJMJDsvjXo2A
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1TxO4rhqIX6VUqO2bLJNkukbTpEDNVYSHD0X9hOzi88o
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1bVHzlp_4wGefhP9sx5GvI7ZR_ArSbtX0LaFmfZTeB8Y
+sql.py:25,20:27:23:start:145:WDteFA -- File: 11L4quB0D_Ttk0WMkddrcn_r8OmWG5Y7xEWgALTBoNvg
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1ZSCKTVjGJu6pUx7auNWEyfs83DLJtOeA3AbwuGuY8kI
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1R9fH_VyHSB3k-yCrmzD5fzj25Ga8neQLtKLceiEhdt0
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1gS0ZLEc-tkOVw-QM-oeezt-ATZgZt_g5wDuW2U4KvF8
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1ECJHKZpyfd75nEg20CQdICaWhZzri2SX_mQjfIFN-Wk
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1SGPIbZAmFYwIakoHevrYhHMwAf6xNIbMuS1zeULYsTQ
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1adckvxMM48z9k3sSG_JP2w-9T5WOqLNocASrGMkmaEs
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1cZg8adblMjYv0HOMh9qeEGR5Hhx59fhEAYD_mG1tfL0
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1_BIMsBsouGOgicFcBVR7gHXNHaSP4iVZGb6ezTcaHg8
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1x8Vlo2OmIPQX7_XYCRzaAG2DgEULR8QVA588B6rCcOg
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1jqJ0-FMfB3RjcqrSJxckdoC-jzHHMa3nLcRMP6CquRQ
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1F6-Z7HfxAQ-F5SIBuApsQr141gOfpxG4y3_h7W7xN0E
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1VSIZknJPJGRXuMPnSk9gjDStnMEXty0XJR1KO4z7QBk
+sql.py:25,20:27:23:start:145:WDteFA -- File: 16Tz6lbS7tdWBUhgseZCx0va0xBAayzOSSDSH-T20xRA
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1wqRmLVKxvm7w--kMAMGzVAjoILC593KzG-z6AFTdt_8
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1h1FUpGxFne9y7IFDVl7IQZGCPE1vhm3rJbCf5WgovQo
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1b1ARGMmgTYWTMHAnv5biEbQKVzTLLQ3vt2n2YLicEws
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1XGCuTdCzlBbB5B0rAu29ButWuims-VeTYBdfozFaFPk
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1ecDoneIykl54KGJhMUpcvdNKg350pGauVB9v0uCuFbI
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1ZIuPeHFKHzM1yn1G47W92JbGijyxWqaOfKhkejWXMdA
+sql.py:25,20:27:23:start:145:WDteFA -- File: 12K516OwpugshsvDcQqP4cSvg-ku6pJuAJGfrEmbDqGc
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1a7puy4GkUsAx2u9lu1i3MnxJAx0JyFPFozhkGYlCT5I
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1jEPinYNleGwKDF0SJddLTTeVvYZbF40sbV5FxvJyNCU
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1e7IjM7tgdUxRQcmg2bbYvLArkghX129Cz_lOLFpnF34
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1JQ-JszbkA6JHylaBr1ZDWeMXTy2X6fM2evDEJo-W3U4
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1Ez54_TKEcG-xUH_lCEW1711SozJ2_cSeBgiuGKjE8Pk
+sql.py:25,20:27:23:start:145:WDteFA -- File: 12bPKEMHnfEBwlDfZnXYlPZRRwnRiHPVtDkcBZqNxBA4
+sql.py:25,20:27:23:start:145:WDteFA -- File: 125AyhViQoEQKg-wVD4y2hv82aynGTyK7SmeqVHpXvQs
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1B6ePg9Ixtc4xqKL4D0_JO80n8GL83WpztJKJGaH-6S0
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1LyrolWAEdF9g6y9DyEk_FIH8B7V1cGDowMv8NvVTjow
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1gvFEgWgxaLnNlgLpfwtdH_-UVEY1rglxelRy307hjns
+sql.py:25,20:27:23:start:145:WDteFA -- File: 19qkWrA-moW3LlnMEtT1VSoCGU5TpOwB_17goJbrvWHM
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1F5C4F51m7TcoiVU-U3s2TERMRIMoe_RxQFA8GBf6-64
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1RFm8X0JkBTJj7iR7YLxsrpzbiBTMANScjSeDO9l2aQw
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1Visfq9vleQOXgJ3svv3Yj5A3qf3GOY4VMIcq4E7J5q0
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1kIbHXyKc4uI2MzuXFMhT73ZIAPnP32_jW1kv2yMNoUU
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1AOfGsW5I-aG8b0WdSsq4IqMlGiDqDYUCUQfFoEJ1ll4
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1XJ5BlIal28QXAMwFOiNr81G7U0xElvy16JUj-39MTrU
+sql.py:25,20:27:23:start:145:WDteFA -- File: 18vcbSvvx_xRDIq0vUFjpKkYGdu00l5XbORDG5EKfWNw
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1iwD0UOBkgdB5Jnza1szyk2RCaNpOfito5Be0lD0HGvk
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1kn3xhSXmFhPNdSs3J-4x4F95PXucVOdAJAwycd591Ns
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1iMp4WTH5NG-vtb4UkJiqLA7D3ck7MkjS2Mu9gw8rOKs
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1b6qJW2miNoybz6Y2_UdB51prtkzfFmWcKbbZ6YpSAbg
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1LvrNb0X-i_B-0eXh_cLDTHGqGukf5UcyNwtVIzimL4E
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1DGlo99pbjGwp3lZne4o98aEBS-oC_FaPV0BGUOHCrNo
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1_wRTbPygF0D0H8VlY-aHjCKTKBQ_Yr8jhCaemuGypXg
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1DE8JkISOGvpaUbmFRqQ_zVwh-29QmyD1t7ap73cr0KU
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1NpHQsdIiUQJTN0Bwdl__Kn69Ix3I3FEZM-6XWD-hCQ4
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1RMi1U6KwIBwORi6hYYv4HQiypu8bD1obKFyiCthf7pw
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1MQSAawInjoU_bWoc22FZS1s-qXWkPZNXwZDM-lFUoU0
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1fZgygLRoHAb-498SXVjIXpGUIvLGU9qeRU63qzQx9nQ
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1pWqW84PU9HyaS_FLl_qn80OAdv0gFum7_FkO6a82EyE
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1R6xbWkbfzsQajjjcXW8tMQWAHqG2Kw6fUzCtSVa3rKI
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1ohuX_SQlBRAEoBP1lszH7C5sU4UixwKTJsjyRB4hSWw
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1NBVW6zOvYcoTmGZ46HZosMmV2SVNURBvf4WOm1ydcTk
+sql.py:25,20:27:23:start:145:WDteFA -- File: 186ge00t4G7kcx1QdCIHxRhTnZfzpSTGDgfAXkdbD_Ig
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1WbGMwYDyqP6aCDpf5fBbR7sneMicXtvEtfm3Z4k0Vzs
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 16wh_FgWE8Y0tUpAdIte4WyuB91_ypCySi82lvdhAiFY
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1YlY2MTwu_I6PGWgmkNqFXYJVvNSQKMi7j0WulyoD75w
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1WKk8W5cG-CYKBYN_cWpAdziiPVhvQZEAarnPwf58z4Y
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1T1Sj69DxCTpEQI2pH0O04l_PSx1V3xsxYOnkiHPEPis
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 125AyhViQoEQKg-wVD4y2hv82aynGTyK7SmeqVHpXvQs
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1gvFEgWgxaLnNlgLpfwtdH_-UVEY1rglxelRy307hjns
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1LyrolWAEdF9g6y9DyEk_FIH8B7V1cGDowMv8NvVTjow
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 19qkWrA-moW3LlnMEtT1VSoCGU5TpOwB_17goJbrvWHM
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1F5C4F51m7TcoiVU-U3s2TERMRIMoe_RxQFA8GBf6-64
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1RFm8X0JkBTJj7iR7YLxsrpzbiBTMANScjSeDO9l2aQw
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1XJ5BlIal28QXAMwFOiNr81G7U0xElvy16JUj-39MTrU
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1Visfq9vleQOXgJ3svv3Yj5A3qf3GOY4VMIcq4E7J5q0
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1kIbHXyKc4uI2MzuXFMhT73ZIAPnP32_jW1kv2yMNoUU
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1AOfGsW5I-aG8b0WdSsq4IqMlGiDqDYUCUQfFoEJ1ll4
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 18vcbSvvx_xRDIq0vUFjpKkYGdu00l5XbORDG5EKfWNw
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1kn3xhSXmFhPNdSs3J-4x4F95PXucVOdAJAwycd591Ns
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1iMp4WTH5NG-vtb4UkJiqLA7D3ck7MkjS2Mu9gw8rOKs
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1b6qJW2miNoybz6Y2_UdB51prtkzfFmWcKbbZ6YpSAbg
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1LvrNb0X-i_B-0eXh_cLDTHGqGukf5UcyNwtVIzimL4E
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1_wRTbPygF0D0H8VlY-aHjCKTKBQ_Yr8jhCaemuGypXg
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1DGlo99pbjGwp3lZne4o98aEBS-oC_FaPV0BGUOHCrNo
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1DE8JkISOGvpaUbmFRqQ_zVwh-29QmyD1t7ap73cr0KU
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1NpHQsdIiUQJTN0Bwdl__Kn69Ix3I3FEZM-6XWD-hCQ4
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1RMi1U6KwIBwORi6hYYv4HQiypu8bD1obKFyiCthf7pw
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1fZgygLRoHAb-498SXVjIXpGUIvLGU9qeRU63qzQx9nQ
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1MQSAawInjoU_bWoc22FZS1s-qXWkPZNXwZDM-lFUoU0
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1pWqW84PU9HyaS_FLl_qn80OAdv0gFum7_FkO6a82EyE
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1R6xbWkbfzsQajjjcXW8tMQWAHqG2Kw6fUzCtSVa3rKI
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1VrK4o4hKCSJyT8P4hKL9la_FO7-29hcBJMJDsvjXo2A
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1ohuX_SQlBRAEoBP1lszH7C5sU4UixwKTJsjyRB4hSWw
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1TnVVPTcfazUtMTwhCjyfpdZlTzOQiKRdNv5kUTPsuzU
+sql.py:25,20:27:23:start:145:WDteFA -- File: 15oiL5vtc6Pm7TbWGmBPul9ZHEaq5Cp25MmoK7Wj3wQA
+sql.py:25,20:27:23:start:145:WDteFA -- File: 0B4Fujvv5MfqbUWw1OGZLaVJYM25ic2dkVUp4YU9MeUYxempN
+sql.py:25,20:27:23:start:145:WDteFA -- File: 0B4Fujvv5Mfqbajg5cmFoOVFTUWoxMmdiQS1BNlBjMl83Nml3
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1KTg7p_EP680NLfKczdfbr8wI4eK6deK04aM3VpWt124
+sql.py:25,20:27:23:start:145:WDteFA -- File: 16cqhRLUsi3Qo2vqxCM_zA4AukTjyrfADDx9_MldhruU
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1SomlELlB1nEXIUGAjtvJPqegi9_pB5PuDnHFSbl3niA
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1caX2qKRxxndHOlqtQBWnnj7dbfiq7ICg5OkqvOm-13U
+sql.py:25,20:27:23:start:145:WDteFA -- File: 14cW2ITjFw3mu0suoLw5Q7wyYfMwWOAu3iaC6Kxo_9SM
+sql.py:25,20:27:23:start:145:WDteFA -- File: 0B4Fujvv5MfqbMHpzR1pIQ3ZYcHBaSi1FTUpWZkpBOWNHTEM4
+sql.py:25,20:27:23:start:145:WDteFA -- File: 0B4Fujvv5MfqbRjB5bGRlTlZBZ09xN2hjOVphQ3Q5eGVaa2tR
+sql.py:25,20:27:23:start:145:WDteFA -- File: 13l8V9jma8seFSE4EGu5bkYSWkPJT2j9vaDqQgKEjwFk
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1xdiTvBflf61ouDyxvD_REuwZMG28miJg6gUGJHinjRg
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1k6USGPq1ow9Inuf5jBXSBkTAk4kTlBazp9DxzTmXUEo
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1IrzFWsulK7xO4kyKki8Fpy4a8XTkSdfQDHAEZ3uVr-I
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1y_qbg5SNo40vU9kELBqxO7bQphACiO3-N6kANQbBiXg
+sql.py:25,20:27:23:start:145:WDteFA -- File: 19x9p2PdgzWXsKrnbdZ0VVb4x_MemS73DS-j20F3zhOk
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1I3Gu3QKCRgOUayhCLaxdjmjd_ja0G45LU9Al_cQEpBs
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1ZU3R0ZILm0eda1_ra901RqrpNrffZG_XpuJTpGZvsXo
+sql.py:25,20:27:23:start:145:WDteFA -- File: 177ub3jbX4uscDt3uDv_WYisrvqmR5B5C9jhfnv-3T7Y
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1wblHudQn6UwWLOkXpX-X2k4YEPv4obOEHTUhy3n8cMY
+sql.py:25,20:27:23:start:145:WDteFA -- File: 17rFp_FJUjEH_qhETF7SM8dqYzpGmrq7LcT3LUBZIiwA
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1WbvAv_ymDwWk-BGlPHw8SzD163SnYVFrw7IIt4mHjiM
+sql.py:25,20:27:23:start:145:WDteFA -- File: 11pQJMPSqdBII6CieoNmfHahRsuvHflXvehfOaWt8H7k
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1WN1sPgeACI3FUPUwOEit8xTBsUjsasQUzeIQ7PrBPYk
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1OXx2LaTMGkAs2x_wSMHmZZdNVBWxJkq16rBTKcv46e4
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1OctQHnUJUYiVNd90Dc1tetJzYl0MxIJL-vH-oACIhR8
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1NSEpg3wzcFzi85vgvSQ14ebqQaEwgthPzkBcHvFYK4g
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1wwO34JKRjuj3j8LPJ8GpZ1qUZjudaS9ZKuH_vvH9u1Y
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1d4h1lq9gvAfUpxC3DILSxTJvVCs3vbGLmMQXpRW5k2M
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1YPHMaMcgzysPOs7Flk2L4cAj1R_9U1mesOMP_u-9Ie0
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1PIFIQuFfWBnGVFqjEJeGFanqwpbbs7bmc_vhuKQpWT8
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1B37ygx-Iwh0EpS1c5fqpbK6AqE39m6ao4WD4uMWknzc
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 18bxzMnkY1PebmnCbJwDWXkwO5PfuDYwiHwJF98y87uU
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1OKxvzHOhjxBtzX3_mgg3f36xaqMOBwrfwypEAjrXooc
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1xjZMkCR9jK3uLcj3VVv8iG9vMhOY-TdfaTtm_-Gfluo
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1sq0GKewD4f-c6Nu_FDoW-h3Sr8mpsXl3VX3-b7gm_vY
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1ebdbk-Heh5hZkqr3vk2KnUOaThJtdAHsW4PTRckjRIc
+sql.py:25,20:27:23:start:145:WDteFA -- File: 10tBzs-b4tUfUtr6Uw1PNlbeIIFj9-RwWnNb4gghJcB0
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1cWs7Ivk6q8HNllhbZrC6t0gPU7HAVF98tJb0L2zJQYM
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1L7Y6FI81HIJ6PKQnrSDEW_Y6JmxTZdSJLRs1eS29MnU
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1bxYZOBqncwfgK7wiBP3rHPk9nkhJYQGhmlIKScdrGXg
+sql.py:25,20:27:23:start:145:WDteFA -- File: 121oJ48RCkqiq1AAiTQksw63LJHVHTzcAL5p7SfFDzN4
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1v1MzjKeWndRSIeIUIcsttYQsBSQqwvKYvM_i4pm93eY
+sql.py:25,20:27:23:start:145:WDteFA -- File: 19T-3KeDzmN1hbJIOHoCGshN-2MkfzzL3niQ9g-kJ8wA
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1tPjh3-nBi17bhMtRviIdViEpl5m1AKUdV8Sal5eQ6Mc
+sql.py:25,20:27:23:start:145:WDteFA -- File: 10Kfg9ce99awKIA1TMLlCIXxs8aD11enD4s_aPY7fSIk
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1ybcAuvKiH1jP7Xq6ah4lL12FxIQ3XV9hBQTF5WX6LvY
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1r75iiO6eNJGhSzNVz_XOptyuhgUt1Ec4IOcxA72_76I
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1WnajaWbVBh4Nd8LuknbgrxA0WFTKQPOOn3H-fEwMTr8
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1W_EIUFDWQMdAyZKe69M9nuW5XedFb3bcsP7atg6LvIo
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1jys4yWL3RLe37f1yAGZzlKp2CCsWQ9YVRefNJm0sDFk
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1iuVb4Si_gTncPRe2R6kJ53PhPgL4I68_w9j2R8fRB7E
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1iaW7VZ7uupNJpOlGARjNoRsixK4TNmi36foaVjtD9og
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1jc_mjy90aKZ43SiRGSxmgNPyZQbrMh9Jb1dHoYzGWIM
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1HH2s7wRH1yZ3RzwuwRiqENRoNtdfG5EF034jvIGr9E0
+sql.py:25,20:27:23:start:145:WDteFA -- File: 15UMfb4c64GnCPTxFkvl-LShnbVIahiPADwLU-2h2PIY
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1lRv0A0-GImHxYL7qjV7bO9ewz4ErLrPGmb_9DkjOCZo
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1J-D9OQu7Xccz5BDEdiqPsKj5gJwW1qJ87Z24LSV6gak
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1H_FqHaJlUTfDeWZNITmjb7_9mc0kiPixuBSIXLeOEb8
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1V1KI6RIfQ38M_UIWpldBLKxJzXeuvsW8fKi0XodfERc
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1mU_Z2FXHCrL3UIf13uXSZsLBLPdJjh0-VRK_CEIcCvU
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1c9QE4E2tonnIhb6KO3DmLnZoXssnEB4bFn4vEzz959o
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1nYk0GBJ-0vTonu9nvhsvBvlWK5swHLSDmao9eTwVoms
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1vOEsYOAXIV_XJiid27nBy1s2lCEvz2ZjmYbKsHsQNFI
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1u1ZrB5rE8JfGb5y69hdtADX5fXeex9hXNDmUexYtOng
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1Mwr2PIKBobTIwfJH1DP806Ki3q69vz-hb84A3SyrEQ4
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1F1rKSpzRwIDSpcWlc8hARJhserv3yywojoXRLNtOsM4
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1U3nNqST1Sz5VIepZU8p33HVgn3uhRorhv_mkL3raAg8
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1WNM32gREzjB7ks8IAJm9f14c8pxhFEXTr5AYbeXQCwo
+sql.py:25,20:27:23:start:145:WDteFA -- File: 12Q6bZVGb6Gd19_BYI7FDsnp1YPM5gZAp8VUzxm5bmHo
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1qPi9_y7ctipEYPaOxEzvxutR_cvDAxGQKLYhs7KA91c
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1rYeomn5QTElgFAErrnBtX4iR9p8G7AWrBNZN0t83QyI
+sql.py:25,20:27:23:start:145:WDteFA -- File: 10O9QmWkYt3lpDiCmKhdUDpvgY5Vt7-FbeHhixZzff40
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1lFVPDJJqO1flvYuk5n4N0cSzh9PY8hU9QK-xuachhms
+sql.py:25,20:27:23:start:145:WDteFA -- File: 18HTxjPXMFCZ2X4cWr9ZcVoCXTKtLD0BA2oZ8WcLOBdc
+sql.py:25,20:27:23:start:145:WDteFA -- File: 17Ar8JD8IDNr2zTGLCX_m5VNUwhVI-z27amxEYdMZo9A
+sql.py:25,20:27:23:start:145:WDteFA -- File: 16ZOaBmwaEUNHKdzVDDYsvGKcnUOgWK7jqZs4zaWwyKY
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1BJlt8woa95IYNvGkGFpvKvYIGqQXW3mqr1MAnZwqS64
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1cPTe9tBUkFo1sVlMT5-ZG2-DvO7HoGbgR413A8hrYoE
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1PXNN4iw_j8MhvbtcB4IejaUqw80-4wZhYsmDzKNd8Yo
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1hzbRCzK66ADkXJA5ed5p79TfqNyqCpkdKAttWPh4VlE
+sql.py:25,20:27:23:start:145:WDteFA -- File: 18dyEIk03yKG-7bM19EkiJzrtoWIwrRNov-z7XeJw1m4
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1Se0xjKN6ugnSc8EozbwAq4_gQMoz3ejTeJLhkpUeiik
+sql.py:25,20:27:23:start:145:WDteFA -- File: 15G9sQV-39Si_2_hIIxIBh7xEg6IrSN6-wMZUxYCP2Bk
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1_o5CC6s1lKBY2FqxzGKVoBNMRW0Ekaya3mEVaS7Xh_w
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1UIJTMxlSrxlRK8VNymZdKCY61mVleSP6jM3b6qckwAQ
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1Hgko3gj0SKfYfD0a7bXwsx2tZyy7p-fOj2tWB7ZBZYE
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1zavQne_MWRu5tTO2v9z1e0JdPGROFrTIadjBa6MSipc
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1RBeu5UyrRyxopPQqc_hm2XiVS2RCO40mARJHPTouoIE
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1tb3xmBatR7YNy70lzq1K41ozoTBaYERMzGcsGNQ5K9Y
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1eD408OKIXN196mYbC69-8M5wDGPxTJLqAnJc7zGlIDQ
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1NspHhMgG_VjC3P93oZ5IV7xFFL7Uk3NNktrH2O9ZeoE
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1Ac1Qh6p3Cq6XHlWf2-wRLZ_naYPJLXZoDbgJfy6w-YY
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1ax-gJpCTZ3apRqQ5GXVL8iPMCj3Bzc4vrHx5raCHPoo
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1-uubVDVcFISy6uzaYsXmPbxS9UmxDjNBxhUDniVDmlk
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1tbtgmS94lbqjRwYy-I75q4BH8WCkyHDE6HViwAF00ss
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1PpB3vZv2lJpoVklW51mZuquyju9GF7Zb-_c-rBSIQxc
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1HRakKISuqu2K_e2YyjoWGlB9C7H8vne7Q3_u089wRW0
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1mJDzwEHTj1Zvf91GbF8_hhBLhtKugl2wQuzkhEH06zE
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1KKaeEE792dDRG5mhXJQVCqgdqpJBHaWD_OQ6M3ZhRuo
+sql.py:25,20:27:23:start:145:WDteFA -- File: 15xp5eKILeVOBXgP_NrQRJxEckYLJn4TF-HH51I4xSDQ
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1KsWck_UFf_Kf1t500KZ9VgqB6onKJVu16NYeNLLvAmI
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1FyG_ZowGX2NAKBVvlKMnPuQtHEnQTM2kD5VYkjoVjxI
+sql.py:25,20:27:23:start:145:WDteFA -- File: 18k-JjTWeVXu2K65Vk32-q7MPPQiAX4K7bflONox2Kos
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1Xv2sTgI0X-dIB5LLgDmaOviNSzeonDUoLFQ5uGw1Hgw
+sql.py:25,20:27:23:start:145:WDteFA -- File: 13tHLJrPwP1o3jOffP1Z-orNRbsKBIZSCUR6zs6Nl-z8
+sql.py:25,20:27:23:start:145:WDteFA -- File: 17xnllCXbgNGTCl3UCF7rjdDFUenH7Ybp_oBLlhaazPM
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1yub5ti1om7s1nua9Nc3YFcfpzn_WQlrZn3yNxI_WUa0
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1BuSMP_TzGXY7KbsocMKJCDmtrjrUZxkSX-JKKqKU0U4
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1sXtPdTSN5B-aVm1yaiGZopC7AoXVhi-ZvJcllmC5iJ0
+sql.py:25,20:27:23:start:145:WDteFA -- File: 19HElFbOypbhzZzPKby2rypaTe9UsgLq9Upfx0WWhsas
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1eg0Rle5g1rhCkOPjeENL4SKs4V7SpTIozIv_YMzzuMQ
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1R0t5FNM3FAp9uJhf2TraL5lKE1hAASZ7fSXr1q7Irxs
+sql.py:25,20:27:23:start:145:WDteFA -- File: 12a-Eu55AvABgEnfWGrlYyb_H9P0H8UeZVi2lejD5jig
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1pqUL-BLtEu6HcTxjZToeaNaAz8vkKjDLQiu4B7TLZVU
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1VfNKMndN01Hbe2ijTgC-EAj9TpqdD133dm-ltW3BpEc
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1NXctsqWBRGB5_WvoTyW05ovUYiOoIc0NfXKvl4Z6K40
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1zjx4HJJwsgyjPEMwb4Q3sMRZSoYMXpspxs2awIpvMcE
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1294s17bsyDgKru3xzl_nM6RJvbU4YKu0b8BFIJaNTvg
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1TYIOfz_uzybWgEeexs8iE64jcjt-AmUegOP6KORNaWQ
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1_EgMi7XA_HEtXs6t6_t16Tx0SjA8P0R4gp3c_Tx91mU
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1F6SbGdjxQe1JjSCL_xfo1pIZRQxLtprw36plcnlZ-0A
+sql.py:25,20:27:23:start:145:WDteFA -- File: 19Fu317bfo0V7yOIkfLvKtAU-UJYLf8d2Soy-jTvq1uc
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1eXJKzIcZCM6pAdVLLrvEyIwQBDDrtm8dComeZ_W7uOI
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1Ux4BA5BVJTcsGcTcGp8CtB85ahlWp0h83AGvrtAhnTg
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1K6SwyWCOhW6dt906DjOIhJ-ZklpsooCdTyYHGfEZD2s
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1iTV26x-U2-nngY6gONVklMtrhdfI818IwLM682vpABA
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1gKBPmWO42yparziEkHbvcBtubHyE_IQwtO1Q8IIrW1c
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1ak3AnxwEDfv_EkgRG7Q8U_eglT-eK2W3RtAJqlrtcQA
+sql.py:25,20:27:23:start:145:WDteFA -- File: 12x_9WkC_rJJ4iQW5IUNaY9BwAHRM1P6nRBi_oyRq7eI
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1FzKITrCYnc_odhNCRNNaZ-PnT7m0f6qI-iDuQG382OY
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1VzVAOYcQFfJoPSOGAqpK8xA7OtiUNdq13G3SNRtrq2U
+sql.py:25,20:27:23:start:145:WDteFA -- File: 16cqhRLUsi3Qo2vqxCM_zA4AukTjyrfADDx9_MldhruU
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1KTg7p_EP680NLfKczdfbr8wI4eK6deK04aM3VpWt124
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 14cW2ITjFw3mu0suoLw5Q7wyYfMwWOAu3iaC6Kxo_9SM
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1k6USGPq1ow9Inuf5jBXSBkTAk4kTlBazp9DxzTmXUEo
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 13l8V9jma8seFSE4EGu5bkYSWkPJT2j9vaDqQgKEjwFk
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1xdiTvBflf61ouDyxvD_REuwZMG28miJg6gUGJHinjRg
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1IrzFWsulK7xO4kyKki8Fpy4a8XTkSdfQDHAEZ3uVr-I
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1caX2qKRxxndHOlqtQBWnnj7dbfiq7ICg5OkqvOm-13U
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1y_qbg5SNo40vU9kELBqxO7bQphACiO3-N6kANQbBiXg
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1I3Gu3QKCRgOUayhCLaxdjmjd_ja0G45LU9Al_cQEpBs
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1SomlELlB1nEXIUGAjtvJPqegi9_pB5PuDnHFSbl3niA
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 19x9p2PdgzWXsKrnbdZ0VVb4x_MemS73DS-j20F3zhOk
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1ZU3R0ZILm0eda1_ra901RqrpNrffZG_XpuJTpGZvsXo
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 177ub3jbX4uscDt3uDv_WYisrvqmR5B5C9jhfnv-3T7Y
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1wblHudQn6UwWLOkXpX-X2k4YEPv4obOEHTUhy3n8cMY
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 17rFp_FJUjEH_qhETF7SM8dqYzpGmrq7LcT3LUBZIiwA
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1WN1sPgeACI3FUPUwOEit8xTBsUjsasQUzeIQ7PrBPYk
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1OctQHnUJUYiVNd90Dc1tetJzYl0MxIJL-vH-oACIhR8
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1OXx2LaTMGkAs2x_wSMHmZZdNVBWxJkq16rBTKcv46e4
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1NSEpg3wzcFzi85vgvSQ14ebqQaEwgthPzkBcHvFYK4g
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1d4h1lq9gvAfUpxC3DILSxTJvVCs3vbGLmMQXpRW5k2M
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1wwO34JKRjuj3j8LPJ8GpZ1qUZjudaS9ZKuH_vvH9u1Y
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1YPHMaMcgzysPOs7Flk2L4cAj1R_9U1mesOMP_u-9Ie0
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1OKxvzHOhjxBtzX3_mgg3f36xaqMOBwrfwypEAjrXooc
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1xjZMkCR9jK3uLcj3VVv8iG9vMhOY-TdfaTtm_-Gfluo
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1sq0GKewD4f-c6Nu_FDoW-h3Sr8mpsXl3VX3-b7gm_vY
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 18bxzMnkY1PebmnCbJwDWXkwO5PfuDYwiHwJF98y87uU
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1lRv0A0-GImHxYL7qjV7bO9ewz4ErLrPGmb_9DkjOCZo
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 10tBzs-b4tUfUtr6Uw1PNlbeIIFj9-RwWnNb4gghJcB0
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1PIFIQuFfWBnGVFqjEJeGFanqwpbbs7bmc_vhuKQpWT8
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1ebdbk-Heh5hZkqr3vk2KnUOaThJtdAHsW4PTRckjRIc
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1cWs7Ivk6q8HNllhbZrC6t0gPU7HAVF98tJb0L2zJQYM
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1L7Y6FI81HIJ6PKQnrSDEW_Y6JmxTZdSJLRs1eS29MnU
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1c9QE4E2tonnIhb6KO3DmLnZoXssnEB4bFn4vEzz959o
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1bxYZOBqncwfgK7wiBP3rHPk9nkhJYQGhmlIKScdrGXg
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 121oJ48RCkqiq1AAiTQksw63LJHVHTzcAL5p7SfFDzN4
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1v1MzjKeWndRSIeIUIcsttYQsBSQqwvKYvM_i4pm93eY
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1HH2s7wRH1yZ3RzwuwRiqENRoNtdfG5EF034jvIGr9E0
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1Mwr2PIKBobTIwfJH1DP806Ki3q69vz-hb84A3SyrEQ4
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1tPjh3-nBi17bhMtRviIdViEpl5m1AKUdV8Sal5eQ6Mc
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 19T-3KeDzmN1hbJIOHoCGshN-2MkfzzL3niQ9g-kJ8wA
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 10Kfg9ce99awKIA1TMLlCIXxs8aD11enD4s_aPY7fSIk
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1jys4yWL3RLe37f1yAGZzlKp2CCsWQ9YVRefNJm0sDFk
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1ybcAuvKiH1jP7Xq6ah4lL12FxIQ3XV9hBQTF5WX6LvY
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1r75iiO6eNJGhSzNVz_XOptyuhgUt1Ec4IOcxA72_76I
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1W_EIUFDWQMdAyZKe69M9nuW5XedFb3bcsP7atg6LvIo
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1WnajaWbVBh4Nd8LuknbgrxA0WFTKQPOOn3H-fEwMTr8
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1iaW7VZ7uupNJpOlGARjNoRsixK4TNmi36foaVjtD9og
+sql.py:25,20:27:23:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:23:start:145:WDteFA -- File: 1iuVb4Si_gTncPRe2R6kJ53PhPgL4I68_w9j2R8fRB7E
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1jc_mjy90aKZ43SiRGSxmgNPyZQbrMh9Jb1dHoYzGWIM
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1H_FqHaJlUTfDeWZNITmjb7_9mc0kiPixuBSIXLeOEb8
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 15UMfb4c64GnCPTxFkvl-LShnbVIahiPADwLU-2h2PIY
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1J-D9OQu7Xccz5BDEdiqPsKj5gJwW1qJ87Z24LSV6gak
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1V1KI6RIfQ38M_UIWpldBLKxJzXeuvsW8fKi0XodfERc
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1mU_Z2FXHCrL3UIf13uXSZsLBLPdJjh0-VRK_CEIcCvU
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1vOEsYOAXIV_XJiid27nBy1s2lCEvz2ZjmYbKsHsQNFI
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1nYk0GBJ-0vTonu9nvhsvBvlWK5swHLSDmao9eTwVoms
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1u1ZrB5rE8JfGb5y69hdtADX5fXeex9hXNDmUexYtOng
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1U3nNqST1Sz5VIepZU8p33HVgn3uhRorhv_mkL3raAg8
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1F1rKSpzRwIDSpcWlc8hARJhserv3yywojoXRLNtOsM4
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1UIJTMxlSrxlRK8VNymZdKCY61mVleSP6jM3b6qckwAQ
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1WNM32gREzjB7ks8IAJm9f14c8pxhFEXTr5AYbeXQCwo
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1e8X7BjoK-9tw6LtZ906nkT8UU0ZRXhuYYVGMY3zGhG4
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1UYpX0KtWixk6R1ljqbRo-oHK1flm4eArGMqLkGGDjbA
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1Hgko3gj0SKfYfD0a7bXwsx2tZyy7p-fOj2tWB7ZBZYE
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 12Q6bZVGb6Gd19_BYI7FDsnp1YPM5gZAp8VUzxm5bmHo
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1RBeu5UyrRyxopPQqc_hm2XiVS2RCO40mARJHPTouoIE
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1qPi9_y7ctipEYPaOxEzvxutR_cvDAxGQKLYhs7KA91c
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1ax-gJpCTZ3apRqQ5GXVL8iPMCj3Bzc4vrHx5raCHPoo
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1lFVPDJJqO1flvYuk5n4N0cSzh9PY8hU9QK-xuachhms
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 10O9QmWkYt3lpDiCmKhdUDpvgY5Vt7-FbeHhixZzff40
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1rYeomn5QTElgFAErrnBtX4iR9p8G7AWrBNZN0t83QyI
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1Ac1Qh6p3Cq6XHlWf2-wRLZ_naYPJLXZoDbgJfy6w-YY
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 17Ar8JD8IDNr2zTGLCX_m5VNUwhVI-z27amxEYdMZo9A
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 18HTxjPXMFCZ2X4cWr9ZcVoCXTKtLD0BA2oZ8WcLOBdc
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1PXNN4iw_j8MhvbtcB4IejaUqw80-4wZhYsmDzKNd8Yo
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1cPTe9tBUkFo1sVlMT5-ZG2-DvO7HoGbgR413A8hrYoE
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 16ZOaBmwaEUNHKdzVDDYsvGKcnUOgWK7jqZs4zaWwyKY
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1BJlt8woa95IYNvGkGFpvKvYIGqQXW3mqr1MAnZwqS64
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 15G9sQV-39Si_2_hIIxIBh7xEg6IrSN6-wMZUxYCP2Bk
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 10u3-LXvFnSLUWooUhaGr9Au1jxnUA5wA7ZtW-D2ECQw
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1Se0xjKN6ugnSc8EozbwAq4_gQMoz3ejTeJLhkpUeiik
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1hzbRCzK66ADkXJA5ed5p79TfqNyqCpkdKAttWPh4VlE
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 18dyEIk03yKG-7bM19EkiJzrtoWIwrRNov-z7XeJw1m4
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1zavQne_MWRu5tTO2v9z1e0JdPGROFrTIadjBa6MSipc
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1_o5CC6s1lKBY2FqxzGKVoBNMRW0Ekaya3mEVaS7Xh_w
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1-uubVDVcFISy6uzaYsXmPbxS9UmxDjNBxhUDniVDmlk
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1eD408OKIXN196mYbC69-8M5wDGPxTJLqAnJc7zGlIDQ
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1tb3xmBatR7YNy70lzq1K41ozoTBaYERMzGcsGNQ5K9Y
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1NspHhMgG_VjC3P93oZ5IV7xFFL7Uk3NNktrH2O9ZeoE
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1tbtgmS94lbqjRwYy-I75q4BH8WCkyHDE6HViwAF00ss
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1PpB3vZv2lJpoVklW51mZuquyju9GF7Zb-_c-rBSIQxc
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1HRakKISuqu2K_e2YyjoWGlB9C7H8vne7Q3_u089wRW0
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1mJDzwEHTj1Zvf91GbF8_hhBLhtKugl2wQuzkhEH06zE
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1KKaeEE792dDRG5mhXJQVCqgdqpJBHaWD_OQ6M3ZhRuo
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 15xp5eKILeVOBXgP_NrQRJxEckYLJn4TF-HH51I4xSDQ
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1KsWck_UFf_Kf1t500KZ9VgqB6onKJVu16NYeNLLvAmI
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1FyG_ZowGX2NAKBVvlKMnPuQtHEnQTM2kD5VYkjoVjxI
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 18k-JjTWeVXu2K65Vk32-q7MPPQiAX4K7bflONox2Kos
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1Xv2sTgI0X-dIB5LLgDmaOviNSzeonDUoLFQ5uGw1Hgw
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 13tHLJrPwP1o3jOffP1Z-orNRbsKBIZSCUR6zs6Nl-z8
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 17xnllCXbgNGTCl3UCF7rjdDFUenH7Ybp_oBLlhaazPM
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1yub5ti1om7s1nua9Nc3YFcfpzn_WQlrZn3yNxI_WUa0
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1BuSMP_TzGXY7KbsocMKJCDmtrjrUZxkSX-JKKqKU0U4
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1sXtPdTSN5B-aVm1yaiGZopC7AoXVhi-ZvJcllmC5iJ0
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 19HElFbOypbhzZzPKby2rypaTe9UsgLq9Upfx0WWhsas
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1eg0Rle5g1rhCkOPjeENL4SKs4V7SpTIozIv_YMzzuMQ
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1R0t5FNM3FAp9uJhf2TraL5lKE1hAASZ7fSXr1q7Irxs
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 12a-Eu55AvABgEnfWGrlYyb_H9P0H8UeZVi2lejD5jig
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1VfNKMndN01Hbe2ijTgC-EAj9TpqdD133dm-ltW3BpEc
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1pqUL-BLtEu6HcTxjZToeaNaAz8vkKjDLQiu4B7TLZVU
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1zjx4HJJwsgyjPEMwb4Q3sMRZSoYMXpspxs2awIpvMcE
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1NXctsqWBRGB5_WvoTyW05ovUYiOoIc0NfXKvl4Z6K40
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1294s17bsyDgKru3xzl_nM6RJvbU4YKu0b8BFIJaNTvg
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1F6SbGdjxQe1JjSCL_xfo1pIZRQxLtprw36plcnlZ-0A
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1_EgMi7XA_HEtXs6t6_t16Tx0SjA8P0R4gp3c_Tx91mU
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1TYIOfz_uzybWgEeexs8iE64jcjt-AmUegOP6KORNaWQ
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1LfeyEXdNl3YM-lV7iOPSP4dl-uXlnbcL
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1_wlxhy2APCz4lVq6wofdN82TN-A1DYGd
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4z70ztg3cLKR3RPUkZjaUhVdXc
+sql.py:25,20:27:24:start:145:WDteFA -- File: 19Fu317bfo0V7yOIkfLvKtAU-UJYLf8d2Soy-jTvq1uc
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B9uwNDTkJVIYV0JQVU05NkN3dmM
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1UekAo_5ZNDeGufpfc97vaXGktNoq5U04
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4z70ztg3cLKNnA1SS10UEFzdkE
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1Ux4BA5BVJTcsGcTcGp8CtB85ahlWp0h83AGvrtAhnTg
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1eXJKzIcZCM6pAdVLLrvEyIwQBDDrtm8dComeZ_W7uOI
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0BzbrKEZKhQBBS0kxRWRNRTBiemM
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4z70ztg3cLKdHNjeFg2TTJhOUk
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4z70ztg3cLKNDJ6SlV6bWYzWEU
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0BzbrKEZKhQBBWS1FcjVmcWNKX2s
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0BzbrKEZKhQBBM1R5U1RxZ0hGYzQ
+sql.py:25,20:27:24:start:145:WDteFA -- File: 14_vv-gLYy3o0AHBpuRwVXxbdyZf-OZfi
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4z70ztg3cLKLTV4SVJIeVRaR00
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1Srx2jSpjUQ4VXSpS6lRwAcZ6jtXkJNvR
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4z70ztg3cLKN0dlSWxDcEJIcXc
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4z70ztg3cLKelVObUZxcFZIWmc
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0BzbrKEZKhQBBanRya0trWnBaR0E
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4z70ztg3cLKLW1wbmY1bUM2M28
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4z70ztg3cLKZGIxSDlKdTJUalU
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4z70ztg3cLKa19od1pWRjdWMnc
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1K6SwyWCOhW6dt906DjOIhJ-ZklpsooCdTyYHGfEZD2s
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B314tJw3ioySOU1qX2tyS2VSTjg
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B314tJw3ioySaU02Y25KV1RmZmM
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1iTV26x-U2-nngY6gONVklMtrhdfI818IwLM682vpABA
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1ak3AnxwEDfv_EkgRG7Q8U_eglT-eK2W3RtAJqlrtcQA
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0BzbrKEZKhQBBRmZoUEhXaEFXeFE
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1gKBPmWO42yparziEkHbvcBtubHyE_IQwtO1Q8IIrW1c
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0BzbrKEZKhQBBSWs2NW1kSnBuSlE
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0BzbrKEZKhQBBZDR4c05VaDhmMEU
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4z70ztg3cLKQlB1Z2kyRGJHbGc
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0BzB0sWZU6K74bjI5SURMS2NpUTQ
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1FzKITrCYnc_odhNCRNNaZ-PnT7m0f6qI-iDuQG382OY
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1WsdgPP3z17uNTsiGD7LfWIoPIHHGWfEVQ-CXSwgs3059XhLAvDUsVPcGlmBS
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1VzVAOYcQFfJoPSOGAqpK8xA7OtiUNdq13G3SNRtrq2U
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0BzbrKEZKhQBBc3pwV05FUHRPS28
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0BzbrKEZKhQBBODAzTWRqT2I0alE
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0BzbrKEZKhQBBd2JtbjR0NlBZaXc
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4Fujvv5MfqbV0xGc0szQ2ZGVlE
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0BzbrKEZKhQBBTktmWU13LWNfZ0k
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0BzbrKEZKhQBBZmM3SUtRRUpMcVU
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0BzbrKEZKhQBBY204R2c2S3ZxbnM
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0BzbrKEZKhQBBVy1SXzZhSEJZbEE
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B3LDW5TwQt3jbVpiY21wRml2dWs
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B39EL3QtE8zyMENScWE2MHR5VlE
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4z70ztg3cLKSkNCYmlscG9uR1U
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0BzbrKEZKhQBBMzBuUTdyMFdFVE0
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4z70ztg3cLKRHhyUnFRY0hFYlk
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B3LDW5TwQt3jMnJ3bWVNZXFla0E
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4z70ztg3cLKOVFjODJfb2Uzb2s
+sql.py:25,20:27:24:start:145:WDteFA -- File: 12x_9WkC_rJJ4iQW5IUNaY9BwAHRM1P6nRBi_oyRq7eI
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1yllVW5DGoWSkp3PmHABjhGfrZC4isoMYL7zCMVYq4Is
+sql.py:25,20:27:24:start:145:WDteFA -- File: 19ygUczxObgJ1T6IaNNy58eb13Z7FL6Z3QmuGA5eLPnU
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1NIRC8ZVCuz8MwINM-6pgmCznw6ZfmzGjDQVf8Td1I68
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1YrEDAhPVQRvL1DAF7FnxmorNmO91tOYm0CeKCx-YHYc
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1LZ49mZZavfbc6qrupR026UclucxC0ywjsdzw65tvHy8
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1uJxHEVRHa1gqbbqWbxUkzSl5t5v3OOPZXJ7Yotx4dFI
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1Nm0Mb5nJrqDHqhOJFChfJGh_v4pIxupnA3F3HELGmlQ
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1yvpmUIl5IPAvt3DLkCojjBjK0c8LngY4rVwqAIxau5U
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1M23JcQw9m1kFonxRU3JZU96p4eHCMSYpJcFfpSo73JE
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1BU7kF9C-LzvjiV2WBq5Yx6sstmvvYDDOPKYP8jygvKg
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1h_HFgkaxvyfaL9G3-VwMoICDdcnZjmbg76vR0qwBRaE
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1cflNpTbjQqpz-E4GqrehbgvXRayQ6dXE_X_x5tC8gbE
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1ErpgaQ5zEbmbVALXTEGj8knlKYDU-ganQZFkuWdMdLs
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1xS96CqWG26lxXRjriQhRXyssvP6FimBkTtA5EIOLfao
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1qC8O9UkkKeZ82f4iVgf2UYL0ZDqm9ny54I45NmQqBK0
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1kardxzC2Fy2Sfl-BBUIEWzZ0j2g9PxiPIDNcoiynXiE
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1M5cdlQeDLMFaNcwVNaOPiv3AFPtVTMH-6lQltnCrNJ8
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1gWhoOIIk2dcQObAvgYpY8Cx_Qc9YUoqNgXEapMic1Qo
+sql.py:25,20:27:24:start:145:WDteFA -- File: 14KTZ9MFQGABvko_oR_4LlYTopekxI_fVWLoZQA0N85c
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1ATwt33p58GMJonubR0SfbRIbwgjGzF1PkFCDWRDno88
+sql.py:25,20:27:24:start:145:WDteFA -- File: 17Lf2t-DFVyj_vHbkHM--J-OoausS5Kt1NsZg5XFGZTA
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1Xm-pyhQ5D_o4tAHRCtX-amvzVhf-d_pGw0ZhdcTL35Q
+sql.py:25,20:27:24:start:145:WDteFA -- File: 18s8_aXXl5LtTX5ljUkglb7uf3QgbVuGoTlhwf9iHzKw
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1-1y6G4MviqPb0QzFlRjccX3Hlm72FFJS1VppqcHKCTs
+sql.py:25,20:27:24:start:145:WDteFA -- File: 19yXrTeWC3zjIWztx7RSpKqHL-dpfVf7PPaOmbKyAPrs
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1V3RqT0n3pc2un7LT3XHJhOLGqmACXSAMSCExEzabbJw
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1kardxzC2Fy2Sfl-BBUIEWzZ0j2g9PxiPIDNcoiynXiE
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1KxeMzcqJ7__fOtXnftJ-Pa7r2vlOP2GwzmoDpyt0mBE
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1zyLifTUL_nG8Vm-qDkOCwL5iOSD1DiyDuysUCIgDBXk
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1YrEDAhPVQRvL1DAF7FnxmorNmO91tOYm0CeKCx-YHYc
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1LZ49mZZavfbc6qrupR026UclucxC0ywjsdzw65tvHy8
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1Nm0Mb5nJrqDHqhOJFChfJGh_v4pIxupnA3F3HELGmlQ
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1M5cdlQeDLMFaNcwVNaOPiv3AFPtVTMH-6lQltnCrNJ8
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1M23JcQw9m1kFonxRU3JZU96p4eHCMSYpJcFfpSo73JE
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1Rwm5j7Cnfx80BQ5aCjWLNGe5Zsy2eEIcqnHMhaIgwRc
+sql.py:25,20:27:24:start:145:WDteFA -- File: 17Lf2t-DFVyj_vHbkHM--J-OoausS5Kt1NsZg5XFGZTA
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1ErpgaQ5zEbmbVALXTEGj8knlKYDU-ganQZFkuWdMdLs
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1ATwt33p58GMJonubR0SfbRIbwgjGzF1PkFCDWRDno88
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1yvpmUIl5IPAvt3DLkCojjBjK0c8LngY4rVwqAIxau5U
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1h_HFgkaxvyfaL9G3-VwMoICDdcnZjmbg76vR0qwBRaE
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1uJxHEVRHa1gqbbqWbxUkzSl5t5v3OOPZXJ7Yotx4dFI
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1OH8h0i2T4Is0R9S8uaZ4C18SQWkxItIW0KwLKnOJGSM
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4Fujvv5MfqbYnZpY2kyejRXUTA
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1cflNpTbjQqpz-E4GqrehbgvXRayQ6dXE_X_x5tC8gbE
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1BU7kF9C-LzvjiV2WBq5Yx6sstmvvYDDOPKYP8jygvKg
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0BzbrKEZKhQBBRzJWNE9feDhGak0
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1gWhoOIIk2dcQObAvgYpY8Cx_Qc9YUoqNgXEapMic1Qo
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1xS96CqWG26lxXRjriQhRXyssvP6FimBkTtA5EIOLfao
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1qC8O9UkkKeZ82f4iVgf2UYL0ZDqm9ny54I45NmQqBK0
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0BzbrKEZKhQBBZHcweElkNG1tNkk
+sql.py:25,20:27:24:start:145:WDteFA -- File: 14KTZ9MFQGABvko_oR_4LlYTopekxI_fVWLoZQA0N85c
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1Xm-pyhQ5D_o4tAHRCtX-amvzVhf-d_pGw0ZhdcTL35Q
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 18s8_aXXl5LtTX5ljUkglb7uf3QgbVuGoTlhwf9iHzKw
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1V3RqT0n3pc2un7LT3XHJhOLGqmACXSAMSCExEzabbJw
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1-1y6G4MviqPb0QzFlRjccX3Hlm72FFJS1VppqcHKCTs
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 19yXrTeWC3zjIWztx7RSpKqHL-dpfVf7PPaOmbKyAPrs
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1KxeMzcqJ7__fOtXnftJ-Pa7r2vlOP2GwzmoDpyt0mBE
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1Rwm5j7Cnfx80BQ5aCjWLNGe5Zsy2eEIcqnHMhaIgwRc
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1zyLifTUL_nG8Vm-qDkOCwL5iOSD1DiyDuysUCIgDBXk
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4z70ztg3cLKOTlfTmw4R1JXOVU
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B1WNUX-O8FMUeldabERKSUsxWUk
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0BzbrKEZKhQBBSjdwNktaU05iWDg
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1SceQARvoMZsenh3mHNFZVorG4Y--Tk-S85NhP1QqXUc
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1DwsrAcC611l4MM1jZzGKCSsOz5KCi98HAECgfA2vnCk
+sql.py:25,20:27:24:start:145:WDteFA -- File: 13-vzOM3RA1SHdKRTAsFyLnLbbGlbUx9AV99Q_c95VXs
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1gFZKPYhQPM-kijc3Q3If-Bo34pmeCnwQsKxrcZcipOc
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1ICn3A7OdVPnhEX3jPkQfMvLu_P3QKtQO_wb5Ds5Rs6Q
+sql.py:25,20:27:24:start:145:WDteFA -- File: 13a3Owyyk120IyPj-ibLkjMj-gJlc-GoLnREVR1v76gk
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1e9ijaiN6UeeWdszruJusWJvcERPDFZxm47zPkASOsTo
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1crgyAPC7Va9ScwbcSEMrmtDqpSOHtDKKin4Qy6jIZbE
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1B-r50uSqygoVn0leRm1HUNgCfj7cTXCgZ-KrUqd8EyE
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1TdlhubLVUoi_6U9xaVK42KshMOaBIF7x-rsMQfwC8ZY
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1TTsNGYYccQIuKIydQ5Me_4KPhSVUcs-rpcoksBh-Yao
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1OUKhIKEYHvySvAKVYyxahfwA7aNRDTgUuCKhW_72aF4
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1ISa7kCERN_ZasqG1xx_SlUxIBqIShR61bruIFiW0dyg
+sql.py:25,20:27:24:start:145:WDteFA -- File: 196_rMcr8M0kh_jhQ7LjUjO23bKnhwLu7rm9IwA-8o_I
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1JfK1iJRQ_0W5VQYPAktucbe6JWwyTjTbs6l_keXVFj4
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1J49oebTpPhUPtQ02Es7X4UHwi8LuKQLM8mvBxprbasM
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1GRvwZGIxky-TRmGLbc-oCJiLZtK5Ah0T5jP-i5pm6Rw
+sql.py:25,20:27:24:start:145:WDteFA -- File: 11KNQSupvOIHe8RyMtVPDhxRpxDE9qIJVGgsB0sGTA4A
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1UvcAx8uccrerf4uud0w1zvsAsbMSJfyqo298Dh_bq_M
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1b-WTM2ekE1k6pPqFt0v7fa-myJ3Yvhg-vFT_zOs-DA4
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1Jzh-bWmP8YOEwSm1WsYvN6c8BDgEzMsWsSYXrZ6uwds
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1CEbUajiAYrz2tpwIPZdNCVGniK6leqx04Hmva2N4XM4
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1kzKbaDRw0fxr-yzmfDdTWyiOBuuGprpgdsicAGMD8aw
+sql.py:25,20:27:24:start:145:WDteFA -- File: 12msYuSI-rqvfXROgoGjtxN3Y9AlT3SnRTd6Om5xOxmM
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1gFZKPYhQPM-kijc3Q3If-Bo34pmeCnwQsKxrcZcipOc
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1HdWWgJDh4IA7T550gANGtjqDNvq0AwP0serPT4qI34k
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1WVRprv2UdMlSY1fciu82upcO_aVl7lOnIFAm3XzHZ1Y
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1cX0p4FkT_mRKMngyAqtysHHhT0t8EXJLvv0IYzoS4sU
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1DwsrAcC611l4MM1jZzGKCSsOz5KCi98HAECgfA2vnCk
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1z0qLmI61do7x0qw3rnK74msvcEZ4tEEVVOERiauTuaI
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1fVc04agXKNKopxuf3yInvn_EXCPuHxfctQqv9rarZIQ
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1crgyAPC7Va9ScwbcSEMrmtDqpSOHtDKKin4Qy6jIZbE
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1HOWZp6ESjGoYrybdR0LLcpWVlgxys_LqI8yxEeyFkpY
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1JK8IsrP_wGm2CMPI2TbhvrrYTfzAebH5h56mDeQugoo
+sql.py:25,20:27:24:start:145:WDteFA -- File: 13a3Owyyk120IyPj-ibLkjMj-gJlc-GoLnREVR1v76gk
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1_ovH_D4cpuVTDp9z4DtrqQUeTTjLYI5RWrZ06FXx8fg
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1U1hoywM09b-AUO7fIR9TflRSsc3Qu3XmxWmzEph3TmE
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1i-Tv07oc_5F72OdEdWf91bbLwoFEaXhmjjlo3QOQyrk
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1TTsNGYYccQIuKIydQ5Me_4KPhSVUcs-rpcoksBh-Yao
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1SceQARvoMZsenh3mHNFZVorG4Y--Tk-S85NhP1QqXUc
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 13-vzOM3RA1SHdKRTAsFyLnLbbGlbUx9AV99Q_c95VXs
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1OUKhIKEYHvySvAKVYyxahfwA7aNRDTgUuCKhW_72aF4
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1e9ijaiN6UeeWdszruJusWJvcERPDFZxm47zPkASOsTo
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1B-r50uSqygoVn0leRm1HUNgCfj7cTXCgZ-KrUqd8EyE
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1TdlhubLVUoi_6U9xaVK42KshMOaBIF7x-rsMQfwC8ZY
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1JfK1iJRQ_0W5VQYPAktucbe6JWwyTjTbs6l_keXVFj4
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1ISa7kCERN_ZasqG1xx_SlUxIBqIShR61bruIFiW0dyg
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1ICn3A7OdVPnhEX3jPkQfMvLu_P3QKtQO_wb5Ds5Rs6Q
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 11KNQSupvOIHe8RyMtVPDhxRpxDE9qIJVGgsB0sGTA4A
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1GRvwZGIxky-TRmGLbc-oCJiLZtK5Ah0T5jP-i5pm6Rw
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 196_rMcr8M0kh_jhQ7LjUjO23bKnhwLu7rm9IwA-8o_I
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1i-Tv07oc_5F72OdEdWf91bbLwoFEaXhmjjlo3QOQyrk
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 12msYuSI-rqvfXROgoGjtxN3Y9AlT3SnRTd6Om5xOxmM
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1b-WTM2ekE1k6pPqFt0v7fa-myJ3Yvhg-vFT_zOs-DA4
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1UvcAx8uccrerf4uud0w1zvsAsbMSJfyqo298Dh_bq_M
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1z0qLmI61do7x0qw3rnK74msvcEZ4tEEVVOERiauTuaI
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1HdWWgJDh4IA7T550gANGtjqDNvq0AwP0serPT4qI34k
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1kzKbaDRw0fxr-yzmfDdTWyiOBuuGprpgdsicAGMD8aw
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1e9hHpoi-yodBw-cH5ChP8mIHo1Ehh1PPm_ZWlf5LYm4
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1fVc04agXKNKopxuf3yInvn_EXCPuHxfctQqv9rarZIQ
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1CEbUajiAYrz2tpwIPZdNCVGniK6leqx04Hmva2N4XM4
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1Jzh-bWmP8YOEwSm1WsYvN6c8BDgEzMsWsSYXrZ6uwds
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1U1hoywM09b-AUO7fIR9TflRSsc3Qu3XmxWmzEph3TmE
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1_ovH_D4cpuVTDp9z4DtrqQUeTTjLYI5RWrZ06FXx8fg
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1HOWZp6ESjGoYrybdR0LLcpWVlgxys_LqI8yxEeyFkpY
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1cX0p4FkT_mRKMngyAqtysHHhT0t8EXJLvv0IYzoS4sU
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1WVRprv2UdMlSY1fciu82upcO_aVl7lOnIFAm3XzHZ1Y
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1JK8IsrP_wGm2CMPI2TbhvrrYTfzAebH5h56mDeQugoo
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 183Rr_Jxvqwr45hk959o51bozsYuQbvCrkin6Jrt3h-c
+sql.py:25,20:27:24:start:145:WDteFA -- File: 16s2vcEm8xd2lr7zC_y2qLL0yKH6m7cOmHuPPKage55Q
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1J49oebTpPhUPtQ02Es7X4UHwi8LuKQLM8mvBxprbasM
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1OuTseuOFrfIBG74nFD8ldyA-YuznzYMB3gwDCflNluI
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1q4oUT527mvm6Z99z5Wxh7cBVu8txJwaihnaXAdzz5fE
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1tzWZf7txImz5JzVFhGZ4k0EaxduS7KijL62pzhbqJ0w
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1H3xmRBsmrq-iOSwSuZdEQoGrqC-0Ka8yKpcocJWI2Qk
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1ZOEuDWmcBiEsrKUhpAXEZmTCecLn0urNu2XQv_2cBk4
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1LcAHCpfJPQo23LeE6raQ48ZltiQqZ0jwFGQp-cpOGks
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1rBFa02pYZiT1kfpCBNCLHQ97-1mp-NGpIATfc4iZboc
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1sanBGafzkn5lzrqFgAJa2DQ-R872Rt-lCMkeCMP-xQs
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1QyQmNut60FNJByMNcv0NSyQvI1j1DLYTGtXn-VGarPE
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1HqGiMmQaR4mDbkV45J-_AVKUHDrBi_udpAJyQZSfKmw
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1mpiOXrgHa0SGIsNDnSOs70ArIAi_2vi0Ujw6TkSW2RQ
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1U6Y1Qg4RVxKdKyUPg8mb_RObDnC5QcEygOXYF4mXuSg
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1LIFtsiVycPWLmFdtHr7XbUnluD8CigwSGemw4J6qwio
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1t8jf4y8CJQiul6bXc6OrvjnXjkPgONkTKdXGkj6e4Ps
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1bJZoExEi-jg9c7EimHL4Uc3XPLQsrmCZM_Dz_1M5OVg
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1KfPb3dCRNiKJ-_mj-L5IdTZYQRTQo6xd2jDkCL94W1w
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1QCHW4IQHA2vCa1Yoxak6ciYnhE7qlwNW_fnOoSBMEG0
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1qzyADvsj4voj5Gk1RxlbUhvMUx52JS_4Lz0Rub4nDAI
+sql.py:25,20:27:24:start:145:WDteFA -- File: 15l9f_tZzB4B4ByKbuD5fJa0bwdk_YqiSmSg62w5TU4E
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1fb6O0E3ND3FngBsYCfiFvTf5C7xDmIyjFbxCEQGeQK0
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1aOrKFEEEphoSmQXNpvXYE8OVqfpq4Cm0_pavpJnHNhg
+sql.py:25,20:27:24:start:145:WDteFA -- File: 11WIU2snHtcamnb9iQszGuvQwhOALT-Gy
+sql.py:25,20:27:24:start:145:WDteFA -- File: 15T7jFID6g5L9jNgtFSqVnNVFuqL7BqlHq9w9uB3CamE
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1HZw5L-rcza1iEFswUoacFN2CigYhHUmy1DoQHMUEnqc
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1e9hHpoi-yodBw-cH5ChP8mIHo1Ehh1PPm_ZWlf5LYm4
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 15A7uqZ5m_7jqIYz5NVUyM0cmStEbSTcezN7qTo0wwXA
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1tEY2XbnyEkH5bOQ0y0HmWgJ2vZ5tKsrjh7qZYjdWAyg
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1WFJYasE9LmtyBf776a2oSGIC_ITRZNZNrHnJbByiHz8
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1h5crBPICUl1tr_PjOHIuHLOePVpI944PpDwPZTdBgcQ
+sql.py:25,20:27:24:start:145:WDteFA -- File: 10M2HsNol6IOHe6wMXb0WkJV9bmy2445a
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1tcAEYXU067CQcn9zzTM-ujz9NOjUOM1mRLUVgIIb80c
+sql.py:25,20:27:24:start:145:WDteFA -- File: 19qZnBERiKqL8I8xdBdLdgD7fOFZsNL1NDdcz3TJ9Gkg
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1QFQ7F7mNbpa6ZIo2Piy-sFb7--Rxdy5GYfgiIpwrJ8A
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1IY-_pt2CS9hoPlSk2144Rnf4jHH4Nv2L2eo4kPBTRiY
+sql.py:25,20:27:24:start:145:WDteFA -- File: 160R40mTuqkKNjME0oJVZAEM0186W6yAjl0SBUMSIIFY
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1WrjmluBbaNBS8u_WZmREl02_oMy2zv6Kcdte82zR5yk
+sql.py:25,20:27:24:start:145:WDteFA -- File: 11WIU2snHtcamnb9iQszGuvQwhOALT-Gy
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1OuTseuOFrfIBG74nFD8ldyA-YuznzYMB3gwDCflNluI
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1tzWZf7txImz5JzVFhGZ4k0EaxduS7KijL62pzhbqJ0w
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1ZBA6pHQ0vfqgMprDjRS0-PqUaeusoF5Z
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1HZw5L-rcza1iEFswUoacFN2CigYhHUmy1DoQHMUEnqc
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1h_QnPXYHWUF7zbH2p5gxqdNXykk5tjvgAjmPby88KEY
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1In3SfwzdRjI3Ah63nCalgrUyf05qbnoE4sRvKc-CtxM
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1rBFa02pYZiT1kfpCBNCLHQ97-1mp-NGpIATfc4iZboc
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1LcAHCpfJPQo23LeE6raQ48ZltiQqZ0jwFGQp-cpOGks
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1sanBGafzkn5lzrqFgAJa2DQ-R872Rt-lCMkeCMP-xQs
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1h5crBPICUl1tr_PjOHIuHLOePVpI944PpDwPZTdBgcQ
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 18K3OuWAM4foGW6Bc6xyG5EkXB8bPPyb9gJRmLrqekxw
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1QyQmNut60FNJByMNcv0NSyQvI1j1DLYTGtXn-VGarPE
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1tcAEYXU067CQcn9zzTM-ujz9NOjUOM1mRLUVgIIb80c
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1A7VHFEYQVj0bigcnBi3pn4NngcNXxH35Croy3zrdvLY
+sql.py:25,20:27:24:start:145:WDteFA -- File: 16s2vcEm8xd2lr7zC_y2qLL0yKH6m7cOmHuPPKage55Q
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1ZOEuDWmcBiEsrKUhpAXEZmTCecLn0urNu2XQv_2cBk4
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1mpiOXrgHa0SGIsNDnSOs70ArIAi_2vi0Ujw6TkSW2RQ
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1QFQ7F7mNbpa6ZIo2Piy-sFb7--Rxdy5GYfgiIpwrJ8A
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 183Rr_Jxvqwr45hk959o51bozsYuQbvCrkin6Jrt3h-c
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1q4oUT527mvm6Z99z5Wxh7cBVu8txJwaihnaXAdzz5fE
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1H3xmRBsmrq-iOSwSuZdEQoGrqC-0Ka8yKpcocJWI2Qk
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1U6Y1Qg4RVxKdKyUPg8mb_RObDnC5QcEygOXYF4mXuSg
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1HqGiMmQaR4mDbkV45J-_AVKUHDrBi_udpAJyQZSfKmw
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1t8jf4y8CJQiul6bXc6OrvjnXjkPgONkTKdXGkj6e4Ps
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1LIFtsiVycPWLmFdtHr7XbUnluD8CigwSGemw4J6qwio
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1bJZoExEi-jg9c7EimHL4Uc3XPLQsrmCZM_Dz_1M5OVg
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1QCHW4IQHA2vCa1Yoxak6ciYnhE7qlwNW_fnOoSBMEG0
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1qzyADvsj4voj5Gk1RxlbUhvMUx52JS_4Lz0Rub4nDAI
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1IY-_pt2CS9hoPlSk2144Rnf4jHH4Nv2L2eo4kPBTRiY
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4Fujvv5MfqbMW9TNERCYW1Tc1U
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4Fujvv5MfqbLXBKUEpYMjlUa2c
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1Ls7pHaoDUuWO8cn_3mF3FoKmxf2Wvwl3eRdDH7kxKoo
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4Fujvv5MfqbcThuWDlsamUzRWs
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4Fujvv5MfqbQlZtbVBaZ1lReUE
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4Fujvv5MfqbSVFwbnNzeWFNcjA
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4Fujvv5MfqbS1dYbGZBNUhFREE
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4Fujvv5MfqbbFBMeWczTXVKX3M
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4Fujvv5MfqbQ3RjQW1kUkVHRzg
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4Fujvv5MfqbUkVUYXBYU0pKdlE
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4Fujvv5MfqbbVdyZ0dIeFRJNWc
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1paMIja_wv-EbKRew-srBJbENjpnd4oEQ
+sql.py:25,20:27:24:start:145:WDteFA -- File: 14pMVX8f56_tVnj6w8Wk2fhKuUirSBrf6
+sql.py:25,20:27:24:start:145:WDteFA -- File: 13-_VonQ5T-8nDBeEnO6umd4XicnvW_5m
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1bOiRueTNb-szlBgWx0VjakLIeWa3vEM68L7XE9dLSWY
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1xa8-X24w6y-atIg6KabP1Txg0zQARutgJ0PlEFthbDw
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1In3SfwzdRjI3Ah63nCalgrUyf05qbnoE4sRvKc-CtxM
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1-19u69ClVXXMtNB8M0mqDVEj-qJ9ABLSE3sabKD3x-c
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1ui_dB_CbKz5qnLFJfaYdA-XS9iG1hgnMaVEl3u5OJLU
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1-rNRjrNOAEV45Ac7EPvNykLDmEiVpRqhv0128_d2ugI
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1nOYHEZQN_i8dc6gZNDqguGEmCIU7IX62qngQE0Yvy7o
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1KfPb3dCRNiKJ-_mj-L5IdTZYQRTQo6xd2jDkCL94W1w
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 15l9f_tZzB4B4ByKbuD5fJa0bwdk_YqiSmSg62w5TU4E
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1fb6O0E3ND3FngBsYCfiFvTf5C7xDmIyjFbxCEQGeQK0
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 15A7uqZ5m_7jqIYz5NVUyM0cmStEbSTcezN7qTo0wwXA
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1WFJYasE9LmtyBf776a2oSGIC_ITRZNZNrHnJbByiHz8
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1aOrKFEEEphoSmQXNpvXYE8OVqfpq4Cm0_pavpJnHNhg
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1tEY2XbnyEkH5bOQ0y0HmWgJ2vZ5tKsrjh7qZYjdWAyg
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 19qZnBERiKqL8I8xdBdLdgD7fOFZsNL1NDdcz3TJ9Gkg
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 160R40mTuqkKNjME0oJVZAEM0186W6yAjl0SBUMSIIFY
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1A7VHFEYQVj0bigcnBi3pn4NngcNXxH35Croy3zrdvLY
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4Fujvv5MfqbdF81NHdULUNwMElJTF8xb0p6eUZnbTRjTUdJ
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1WrjmluBbaNBS8u_WZmREl02_oMy2zv6Kcdte82zR5yk
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0BzbrKEZKhQBBa29nNnJ1aHhtOGc
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0BzbrKEZKhQBBVmlTMjhIUWJHcWs
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4z70ztg3cLKUmJnWkNEbFhYWGM
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0BzbrKEZKhQBBVEVjbDVFb1J2STA
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0BzbrKEZKhQBBVnVDaU1jM2VWdFU
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0BzbrKEZKhQBBdFRTbEt1bGRKbmc
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0BzbrKEZKhQBBYWpHbEZZbng2ZGs
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0BzbrKEZKhQBBeThIR1hsY1ZQc0k
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0BzbrKEZKhQBBY2dEZmFpSlpZcTA
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4z70ztg3cLKTmh5R1FjbmhUUHc
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0BzbrKEZKhQBBcGdnX0ZFSmNnbTQ
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4Fujvv5MfqbR2wzLXhmYWRMUnc
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0BzbrKEZKhQBBTzdQYmhScV9iQkk
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0BzbrKEZKhQBBZzlLYTFZOUtFcGs
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4Fujvv5MfqbZEpFRGE3N01rWmc
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1Fcu596A9fBLH_FqjazRNvph6sCH0_ER5
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4Fujvv5MfqbUnFPejgxa05BanM
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B314tJw3ioySWWNRUlI1YXdyV2s
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0BzbrKEZKhQBBcnFpZDZmY1FUN2M
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4z70ztg3cLKY2ExUlY4eVhZbXc
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1JBr8ak8uLgevfUPXiXaob3raeuJxO5ri
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0BzbrKEZKhQBBTTNQaU1fZEYwVHc
+sql.py:25,20:27:24:start:145:WDteFA -- File: 16_RoxclGNghHaLcs-KUC4R7ke30A7-XlvFubV4fXyAI
+sql.py:25,20:27:24:start:145:WDteFA -- File: 18K3OuWAM4foGW6Bc6xyG5EkXB8bPPyb9gJRmLrqekxw
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1qboc3ylwNG3cSsWTkguNuootVmDBCvIBJZ1FQSmmBQw
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B1WNUX-O8FMUczhXV0hYUGJPYms
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B1WNUX-O8FMUR1I3ZXpOR1kySXc
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4Fujvv5MfqbdF81NHdULUNwMElJTF8xb0p6eUZnbTRjTUdJ
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1sd2IyZnVT_UW3DOFdi9bIzzAtNBok0WFugmnnJvJf38
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1hT75vuG-KNRGyubZPjPsAhNfBP4PDKF441q6cY8qNaA
+sql.py:25,20:27:24:start:145:WDteFA -- File: 10RFTKVIK5QO5OF0g3c6Gxp88sXzUEiCBSBWuDQsINDc
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1Ls7pHaoDUuWO8cn_3mF3FoKmxf2Wvwl3eRdDH7kxKoo
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4Fujvv5MfqbLXBKUEpYMjlUa2c
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4Fujvv5MfqbcThuWDlsamUzRWs
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4Fujvv5MfqbTGNDT3psVktMNnQ3N3NPQTJZVlk5ekVBSlRj
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4Fujvv5MfqbMmlId3NYTGg1T2pwazhoSHZYcXZsOUxtamQ4
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4Fujvv5MfqbZ2JkT01HODJadzQ
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4Fujvv5MfqbS1JPNm1SclVzVXhtVG5lSDlHOHU0WXdEakVZ
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4Fujvv5MfqbSVFwbnNzeWFNcjA
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4Fujvv5MfqbNE1zbGxyMWRfbjFuMDlwd0RhRzdNMVJwSHEw
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4Fujvv5MfqbQ3RjQW1kUkVHRzg
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4Fujvv5MfqbX2RMejlDSkc4bHc
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4Fujvv5MfqbY1Q1TjU0LWxhOGM
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4Fujvv5MfqbUkVUYXBYU0pKdlE
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4Fujvv5Mfqbd1AtVU1TNmJ6b28
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4Fujvv5MfqbNGswWE5uS19Pc00xQ183SjhGdlVRcGRSSVBj
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4Fujvv5MfqbbVdyZ0dIeFRJNWc
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4Fujvv5MfqbX2RMejlDSkc4bHc
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4Fujvv5MfqbbFBMeWczTXVKX3M
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4Fujvv5Mfqbd1AtVU1TNmJ6b28
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0BzbrKEZKhQBBS0N1TENrNjktcHc
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1ui_dB_CbKz5qnLFJfaYdA-XS9iG1hgnMaVEl3u5OJLU
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1NO1CVAUsBSgghggdLH2X4YQ2XNaEkDmr7vK156pSCxk
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1C-4h0tKIk0rSJcy9tJJPXZOtnJsZuYK81U4earWoSDY
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1-rNRjrNOAEV45Ac7EPvNykLDmEiVpRqhv0128_d2ugI
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1C-4h0tKIk0rSJcy9tJJPXZOtnJsZuYK81U4earWoSDY
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 1xa8-X24w6y-atIg6KabP1Txg0zQARutgJ0PlEFthbDw
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:145:WDteFA -- File: 0B4Fujvv5MfqbNGswWE5uS19Pc00xQ183SjhGdlVRcGRSSVBj
+sql.py:25,20:27:24:start:147:WDteFA -- duplicated fileid found, skipping
+sql.py:25,20:27:24:start:165:WDteFA -- len of id map 445 len of files 445
+sql.py:25,20:27:24:start:170:WDteFA -- starting bulk save
+sql.py:25,20:27:24:adder:83:WDteFA -- rem 60/445
+sql.py:25,20:28:40:adder:83:WDteFA -- rem 120/445
+sql.py:25,20:28:40:adder:83:WDteFA -- rem 180/445
+sql.py:25,20:28:40:adder:83:WDteFA -- rem 240/445
+sql.py:25,20:28:40:adder:83:WDteFA -- rem 300/445
+sql.py:25,20:28:40:adder:83:WDteFA -- rem 360/445
+sql.py:25,20:28:40:adder:83:WDteFA -- rem 420/445
+sql.py:25,20:28:40:adder:86:WDteFA -- flushing adder
+sql.py:25,20:28:40:start:172:WDteFA -- bulked save done
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8151
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8152
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8153
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8154
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8155
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8156
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8157
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8158
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8159
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8160
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8161
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8162
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8163
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8164
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8165
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8166
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8167
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8168
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8169
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8170
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8171
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8172
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8173
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8174
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8175
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8176
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8177
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8178
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8179
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8180
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8181
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8182
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8183
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8184
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8185
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8186
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8187
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8188
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8189
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8190
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8191
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8192
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8193
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8194
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8195
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8196
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8197
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8198
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8199
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8200
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8201
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8202
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8203
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8204
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8205
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8206
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8207
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8208
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8209
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8210
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8211
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8212
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8213
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8214
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8215
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8216
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8217
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8218
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8219
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8220
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8221
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8222
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8223
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8224
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8225
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8226
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8227
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8228
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8229
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8230
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8231
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8232
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8233
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8234
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8235
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8236
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8237
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8238
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8239
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8240
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8241
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8242
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8243
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8244
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8245
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8246
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8247
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8248
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8249
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8250
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8251
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8252
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8253
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8254
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8255
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8256
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8257
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8258
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8259
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8260
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8261
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8262
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8263
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8264
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8265
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8266
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8267
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8268
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8269
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8270
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8271
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8272
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8273
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8274
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8275
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8276
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8277
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8278
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8279
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8280
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8281
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8282
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8283
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8284
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8285
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8286
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8287
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8288
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8289
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8290
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8291
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8292
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8293
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8294
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8295
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8296
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8297
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8298
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8299
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8300
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8301
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8302
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8303
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8304
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8305
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8306
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8307
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8308
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8309
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8310
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8311
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8312
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8313
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8314
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8315
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8316
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8317
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8318
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8319
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8320
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8321
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8322
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8323
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8324
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8325
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8326
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8327
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8328
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8329
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8330
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8331
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8332
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8333
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8334
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8335
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8336
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8337
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8338
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8339
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8340
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8341
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8342
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8343
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8344
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8345
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8346
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8347
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8348
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8349
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8350
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8351
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8352
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8353
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8354
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8355
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8356
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8357
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8358
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8359
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8360
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8361
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8362
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8363
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8364
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8365
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8366
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8367
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8368
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8369
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8370
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8371
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8372
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8373
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8374
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8375
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8376
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8377
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8378
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8379
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8380
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8381
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8382
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8383
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8384
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8385
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8386
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8387
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8388
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8389
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8390
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8391
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8392
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8393
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8394
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8395
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8396
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8397
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8398
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8399
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8400
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8401
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8402
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8403
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8404
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8405
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8406
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8407
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8408
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8409
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8410
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8411
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8412
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8413
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8414
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8415
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8416
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8417
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8418
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8419
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8420
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8421
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8422
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8423
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8424
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8425
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8426
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8427
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8428
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8429
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8430
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8431
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8432
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8433
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8434
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8435
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8436
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8437
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8438
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8439
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8440
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8441
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8442
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8443
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8444
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8445
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8446
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8447
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8448
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8449
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8450
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8451
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8452
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8453
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8454
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8455
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8456
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8457
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8458
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8459
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8460
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8461
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8462
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8463
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8464
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8465
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8466
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8467
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8468
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8469
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8470
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8471
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8472
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8473
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8474
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8475
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8476
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8477
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8478
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8479
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8480
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8481
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8482
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8483
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8484
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8485
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8486
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8487
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8488
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8489
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8490
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8491
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8492
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8493
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8494
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8495
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8496
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8497
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8498
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8499
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8500
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8501
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8502
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8503
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8504
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8505
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8506
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8507
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8508
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8509
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8510
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8511
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8512
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8513
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8514
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8515
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8516
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8517
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8518
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8519
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8520
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8521
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8522
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8523
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8524
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8525
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8526
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8527
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8528
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8529
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8530
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8531
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8532
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8533
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8534
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8535
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8536
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8537
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8538
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8539
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8540
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8541
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8542
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8543
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8544
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8545
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8546
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8547
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8548
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8549
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8550
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8551
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8552
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8553
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8554
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8555
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8556
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8557
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8558
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8559
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8560
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8561
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8562
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8563
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8564
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8565
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8566
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8567
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8568
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8569
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8570
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8571
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8572
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8573
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8574
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8575
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8576
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8577
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8578
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8579
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8580
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8581
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8582
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8583
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8584
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8585
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8586
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8587
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8588
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8589
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8590
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8591
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8592
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8593
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8594
+sql.py:25,20:28:41:start:177:WDteFA -- File added, id: 8595
+sql.py:25,20:28:41:start:179:WDteFA -- sess flush done
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8151, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8152, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8153, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8154, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8155, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8156, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8157, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8158, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8159, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8160, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8161, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8162, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8163, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8164, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8165, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8166, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8167, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8168, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8169, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8170, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8171, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8172, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8173, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8174, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8175, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8176, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8177, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8178, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8179, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8180, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8181, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8182, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8183, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8184, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8185, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8186, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8187, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8188, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8157, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8189, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8190, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8191, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8192, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8193, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8194, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8195, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8196, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8197, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8198, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8199, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8200, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8201, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8202, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8203, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8204, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8205, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8206, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8207, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8208, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8209, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8210, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8211, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8212, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8213, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8214, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8215, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8216, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8217, dates to be added 2
+sql.py:25,20:28:41:start:188:WDteFA -- adding dates for file: 8218, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8219, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8220, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8221, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8222, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8223, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8224, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8225, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8226, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8227, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8228, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8229, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8230, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8231, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8232, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8233, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8234, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8235, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8236, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8237, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8238, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8239, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8240, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8241, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8162, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8160, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8159, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8242, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8170, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8177, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8178, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8182, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8179, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8184, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8215, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8218, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8217, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8219, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8220, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8221, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8225, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8222, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8223, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8224, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8226, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8228, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8229, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8230, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8231, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8233, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8232, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8234, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8235, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8236, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8238, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8237, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8239, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8240, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8185, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8241, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8243, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8244, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8245, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8246, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8247, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8248, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8249, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8250, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8251, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8252, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8253, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8254, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8255, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8256, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8257, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8258, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8259, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8260, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8261, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8262, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8263, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8264, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8265, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8266, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8267, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8268, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8269, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8270, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8271, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8272, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8273, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8274, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8164, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8275, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8276, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8277, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8278, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8279, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8280, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8281, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8282, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8283, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8284, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8285, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8286, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8287, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8288, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8289, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8290, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8291, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8292, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8293, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8294, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8295, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8296, dates to be added 2
+sql.py:25,20:28:42:start:188:WDteFA -- adding dates for file: 8297, dates to be added 2
+sql.py:25,20:28:43:start:188:WDteFA -- adding dates for file: 8298, dates to be added 2
+sql.py:25,20:28:43:start:188:WDteFA -- adding dates for file: 8299, dates to be added 2
+sql.py:25,20:28:43:start:188:WDteFA -- adding dates for file: 8300, dates to be added 2
+sql.py:25,20:28:43:start:188:WDteFA -- adding dates for file: 8301, dates to be added 2
+sql.py:25,20:28:43:start:188:WDteFA -- adding dates for file: 8302, dates to be added 2
+sql.py:25,20:28:43:start:188:WDteFA -- adding dates for file: 8303, dates to be added 2
+sql.py:25,20:28:43:start:188:WDteFA -- adding dates for file: 8304, dates to be added 2
+sql.py:25,20:28:43:start:188:WDteFA -- adding dates for file: 8305, dates to be added 2
+sql.py:25,20:28:43:start:188:WDteFA -- adding dates for file: 8306, dates to be added 2
+sql.py:25,20:28:43:start:188:WDteFA -- adding dates for file: 8307, dates to be added 2
+sql.py:25,20:28:43:start:188:WDteFA -- adding dates for file: 8308, dates to be added 2
+sql.py:25,20:28:43:start:188:WDteFA -- adding dates for file: 8309, dates to be added 2
+sql.py:25,20:28:43:start:188:WDteFA -- adding dates for file: 8310, dates to be added 2
+sql.py:25,20:28:43:start:188:WDteFA -- adding dates for file: 8311, dates to be added 2
+sql.py:25,20:28:43:start:188:WDteFA -- adding dates for file: 8312, dates to be added 2
+sql.py:25,20:28:43:start:188:WDteFA -- adding dates for file: 8313, dates to be added 2
+sql.py:25,20:28:43:start:188:WDteFA -- adding dates for file: 8314, dates to be added 2
+sql.py:25,20:28:43:start:188:WDteFA -- adding dates for file: 8315, dates to be added 2
+sql.py:25,20:28:43:start:188:WDteFA -- adding dates for file: 8316, dates to be added 2
+sql.py:25,20:28:43:start:188:WDteFA -- adding dates for file: 8317, dates to be added 2
+sql.py:25,20:28:44:start:188:WDteFA -- adding dates for file: 8318, dates to be added 2
+sql.py:25,20:28:44:start:188:WDteFA -- adding dates for file: 8319, dates to be added 2
+sql.py:25,20:28:44:start:188:WDteFA -- adding dates for file: 8320, dates to be added 2
+sql.py:25,20:28:44:start:188:WDteFA -- adding dates for file: 8321, dates to be added 2
+sql.py:25,20:28:44:start:188:WDteFA -- adding dates for file: 8322, dates to be added 2
+sql.py:25,20:28:44:start:188:WDteFA -- adding dates for file: 8323, dates to be added 2
+sql.py:25,20:28:44:start:188:WDteFA -- adding dates for file: 8324, dates to be added 2
+sql.py:25,20:28:44:start:188:WDteFA -- adding dates for file: 8325, dates to be added 2
+sql.py:25,20:28:44:start:188:WDteFA -- adding dates for file: 8326, dates to be added 2
+sql.py:25,20:28:44:start:188:WDteFA -- adding dates for file: 8327, dates to be added 2
+sql.py:25,20:28:44:start:188:WDteFA -- adding dates for file: 8328, dates to be added 2
+sql.py:25,20:28:44:start:188:WDteFA -- adding dates for file: 8329, dates to be added 2
+sql.py:25,20:28:44:start:188:WDteFA -- adding dates for file: 8330, dates to be added 2
+sql.py:25,20:28:44:start:188:WDteFA -- adding dates for file: 8331, dates to be added 2
+sql.py:25,20:28:44:start:188:WDteFA -- adding dates for file: 8332, dates to be added 2
+sql.py:25,20:28:44:start:188:WDteFA -- adding dates for file: 8333, dates to be added 2
+sql.py:25,20:28:44:start:188:WDteFA -- adding dates for file: 8334, dates to be added 2
+sql.py:25,20:28:44:start:188:WDteFA -- adding dates for file: 8335, dates to be added 2
+sql.py:25,20:28:44:start:188:WDteFA -- adding dates for file: 8336, dates to be added 2
+sql.py:25,20:28:44:start:188:WDteFA -- adding dates for file: 8337, dates to be added 2
+sql.py:25,20:28:44:start:188:WDteFA -- adding dates for file: 8338, dates to be added 2
+sql.py:25,20:28:44:start:188:WDteFA -- adding dates for file: 8339, dates to be added 2
+sql.py:25,20:28:44:start:188:WDteFA -- adding dates for file: 8340, dates to be added 2
+sql.py:25,20:28:44:start:188:WDteFA -- adding dates for file: 8341, dates to be added 2
+sql.py:25,20:28:44:start:188:WDteFA -- adding dates for file: 8342, dates to be added 2
+sql.py:25,20:28:44:start:188:WDteFA -- adding dates for file: 8343, dates to be added 2
+sql.py:25,20:28:44:start:188:WDteFA -- adding dates for file: 8344, dates to be added 2
+sql.py:25,20:28:44:start:188:WDteFA -- adding dates for file: 8345, dates to be added 2
+sql.py:25,20:28:44:start:188:WDteFA -- adding dates for file: 8346, dates to be added 2
+sql.py:25,20:28:44:start:188:WDteFA -- adding dates for file: 8347, dates to be added 2
+sql.py:25,20:28:44:start:188:WDteFA -- adding dates for file: 8348, dates to be added 2
+sql.py:25,20:28:44:start:188:WDteFA -- adding dates for file: 8349, dates to be added 2
+sql.py:25,20:28:44:start:188:WDteFA -- adding dates for file: 8350, dates to be added 2
+sql.py:25,20:28:44:start:188:WDteFA -- adding dates for file: 8351, dates to be added 2
+sql.py:25,20:28:44:start:188:WDteFA -- adding dates for file: 8352, dates to be added 2
+sql.py:25,20:28:44:start:188:WDteFA -- adding dates for file: 8353, dates to be added 2
+sql.py:25,20:28:44:start:188:WDteFA -- adding dates for file: 8354, dates to be added 2
+sql.py:25,20:28:44:start:188:WDteFA -- adding dates for file: 8355, dates to be added 2
+sql.py:25,20:28:44:start:188:WDteFA -- adding dates for file: 8356, dates to be added 2
+sql.py:25,20:28:44:start:188:WDteFA -- adding dates for file: 8357, dates to be added 2
+sql.py:25,20:28:44:start:188:WDteFA -- adding dates for file: 8358, dates to be added 2
+sql.py:25,20:28:44:start:188:WDteFA -- adding dates for file: 8359, dates to be added 2
+sql.py:25,20:28:44:start:188:WDteFA -- adding dates for file: 8360, dates to be added 2
+sql.py:25,20:28:44:start:188:WDteFA -- adding dates for file: 8361, dates to be added 2
+sql.py:25,20:28:44:start:188:WDteFA -- adding dates for file: 8362, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8363, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8364, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8365, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8366, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8367, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8368, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8369, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8370, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8371, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8372, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8373, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8374, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8248, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8247, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8251, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8256, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8254, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8255, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8257, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8250, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8258, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8260, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8249, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8259, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8261, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8262, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8263, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8264, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8267, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8269, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8268, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8270, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8272, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8271, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8273, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8276, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8277, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8278, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8275, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8299, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8280, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8274, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8279, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8281, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8282, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8304, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8283, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8284, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8285, dates to be added 2
+sql.py:25,20:28:45:start:188:WDteFA -- adding dates for file: 8297, dates to be added 2
+sql.py:25,20:28:46:start:188:WDteFA -- adding dates for file: 8308, dates to be added 2
+sql.py:25,20:28:46:start:188:WDteFA -- adding dates for file: 8287, dates to be added 2
+sql.py:25,20:28:46:start:188:WDteFA -- adding dates for file: 8286, dates to be added 2
+sql.py:25,20:28:46:start:188:WDteFA -- adding dates for file: 8288, dates to be added 2
+sql.py:25,20:28:46:start:188:WDteFA -- adding dates for file: 8293, dates to be added 2
+sql.py:25,20:28:46:start:188:WDteFA -- adding dates for file: 8289, dates to be added 2
+sql.py:25,20:28:46:start:188:WDteFA -- adding dates for file: 8290, dates to be added 2
+sql.py:25,20:28:46:start:188:WDteFA -- adding dates for file: 8292, dates to be added 2
+sql.py:25,20:28:46:start:188:WDteFA -- adding dates for file: 8291, dates to be added 2
+sql.py:25,20:28:46:start:188:WDteFA -- adding dates for file: 8295, dates to be added 2
+sql.py:25,20:28:46:start:188:WDteFA -- adding dates for file: 8294, dates to be added 2
+sql.py:25,20:28:46:start:188:WDteFA -- adding dates for file: 8296, dates to be added 2
+sql.py:25,20:28:46:start:188:WDteFA -- adding dates for file: 8301, dates to be added 2
+sql.py:25,20:28:46:start:188:WDteFA -- adding dates for file: 8298, dates to be added 2
+sql.py:25,20:28:46:start:188:WDteFA -- adding dates for file: 8300, dates to be added 2
+sql.py:25,20:28:46:start:188:WDteFA -- adding dates for file: 8302, dates to be added 2
+sql.py:25,20:28:46:start:188:WDteFA -- adding dates for file: 8303, dates to be added 2
+sql.py:25,20:28:46:start:188:WDteFA -- adding dates for file: 8306, dates to be added 2
+sql.py:25,20:28:46:start:188:WDteFA -- adding dates for file: 8305, dates to be added 2
+sql.py:25,20:28:46:start:188:WDteFA -- adding dates for file: 8307, dates to be added 2
+sql.py:25,20:28:46:start:188:WDteFA -- adding dates for file: 8310, dates to be added 2
+sql.py:25,20:28:46:start:188:WDteFA -- adding dates for file: 8309, dates to be added 2
+sql.py:25,20:28:46:start:188:WDteFA -- adding dates for file: 8328, dates to be added 2
+sql.py:25,20:28:46:start:188:WDteFA -- adding dates for file: 8311, dates to be added 2
+sql.py:25,20:28:46:start:188:WDteFA -- adding dates for file: 8375, dates to be added 2
+sql.py:25,20:28:46:start:188:WDteFA -- adding dates for file: 8376, dates to be added 2
+sql.py:25,20:28:46:start:188:WDteFA -- adding dates for file: 8329, dates to be added 2
+sql.py:25,20:28:46:start:188:WDteFA -- adding dates for file: 8312, dates to be added 2
+sql.py:25,20:28:46:start:188:WDteFA -- adding dates for file: 8331, dates to be added 2
+sql.py:25,20:28:46:start:188:WDteFA -- adding dates for file: 8313, dates to be added 2
+sql.py:25,20:28:46:start:188:WDteFA -- adding dates for file: 8336, dates to be added 2
+sql.py:25,20:28:46:start:188:WDteFA -- adding dates for file: 8316, dates to be added 2
+sql.py:25,20:28:46:start:188:WDteFA -- adding dates for file: 8315, dates to be added 2
+sql.py:25,20:28:46:start:188:WDteFA -- adding dates for file: 8314, dates to be added 2
+sql.py:25,20:28:46:start:188:WDteFA -- adding dates for file: 8335, dates to be added 2
+sql.py:25,20:28:46:start:188:WDteFA -- adding dates for file: 8318, dates to be added 2
+sql.py:25,20:28:46:start:188:WDteFA -- adding dates for file: 8317, dates to be added 2
+sql.py:25,20:28:46:start:188:WDteFA -- adding dates for file: 8322, dates to be added 2
+sql.py:25,20:28:46:start:188:WDteFA -- adding dates for file: 8321, dates to be added 2
+sql.py:25,20:28:46:start:188:WDteFA -- adding dates for file: 8319, dates to be added 2
+sql.py:25,20:28:46:start:188:WDteFA -- adding dates for file: 8320, dates to be added 2
+sql.py:25,20:28:46:start:188:WDteFA -- adding dates for file: 8326, dates to be added 2
+sql.py:25,20:28:46:start:188:WDteFA -- adding dates for file: 8377, dates to be added 2
+sql.py:25,20:28:46:start:188:WDteFA -- adding dates for file: 8325, dates to be added 2
+sql.py:25,20:28:46:start:188:WDteFA -- adding dates for file: 8323, dates to be added 2
+sql.py:25,20:28:47:start:188:WDteFA -- adding dates for file: 8324, dates to be added 2
+sql.py:25,20:28:47:start:188:WDteFA -- adding dates for file: 8330, dates to be added 2
+sql.py:25,20:28:47:start:188:WDteFA -- adding dates for file: 8327, dates to be added 2
+sql.py:25,20:28:47:start:188:WDteFA -- adding dates for file: 8337, dates to be added 2
+sql.py:25,20:28:47:start:188:WDteFA -- adding dates for file: 8333, dates to be added 2
+sql.py:25,20:28:47:start:188:WDteFA -- adding dates for file: 8332, dates to be added 2
+sql.py:25,20:28:47:start:188:WDteFA -- adding dates for file: 8334, dates to be added 2
+sql.py:25,20:28:47:start:188:WDteFA -- adding dates for file: 8338, dates to be added 2
+sql.py:25,20:28:47:start:188:WDteFA -- adding dates for file: 8339, dates to be added 2
+sql.py:25,20:28:47:start:188:WDteFA -- adding dates for file: 8340, dates to be added 2
+sql.py:25,20:28:47:start:188:WDteFA -- adding dates for file: 8341, dates to be added 2
+sql.py:25,20:28:47:start:188:WDteFA -- adding dates for file: 8342, dates to be added 2
+sql.py:25,20:28:47:start:188:WDteFA -- adding dates for file: 8343, dates to be added 2
+sql.py:25,20:28:47:start:188:WDteFA -- adding dates for file: 8344, dates to be added 2
+sql.py:25,20:28:47:start:188:WDteFA -- adding dates for file: 8345, dates to be added 2
+sql.py:25,20:28:47:start:188:WDteFA -- adding dates for file: 8346, dates to be added 2
+sql.py:25,20:28:47:start:188:WDteFA -- adding dates for file: 8347, dates to be added 2
+sql.py:25,20:28:47:start:188:WDteFA -- adding dates for file: 8348, dates to be added 2
+sql.py:25,20:28:47:start:188:WDteFA -- adding dates for file: 8349, dates to be added 2
+sql.py:25,20:28:47:start:188:WDteFA -- adding dates for file: 8350, dates to be added 2
+sql.py:25,20:28:47:start:188:WDteFA -- adding dates for file: 8351, dates to be added 2
+sql.py:25,20:28:47:start:188:WDteFA -- adding dates for file: 8352, dates to be added 2
+sql.py:25,20:28:47:start:188:WDteFA -- adding dates for file: 8353, dates to be added 2
+sql.py:25,20:28:47:start:188:WDteFA -- adding dates for file: 8354, dates to be added 2
+sql.py:25,20:28:47:start:188:WDteFA -- adding dates for file: 8355, dates to be added 2
+sql.py:25,20:28:47:start:188:WDteFA -- adding dates for file: 8356, dates to be added 2
+sql.py:25,20:28:47:start:188:WDteFA -- adding dates for file: 8358, dates to be added 2
+sql.py:25,20:28:47:start:188:WDteFA -- adding dates for file: 8357, dates to be added 2
+sql.py:25,20:28:47:start:188:WDteFA -- adding dates for file: 8360, dates to be added 2
+sql.py:25,20:28:47:start:188:WDteFA -- adding dates for file: 8359, dates to be added 2
+sql.py:25,20:28:47:start:188:WDteFA -- adding dates for file: 8361, dates to be added 2
+sql.py:25,20:28:47:start:188:WDteFA -- adding dates for file: 8364, dates to be added 2
+sql.py:25,20:28:47:start:188:WDteFA -- adding dates for file: 8363, dates to be added 2
+sql.py:25,20:28:47:start:188:WDteFA -- adding dates for file: 8362, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8378, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8379, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8380, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8365, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8381, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8382, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8383, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8367, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8366, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8384, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8385, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8386, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8387, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8388, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8389, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8390, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8391, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8392, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8393, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8394, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8395, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8396, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8397, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8368, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8398, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8399, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8369, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8371, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8400, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8370, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8401, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8402, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8403, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8404, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8373, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8405, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8374, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8406, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8407, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8408, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8409, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8410, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8411, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8412, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8413, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8414, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8415, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8416, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8417, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8418, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8419, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8420, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8372, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8421, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8422, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8423, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8424, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8425, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8426, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8427, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8428, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8429, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8430, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8431, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8432, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8433, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8434, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8435, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8436, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8437, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8438, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8439, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8440, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8441, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8442, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8443, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8444, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8445, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8446, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8436, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8447, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8448, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8424, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8425, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8427, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8437, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8429, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8449, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8441, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8433, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8440, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8428, dates to be added 2
+sql.py:25,20:28:48:start:188:WDteFA -- adding dates for file: 8431, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8426, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8450, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8451, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8432, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8430, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8452, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8438, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8434, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8435, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8453, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8439, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8442, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8443, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8446, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8444, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8445, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8447, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8449, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8448, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8454, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8455, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8456, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8457, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8458, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8459, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8460, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8461, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8462, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8463, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8464, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8465, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8466, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8467, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8468, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8469, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8470, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8471, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8472, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8473, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8474, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8475, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8476, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8477, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8478, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8479, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8480, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8460, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8481, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8482, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8483, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8458, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8484, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8485, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8464, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8486, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8487, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8462, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8488, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8489, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8490, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8467, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8457, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8459, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8468, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8463, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8465, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8466, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8471, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8469, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8461, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8474, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8473, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8470, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8490, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8480, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8476, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8475, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8484, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8481, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8479, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8491, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8485, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8478, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8477, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8489, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8488, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8486, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8483, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8482, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8487, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8492, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8493, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8472, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8494, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8495, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8496, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8497, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8498, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8499, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8500, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8501, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8502, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8503, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8504, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8505, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8506, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8507, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8508, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8509, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8510, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8511, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8512, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8513, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8514, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8515, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8516, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8517, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8491, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8518, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8519, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8520, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8521, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8522, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8523, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8524, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8525, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8526, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8527, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8528, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8515, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8494, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8496, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8529, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8517, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8530, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8531, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8500, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8499, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8501, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8521, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8532, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8502, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8523, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8533, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8493, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8498, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8504, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8525, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8492, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8495, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8497, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8505, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8503, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8507, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8506, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8508, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8510, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8511, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8526, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8534, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8535, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8536, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8537, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8538, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8539, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8540, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8541, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8542, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8543, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8544, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8545, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8546, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8547, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8548, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8549, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8531, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8550, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8551, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8552, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8553, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8509, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8512, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8513, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8518, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8520, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8514, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8519, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8524, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8527, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8533, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8554, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8528, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8555, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8556, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8557, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8558, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8559, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8560, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8561, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8562, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8563, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8564, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8565, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8566, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8567, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8568, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8569, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8570, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8571, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8572, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8573, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8574, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8575, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8576, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8577, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8532, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8578, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8579, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8580, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8554, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8581, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8582, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8583, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8536, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8535, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8537, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8584, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8585, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8586, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8587, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8539, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8588, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8542, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8589, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8590, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8543, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8591, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8592, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8544, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8589, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8541, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8591, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8593, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8551, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8594, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8595, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8552, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8595, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8549, dates to be added 2
+sql.py:25,20:28:49:start:188:WDteFA -- adding dates for file: 8592, dates to be added 2
+sql.py:25,20:28:49:start:198:WDteFA -- len dates: 4851272
+sql.py:25,20:28:49:commit:45:WDteFA -- iters: 4851, len: 4851272
+sql.py:25,20:28:49:commit:54:WDteFA -- flushing, len: 4846421
+configlo:25,20:29:53:handle_exception:82:WDteFA -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/encodings/utf_16_le.py", line 15, in decode
+    def decode(input, errors='strict'):
+KeyboardInterrupt
+
+The above exception was the direct cause of the following exception:
+
+KeyboardInterrupt: decoding with 'utf-16le' codec failed (KeyboardInterrupt: )
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2916, in _bulk_save_mappings
+    persistence._bulk_insert(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 95, in _bulk_insert
+    _emit_insert_statements(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 1083, in _emit_insert_statements
+    c = cached_connections[connection].execute(statement, multiparams)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 984, in execute
+    return meth(self, multiparams, params)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 293, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1097, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1287, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1485, in _handle_dbapi_exception
+    util.raise_(exc_info[1], with_traceback=exc_info[2])
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1227, in _execute_context
+    self.dialect.do_executemany(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/dialects/mssql/pyodbc.py", line 412, in do_executemany
+    super(MSDialect_pyodbc, self).do_executemany(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 587, in do_executemany
+    cursor.executemany(statement, parameters)
+SystemError: <class 'pyodbc.Error'> returned a result with an error set
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 733, in _rollback_impl
+    self.engine.dialect.do_rollback(self.connection)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 540, in do_rollback
+    dbapi_connection.rollback()
+pyodbc.OperationalError: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLEndTran)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 193, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/henry/pydocs/processing/sql.py", line 267, in <module>
+    start("testing" + datetime.now().__str__(), wpath)
+  File "/home/henry/pydocs/processing/sql.py", line 202, in start
+    commit(lt_dates,  Dates)
+  File "/home/henry/pydocs/processing/sql.py", line 58, in commit
+    sess.bulk_insert_mappings(_type, _temp)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2831, in bulk_insert_mappings
+    self._bulk_save_mappings(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2928, in _bulk_save_mappings
+    transaction.rollback(_capture_exception=True)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 81, in __exit__
+    compat.raise_(value, with_traceback=traceback)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2928, in _bulk_save_mappings
+    transaction.rollback(_capture_exception=True)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 573, in rollback
+    util.raise_(rollback_err[1], with_traceback=rollback_err[2])
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 533, in rollback
+    t[1].rollback()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1725, in rollback
+    self._do_rollback()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1763, in _do_rollback
+    self.connection._rollback_impl()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 735, in _rollback_impl
+    self._handle_dbapi_exception(e, None, None, None, None)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1481, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 733, in _rollback_impl
+    self.engine.dialect.do_rollback(self.connection)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 540, in do_rollback
+    dbapi_connection.rollback()
+sqlalchemy.exc.OperationalError: (pyodbc.OperationalError) ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLEndTran)')
+(Background on this error at: http://sqlalche.me/e/e3q8)
+configlo:25,20:29:53:mp_sendmail:115:WDteFA -- sending mail
+configlo:25,20:29:54:handle_exception:86:WDteFA -- exiting! from sshook

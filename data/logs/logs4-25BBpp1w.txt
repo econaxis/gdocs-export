@@ -1,0 +1,200 @@
+sql.py:25,13:33:43:<module>:24:BBpp1w -- Driver%3D%7BODBC+Driver+17+for+SQL+Server%7D%3BServer%3Dtcp%3Apydoc-db.database.windows.net%2C1433%3BDatabase%3Dpydoc-db%3BUid%3Dhenry2833%3BPwd%3D%7BInfoip32%7D%3BEncrypt%3Dyes%3BTrustServerCertificate%3Dno%3BConnection+Timeout%3D30%3B
+dsds.py:25,13:33:46:start:18:BBpp1w -- start
+get_file:25,13:33:46:loadFiles:267:BBpp1w -- Start loadFiles, 527e4afc-4598-400f-8536-afa5324f0ba4 1ytJocI9f4gvmpnwLNNfpQzRPhcFs5EzR
+requests:25,13:33:46:__call__:117:BBpp1w -- Making request: POST https://oauth2.googleapis.com/token
+connecti:25,13:33:46:_new_conn:817:BBpp1w -- Starting new HTTPS connection (1): oauth2.googleapis.com
+connecti:25,13:33:47:_make_request:393:BBpp1w -- https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+selector:25,13:33:47:__init__:59:BBpp1w -- Using selector: EpollSelector
+test_uti:25,13:33:47:print_size:82:BBpp1w -- ---------------Memory usage: 100064 (kb)---------------0 mins since start
+test_uti:25,13:33:47:print_size:100:BBpp1w -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/0 at 2020-04-25 13:33:47.071624
+dumped: 0
+get_file:25,13:33:47:getIdsRecursive:53:BBpp1w -- getIdsRecursive looping
+get_file:25,13:33:47:getIdsRecursive:53:BBpp1w -- getIdsRecursive looping
+get_file:25,13:33:47:getRevision:164:BBpp1w -- getRevision looping
+test_uti:25,13:33:47:tryGetQueue:229:BBpp1w -- getRevisionwaiting 1 1
+test_uti:25,13:33:47:tryGetQueue:229:BBpp1w -- getIdswaiting 1 1
+get_file:25,13:33:47:getIdsRecursive:53:BBpp1w -- getIdsRecursive looping
+test_uti:25,13:33:47:tryGetQueue:229:BBpp1w -- getIdswaiting 1 1
+get_file:25,13:33:47:getIdsRecursive:53:BBpp1w -- getIdsRecursive looping
+test_uti:25,13:33:47:tryGetQueue:229:BBpp1w -- getIdswaiting 1 1
+test_uti:25,13:33:48:print_size:82:BBpp1w -- ---------------Memory usage: 100264 (kb)---------------0 mins since start
+test_uti:25,13:33:48:print_size:100:BBpp1w -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/3 at 2020-04-25 13:33:48.098849
+dumped: 0
+test_uti:25,13:33:49:print_size:82:BBpp1w -- ---------------Memory usage: 100264 (kb)---------------0 mins since start
+test_uti:25,13:33:49:print_size:100:BBpp1w -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/3 at 2020-04-25 13:33:49.127538
+dumped: 0
+test_uti:25,13:33:50:print_size:82:BBpp1w -- ---------------Memory usage: 100264 (kb)---------------0 mins since start
+test_uti:25,13:33:50:print_size:100:BBpp1w -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/3 at 2020-04-25 13:33:50.157129
+dumped: 0
+test_uti:25,13:33:51:print_size:82:BBpp1w -- ---------------Memory usage: 100264 (kb)---------------0 mins since start
+test_uti:25,13:33:51:print_size:100:BBpp1w -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/3 at 2020-04-25 13:33:51.185329
+dumped: 0
+gdoc.py:25,13:33:51:async_init:24:BBpp1w -- async init called
+get_file:25,13:33:51:getIdsRecursive:66:BBpp1w -- getId task exiting
+test_uti:25,13:33:52:print_size:82:BBpp1w -- ---------------Memory usage: 100264 (kb)---------------0 mins since start
+test_uti:25,13:33:52:print_size:100:BBpp1w -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/2 at 2020-04-25 13:33:52.215546
+dumped: 0
+gdoc.py:25,13:33:52:get_last_revision:54:BBpp1w -- last revision id 546
+gdoc.py:25,13:33:52:async_init:31:BBpp1w -- after await 546
+get_file:25,13:33:52:getRevision:188:BBpp1w -- google doc
+get_file:25,13:33:52:getRevision:164:BBpp1w -- getRevision looping
+gdoc.py:25,13:33:52:async_init:24:BBpp1w -- async init called
+gdoc.py:25,13:33:52:get_last_revision:54:BBpp1w -- last revision id 2502
+gdoc.py:25,13:33:52:async_init:31:BBpp1w -- after await 2502
+get_file:25,13:33:53:getRevision:164:BBpp1w -- getRevision looping
+gdoc.py:25,13:33:53:async_init:24:BBpp1w -- async init called
+get_file:25,13:33:53:getRevision:188:BBpp1w -- google doc
+get_file:25,13:33:53:getRevision:164:BBpp1w -- getRevision looping
+test_uti:25,13:33:53:tryGetQueue:229:BBpp1w -- getRevisionwaiting 1 1
+test_uti:25,13:33:53:print_size:82:BBpp1w -- ---------------Memory usage: 107068 (kb)---------------0 mins since start
+test_uti:25,13:33:53:print_size:100:BBpp1w -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+2/2 at 2020-04-25 13:33:53.244487
+dumped: 0
+gdoc.py:25,13:33:53:get_last_revision:54:BBpp1w -- last revision id 647
+gdoc.py:25,13:33:53:async_init:31:BBpp1w -- after await 647
+get_file:25,13:33:53:getRevision:188:BBpp1w -- google doc
+get_file:25,13:33:53:getRevision:164:BBpp1w -- getRevision looping
+test_uti:25,13:33:53:tryGetQueue:229:BBpp1w -- getRevisionwaiting 1 1
+test_uti:25,13:33:54:print_size:82:BBpp1w -- ---------------Memory usage: 107068 (kb)---------------0 mins since start
+test_uti:25,13:33:54:print_size:100:BBpp1w -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 13:33:54.272875
+dumped: 0
+test_uti:25,13:33:55:print_size:82:BBpp1w -- ---------------Memory usage: 107068 (kb)---------------0 mins since start
+test_uti:25,13:33:55:print_size:100:BBpp1w -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 13:33:55.302123
+dumped: 0
+get_file:25,13:33:55:getRevision:164:BBpp1w -- getRevision looping
+test_uti:25,13:33:56:print_size:82:BBpp1w -- ---------------Memory usage: 107068 (kb)---------------0 mins since start
+test_uti:25,13:33:56:print_size:100:BBpp1w -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 13:33:56.336981
+dumped: 0
+test_uti:25,13:33:57:print_size:82:BBpp1w -- ---------------Memory usage: 107068 (kb)---------------0 mins since start
+test_uti:25,13:33:57:print_size:100:BBpp1w -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 13:33:57.367336
+dumped: 0
+get_file:25,13:33:57:getRevision:169:BBpp1w -- getRevision task exiting
+get_file:25,13:33:57:getRevision:194:BBpp1w -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,13:33:58:getIdsRecursive:66:BBpp1w -- getId task exiting
+test_uti:25,13:33:58:print_size:82:BBpp1w -- ---------------Memory usage: 107068 (kb)---------------0 mins since start
+test_uti:25,13:33:58:print_size:100:BBpp1w -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 13:33:58.395705
+dumped: 0
+test_uti:25,13:33:59:tryGetQueue:229:BBpp1w -- getRevisionwaiting 1 1
+get_file:25,13:33:59:getRevision:164:BBpp1w -- getRevision looping
+test_uti:25,13:33:59:tryGetQueue:229:BBpp1w -- getRevisionwaiting 1 1
+get_file:25,13:33:59:getRevision:164:BBpp1w -- getRevision looping
+test_uti:25,13:33:59:tryGetQueue:229:BBpp1w -- getRevisionwaiting 1 1
+test_uti:25,13:33:59:print_size:82:BBpp1w -- ---------------Memory usage: 107068 (kb)---------------0 mins since start
+test_uti:25,13:33:59:print_size:100:BBpp1w -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 13:33:59.425369
+dumped: 0
+test_uti:25,13:34:00:print_size:82:BBpp1w -- ---------------Memory usage: 107068 (kb)---------------0 mins since start
+test_uti:25,13:34:00:print_size:100:BBpp1w -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 13:34:00.453215
+dumped: 0
+get_file:25,13:34:00:getRevision:197:BBpp1w -- Close event has been set. Expect print task to finish soon
+get_file:25,13:34:02:getRevision:194:BBpp1w -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,13:34:02:getIdsRecursive:66:BBpp1w -- getId task exiting
+get_file:25,13:34:04:getRevision:194:BBpp1w -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,13:34:04:getRevision:194:BBpp1w -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,13:34:05:getRevision:197:BBpp1w -- Close event has been set. Expect print task to finish soon
+get_file:25,13:34:07:getRevision:194:BBpp1w -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,13:34:07:getRevision:197:BBpp1w -- Close event has been set. Expect print task to finish soon
+get_file:25,13:34:07:getRevision:197:BBpp1w -- Close event has been set. Expect print task to finish soon
+get_file:25,13:34:07:getRevision:169:BBpp1w -- getRevision task exiting
+get_file:25,13:34:07:getRevision:194:BBpp1w -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,13:34:10:getRevision:197:BBpp1w -- Close event has been set. Expect print task to finish soon
+get_file:25,13:34:10:getRevision:197:BBpp1w -- Close event has been set. Expect print task to finish soon
+get_file:25,13:34:12:getRevision:169:BBpp1w -- getRevision task exiting
+get_file:25,13:34:12:getRevision:194:BBpp1w -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,13:34:13:getRevision:194:BBpp1w -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,13:34:15:getRevision:197:BBpp1w -- Close event has been set. Expect print task to finish soon
+get_file:25,13:34:15:getRevision:169:BBpp1w -- getRevision task exiting
+get_file:25,13:34:15:getRevision:194:BBpp1w -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,13:34:16:getRevision:197:BBpp1w -- Close event has been set. Expect print task to finish soon
+get_file:25,13:34:17:getRevision:169:BBpp1w -- getRevision task exiting
+get_file:25,13:34:17:getRevision:194:BBpp1w -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,13:34:18:getRevision:197:BBpp1w -- Close event has been set. Expect print task to finish soon
+get_file:25,13:34:20:getRevision:197:BBpp1w -- Close event has been set. Expect print task to finish soon
+get_file:25,13:34:20:start:232:BBpp1w -- await gather revisions done
+get_file:25,13:34:20:start:239:BBpp1w -- cancelled throttler
+get_file:25,13:34:20:loadFiles:294:BBpp1w -- loop done
+test_uti:25,13:34:20:dump_files:137:BBpp1w -- histed files at /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/1.pathed, length 3
+get_file:25,13:34:20:loadFiles:311:BBpp1w -- dumped pickle files
+sql.py:25,13:34:20:start:97:BBpp1w -- STARTING SQL 527e4afc-4598-400f-8536-afa5324f0ba4 /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+sql.py:25,13:34:20:start:99:BBpp1w -- setting sys except hook
+sql.py:25,13:34:20:start:109:BBpp1w -- Owner name: 527e4afc-4598-404 25 AprtZI9CuAXEA
+sql.py:25,13:34:21:start:113:BBpp1w -- Added owner row, name: 527e4afc-4598-404 25 AprtZI9CuAXEA id: 1
+sql.py:25,13:34:21:start:126:BBpp1w -- Finished loading pickles
+sql.py:25,13:34:21:start:142:BBpp1w -- File: 1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s
+sql.py:25,13:34:21:start:142:BBpp1w -- File: 1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08
+sql.py:25,13:34:21:start:142:BBpp1w -- File: 1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4
+sql.py:25,13:34:21:start:159:BBpp1w -- len of id map 3 len of files 3
+sql.py:25,13:34:21:start:164:BBpp1w -- starting bulk save
+sql.py:25,13:34:21:adder:86:BBpp1w -- flushing adder
+configlo:25,13:34:21:handle_exception:81:BBpp1w -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1247, in _execute_context
+    self.dialect.do_execute(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+pyodbc.ProgrammingError: ("A TVP's rows must be Sequence objects.", 'HY000')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "dsds.py", line 37, in <module>
+    start()
+  File "dsds.py", line 34, in start
+    loadFiles(uid, workingPath, fileid, creds)
+  File "/home/henry/pydocs/processing/get_files.py", line 317, in loadFiles
+    processing.sql.start(USER_ID, _workingPath)
+  File "/home/henry/pydocs/processing/sql.py", line 165, in start
+    adder(lt_files, sess)
+  File "/home/henry/pydocs/processing/sql.py", line 87, in adder
+    sess.flush()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2496, in flush
+    self._flush(objects)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2637, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 68, in __exit__
+    compat.raise_(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2597, in _flush
+    flush_context.execute()
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 586, in execute
+    persistence.save_obj(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 239, in save_obj
+    _emit_insert_statements(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 1135, in _emit_insert_statements
+    result = cached_connections[connection].execute(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 984, in execute
+    return meth(self, multiparams, params)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 293, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1097, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1287, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1481, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1247, in _execute_context
+    self.dialect.do_execute(
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (pyodbc.ProgrammingError) ("A TVP's rows must be Sequence objects.", 'HY000')
+[SQL: INSERT INTO files ([fileId], [lastModDate], parent_id, [isFile]) OUTPUT inserted.id VALUES (?, ?, ?, ?)]
+[parameters: ('1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s:25-13.745954tZI9CuAXEA', [134, 95, 37, 56, 66, 52, 37, 69], 1, 1)]
+(Background on this error at: http://sqlalche.me/e/f405)
+configlo:25,13:34:24:handle_exception:85:BBpp1w -- exiting! from sshook

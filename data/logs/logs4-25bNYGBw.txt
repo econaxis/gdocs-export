@@ -1,0 +1,153 @@
+sql.py:25,22:19:21:start:169:bNYGBw -- STARTING SQL testing2020-04-25 22:19:21.608768 /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+sql.py:25,22:19:21:start:171:bNYGBw -- setting sys except hook
+sql.py:25,22:19:21:start:179:bNYGBw -- Owner name: testing2020-04-04 25 ApreexYGYwpwQ
+sql.py:25,22:19:22:start:183:bNYGBw -- Added owner row, name: testing2020-04-04 25 ApreexYGYwpwQ id: 91
+sql.py:25,22:19:22:load_from_dict:108:bNYGBw -- File: 0B4Fujvv5Mfqbb2d0TnNhcFhhREdadmRaaEI3QzVabnE2NE5v
+sql.py:25,22:19:22:load_from_dict:108:bNYGBw -- File: 1QNNRjwRnVqieEoA5i9CdaSCyT_6Bi4vkmGO8YuZHytU
+sql.py:25,22:19:22:load_from_dict:108:bNYGBw -- File: 1cGlmEaWYTHdD_Y3vlkIMMkZhdmosSZo_rQYxcSBoDbQ
+sql.py:25,22:19:22:load_from_dict:108:bNYGBw -- File: 1G-K37QbHDgyLsJaUjRsROtLZZkj1fmqyC5YyHzOh-_Q
+sql.py:25,22:19:22:load_from_dict:108:bNYGBw -- File: 1cIWwf3nZ2RAeriW8GerxZHY9nirLdcc968-GgSnRkjQ
+sql.py:25,22:19:22:load_from_dict:108:bNYGBw -- File: 16wsJnYBwdOHbuGROxWDFe2Tcf1w8T49TwWnGvq5OjXY
+sql.py:25,22:19:22:load_from_dict:108:bNYGBw -- File: 1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ
+sql.py:25,22:19:22:load_from_dict:108:bNYGBw -- File: 12NnsHOjtevUATb-yYIgDFFLyYajiHxhJ6xHiJnIXj-8
+sql.py:25,22:19:22:load_from_dict:108:bNYGBw -- File: 1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4
+sql.py:25,22:19:22:load_from_dict:108:bNYGBw -- File: 1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08
+sql.py:25,22:19:22:load_from_dict:108:bNYGBw -- File: 1C09g5-ATBpXNJOmH8ANwCnq7Pk6vClzI1lmFYcqaH6A
+sql.py:25,22:19:22:load_from_dict:108:bNYGBw -- File: 1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s
+sql.py:25,22:19:22:load_from_dict:108:bNYGBw -- File: 17MhIJt6Bl2HnDLFiNZPRh7UOx-Co9FMvPWBsRnJRfsM
+sql.py:25,22:19:22:load_from_dict:108:bNYGBw -- File: 1B37ygx-Iwh0EpS1c5fqpbK6AqE39m6ao4WD4uMWknzc
+sql.py:25,22:19:22:load_from_dict:108:bNYGBw -- File: 1jRrZTHn-oge2sTqxli8Um026xuniXAeezLZn4B2zVSg
+sql.py:25,22:19:22:load_from_dict:108:bNYGBw -- File: 1D48Gz6hmPkE6sATNqYoA3P3Hdjtq1y2zHRjrh1kH64I
+sql.py:25,22:19:22:load_from_dict:108:bNYGBw -- File: 1cctIQ_TyhvRFgFVkzjwcfDL1w0i4L2lF-78_WM7Hy6A
+sql.py:25,22:19:22:load_from_dict:108:bNYGBw -- File: 1o6ARVj7jhE2K_VNnX2BYajR2XBX1kdMu
+sql.py:25,22:19:22:load_from_dict:108:bNYGBw -- File: 15e68EIS9xXe5Yvzju4GtkyhFKJ_UgUA9juJKiUpPeUA
+sql.py:25,22:19:22:load_from_dict:108:bNYGBw -- File: 186ge00t4G7kcx1QdCIHxRhTnZfzpSTGDgfAXkdbD_Ig
+sql.py:25,22:19:22:load_from_dict:108:bNYGBw -- File: 1wfaH9BSg8wrDaKXR54KK1y8pd-miEOQNj3E8GL6fTfg
+sql.py:25,22:19:22:load_from_dict:108:bNYGBw -- File: 1G1g252JtmrFnXI5HaLLEafe8apipzquYwQQ0hbQIaho
+sql.py:25,22:19:22:load_from_dict:108:bNYGBw -- File: 1sF1pFtL8fsnQBBAoTt8P7YGOVZVr6-6a4BLeU3PBncI
+sql.py:25,22:19:22:load_from_dict:108:bNYGBw -- File: 1LuJ1Ln_dAc7n3Qj0zNE4yuYfFG6NEgxO-hsDA9M4qpQ
+sql.py:25,22:19:22:load_from_dict:108:bNYGBw -- File: 15Fi6RHQtC8H-GOJC_gjiED_9rNxtCdahEGtLvBUZcv4
+sql.py:25,22:19:22:load_from_dict:108:bNYGBw -- File: 1H1aSubiwctKw-qMV6t1aGlfooY2Qn9V6Y01phHpg-kw
+sql.py:25,22:19:22:load_from_dict:108:bNYGBw -- File: 1WbGMwYDyqP6aCDpf5fBbR7sneMicXtvEtfm3Z4k0Vzs
+sql.py:25,22:19:22:load_from_dict:108:bNYGBw -- File: 16wh_FgWE8Y0tUpAdIte4WyuB91_ypCySi82lvdhAiFY
+sql.py:25,22:19:22:load_from_dict:108:bNYGBw -- File: 1WKk8W5cG-CYKBYN_cWpAdziiPVhvQZEAarnPwf58z4Y
+sql.py:25,22:19:22:load_from_dict:108:bNYGBw -- File: 1YJPVyeYstaXiTguoSGCe_Kb3y4yv49N224nUrfLo7rU
+sql.py:25,22:19:22:load_from_dict:108:bNYGBw -- File: 1PscMFhdtA31Nh7ELmM18NqjUfLDeGiexKI6q-lI0fKY
+sql.py:25,22:19:22:load_from_dict:108:bNYGBw -- File: 1YlY2MTwu_I6PGWgmkNqFXYJVvNSQKMi7j0WulyoD75w
+sql.py:25,22:19:22:load_from_dict:108:bNYGBw -- File: 1Gxvc-37IOivNHIPUJBI1v3jf5e-Hwcby_VZbN-k-Bfc
+sql.py:25,22:19:22:load_from_dict:108:bNYGBw -- File: 1T1Sj69DxCTpEQI2pH0O04l_PSx1V3xsxYOnkiHPEPis
+sql.py:25,22:19:22:load_from_dict:128:bNYGBw -- len of id map 34 len of files 34
+sql.py:25,22:19:22:load_from_dict:133:bNYGBw -- starting bulk save
+sql.py:25,22:19:22:adder:88:bNYGBw -- flushing adder
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1VrK4o4hKCSJyT8P4hKL9la_FO7-29hcBJMJDsvjXo2A
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1TxO4rhqIX6VUqO2bLJNkukbTpEDNVYSHD0X9hOzi88o
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1bVHzlp_4wGefhP9sx5GvI7ZR_ArSbtX0LaFmfZTeB8Y
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 11L4quB0D_Ttk0WMkddrcn_r8OmWG5Y7xEWgALTBoNvg
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1ZSCKTVjGJu6pUx7auNWEyfs83DLJtOeA3AbwuGuY8kI
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1R9fH_VyHSB3k-yCrmzD5fzj25Ga8neQLtKLceiEhdt0
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1gS0ZLEc-tkOVw-QM-oeezt-ATZgZt_g5wDuW2U4KvF8
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1ECJHKZpyfd75nEg20CQdICaWhZzri2SX_mQjfIFN-Wk
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1SGPIbZAmFYwIakoHevrYhHMwAf6xNIbMuS1zeULYsTQ
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1adckvxMM48z9k3sSG_JP2w-9T5WOqLNocASrGMkmaEs
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1cZg8adblMjYv0HOMh9qeEGR5Hhx59fhEAYD_mG1tfL0
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1_BIMsBsouGOgicFcBVR7gHXNHaSP4iVZGb6ezTcaHg8
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1x8Vlo2OmIPQX7_XYCRzaAG2DgEULR8QVA588B6rCcOg
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1jqJ0-FMfB3RjcqrSJxckdoC-jzHHMa3nLcRMP6CquRQ
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1F6-Z7HfxAQ-F5SIBuApsQr141gOfpxG4y3_h7W7xN0E
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1VSIZknJPJGRXuMPnSk9gjDStnMEXty0XJR1KO4z7QBk
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 16Tz6lbS7tdWBUhgseZCx0va0xBAayzOSSDSH-T20xRA
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1wqRmLVKxvm7w--kMAMGzVAjoILC593KzG-z6AFTdt_8
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1h1FUpGxFne9y7IFDVl7IQZGCPE1vhm3rJbCf5WgovQo
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1b1ARGMmgTYWTMHAnv5biEbQKVzTLLQ3vt2n2YLicEws
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1XGCuTdCzlBbB5B0rAu29ButWuims-VeTYBdfozFaFPk
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1ecDoneIykl54KGJhMUpcvdNKg350pGauVB9v0uCuFbI
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1ZIuPeHFKHzM1yn1G47W92JbGijyxWqaOfKhkejWXMdA
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 12K516OwpugshsvDcQqP4cSvg-ku6pJuAJGfrEmbDqGc
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1a7puy4GkUsAx2u9lu1i3MnxJAx0JyFPFozhkGYlCT5I
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1jEPinYNleGwKDF0SJddLTTeVvYZbF40sbV5FxvJyNCU
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1e7IjM7tgdUxRQcmg2bbYvLArkghX129Cz_lOLFpnF34
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1JQ-JszbkA6JHylaBr1ZDWeMXTy2X6fM2evDEJo-W3U4
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1Ez54_TKEcG-xUH_lCEW1711SozJ2_cSeBgiuGKjE8Pk
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 12bPKEMHnfEBwlDfZnXYlPZRRwnRiHPVtDkcBZqNxBA4
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 125AyhViQoEQKg-wVD4y2hv82aynGTyK7SmeqVHpXvQs
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1B6ePg9Ixtc4xqKL4D0_JO80n8GL83WpztJKJGaH-6S0
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1LyrolWAEdF9g6y9DyEk_FIH8B7V1cGDowMv8NvVTjow
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1gvFEgWgxaLnNlgLpfwtdH_-UVEY1rglxelRy307hjns
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 19qkWrA-moW3LlnMEtT1VSoCGU5TpOwB_17goJbrvWHM
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1F5C4F51m7TcoiVU-U3s2TERMRIMoe_RxQFA8GBf6-64
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1RFm8X0JkBTJj7iR7YLxsrpzbiBTMANScjSeDO9l2aQw
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1Visfq9vleQOXgJ3svv3Yj5A3qf3GOY4VMIcq4E7J5q0
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1kIbHXyKc4uI2MzuXFMhT73ZIAPnP32_jW1kv2yMNoUU
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1AOfGsW5I-aG8b0WdSsq4IqMlGiDqDYUCUQfFoEJ1ll4
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1XJ5BlIal28QXAMwFOiNr81G7U0xElvy16JUj-39MTrU
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 18vcbSvvx_xRDIq0vUFjpKkYGdu00l5XbORDG5EKfWNw
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1iwD0UOBkgdB5Jnza1szyk2RCaNpOfito5Be0lD0HGvk
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1kn3xhSXmFhPNdSs3J-4x4F95PXucVOdAJAwycd591Ns
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1iMp4WTH5NG-vtb4UkJiqLA7D3ck7MkjS2Mu9gw8rOKs
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1b6qJW2miNoybz6Y2_UdB51prtkzfFmWcKbbZ6YpSAbg
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1LvrNb0X-i_B-0eXh_cLDTHGqGukf5UcyNwtVIzimL4E
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1DGlo99pbjGwp3lZne4o98aEBS-oC_FaPV0BGUOHCrNo
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1_wRTbPygF0D0H8VlY-aHjCKTKBQ_Yr8jhCaemuGypXg
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1DE8JkISOGvpaUbmFRqQ_zVwh-29QmyD1t7ap73cr0KU
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1NpHQsdIiUQJTN0Bwdl__Kn69Ix3I3FEZM-6XWD-hCQ4
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1RMi1U6KwIBwORi6hYYv4HQiypu8bD1obKFyiCthf7pw
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1MQSAawInjoU_bWoc22FZS1s-qXWkPZNXwZDM-lFUoU0
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1fZgygLRoHAb-498SXVjIXpGUIvLGU9qeRU63qzQx9nQ
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1pWqW84PU9HyaS_FLl_qn80OAdv0gFum7_FkO6a82EyE
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1R6xbWkbfzsQajjjcXW8tMQWAHqG2Kw6fUzCtSVa3rKI
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1ohuX_SQlBRAEoBP1lszH7C5sU4UixwKTJsjyRB4hSWw
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1NBVW6zOvYcoTmGZ46HZosMmV2SVNURBvf4WOm1ydcTk
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 186ge00t4G7kcx1QdCIHxRhTnZfzpSTGDgfAXkdbD_Ig
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1WbGMwYDyqP6aCDpf5fBbR7sneMicXtvEtfm3Z4k0Vzs
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 16wh_FgWE8Y0tUpAdIte4WyuB91_ypCySi82lvdhAiFY
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1YlY2MTwu_I6PGWgmkNqFXYJVvNSQKMi7j0WulyoD75w
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1WKk8W5cG-CYKBYN_cWpAdziiPVhvQZEAarnPwf58z4Y
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1T1Sj69DxCTpEQI2pH0O04l_PSx1V3xsxYOnkiHPEPis
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 125AyhViQoEQKg-wVD4y2hv82aynGTyK7SmeqVHpXvQs
+sql.py:25,22:19:24:load_from_dict:110:bNYGBw -- duplicated fileid found, skipping
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1gvFEgWgxaLnNlgLpfwtdH_-UVEY1rglxelRy307hjns
+sql.py:25,22:19:24:load_from_dict:110:bNYGBw -- duplicated fileid found, skipping
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1LyrolWAEdF9g6y9DyEk_FIH8B7V1cGDowMv8NvVTjow
+sql.py:25,22:19:24:load_from_dict:110:bNYGBw -- duplicated fileid found, skipping
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 19qkWrA-moW3LlnMEtT1VSoCGU5TpOwB_17goJbrvWHM
+sql.py:25,22:19:24:load_from_dict:110:bNYGBw -- duplicated fileid found, skipping
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1F5C4F51m7TcoiVU-U3s2TERMRIMoe_RxQFA8GBf6-64
+sql.py:25,22:19:24:load_from_dict:110:bNYGBw -- duplicated fileid found, skipping
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1RFm8X0JkBTJj7iR7YLxsrpzbiBTMANScjSeDO9l2aQw
+sql.py:25,22:19:24:load_from_dict:110:bNYGBw -- duplicated fileid found, skipping
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1XJ5BlIal28QXAMwFOiNr81G7U0xElvy16JUj-39MTrU
+sql.py:25,22:19:24:load_from_dict:110:bNYGBw -- duplicated fileid found, skipping
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1Visfq9vleQOXgJ3svv3Yj5A3qf3GOY4VMIcq4E7J5q0
+sql.py:25,22:19:24:load_from_dict:110:bNYGBw -- duplicated fileid found, skipping
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1kIbHXyKc4uI2MzuXFMhT73ZIAPnP32_jW1kv2yMNoUU
+sql.py:25,22:19:24:load_from_dict:110:bNYGBw -- duplicated fileid found, skipping
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1AOfGsW5I-aG8b0WdSsq4IqMlGiDqDYUCUQfFoEJ1ll4
+sql.py:25,22:19:24:load_from_dict:110:bNYGBw -- duplicated fileid found, skipping
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 18vcbSvvx_xRDIq0vUFjpKkYGdu00l5XbORDG5EKfWNw
+sql.py:25,22:19:24:load_from_dict:110:bNYGBw -- duplicated fileid found, skipping
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1kn3xhSXmFhPNdSs3J-4x4F95PXucVOdAJAwycd591Ns
+sql.py:25,22:19:24:load_from_dict:110:bNYGBw -- duplicated fileid found, skipping
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1iMp4WTH5NG-vtb4UkJiqLA7D3ck7MkjS2Mu9gw8rOKs
+sql.py:25,22:19:24:load_from_dict:110:bNYGBw -- duplicated fileid found, skipping
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1b6qJW2miNoybz6Y2_UdB51prtkzfFmWcKbbZ6YpSAbg
+sql.py:25,22:19:24:load_from_dict:110:bNYGBw -- duplicated fileid found, skipping
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1LvrNb0X-i_B-0eXh_cLDTHGqGukf5UcyNwtVIzimL4E
+sql.py:25,22:19:24:load_from_dict:110:bNYGBw -- duplicated fileid found, skipping
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1_wRTbPygF0D0H8VlY-aHjCKTKBQ_Yr8jhCaemuGypXg
+sql.py:25,22:19:24:load_from_dict:110:bNYGBw -- duplicated fileid found, skipping
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1DGlo99pbjGwp3lZne4o98aEBS-oC_FaPV0BGUOHCrNo
+sql.py:25,22:19:24:load_from_dict:110:bNYGBw -- duplicated fileid found, skipping
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1DE8JkISOGvpaUbmFRqQ_zVwh-29QmyD1t7ap73cr0KU
+sql.py:25,22:19:24:load_from_dict:110:bNYGBw -- duplicated fileid found, skipping
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1NpHQsdIiUQJTN0Bwdl__Kn69Ix3I3FEZM-6XWD-hCQ4
+sql.py:25,22:19:24:load_from_dict:110:bNYGBw -- duplicated fileid found, skipping
+sql.py:25,22:19:24:load_from_dict:108:bNYGBw -- File: 1RMi1U6KwIBwORi6hYYv4HQiypu8bD1obKFyiCthf7pw
+sql.py:25,22:19:24:load_from_dict:110:bNYGBw -- duplicated fileid found, skipping
+sql.py:25,22:19:24:load_from_dict:128:bNYGBw -- len of id map 68 len of files 68
+sql.py:25,22:19:24:load_from_dict:133:bNYGBw -- starting bulk save
+sql.py:25,22:19:24:adder:85:bNYGBw -- rem 60/68
+sql.py:25,22:19:28:load_from_dict:135:bNYGBw -- bulked save done

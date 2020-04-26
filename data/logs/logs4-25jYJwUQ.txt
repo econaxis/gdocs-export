@@ -1,0 +1,1001 @@
+sql.py:25,22:11:25:start:170:jYJwUQ -- STARTING SQL testing2020-04-25 22:11:25.766353 /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+sql.py:25,22:11:25:start:172:jYJwUQ -- setting sys except hook
+sql.py:25,22:11:25:start:180:jYJwUQ -- Owner name: testing2020-04-04 25 AprsKImDacgzA
+sql.py:25,22:11:26:start:184:jYJwUQ -- Added owner row, name: testing2020-04-04 25 AprsKImDacgzA id: 87
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 0B4Fujvv5Mfqbb2d0TnNhcFhhREdadmRaaEI3QzVabnE2NE5v
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1QNNRjwRnVqieEoA5i9CdaSCyT_6Bi4vkmGO8YuZHytU
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1cGlmEaWYTHdD_Y3vlkIMMkZhdmosSZo_rQYxcSBoDbQ
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1G-K37QbHDgyLsJaUjRsROtLZZkj1fmqyC5YyHzOh-_Q
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1cIWwf3nZ2RAeriW8GerxZHY9nirLdcc968-GgSnRkjQ
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 16wsJnYBwdOHbuGROxWDFe2Tcf1w8T49TwWnGvq5OjXY
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 12NnsHOjtevUATb-yYIgDFFLyYajiHxhJ6xHiJnIXj-8
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1C09g5-ATBpXNJOmH8ANwCnq7Pk6vClzI1lmFYcqaH6A
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 17MhIJt6Bl2HnDLFiNZPRh7UOx-Co9FMvPWBsRnJRfsM
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1B37ygx-Iwh0EpS1c5fqpbK6AqE39m6ao4WD4uMWknzc
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1jRrZTHn-oge2sTqxli8Um026xuniXAeezLZn4B2zVSg
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1D48Gz6hmPkE6sATNqYoA3P3Hdjtq1y2zHRjrh1kH64I
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1cctIQ_TyhvRFgFVkzjwcfDL1w0i4L2lF-78_WM7Hy6A
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1o6ARVj7jhE2K_VNnX2BYajR2XBX1kdMu
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 15e68EIS9xXe5Yvzju4GtkyhFKJ_UgUA9juJKiUpPeUA
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 186ge00t4G7kcx1QdCIHxRhTnZfzpSTGDgfAXkdbD_Ig
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1wfaH9BSg8wrDaKXR54KK1y8pd-miEOQNj3E8GL6fTfg
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1G1g252JtmrFnXI5HaLLEafe8apipzquYwQQ0hbQIaho
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1sF1pFtL8fsnQBBAoTt8P7YGOVZVr6-6a4BLeU3PBncI
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1LuJ1Ln_dAc7n3Qj0zNE4yuYfFG6NEgxO-hsDA9M4qpQ
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 15Fi6RHQtC8H-GOJC_gjiED_9rNxtCdahEGtLvBUZcv4
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1H1aSubiwctKw-qMV6t1aGlfooY2Qn9V6Y01phHpg-kw
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1WbGMwYDyqP6aCDpf5fBbR7sneMicXtvEtfm3Z4k0Vzs
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 16wh_FgWE8Y0tUpAdIte4WyuB91_ypCySi82lvdhAiFY
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1WKk8W5cG-CYKBYN_cWpAdziiPVhvQZEAarnPwf58z4Y
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1YJPVyeYstaXiTguoSGCe_Kb3y4yv49N224nUrfLo7rU
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1PscMFhdtA31Nh7ELmM18NqjUfLDeGiexKI6q-lI0fKY
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1YlY2MTwu_I6PGWgmkNqFXYJVvNSQKMi7j0WulyoD75w
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1Gxvc-37IOivNHIPUJBI1v3jf5e-Hwcby_VZbN-k-Bfc
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1T1Sj69DxCTpEQI2pH0O04l_PSx1V3xsxYOnkiHPEPis
+sql.py:25,22:11:26:load_from_dict:129:jYJwUQ -- len of id map 34 len of files 34
+sql.py:25,22:11:26:load_from_dict:134:jYJwUQ -- starting bulk save
+sql.py:25,22:11:26:adder:89:jYJwUQ -- flushing adder
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1VrK4o4hKCSJyT8P4hKL9la_FO7-29hcBJMJDsvjXo2A
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1TxO4rhqIX6VUqO2bLJNkukbTpEDNVYSHD0X9hOzi88o
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1bVHzlp_4wGefhP9sx5GvI7ZR_ArSbtX0LaFmfZTeB8Y
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 11L4quB0D_Ttk0WMkddrcn_r8OmWG5Y7xEWgALTBoNvg
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1ZSCKTVjGJu6pUx7auNWEyfs83DLJtOeA3AbwuGuY8kI
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1R9fH_VyHSB3k-yCrmzD5fzj25Ga8neQLtKLceiEhdt0
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1gS0ZLEc-tkOVw-QM-oeezt-ATZgZt_g5wDuW2U4KvF8
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1ECJHKZpyfd75nEg20CQdICaWhZzri2SX_mQjfIFN-Wk
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1SGPIbZAmFYwIakoHevrYhHMwAf6xNIbMuS1zeULYsTQ
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1adckvxMM48z9k3sSG_JP2w-9T5WOqLNocASrGMkmaEs
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1cZg8adblMjYv0HOMh9qeEGR5Hhx59fhEAYD_mG1tfL0
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1_BIMsBsouGOgicFcBVR7gHXNHaSP4iVZGb6ezTcaHg8
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1x8Vlo2OmIPQX7_XYCRzaAG2DgEULR8QVA588B6rCcOg
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1jqJ0-FMfB3RjcqrSJxckdoC-jzHHMa3nLcRMP6CquRQ
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1F6-Z7HfxAQ-F5SIBuApsQr141gOfpxG4y3_h7W7xN0E
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1VSIZknJPJGRXuMPnSk9gjDStnMEXty0XJR1KO4z7QBk
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 16Tz6lbS7tdWBUhgseZCx0va0xBAayzOSSDSH-T20xRA
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1wqRmLVKxvm7w--kMAMGzVAjoILC593KzG-z6AFTdt_8
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1h1FUpGxFne9y7IFDVl7IQZGCPE1vhm3rJbCf5WgovQo
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1b1ARGMmgTYWTMHAnv5biEbQKVzTLLQ3vt2n2YLicEws
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1XGCuTdCzlBbB5B0rAu29ButWuims-VeTYBdfozFaFPk
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1ecDoneIykl54KGJhMUpcvdNKg350pGauVB9v0uCuFbI
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1ZIuPeHFKHzM1yn1G47W92JbGijyxWqaOfKhkejWXMdA
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 12K516OwpugshsvDcQqP4cSvg-ku6pJuAJGfrEmbDqGc
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1a7puy4GkUsAx2u9lu1i3MnxJAx0JyFPFozhkGYlCT5I
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1jEPinYNleGwKDF0SJddLTTeVvYZbF40sbV5FxvJyNCU
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1e7IjM7tgdUxRQcmg2bbYvLArkghX129Cz_lOLFpnF34
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1JQ-JszbkA6JHylaBr1ZDWeMXTy2X6fM2evDEJo-W3U4
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1Ez54_TKEcG-xUH_lCEW1711SozJ2_cSeBgiuGKjE8Pk
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 12bPKEMHnfEBwlDfZnXYlPZRRwnRiHPVtDkcBZqNxBA4
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 125AyhViQoEQKg-wVD4y2hv82aynGTyK7SmeqVHpXvQs
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1B6ePg9Ixtc4xqKL4D0_JO80n8GL83WpztJKJGaH-6S0
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1LyrolWAEdF9g6y9DyEk_FIH8B7V1cGDowMv8NvVTjow
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1gvFEgWgxaLnNlgLpfwtdH_-UVEY1rglxelRy307hjns
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 19qkWrA-moW3LlnMEtT1VSoCGU5TpOwB_17goJbrvWHM
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1F5C4F51m7TcoiVU-U3s2TERMRIMoe_RxQFA8GBf6-64
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1RFm8X0JkBTJj7iR7YLxsrpzbiBTMANScjSeDO9l2aQw
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1Visfq9vleQOXgJ3svv3Yj5A3qf3GOY4VMIcq4E7J5q0
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1kIbHXyKc4uI2MzuXFMhT73ZIAPnP32_jW1kv2yMNoUU
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1AOfGsW5I-aG8b0WdSsq4IqMlGiDqDYUCUQfFoEJ1ll4
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1XJ5BlIal28QXAMwFOiNr81G7U0xElvy16JUj-39MTrU
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 18vcbSvvx_xRDIq0vUFjpKkYGdu00l5XbORDG5EKfWNw
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1iwD0UOBkgdB5Jnza1szyk2RCaNpOfito5Be0lD0HGvk
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1kn3xhSXmFhPNdSs3J-4x4F95PXucVOdAJAwycd591Ns
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1iMp4WTH5NG-vtb4UkJiqLA7D3ck7MkjS2Mu9gw8rOKs
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1b6qJW2miNoybz6Y2_UdB51prtkzfFmWcKbbZ6YpSAbg
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1LvrNb0X-i_B-0eXh_cLDTHGqGukf5UcyNwtVIzimL4E
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1DGlo99pbjGwp3lZne4o98aEBS-oC_FaPV0BGUOHCrNo
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1_wRTbPygF0D0H8VlY-aHjCKTKBQ_Yr8jhCaemuGypXg
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1DE8JkISOGvpaUbmFRqQ_zVwh-29QmyD1t7ap73cr0KU
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1NpHQsdIiUQJTN0Bwdl__Kn69Ix3I3FEZM-6XWD-hCQ4
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1RMi1U6KwIBwORi6hYYv4HQiypu8bD1obKFyiCthf7pw
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1MQSAawInjoU_bWoc22FZS1s-qXWkPZNXwZDM-lFUoU0
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1fZgygLRoHAb-498SXVjIXpGUIvLGU9qeRU63qzQx9nQ
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1pWqW84PU9HyaS_FLl_qn80OAdv0gFum7_FkO6a82EyE
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1R6xbWkbfzsQajjjcXW8tMQWAHqG2Kw6fUzCtSVa3rKI
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1ohuX_SQlBRAEoBP1lszH7C5sU4UixwKTJsjyRB4hSWw
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1NBVW6zOvYcoTmGZ46HZosMmV2SVNURBvf4WOm1ydcTk
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 186ge00t4G7kcx1QdCIHxRhTnZfzpSTGDgfAXkdbD_Ig
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1WbGMwYDyqP6aCDpf5fBbR7sneMicXtvEtfm3Z4k0Vzs
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1fZgygLRoHAb-498SXVjIXpGUIvLGU9qeRU63qzQx9nQ
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 16wh_FgWE8Y0tUpAdIte4WyuB91_ypCySi82lvdhAiFY
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1YlY2MTwu_I6PGWgmkNqFXYJVvNSQKMi7j0WulyoD75w
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1MQSAawInjoU_bWoc22FZS1s-qXWkPZNXwZDM-lFUoU0
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1WKk8W5cG-CYKBYN_cWpAdziiPVhvQZEAarnPwf58z4Y
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1pWqW84PU9HyaS_FLl_qn80OAdv0gFum7_FkO6a82EyE
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1T1Sj69DxCTpEQI2pH0O04l_PSx1V3xsxYOnkiHPEPis
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1R6xbWkbfzsQajjjcXW8tMQWAHqG2Kw6fUzCtSVa3rKI
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 125AyhViQoEQKg-wVD4y2hv82aynGTyK7SmeqVHpXvQs
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1VrK4o4hKCSJyT8P4hKL9la_FO7-29hcBJMJDsvjXo2A
+sql.py:25,22:11:26:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1ohuX_SQlBRAEoBP1lszH7C5sU4UixwKTJsjyRB4hSWw
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1gvFEgWgxaLnNlgLpfwtdH_-UVEY1rglxelRy307hjns
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1TnVVPTcfazUtMTwhCjyfpdZlTzOQiKRdNv5kUTPsuzU
+sql.py:25,22:11:26:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1LyrolWAEdF9g6y9DyEk_FIH8B7V1cGDowMv8NvVTjow
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 15oiL5vtc6Pm7TbWGmBPul9ZHEaq5Cp25MmoK7Wj3wQA
+sql.py:25,22:11:26:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 0B4Fujvv5MfqbUWw1OGZLaVJYM25ic2dkVUp4YU9MeUYxempN
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 19qkWrA-moW3LlnMEtT1VSoCGU5TpOwB_17goJbrvWHM
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 0B4Fujvv5Mfqbajg5cmFoOVFTUWoxMmdiQS1BNlBjMl83Nml3
+sql.py:25,22:11:26:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1KTg7p_EP680NLfKczdfbr8wI4eK6deK04aM3VpWt124
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1F5C4F51m7TcoiVU-U3s2TERMRIMoe_RxQFA8GBf6-64
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 16cqhRLUsi3Qo2vqxCM_zA4AukTjyrfADDx9_MldhruU
+sql.py:25,22:11:26:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1SomlELlB1nEXIUGAjtvJPqegi9_pB5PuDnHFSbl3niA
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1RFm8X0JkBTJj7iR7YLxsrpzbiBTMANScjSeDO9l2aQw
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1caX2qKRxxndHOlqtQBWnnj7dbfiq7ICg5OkqvOm-13U
+sql.py:25,22:11:26:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 14cW2ITjFw3mu0suoLw5Q7wyYfMwWOAu3iaC6Kxo_9SM
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1XJ5BlIal28QXAMwFOiNr81G7U0xElvy16JUj-39MTrU
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 0B4Fujvv5MfqbMHpzR1pIQ3ZYcHBaSi1FTUpWZkpBOWNHTEM4
+sql.py:25,22:11:26:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 0B4Fujvv5MfqbRjB5bGRlTlZBZ09xN2hjOVphQ3Q5eGVaa2tR
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1Visfq9vleQOXgJ3svv3Yj5A3qf3GOY4VMIcq4E7J5q0
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 13l8V9jma8seFSE4EGu5bkYSWkPJT2j9vaDqQgKEjwFk
+sql.py:25,22:11:26:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1xdiTvBflf61ouDyxvD_REuwZMG28miJg6gUGJHinjRg
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1kIbHXyKc4uI2MzuXFMhT73ZIAPnP32_jW1kv2yMNoUU
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1k6USGPq1ow9Inuf5jBXSBkTAk4kTlBazp9DxzTmXUEo
+sql.py:25,22:11:26:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1IrzFWsulK7xO4kyKki8Fpy4a8XTkSdfQDHAEZ3uVr-I
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1AOfGsW5I-aG8b0WdSsq4IqMlGiDqDYUCUQfFoEJ1ll4
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1y_qbg5SNo40vU9kELBqxO7bQphACiO3-N6kANQbBiXg
+sql.py:25,22:11:26:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 19x9p2PdgzWXsKrnbdZ0VVb4x_MemS73DS-j20F3zhOk
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 18vcbSvvx_xRDIq0vUFjpKkYGdu00l5XbORDG5EKfWNw
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1I3Gu3QKCRgOUayhCLaxdjmjd_ja0G45LU9Al_cQEpBs
+sql.py:25,22:11:26:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1ZU3R0ZILm0eda1_ra901RqrpNrffZG_XpuJTpGZvsXo
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1kn3xhSXmFhPNdSs3J-4x4F95PXucVOdAJAwycd591Ns
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 177ub3jbX4uscDt3uDv_WYisrvqmR5B5C9jhfnv-3T7Y
+sql.py:25,22:11:26:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1wblHudQn6UwWLOkXpX-X2k4YEPv4obOEHTUhy3n8cMY
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1iMp4WTH5NG-vtb4UkJiqLA7D3ck7MkjS2Mu9gw8rOKs
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 17rFp_FJUjEH_qhETF7SM8dqYzpGmrq7LcT3LUBZIiwA
+sql.py:25,22:11:26:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1WbvAv_ymDwWk-BGlPHw8SzD163SnYVFrw7IIt4mHjiM
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1b6qJW2miNoybz6Y2_UdB51prtkzfFmWcKbbZ6YpSAbg
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 11pQJMPSqdBII6CieoNmfHahRsuvHflXvehfOaWt8H7k
+sql.py:25,22:11:26:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1WN1sPgeACI3FUPUwOEit8xTBsUjsasQUzeIQ7PrBPYk
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1LvrNb0X-i_B-0eXh_cLDTHGqGukf5UcyNwtVIzimL4E
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1OXx2LaTMGkAs2x_wSMHmZZdNVBWxJkq16rBTKcv46e4
+sql.py:25,22:11:26:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1OctQHnUJUYiVNd90Dc1tetJzYl0MxIJL-vH-oACIhR8
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1_wRTbPygF0D0H8VlY-aHjCKTKBQ_Yr8jhCaemuGypXg
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1NSEpg3wzcFzi85vgvSQ14ebqQaEwgthPzkBcHvFYK4g
+sql.py:25,22:11:26:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1wwO34JKRjuj3j8LPJ8GpZ1qUZjudaS9ZKuH_vvH9u1Y
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1DGlo99pbjGwp3lZne4o98aEBS-oC_FaPV0BGUOHCrNo
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1d4h1lq9gvAfUpxC3DILSxTJvVCs3vbGLmMQXpRW5k2M
+sql.py:25,22:11:26:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1YPHMaMcgzysPOs7Flk2L4cAj1R_9U1mesOMP_u-9Ie0
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1DE8JkISOGvpaUbmFRqQ_zVwh-29QmyD1t7ap73cr0KU
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1PIFIQuFfWBnGVFqjEJeGFanqwpbbs7bmc_vhuKQpWT8
+sql.py:25,22:11:26:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1B37ygx-Iwh0EpS1c5fqpbK6AqE39m6ao4WD4uMWknzc
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1NpHQsdIiUQJTN0Bwdl__Kn69Ix3I3FEZM-6XWD-hCQ4
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 18bxzMnkY1PebmnCbJwDWXkwO5PfuDYwiHwJF98y87uU
+sql.py:25,22:11:26:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1OKxvzHOhjxBtzX3_mgg3f36xaqMOBwrfwypEAjrXooc
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1RMi1U6KwIBwORi6hYYv4HQiypu8bD1obKFyiCthf7pw
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1xjZMkCR9jK3uLcj3VVv8iG9vMhOY-TdfaTtm_-Gfluo
+sql.py:25,22:11:26:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1sq0GKewD4f-c6Nu_FDoW-h3Sr8mpsXl3VX3-b7gm_vY
+sql.py:25,22:11:26:load_from_dict:129:jYJwUQ -- len of id map 68 len of files 68
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1ebdbk-Heh5hZkqr3vk2KnUOaThJtdAHsW4PTRckjRIc
+sql.py:25,22:11:26:load_from_dict:134:jYJwUQ -- starting bulk save
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 10tBzs-b4tUfUtr6Uw1PNlbeIIFj9-RwWnNb4gghJcB0
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1cWs7Ivk6q8HNllhbZrC6t0gPU7HAVF98tJb0L2zJQYM
+sql.py:25,22:11:26:adder:86:jYJwUQ -- rem 60/68
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1L7Y6FI81HIJ6PKQnrSDEW_Y6JmxTZdSJLRs1eS29MnU
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1bxYZOBqncwfgK7wiBP3rHPk9nkhJYQGhmlIKScdrGXg
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 121oJ48RCkqiq1AAiTQksw63LJHVHTzcAL5p7SfFDzN4
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1v1MzjKeWndRSIeIUIcsttYQsBSQqwvKYvM_i4pm93eY
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 19T-3KeDzmN1hbJIOHoCGshN-2MkfzzL3niQ9g-kJ8wA
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1tPjh3-nBi17bhMtRviIdViEpl5m1AKUdV8Sal5eQ6Mc
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 10Kfg9ce99awKIA1TMLlCIXxs8aD11enD4s_aPY7fSIk
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1ybcAuvKiH1jP7Xq6ah4lL12FxIQ3XV9hBQTF5WX6LvY
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1r75iiO6eNJGhSzNVz_XOptyuhgUt1Ec4IOcxA72_76I
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1WnajaWbVBh4Nd8LuknbgrxA0WFTKQPOOn3H-fEwMTr8
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1W_EIUFDWQMdAyZKe69M9nuW5XedFb3bcsP7atg6LvIo
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1jys4yWL3RLe37f1yAGZzlKp2CCsWQ9YVRefNJm0sDFk
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1iuVb4Si_gTncPRe2R6kJ53PhPgL4I68_w9j2R8fRB7E
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1iaW7VZ7uupNJpOlGARjNoRsixK4TNmi36foaVjtD9og
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1jc_mjy90aKZ43SiRGSxmgNPyZQbrMh9Jb1dHoYzGWIM
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1HH2s7wRH1yZ3RzwuwRiqENRoNtdfG5EF034jvIGr9E0
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 15UMfb4c64GnCPTxFkvl-LShnbVIahiPADwLU-2h2PIY
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1lRv0A0-GImHxYL7qjV7bO9ewz4ErLrPGmb_9DkjOCZo
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1J-D9OQu7Xccz5BDEdiqPsKj5gJwW1qJ87Z24LSV6gak
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1H_FqHaJlUTfDeWZNITmjb7_9mc0kiPixuBSIXLeOEb8
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1V1KI6RIfQ38M_UIWpldBLKxJzXeuvsW8fKi0XodfERc
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1mU_Z2FXHCrL3UIf13uXSZsLBLPdJjh0-VRK_CEIcCvU
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1c9QE4E2tonnIhb6KO3DmLnZoXssnEB4bFn4vEzz959o
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1nYk0GBJ-0vTonu9nvhsvBvlWK5swHLSDmao9eTwVoms
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1vOEsYOAXIV_XJiid27nBy1s2lCEvz2ZjmYbKsHsQNFI
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1u1ZrB5rE8JfGb5y69hdtADX5fXeex9hXNDmUexYtOng
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1Mwr2PIKBobTIwfJH1DP806Ki3q69vz-hb84A3SyrEQ4
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1F1rKSpzRwIDSpcWlc8hARJhserv3yywojoXRLNtOsM4
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1U3nNqST1Sz5VIepZU8p33HVgn3uhRorhv_mkL3raAg8
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1WNM32gREzjB7ks8IAJm9f14c8pxhFEXTr5AYbeXQCwo
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 12Q6bZVGb6Gd19_BYI7FDsnp1YPM5gZAp8VUzxm5bmHo
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1qPi9_y7ctipEYPaOxEzvxutR_cvDAxGQKLYhs7KA91c
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1rYeomn5QTElgFAErrnBtX4iR9p8G7AWrBNZN0t83QyI
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 10O9QmWkYt3lpDiCmKhdUDpvgY5Vt7-FbeHhixZzff40
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1lFVPDJJqO1flvYuk5n4N0cSzh9PY8hU9QK-xuachhms
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 18HTxjPXMFCZ2X4cWr9ZcVoCXTKtLD0BA2oZ8WcLOBdc
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 17Ar8JD8IDNr2zTGLCX_m5VNUwhVI-z27amxEYdMZo9A
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 16ZOaBmwaEUNHKdzVDDYsvGKcnUOgWK7jqZs4zaWwyKY
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1BJlt8woa95IYNvGkGFpvKvYIGqQXW3mqr1MAnZwqS64
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1cPTe9tBUkFo1sVlMT5-ZG2-DvO7HoGbgR413A8hrYoE
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1PXNN4iw_j8MhvbtcB4IejaUqw80-4wZhYsmDzKNd8Yo
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1hzbRCzK66ADkXJA5ed5p79TfqNyqCpkdKAttWPh4VlE
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 18dyEIk03yKG-7bM19EkiJzrtoWIwrRNov-z7XeJw1m4
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1Se0xjKN6ugnSc8EozbwAq4_gQMoz3ejTeJLhkpUeiik
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 15G9sQV-39Si_2_hIIxIBh7xEg6IrSN6-wMZUxYCP2Bk
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1_o5CC6s1lKBY2FqxzGKVoBNMRW0Ekaya3mEVaS7Xh_w
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1UIJTMxlSrxlRK8VNymZdKCY61mVleSP6jM3b6qckwAQ
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1Hgko3gj0SKfYfD0a7bXwsx2tZyy7p-fOj2tWB7ZBZYE
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1zavQne_MWRu5tTO2v9z1e0JdPGROFrTIadjBa6MSipc
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1RBeu5UyrRyxopPQqc_hm2XiVS2RCO40mARJHPTouoIE
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1tb3xmBatR7YNy70lzq1K41ozoTBaYERMzGcsGNQ5K9Y
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1eD408OKIXN196mYbC69-8M5wDGPxTJLqAnJc7zGlIDQ
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1NspHhMgG_VjC3P93oZ5IV7xFFL7Uk3NNktrH2O9ZeoE
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1Ac1Qh6p3Cq6XHlWf2-wRLZ_naYPJLXZoDbgJfy6w-YY
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1ax-gJpCTZ3apRqQ5GXVL8iPMCj3Bzc4vrHx5raCHPoo
+sql.py:25,22:11:26:load_from_dict:129:jYJwUQ -- len of id map 101 len of files 101
+sql.py:25,22:11:26:load_from_dict:134:jYJwUQ -- starting bulk save
+sql.py:25,22:11:26:adder:86:jYJwUQ -- rem 60/101
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1-uubVDVcFISy6uzaYsXmPbxS9UmxDjNBxhUDniVDmlk
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1tbtgmS94lbqjRwYy-I75q4BH8WCkyHDE6HViwAF00ss
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1PpB3vZv2lJpoVklW51mZuquyju9GF7Zb-_c-rBSIQxc
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1HRakKISuqu2K_e2YyjoWGlB9C7H8vne7Q3_u089wRW0
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1mJDzwEHTj1Zvf91GbF8_hhBLhtKugl2wQuzkhEH06zE
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1KKaeEE792dDRG5mhXJQVCqgdqpJBHaWD_OQ6M3ZhRuo
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 15xp5eKILeVOBXgP_NrQRJxEckYLJn4TF-HH51I4xSDQ
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1KsWck_UFf_Kf1t500KZ9VgqB6onKJVu16NYeNLLvAmI
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1FyG_ZowGX2NAKBVvlKMnPuQtHEnQTM2kD5VYkjoVjxI
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 18k-JjTWeVXu2K65Vk32-q7MPPQiAX4K7bflONox2Kos
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1Xv2sTgI0X-dIB5LLgDmaOviNSzeonDUoLFQ5uGw1Hgw
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 13tHLJrPwP1o3jOffP1Z-orNRbsKBIZSCUR6zs6Nl-z8
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 17xnllCXbgNGTCl3UCF7rjdDFUenH7Ybp_oBLlhaazPM
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1yub5ti1om7s1nua9Nc3YFcfpzn_WQlrZn3yNxI_WUa0
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1BuSMP_TzGXY7KbsocMKJCDmtrjrUZxkSX-JKKqKU0U4
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 1sXtPdTSN5B-aVm1yaiGZopC7AoXVhi-ZvJcllmC5iJ0
+sql.py:25,22:11:26:load_from_dict:109:jYJwUQ -- File: 19HElFbOypbhzZzPKby2rypaTe9UsgLq9Upfx0WWhsas
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1eg0Rle5g1rhCkOPjeENL4SKs4V7SpTIozIv_YMzzuMQ
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1R0t5FNM3FAp9uJhf2TraL5lKE1hAASZ7fSXr1q7Irxs
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 12a-Eu55AvABgEnfWGrlYyb_H9P0H8UeZVi2lejD5jig
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1pqUL-BLtEu6HcTxjZToeaNaAz8vkKjDLQiu4B7TLZVU
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1VfNKMndN01Hbe2ijTgC-EAj9TpqdD133dm-ltW3BpEc
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1NXctsqWBRGB5_WvoTyW05ovUYiOoIc0NfXKvl4Z6K40
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1zjx4HJJwsgyjPEMwb4Q3sMRZSoYMXpspxs2awIpvMcE
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1294s17bsyDgKru3xzl_nM6RJvbU4YKu0b8BFIJaNTvg
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1TYIOfz_uzybWgEeexs8iE64jcjt-AmUegOP6KORNaWQ
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1_EgMi7XA_HEtXs6t6_t16Tx0SjA8P0R4gp3c_Tx91mU
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1F6SbGdjxQe1JjSCL_xfo1pIZRQxLtprw36plcnlZ-0A
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 19Fu317bfo0V7yOIkfLvKtAU-UJYLf8d2Soy-jTvq1uc
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1eXJKzIcZCM6pAdVLLrvEyIwQBDDrtm8dComeZ_W7uOI
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1Ux4BA5BVJTcsGcTcGp8CtB85ahlWp0h83AGvrtAhnTg
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1K6SwyWCOhW6dt906DjOIhJ-ZklpsooCdTyYHGfEZD2s
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1iTV26x-U2-nngY6gONVklMtrhdfI818IwLM682vpABA
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1gKBPmWO42yparziEkHbvcBtubHyE_IQwtO1Q8IIrW1c
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1ak3AnxwEDfv_EkgRG7Q8U_eglT-eK2W3RtAJqlrtcQA
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 12x_9WkC_rJJ4iQW5IUNaY9BwAHRM1P6nRBi_oyRq7eI
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1FzKITrCYnc_odhNCRNNaZ-PnT7m0f6qI-iDuQG382OY
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1VzVAOYcQFfJoPSOGAqpK8xA7OtiUNdq13G3SNRtrq2U
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 16cqhRLUsi3Qo2vqxCM_zA4AukTjyrfADDx9_MldhruU
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1KTg7p_EP680NLfKczdfbr8wI4eK6deK04aM3VpWt124
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 14cW2ITjFw3mu0suoLw5Q7wyYfMwWOAu3iaC6Kxo_9SM
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1k6USGPq1ow9Inuf5jBXSBkTAk4kTlBazp9DxzTmXUEo
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 13l8V9jma8seFSE4EGu5bkYSWkPJT2j9vaDqQgKEjwFk
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1xdiTvBflf61ouDyxvD_REuwZMG28miJg6gUGJHinjRg
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1IrzFWsulK7xO4kyKki8Fpy4a8XTkSdfQDHAEZ3uVr-I
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1caX2qKRxxndHOlqtQBWnnj7dbfiq7ICg5OkqvOm-13U
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1y_qbg5SNo40vU9kELBqxO7bQphACiO3-N6kANQbBiXg
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1I3Gu3QKCRgOUayhCLaxdjmjd_ja0G45LU9Al_cQEpBs
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1SomlELlB1nEXIUGAjtvJPqegi9_pB5PuDnHFSbl3niA
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 19x9p2PdgzWXsKrnbdZ0VVb4x_MemS73DS-j20F3zhOk
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1ZU3R0ZILm0eda1_ra901RqrpNrffZG_XpuJTpGZvsXo
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 177ub3jbX4uscDt3uDv_WYisrvqmR5B5C9jhfnv-3T7Y
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1wblHudQn6UwWLOkXpX-X2k4YEPv4obOEHTUhy3n8cMY
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 17rFp_FJUjEH_qhETF7SM8dqYzpGmrq7LcT3LUBZIiwA
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1WN1sPgeACI3FUPUwOEit8xTBsUjsasQUzeIQ7PrBPYk
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1OctQHnUJUYiVNd90Dc1tetJzYl0MxIJL-vH-oACIhR8
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1OXx2LaTMGkAs2x_wSMHmZZdNVBWxJkq16rBTKcv46e4
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1NSEpg3wzcFzi85vgvSQ14ebqQaEwgthPzkBcHvFYK4g
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1d4h1lq9gvAfUpxC3DILSxTJvVCs3vbGLmMQXpRW5k2M
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1wwO34JKRjuj3j8LPJ8GpZ1qUZjudaS9ZKuH_vvH9u1Y
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1YPHMaMcgzysPOs7Flk2L4cAj1R_9U1mesOMP_u-9Ie0
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1OKxvzHOhjxBtzX3_mgg3f36xaqMOBwrfwypEAjrXooc
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1xjZMkCR9jK3uLcj3VVv8iG9vMhOY-TdfaTtm_-Gfluo
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1sq0GKewD4f-c6Nu_FDoW-h3Sr8mpsXl3VX3-b7gm_vY
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 18bxzMnkY1PebmnCbJwDWXkwO5PfuDYwiHwJF98y87uU
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1lRv0A0-GImHxYL7qjV7bO9ewz4ErLrPGmb_9DkjOCZo
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 10tBzs-b4tUfUtr6Uw1PNlbeIIFj9-RwWnNb4gghJcB0
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1PIFIQuFfWBnGVFqjEJeGFanqwpbbs7bmc_vhuKQpWT8
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1ebdbk-Heh5hZkqr3vk2KnUOaThJtdAHsW4PTRckjRIc
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1cWs7Ivk6q8HNllhbZrC6t0gPU7HAVF98tJb0L2zJQYM
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1L7Y6FI81HIJ6PKQnrSDEW_Y6JmxTZdSJLRs1eS29MnU
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1c9QE4E2tonnIhb6KO3DmLnZoXssnEB4bFn4vEzz959o
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1bxYZOBqncwfgK7wiBP3rHPk9nkhJYQGhmlIKScdrGXg
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 121oJ48RCkqiq1AAiTQksw63LJHVHTzcAL5p7SfFDzN4
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1v1MzjKeWndRSIeIUIcsttYQsBSQqwvKYvM_i4pm93eY
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1HH2s7wRH1yZ3RzwuwRiqENRoNtdfG5EF034jvIGr9E0
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1Mwr2PIKBobTIwfJH1DP806Ki3q69vz-hb84A3SyrEQ4
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1tPjh3-nBi17bhMtRviIdViEpl5m1AKUdV8Sal5eQ6Mc
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 19T-3KeDzmN1hbJIOHoCGshN-2MkfzzL3niQ9g-kJ8wA
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 10Kfg9ce99awKIA1TMLlCIXxs8aD11enD4s_aPY7fSIk
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1jys4yWL3RLe37f1yAGZzlKp2CCsWQ9YVRefNJm0sDFk
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1ybcAuvKiH1jP7Xq6ah4lL12FxIQ3XV9hBQTF5WX6LvY
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1r75iiO6eNJGhSzNVz_XOptyuhgUt1Ec4IOcxA72_76I
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1W_EIUFDWQMdAyZKe69M9nuW5XedFb3bcsP7atg6LvIo
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1WnajaWbVBh4Nd8LuknbgrxA0WFTKQPOOn3H-fEwMTr8
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1iaW7VZ7uupNJpOlGARjNoRsixK4TNmi36foaVjtD9og
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1iuVb4Si_gTncPRe2R6kJ53PhPgL4I68_w9j2R8fRB7E
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1jc_mjy90aKZ43SiRGSxmgNPyZQbrMh9Jb1dHoYzGWIM
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1H_FqHaJlUTfDeWZNITmjb7_9mc0kiPixuBSIXLeOEb8
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 15UMfb4c64GnCPTxFkvl-LShnbVIahiPADwLU-2h2PIY
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1J-D9OQu7Xccz5BDEdiqPsKj5gJwW1qJ87Z24LSV6gak
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1V1KI6RIfQ38M_UIWpldBLKxJzXeuvsW8fKi0XodfERc
+sql.py:25,22:11:27:load_from_dict:129:jYJwUQ -- len of id map 92 len of files 92
+sql.py:25,22:11:27:load_from_dict:134:jYJwUQ -- starting bulk save
+sql.py:25,22:11:27:adder:86:jYJwUQ -- rem 60/92
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1iuVb4Si_gTncPRe2R6kJ53PhPgL4I68_w9j2R8fRB7E
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1jc_mjy90aKZ43SiRGSxmgNPyZQbrMh9Jb1dHoYzGWIM
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1J-D9OQu7Xccz5BDEdiqPsKj5gJwW1qJ87Z24LSV6gak
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1H_FqHaJlUTfDeWZNITmjb7_9mc0kiPixuBSIXLeOEb8
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 15UMfb4c64GnCPTxFkvl-LShnbVIahiPADwLU-2h2PIY
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1V1KI6RIfQ38M_UIWpldBLKxJzXeuvsW8fKi0XodfERc
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1mU_Z2FXHCrL3UIf13uXSZsLBLPdJjh0-VRK_CEIcCvU
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1vOEsYOAXIV_XJiid27nBy1s2lCEvz2ZjmYbKsHsQNFI
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1nYk0GBJ-0vTonu9nvhsvBvlWK5swHLSDmao9eTwVoms
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1u1ZrB5rE8JfGb5y69hdtADX5fXeex9hXNDmUexYtOng
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1U3nNqST1Sz5VIepZU8p33HVgn3uhRorhv_mkL3raAg8
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1F1rKSpzRwIDSpcWlc8hARJhserv3yywojoXRLNtOsM4
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1UIJTMxlSrxlRK8VNymZdKCY61mVleSP6jM3b6qckwAQ
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1WNM32gREzjB7ks8IAJm9f14c8pxhFEXTr5AYbeXQCwo
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1e8X7BjoK-9tw6LtZ906nkT8UU0ZRXhuYYVGMY3zGhG4
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1UYpX0KtWixk6R1ljqbRo-oHK1flm4eArGMqLkGGDjbA
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1Hgko3gj0SKfYfD0a7bXwsx2tZyy7p-fOj2tWB7ZBZYE
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 12Q6bZVGb6Gd19_BYI7FDsnp1YPM5gZAp8VUzxm5bmHo
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1RBeu5UyrRyxopPQqc_hm2XiVS2RCO40mARJHPTouoIE
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1qPi9_y7ctipEYPaOxEzvxutR_cvDAxGQKLYhs7KA91c
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1ax-gJpCTZ3apRqQ5GXVL8iPMCj3Bzc4vrHx5raCHPoo
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1lFVPDJJqO1flvYuk5n4N0cSzh9PY8hU9QK-xuachhms
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 10O9QmWkYt3lpDiCmKhdUDpvgY5Vt7-FbeHhixZzff40
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1rYeomn5QTElgFAErrnBtX4iR9p8G7AWrBNZN0t83QyI
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1Ac1Qh6p3Cq6XHlWf2-wRLZ_naYPJLXZoDbgJfy6w-YY
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 17Ar8JD8IDNr2zTGLCX_m5VNUwhVI-z27amxEYdMZo9A
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 18HTxjPXMFCZ2X4cWr9ZcVoCXTKtLD0BA2oZ8WcLOBdc
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1PXNN4iw_j8MhvbtcB4IejaUqw80-4wZhYsmDzKNd8Yo
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1cPTe9tBUkFo1sVlMT5-ZG2-DvO7HoGbgR413A8hrYoE
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 16ZOaBmwaEUNHKdzVDDYsvGKcnUOgWK7jqZs4zaWwyKY
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1BJlt8woa95IYNvGkGFpvKvYIGqQXW3mqr1MAnZwqS64
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 15G9sQV-39Si_2_hIIxIBh7xEg6IrSN6-wMZUxYCP2Bk
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 10u3-LXvFnSLUWooUhaGr9Au1jxnUA5wA7ZtW-D2ECQw
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1Se0xjKN6ugnSc8EozbwAq4_gQMoz3ejTeJLhkpUeiik
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1hzbRCzK66ADkXJA5ed5p79TfqNyqCpkdKAttWPh4VlE
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 18dyEIk03yKG-7bM19EkiJzrtoWIwrRNov-z7XeJw1m4
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1zavQne_MWRu5tTO2v9z1e0JdPGROFrTIadjBa6MSipc
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1_o5CC6s1lKBY2FqxzGKVoBNMRW0Ekaya3mEVaS7Xh_w
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1-uubVDVcFISy6uzaYsXmPbxS9UmxDjNBxhUDniVDmlk
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1eD408OKIXN196mYbC69-8M5wDGPxTJLqAnJc7zGlIDQ
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1tb3xmBatR7YNy70lzq1K41ozoTBaYERMzGcsGNQ5K9Y
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1NspHhMgG_VjC3P93oZ5IV7xFFL7Uk3NNktrH2O9ZeoE
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1tbtgmS94lbqjRwYy-I75q4BH8WCkyHDE6HViwAF00ss
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1PpB3vZv2lJpoVklW51mZuquyju9GF7Zb-_c-rBSIQxc
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1HRakKISuqu2K_e2YyjoWGlB9C7H8vne7Q3_u089wRW0
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1mJDzwEHTj1Zvf91GbF8_hhBLhtKugl2wQuzkhEH06zE
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1KKaeEE792dDRG5mhXJQVCqgdqpJBHaWD_OQ6M3ZhRuo
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 15xp5eKILeVOBXgP_NrQRJxEckYLJn4TF-HH51I4xSDQ
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1KsWck_UFf_Kf1t500KZ9VgqB6onKJVu16NYeNLLvAmI
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1FyG_ZowGX2NAKBVvlKMnPuQtHEnQTM2kD5VYkjoVjxI
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 18k-JjTWeVXu2K65Vk32-q7MPPQiAX4K7bflONox2Kos
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1Xv2sTgI0X-dIB5LLgDmaOviNSzeonDUoLFQ5uGw1Hgw
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 13tHLJrPwP1o3jOffP1Z-orNRbsKBIZSCUR6zs6Nl-z8
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 17xnllCXbgNGTCl3UCF7rjdDFUenH7Ybp_oBLlhaazPM
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1yub5ti1om7s1nua9Nc3YFcfpzn_WQlrZn3yNxI_WUa0
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1BuSMP_TzGXY7KbsocMKJCDmtrjrUZxkSX-JKKqKU0U4
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1sXtPdTSN5B-aVm1yaiGZopC7AoXVhi-ZvJcllmC5iJ0
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 19HElFbOypbhzZzPKby2rypaTe9UsgLq9Upfx0WWhsas
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1eg0Rle5g1rhCkOPjeENL4SKs4V7SpTIozIv_YMzzuMQ
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1R0t5FNM3FAp9uJhf2TraL5lKE1hAASZ7fSXr1q7Irxs
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 12a-Eu55AvABgEnfWGrlYyb_H9P0H8UeZVi2lejD5jig
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1VfNKMndN01Hbe2ijTgC-EAj9TpqdD133dm-ltW3BpEc
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1pqUL-BLtEu6HcTxjZToeaNaAz8vkKjDLQiu4B7TLZVU
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1zjx4HJJwsgyjPEMwb4Q3sMRZSoYMXpspxs2awIpvMcE
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1NXctsqWBRGB5_WvoTyW05ovUYiOoIc0NfXKvl4Z6K40
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1-1y6G4MviqPb0QzFlRjccX3Hlm72FFJS1VppqcHKCTs
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1294s17bsyDgKru3xzl_nM6RJvbU4YKu0b8BFIJaNTvg
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1F6SbGdjxQe1JjSCL_xfo1pIZRQxLtprw36plcnlZ-0A
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 19yXrTeWC3zjIWztx7RSpKqHL-dpfVf7PPaOmbKyAPrs
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1_EgMi7XA_HEtXs6t6_t16Tx0SjA8P0R4gp3c_Tx91mU
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1V3RqT0n3pc2un7LT3XHJhOLGqmACXSAMSCExEzabbJw
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1TYIOfz_uzybWgEeexs8iE64jcjt-AmUegOP6KORNaWQ
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1kardxzC2Fy2Sfl-BBUIEWzZ0j2g9PxiPIDNcoiynXiE
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1LfeyEXdNl3YM-lV7iOPSP4dl-uXlnbcL
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1KxeMzcqJ7__fOtXnftJ-Pa7r2vlOP2GwzmoDpyt0mBE
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1_wlxhy2APCz4lVq6wofdN82TN-A1DYGd
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1zyLifTUL_nG8Vm-qDkOCwL5iOSD1DiyDuysUCIgDBXk
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4z70ztg3cLKR3RPUkZjaUhVdXc
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1YrEDAhPVQRvL1DAF7FnxmorNmO91tOYm0CeKCx-YHYc
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 19Fu317bfo0V7yOIkfLvKtAU-UJYLf8d2Soy-jTvq1uc
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1LZ49mZZavfbc6qrupR026UclucxC0ywjsdzw65tvHy8
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B9uwNDTkJVIYV0JQVU05NkN3dmM
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1Nm0Mb5nJrqDHqhOJFChfJGh_v4pIxupnA3F3HELGmlQ
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1UekAo_5ZNDeGufpfc97vaXGktNoq5U04
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1M5cdlQeDLMFaNcwVNaOPiv3AFPtVTMH-6lQltnCrNJ8
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4z70ztg3cLKNnA1SS10UEFzdkE
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1M23JcQw9m1kFonxRU3JZU96p4eHCMSYpJcFfpSo73JE
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1Ux4BA5BVJTcsGcTcGp8CtB85ahlWp0h83AGvrtAhnTg
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1Rwm5j7Cnfx80BQ5aCjWLNGe5Zsy2eEIcqnHMhaIgwRc
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1eXJKzIcZCM6pAdVLLrvEyIwQBDDrtm8dComeZ_W7uOI
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 17Lf2t-DFVyj_vHbkHM--J-OoausS5Kt1NsZg5XFGZTA
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0BzbrKEZKhQBBS0kxRWRNRTBiemM
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1ErpgaQ5zEbmbVALXTEGj8knlKYDU-ganQZFkuWdMdLs
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4z70ztg3cLKdHNjeFg2TTJhOUk
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1ATwt33p58GMJonubR0SfbRIbwgjGzF1PkFCDWRDno88
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4z70ztg3cLKNDJ6SlV6bWYzWEU
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1yvpmUIl5IPAvt3DLkCojjBjK0c8LngY4rVwqAIxau5U
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0BzbrKEZKhQBBWS1FcjVmcWNKX2s
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0BzbrKEZKhQBBM1R5U1RxZ0hGYzQ
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 14_vv-gLYy3o0AHBpuRwVXxbdyZf-OZfi
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4z70ztg3cLKLTV4SVJIeVRaR00
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1Srx2jSpjUQ4VXSpS6lRwAcZ6jtXkJNvR
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4z70ztg3cLKN0dlSWxDcEJIcXc
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4z70ztg3cLKelVObUZxcFZIWmc
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0BzbrKEZKhQBBanRya0trWnBaR0E
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1h_HFgkaxvyfaL9G3-VwMoICDdcnZjmbg76vR0qwBRaE
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4z70ztg3cLKLW1wbmY1bUM2M28
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1uJxHEVRHa1gqbbqWbxUkzSl5t5v3OOPZXJ7Yotx4dFI
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4z70ztg3cLKZGIxSDlKdTJUalU
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1OH8h0i2T4Is0R9S8uaZ4C18SQWkxItIW0KwLKnOJGSM
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4z70ztg3cLKa19od1pWRjdWMnc
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4Fujvv5MfqbYnZpY2kyejRXUTA
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1K6SwyWCOhW6dt906DjOIhJ-ZklpsooCdTyYHGfEZD2s
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1cflNpTbjQqpz-E4GqrehbgvXRayQ6dXE_X_x5tC8gbE
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B314tJw3ioySOU1qX2tyS2VSTjg
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1BU7kF9C-LzvjiV2WBq5Yx6sstmvvYDDOPKYP8jygvKg
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B314tJw3ioySaU02Y25KV1RmZmM
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0BzbrKEZKhQBBRzJWNE9feDhGak0
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1iTV26x-U2-nngY6gONVklMtrhdfI818IwLM682vpABA
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1gWhoOIIk2dcQObAvgYpY8Cx_Qc9YUoqNgXEapMic1Qo
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1ak3AnxwEDfv_EkgRG7Q8U_eglT-eK2W3RtAJqlrtcQA
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1xS96CqWG26lxXRjriQhRXyssvP6FimBkTtA5EIOLfao
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0BzbrKEZKhQBBRmZoUEhXaEFXeFE
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1qC8O9UkkKeZ82f4iVgf2UYL0ZDqm9ny54I45NmQqBK0
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1gKBPmWO42yparziEkHbvcBtubHyE_IQwtO1Q8IIrW1c
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0BzbrKEZKhQBBZHcweElkNG1tNkk
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0BzbrKEZKhQBBSWs2NW1kSnBuSlE
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 14KTZ9MFQGABvko_oR_4LlYTopekxI_fVWLoZQA0N85c
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0BzbrKEZKhQBBZDR4c05VaDhmMEU
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1Xm-pyhQ5D_o4tAHRCtX-amvzVhf-d_pGw0ZhdcTL35Q
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4z70ztg3cLKQlB1Z2kyRGJHbGc
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 18s8_aXXl5LtTX5ljUkglb7uf3QgbVuGoTlhwf9iHzKw
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0BzB0sWZU6K74bjI5SURMS2NpUTQ
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1V3RqT0n3pc2un7LT3XHJhOLGqmACXSAMSCExEzabbJw
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1FzKITrCYnc_odhNCRNNaZ-PnT7m0f6qI-iDuQG382OY
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1-1y6G4MviqPb0QzFlRjccX3Hlm72FFJS1VppqcHKCTs
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1WsdgPP3z17uNTsiGD7LfWIoPIHHGWfEVQ-CXSwgs3059XhLAvDUsVPcGlmBS
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1VzVAOYcQFfJoPSOGAqpK8xA7OtiUNdq13G3SNRtrq2U
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 19yXrTeWC3zjIWztx7RSpKqHL-dpfVf7PPaOmbKyAPrs
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0BzbrKEZKhQBBc3pwV05FUHRPS28
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0BzbrKEZKhQBBODAzTWRqT2I0alE
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1KxeMzcqJ7__fOtXnftJ-Pa7r2vlOP2GwzmoDpyt0mBE
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0BzbrKEZKhQBBd2JtbjR0NlBZaXc
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4Fujvv5MfqbV0xGc0szQ2ZGVlE
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1Rwm5j7Cnfx80BQ5aCjWLNGe5Zsy2eEIcqnHMhaIgwRc
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0BzbrKEZKhQBBTktmWU13LWNfZ0k
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0BzbrKEZKhQBBZmM3SUtRRUpMcVU
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1zyLifTUL_nG8Vm-qDkOCwL5iOSD1DiyDuysUCIgDBXk
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0BzbrKEZKhQBBY204R2c2S3ZxbnM
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0BzbrKEZKhQBBVy1SXzZhSEJZbEE
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4z70ztg3cLKOTlfTmw4R1JXOVU
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B3LDW5TwQt3jbVpiY21wRml2dWs
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1G-K37QbHDgyLsJaUjRsROtLZZkj1fmqyC5YyHzOh-_Q
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B39EL3QtE8zyMENScWE2MHR5VlE
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B1WNUX-O8FMUeldabERKSUsxWUk
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4z70ztg3cLKSkNCYmlscG9uR1U
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0BzbrKEZKhQBBSjdwNktaU05iWDg
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0BzbrKEZKhQBBMzBuUTdyMFdFVE0
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1SceQARvoMZsenh3mHNFZVorG4Y--Tk-S85NhP1QqXUc
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4z70ztg3cLKRHhyUnFRY0hFYlk
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1DwsrAcC611l4MM1jZzGKCSsOz5KCi98HAECgfA2vnCk
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B3LDW5TwQt3jMnJ3bWVNZXFla0E
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 13-vzOM3RA1SHdKRTAsFyLnLbbGlbUx9AV99Q_c95VXs
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4z70ztg3cLKOVFjODJfb2Uzb2s
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1gFZKPYhQPM-kijc3Q3If-Bo34pmeCnwQsKxrcZcipOc
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 12x_9WkC_rJJ4iQW5IUNaY9BwAHRM1P6nRBi_oyRq7eI
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1ICn3A7OdVPnhEX3jPkQfMvLu_P3QKtQO_wb5Ds5Rs6Q
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1yllVW5DGoWSkp3PmHABjhGfrZC4isoMYL7zCMVYq4Is
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 13a3Owyyk120IyPj-ibLkjMj-gJlc-GoLnREVR1v76gk
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 19ygUczxObgJ1T6IaNNy58eb13Z7FL6Z3QmuGA5eLPnU
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1e9ijaiN6UeeWdszruJusWJvcERPDFZxm47zPkASOsTo
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1NIRC8ZVCuz8MwINM-6pgmCznw6ZfmzGjDQVf8Td1I68
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1crgyAPC7Va9ScwbcSEMrmtDqpSOHtDKKin4Qy6jIZbE
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1YrEDAhPVQRvL1DAF7FnxmorNmO91tOYm0CeKCx-YHYc
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1B-r50uSqygoVn0leRm1HUNgCfj7cTXCgZ-KrUqd8EyE
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1LZ49mZZavfbc6qrupR026UclucxC0ywjsdzw65tvHy8
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1uJxHEVRHa1gqbbqWbxUkzSl5t5v3OOPZXJ7Yotx4dFI
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1TdlhubLVUoi_6U9xaVK42KshMOaBIF7x-rsMQfwC8ZY
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1Nm0Mb5nJrqDHqhOJFChfJGh_v4pIxupnA3F3HELGmlQ
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1TTsNGYYccQIuKIydQ5Me_4KPhSVUcs-rpcoksBh-Yao
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1yvpmUIl5IPAvt3DLkCojjBjK0c8LngY4rVwqAIxau5U
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1OUKhIKEYHvySvAKVYyxahfwA7aNRDTgUuCKhW_72aF4
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1M23JcQw9m1kFonxRU3JZU96p4eHCMSYpJcFfpSo73JE
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1ISa7kCERN_ZasqG1xx_SlUxIBqIShR61bruIFiW0dyg
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1BU7kF9C-LzvjiV2WBq5Yx6sstmvvYDDOPKYP8jygvKg
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 196_rMcr8M0kh_jhQ7LjUjO23bKnhwLu7rm9IwA-8o_I
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1h_HFgkaxvyfaL9G3-VwMoICDdcnZjmbg76vR0qwBRaE
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1JfK1iJRQ_0W5VQYPAktucbe6JWwyTjTbs6l_keXVFj4
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1cflNpTbjQqpz-E4GqrehbgvXRayQ6dXE_X_x5tC8gbE
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1J49oebTpPhUPtQ02Es7X4UHwi8LuKQLM8mvBxprbasM
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1ErpgaQ5zEbmbVALXTEGj8knlKYDU-ganQZFkuWdMdLs
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1GRvwZGIxky-TRmGLbc-oCJiLZtK5Ah0T5jP-i5pm6Rw
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1xS96CqWG26lxXRjriQhRXyssvP6FimBkTtA5EIOLfao
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 11KNQSupvOIHe8RyMtVPDhxRpxDE9qIJVGgsB0sGTA4A
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1qC8O9UkkKeZ82f4iVgf2UYL0ZDqm9ny54I45NmQqBK0
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1UvcAx8uccrerf4uud0w1zvsAsbMSJfyqo298Dh_bq_M
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1kardxzC2Fy2Sfl-BBUIEWzZ0j2g9PxiPIDNcoiynXiE
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1b-WTM2ekE1k6pPqFt0v7fa-myJ3Yvhg-vFT_zOs-DA4
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1M5cdlQeDLMFaNcwVNaOPiv3AFPtVTMH-6lQltnCrNJ8
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1Jzh-bWmP8YOEwSm1WsYvN6c8BDgEzMsWsSYXrZ6uwds
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1gWhoOIIk2dcQObAvgYpY8Cx_Qc9YUoqNgXEapMic1Qo
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1CEbUajiAYrz2tpwIPZdNCVGniK6leqx04Hmva2N4XM4
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1kzKbaDRw0fxr-yzmfDdTWyiOBuuGprpgdsicAGMD8aw
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 14KTZ9MFQGABvko_oR_4LlYTopekxI_fVWLoZQA0N85c
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 12msYuSI-rqvfXROgoGjtxN3Y9AlT3SnRTd6Om5xOxmM
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1ATwt33p58GMJonubR0SfbRIbwgjGzF1PkFCDWRDno88
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1gFZKPYhQPM-kijc3Q3If-Bo34pmeCnwQsKxrcZcipOc
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 17Lf2t-DFVyj_vHbkHM--J-OoausS5Kt1NsZg5XFGZTA
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1Xm-pyhQ5D_o4tAHRCtX-amvzVhf-d_pGw0ZhdcTL35Q
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1HdWWgJDh4IA7T550gANGtjqDNvq0AwP0serPT4qI34k
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 18s8_aXXl5LtTX5ljUkglb7uf3QgbVuGoTlhwf9iHzKw
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1WVRprv2UdMlSY1fciu82upcO_aVl7lOnIFAm3XzHZ1Y
+sql.py:25,22:11:27:load_from_dict:129:jYJwUQ -- len of id map 145 len of files 145
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1cX0p4FkT_mRKMngyAqtysHHhT0t8EXJLvv0IYzoS4sU
+sql.py:25,22:11:27:load_from_dict:134:jYJwUQ -- starting bulk save
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1DwsrAcC611l4MM1jZzGKCSsOz5KCi98HAECgfA2vnCk
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:adder:86:jYJwUQ -- rem 60/145
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1z0qLmI61do7x0qw3rnK74msvcEZ4tEEVVOERiauTuaI
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1fVc04agXKNKopxuf3yInvn_EXCPuHxfctQqv9rarZIQ
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1crgyAPC7Va9ScwbcSEMrmtDqpSOHtDKKin4Qy6jIZbE
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1HOWZp6ESjGoYrybdR0LLcpWVlgxys_LqI8yxEeyFkpY
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1JK8IsrP_wGm2CMPI2TbhvrrYTfzAebH5h56mDeQugoo
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 13a3Owyyk120IyPj-ibLkjMj-gJlc-GoLnREVR1v76gk
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1_ovH_D4cpuVTDp9z4DtrqQUeTTjLYI5RWrZ06FXx8fg
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1U1hoywM09b-AUO7fIR9TflRSsc3Qu3XmxWmzEph3TmE
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1i-Tv07oc_5F72OdEdWf91bbLwoFEaXhmjjlo3QOQyrk
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1TTsNGYYccQIuKIydQ5Me_4KPhSVUcs-rpcoksBh-Yao
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1SceQARvoMZsenh3mHNFZVorG4Y--Tk-S85NhP1QqXUc
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 13-vzOM3RA1SHdKRTAsFyLnLbbGlbUx9AV99Q_c95VXs
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1OUKhIKEYHvySvAKVYyxahfwA7aNRDTgUuCKhW_72aF4
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1e9ijaiN6UeeWdszruJusWJvcERPDFZxm47zPkASOsTo
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1B-r50uSqygoVn0leRm1HUNgCfj7cTXCgZ-KrUqd8EyE
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1TdlhubLVUoi_6U9xaVK42KshMOaBIF7x-rsMQfwC8ZY
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1JfK1iJRQ_0W5VQYPAktucbe6JWwyTjTbs6l_keXVFj4
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1ISa7kCERN_ZasqG1xx_SlUxIBqIShR61bruIFiW0dyg
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1ICn3A7OdVPnhEX3jPkQfMvLu_P3QKtQO_wb5Ds5Rs6Q
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 11KNQSupvOIHe8RyMtVPDhxRpxDE9qIJVGgsB0sGTA4A
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1GRvwZGIxky-TRmGLbc-oCJiLZtK5Ah0T5jP-i5pm6Rw
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 196_rMcr8M0kh_jhQ7LjUjO23bKnhwLu7rm9IwA-8o_I
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:129:jYJwUQ -- len of id map 68 len of files 68
+sql.py:25,22:11:27:load_from_dict:134:jYJwUQ -- starting bulk save
+sql.py:25,22:11:27:adder:86:jYJwUQ -- rem 60/68
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1i-Tv07oc_5F72OdEdWf91bbLwoFEaXhmjjlo3QOQyrk
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 12msYuSI-rqvfXROgoGjtxN3Y9AlT3SnRTd6Om5xOxmM
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1b-WTM2ekE1k6pPqFt0v7fa-myJ3Yvhg-vFT_zOs-DA4
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1b-WTM2ekE1k6pPqFt0v7fa-myJ3Yvhg-vFT_zOs-DA4
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1UvcAx8uccrerf4uud0w1zvsAsbMSJfyqo298Dh_bq_M
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1z0qLmI61do7x0qw3rnK74msvcEZ4tEEVVOERiauTuaI
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1UvcAx8uccrerf4uud0w1zvsAsbMSJfyqo298Dh_bq_M
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1HdWWgJDh4IA7T550gANGtjqDNvq0AwP0serPT4qI34k
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1tEY2XbnyEkH5bOQ0y0HmWgJ2vZ5tKsrjh7qZYjdWAyg
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 12msYuSI-rqvfXROgoGjtxN3Y9AlT3SnRTd6Om5xOxmM
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1kzKbaDRw0fxr-yzmfDdTWyiOBuuGprpgdsicAGMD8aw
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1HdWWgJDh4IA7T550gANGtjqDNvq0AwP0serPT4qI34k
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1e9hHpoi-yodBw-cH5ChP8mIHo1Ehh1PPm_ZWlf5LYm4
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1WFJYasE9LmtyBf776a2oSGIC_ITRZNZNrHnJbByiHz8
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1z0qLmI61do7x0qw3rnK74msvcEZ4tEEVVOERiauTuaI
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1fVc04agXKNKopxuf3yInvn_EXCPuHxfctQqv9rarZIQ
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 19qZnBERiKqL8I8xdBdLdgD7fOFZsNL1NDdcz3TJ9Gkg
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1i-Tv07oc_5F72OdEdWf91bbLwoFEaXhmjjlo3QOQyrk
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1CEbUajiAYrz2tpwIPZdNCVGniK6leqx04Hmva2N4XM4
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 160R40mTuqkKNjME0oJVZAEM0186W6yAjl0SBUMSIIFY
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1fVc04agXKNKopxuf3yInvn_EXCPuHxfctQqv9rarZIQ
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1Jzh-bWmP8YOEwSm1WsYvN6c8BDgEzMsWsSYXrZ6uwds
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1A7VHFEYQVj0bigcnBi3pn4NngcNXxH35Croy3zrdvLY
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1kzKbaDRw0fxr-yzmfDdTWyiOBuuGprpgdsicAGMD8aw
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1U1hoywM09b-AUO7fIR9TflRSsc3Qu3XmxWmzEph3TmE
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1WrjmluBbaNBS8u_WZmREl02_oMy2zv6Kcdte82zR5yk
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1CEbUajiAYrz2tpwIPZdNCVGniK6leqx04Hmva2N4XM4
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1_ovH_D4cpuVTDp9z4DtrqQUeTTjLYI5RWrZ06FXx8fg
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1ui_dB_CbKz5qnLFJfaYdA-XS9iG1hgnMaVEl3u5OJLU
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1cX0p4FkT_mRKMngyAqtysHHhT0t8EXJLvv0IYzoS4sU
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1ZOEuDWmcBiEsrKUhpAXEZmTCecLn0urNu2XQv_2cBk4
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1_ovH_D4cpuVTDp9z4DtrqQUeTTjLYI5RWrZ06FXx8fg
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1Jzh-bWmP8YOEwSm1WsYvN6c8BDgEzMsWsSYXrZ6uwds
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1HOWZp6ESjGoYrybdR0LLcpWVlgxys_LqI8yxEeyFkpY
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 16s2vcEm8xd2lr7zC_y2qLL0yKH6m7cOmHuPPKage55Q
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1HOWZp6ESjGoYrybdR0LLcpWVlgxys_LqI8yxEeyFkpY
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1cX0p4FkT_mRKMngyAqtysHHhT0t8EXJLvv0IYzoS4sU
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1-rNRjrNOAEV45Ac7EPvNykLDmEiVpRqhv0128_d2ugI
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1U1hoywM09b-AUO7fIR9TflRSsc3Qu3XmxWmzEph3TmE
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1WVRprv2UdMlSY1fciu82upcO_aVl7lOnIFAm3XzHZ1Y
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 183Rr_Jxvqwr45hk959o51bozsYuQbvCrkin6Jrt3h-c
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1WVRprv2UdMlSY1fciu82upcO_aVl7lOnIFAm3XzHZ1Y
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1JK8IsrP_wGm2CMPI2TbhvrrYTfzAebH5h56mDeQugoo
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1q4oUT527mvm6Z99z5Wxh7cBVu8txJwaihnaXAdzz5fE
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1JK8IsrP_wGm2CMPI2TbhvrrYTfzAebH5h56mDeQugoo
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 183Rr_Jxvqwr45hk959o51bozsYuQbvCrkin6Jrt3h-c
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1In3SfwzdRjI3Ah63nCalgrUyf05qbnoE4sRvKc-CtxM
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1gFZKPYhQPM-kijc3Q3If-Bo34pmeCnwQsKxrcZcipOc
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 16s2vcEm8xd2lr7zC_y2qLL0yKH6m7cOmHuPPKage55Q
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1OuTseuOFrfIBG74nFD8ldyA-YuznzYMB3gwDCflNluI
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1DwsrAcC611l4MM1jZzGKCSsOz5KCi98HAECgfA2vnCk
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1J49oebTpPhUPtQ02Es7X4UHwi8LuKQLM8mvBxprbasM
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1H3xmRBsmrq-iOSwSuZdEQoGrqC-0Ka8yKpcocJWI2Qk
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 13a3Owyyk120IyPj-ibLkjMj-gJlc-GoLnREVR1v76gk
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1OuTseuOFrfIBG74nFD8ldyA-YuznzYMB3gwDCflNluI
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1HZw5L-rcza1iEFswUoacFN2CigYhHUmy1DoQHMUEnqc
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1crgyAPC7Va9ScwbcSEMrmtDqpSOHtDKKin4Qy6jIZbE
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1q4oUT527mvm6Z99z5Wxh7cBVu8txJwaihnaXAdzz5fE
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1tzWZf7txImz5JzVFhGZ4k0EaxduS7KijL62pzhbqJ0w
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4Fujvv5MfqbMW9TNERCYW1Tc1U
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1tzWZf7txImz5JzVFhGZ4k0EaxduS7KijL62pzhbqJ0w
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1sanBGafzkn5lzrqFgAJa2DQ-R872Rt-lCMkeCMP-xQs
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4Fujvv5MfqbLXBKUEpYMjlUa2c
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1H3xmRBsmrq-iOSwSuZdEQoGrqC-0Ka8yKpcocJWI2Qk
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1h5crBPICUl1tr_PjOHIuHLOePVpI944PpDwPZTdBgcQ
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1Ls7pHaoDUuWO8cn_3mF3FoKmxf2Wvwl3eRdDH7kxKoo
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1ZOEuDWmcBiEsrKUhpAXEZmTCecLn0urNu2XQv_2cBk4
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1LcAHCpfJPQo23LeE6raQ48ZltiQqZ0jwFGQp-cpOGks
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4Fujvv5MfqbcThuWDlsamUzRWs
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1LcAHCpfJPQo23LeE6raQ48ZltiQqZ0jwFGQp-cpOGks
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1rBFa02pYZiT1kfpCBNCLHQ97-1mp-NGpIATfc4iZboc
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4Fujvv5MfqbQlZtbVBaZ1lReUE
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1rBFa02pYZiT1kfpCBNCLHQ97-1mp-NGpIATfc4iZboc
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1QyQmNut60FNJByMNcv0NSyQvI1j1DLYTGtXn-VGarPE
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4Fujvv5MfqbSVFwbnNzeWFNcjA
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1sanBGafzkn5lzrqFgAJa2DQ-R872Rt-lCMkeCMP-xQs
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1tcAEYXU067CQcn9zzTM-ujz9NOjUOM1mRLUVgIIb80c
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4Fujvv5MfqbS1dYbGZBNUhFREE
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1QyQmNut60FNJByMNcv0NSyQvI1j1DLYTGtXn-VGarPE
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1mpiOXrgHa0SGIsNDnSOs70ArIAi_2vi0Ujw6TkSW2RQ
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4Fujvv5MfqbbFBMeWczTXVKX3M
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1HqGiMmQaR4mDbkV45J-_AVKUHDrBi_udpAJyQZSfKmw
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1QFQ7F7mNbpa6ZIo2Piy-sFb7--Rxdy5GYfgiIpwrJ8A
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4Fujvv5MfqbQ3RjQW1kUkVHRzg
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1mpiOXrgHa0SGIsNDnSOs70ArIAi_2vi0Ujw6TkSW2RQ
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1IY-_pt2CS9hoPlSk2144Rnf4jHH4Nv2L2eo4kPBTRiY
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4Fujvv5MfqbUkVUYXBYU0pKdlE
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1U6Y1Qg4RVxKdKyUPg8mb_RObDnC5QcEygOXYF4mXuSg
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1HqGiMmQaR4mDbkV45J-_AVKUHDrBi_udpAJyQZSfKmw
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4Fujvv5MfqbbVdyZ0dIeFRJNWc
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1LIFtsiVycPWLmFdtHr7XbUnluD8CigwSGemw4J6qwio
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1nOYHEZQN_i8dc6gZNDqguGEmCIU7IX62qngQE0Yvy7o
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1TTsNGYYccQIuKIydQ5Me_4KPhSVUcs-rpcoksBh-Yao
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1t8jf4y8CJQiul6bXc6OrvjnXjkPgONkTKdXGkj6e4Ps
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1U6Y1Qg4RVxKdKyUPg8mb_RObDnC5QcEygOXYF4mXuSg
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1SceQARvoMZsenh3mHNFZVorG4Y--Tk-S85NhP1QqXUc
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1bJZoExEi-jg9c7EimHL4Uc3XPLQsrmCZM_Dz_1M5OVg
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1t8jf4y8CJQiul6bXc6OrvjnXjkPgONkTKdXGkj6e4Ps
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1B37ygx-Iwh0EpS1c5fqpbK6AqE39m6ao4WD4uMWknzc
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1KfPb3dCRNiKJ-_mj-L5IdTZYQRTQo6xd2jDkCL94W1w
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1bJZoExEi-jg9c7EimHL4Uc3XPLQsrmCZM_Dz_1M5OVg
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1e9ijaiN6UeeWdszruJusWJvcERPDFZxm47zPkASOsTo
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1QCHW4IQHA2vCa1Yoxak6ciYnhE7qlwNW_fnOoSBMEG0
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1LIFtsiVycPWLmFdtHr7XbUnluD8CigwSGemw4J6qwio
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 13-vzOM3RA1SHdKRTAsFyLnLbbGlbUx9AV99Q_c95VXs
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1qzyADvsj4voj5Gk1RxlbUhvMUx52JS_4Lz0Rub4nDAI
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1KfPb3dCRNiKJ-_mj-L5IdTZYQRTQo6xd2jDkCL94W1w
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1OUKhIKEYHvySvAKVYyxahfwA7aNRDTgUuCKhW_72aF4
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 15l9f_tZzB4B4ByKbuD5fJa0bwdk_YqiSmSg62w5TU4E
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1QCHW4IQHA2vCa1Yoxak6ciYnhE7qlwNW_fnOoSBMEG0
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1ICn3A7OdVPnhEX3jPkQfMvLu_P3QKtQO_wb5Ds5Rs6Q
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1fb6O0E3ND3FngBsYCfiFvTf5C7xDmIyjFbxCEQGeQK0
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 15l9f_tZzB4B4ByKbuD5fJa0bwdk_YqiSmSg62w5TU4E
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1B-r50uSqygoVn0leRm1HUNgCfj7cTXCgZ-KrUqd8EyE
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1aOrKFEEEphoSmQXNpvXYE8OVqfpq4Cm0_pavpJnHNhg
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1fb6O0E3ND3FngBsYCfiFvTf5C7xDmIyjFbxCEQGeQK0
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1ISa7kCERN_ZasqG1xx_SlUxIBqIShR61bruIFiW0dyg
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 11WIU2snHtcamnb9iQszGuvQwhOALT-Gy
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1qzyADvsj4voj5Gk1RxlbUhvMUx52JS_4Lz0Rub4nDAI
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1JfK1iJRQ_0W5VQYPAktucbe6JWwyTjTbs6l_keXVFj4
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 15T7jFID6g5L9jNgtFSqVnNVFuqL7BqlHq9w9uB3CamE
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 15A7uqZ5m_7jqIYz5NVUyM0cmStEbSTcezN7qTo0wwXA
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 11KNQSupvOIHe8RyMtVPDhxRpxDE9qIJVGgsB0sGTA4A
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1HZw5L-rcza1iEFswUoacFN2CigYhHUmy1DoQHMUEnqc
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1WFJYasE9LmtyBf776a2oSGIC_ITRZNZNrHnJbByiHz8
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1J49oebTpPhUPtQ02Es7X4UHwi8LuKQLM8mvBxprbasM
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1e9hHpoi-yodBw-cH5ChP8mIHo1Ehh1PPm_ZWlf5LYm4
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1TdlhubLVUoi_6U9xaVK42KshMOaBIF7x-rsMQfwC8ZY
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1aOrKFEEEphoSmQXNpvXYE8OVqfpq4Cm0_pavpJnHNhg
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 196_rMcr8M0kh_jhQ7LjUjO23bKnhwLu7rm9IwA-8o_I
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 15A7uqZ5m_7jqIYz5NVUyM0cmStEbSTcezN7qTo0wwXA
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1tEY2XbnyEkH5bOQ0y0HmWgJ2vZ5tKsrjh7qZYjdWAyg
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1GRvwZGIxky-TRmGLbc-oCJiLZtK5Ah0T5jP-i5pm6Rw
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1tEY2XbnyEkH5bOQ0y0HmWgJ2vZ5tKsrjh7qZYjdWAyg
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1paMIja_wv-EbKRew-srBJbENjpnd4oEQ
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1WFJYasE9LmtyBf776a2oSGIC_ITRZNZNrHnJbByiHz8
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 19qZnBERiKqL8I8xdBdLdgD7fOFZsNL1NDdcz3TJ9Gkg
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 14pMVX8f56_tVnj6w8Wk2fhKuUirSBrf6
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1h5crBPICUl1tr_PjOHIuHLOePVpI944PpDwPZTdBgcQ
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 13-_VonQ5T-8nDBeEnO6umd4XicnvW_5m
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 10M2HsNol6IOHe6wMXb0WkJV9bmy2445a
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 160R40mTuqkKNjME0oJVZAEM0186W6yAjl0SBUMSIIFY
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1b-WTM2ekE1k6pPqFt0v7fa-myJ3Yvhg-vFT_zOs-DA4
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1tcAEYXU067CQcn9zzTM-ujz9NOjUOM1mRLUVgIIb80c
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 19qZnBERiKqL8I8xdBdLdgD7fOFZsNL1NDdcz3TJ9Gkg
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 11WIU2snHtcamnb9iQszGuvQwhOALT-Gy
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1UvcAx8uccrerf4uud0w1zvsAsbMSJfyqo298Dh_bq_M
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1QFQ7F7mNbpa6ZIo2Piy-sFb7--Rxdy5GYfgiIpwrJ8A
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1A7VHFEYQVj0bigcnBi3pn4NngcNXxH35Croy3zrdvLY
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1IY-_pt2CS9hoPlSk2144Rnf4jHH4Nv2L2eo4kPBTRiY
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1i-Tv07oc_5F72OdEdWf91bbLwoFEaXhmjjlo3QOQyrk
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 160R40mTuqkKNjME0oJVZAEM0186W6yAjl0SBUMSIIFY
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4Fujvv5MfqbdF81NHdULUNwMElJTF8xb0p6eUZnbTRjTUdJ
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1WrjmluBbaNBS8u_WZmREl02_oMy2zv6Kcdte82zR5yk
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 12msYuSI-rqvfXROgoGjtxN3Y9AlT3SnRTd6Om5xOxmM
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4z70ztg3cLKZGIxSDlKdTJUalU
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 11WIU2snHtcamnb9iQszGuvQwhOALT-Gy
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1WrjmluBbaNBS8u_WZmREl02_oMy2zv6Kcdte82zR5yk
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1z0qLmI61do7x0qw3rnK74msvcEZ4tEEVVOERiauTuaI
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1OuTseuOFrfIBG74nFD8ldyA-YuznzYMB3gwDCflNluI
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0BzbrKEZKhQBBa29nNnJ1aHhtOGc
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1HdWWgJDh4IA7T550gANGtjqDNvq0AwP0serPT4qI34k
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0BzbrKEZKhQBBVmlTMjhIUWJHcWs
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1tzWZf7txImz5JzVFhGZ4k0EaxduS7KijL62pzhbqJ0w
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4z70ztg3cLKUmJnWkNEbFhYWGM
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1kzKbaDRw0fxr-yzmfDdTWyiOBuuGprpgdsicAGMD8aw
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0BzbrKEZKhQBBVEVjbDVFb1J2STA
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1ZBA6pHQ0vfqgMprDjRS0-PqUaeusoF5Z
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0BzbrKEZKhQBBVnVDaU1jM2VWdFU
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1HZw5L-rcza1iEFswUoacFN2CigYhHUmy1DoQHMUEnqc
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1fVc04agXKNKopxuf3yInvn_EXCPuHxfctQqv9rarZIQ
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0BzbrKEZKhQBBdFRTbEt1bGRKbmc
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1h_QnPXYHWUF7zbH2p5gxqdNXykk5tjvgAjmPby88KEY
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0BzbrKEZKhQBBYWpHbEZZbng2ZGs
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1CEbUajiAYrz2tpwIPZdNCVGniK6leqx04Hmva2N4XM4
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1In3SfwzdRjI3Ah63nCalgrUyf05qbnoE4sRvKc-CtxM
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0BzbrKEZKhQBBeThIR1hsY1ZQc0k
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1rBFa02pYZiT1kfpCBNCLHQ97-1mp-NGpIATfc4iZboc
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0BzbrKEZKhQBBY2dEZmFpSlpZcTA
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1U1hoywM09b-AUO7fIR9TflRSsc3Qu3XmxWmzEph3TmE
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4z70ztg3cLKTmh5R1FjbmhUUHc
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1LcAHCpfJPQo23LeE6raQ48ZltiQqZ0jwFGQp-cpOGks
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1Jzh-bWmP8YOEwSm1WsYvN6c8BDgEzMsWsSYXrZ6uwds
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0BzbrKEZKhQBBcGdnX0ZFSmNnbTQ
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4Fujvv5MfqbR2wzLXhmYWRMUnc
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1sanBGafzkn5lzrqFgAJa2DQ-R872Rt-lCMkeCMP-xQs
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1_ovH_D4cpuVTDp9z4DtrqQUeTTjLYI5RWrZ06FXx8fg
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0BzbrKEZKhQBBTzdQYmhScV9iQkk
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0BzbrKEZKhQBBZzlLYTFZOUtFcGs
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1h5crBPICUl1tr_PjOHIuHLOePVpI944PpDwPZTdBgcQ
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1HOWZp6ESjGoYrybdR0LLcpWVlgxys_LqI8yxEeyFkpY
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4Fujvv5MfqbZEpFRGE3N01rWmc
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1Fcu596A9fBLH_FqjazRNvph6sCH0_ER5
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 18K3OuWAM4foGW6Bc6xyG5EkXB8bPPyb9gJRmLrqekxw
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1cX0p4FkT_mRKMngyAqtysHHhT0t8EXJLvv0IYzoS4sU
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4Fujvv5MfqbUnFPejgxa05BanM
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1QyQmNut60FNJByMNcv0NSyQvI1j1DLYTGtXn-VGarPE
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B314tJw3ioySWWNRUlI1YXdyV2s
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1WVRprv2UdMlSY1fciu82upcO_aVl7lOnIFAm3XzHZ1Y
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0BzbrKEZKhQBBcnFpZDZmY1FUN2M
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1tcAEYXU067CQcn9zzTM-ujz9NOjUOM1mRLUVgIIb80c
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4z70ztg3cLKY2ExUlY4eVhZbXc
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1JK8IsrP_wGm2CMPI2TbhvrrYTfzAebH5h56mDeQugoo
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1JBr8ak8uLgevfUPXiXaob3raeuJxO5ri
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1A7VHFEYQVj0bigcnBi3pn4NngcNXxH35Croy3zrdvLY
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0BzbrKEZKhQBBTTNQaU1fZEYwVHc
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 16s2vcEm8xd2lr7zC_y2qLL0yKH6m7cOmHuPPKage55Q
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1bOiRueTNb-szlBgWx0VjakLIeWa3vEM68L7XE9dLSWY
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 16_RoxclGNghHaLcs-KUC4R7ke30A7-XlvFubV4fXyAI
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1xa8-X24w6y-atIg6KabP1Txg0zQARutgJ0PlEFthbDw
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4Fujvv5MfqbUWw1OGZLaVJYM25ic2dkVUp4YU9MeUYxempN
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1ZOEuDWmcBiEsrKUhpAXEZmTCecLn0urNu2XQv_2cBk4
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1ZOEuDWmcBiEsrKUhpAXEZmTCecLn0urNu2XQv_2cBk4
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 18K3OuWAM4foGW6Bc6xyG5EkXB8bPPyb9gJRmLrqekxw
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 16s2vcEm8xd2lr7zC_y2qLL0yKH6m7cOmHuPPKage55Q
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B1WNUX-O8FMUeldabERKSUsxWUk
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1mpiOXrgHa0SGIsNDnSOs70ArIAi_2vi0Ujw6TkSW2RQ
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 183Rr_Jxvqwr45hk959o51bozsYuQbvCrkin6Jrt3h-c
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1qboc3ylwNG3cSsWTkguNuootVmDBCvIBJZ1FQSmmBQw
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1q4oUT527mvm6Z99z5Wxh7cBVu8txJwaihnaXAdzz5fE
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B1WNUX-O8FMUczhXV0hYUGJPYms
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1QFQ7F7mNbpa6ZIo2Piy-sFb7--Rxdy5GYfgiIpwrJ8A
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1OuTseuOFrfIBG74nFD8ldyA-YuznzYMB3gwDCflNluI
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B1WNUX-O8FMUR1I3ZXpOR1kySXc
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1H3xmRBsmrq-iOSwSuZdEQoGrqC-0Ka8yKpcocJWI2Qk
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4Fujvv5MfqbdF81NHdULUNwMElJTF8xb0p6eUZnbTRjTUdJ
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 183Rr_Jxvqwr45hk959o51bozsYuQbvCrkin6Jrt3h-c
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1tzWZf7txImz5JzVFhGZ4k0EaxduS7KijL62pzhbqJ0w
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1In3SfwzdRjI3Ah63nCalgrUyf05qbnoE4sRvKc-CtxM
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1q4oUT527mvm6Z99z5Wxh7cBVu8txJwaihnaXAdzz5fE
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4Fujvv5Mfqbajg5cmFoOVFTUWoxMmdiQS1BNlBjMl83Nml3
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1HZw5L-rcza1iEFswUoacFN2CigYhHUmy1DoQHMUEnqc
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1sd2IyZnVT_UW3DOFdi9bIzzAtNBok0WFugmnnJvJf38
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1rBFa02pYZiT1kfpCBNCLHQ97-1mp-NGpIATfc4iZboc
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1H3xmRBsmrq-iOSwSuZdEQoGrqC-0Ka8yKpcocJWI2Qk
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1hT75vuG-KNRGyubZPjPsAhNfBP4PDKF441q6cY8qNaA
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1LcAHCpfJPQo23LeE6raQ48ZltiQqZ0jwFGQp-cpOGks
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 10RFTKVIK5QO5OF0g3c6Gxp88sXzUEiCBSBWuDQsINDc
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1U6Y1Qg4RVxKdKyUPg8mb_RObDnC5QcEygOXYF4mXuSg
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1sanBGafzkn5lzrqFgAJa2DQ-R872Rt-lCMkeCMP-xQs
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1Ls7pHaoDUuWO8cn_3mF3FoKmxf2Wvwl3eRdDH7kxKoo
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1h5crBPICUl1tr_PjOHIuHLOePVpI944PpDwPZTdBgcQ
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4Fujvv5MfqbLXBKUEpYMjlUa2c
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1HqGiMmQaR4mDbkV45J-_AVKUHDrBi_udpAJyQZSfKmw
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1QyQmNut60FNJByMNcv0NSyQvI1j1DLYTGtXn-VGarPE
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4Fujvv5MfqbcThuWDlsamUzRWs
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1tcAEYXU067CQcn9zzTM-ujz9NOjUOM1mRLUVgIIb80c
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4Fujvv5MfqbTGNDT3psVktMNnQ3N3NPQTJZVlk5ekVBSlRj
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1t8jf4y8CJQiul6bXc6OrvjnXjkPgONkTKdXGkj6e4Ps
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1mpiOXrgHa0SGIsNDnSOs70ArIAi_2vi0Ujw6TkSW2RQ
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4Fujvv5MfqbMmlId3NYTGg1T2pwazhoSHZYcXZsOUxtamQ4
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1QFQ7F7mNbpa6ZIo2Piy-sFb7--Rxdy5GYfgiIpwrJ8A
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4Fujvv5MfqbZ2JkT01HODJadzQ
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1LIFtsiVycPWLmFdtHr7XbUnluD8CigwSGemw4J6qwio
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1IY-_pt2CS9hoPlSk2144Rnf4jHH4Nv2L2eo4kPBTRiY
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4Fujvv5MfqbS1JPNm1SclVzVXhtVG5lSDlHOHU0WXdEakVZ
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1HqGiMmQaR4mDbkV45J-_AVKUHDrBi_udpAJyQZSfKmw
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4Fujvv5MfqbSVFwbnNzeWFNcjA
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1bJZoExEi-jg9c7EimHL4Uc3XPLQsrmCZM_Dz_1M5OVg
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1U6Y1Qg4RVxKdKyUPg8mb_RObDnC5QcEygOXYF4mXuSg
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4Fujvv5MfqbMHpzR1pIQ3ZYcHBaSi1FTUpWZkpBOWNHTEM4
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1-19u69ClVXXMtNB8M0mqDVEj-qJ9ABLSE3sabKD3x-c
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4Fujvv5MfqbNE1zbGxyMWRfbjFuMDlwd0RhRzdNMVJwSHEw
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1QCHW4IQHA2vCa1Yoxak6ciYnhE7qlwNW_fnOoSBMEG0
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1t8jf4y8CJQiul6bXc6OrvjnXjkPgONkTKdXGkj6e4Ps
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4Fujvv5MfqbQ3RjQW1kUkVHRzg
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1LIFtsiVycPWLmFdtHr7XbUnluD8CigwSGemw4J6qwio
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4Fujvv5MfqbX2RMejlDSkc4bHc
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1qzyADvsj4voj5Gk1RxlbUhvMUx52JS_4Lz0Rub4nDAI
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1KfPb3dCRNiKJ-_mj-L5IdTZYQRTQo6xd2jDkCL94W1w
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4Fujvv5MfqbY1Q1TjU0LWxhOGM
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1bJZoExEi-jg9c7EimHL4Uc3XPLQsrmCZM_Dz_1M5OVg
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4Fujvv5MfqbRjB5bGRlTlZBZ09xN2hjOVphQ3Q5eGVaa2tR
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1IY-_pt2CS9hoPlSk2144Rnf4jHH4Nv2L2eo4kPBTRiY
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1QCHW4IQHA2vCa1Yoxak6ciYnhE7qlwNW_fnOoSBMEG0
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4Fujvv5MfqbUkVUYXBYU0pKdlE
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 15l9f_tZzB4B4ByKbuD5fJa0bwdk_YqiSmSg62w5TU4E
+sql.py:25,22:11:27:load_from_dict:129:jYJwUQ -- len of id map 60 len of files 60
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4Fujvv5Mfqbd1AtVU1TNmJ6b28
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1qzyADvsj4voj5Gk1RxlbUhvMUx52JS_4Lz0Rub4nDAI
+sql.py:25,22:11:27:load_from_dict:134:jYJwUQ -- starting bulk save
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4Fujvv5MfqbNGswWE5uS19Pc00xQ183SjhGdlVRcGRSSVBj
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1fb6O0E3ND3FngBsYCfiFvTf5C7xDmIyjFbxCEQGeQK0
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4Fujvv5MfqbbVdyZ0dIeFRJNWc
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 15A7uqZ5m_7jqIYz5NVUyM0cmStEbSTcezN7qTo0wwXA
+sql.py:25,22:11:27:adder:86:jYJwUQ -- rem 60/60
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4Fujvv5MfqbX2RMejlDSkc4bHc
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1aOrKFEEEphoSmQXNpvXYE8OVqfpq4Cm0_pavpJnHNhg
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4Fujvv5MfqbbFBMeWczTXVKX3M
+sql.py:25,22:11:27:load_from_dict:129:jYJwUQ -- len of id map 82 len of files 82
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4Fujvv5Mfqbd1AtVU1TNmJ6b28
+sql.py:25,22:11:27:load_from_dict:134:jYJwUQ -- starting bulk save
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0BzbrKEZKhQBBS0N1TENrNjktcHc
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1ui_dB_CbKz5qnLFJfaYdA-XS9iG1hgnMaVEl3u5OJLU
+sql.py:25,22:11:27:adder:86:jYJwUQ -- rem 60/82
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1e9hHpoi-yodBw-cH5ChP8mIHo1Ehh1PPm_ZWlf5LYm4
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1e9hHpoi-yodBw-cH5ChP8mIHo1Ehh1PPm_ZWlf5LYm4
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1NO1CVAUsBSgghggdLH2X4YQ2XNaEkDmr7vK156pSCxk
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1C-4h0tKIk0rSJcy9tJJPXZOtnJsZuYK81U4earWoSDY
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1-rNRjrNOAEV45Ac7EPvNykLDmEiVpRqhv0128_d2ugI
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1C-4h0tKIk0rSJcy9tJJPXZOtnJsZuYK81U4earWoSDY
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 1xa8-X24w6y-atIg6KabP1Txg0zQARutgJ0PlEFthbDw
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0B4Fujvv5MfqbNGswWE5uS19Pc00xQ183SjhGdlVRcGRSSVBj
+sql.py:25,22:11:27:load_from_dict:111:jYJwUQ -- duplicated fileid found, skipping
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0BzbrKEZKhQBBd2JtbjR0NlBZaXc
+sql.py:25,22:11:27:load_from_dict:109:jYJwUQ -- File: 0BzbrKEZKhQBBY204R2c2S3ZxbnM
+sql.py:25,22:11:27:load_from_dict:129:jYJwUQ -- len of id map 101 len of files 101
+sql.py:25,22:11:27:load_from_dict:134:jYJwUQ -- starting bulk save
+sql.py:25,22:11:27:adder:86:jYJwUQ -- rem 60/101
+sql.py:25,22:11:27:start:203:jYJwUQ -- Finished loading pickles
+configlo:25,22:11:27:handle_exception:82:jYJwUQ -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "/home/henry/pydocs/processing/sql.py", line 236, in start
+    file_obj = fileid_obj_map[n]
+NameError: name 'fileid_obj_map' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 193, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/henry/pydocs/processing/sql.py", line 271, in <module>
+    start("testing" + datetime.now().__str__(), wpath)
+  File "/home/henry/pydocs/processing/sql.py", line 240, in start
+    fileid_obj_map[n] = file_obj
+NameError: name 'fileid_obj_map' is not defined
+configlo:25,22:11:27:mp_sendmail:115:jYJwUQ -- sending mail
+configlo:25,22:11:29:handle_exception:86:jYJwUQ -- exiting! from sshook

@@ -1,4 +1,5 @@
 import pandas as pd
+from multiprocessing import Process
 import os
 import ujson as json
 import sys
@@ -23,6 +24,10 @@ from google.auth.transport.requests import Request
 import logging
 
 
+if (random.random() < 0.2 ):
+    os.environ["PROFILE"] = "true"
+
+
 logger = logging.getLogger(__name__)
 
 class TestUtil:
@@ -34,6 +39,7 @@ class TestUtil:
     pathedFiles = {}
     workingPath = None
     pickleIndex = []
+    processedcount = 0
 
 
     @classmethod
@@ -70,45 +76,91 @@ class TestUtil:
 
     @classmethod
     async def print_size(cls, files, endEvent):
-        if ("FLASKDBG" in os.environ):
-            tracemalloc.start(10)
+        cls.starttime = time.time()
+        if ("PROFILE" in os.environ):
+            tracemalloc.start()
             cls.snapshot = tracemalloc.take_snapshot()
         while not endEvent.is_set():
-            logger.warning('%sMemory usage: %s (kb)%s','-'*15,resource.getrusage(resource.RUSAGE_SELF).ru_maxrss, '-'*15)
+            logger.warning('\n\n%sMemory usage: %s (kb)%s%d mins since start','-'*15,resource.getrusage(resource.RUSAGE_SELF).ru_maxrss, '-'*15,
+                    (time.time() - cls.starttime)/60)
 
-            if("FLASKDBG" in os.environ):
+            if("PROFILE" in os.environ):
                 sns = tracemalloc.take_snapshot()
-                for i in sns.compare_to(cls.snapshot, 'lineno')[0:10]:
+                for i in sns.compare_to(cls.snapshot, 'lineno')[0:5]:
                     logger.info(i)
 
-                logger.info('%s%s%s','\n'*2, '-'*30, '\n'*2)
+                logger.info('%s','-'*60)
 
-                for i in sns.statistics('lineno')[0:10]:
+                for i in sns.statistics('lineno')[0:5]:
                     logger.info(i)
 
                 cls.snapshot = sns
 
             gc.collect()
 
-            totsize = files.qsize() + len(cls.pathedFiles)
-            logger.info("%s\n%d/%d at %s\ndumped: %d",cls.workingPath,len(cls.pathedFiles), totsize, datetime.now().__str__(),
-                    cls.fileCounter)
+            totsize = files.qsize() + len(cls.pathedFiles) + cls.processedcount
 
 
-            if(len(cls.pathedFiles)>20):
-                cls.fileCounter +=1
-                _filename = cls.workingPath + str(cls.fileCounter) + '.pathed'
-                pickle.dump(cls.pathedFiles, open(_filename, 'wb'))
-                logger.info("dumped pathed files at %s, length %d", _filename, len(cls.pathedFiles))
-                cls.pathedFiles = {}
-                cls.pickleIndex.append(_filename)
+            logger.info("%s\n%d/%d discovered items at %s\ndump count: %d", \
+                    cls.workingPath,len(cls.pathedFiles) + cls.processedcount, totsize, datetime.now().__str__() \
+                    ,cls.fileCounter)
+
+            #Temp var for thread
+            p = None
+
+            if len(cls.pathedFiles)>20:
+                cls.dump_files()
+
+                p = configlog.sendmail(return_thread = True)
 
 
-            _sleep_time = 40
+            _sleep_time = 30
             for i in range(3):
-                print(f"{i*_sleep_time/3} out of {_sleep_time} till next output      ", end = "\r", flush = True)
+                #print(f"{i*_sleep_time/3} out of {_sleep_time} till next output      ", end = "\r", flush = True)
                 await asyncio.sleep(_sleep_time/3)
 
+            if p:
+                p.join()
+
+    @classmethod
+    def dump_files(cls):
+
+        histo = {}
+        
+        for i in cls.pathedFiles:
+            #list of datetime timestamps for each file
+            histo[i] = [None, None]
+            histo[i] = cls.compute_hist(cls.pathedFiles[i])
+
+        length = len(cls.pathedFiles)
+        cls.processedcount +=length
+        cls.fileCounter +=1
+
+        _filename = cls.workingPath + str(cls.fileCounter) + '.pathed'
+
+        p = Process(target = mp_dump, args = (histo, _filename,))
+        p.start();
+
+
+
+        #Dumped histo
+
+
+        logger.info("histed files at %s, length %d", _filename, length)
+
+        cls.pathedFiles = {}
+
+        cls.pickleIndex.append(_filename)
+
+        p.join()
+
+    @classmethod
+    def compute_hist(cls, data, bin_method = 'fd'):
+
+        _ret = np.histogram(data, bins = 'fd')
+
+        #Return list of values, bins
+        return [_ret[0].tolist(), _ret[1].tolist()]
 
 
 
@@ -176,7 +228,7 @@ async def API_RESET(seconds = 6, throttle = None, decrease = False):
     await asyncio.sleep(secs)
     return
 
-async def tryGetQueue(queue: asyncio.Queue, repeatTimes:int = 10, interval:float = 3.5, name:str = ""):
+async def tryGetQueue(queue: asyncio.Queue, repeatTimes:int = 5, interval:float = 3.5, name:str = ""):
     output = None
     timesWaited = 0
     while(output==None):
@@ -187,7 +239,10 @@ async def tryGetQueue(queue: asyncio.Queue, repeatTimes:int = 10, interval:float
             if(timesWaited>repeatTimes):
                 return -1
             logger.debug(name + "waiting %d %d", timesWaited, repeatTimes)
-            await asyncio.sleep(interval + random.randint(0, 15))
+            await asyncio.sleep(interval + random.randint(0, 5))
     return output
 
 
+
+def mp_dump(info, filename):
+    pickle.dump(info, open(filename, 'wb'))

@@ -1,0 +1,16 @@
+sql.py:25,21:14:27:start:118:j5cxHw -- STARTING SQL testing2020-04-25 21:14:27.680539 /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+sql.py:25,21:14:27:start:120:j5cxHw -- setting sys except hook
+sql.py:25,21:14:27:start:130:j5cxHw -- Owner name: testing2020-04-04 25 AprfkvYz5RoSw
+configlo:25,21:14:28:handle_exception:82:j5cxHw -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 193, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/henry/pydocs/processing/sql.py", line 292, in <module>
+    wpath = "/home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/"
+  File "/home/henry/pydocs/processing/sql.py", line 133, in start
+    sess.remove()
+AttributeError: 'Session' object has no attribute 'remove'
+configlo:25,21:14:28:mp_sendmail:115:j5cxHw -- sending mail
+configlo:25,21:14:29:handle_exception:86:j5cxHw -- exiting! from sshook

@@ -1,0 +1,307 @@
+sql.py:25,12:56:51:<module>:24:fTxhfA -- Driver%3D%7BODBC+Driver+17+for+SQL+Server%7D%3BServer%3Dtcp%3Apydoc-db.database.windows.net%2C1433%3BDatabase%3Dpydoc-db%3BUid%3Dhenry2833%3BPwd%3D%7BInfoip32%7D%3BEncrypt%3Dyes%3BTrustServerCertificate%3Dno%3BConnection+Timeout%3D30%3B
+dsds.py:25,12:56:54:start:18:fTxhfA -- start
+get_file:25,12:56:54:loadFiles:266:fTxhfA -- Start loadFiles, 527e4afc-4598-400f-8536-afa5324f0ba4 1ytJocI9f4gvmpnwLNNfpQzRPhcFs5EzR
+requests:25,12:56:54:__call__:117:fTxhfA -- Making request: POST https://oauth2.googleapis.com/token
+connecti:25,12:56:54:_new_conn:817:fTxhfA -- Starting new HTTPS connection (1): oauth2.googleapis.com
+connecti:25,12:56:54:_make_request:393:fTxhfA -- https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+selector:25,12:56:54:__init__:59:fTxhfA -- Using selector: EpollSelector
+test_uti:25,12:56:54:print_size:82:fTxhfA -- ---------------Memory usage: 98284 (kb)---------------0 mins since start
+test_uti:25,12:56:54:print_size:100:fTxhfA -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/0 at 2020-04-25 12:56:54.294608
+dumped: 0
+get_file:25,12:56:54:getIdsRecursive:53:fTxhfA -- getIdsRecursive looping
+get_file:25,12:56:54:getIdsRecursive:53:fTxhfA -- getIdsRecursive looping
+test_uti:25,12:56:55:tryGetQueue:205:fTxhfA -- getIdswaiting 1 5
+get_file:25,12:56:55:getIdsRecursive:53:fTxhfA -- getIdsRecursive looping
+test_uti:25,12:56:55:print_size:82:fTxhfA -- ---------------Memory usage: 98472 (kb)---------------0 mins since start
+test_uti:25,12:56:55:print_size:100:fTxhfA -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/0 at 2020-04-25 12:56:55.322651
+dumped: 0
+test_uti:25,12:56:55:tryGetQueue:205:fTxhfA -- getIdswaiting 1 5
+get_file:25,12:56:55:getIdsRecursive:53:fTxhfA -- getIdsRecursive looping
+test_uti:25,12:56:55:tryGetQueue:205:fTxhfA -- getIdswaiting 1 5
+get_file:25,12:56:55:getRevision:163:fTxhfA -- getRevision looping
+gdoc.py:25,12:56:55:async_init:24:fTxhfA -- async init called
+test_uti:25,12:56:56:print_size:82:fTxhfA -- ---------------Memory usage: 98472 (kb)---------------0 mins since start
+test_uti:25,12:56:56:print_size:100:fTxhfA -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/2 at 2020-04-25 12:56:56.352272
+dumped: 0
+gdoc.py:25,12:56:56:get_last_revision:54:fTxhfA -- last revision id 546
+gdoc.py:25,12:56:56:async_init:31:fTxhfA -- after await 546
+get_file:25,12:56:57:getRevision:187:fTxhfA -- google doc
+get_file:25,12:56:57:getRevision:163:fTxhfA -- getRevision looping
+gdoc.py:25,12:56:57:async_init:24:fTxhfA -- async init called
+test_uti:25,12:56:57:print_size:82:fTxhfA -- ---------------Memory usage: 100256 (kb)---------------0 mins since start
+test_uti:25,12:56:57:print_size:100:fTxhfA -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+1/2 at 2020-04-25 12:56:57.381058
+dumped: 0
+test_uti:25,12:56:58:tryGetQueue:205:fTxhfA -- getIdswaiting 2 5
+test_uti:25,12:56:58:print_size:82:fTxhfA -- ---------------Memory usage: 100256 (kb)---------------0 mins since start
+test_uti:25,12:56:58:print_size:100:fTxhfA -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+1/2 at 2020-04-25 12:56:58.409933
+dumped: 0
+gdoc.py:25,12:56:58:get_last_revision:54:fTxhfA -- last revision id 2502
+gdoc.py:25,12:56:58:async_init:31:fTxhfA -- after await 2502
+test_uti:25,12:56:59:tryGetQueue:205:fTxhfA -- getIdswaiting 2 5
+get_file:25,12:56:59:getRevision:187:fTxhfA -- google doc
+get_file:25,12:56:59:getRevision:163:fTxhfA -- getRevision looping
+get_file:25,12:56:59:getRevision:163:fTxhfA -- getRevision looping
+test_uti:25,12:56:59:print_size:82:fTxhfA -- ---------------Memory usage: 105248 (kb)---------------0 mins since start
+test_uti:25,12:56:59:print_size:100:fTxhfA -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+2/3 at 2020-04-25 12:56:59.440701
+dumped: 0
+gdoc.py:25,12:57:00:async_init:24:fTxhfA -- async init called
+test_uti:25,12:57:00:tryGetQueue:205:fTxhfA -- getRevisionwaiting 1 5
+test_uti:25,12:57:00:print_size:82:fTxhfA -- ---------------Memory usage: 105248 (kb)---------------0 mins since start
+test_uti:25,12:57:00:print_size:100:fTxhfA -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+2/2 at 2020-04-25 12:57:00.469875
+dumped: 0
+gdoc.py:25,12:57:00:get_last_revision:54:fTxhfA -- last revision id 647
+gdoc.py:25,12:57:00:async_init:31:fTxhfA -- after await 647
+get_file:25,12:57:01:getRevision:187:fTxhfA -- google doc
+get_file:25,12:57:01:getRevision:163:fTxhfA -- getRevision looping
+test_uti:25,12:57:01:tryGetQueue:205:fTxhfA -- getRevisionwaiting 1 5
+test_uti:25,12:57:01:tryGetQueue:205:fTxhfA -- getIdswaiting 3 5
+test_uti:25,12:57:01:print_size:82:fTxhfA -- ---------------Memory usage: 105248 (kb)---------------0 mins since start
+test_uti:25,12:57:01:print_size:100:fTxhfA -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:57:01.499691
+dumped: 0
+get_file:25,12:57:01:getRevision:163:fTxhfA -- getRevision looping
+test_uti:25,12:57:02:print_size:82:fTxhfA -- ---------------Memory usage: 105248 (kb)---------------0 mins since start
+test_uti:25,12:57:02:print_size:100:fTxhfA -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:57:02.532726
+dumped: 0
+test_uti:25,12:57:03:print_size:82:fTxhfA -- ---------------Memory usage: 105248 (kb)---------------0 mins since start
+test_uti:25,12:57:03:print_size:100:fTxhfA -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:57:03.562383
+dumped: 0
+get_file:25,12:57:04:getRevision:163:fTxhfA -- getRevision looping
+test_uti:25,12:57:04:tryGetQueue:205:fTxhfA -- getIdswaiting 2 5
+test_uti:25,12:57:04:print_size:82:fTxhfA -- ---------------Memory usage: 105248 (kb)---------------0 mins since start
+test_uti:25,12:57:04:print_size:100:fTxhfA -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:57:04.594344
+dumped: 0
+get_file:25,12:57:05:getRevision:163:fTxhfA -- getRevision looping
+test_uti:25,12:57:05:print_size:82:fTxhfA -- ---------------Memory usage: 105248 (kb)---------------0 mins since start
+test_uti:25,12:57:05:print_size:100:fTxhfA -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:57:05.624584
+dumped: 0
+get_file:25,12:57:06:getRevision:163:fTxhfA -- getRevision looping
+test_uti:25,12:57:06:tryGetQueue:205:fTxhfA -- getRevisionwaiting 1 5
+test_uti:25,12:57:06:tryGetQueue:205:fTxhfA -- getRevisionwaiting 1 5
+test_uti:25,12:57:06:tryGetQueue:205:fTxhfA -- getRevisionwaiting 1 5
+test_uti:25,12:57:06:print_size:82:fTxhfA -- ---------------Memory usage: 105248 (kb)---------------0 mins since start
+test_uti:25,12:57:06:print_size:100:fTxhfA -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:57:06.655702
+dumped: 0
+get_file:25,12:57:07:getRevision:163:fTxhfA -- getRevision looping
+test_uti:25,12:57:07:print_size:82:fTxhfA -- ---------------Memory usage: 105248 (kb)---------------0 mins since start
+test_uti:25,12:57:07:print_size:100:fTxhfA -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:57:07.685866
+dumped: 0
+get_file:25,12:57:07:getRevision:163:fTxhfA -- getRevision looping
+get_file:25,12:57:08:getRevision:163:fTxhfA -- getRevision looping
+test_uti:25,12:57:08:print_size:82:fTxhfA -- ---------------Memory usage: 105248 (kb)---------------0 mins since start
+test_uti:25,12:57:08:print_size:100:fTxhfA -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:57:08.715701
+dumped: 0
+test_uti:25,12:57:09:print_size:82:fTxhfA -- ---------------Memory usage: 105248 (kb)---------------0 mins since start
+test_uti:25,12:57:09:print_size:100:fTxhfA -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:57:09.746568
+dumped: 0
+test_uti:25,12:57:09:tryGetQueue:205:fTxhfA -- getRevisionwaiting 2 5
+test_uti:25,12:57:10:print_size:82:fTxhfA -- ---------------Memory usage: 105248 (kb)---------------0 mins since start
+test_uti:25,12:57:10:print_size:100:fTxhfA -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:57:10.777502
+dumped: 0
+test_uti:25,12:57:11:tryGetQueue:205:fTxhfA -- getIdswaiting 4 5
+test_uti:25,12:57:11:tryGetQueue:205:fTxhfA -- getRevisionwaiting 2 5
+test_uti:25,12:57:11:print_size:82:fTxhfA -- ---------------Memory usage: 105248 (kb)---------------0 mins since start
+test_uti:25,12:57:11:print_size:100:fTxhfA -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:57:11.810547
+dumped: 0
+test_uti:25,12:57:12:tryGetQueue:205:fTxhfA -- getRevisionwaiting 1 5
+test_uti:25,12:57:12:tryGetQueue:205:fTxhfA -- getRevisionwaiting 1 5
+test_uti:25,12:57:12:tryGetQueue:205:fTxhfA -- getRevisionwaiting 1 5
+test_uti:25,12:57:12:print_size:82:fTxhfA -- ---------------Memory usage: 105248 (kb)---------------0 mins since start
+test_uti:25,12:57:12:print_size:100:fTxhfA -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:57:12.842955
+dumped: 0
+test_uti:25,12:57:13:print_size:82:fTxhfA -- ---------------Memory usage: 105248 (kb)---------------0 mins since start
+test_uti:25,12:57:13:print_size:100:fTxhfA -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:57:13.874480
+dumped: 0
+test_uti:25,12:57:14:tryGetQueue:205:fTxhfA -- getRevisionwaiting 2 5
+test_uti:25,12:57:14:print_size:82:fTxhfA -- ---------------Memory usage: 105248 (kb)---------------0 mins since start
+test_uti:25,12:57:14:print_size:100:fTxhfA -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:57:14.904625
+dumped: 0
+test_uti:25,12:57:15:tryGetQueue:205:fTxhfA -- getRevisionwaiting 2 5
+test_uti:25,12:57:15:print_size:82:fTxhfA -- ---------------Memory usage: 105248 (kb)---------------0 mins since start
+test_uti:25,12:57:15:print_size:100:fTxhfA -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:57:15.937182
+dumped: 0
+test_uti:25,12:57:16:tryGetQueue:205:fTxhfA -- getIdswaiting 3 5
+test_uti:25,12:57:16:tryGetQueue:205:fTxhfA -- getRevisionwaiting 3 5
+test_uti:25,12:57:16:print_size:82:fTxhfA -- ---------------Memory usage: 105248 (kb)---------------0 mins since start
+test_uti:25,12:57:16:print_size:100:fTxhfA -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:57:16.967579
+dumped: 0
+test_uti:25,12:57:17:tryGetQueue:205:fTxhfA -- getIdswaiting 5 5
+test_uti:25,12:57:17:print_size:82:fTxhfA -- ---------------Memory usage: 105248 (kb)---------------0 mins since start
+test_uti:25,12:57:18:print_size:100:fTxhfA -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:57:18.001267
+dumped: 0
+test_uti:25,12:57:18:tryGetQueue:205:fTxhfA -- getRevisionwaiting 1 5
+test_uti:25,12:57:18:tryGetQueue:205:fTxhfA -- getRevisionwaiting 2 5
+test_uti:25,12:57:19:print_size:82:fTxhfA -- ---------------Memory usage: 105248 (kb)---------------0 mins since start
+test_uti:25,12:57:19:print_size:100:fTxhfA -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:57:19.030233
+dumped: 0
+test_uti:25,12:57:20:print_size:82:fTxhfA -- ---------------Memory usage: 105248 (kb)---------------0 mins since start
+test_uti:25,12:57:20:print_size:100:fTxhfA -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:57:20.060241
+dumped: 0
+test_uti:25,12:57:20:tryGetQueue:205:fTxhfA -- getRevisionwaiting 4 5
+test_uti:25,12:57:21:print_size:82:fTxhfA -- ---------------Memory usage: 105248 (kb)---------------0 mins since start
+test_uti:25,12:57:21:print_size:100:fTxhfA -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:57:21.091190
+dumped: 0
+test_uti:25,12:57:22:print_size:82:fTxhfA -- ---------------Memory usage: 105248 (kb)---------------0 mins since start
+test_uti:25,12:57:22:print_size:100:fTxhfA -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:57:22.122395
+dumped: 0
+test_uti:25,12:57:22:tryGetQueue:205:fTxhfA -- getIdswaiting 3 5
+test_uti:25,12:57:22:tryGetQueue:205:fTxhfA -- getRevisionwaiting 2 5
+test_uti:25,12:57:22:tryGetQueue:205:fTxhfA -- getRevisionwaiting 2 5
+test_uti:25,12:57:23:print_size:82:fTxhfA -- ---------------Memory usage: 105248 (kb)---------------0 mins since start
+test_uti:25,12:57:23:print_size:100:fTxhfA -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:57:23.153506
+dumped: 0
+get_file:25,12:57:23:getRevision:163:fTxhfA -- getRevision looping
+test_uti:25,12:57:23:tryGetQueue:205:fTxhfA -- getRevisionwaiting 1 5
+test_uti:25,12:57:24:print_size:82:fTxhfA -- ---------------Memory usage: 105248 (kb)---------------0 mins since start
+test_uti:25,12:57:24:print_size:100:fTxhfA -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:57:24.184607
+dumped: 0
+test_uti:25,12:57:24:tryGetQueue:205:fTxhfA -- getRevisionwaiting 5 5
+test_uti:25,12:57:24:tryGetQueue:205:fTxhfA -- getRevisionwaiting 3 5
+test_uti:25,12:57:24:tryGetQueue:205:fTxhfA -- getRevisionwaiting 3 5
+test_uti:25,12:57:24:tryGetQueue:205:fTxhfA -- getRevisionwaiting 3 5
+test_uti:25,12:57:24:tryGetQueue:205:fTxhfA -- getRevisionwaiting 2 5
+test_uti:25,12:57:25:print_size:82:fTxhfA -- ---------------Memory usage: 105248 (kb)---------------0 mins since start
+test_uti:25,12:57:25:print_size:100:fTxhfA -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:57:25.218901
+dumped: 0
+test_uti:25,12:57:26:print_size:82:fTxhfA -- ---------------Memory usage: 105248 (kb)---------------0 mins since start
+test_uti:25,12:57:26:print_size:100:fTxhfA -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:57:26.252630
+dumped: 0
+test_uti:25,12:57:27:print_size:82:fTxhfA -- ---------------Memory usage: 105248 (kb)---------------0 mins since start
+test_uti:25,12:57:27:print_size:100:fTxhfA -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:57:27.283289
+dumped: 0
+test_uti:25,12:57:28:print_size:82:fTxhfA -- ---------------Memory usage: 105248 (kb)---------------0 mins since start
+test_uti:25,12:57:28:print_size:100:fTxhfA -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:57:28.312158
+dumped: 0
+test_uti:25,12:57:28:tryGetQueue:205:fTxhfA -- getRevisionwaiting 4 5
+test_uti:25,12:57:29:print_size:82:fTxhfA -- ---------------Memory usage: 105248 (kb)---------------0 mins since start
+test_uti:25,12:57:29:print_size:100:fTxhfA -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:57:29.346401
+dumped: 0
+test_uti:25,12:57:30:print_size:82:fTxhfA -- ---------------Memory usage: 105248 (kb)---------------0 mins since start
+test_uti:25,12:57:30:print_size:100:fTxhfA -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:57:30.378649
+dumped: 0
+get_file:25,12:57:30:getIdsRecursive:66:fTxhfA -- getId task exiting
+test_uti:25,12:57:30:tryGetQueue:205:fTxhfA -- getRevisionwaiting 4 5
+test_uti:25,12:57:31:tryGetQueue:205:fTxhfA -- getIdswaiting 4 5
+test_uti:25,12:57:31:print_size:82:fTxhfA -- ---------------Memory usage: 105248 (kb)---------------0 mins since start
+test_uti:25,12:57:31:print_size:100:fTxhfA -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:57:31.410169
+dumped: 0
+get_file:25,12:57:31:getRevision:168:fTxhfA -- getRevision task exiting
+get_file:25,12:57:31:getRevision:193:fTxhfA -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+test_uti:25,12:57:32:tryGetQueue:205:fTxhfA -- getRevisionwaiting 3 5
+test_uti:25,12:57:32:print_size:82:fTxhfA -- ---------------Memory usage: 105248 (kb)---------------0 mins since start
+test_uti:25,12:57:32:print_size:100:fTxhfA -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:57:32.441240
+dumped: 0
+test_uti:25,12:57:32:tryGetQueue:205:fTxhfA -- getRevisionwaiting 4 5
+test_uti:25,12:57:33:tryGetQueue:205:fTxhfA -- getRevisionwaiting 3 5
+test_uti:25,12:57:33:tryGetQueue:205:fTxhfA -- getRevisionwaiting 3 5
+test_uti:25,12:57:33:print_size:82:fTxhfA -- ---------------Memory usage: 105248 (kb)---------------0 mins since start
+test_uti:25,12:57:33:print_size:100:fTxhfA -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:57:33.475519
+dumped: 0
+test_uti:25,12:57:34:print_size:82:fTxhfA -- ---------------Memory usage: 105248 (kb)---------------0 mins since start
+test_uti:25,12:57:34:print_size:100:fTxhfA -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 12:57:34.508427
+dumped: 0
+get_file:25,12:57:34:getRevision:196:fTxhfA -- Close event has been set. Expect print task to finish soon
+test_uti:25,12:57:34:tryGetQueue:205:fTxhfA -- getRevisionwaiting 2 5
+test_uti:25,12:57:36:tryGetQueue:205:fTxhfA -- getRevisionwaiting 2 5
+test_uti:25,12:57:37:tryGetQueue:205:fTxhfA -- getRevisionwaiting 3 5
+test_uti:25,12:57:38:tryGetQueue:205:fTxhfA -- getRevisionwaiting 5 5
+test_uti:25,12:57:39:tryGetQueue:205:fTxhfA -- getIdswaiting 5 5
+test_uti:25,12:57:40:tryGetQueue:205:fTxhfA -- getRevisionwaiting 5 5
+test_uti:25,12:57:40:tryGetQueue:205:fTxhfA -- getIdswaiting 4 5
+test_uti:25,12:57:40:tryGetQueue:205:fTxhfA -- getRevisionwaiting 4 5
+test_uti:25,12:57:42:tryGetQueue:205:fTxhfA -- getRevisionwaiting 3 5
+test_uti:25,12:57:44:tryGetQueue:205:fTxhfA -- getRevisionwaiting 5 5
+test_uti:25,12:57:45:tryGetQueue:205:fTxhfA -- getRevisionwaiting 4 5
+test_uti:25,12:57:45:tryGetQueue:205:fTxhfA -- getRevisionwaiting 4 5
+test_uti:25,12:57:45:tryGetQueue:205:fTxhfA -- getRevisionwaiting 4 5
+get_file:25,12:57:47:getIdsRecursive:66:fTxhfA -- getId task exiting
+test_uti:25,12:57:47:tryGetQueue:205:fTxhfA -- getRevisionwaiting 5 5
+test_uti:25,12:57:49:tryGetQueue:205:fTxhfA -- getRevisionwaiting 5 5
+get_file:25,12:57:49:getRevision:168:fTxhfA -- getRevision task exiting
+get_file:25,12:57:49:getRevision:193:fTxhfA -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,12:57:49:getRevision:168:fTxhfA -- getRevision task exiting
+get_file:25,12:57:49:getRevision:193:fTxhfA -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+test_uti:25,12:57:50:tryGetQueue:205:fTxhfA -- getRevisionwaiting 3 5
+get_file:25,12:57:50:getRevision:168:fTxhfA -- getRevision task exiting
+get_file:25,12:57:50:getRevision:193:fTxhfA -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+test_uti:25,12:57:52:tryGetQueue:205:fTxhfA -- getRevisionwaiting 5 5
+get_file:25,12:57:52:getRevision:196:fTxhfA -- Close event has been set. Expect print task to finish soon
+get_file:25,12:57:52:getRevision:196:fTxhfA -- Close event has been set. Expect print task to finish soon
+test_uti:25,12:57:52:tryGetQueue:205:fTxhfA -- getRevisionwaiting 4 5
+get_file:25,12:57:53:getRevision:196:fTxhfA -- Close event has been set. Expect print task to finish soon
+test_uti:25,12:57:54:tryGetQueue:205:fTxhfA -- getIdswaiting 5 5
+get_file:25,12:57:55:getRevision:168:fTxhfA -- getRevision task exiting
+get_file:25,12:57:55:getRevision:193:fTxhfA -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,12:57:56:getRevision:168:fTxhfA -- getRevision task exiting
+get_file:25,12:57:56:getRevision:193:fTxhfA -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+test_uti:25,12:57:57:tryGetQueue:205:fTxhfA -- getRevisionwaiting 5 5
+get_file:25,12:57:58:getRevision:196:fTxhfA -- Close event has been set. Expect print task to finish soon
+test_uti:25,12:57:59:tryGetQueue:205:fTxhfA -- getRevisionwaiting 4 5
+get_file:25,12:57:59:getRevision:196:fTxhfA -- Close event has been set. Expect print task to finish soon
+get_file:25,12:58:00:getRevision:168:fTxhfA -- getRevision task exiting
+get_file:25,12:58:00:getRevision:193:fTxhfA -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,12:58:02:getIdsRecursive:66:fTxhfA -- getId task exiting
+get_file:25,12:58:03:getRevision:196:fTxhfA -- Close event has been set. Expect print task to finish soon
+test_uti:25,12:58:07:tryGetQueue:205:fTxhfA -- getRevisionwaiting 5 5
+test_uti:25,12:58:10:tryGetQueue:205:fTxhfA -- getRevisionwaiting 5 5
+get_file:25,12:58:15:getRevision:168:fTxhfA -- getRevision task exiting
+get_file:25,12:58:15:getRevision:193:fTxhfA -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,12:58:18:getRevision:168:fTxhfA -- getRevision task exiting
+get_file:25,12:58:18:getRevision:193:fTxhfA -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,12:58:18:getRevision:196:fTxhfA -- Close event has been set. Expect print task to finish soon
+get_file:25,12:58:21:getRevision:196:fTxhfA -- Close event has been set. Expect print task to finish soon
+get_file:25,12:58:21:getRevision:168:fTxhfA -- getRevision task exiting
+get_file:25,12:58:21:getRevision:193:fTxhfA -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,12:58:24:getRevision:196:fTxhfA -- Close event has been set. Expect print task to finish soon
+get_file:25,12:58:24:start:231:fTxhfA -- await gather revisions done
+get_file:25,12:58:24:start:238:fTxhfA -- cancelled throttler
+get_file:25,12:58:24:loadFiles:293:fTxhfA -- loop done
+configlo:25,12:58:24:handle_exception:81:fTxhfA -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "dsds.py", line 37, in <module>
+    start()
+  File "dsds.py", line 34, in start
+    loadFiles(uid, workingPath, fileid, creds)
+  File "/home/henry/pydocs/processing/get_files.py", line 296, in loadFiles
+    TestUtil.dump_files()
+AttributeError: type object 'TestUtil' has no attribute 'dump_files'
+configlo:25,12:58:27:handle_exception:85:fTxhfA -- exiting! from sshook

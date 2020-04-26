@@ -1,0 +1,61 @@
+sql.py:26,08:59:13:start:177:JsP5hA -- STARTING SQL testing2020-04-26 08:59:13.247601 /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+sql.py:26,08:59:13:start:179:JsP5hA -- setting sys except hook
+sql.py:26,08:59:13:start:186:JsP5hA -- Owner name: testing2020-04-04 26 AprUnaKYW9JqQ
+sql.py:26,08:59:14:start:190:JsP5hA -- Added owner row, name: testing2020-04-04 26 AprUnaKYW9JqQ id: 113
+sql.py:26,08:59:14:load_from_dict:111:JsP5hA -- File: 0B4Fujvv5Mfqbb2d0TnNhcFhhREdadmRaaEI3QzVabnE2NE5v
+sql.py:26,08:59:14:load_from_dict:111:JsP5hA -- File: 1QNNRjwRnVqieEoA5i9CdaSCyT_6Bi4vkmGO8YuZHytU
+sql.py:26,08:59:14:load_from_dict:111:JsP5hA -- File: 1cGlmEaWYTHdD_Y3vlkIMMkZhdmosSZo_rQYxcSBoDbQ
+sql.py:26,08:59:14:load_from_dict:111:JsP5hA -- File: 1G-K37QbHDgyLsJaUjRsROtLZZkj1fmqyC5YyHzOh-_Q
+sql.py:26,08:59:14:load_from_dict:111:JsP5hA -- File: 1cIWwf3nZ2RAeriW8GerxZHY9nirLdcc968-GgSnRkjQ
+sql.py:26,08:59:14:load_from_dict:111:JsP5hA -- File: 16wsJnYBwdOHbuGROxWDFe2Tcf1w8T49TwWnGvq5OjXY
+sql.py:26,08:59:14:load_from_dict:111:JsP5hA -- File: 1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ
+sql.py:26,08:59:14:load_from_dict:111:JsP5hA -- File: 12NnsHOjtevUATb-yYIgDFFLyYajiHxhJ6xHiJnIXj-8
+sql.py:26,08:59:14:load_from_dict:111:JsP5hA -- File: 1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4
+sql.py:26,08:59:14:load_from_dict:111:JsP5hA -- File: 1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08
+sql.py:26,08:59:14:load_from_dict:111:JsP5hA -- File: 1C09g5-ATBpXNJOmH8ANwCnq7Pk6vClzI1lmFYcqaH6A
+sql.py:26,08:59:14:load_from_dict:111:JsP5hA -- File: 1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s
+sql.py:26,08:59:14:load_from_dict:111:JsP5hA -- File: 17MhIJt6Bl2HnDLFiNZPRh7UOx-Co9FMvPWBsRnJRfsM
+sql.py:26,08:59:14:load_from_dict:111:JsP5hA -- File: 1B37ygx-Iwh0EpS1c5fqpbK6AqE39m6ao4WD4uMWknzc
+sql.py:26,08:59:14:load_from_dict:111:JsP5hA -- File: 1jRrZTHn-oge2sTqxli8Um026xuniXAeezLZn4B2zVSg
+sql.py:26,08:59:14:load_from_dict:111:JsP5hA -- File: 1D48Gz6hmPkE6sATNqYoA3P3Hdjtq1y2zHRjrh1kH64I
+sql.py:26,08:59:14:load_from_dict:111:JsP5hA -- File: 1cctIQ_TyhvRFgFVkzjwcfDL1w0i4L2lF-78_WM7Hy6A
+sql.py:26,08:59:14:load_from_dict:111:JsP5hA -- File: 1o6ARVj7jhE2K_VNnX2BYajR2XBX1kdMu
+sql.py:26,08:59:14:load_from_dict:111:JsP5hA -- File: 15e68EIS9xXe5Yvzju4GtkyhFKJ_UgUA9juJKiUpPeUA
+sql.py:26,08:59:14:load_from_dict:111:JsP5hA -- File: 186ge00t4G7kcx1QdCIHxRhTnZfzpSTGDgfAXkdbD_Ig
+sql.py:26,08:59:14:load_from_dict:111:JsP5hA -- File: 1wfaH9BSg8wrDaKXR54KK1y8pd-miEOQNj3E8GL6fTfg
+sql.py:26,08:59:14:load_from_dict:111:JsP5hA -- File: 1G1g252JtmrFnXI5HaLLEafe8apipzquYwQQ0hbQIaho
+sql.py:26,08:59:14:load_from_dict:111:JsP5hA -- File: 1sF1pFtL8fsnQBBAoTt8P7YGOVZVr6-6a4BLeU3PBncI
+sql.py:26,08:59:14:load_from_dict:111:JsP5hA -- File: 1LuJ1Ln_dAc7n3Qj0zNE4yuYfFG6NEgxO-hsDA9M4qpQ
+sql.py:26,08:59:14:load_from_dict:111:JsP5hA -- File: 15Fi6RHQtC8H-GOJC_gjiED_9rNxtCdahEGtLvBUZcv4
+sql.py:26,08:59:14:load_from_dict:111:JsP5hA -- File: 1H1aSubiwctKw-qMV6t1aGlfooY2Qn9V6Y01phHpg-kw
+sql.py:26,08:59:14:load_from_dict:111:JsP5hA -- File: 1WbGMwYDyqP6aCDpf5fBbR7sneMicXtvEtfm3Z4k0Vzs
+sql.py:26,08:59:14:load_from_dict:111:JsP5hA -- File: 16wh_FgWE8Y0tUpAdIte4WyuB91_ypCySi82lvdhAiFY
+sql.py:26,08:59:14:load_from_dict:111:JsP5hA -- File: 1WKk8W5cG-CYKBYN_cWpAdziiPVhvQZEAarnPwf58z4Y
+sql.py:26,08:59:14:load_from_dict:111:JsP5hA -- File: 1YJPVyeYstaXiTguoSGCe_Kb3y4yv49N224nUrfLo7rU
+sql.py:26,08:59:14:load_from_dict:111:JsP5hA -- File: 1PscMFhdtA31Nh7ELmM18NqjUfLDeGiexKI6q-lI0fKY
+sql.py:26,08:59:14:load_from_dict:111:JsP5hA -- File: 1YlY2MTwu_I6PGWgmkNqFXYJVvNSQKMi7j0WulyoD75w
+sql.py:26,08:59:14:load_from_dict:111:JsP5hA -- File: 1Gxvc-37IOivNHIPUJBI1v3jf5e-Hwcby_VZbN-k-Bfc
+sql.py:26,08:59:14:load_from_dict:111:JsP5hA -- File: 1T1Sj69DxCTpEQI2pH0O04l_PSx1V3xsxYOnkiHPEPis
+sql.py:26,08:59:14:load_from_dict:130:JsP5hA -- len of id map 34 len of files 34
+sql.py:26,08:59:14:load_from_dict:135:JsP5hA -- starting bulk save for lt_files
+sql.py:26,08:59:18:start:209:JsP5hA -- Finished loading pickles
+configlo:26,08:59:23:handle_exception:82:JsP5hA -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "/home/henry/pydocs/processing/sql.py", line 242, in start
+    file_obj = fileid_obj_map[n]
+NameError: name 'fileid_obj_map' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 193, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/henry/pydocs/processing/sql.py", line 277, in <module>
+    start("testing" + datetime.now().__str__(), wpath)
+  File "/home/henry/pydocs/processing/sql.py", line 246, in start
+    fileid_obj_map[n] = file_obj
+NameError: name 'fileid_obj_map' is not defined
+configlo:26,08:59:23:mp_sendmail:115:JsP5hA -- sending mail
+configlo:26,08:59:26:handle_exception:86:JsP5hA -- exiting! from sshook

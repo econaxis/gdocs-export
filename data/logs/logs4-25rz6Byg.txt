@@ -1,0 +1,32 @@
+sql.py:25,14:57:35:<module>:24:rz6Byg -- Driver%3D%7BODBC+Driver+17+for+SQL+Server%7D%3BServer%3Dtcp%3Apydoc-db.database.windows.net%2C1433%3BDatabase%3Dpydocs%3BUid%3Dhenry2833%3BPwd%3D%7BInfoip32%7D%3BEncrypt%3Dyes%3BTrustServerCertificate%3Dno%3BConnection+Timeout%3D30%3B
+sql.py:25,14:57:38:start:111:rz6Byg -- STARTING SQL testing2020-04-25 14:57:38.421040 /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+sql.py:25,14:57:38:start:113:rz6Byg -- setting sys except hook
+sql.py:25,14:57:38:start:123:rz6Byg -- Owner name: testing2020-04-04 25 AprgcFgfuAW6g
+sql.py:25,14:57:39:start:127:rz6Byg -- Added owner row, name: testing2020-04-04 25 AprgcFgfuAW6g id: 2
+sql.py:25,14:57:39:start:139:rz6Byg -- Finished loading pickles
+sql.py:25,14:57:39:start:157:rz6Byg -- File: 1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s
+sql.py:25,14:57:39:start:157:rz6Byg -- File: 1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08
+sql.py:25,14:57:39:start:157:rz6Byg -- File: 1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4
+sql.py:25,14:57:39:start:177:rz6Byg -- len of id map 3 len of files 3
+sql.py:25,14:57:39:start:182:rz6Byg -- starting bulk save
+sql.py:25,14:57:39:adder:86:rz6Byg -- flushing adder
+sql.py:25,14:57:39:start:184:rz6Byg -- bulked save done
+sql.py:25,14:57:39:start:189:rz6Byg -- File added, id: 4
+sql.py:25,14:57:39:start:189:rz6Byg -- File added, id: 5
+sql.py:25,14:57:39:start:189:rz6Byg -- File added, id: 6
+sql.py:25,14:57:39:start:191:rz6Byg -- sess flush done
+sql.py:25,14:57:39:start:200:rz6Byg -- adding dates for file: 4, dates to be added 2
+sql.py:25,14:57:39:start:205:rz6Byg -- [1580798526.504, 1580798743.99725, 1580798961.4905, 1580799178.9837499, 1580799396.477, 1580799613.9702501, 1580799831.4635, 1580800048.95675, 1580800266.45]
+sql.py:25,14:57:39:start:206:rz6Byg -- [134, 95, 37, 56, 66, 52, 37, 69]
+configlo:25,14:57:39:handle_exception:81:rz6Byg -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 193, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/henry/pydocs/processing/sql.py", line 322, in <module>
+    start("testing" + datetime.now().__str__(), wpath)
+  File "/home/henry/pydocs/processing/sql.py", line 209, in start
+    lt_dates.put(dict(fileId = fileid, bins = bins[counter], values = values[counter]))
+IndexError: list index out of range
+configlo:25,14:57:41:handle_exception:85:rz6Byg -- exiting! from sshook

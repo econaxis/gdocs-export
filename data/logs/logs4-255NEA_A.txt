@@ -1,0 +1,159 @@
+dsds.py:25,15:54:40:start:18:5NEA_A -- start
+get_file:25,15:54:40:loadFiles:269:5NEA_A -- Start loadFiles, 527e4afc-4598-400f-8536-afa5324f0ba4 0B4Fujvv5MfqbVElBU01fZUxHcUk
+requests:25,15:54:40:__call__:117:5NEA_A -- Making request: POST https://oauth2.googleapis.com/token
+connecti:25,15:54:40:_new_conn:817:5NEA_A -- Starting new HTTPS connection (1): oauth2.googleapis.com
+connecti:25,15:54:40:_make_request:393:5NEA_A -- https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+selector:25,15:54:40:__init__:59:5NEA_A -- Using selector: EpollSelector
+test_uti:25,15:54:40:print_size:82:5NEA_A -- ---------------Memory usage: 94320 (kb)---------------0 mins since start
+test_uti:25,15:54:40:print_size:100:5NEA_A -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/0 at 2020-04-25 15:54:40.252963
+dumped: 0
+get_file:25,15:54:40:getRevision:163:5NEA_A -- getRevision looping
+test_uti:25,15:54:40:tryGetQueue:228:5NEA_A -- getRevisionwaiting 1 1
+get_file:25,15:54:40:getIdsRecursive:52:5NEA_A -- getIdsRecursive looping
+get_file:25,15:54:40:getIdsRecursive:52:5NEA_A -- getIdsRecursive looping
+test_uti:25,15:54:40:tryGetQueue:228:5NEA_A -- getIdswaiting 1 1
+get_file:25,15:54:40:getIdsRecursive:52:5NEA_A -- getIdsRecursive looping
+test_uti:25,15:54:41:tryGetQueue:228:5NEA_A -- getIdswaiting 1 1
+test_uti:25,15:54:41:print_size:82:5NEA_A -- ---------------Memory usage: 94572 (kb)---------------0 mins since start
+test_uti:25,15:54:41:print_size:100:5NEA_A -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/0 at 2020-04-25 15:54:41.314425
+dumped: 0
+get_file:25,15:54:41:getIdsRecursive:52:5NEA_A -- getIdsRecursive looping
+get_file:25,15:54:41:getIdsRecursive:52:5NEA_A -- getIdsRecursive looping
+get_file:25,15:54:42:getIdsRecursive:52:5NEA_A -- getIdsRecursive looping
+test_uti:25,15:54:42:print_size:82:5NEA_A -- ---------------Memory usage: 94572 (kb)---------------0 mins since start
+test_uti:25,15:54:42:print_size:100:5NEA_A -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/28 at 2020-04-25 15:54:42.348404
+dumped: 0
+get_file:25,15:54:42:getIdsRecursive:52:5NEA_A -- getIdsRecursive looping
+get_file:25,15:54:43:getIdsRecursive:52:5NEA_A -- getIdsRecursive looping
+test_uti:25,15:54:43:print_size:82:5NEA_A -- ---------------Memory usage: 94572 (kb)---------------0 mins since start
+test_uti:25,15:54:43:print_size:100:5NEA_A -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/43 at 2020-04-25 15:54:43.374506
+dumped: 0
+get_file:25,15:54:43:getIdsRecursive:52:5NEA_A -- getIdsRecursive looping
+get_file:25,15:54:43:getIdsRecursive:52:5NEA_A -- getIdsRecursive looping
+test_uti:25,15:54:44:print_size:82:5NEA_A -- ---------------Memory usage: 94572 (kb)---------------0 mins since start
+test_uti:25,15:54:44:print_size:100:5NEA_A -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/59 at 2020-04-25 15:54:44.401572
+dumped: 0
+get_file:25,15:54:44:getIdsRecursive:52:5NEA_A -- getIdsRecursive looping
+test_uti:25,15:54:45:print_size:82:5NEA_A -- ---------------Memory usage: 94572 (kb)---------------0 mins since start
+test_uti:25,15:54:45:print_size:100:5NEA_A -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/63 at 2020-04-25 15:54:45.430106
+dumped: 0
+test_uti:25,15:54:46:print_size:82:5NEA_A -- ---------------Memory usage: 94572 (kb)---------------0 mins since start
+test_uti:25,15:54:46:print_size:100:5NEA_A -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/63 at 2020-04-25 15:54:46.456597
+dumped: 0
+get_file:25,15:54:46:getIdsRecursive:52:5NEA_A -- getIdsRecursive looping
+get_file:25,15:54:47:getIdsRecursive:52:5NEA_A -- getIdsRecursive looping
+test_uti:25,15:54:47:tryGetQueue:228:5NEA_A -- getIdswaiting 1 1
+get_file:25,15:54:47:getIdsRecursive:52:5NEA_A -- getIdsRecursive looping
+test_uti:25,15:54:47:print_size:82:5NEA_A -- ---------------Memory usage: 94572 (kb)---------------0 mins since start
+test_uti:25,15:54:47:print_size:100:5NEA_A -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/74 at 2020-04-25 15:54:47.483371
+dumped: 0
+test_uti:25,15:54:47:tryGetQueue:228:5NEA_A -- getIdswaiting 1 1
+test_uti:25,15:54:48:print_size:82:5NEA_A -- ---------------Memory usage: 94572 (kb)---------------0 mins since start
+test_uti:25,15:54:48:print_size:100:5NEA_A -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/74 at 2020-04-25 15:54:48.515472
+dumped: 0
+test_uti:25,15:54:49:print_size:82:5NEA_A -- ---------------Memory usage: 94572 (kb)---------------0 mins since start
+test_uti:25,15:54:49:print_size:100:5NEA_A -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/74 at 2020-04-25 15:54:49.541908
+dumped: 0
+test_uti:25,15:54:50:print_size:82:5NEA_A -- ---------------Memory usage: 94572 (kb)---------------0 mins since start
+test_uti:25,15:54:50:print_size:100:5NEA_A -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/74 at 2020-04-25 15:54:50.568561
+dumped: 0
+get_file:25,15:54:50:getIdsRecursive:65:5NEA_A -- getId task exiting
+gdoc.py:25,15:54:50:async_init:24:5NEA_A -- async init called
+gdoc.py:25,15:54:51:get_last_revision:54:5NEA_A -- last revision id 394
+gdoc.py:25,15:54:51:async_init:31:5NEA_A -- after await 394
+test_uti:25,15:54:51:print_size:82:5NEA_A -- ---------------Memory usage: 94572 (kb)---------------0 mins since start
+test_uti:25,15:54:51:print_size:100:5NEA_A -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/73 at 2020-04-25 15:54:51.597071
+dumped: 0
+get_file:25,15:54:51:getRevision:187:5NEA_A -- google doc
+get_file:25,15:54:51:getRevision:163:5NEA_A -- getRevision looping
+gdoc.py:25,15:54:51:async_init:24:5NEA_A -- async init called
+gdoc.py:25,15:54:52:get_last_revision:54:5NEA_A -- last revision id 1336
+gdoc.py:25,15:54:52:async_init:31:5NEA_A -- after await 1336
+get_file:25,15:54:52:getRevision:187:5NEA_A -- google doc
+get_file:25,15:54:52:getRevision:163:5NEA_A -- getRevision looping
+gdoc.py:25,15:54:52:async_init:24:5NEA_A -- async init called
+test_uti:25,15:54:52:print_size:82:5NEA_A -- ---------------Memory usage: 97884 (kb)---------------0 mins since start
+test_uti:25,15:54:52:print_size:100:5NEA_A -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+2/73 at 2020-04-25 15:54:52.623632
+dumped: 0
+gdoc.py:25,15:54:52:get_last_revision:54:5NEA_A -- last revision id 1946
+gdoc.py:25,15:54:52:async_init:31:5NEA_A -- after await 1946
+get_file:25,15:54:52:getRevision:187:5NEA_A -- google doc
+get_file:25,15:54:52:getRevision:163:5NEA_A -- getRevision looping
+gdoc.py:25,15:54:52:async_init:24:5NEA_A -- async init called
+gdoc.py:25,15:54:53:get_last_revision:54:5NEA_A -- last revision id 12
+gdoc.py:25,15:54:53:async_init:31:5NEA_A -- after await 12
+get_file:25,15:54:53:getRevision:187:5NEA_A -- google doc
+get_file:25,15:54:53:getRevision:163:5NEA_A -- getRevision looping
+get_file:25,15:54:53:getRevision:180:5NEA_A -- not google doc
+test_uti:25,15:54:53:print_size:82:5NEA_A -- ---------------Memory usage: 99448 (kb)---------------0 mins since start
+test_uti:25,15:54:53:print_size:100:5NEA_A -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+4/73 at 2020-04-25 15:54:53.652412
+dumped: 0
+get_file:25,15:54:54:getRevision:163:5NEA_A -- getRevision looping
+gdoc.py:25,15:54:54:async_init:24:5NEA_A -- async init called
+gdoc.py:25,15:54:54:get_last_revision:54:5NEA_A -- last revision id 1394
+gdoc.py:25,15:54:54:async_init:31:5NEA_A -- after await 1394
+get_file:25,15:54:54:getRevision:163:5NEA_A -- getRevision looping
+gdoc.py:25,15:54:54:async_init:24:5NEA_A -- async init called
+get_file:25,15:54:54:getRevision:163:5NEA_A -- getRevision looping
+gdoc.py:25,15:54:54:async_init:24:5NEA_A -- async init called
+test_uti:25,15:54:54:print_size:82:5NEA_A -- ---------------Memory usage: 99448 (kb)---------------0 mins since start
+test_uti:25,15:54:54:print_size:100:5NEA_A -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+5/71 at 2020-04-25 15:54:54.685636
+dumped: 0
+gdoc.py:25,15:54:54:get_last_revision:54:5NEA_A -- last revision id 1782
+gdoc.py:25,15:54:54:async_init:31:5NEA_A -- after await 1782
+get_file:25,15:54:54:getRevision:187:5NEA_A -- google doc
+get_file:25,15:54:54:getRevision:163:5NEA_A -- getRevision looping
+gdoc.py:25,15:54:54:get_last_revision:54:5NEA_A -- last revision id 6533
+gdoc.py:25,15:54:54:async_init:31:5NEA_A -- after await 6533
+get_file:25,15:54:55:getRevision:187:5NEA_A -- google doc
+get_file:25,15:54:55:getRevision:163:5NEA_A -- getRevision looping
+get_file:25,15:54:55:getRevision:187:5NEA_A -- google doc
+get_file:25,15:54:55:getRevision:163:5NEA_A -- getRevision looping
+get_file:25,15:54:55:getIdsRecursive:65:5NEA_A -- getId task exiting
+test_uti:25,15:54:55:print_size:82:5NEA_A -- ---------------Memory usage: 113508 (kb)---------------0 mins since start
+test_uti:25,15:54:55:print_size:100:5NEA_A -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+8/74 at 2020-04-25 15:54:55.715786
+dumped: 0
+test_uti:25,15:54:56:print_size:82:5NEA_A -- ---------------Memory usage: 113508 (kb)---------------0 mins since start
+test_uti:25,15:54:56:print_size:100:5NEA_A -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+8/74 at 2020-04-25 15:54:56.742809
+dumped: 0
+test_uti:25,15:54:57:print_size:82:5NEA_A -- ---------------Memory usage: 113508 (kb)---------------0 mins since start
+test_uti:25,15:54:57:print_size:100:5NEA_A -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+8/74 at 2020-04-25 15:54:57.770802
+dumped: 0
+gdoc.py:25,15:54:58:async_init:24:5NEA_A -- async init called
+gdoc.py:25,15:54:58:async_init:24:5NEA_A -- async init called
+gdoc.py:25,15:54:58:async_init:24:5NEA_A -- async init called
+gdoc.py:25,15:54:58:get_last_revision:54:5NEA_A -- last revision id 9
+gdoc.py:25,15:54:58:async_init:31:5NEA_A -- after await 9
+gdoc.py:25,15:54:58:get_last_revision:54:5NEA_A -- last revision id 2999
+gdoc.py:25,15:54:58:async_init:31:5NEA_A -- after await 2999
+gdoc.py:25,15:54:58:get_last_revision:54:5NEA_A -- last revision id 1
+gdoc.py:25,15:54:58:async_init:31:5NEA_A -- after await 1
+get_file:25,15:54:58:getRevision:187:5NEA_A -- google doc
+get_file:25,15:54:58:getRevision:163:5NEA_A -- getRevision looping
+test_uti:25,15:54:58:print_size:82:5NEA_A -- ---------------Memory usage: 113508 (kb)---------------0 mins since start
+test_uti:25,15:54:58:print_size:100:5NEA_A -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+9/72 at 2020-04-25 15:54:58.809178
+dumped: 0
+get_file:25,15:54:58:getRevision:187:5NEA_A -- google doc
+get_file:25,15:54:58:getRevision:163:5NEA_A -- getRevision looping
+get_file:25,15:54:58:getRevision:187:5NEA_A -- google doc
+get_file:25,15:54:58:getRevision:163:5NEA_A -- getRevision looping
+get_file:25,15:54:59:getRevision:163:5NEA_A -- getRevision looping

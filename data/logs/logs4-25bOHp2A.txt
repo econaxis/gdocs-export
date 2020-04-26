@@ -1,0 +1,31 @@
+sql.py:25,21:43:23:start:103:bOHp2A -- STARTING SQL testing2020-04-25 21:43:23.356686 /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+sql.py:25,21:43:23:start:105:bOHp2A -- setting sys except hook
+sql.py:25,21:43:23:start:115:bOHp2A -- Owner name: testing2020-04-04 25 Apr6aK4tX2prw
+sql.py:25,21:43:24:start:119:bOHp2A -- Added owner row, name: testing2020-04-04 25 Apr6aK4tX2prw id: 75
+sql.py:25,21:43:24:start:138:bOHp2A -- Finished loading pickles
+sql.py:25,21:43:24:start:156:bOHp2A -- File: 0B4Fujvv5Mfqbb2d0TnNhcFhhREdadmRaaEI3QzVabnE2NE5v
+sql.py:25,21:43:24:start:176:bOHp2A -- len of id map 1 len of files 1
+sql.py:25,21:43:24:start:181:bOHp2A -- starting bulk save
+sql.py:25,21:43:24:adder:88:bOHp2A -- flushing adder
+sql.py:25,21:43:24:start:183:bOHp2A -- bulked save done
+sql.py:25,21:43:24:start:189:bOHp2A -- File added, id: 12697
+sql.py:25,21:43:24:start:191:bOHp2A -- sess flush done
+sql.py:25,21:43:24:start:200:bOHp2A -- adding dates for file: 12697
+sql.py:25,21:43:24:start:210:bOHp2A -- len dates: 2
+sql.py:25,21:43:24:commit:45:bOHp2A -- iters: 10, len: 2
+sql.py:25,21:43:24:commit:64:bOHp2A -- while loop done
+configlo:25,21:43:24:handle_exception:82:bOHp2A -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 193, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/henry/pydocs/processing/sql.py", line 278, in <module>
+    start("testing" + datetime.now().__str__(), wpath)
+  File "/home/henry/pydocs/processing/sql.py", line 213, in start
+    commit(lt_dates,  Dates)
+  File "/home/henry/pydocs/processing/sql.py", line 71, in commit
+    sess.remove()
+AttributeError: 'Session' object has no attribute 'remove'
+configlo:25,21:43:24:mp_sendmail:115:bOHp2A -- sending mail
+configlo:25,21:43:25:handle_exception:86:bOHp2A -- exiting! from sshook

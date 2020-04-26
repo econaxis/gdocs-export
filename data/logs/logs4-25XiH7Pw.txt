@@ -1,0 +1,144 @@
+sql.py:25,22:02:45:start:169:XiH7Pw -- STARTING SQL testing2020-04-25 22:02:45.008429 /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+sql.py:25,22:02:45:start:171:XiH7Pw -- setting sys except hook
+sql.py:25,22:02:45:start:179:XiH7Pw -- Owner name: testing2020-04-04 25 AprGuJl9DNUrw
+sql.py:25,22:02:46:start:183:XiH7Pw -- Added owner row, name: testing2020-04-04 25 AprGuJl9DNUrw id: 81
+sql.py:25,22:02:46:load_from_dict:108:XiH7Pw -- File: 0B4Fujvv5Mfqbb2d0TnNhcFhhREdadmRaaEI3QzVabnE2NE5v
+sql.py:25,22:02:46:load_from_dict:108:XiH7Pw -- File: 1QNNRjwRnVqieEoA5i9CdaSCyT_6Bi4vkmGO8YuZHytU
+sql.py:25,22:02:46:load_from_dict:108:XiH7Pw -- File: 1cGlmEaWYTHdD_Y3vlkIMMkZhdmosSZo_rQYxcSBoDbQ
+sql.py:25,22:02:46:load_from_dict:108:XiH7Pw -- File: 1G-K37QbHDgyLsJaUjRsROtLZZkj1fmqyC5YyHzOh-_Q
+sql.py:25,22:02:46:load_from_dict:108:XiH7Pw -- File: 1cIWwf3nZ2RAeriW8GerxZHY9nirLdcc968-GgSnRkjQ
+sql.py:25,22:02:46:load_from_dict:108:XiH7Pw -- File: 16wsJnYBwdOHbuGROxWDFe2Tcf1w8T49TwWnGvq5OjXY
+sql.py:25,22:02:46:load_from_dict:108:XiH7Pw -- File: 1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ
+sql.py:25,22:02:46:load_from_dict:108:XiH7Pw -- File: 12NnsHOjtevUATb-yYIgDFFLyYajiHxhJ6xHiJnIXj-8
+sql.py:25,22:02:46:load_from_dict:108:XiH7Pw -- File: 1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4
+sql.py:25,22:02:46:load_from_dict:108:XiH7Pw -- File: 1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08
+sql.py:25,22:02:46:load_from_dict:108:XiH7Pw -- File: 1C09g5-ATBpXNJOmH8ANwCnq7Pk6vClzI1lmFYcqaH6A
+sql.py:25,22:02:46:load_from_dict:108:XiH7Pw -- File: 1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s
+sql.py:25,22:02:46:load_from_dict:108:XiH7Pw -- File: 17MhIJt6Bl2HnDLFiNZPRh7UOx-Co9FMvPWBsRnJRfsM
+sql.py:25,22:02:46:load_from_dict:108:XiH7Pw -- File: 1B37ygx-Iwh0EpS1c5fqpbK6AqE39m6ao4WD4uMWknzc
+sql.py:25,22:02:46:load_from_dict:108:XiH7Pw -- File: 1jRrZTHn-oge2sTqxli8Um026xuniXAeezLZn4B2zVSg
+sql.py:25,22:02:46:load_from_dict:108:XiH7Pw -- File: 1D48Gz6hmPkE6sATNqYoA3P3Hdjtq1y2zHRjrh1kH64I
+sql.py:25,22:02:46:load_from_dict:108:XiH7Pw -- File: 1cctIQ_TyhvRFgFVkzjwcfDL1w0i4L2lF-78_WM7Hy6A
+sql.py:25,22:02:46:load_from_dict:108:XiH7Pw -- File: 1o6ARVj7jhE2K_VNnX2BYajR2XBX1kdMu
+sql.py:25,22:02:46:load_from_dict:108:XiH7Pw -- File: 15e68EIS9xXe5Yvzju4GtkyhFKJ_UgUA9juJKiUpPeUA
+sql.py:25,22:02:46:load_from_dict:108:XiH7Pw -- File: 186ge00t4G7kcx1QdCIHxRhTnZfzpSTGDgfAXkdbD_Ig
+sql.py:25,22:02:46:load_from_dict:108:XiH7Pw -- File: 1wfaH9BSg8wrDaKXR54KK1y8pd-miEOQNj3E8GL6fTfg
+sql.py:25,22:02:46:load_from_dict:108:XiH7Pw -- File: 1G1g252JtmrFnXI5HaLLEafe8apipzquYwQQ0hbQIaho
+sql.py:25,22:02:46:load_from_dict:108:XiH7Pw -- File: 1sF1pFtL8fsnQBBAoTt8P7YGOVZVr6-6a4BLeU3PBncI
+sql.py:25,22:02:46:load_from_dict:108:XiH7Pw -- File: 1LuJ1Ln_dAc7n3Qj0zNE4yuYfFG6NEgxO-hsDA9M4qpQ
+sql.py:25,22:02:46:load_from_dict:108:XiH7Pw -- File: 15Fi6RHQtC8H-GOJC_gjiED_9rNxtCdahEGtLvBUZcv4
+sql.py:25,22:02:46:load_from_dict:108:XiH7Pw -- File: 1H1aSubiwctKw-qMV6t1aGlfooY2Qn9V6Y01phHpg-kw
+sql.py:25,22:02:46:load_from_dict:108:XiH7Pw -- File: 1WbGMwYDyqP6aCDpf5fBbR7sneMicXtvEtfm3Z4k0Vzs
+sql.py:25,22:02:46:load_from_dict:108:XiH7Pw -- File: 16wh_FgWE8Y0tUpAdIte4WyuB91_ypCySi82lvdhAiFY
+sql.py:25,22:02:46:load_from_dict:108:XiH7Pw -- File: 1WKk8W5cG-CYKBYN_cWpAdziiPVhvQZEAarnPwf58z4Y
+sql.py:25,22:02:46:load_from_dict:108:XiH7Pw -- File: 1YJPVyeYstaXiTguoSGCe_Kb3y4yv49N224nUrfLo7rU
+sql.py:25,22:02:46:load_from_dict:108:XiH7Pw -- File: 1PscMFhdtA31Nh7ELmM18NqjUfLDeGiexKI6q-lI0fKY
+sql.py:25,22:02:46:load_from_dict:108:XiH7Pw -- File: 1YlY2MTwu_I6PGWgmkNqFXYJVvNSQKMi7j0WulyoD75w
+sql.py:25,22:02:46:load_from_dict:108:XiH7Pw -- File: 1Gxvc-37IOivNHIPUJBI1v3jf5e-Hwcby_VZbN-k-Bfc
+sql.py:25,22:02:46:load_from_dict:108:XiH7Pw -- File: 1T1Sj69DxCTpEQI2pH0O04l_PSx1V3xsxYOnkiHPEPis
+sql.py:25,22:02:46:load_from_dict:128:XiH7Pw -- len of id map 34 len of files 34
+sql.py:25,22:02:46:load_from_dict:133:XiH7Pw -- starting bulk save
+sql.py:25,22:02:46:adder:88:XiH7Pw -- flushing adder
+sql.py:25,22:02:52:load_from_dict:135:XiH7Pw -- bulked save done
+sql.py:25,22:02:52:load_from_dict:141:XiH7Pw -- File added, id: 12820
+sql.py:25,22:02:52:load_from_dict:141:XiH7Pw -- File added, id: 12821
+sql.py:25,22:02:53:load_from_dict:141:XiH7Pw -- File added, id: 12822
+sql.py:25,22:02:53:load_from_dict:141:XiH7Pw -- File added, id: 12823
+sql.py:25,22:02:53:load_from_dict:141:XiH7Pw -- File added, id: 12824
+sql.py:25,22:02:54:load_from_dict:141:XiH7Pw -- File added, id: 12825
+sql.py:25,22:02:54:load_from_dict:141:XiH7Pw -- File added, id: 12826
+sql.py:25,22:02:54:load_from_dict:141:XiH7Pw -- File added, id: 12827
+sql.py:25,22:02:54:load_from_dict:141:XiH7Pw -- File added, id: 12828
+sql.py:25,22:02:55:load_from_dict:141:XiH7Pw -- File added, id: 12829
+sql.py:25,22:02:55:load_from_dict:141:XiH7Pw -- File added, id: 12830
+sql.py:25,22:02:55:load_from_dict:141:XiH7Pw -- File added, id: 12831
+sql.py:25,22:02:55:load_from_dict:141:XiH7Pw -- File added, id: 12832
+sql.py:25,22:02:55:load_from_dict:141:XiH7Pw -- File added, id: 12833
+sql.py:25,22:02:56:load_from_dict:141:XiH7Pw -- File added, id: 12834
+sql.py:25,22:02:56:load_from_dict:141:XiH7Pw -- File added, id: 12835
+sql.py:25,22:02:56:load_from_dict:141:XiH7Pw -- File added, id: 12836
+sql.py:25,22:02:56:load_from_dict:141:XiH7Pw -- File added, id: 12837
+sql.py:25,22:02:56:load_from_dict:141:XiH7Pw -- File added, id: 12838
+sql.py:25,22:02:56:load_from_dict:141:XiH7Pw -- File added, id: 12839
+sql.py:25,22:02:57:load_from_dict:141:XiH7Pw -- File added, id: 12840
+sql.py:25,22:02:57:load_from_dict:141:XiH7Pw -- File added, id: 12841
+sql.py:25,22:02:57:load_from_dict:141:XiH7Pw -- File added, id: 12842
+sql.py:25,22:02:57:load_from_dict:141:XiH7Pw -- File added, id: 12843
+sql.py:25,22:02:57:load_from_dict:141:XiH7Pw -- File added, id: 12844
+sql.py:25,22:02:58:load_from_dict:141:XiH7Pw -- File added, id: 12845
+sql.py:25,22:02:58:load_from_dict:141:XiH7Pw -- File added, id: 12846
+sql.py:25,22:02:58:load_from_dict:141:XiH7Pw -- File added, id: 12847
+sql.py:25,22:02:59:load_from_dict:141:XiH7Pw -- File added, id: 12848
+sql.py:25,22:02:59:load_from_dict:141:XiH7Pw -- File added, id: 12849
+sql.py:25,22:02:59:load_from_dict:141:XiH7Pw -- File added, id: 12850
+sql.py:25,22:02:59:load_from_dict:141:XiH7Pw -- File added, id: 12851
+sql.py:25,22:03:00:load_from_dict:141:XiH7Pw -- File added, id: 12852
+sql.py:25,22:03:00:load_from_dict:141:XiH7Pw -- File added, id: 12853
+sql.py:25,22:03:00:load_from_dict:143:XiH7Pw -- sess flush done
+sql.py:25,22:03:00:load_from_dict:152:XiH7Pw -- adding dates for file: 12820
+sql.py:25,22:03:00:load_from_dict:152:XiH7Pw -- adding dates for file: 12821
+sql.py:25,22:03:00:load_from_dict:152:XiH7Pw -- adding dates for file: 12822
+sql.py:25,22:03:00:load_from_dict:152:XiH7Pw -- adding dates for file: 12823
+sql.py:25,22:03:00:load_from_dict:152:XiH7Pw -- adding dates for file: 12824
+sql.py:25,22:03:00:load_from_dict:152:XiH7Pw -- adding dates for file: 12825
+sql.py:25,22:03:00:load_from_dict:152:XiH7Pw -- adding dates for file: 12826
+sql.py:25,22:03:00:load_from_dict:152:XiH7Pw -- adding dates for file: 12827
+sql.py:25,22:03:00:load_from_dict:152:XiH7Pw -- adding dates for file: 12828
+sql.py:25,22:03:00:load_from_dict:152:XiH7Pw -- adding dates for file: 12829
+sql.py:25,22:03:00:load_from_dict:152:XiH7Pw -- adding dates for file: 12830
+sql.py:25,22:03:00:load_from_dict:152:XiH7Pw -- adding dates for file: 12831
+sql.py:25,22:03:00:load_from_dict:152:XiH7Pw -- adding dates for file: 12832
+sql.py:25,22:03:00:load_from_dict:152:XiH7Pw -- adding dates for file: 12833
+sql.py:25,22:03:00:load_from_dict:152:XiH7Pw -- adding dates for file: 12834
+sql.py:25,22:03:00:load_from_dict:152:XiH7Pw -- adding dates for file: 12835
+sql.py:25,22:03:00:load_from_dict:152:XiH7Pw -- adding dates for file: 12836
+sql.py:25,22:03:00:load_from_dict:152:XiH7Pw -- adding dates for file: 12837
+sql.py:25,22:03:00:load_from_dict:152:XiH7Pw -- adding dates for file: 12838
+sql.py:25,22:03:00:load_from_dict:152:XiH7Pw -- adding dates for file: 12839
+sql.py:25,22:03:00:load_from_dict:152:XiH7Pw -- adding dates for file: 12840
+sql.py:25,22:03:00:load_from_dict:152:XiH7Pw -- adding dates for file: 12841
+sql.py:25,22:03:00:load_from_dict:152:XiH7Pw -- adding dates for file: 12842
+sql.py:25,22:03:00:load_from_dict:152:XiH7Pw -- adding dates for file: 12843
+sql.py:25,22:03:00:load_from_dict:152:XiH7Pw -- adding dates for file: 12844
+sql.py:25,22:03:00:load_from_dict:152:XiH7Pw -- adding dates for file: 12845
+sql.py:25,22:03:00:load_from_dict:152:XiH7Pw -- adding dates for file: 12846
+sql.py:25,22:03:00:load_from_dict:152:XiH7Pw -- adding dates for file: 12847
+sql.py:25,22:03:00:load_from_dict:152:XiH7Pw -- adding dates for file: 12848
+sql.py:25,22:03:00:load_from_dict:152:XiH7Pw -- adding dates for file: 12849
+sql.py:25,22:03:00:load_from_dict:152:XiH7Pw -- adding dates for file: 12850
+sql.py:25,22:03:00:load_from_dict:152:XiH7Pw -- adding dates for file: 12851
+sql.py:25,22:03:00:load_from_dict:152:XiH7Pw -- adding dates for file: 12852
+sql.py:25,22:03:00:load_from_dict:152:XiH7Pw -- adding dates for file: 12853
+sql.py:25,22:03:00:load_from_dict:162:XiH7Pw -- len dates: 5582
+sql.py:25,22:03:00:commit:46:XiH7Pw -- iters: 125, len: 5582
+sql.py:25,22:03:00:commit:55:XiH7Pw -- flushing, len: 5457
+sql.py:25,22:03:12:commit:61:XiH7Pw -- committing
+sql.py:25,22:03:12:commit:55:XiH7Pw -- flushing, len: 5332
+sql.py:25,22:03:23:commit:61:XiH7Pw -- committing
+sql.py:25,22:03:23:commit:55:XiH7Pw -- flushing, len: 5207
+sql.py:25,22:03:34:commit:61:XiH7Pw -- committing
+sql.py:25,22:03:35:commit:55:XiH7Pw -- flushing, len: 5082
+sql.py:25,22:03:46:commit:61:XiH7Pw -- committing
+sql.py:25,22:03:46:commit:55:XiH7Pw -- flushing, len: 4957
+sql.py:25,22:03:59:commit:61:XiH7Pw -- committing
+sql.py:25,22:03:59:commit:55:XiH7Pw -- flushing, len: 4832
+sql.py:25,22:04:10:commit:61:XiH7Pw -- committing
+sql.py:25,22:04:10:commit:55:XiH7Pw -- flushing, len: 4707
+sql.py:25,22:04:21:commit:61:XiH7Pw -- committing
+sql.py:25,22:04:21:commit:55:XiH7Pw -- flushing, len: 4582
+sql.py:25,22:04:32:commit:61:XiH7Pw -- committing
+sql.py:25,22:04:32:commit:55:XiH7Pw -- flushing, len: 4457
+sql.py:25,22:04:43:commit:61:XiH7Pw -- committing
+sql.py:25,22:04:44:commit:55:XiH7Pw -- flushing, len: 4332
+sql.py:25,22:04:54:commit:61:XiH7Pw -- committing
+sql.py:25,22:04:54:commit:55:XiH7Pw -- flushing, len: 4207
+sql.py:25,22:05:07:commit:61:XiH7Pw -- committing
+sql.py:25,22:05:07:commit:55:XiH7Pw -- flushing, len: 4082
+sql.py:25,22:05:18:commit:61:XiH7Pw -- committing
+sql.py:25,22:05:19:commit:55:XiH7Pw -- flushing, len: 3957
+sql.py:25,22:05:30:commit:61:XiH7Pw -- committing
+sql.py:25,22:05:30:commit:55:XiH7Pw -- flushing, len: 3832
+sql.py:25,22:05:41:commit:61:XiH7Pw -- committing
+sql.py:25,22:05:41:commit:55:XiH7Pw -- flushing, len: 3707
+sql.py:25,22:05:52:commit:61:XiH7Pw -- committing
+sql.py:25,22:05:52:commit:55:XiH7Pw -- flushing, len: 3582

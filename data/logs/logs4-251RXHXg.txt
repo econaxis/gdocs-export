@@ -1,0 +1,164 @@
+sql.py:25,14:55:58:<module>:24:1RXHXg -- Driver%3D%7BODBC+Driver+17+for+SQL+Server%7D%3BServer%3Dtcp%3Apydoc-db.database.windows.net%2C1433%3BDatabase%3Dpydocs%3BUid%3Dhenry2833%3BPwd%3D%7BInfoip32%7D%3BEncrypt%3Dyes%3BTrustServerCertificate%3Dno%3BConnection+Timeout%3D30%3B
+dsds.py:25,14:56:04:start:18:1RXHXg -- start
+get_file:25,14:56:04:loadFiles:267:1RXHXg -- Start loadFiles, 527e4afc-4598-400f-8536-afa5324f0ba4 1ytJocI9f4gvmpnwLNNfpQzRPhcFs5EzR
+requests:25,14:56:04:__call__:117:1RXHXg -- Making request: POST https://oauth2.googleapis.com/token
+connecti:25,14:56:04:_new_conn:817:1RXHXg -- Starting new HTTPS connection (1): oauth2.googleapis.com
+connecti:25,14:56:04:_make_request:393:1RXHXg -- https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+selector:25,14:56:04:__init__:59:1RXHXg -- Using selector: EpollSelector
+test_uti:25,14:56:04:print_size:82:1RXHXg -- ---------------Memory usage: 94304 (kb)---------------0 mins since start
+test_uti:25,14:56:04:print_size:100:1RXHXg -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/0 at 2020-04-25 14:56:04.752961
+dumped: 0
+get_file:25,14:56:05:getIdsRecursive:53:1RXHXg -- getIdsRecursive looping
+get_file:25,14:56:05:getIdsRecursive:53:1RXHXg -- getIdsRecursive looping
+test_uti:25,14:56:05:tryGetQueue:229:1RXHXg -- getIdswaiting 1 1
+get_file:25,14:56:05:getIdsRecursive:53:1RXHXg -- getIdsRecursive looping
+test_uti:25,14:56:05:tryGetQueue:229:1RXHXg -- getIdswaiting 1 1
+test_uti:25,14:56:05:print_size:82:1RXHXg -- ---------------Memory usage: 94416 (kb)---------------0 mins since start
+test_uti:25,14:56:05:print_size:100:1RXHXg -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/0 at 2020-04-25 14:56:05.782725
+dumped: 0
+get_file:25,14:56:05:getIdsRecursive:53:1RXHXg -- getIdsRecursive looping
+test_uti:25,14:56:05:tryGetQueue:229:1RXHXg -- getIdswaiting 1 1
+test_uti:25,14:56:06:print_size:82:1RXHXg -- ---------------Memory usage: 94416 (kb)---------------0 mins since start
+test_uti:25,14:56:06:print_size:100:1RXHXg -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/3 at 2020-04-25 14:56:06.813849
+dumped: 0
+test_uti:25,14:56:07:print_size:82:1RXHXg -- ---------------Memory usage: 94416 (kb)---------------0 mins since start
+test_uti:25,14:56:07:print_size:100:1RXHXg -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/3 at 2020-04-25 14:56:07.843502
+dumped: 0
+test_uti:25,14:56:08:print_size:82:1RXHXg -- ---------------Memory usage: 94416 (kb)---------------0 mins since start
+test_uti:25,14:56:08:print_size:100:1RXHXg -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/3 at 2020-04-25 14:56:08.872919
+dumped: 0
+get_file:25,14:56:09:getRevision:164:1RXHXg -- getRevision looping
+gdoc.py:25,14:56:09:async_init:24:1RXHXg -- async init called
+get_file:25,14:56:09:getRevision:164:1RXHXg -- getRevision looping
+gdoc.py:25,14:56:09:async_init:24:1RXHXg -- async init called
+test_uti:25,14:56:09:print_size:82:1RXHXg -- ---------------Memory usage: 94652 (kb)---------------0 mins since start
+test_uti:25,14:56:09:print_size:100:1RXHXg -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/1 at 2020-04-25 14:56:09.903441
+dumped: 0
+gdoc.py:25,14:56:10:get_last_revision:54:1RXHXg -- last revision id 546
+gdoc.py:25,14:56:10:async_init:31:1RXHXg -- after await 546
+test_uti:25,14:56:10:print_size:82:1RXHXg -- ---------------Memory usage: 94688 (kb)---------------0 mins since start
+test_uti:25,14:56:10:print_size:100:1RXHXg -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/1 at 2020-04-25 14:56:10.935026
+dumped: 0
+get_file:25,14:56:10:getRevision:188:1RXHXg -- google doc
+get_file:25,14:56:10:getRevision:164:1RXHXg -- getRevision looping
+gdoc.py:25,14:56:10:async_init:24:1RXHXg -- async init called
+gdoc.py:25,14:56:11:get_last_revision:54:1RXHXg -- last revision id 2502
+gdoc.py:25,14:56:11:async_init:31:1RXHXg -- after await 2502
+get_file:25,14:56:11:getRevision:164:1RXHXg -- getRevision looping
+test_uti:25,14:56:11:tryGetQueue:229:1RXHXg -- getRevisionwaiting 1 1
+gdoc.py:25,14:56:11:get_last_revision:54:1RXHXg -- last revision id 647
+gdoc.py:25,14:56:11:async_init:31:1RXHXg -- after await 647
+get_file:25,14:56:11:getRevision:188:1RXHXg -- google doc
+get_file:25,14:56:11:getRevision:164:1RXHXg -- getRevision looping
+test_uti:25,14:56:11:tryGetQueue:229:1RXHXg -- getRevisionwaiting 1 1
+test_uti:25,14:56:11:print_size:82:1RXHXg -- ---------------Memory usage: 101460 (kb)---------------0 mins since start
+test_uti:25,14:56:11:print_size:100:1RXHXg -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+2/2 at 2020-04-25 14:56:11.967730
+dumped: 0
+get_file:25,14:56:11:getRevision:188:1RXHXg -- google doc
+get_file:25,14:56:11:getRevision:164:1RXHXg -- getRevision looping
+get_file:25,14:56:12:getRevision:164:1RXHXg -- getRevision looping
+test_uti:25,14:56:12:print_size:82:1RXHXg -- ---------------Memory usage: 101460 (kb)---------------0 mins since start
+test_uti:25,14:56:12:print_size:100:1RXHXg -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 14:56:12.997942
+dumped: 0
+test_uti:25,14:56:14:print_size:82:1RXHXg -- ---------------Memory usage: 101460 (kb)---------------0 mins since start
+test_uti:25,14:56:14:print_size:100:1RXHXg -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 14:56:14.029463
+dumped: 0
+test_uti:25,14:56:15:print_size:82:1RXHXg -- ---------------Memory usage: 101460 (kb)---------------0 mins since start
+test_uti:25,14:56:15:print_size:100:1RXHXg -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 14:56:15.062298
+dumped: 0
+test_uti:25,14:56:16:print_size:82:1RXHXg -- ---------------Memory usage: 101460 (kb)---------------0 mins since start
+test_uti:25,14:56:16:print_size:100:1RXHXg -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 14:56:16.091646
+dumped: 0
+get_file:25,14:56:16:getRevision:164:1RXHXg -- getRevision looping
+test_uti:25,14:56:16:tryGetQueue:229:1RXHXg -- getRevisionwaiting 1 1
+test_uti:25,14:56:16:tryGetQueue:229:1RXHXg -- getRevisionwaiting 1 1
+test_uti:25,14:56:16:tryGetQueue:229:1RXHXg -- getRevisionwaiting 1 1
+get_file:25,14:56:17:getRevision:169:1RXHXg -- getRevision task exiting
+get_file:25,14:56:17:getRevision:194:1RXHXg -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+test_uti:25,14:56:17:print_size:82:1RXHXg -- ---------------Memory usage: 101460 (kb)---------------0 mins since start
+test_uti:25,14:56:17:print_size:100:1RXHXg -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 14:56:17.121924
+dumped: 0
+get_file:25,14:56:17:getRevision:164:1RXHXg -- getRevision looping
+test_uti:25,14:56:18:print_size:82:1RXHXg -- ---------------Memory usage: 101460 (kb)---------------0 mins since start
+test_uti:25,14:56:18:print_size:100:1RXHXg -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 14:56:18.156779
+dumped: 0
+get_file:25,14:56:18:getIdsRecursive:66:1RXHXg -- getId task exiting
+test_uti:25,14:56:19:print_size:82:1RXHXg -- ---------------Memory usage: 101460 (kb)---------------0 mins since start
+test_uti:25,14:56:19:print_size:100:1RXHXg -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+3/3 at 2020-04-25 14:56:19.191926
+dumped: 0
+get_file:25,14:56:20:getRevision:197:1RXHXg -- Close event has been set. Expect print task to finish soon
+get_file:25,14:56:20:getRevision:169:1RXHXg -- getRevision task exiting
+get_file:25,14:56:20:getRevision:194:1RXHXg -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,14:56:20:getIdsRecursive:66:1RXHXg -- getId task exiting
+test_uti:25,14:56:22:tryGetQueue:229:1RXHXg -- getRevisionwaiting 1 1
+get_file:25,14:56:23:getRevision:197:1RXHXg -- Close event has been set. Expect print task to finish soon
+get_file:25,14:56:23:getIdsRecursive:66:1RXHXg -- getId task exiting
+get_file:25,14:56:23:getRevision:194:1RXHXg -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,14:56:25:getRevision:169:1RXHXg -- getRevision task exiting
+get_file:25,14:56:25:getRevision:194:1RXHXg -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,14:56:25:getRevision:169:1RXHXg -- getRevision task exiting
+get_file:25,14:56:25:getRevision:194:1RXHXg -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,14:56:26:getRevision:197:1RXHXg -- Close event has been set. Expect print task to finish soon
+get_file:25,14:56:27:getRevision:169:1RXHXg -- getRevision task exiting
+get_file:25,14:56:27:getRevision:194:1RXHXg -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,14:56:28:getRevision:197:1RXHXg -- Close event has been set. Expect print task to finish soon
+get_file:25,14:56:28:getRevision:197:1RXHXg -- Close event has been set. Expect print task to finish soon
+get_file:25,14:56:28:getRevision:194:1RXHXg -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,14:56:29:getRevision:194:1RXHXg -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,14:56:30:getRevision:197:1RXHXg -- Close event has been set. Expect print task to finish soon
+get_file:25,14:56:31:getRevision:194:1RXHXg -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,14:56:31:getRevision:197:1RXHXg -- Close event has been set. Expect print task to finish soon
+get_file:25,14:56:32:getRevision:197:1RXHXg -- Close event has been set. Expect print task to finish soon
+get_file:25,14:56:33:getRevision:169:1RXHXg -- getRevision task exiting
+get_file:25,14:56:33:getRevision:194:1RXHXg -- getRevision task has ended, waiting for 3 seconds for all other tasks to finish
+get_file:25,14:56:34:getRevision:197:1RXHXg -- Close event has been set. Expect print task to finish soon
+get_file:25,14:56:36:getRevision:197:1RXHXg -- Close event has been set. Expect print task to finish soon
+get_file:25,14:56:36:start:232:1RXHXg -- await gather revisions done
+get_file:25,14:56:36:start:239:1RXHXg -- cancelled throttler
+get_file:25,14:56:36:loadFiles:294:1RXHXg -- loop done
+test_uti:25,14:56:36:dump_files:137:1RXHXg -- histed files at /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/1.pathed, length 3
+get_file:25,14:56:36:loadFiles:311:1RXHXg -- dumped pickle files
+sql.py:25,14:56:36:start:111:1RXHXg -- STARTING SQL 527e4afc-4598-400f-8536-afa5324f0ba4 /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+sql.py:25,14:56:36:start:113:1RXHXg -- setting sys except hook
+sql.py:25,14:56:36:start:123:1RXHXg -- Owner name: 527e4afc-4598-404 25 AprQtVKOIzl2g
+sql.py:25,14:56:37:start:127:1RXHXg -- Added owner row, name: 527e4afc-4598-404 25 AprQtVKOIzl2g id: 1
+sql.py:25,14:56:37:start:139:1RXHXg -- Finished loading pickles
+sql.py:25,14:56:37:start:157:1RXHXg -- File: 1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s
+sql.py:25,14:56:37:start:157:1RXHXg -- File: 1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08
+sql.py:25,14:56:37:start:157:1RXHXg -- File: 1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4
+sql.py:25,14:56:37:start:177:1RXHXg -- len of id map 3 len of files 3
+sql.py:25,14:56:37:start:182:1RXHXg -- starting bulk save
+sql.py:25,14:56:37:adder:86:1RXHXg -- flushing adder
+sql.py:25,14:56:37:start:184:1RXHXg -- bulked save done
+sql.py:25,14:56:37:start:189:1RXHXg -- File added, id: 1
+sql.py:25,14:56:37:start:189:1RXHXg -- File added, id: 2
+sql.py:25,14:56:37:start:189:1RXHXg -- File added, id: 3
+sql.py:25,14:56:37:start:191:1RXHXg -- sess flush done
+sql.py:25,14:56:37:start:200:1RXHXg -- adding dates for file: 1, dates to be added 2
+configlo:25,14:56:37:handle_exception:81:1RXHXg -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "dsds.py", line 37, in <module>
+    start()
+  File "dsds.py", line 34, in start
+    loadFiles(uid, workingPath, fileid, creds)
+  File "/home/henry/pydocs/processing/get_files.py", line 317, in loadFiles
+    processing.sql.start(USER_ID, _workingPath)
+  File "/home/henry/pydocs/processing/sql.py", line 206, in start
+    lt_dates.put(dict(fileId = fileid, bins = bins[counter], values = values[counter]))
+IndexError: list index out of range
+configlo:25,14:56:39:handle_exception:85:1RXHXg -- exiting! from sshook

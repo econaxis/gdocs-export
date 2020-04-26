@@ -1,0 +1,18 @@
+sql.py:25,14:18:05:<module>:24:SCrAVw -- Driver%3D%7BODBC+Driver+17+for+SQL+Server%7D%3BServer%3Dtcp%3Apydoc-db.database.windows.net%2C1433%3BDatabase%3Dpydoc-db%3BUid%3Dhenry2833%3BPwd%3D%7BInfoip32%7D%3BEncrypt%3Dyes%3BTrustServerCertificate%3Dno%3BConnection+Timeout%3D30%3B
+sql.py:25,14:18:08:start:111:SCrAVw -- STARTING SQL testing2020-04-25 14:18:08.530903 /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+sql.py:25,14:18:08:start:113:SCrAVw -- setting sys except hook
+sql.py:25,14:18:08:start:123:SCrAVw -- Owner name: testing2020-04-04 25 Aprat-8bRJY_g
+sql.py:25,14:18:09:start:127:SCrAVw -- Added owner row, name: testing2020-04-04 25 Aprat-8bRJY_g id: 2
+sql.py:25,14:18:09:start:139:SCrAVw -- Finished loading pickles
+sql.py:25,14:18:09:start:157:SCrAVw -- File: 1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s
+configlo:25,14:18:09:handle_exception:81:SCrAVw -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 193, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/henry/pydocs/processing/sql.py", line 319, in <module>
+    start("testing" + datetime.now().__str__(), wpath)
+  File "/home/henry/pydocs/processing/sql.py", line 166, in start
+    last_mod = datetime.fromtimestamp(bin_edges[-1])
+ValueError: year 52063 is out of range

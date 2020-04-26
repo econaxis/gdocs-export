@@ -74,30 +74,47 @@ def _update_histogram(times, ddvalue, figure, selectedData):
         if(ddvalue == 'All'):
             # If all dates are wanted, query is different for more
             # optimization
-            dates_uf = sess.query(Dates.moddate).join(Files).filter( Files.parent_id == test["userid"]).all()
+            dates_uf = sess.query(Dates.bins, Dates.values).join(Files).filter( Files.parent_id == test["userid"]).all()
         else:
             # TODO: optimize query. fileName.in_ has to do long string
             # search
-            dates_uf = sess.query(Dates.moddate).join(Files).filter(and_(Files.parent_id == test["userid"],
+            dates_uf = sess.query(Dates.bins, Dates.values).join(Files).filter(and_(Files.parent_id == test["userid"],
                                                                          Files.id.in_(p_selectedFiles))).all()
 
         return dates_uf
 
 
     #Get list of Python datetime objects to compute histogram
+    #datess_uf : List of tuples (bins (Int), values(Int))
     dates_uf = dbquery(selectedFiles)
+
+    values = [None] * len(dates_uf)
+    weights = [None] * len(dates_uf)
+
+
+    for count, i in enumerate(dates_uf):
+        #1 tuple of bin, value. Merge histogram by doing value = bin * weight
+        values[count] = i[0]
+        weights[count] = i[1]
+
+
+    #histogram with timestamp instead of pydatetime for bins
+    hist_ts = np.histogram(values, bins = 'fd', weights = weights)
+
+    #Convert timestamp to pydatetime
+    hist_dt = hist_ts
+    hist_dt[1] = list(map(datetime.fromtimestamp, hist_ts[1]))
 
     if(times):
         # Times mode: set all the dates to be equal so Dash can make a
         # proper time histogram
-        dates = [x[0].replace(year=2000, month=1, day=1) for x in dates_uf]
-    else:
-        dates = [x[0] for x in dates_uf]
+        temp = [x.replace(year=2000, month=1, day=1) for x in hist_dt[1]]
+        hist_dt[1] = temp
 
     #Return final histogram figure
 
     return go.Figure(
-        data=[go.Histogram(x=dates, nbinsx=75)],
+        data=[go.Bar],
         layout=dict(
             margin=gen_margin(),
             xaxis=dict(

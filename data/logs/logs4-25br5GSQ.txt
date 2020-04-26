@@ -1,0 +1,412 @@
+dsds.py:25,20:15:53:start:18:br5GSQ -- start
+get_file:25,20:15:58:loadFiles:278:br5GSQ -- Start loadFiles, 527e4afc-4598-400f-8536-afa5324f0ba4 root
+requests:25,20:15:58:__call__:117:br5GSQ -- Making request: POST https://oauth2.googleapis.com/token
+connecti:25,20:15:58:_new_conn:817:br5GSQ -- Starting new HTTPS connection (1): oauth2.googleapis.com
+connecti:25,20:15:58:_make_request:393:br5GSQ -- https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+selector:25,20:15:58:__init__:59:br5GSQ -- Using selector: EpollSelector
+test_uti:25,20:15:58:print_size:84:br5GSQ -- 
+
+---------------Memory usage: 90556 (kb)---------------0 mins since start
+test_uti:25,20:15:58:print_size:104:br5GSQ -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/0 discovered items at 2020-04-25 20:15:58.526467
+dump count: 0
+get_file:25,20:15:58:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+get_file:25,20:15:58:getRevision:164:br5GSQ -- getRevision looping
+test_uti:25,20:15:58:tryGetQueue:241:br5GSQ -- getRevisionwaiting 1 5
+get_file:25,20:15:58:getRevision:164:br5GSQ -- getRevision looping
+test_uti:25,20:15:58:tryGetQueue:241:br5GSQ -- getRevisionwaiting 1 5
+get_file:25,20:15:59:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+get_file:25,20:15:59:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+get_file:25,20:16:00:getRevision:164:br5GSQ -- getRevision looping
+gdoc.py:25,20:16:00:async_init:26:br5GSQ -- async init called
+get_file:25,20:16:00:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+gdoc.py:25,20:16:00:get_last_revision:55:br5GSQ -- last revision id 1784
+gdoc.py:25,20:16:00:async_init:35:br5GSQ -- after await 1784
+connecti:25,20:16:00:_new_conn:817:br5GSQ -- Starting new HTTPS connection (1): docs.google.com
+get_file:25,20:16:00:getRevision:164:br5GSQ -- getRevision looping
+get_file:25,20:16:00:getRevision:180:br5GSQ -- not google doc
+get_file:25,20:16:00:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+connecti:25,20:16:01:_make_request:393:br5GSQ -- https://docs.google.com:443 "GET /document/d/1cGlmEaWYTHdD_Y3vlkIMMkZhdmosSZo_rQYxcSBoDbQ/revisions/load?id=1cGlmEaWYTHdD_Y3vlkIMMkZhdmosSZo_rQYxcSBoDbQ&start=1&end=1784 HTTP/1.1" 200 None
+get_file:25,20:16:01:getRevision:164:br5GSQ -- getRevision looping
+gdoc.py:25,20:16:01:async_init:26:br5GSQ -- async init called
+get_file:25,20:16:01:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+get_file:25,20:16:01:getRevision:164:br5GSQ -- getRevision looping
+gdoc.py:25,20:16:01:async_init:26:br5GSQ -- async init called
+gdoc.py:25,20:16:01:get_last_revision:45:br5GSQ -- code not 200
+gdoc.py:25,20:16:01:get_last_revision:55:br5GSQ -- last revision id 14
+gdoc.py:25,20:16:01:async_init:35:br5GSQ -- after await 14
+connecti:25,20:16:01:_new_conn:817:br5GSQ -- Starting new HTTPS connection (1): docs.google.com
+get_file:25,20:16:01:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+get_file:25,20:16:01:getRevision:164:br5GSQ -- getRevision looping
+get_file:25,20:16:01:getRevision:180:br5GSQ -- not google doc
+connecti:25,20:16:02:_make_request:393:br5GSQ -- https://docs.google.com:443 "GET /document/d/1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ/revisions/load?id=1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ&start=1&end=14 HTTP/1.1" 200 None
+get_file:25,20:16:02:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+get_file:25,20:16:02:getRevision:164:br5GSQ -- getRevision looping
+get_file:25,20:16:02:getRevision:180:br5GSQ -- not google doc
+get_file:25,20:16:02:getRevision:164:br5GSQ -- getRevision looping
+get_file:25,20:16:02:getRevision:180:br5GSQ -- not google doc
+get_file:25,20:16:02:getRevision:164:br5GSQ -- getRevision looping
+get_file:25,20:16:02:getRevision:180:br5GSQ -- not google doc
+get_file:25,20:16:02:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+get_file:25,20:16:03:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+get_file:25,20:16:03:getRevision:164:br5GSQ -- getRevision looping
+gdoc.py:25,20:16:03:async_init:26:br5GSQ -- async init called
+get_file:25,20:16:03:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+get_file:25,20:16:03:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+gdoc.py:25,20:16:03:get_last_revision:55:br5GSQ -- last revision id 546
+gdoc.py:25,20:16:03:async_init:35:br5GSQ -- after await 546
+connecti:25,20:16:03:_new_conn:817:br5GSQ -- Starting new HTTPS connection (1): docs.google.com
+get_file:25,20:16:04:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+connecti:25,20:16:04:_make_request:393:br5GSQ -- https://docs.google.com:443 "GET /document/d/1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s/revisions/load?id=1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s&start=1&end=546 HTTP/1.1" 200 None
+get_file:25,20:16:04:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+get_file:25,20:16:04:getRevision:164:br5GSQ -- getRevision looping
+gdoc.py:25,20:16:04:async_init:26:br5GSQ -- async init called
+gdoc.py:25,20:16:05:async_init:26:br5GSQ -- async init called
+get_file:25,20:16:05:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+gdoc.py:25,20:16:05:get_last_revision:55:br5GSQ -- last revision id 2502
+gdoc.py:25,20:16:05:async_init:35:br5GSQ -- after await 2502
+connecti:25,20:16:05:_new_conn:817:br5GSQ -- Starting new HTTPS connection (1): docs.google.com
+gdoc.py:25,20:16:05:get_last_revision:55:br5GSQ -- last revision id 647
+gdoc.py:25,20:16:05:async_init:35:br5GSQ -- after await 647
+connecti:25,20:16:05:_new_conn:817:br5GSQ -- Starting new HTTPS connection (1): docs.google.com
+get_file:25,20:16:05:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+get_file:25,20:16:05:getRevision:200:br5GSQ -- google doc
+get_file:25,20:16:05:getRevision:164:br5GSQ -- getRevision looping
+gdoc.py:25,20:16:05:async_init:26:br5GSQ -- async init called
+connecti:25,20:16:05:_make_request:393:br5GSQ -- https://docs.google.com:443 "GET /document/d/1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08/revisions/load?id=1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08&start=1&end=2502 HTTP/1.1" 200 None
+get_file:25,20:16:05:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+connecti:25,20:16:06:_make_request:393:br5GSQ -- https://docs.google.com:443 "GET /document/d/1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4/revisions/load?id=1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4&start=1&end=647 HTTP/1.1" 200 None
+gdoc.py:25,20:16:06:get_last_revision:55:br5GSQ -- last revision id 3059
+gdoc.py:25,20:16:06:async_init:35:br5GSQ -- after await 3059
+connecti:25,20:16:06:_new_conn:817:br5GSQ -- Starting new HTTPS connection (1): docs.google.com
+get_file:25,20:16:06:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+get_file:25,20:16:06:getRevision:164:br5GSQ -- getRevision looping
+get_file:25,20:16:06:getRevision:180:br5GSQ -- not google doc
+connecti:25,20:16:06:_make_request:393:br5GSQ -- https://docs.google.com:443 "GET /document/d/1C09g5-ATBpXNJOmH8ANwCnq7Pk6vClzI1lmFYcqaH6A/revisions/load?id=1C09g5-ATBpXNJOmH8ANwCnq7Pk6vClzI1lmFYcqaH6A&start=1&end=3059 HTTP/1.1" 200 None
+get_file:25,20:16:06:getRevision:180:br5GSQ -- not google doc
+get_file:25,20:16:06:getRevision:200:br5GSQ -- google doc
+get_file:25,20:16:06:getRevision:164:br5GSQ -- getRevision looping
+get_file:25,20:16:06:getRevision:180:br5GSQ -- not google doc
+get_file:25,20:16:06:getRevision:164:br5GSQ -- getRevision looping
+get_file:25,20:16:06:getRevision:180:br5GSQ -- not google doc
+get_file:25,20:16:06:getRevision:164:br5GSQ -- getRevision looping
+get_file:25,20:16:06:getRevision:180:br5GSQ -- not google doc
+get_file:25,20:16:06:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+get_file:25,20:16:06:getRevision:164:br5GSQ -- getRevision looping
+gdoc.py:25,20:16:06:async_init:26:br5GSQ -- async init called
+get_file:25,20:16:06:getRevision:164:br5GSQ -- getRevision looping
+gdoc.py:25,20:16:06:async_init:26:br5GSQ -- async init called
+get_file:25,20:16:07:getRevision:164:br5GSQ -- getRevision looping
+get_file:25,20:16:07:getRevision:180:br5GSQ -- not google doc
+get_file:25,20:16:07:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+gdoc.py:25,20:16:07:get_last_revision:45:br5GSQ -- code not 200
+get_file:25,20:16:07:getRevision:164:br5GSQ -- getRevision looping
+get_file:25,20:16:07:getRevision:180:br5GSQ -- not google doc
+get_file:25,20:16:07:getRevision:164:br5GSQ -- getRevision looping
+gdoc.py:25,20:16:07:async_init:26:br5GSQ -- async init called
+get_file:25,20:16:07:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+gdoc.py:25,20:16:07:get_last_revision:55:br5GSQ -- last revision id 626
+gdoc.py:25,20:16:07:async_init:35:br5GSQ -- after await 626
+connecti:25,20:16:07:_new_conn:817:br5GSQ -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,20:16:08:_make_request:393:br5GSQ -- https://docs.google.com:443 "GET /document/d/1jRrZTHn-oge2sTqxli8Um026xuniXAeezLZn4B2zVSg/revisions/load?id=1jRrZTHn-oge2sTqxli8Um026xuniXAeezLZn4B2zVSg&start=1&end=626 HTTP/1.1" 200 None
+get_file:25,20:16:08:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+gdoc.py:25,20:16:08:get_last_revision:45:br5GSQ -- code not 200
+gdoc.py:25,20:16:08:async_init:35:br5GSQ -- after await 1
+get_file:25,20:16:08:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+connecti:25,20:16:08:_new_conn:817:br5GSQ -- Starting new HTTPS connection (1): docs.google.com
+gdoc.py:25,20:16:08:get_last_revision:45:br5GSQ -- code not 200
+get_file:25,20:16:08:getRevision:200:br5GSQ -- google doc
+get_file:25,20:16:08:getRevision:164:br5GSQ -- getRevision looping
+get_file:25,20:16:08:getRevision:180:br5GSQ -- not google doc
+get_file:25,20:16:09:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+connecti:25,20:16:09:_make_request:393:br5GSQ -- https://docs.google.com:443 "GET /document/d/1SGPIbZAmFYwIakoHevrYhHMwAf6xNIbMuS1zeULYsTQ/revisions/load?id=1SGPIbZAmFYwIakoHevrYhHMwAf6xNIbMuS1zeULYsTQ&start=1&end=1 HTTP/1.1" 403 None
+gdoc.py:25,20:16:09:download_details:73:br5GSQ -- Cannot get revisions.json
+Traceback (most recent call last):
+  File "/home/henry/pydocs/processing/gdoc.py", line 71, in download_details
+    assert response.status_code == 200
+AssertionError
+get_file:25,20:16:09:getRevision:164:br5GSQ -- getRevision looping
+gdoc.py:25,20:16:09:async_init:26:br5GSQ -- async init called
+get_file:25,20:16:09:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+gdoc.py:25,20:16:09:get_last_revision:55:br5GSQ -- last revision id 1
+gdoc.py:25,20:16:09:async_init:35:br5GSQ -- after await 1
+connecti:25,20:16:09:_new_conn:817:br5GSQ -- Starting new HTTPS connection (1): docs.google.com
+get_file:25,20:16:09:getRevision:164:br5GSQ -- getRevision looping
+gdoc.py:25,20:16:09:async_init:26:br5GSQ -- async init called
+get_file:25,20:16:09:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+connecti:25,20:16:09:_make_request:393:br5GSQ -- https://docs.google.com:443 "GET /document/d/1D48Gz6hmPkE6sATNqYoA3P3Hdjtq1y2zHRjrh1kH64I/revisions/load?id=1D48Gz6hmPkE6sATNqYoA3P3Hdjtq1y2zHRjrh1kH64I&start=1&end=1 HTTP/1.1" 200 None
+gdoc.py:25,20:16:10:get_last_revision:55:br5GSQ -- last revision id 3
+gdoc.py:25,20:16:10:async_init:35:br5GSQ -- after await 3
+connecti:25,20:16:10:_new_conn:817:br5GSQ -- Starting new HTTPS connection (1): docs.google.com
+get_file:25,20:16:10:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+get_file:25,20:16:10:getRevision:200:br5GSQ -- google doc
+get_file:25,20:16:10:getRevision:164:br5GSQ -- getRevision looping
+gdoc.py:25,20:16:10:async_init:26:br5GSQ -- async init called
+get_file:25,20:16:10:getRevision:200:br5GSQ -- google doc
+get_file:25,20:16:10:getRevision:164:br5GSQ -- getRevision looping
+connecti:25,20:16:10:_make_request:393:br5GSQ -- https://docs.google.com:443 "GET /document/d/1cctIQ_TyhvRFgFVkzjwcfDL1w0i4L2lF-78_WM7Hy6A/revisions/load?id=1cctIQ_TyhvRFgFVkzjwcfDL1w0i4L2lF-78_WM7Hy6A&start=1&end=3 HTTP/1.1" 200 None
+gdoc.py:25,20:16:10:async_init:26:br5GSQ -- async init called
+gdoc.py:25,20:16:10:get_last_revision:45:br5GSQ -- code not 200
+gdoc.py:25,20:16:10:get_last_revision:45:br5GSQ -- code not 200
+get_file:25,20:16:10:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+connecti:25,20:16:10:_new_conn:817:br5GSQ -- Starting new HTTPS connection (1): docs.google.com
+get_file:25,20:16:11:getRevision:200:br5GSQ -- google doc
+get_file:25,20:16:11:getRevision:164:br5GSQ -- getRevision looping
+get_file:25,20:16:11:getRevision:180:br5GSQ -- not google doc
+get_file:25,20:16:11:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+get_file:25,20:16:11:getRevision:164:br5GSQ -- getRevision looping
+get_file:25,20:16:11:getRevision:180:br5GSQ -- not google doc
+get_file:25,20:16:11:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+connecti:25,20:16:11:_make_request:393:br5GSQ -- https://docs.google.com:443 "GET /document/d/1SGPIbZAmFYwIakoHevrYhHMwAf6xNIbMuS1zeULYsTQ/revisions/load?id=1SGPIbZAmFYwIakoHevrYhHMwAf6xNIbMuS1zeULYsTQ&start=1&end=1 HTTP/1.1" 403 None
+gdoc.py:25,20:16:11:download_details:73:br5GSQ -- Cannot get revisions.json
+Traceback (most recent call last):
+  File "/home/henry/pydocs/processing/gdoc.py", line 71, in download_details
+    assert response.status_code == 200
+AssertionError
+get_file:25,20:16:11:getRevision:164:br5GSQ -- getRevision looping
+gdoc.py:25,20:16:11:async_init:26:br5GSQ -- async init called
+get_file:25,20:16:12:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+gdoc.py:25,20:16:12:get_last_revision:55:br5GSQ -- last revision id 908
+gdoc.py:25,20:16:12:async_init:35:br5GSQ -- after await 908
+connecti:25,20:16:12:_new_conn:817:br5GSQ -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,20:16:12:_make_request:393:br5GSQ -- https://docs.google.com:443 "GET /document/d/186ge00t4G7kcx1QdCIHxRhTnZfzpSTGDgfAXkdbD_Ig/revisions/load?id=186ge00t4G7kcx1QdCIHxRhTnZfzpSTGDgfAXkdbD_Ig&start=1&end=908 HTTP/1.1" 200 None
+get_file:25,20:16:12:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+get_file:25,20:16:12:getRevision:200:br5GSQ -- google doc
+get_file:25,20:16:12:getRevision:164:br5GSQ -- getRevision looping
+gdoc.py:25,20:16:12:async_init:26:br5GSQ -- async init called
+get_file:25,20:16:12:getRevision:164:br5GSQ -- getRevision looping
+gdoc.py:25,20:16:12:async_init:26:br5GSQ -- async init called
+get_file:25,20:16:12:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+gdoc.py:25,20:16:13:get_last_revision:55:br5GSQ -- last revision id 2586
+gdoc.py:25,20:16:13:async_init:35:br5GSQ -- after await 2586
+connecti:25,20:16:13:_new_conn:817:br5GSQ -- Starting new HTTPS connection (1): docs.google.com
+gdoc.py:25,20:16:13:get_last_revision:55:br5GSQ -- last revision id 9391
+gdoc.py:25,20:16:13:async_init:35:br5GSQ -- after await 9391
+connecti:25,20:16:13:_new_conn:817:br5GSQ -- Starting new HTTPS connection (1): docs.google.com
+get_file:25,20:16:13:getRevision:164:br5GSQ -- getRevision looping
+gdoc.py:25,20:16:13:async_init:26:br5GSQ -- async init called
+get_file:25,20:16:13:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+connecti:25,20:16:13:_make_request:393:br5GSQ -- https://docs.google.com:443 "GET /document/d/1sF1pFtL8fsnQBBAoTt8P7YGOVZVr6-6a4BLeU3PBncI/revisions/load?id=1sF1pFtL8fsnQBBAoTt8P7YGOVZVr6-6a4BLeU3PBncI&start=1&end=9391 HTTP/1.1" 200 None
+gdoc.py:25,20:16:13:get_last_revision:55:br5GSQ -- last revision id 1948
+gdoc.py:25,20:16:13:async_init:35:br5GSQ -- after await 1948
+connecti:25,20:16:13:_new_conn:817:br5GSQ -- Starting new HTTPS connection (1): docs.google.com
+get_file:25,20:16:13:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+connecti:25,20:16:13:_make_request:393:br5GSQ -- https://docs.google.com:443 "GET /document/d/15e68EIS9xXe5Yvzju4GtkyhFKJ_UgUA9juJKiUpPeUA/revisions/load?id=15e68EIS9xXe5Yvzju4GtkyhFKJ_UgUA9juJKiUpPeUA&start=1&end=2586 HTTP/1.1" 200 None
+get_file:25,20:16:14:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+connecti:25,20:16:14:_make_request:393:br5GSQ -- https://docs.google.com:443 "GET /document/d/1G1g252JtmrFnXI5HaLLEafe8apipzquYwQQ0hbQIaho/revisions/load?id=1G1g252JtmrFnXI5HaLLEafe8apipzquYwQQ0hbQIaho&start=1&end=1948 HTTP/1.1" 200 None
+get_file:25,20:16:14:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+get_file:25,20:16:14:getRevision:200:br5GSQ -- google doc
+get_file:25,20:16:14:getRevision:164:br5GSQ -- getRevision looping
+gdoc.py:25,20:16:14:async_init:26:br5GSQ -- async init called
+gdoc.py:25,20:16:14:get_last_revision:45:br5GSQ -- code not 200
+gdoc.py:25,20:16:14:async_init:35:br5GSQ -- after await 1
+connecti:25,20:16:14:_new_conn:817:br5GSQ -- Starting new HTTPS connection (1): docs.google.com
+get_file:25,20:16:14:getRevision:164:br5GSQ -- getRevision looping
+get_file:25,20:16:14:getRevision:180:br5GSQ -- not google doc
+get_file:25,20:16:14:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+gdoc.py:25,20:16:14:get_last_revision:55:br5GSQ -- last revision id 1592
+gdoc.py:25,20:16:14:async_init:35:br5GSQ -- after await 1592
+connecti:25,20:16:14:_new_conn:817:br5GSQ -- Starting new HTTPS connection (1): docs.google.com
+get_file:25,20:16:14:getRevision:164:br5GSQ -- getRevision looping
+get_file:25,20:16:14:getRevision:180:br5GSQ -- not google doc
+connecti:25,20:16:14:_make_request:393:br5GSQ -- https://docs.google.com:443 "GET /document/d/1B6ePg9Ixtc4xqKL4D0_JO80n8GL83WpztJKJGaH-6S0/revisions/load?id=1B6ePg9Ixtc4xqKL4D0_JO80n8GL83WpztJKJGaH-6S0&start=1&end=1 HTTP/1.1" 403 None
+gdoc.py:25,20:16:14:download_details:73:br5GSQ -- Cannot get revisions.json
+Traceback (most recent call last):
+  File "/home/henry/pydocs/processing/gdoc.py", line 71, in download_details
+    assert response.status_code == 200
+AssertionError
+get_file:25,20:16:15:getRevision:164:br5GSQ -- getRevision looping
+get_file:25,20:16:15:getRevision:180:br5GSQ -- not google doc
+get_file:25,20:16:15:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+get_file:25,20:16:15:getRevision:200:br5GSQ -- google doc
+get_file:25,20:16:15:getRevision:164:br5GSQ -- getRevision looping
+get_file:25,20:16:15:getRevision:180:br5GSQ -- not google doc
+get_file:25,20:16:15:getRevision:164:br5GSQ -- getRevision looping
+gdoc.py:25,20:16:15:async_init:26:br5GSQ -- async init called
+get_file:25,20:16:15:getRevision:164:br5GSQ -- getRevision looping
+gdoc.py:25,20:16:15:async_init:26:br5GSQ -- async init called
+get_file:25,20:16:15:getRevision:164:br5GSQ -- getRevision looping
+gdoc.py:25,20:16:15:async_init:26:br5GSQ -- async init called
+connecti:25,20:16:15:_make_request:393:br5GSQ -- https://docs.google.com:443 "GET /document/d/1wfaH9BSg8wrDaKXR54KK1y8pd-miEOQNj3E8GL6fTfg/revisions/load?id=1wfaH9BSg8wrDaKXR54KK1y8pd-miEOQNj3E8GL6fTfg&start=1&end=1592 HTTP/1.1" 200 None
+get_file:25,20:16:15:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+get_file:25,20:16:15:getRevision:164:br5GSQ -- getRevision looping
+gdoc.py:25,20:16:15:async_init:26:br5GSQ -- async init called
+gdoc.py:25,20:16:15:get_last_revision:55:br5GSQ -- last revision id 2
+gdoc.py:25,20:16:15:async_init:35:br5GSQ -- after await 2
+gdoc.py:25,20:16:15:get_last_revision:55:br5GSQ -- last revision id 36
+connecti:25,20:16:15:_new_conn:817:br5GSQ -- Starting new HTTPS connection (1): docs.google.com
+gdoc.py:25,20:16:15:async_init:35:br5GSQ -- after await 36
+connecti:25,20:16:15:_new_conn:817:br5GSQ -- Starting new HTTPS connection (1): docs.google.com
+gdoc.py:25,20:16:15:get_last_revision:55:br5GSQ -- last revision id 6
+gdoc.py:25,20:16:15:async_init:35:br5GSQ -- after await 6
+connecti:25,20:16:15:_new_conn:817:br5GSQ -- Starting new HTTPS connection (1): docs.google.com
+get_file:25,20:16:15:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+gdoc.py:25,20:16:15:get_last_revision:55:br5GSQ -- last revision id 919
+gdoc.py:25,20:16:15:async_init:35:br5GSQ -- after await 919
+connecti:25,20:16:15:_new_conn:817:br5GSQ -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,20:16:15:_make_request:393:br5GSQ -- https://docs.google.com:443 "GET /document/d/1LuJ1Ln_dAc7n3Qj0zNE4yuYfFG6NEgxO-hsDA9M4qpQ/revisions/load?id=1LuJ1Ln_dAc7n3Qj0zNE4yuYfFG6NEgxO-hsDA9M4qpQ&start=1&end=36 HTTP/1.1" 200 None
+get_file:25,20:16:15:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+connecti:25,20:16:15:_make_request:393:br5GSQ -- https://docs.google.com:443 "GET /document/d/15Fi6RHQtC8H-GOJC_gjiED_9rNxtCdahEGtLvBUZcv4/revisions/load?id=15Fi6RHQtC8H-GOJC_gjiED_9rNxtCdahEGtLvBUZcv4&start=1&end=2 HTTP/1.1" 200 None
+connecti:25,20:16:16:_make_request:393:br5GSQ -- https://docs.google.com:443 "GET /document/d/1H1aSubiwctKw-qMV6t1aGlfooY2Qn9V6Y01phHpg-kw/revisions/load?id=1H1aSubiwctKw-qMV6t1aGlfooY2Qn9V6Y01phHpg-kw&start=1&end=6 HTTP/1.1" 200 None
+gdoc.py:25,20:16:16:get_last_revision:45:br5GSQ -- code not 200
+gdoc.py:25,20:16:16:async_init:35:br5GSQ -- after await 1
+connecti:25,20:16:16:_new_conn:817:br5GSQ -- Starting new HTTPS connection (1): docs.google.com
+get_file:25,20:16:16:getRevision:164:br5GSQ -- getRevision looping
+get_file:25,20:16:16:getRevision:180:br5GSQ -- not google doc
+connecti:25,20:16:16:_make_request:393:br5GSQ -- https://docs.google.com:443 "GET /document/d/1WbGMwYDyqP6aCDpf5fBbR7sneMicXtvEtfm3Z4k0Vzs/revisions/load?id=1WbGMwYDyqP6aCDpf5fBbR7sneMicXtvEtfm3Z4k0Vzs&start=1&end=919 HTTP/1.1" 200 None
+get_file:25,20:16:16:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+get_file:25,20:16:16:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+connecti:25,20:16:16:_make_request:393:br5GSQ -- https://docs.google.com:443 "GET /document/d/16Tz6lbS7tdWBUhgseZCx0va0xBAayzOSSDSH-T20xRA/revisions/load?id=16Tz6lbS7tdWBUhgseZCx0va0xBAayzOSSDSH-T20xRA&start=1&end=1 HTTP/1.1" 403 None
+gdoc.py:25,20:16:16:download_details:73:br5GSQ -- Cannot get revisions.json
+Traceback (most recent call last):
+  File "/home/henry/pydocs/processing/gdoc.py", line 71, in download_details
+    assert response.status_code == 200
+AssertionError
+connecti:25,20:16:16:_new_conn:817:br5GSQ -- Starting new HTTPS connection (1): docs.google.com
+get_file:25,20:16:16:getRevision:164:br5GSQ -- getRevision looping
+gdoc.py:25,20:16:16:async_init:26:br5GSQ -- async init called
+get_file:25,20:16:16:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+get_file:25,20:16:17:getRevision:164:br5GSQ -- getRevision looping
+gdoc.py:25,20:16:17:async_init:26:br5GSQ -- async init called
+connecti:25,20:16:17:_make_request:393:br5GSQ -- https://docs.google.com:443 "GET /document/d/1SGPIbZAmFYwIakoHevrYhHMwAf6xNIbMuS1zeULYsTQ/revisions/load?id=1SGPIbZAmFYwIakoHevrYhHMwAf6xNIbMuS1zeULYsTQ&start=1&end=1 HTTP/1.1" 403 None
+gdoc.py:25,20:16:17:download_details:73:br5GSQ -- Cannot get revisions.json
+Traceback (most recent call last):
+  File "/home/henry/pydocs/processing/gdoc.py", line 71, in download_details
+    assert response.status_code == 200
+AssertionError
+get_file:25,20:16:17:getRevision:200:br5GSQ -- google doc
+get_file:25,20:16:17:getRevision:164:br5GSQ -- getRevision looping
+get_file:25,20:16:17:getRevision:180:br5GSQ -- not google doc
+get_file:25,20:16:17:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+gdoc.py:25,20:16:17:get_last_revision:55:br5GSQ -- last revision id 567
+gdoc.py:25,20:16:17:async_init:35:br5GSQ -- after await 567
+connecti:25,20:16:17:_new_conn:817:br5GSQ -- Starting new HTTPS connection (1): docs.google.com
+gdoc.py:25,20:16:17:get_last_revision:55:br5GSQ -- last revision id 929
+gdoc.py:25,20:16:17:async_init:35:br5GSQ -- after await 929
+connecti:25,20:16:17:_new_conn:817:br5GSQ -- Starting new HTTPS connection (1): docs.google.com
+get_file:25,20:16:17:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+connecti:25,20:16:17:_make_request:393:br5GSQ -- https://docs.google.com:443 "GET /document/d/16wh_FgWE8Y0tUpAdIte4WyuB91_ypCySi82lvdhAiFY/revisions/load?id=16wh_FgWE8Y0tUpAdIte4WyuB91_ypCySi82lvdhAiFY&start=1&end=567 HTTP/1.1" 200 None
+get_file:25,20:16:17:getRevision:164:br5GSQ -- getRevision looping
+get_file:25,20:16:17:getRevision:180:br5GSQ -- not google doc
+gdoc.py:25,20:16:17:get_last_revision:45:br5GSQ -- code not 200
+gdoc.py:25,20:16:17:async_init:35:br5GSQ -- after await 1
+connecti:25,20:16:17:_new_conn:817:br5GSQ -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,20:16:17:_make_request:393:br5GSQ -- https://docs.google.com:443 "GET /document/d/1WKk8W5cG-CYKBYN_cWpAdziiPVhvQZEAarnPwf58z4Y/revisions/load?id=1WKk8W5cG-CYKBYN_cWpAdziiPVhvQZEAarnPwf58z4Y&start=1&end=929 HTTP/1.1" 200 None
+get_file:25,20:16:17:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+get_file:25,20:16:17:getRevision:164:br5GSQ -- getRevision looping
+gdoc.py:25,20:16:17:async_init:26:br5GSQ -- async init called
+gdoc.py:25,20:16:18:get_last_revision:45:br5GSQ -- code not 200
+gdoc.py:25,20:16:18:async_init:35:br5GSQ -- after await 1
+get_file:25,20:16:18:getRevision:200:br5GSQ -- google doc
+get_file:25,20:16:18:getRevision:164:br5GSQ -- getRevision looping
+connecti:25,20:16:18:_new_conn:817:br5GSQ -- Starting new HTTPS connection (1): docs.google.com
+gdoc.py:25,20:16:18:async_init:26:br5GSQ -- async init called
+get_file:25,20:16:18:getRevision:200:br5GSQ -- google doc
+get_file:25,20:16:18:getRevision:164:br5GSQ -- getRevision looping
+gdoc.py:25,20:16:18:async_init:26:br5GSQ -- async init called
+gdoc.py:25,20:16:18:get_last_revision:55:br5GSQ -- last revision id 1580
+gdoc.py:25,20:16:18:async_init:35:br5GSQ -- after await 1580
+connecti:25,20:16:18:_new_conn:817:br5GSQ -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,20:16:18:_make_request:393:br5GSQ -- https://docs.google.com:443 "GET /document/d/1JQ-JszbkA6JHylaBr1ZDWeMXTy2X6fM2evDEJo-W3U4/revisions/load?id=1JQ-JszbkA6JHylaBr1ZDWeMXTy2X6fM2evDEJo-W3U4&start=1&end=1 HTTP/1.1" 403 None
+gdoc.py:25,20:16:18:download_details:73:br5GSQ -- Cannot get revisions.json
+Traceback (most recent call last):
+  File "/home/henry/pydocs/processing/gdoc.py", line 71, in download_details
+    assert response.status_code == 200
+AssertionError
+get_file:25,20:16:18:getRevision:164:br5GSQ -- getRevision looping
+gdoc.py:25,20:16:18:async_init:26:br5GSQ -- async init called
+get_file:25,20:16:18:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+gdoc.py:25,20:16:18:get_last_revision:55:br5GSQ -- last revision id 747
+gdoc.py:25,20:16:18:async_init:35:br5GSQ -- after await 747
+connecti:25,20:16:18:_new_conn:817:br5GSQ -- Starting new HTTPS connection (1): docs.google.com
+get_file:25,20:16:18:getRevision:200:br5GSQ -- google doc
+connecti:25,20:16:18:_make_request:393:br5GSQ -- https://docs.google.com:443 "GET /document/d/11L4quB0D_Ttk0WMkddrcn_r8OmWG5Y7xEWgALTBoNvg/revisions/load?id=11L4quB0D_Ttk0WMkddrcn_r8OmWG5Y7xEWgALTBoNvg&start=1&end=1 HTTP/1.1" 403 None
+get_file:25,20:16:18:getRevision:164:br5GSQ -- getRevision looping
+get_file:25,20:16:18:getRevision:180:br5GSQ -- not google doc
+gdoc.py:25,20:16:18:download_details:73:br5GSQ -- Cannot get revisions.json
+Traceback (most recent call last):
+  File "/home/henry/pydocs/processing/gdoc.py", line 71, in download_details
+    assert response.status_code == 200
+AssertionError
+connecti:25,20:16:18:_make_request:393:br5GSQ -- https://docs.google.com:443 "GET /document/d/1YJPVyeYstaXiTguoSGCe_Kb3y4yv49N224nUrfLo7rU/revisions/load?id=1YJPVyeYstaXiTguoSGCe_Kb3y4yv49N224nUrfLo7rU&start=1&end=1580 HTTP/1.1" 200 None
+gdoc.py:25,20:16:18:get_last_revision:55:br5GSQ -- last revision id 1028
+gdoc.py:25,20:16:18:async_init:35:br5GSQ -- after await 1028
+connecti:25,20:16:18:_new_conn:817:br5GSQ -- Starting new HTTPS connection (1): docs.google.com
+get_file:25,20:16:18:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+connecti:25,20:16:19:_make_request:393:br5GSQ -- https://docs.google.com:443 "GET /document/d/1YlY2MTwu_I6PGWgmkNqFXYJVvNSQKMi7j0WulyoD75w/revisions/load?id=1YlY2MTwu_I6PGWgmkNqFXYJVvNSQKMi7j0WulyoD75w&start=1&end=747 HTTP/1.1" 200 None
+gdoc.py:25,20:16:19:get_last_revision:55:br5GSQ -- last revision id 2372
+gdoc.py:25,20:16:19:async_init:35:br5GSQ -- after await 2372
+connecti:25,20:16:19:_new_conn:817:br5GSQ -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,20:16:19:_make_request:393:br5GSQ -- https://docs.google.com:443 "GET /document/d/1Gxvc-37IOivNHIPUJBI1v3jf5e-Hwcby_VZbN-k-Bfc/revisions/load?id=1Gxvc-37IOivNHIPUJBI1v3jf5e-Hwcby_VZbN-k-Bfc&start=1&end=1028 HTTP/1.1" 200 None
+get_file:25,20:16:19:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+get_file:25,20:16:19:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+connecti:25,20:16:19:_make_request:393:br5GSQ -- https://docs.google.com:443 "GET /document/d/1PscMFhdtA31Nh7ELmM18NqjUfLDeGiexKI6q-lI0fKY/revisions/load?id=1PscMFhdtA31Nh7ELmM18NqjUfLDeGiexKI6q-lI0fKY&start=1&end=2372 HTTP/1.1" 200 None
+get_file:25,20:16:19:getRevision:164:br5GSQ -- getRevision looping
+gdoc.py:25,20:16:19:async_init:26:br5GSQ -- async init called
+get_file:25,20:16:19:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+get_file:25,20:16:19:getRevision:200:br5GSQ -- google doc
+get_file:25,20:16:19:getRevision:164:br5GSQ -- getRevision looping
+gdoc.py:25,20:16:19:async_init:26:br5GSQ -- async init called
+gdoc.py:25,20:16:19:get_last_revision:55:br5GSQ -- last revision id 188
+gdoc.py:25,20:16:19:async_init:35:br5GSQ -- after await 188
+get_file:25,20:16:19:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+connecti:25,20:16:19:_new_conn:817:br5GSQ -- Starting new HTTPS connection (1): docs.google.com
+gdoc.py:25,20:16:20:get_last_revision:45:br5GSQ -- code not 200
+get_file:25,20:16:20:getIdsRecursive:50:br5GSQ -- getIdsRecursive looping
+connecti:25,20:16:20:_make_request:393:br5GSQ -- https://docs.google.com:443 "GET /document/d/1T1Sj69DxCTpEQI2pH0O04l_PSx1V3xsxYOnkiHPEPis/revisions/load?id=1T1Sj69DxCTpEQI2pH0O04l_PSx1V3xsxYOnkiHPEPis&start=1&end=188 HTTP/1.1" 200 None
+connecti:25,20:16:21:_new_conn:817:br5GSQ -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,20:16:21:_make_request:393:br5GSQ -- https://docs.google.com:443 "GET /document/d/16Tz6lbS7tdWBUhgseZCx0va0xBAayzOSSDSH-T20xRA/revisions/load?id=16Tz6lbS7tdWBUhgseZCx0va0xBAayzOSSDSH-T20xRA&start=1&end=1 HTTP/1.1" 403 None
+gdoc.py:25,20:16:21:download_details:73:br5GSQ -- Cannot get revisions.json
+Traceback (most recent call last):
+  File "/home/henry/pydocs/processing/gdoc.py", line 71, in download_details
+    assert response.status_code == 200
+AssertionError
+connecti:25,20:16:21:_new_conn:817:br5GSQ -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,20:16:22:_make_request:393:br5GSQ -- https://docs.google.com:443 "GET /document/d/16Tz6lbS7tdWBUhgseZCx0va0xBAayzOSSDSH-T20xRA/revisions/load?id=16Tz6lbS7tdWBUhgseZCx0va0xBAayzOSSDSH-T20xRA&start=1&end=1 HTTP/1.1" 403 None
+gdoc.py:25,20:16:22:download_details:73:br5GSQ -- Cannot get revisions.json
+Traceback (most recent call last):
+  File "/home/henry/pydocs/processing/gdoc.py", line 71, in download_details
+    assert response.status_code == 200
+AssertionError
+connecti:25,20:16:24:_new_conn:817:br5GSQ -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,20:16:24:_make_request:393:br5GSQ -- https://docs.google.com:443 "GET /document/d/1B6ePg9Ixtc4xqKL4D0_JO80n8GL83WpztJKJGaH-6S0/revisions/load?id=1B6ePg9Ixtc4xqKL4D0_JO80n8GL83WpztJKJGaH-6S0&start=1&end=1 HTTP/1.1" 403 None
+gdoc.py:25,20:16:24:download_details:73:br5GSQ -- Cannot get revisions.json
+Traceback (most recent call last):
+  File "/home/henry/pydocs/processing/gdoc.py", line 71, in download_details
+    assert response.status_code == 200
+AssertionError
+connecti:25,20:16:27:_new_conn:817:br5GSQ -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,20:16:28:_make_request:393:br5GSQ -- https://docs.google.com:443 "GET /document/d/11L4quB0D_Ttk0WMkddrcn_r8OmWG5Y7xEWgALTBoNvg/revisions/load?id=11L4quB0D_Ttk0WMkddrcn_r8OmWG5Y7xEWgALTBoNvg&start=1&end=1 HTTP/1.1" 403 None
+gdoc.py:25,20:16:28:download_details:73:br5GSQ -- Cannot get revisions.json
+Traceback (most recent call last):
+  File "/home/henry/pydocs/processing/gdoc.py", line 71, in download_details
+    assert response.status_code == 200
+AssertionError
+connecti:25,20:16:28:_new_conn:817:br5GSQ -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,20:16:29:_new_conn:817:br5GSQ -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,20:16:29:_make_request:393:br5GSQ -- https://docs.google.com:443 "GET /document/d/1JQ-JszbkA6JHylaBr1ZDWeMXTy2X6fM2evDEJo-W3U4/revisions/load?id=1JQ-JszbkA6JHylaBr1ZDWeMXTy2X6fM2evDEJo-W3U4&start=1&end=1 HTTP/1.1" 403 None
+gdoc.py:25,20:16:29:download_details:73:br5GSQ -- Cannot get revisions.json
+Traceback (most recent call last):
+  File "/home/henry/pydocs/processing/gdoc.py", line 71, in download_details
+    assert response.status_code == 200
+AssertionError
+connecti:25,20:16:30:_make_request:393:br5GSQ -- https://docs.google.com:443 "GET /document/d/1B6ePg9Ixtc4xqKL4D0_JO80n8GL83WpztJKJGaH-6S0/revisions/load?id=1B6ePg9Ixtc4xqKL4D0_JO80n8GL83WpztJKJGaH-6S0&start=1&end=1 HTTP/1.1" 403 None
+gdoc.py:25,20:16:30:download_details:73:br5GSQ -- Cannot get revisions.json
+Traceback (most recent call last):
+  File "/home/henry/pydocs/processing/gdoc.py", line 71, in download_details
+    assert response.status_code == 200
+AssertionError
+connecti:25,20:16:32:_new_conn:817:br5GSQ -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,20:16:33:_make_request:393:br5GSQ -- https://docs.google.com:443 "GET /document/d/11L4quB0D_Ttk0WMkddrcn_r8OmWG5Y7xEWgALTBoNvg/revisions/load?id=11L4quB0D_Ttk0WMkddrcn_r8OmWG5Y7xEWgALTBoNvg&start=1&end=1 HTTP/1.1" 403 None
+gdoc.py:25,20:16:33:download_details:73:br5GSQ -- Cannot get revisions.json
+Traceback (most recent call last):
+  File "/home/henry/pydocs/processing/gdoc.py", line 71, in download_details
+    assert response.status_code == 200
+AssertionError
+connecti:25,20:16:37:_new_conn:817:br5GSQ -- Starting new HTTPS connection (1): docs.google.com
+connecti:25,20:16:37:_make_request:393:br5GSQ -- https://docs.google.com:443 "GET /document/d/1JQ-JszbkA6JHylaBr1ZDWeMXTy2X6fM2evDEJo-W3U4/revisions/load?id=1JQ-JszbkA6JHylaBr1ZDWeMXTy2X6fM2evDEJo-W3U4&start=1&end=1 HTTP/1.1" 403 None
+gdoc.py:25,20:16:37:download_details:73:br5GSQ -- Cannot get revisions.json
+Traceback (most recent call last):
+  File "/home/henry/pydocs/processing/gdoc.py", line 71, in download_details
+    assert response.status_code == 200
+AssertionError
