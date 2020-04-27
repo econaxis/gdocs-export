@@ -1,5 +1,4 @@
 from flask import Flask
-import flask
 from flaskr.flask_config import CONF, cache
 
 

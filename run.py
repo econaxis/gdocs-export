@@ -1,7 +1,4 @@
 from flaskr import create_flask_serv
-from cProfile import Profile
-from werkzeug.middleware.profiler import ProfilerMiddleware
-import configlog
 
 import signal
 from contextlib import contextmanager

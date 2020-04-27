@@ -36,15 +36,15 @@ ENV RQ_NAME=default
 RUN chmod +x ./installation/vartest.sh
 RUN ./installation/vartest.sh
 
-COPY configlog.py boot.sh loader.py dsds.py run.py drun.sh dockerbuild.sh Dockerfile ./
+COPY configlog.py boot.sh loader.py dsds.py run.py Dockerfile ./
 COPY data ./data
 
 
 COPY flaskr ./flaskr
 COPY processing ./processing
 
-RUN chmod +x ./boot.sh
+#RUN chmod +x ./boot.sh
 
-RUN chmod -R 777 ./
+#RUN chmod -R 777 ./
 
 ENTRYPOINT ["./boot.sh"]

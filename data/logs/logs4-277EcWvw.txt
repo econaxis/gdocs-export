@@ -1,0 +1,119 @@
+configlo:27,10:44:56:handle_exception:84:7EcWvw -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: module 'processing.datutils.test_utils' has no attribute 'TestUtils'
+configlo:27,10:44:56:handle_exception:88:7EcWvw -- exiting! from sshook
+configlo:27,10:46:00:handle_exception:84:7EcWvw -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "/home/henry/pydocs/processing/gdoc.py", line 88, in download_details
+    response = requests.get(url = url, headers = self.headers, timeout = 5)
+AttributeError: headers
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/henry/pydocs/processing/gdoc.py", line 94, in download_details
+    time.sleep(random.uniform(5, 20*i))
+KeyboardInterrupt
+configlo:27,10:46:00:handle_exception:88:7EcWvw -- exiting! from sshook
+configlo:27,10:46:44:handle_exception:84:7EcWvw -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'GDoc' object has no attribute 'creds'
+configlo:27,10:46:44:handle_exception:88:7EcWvw -- exiting! from sshook
+configlo:27,10:48:00:handle_exception:84:7EcWvw -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/henry/pydocs/processing/gdoc.py", line 117, in download_details
+    time.sleep(6*counter)
+KeyboardInterrupt
+configlo:27,10:48:00:handle_exception:88:7EcWvw -- exiting! from sshook
+configlo:27,10:48:29:handle_exception:84:7EcWvw -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: async_init() missing 3 required positional arguments: 'fileId', 'session', and 'headers'
+configlo:27,10:48:29:handle_exception:88:7EcWvw -- exiting! from sshook
+configlo:27,10:49:37:handle_exception:84:7EcWvw -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/henry/pydocs/processing/gdoc.py", line 117, in download_details
+    while not pipe.poll(0.1):
+KeyboardInterrupt
+configlo:27,10:49:37:handle_exception:88:7EcWvw -- exiting! from sshook
+configlo:27,10:49:46:handle_exception:84:7EcWvw -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/usr/lib/python3.8/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+  File "/usr/lib/python3.8/multiprocessing/connection.py", line 414, in _recv_bytes
+    buf = self._recv(4)
+  File "/usr/lib/python3.8/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+KeyboardInterrupt
+configlo:27,10:49:46:handle_exception:88:7EcWvw -- exiting! from sshook
+configlo:27,10:49:58:handle_exception:84:7EcWvw -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/henry/pydocs/processing/gdoc.py", line 117, in download_details
+    while not pipe.poll(0.1):
+KeyboardInterrupt
+configlo:27,10:49:58:handle_exception:88:7EcWvw -- exiting! from sshook
+configlo:27,10:51:32:handle_exception:84:7EcWvw -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/usr/lib/python3.8/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+  File "/usr/lib/python3.8/multiprocessing/connection.py", line 414, in _recv_bytes
+    buf = self._recv(4)
+  File "/usr/lib/python3.8/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+KeyboardInterrupt
+configlo:27,10:51:32:handle_exception:88:7EcWvw -- exiting! from sshook
+configlo:27,10:51:35:handle_exception:84:7EcWvw -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/henry/pydocs/processing/gdoc.py", line 104, in download_details
+  File "/usr/lib/python3.8/logging/__init__.py", line 1422, in debug
+    self._log(DEBUG, msg, args, **kwargs)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1577, in _log
+    self.handle(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1587, in handle
+    self.callHandlers(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1649, in callHandlers
+    hdlr.handle(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 948, in handle
+    self.acquire()
+  File "/usr/lib/python3.8/logging/__init__.py", line 894, in acquire
+    def acquire(self):
+KeyboardInterrupt
+configlo:27,10:51:35:handle_exception:88:7EcWvw -- exiting! from sshook
+configlo:27,10:51:38:handle_exception:84:7EcWvw -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/usr/lib/python3.8/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+  File "/usr/lib/python3.8/multiprocessing/connection.py", line 414, in _recv_bytes
+    buf = self._recv(4)
+  File "/usr/lib/python3.8/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+KeyboardInterrupt
+configlo:27,10:51:38:handle_exception:88:7EcWvw -- exiting! from sshook
+configlo:27,10:51:43:handle_exception:84:7EcWvw -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/henry/pydocs/processing/gdoc.py", line 117, in download_details
+    while not pipe.poll(0.1):
+KeyboardInterrupt
+configlo:27,10:51:43:handle_exception:88:7EcWvw -- exiting! from sshook
+configlo:27,10:51:48:handle_exception:84:7EcWvw -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/usr/lib/python3.8/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+  File "/usr/lib/python3.8/multiprocessing/connection.py", line 414, in _recv_bytes
+    buf = self._recv(4)
+  File "/usr/lib/python3.8/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+KeyboardInterrupt
+configlo:27,10:51:48:handle_exception:88:7EcWvw -- exiting! from sshook
