@@ -1,11 +1,8 @@
 import logging
-import sqlalchemy
-from processing.datutils.test_utils import TestUtil
-import smtplib, ssl
+import smtplib
 import time
 import os
 import sys
-import socket
 from logging import FileHandler, StreamHandler
 from logging.handlers import SysLogHandler
 from datetime import datetime
@@ -26,7 +23,7 @@ filelog = FileHandler(logFile)
 stream = StreamHandler()
 
 stream.setLevel(logging.INFO)
-filelog.setLevel(logging.NOTSET)
+filelog.setLevel(logging.CRITICAL)
 
 def semidisable(logg):
     logg.propagate=False
@@ -97,7 +94,7 @@ def handle_exception(exc_type, exc_value, exc_traceback):
 
 sys.excepthook = handle_exception
 
-import email, smtplib, ssl
+import smtplib
 
 from email import encoders
 from email.mime.base import MIMEBase
@@ -117,6 +114,7 @@ def sendmail(return_thread = False):
 
 
 def mp_sendmail():
+    return
     logger.info("sending mail")
     subject = f"PYDOCS LOGS from {myip}::{token}"
     body = f"Automatically generated logging from {myip}\nSent date: {datetime.now().__str__()}"

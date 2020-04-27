@@ -1,6 +1,6 @@
 import dash_core_components as dcc
 import dash_html_components as html
-from flaskr.dashapp.dash_functions import *
+from flaskr.dashapp.dash_functions import gen_fListFig, gen_margin
 from processing.sql import scoped_sess
 from flaskr.dashapp.callbacks import test
 

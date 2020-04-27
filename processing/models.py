@@ -1,9 +1,7 @@
 from sqlalchemy import create_engine, MetaData, Column, Integer, String, Table, DateTime, ForeignKey, PrimaryKeyConstraint, Boolean, \
         PickleType, Float
-from sqlalchemy.ext.declarative import declarative_base, declared_attr
-from sqlalchemy.orm import *
-from sqlalchemy.sql import *
-from sqlalchemy.orm import sessionmaker, relationship, scoped_session
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import relationship
 
 Base = declarative_base()
 
@@ -46,6 +44,7 @@ class Dates(Base):
 
     bins = Column(Float)
     values = Column(Integer)
+    bin_width = Column(Float)
 
 
 

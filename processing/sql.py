@@ -1,21 +1,15 @@
 import random
 import secrets
 from datetime import datetime
-import sys
 from queue import Queue
 import pickle
 import time
 import threading
 import secrets
 import sqlalchemy as sqlal
-import multiprocessing as mp
-from sqlalchemy import create_engine, MetaData
 from sqlalchemy.orm import sessionmaker, scoped_session
-import pprint
-from pprint import pformat
 import os
 import logging
-from logging import FileHandler
 import configlog
 from processing.models import Owner, Files, Closure, Dates, Base, Filename
 
@@ -37,6 +31,21 @@ _session = sessionmaker(bind=ENGINE)
 
 v_scoped_session = scoped_session(_session)
 
+def db_connect(func):
+    def inner(*args, **kwargs):
+        session = v_scoped_session()
+        try:
+            func(*args, **kwargs)
+            session.commit()
+        except:
+            session.rollback()
+            raise
+        finally:
+            session.close()
+            v_scoped_session.remove()
+
+    return inner
+
 
 def report(lt_files, print_event):
     while not print_event.is_set():
@@ -47,6 +56,7 @@ def report(lt_files, print_event):
             p = configlog.sendmail(True)
             time.sleep(10)
             p.join()
+
 
 def adder(queue, sess):
     counter = 0
@@ -69,13 +79,13 @@ def adder(queue, sess):
     sess.flush()
 
 
-
+@db_connect
 def commit(q, _type = None, add = False):
     sess = v_scoped_session()
     _temp = []
     counter = 0
-    iters = round(q.qsize() / 1400)
-    iters = max(iters, 70)
+    iters = round(q.qsize() / 850)
+    iters = max(iters, 125)
     logger.info("iters: %d, len: %d", iters, q.qsize())
     while (q.qsize()):
         counter +=1
@@ -108,12 +118,11 @@ def commit(q, _type = None, add = False):
 
 
 
-
+@db_connect
 def load_from_dict(lt_files, fileid_obj_map):
     sess = v_scoped_session()
 
-    key = secrets.token_urlsafe(3)
-    time.sleep(random.uniform(0, 10))
+    secrets.token_urlsafe(3)
 
     counter = 0
     lt_dates = Queue()
@@ -134,17 +143,20 @@ def load_from_dict(lt_files, fileid_obj_map):
                 fileid = m.id
                 bins = d[1][:-1]
                 values = d[0]
+                bin_width = d[2]
 
                 for counter, _bin_date in enumerate(bins):
-                    lt_dates.put(dict(fileId = fileid, bins = bins[counter], values = values[counter]))
+
+                    lt_dates.put(dict(fileId = fileid, bins = bins[counter],  \
+                        values = values[counter], bin_width = bin_width))
 
             files = []
 
             logger.info(f"len dates: {lt_dates.qsize()}")
 
-            p = [threading.Thread(target = commit, args = (lt_dates, Dates)) for i in range(35)]
-            _t = [x.start() for x in p]
-            _t = [x.join() for x in p]
+            p = [threading.Thread(target = commit, args = (lt_dates, Dates)) for i in range(45)]
+            [x.start() for x in p]
+            [x.join() for x in p]
             sess.commit()
 
 def start(userid, path):
@@ -167,6 +179,7 @@ def start(userid, path):
     global owner_id
     owner_id = owner.id
 
+    sess.close()
     v_scoped_session.remove()
 
     logger.info("Added owner row, name: %s id: %s", owner.name, owner.id)
@@ -174,10 +187,9 @@ def start(userid, path):
     files = {}
 
     names = pickle.load(open(path+'pickleIndex', 'rb'))
-    procs = []
 
 
-    for n in names:
+    for n in names[0:1]:
         files.update(pickle.load(open(n, 'rb')))
         continue
 
@@ -189,7 +201,7 @@ def start(userid, path):
 
 
     lt_files = Queue()
-    lt_dates = Queue()
+    Queue()
     #fileid_obj_map maps gdrive fileids to file objects defined in models
     fileid_obj_map = {}
 
@@ -217,7 +229,6 @@ def start(userid, path):
 
     logger.info("len of id map %d len of files %d", len(fileid_obj_map), lt_files.qsize())
 
-    sess.expunge_all()
 
 
     print_event = threading.Event()
@@ -226,28 +237,28 @@ def start(userid, path):
     pr.start()
 
     p = threading.Thread(target = load_from_dict, args = (lt_files, fileid_obj_map))
-    p1 = threading.Thread(target = load_from_dict, args = (lt_files, fileid_obj_map))
-    p2 = threading.Thread(target = load_from_dict, args = (lt_files, fileid_obj_map))
-    p3 = threading.Thread(target = load_from_dict, args = (lt_files, fileid_obj_map))
+    #p1 = threading.Thread(target = load_from_dict, args = (lt_files, fileid_obj_map))
+    #p2 = threading.Thread(target = load_from_dict, args = (lt_files, fileid_obj_map))
+    #p3 = threading.Thread(target = load_from_dict, args = (lt_files, fileid_obj_map))
 
 
     p.start()
-    time.sleep(5)
-    p1.start()
-    time.sleep(5)
-    p2.start()
-    time.sleep(5)
-    p3.start()
+    #time.sleep(5)
+    #p1.start()
+    #time.sleep(5)
+    #p2.start()
+    #time.sleep(5)
+    #p3.start()
 
 
     p.join()
-    p1.join()
-    p2.join()
-    p3.join()
+    #p1.join()
+    #p2.join()
+    #p3.join()
 
 
 
-
+    sess = v_scoped_session()
 
     clos = pickle.load(open(path + 'closure.pickle', 'rb'))
     idmapper = pickle.load(open(path + 'idmapper.pickle', 'rb'))
@@ -326,3 +337,4 @@ if __name__ == '__main__':
 
     wpath = "/home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/"
     start("testing" + datetime.now().__str__(), wpath)
+

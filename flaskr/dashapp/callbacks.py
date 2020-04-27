@@ -1,26 +1,14 @@
-import dash
-import configlog
 import time
 import logging
-import configlog
-import dash_core_components as dcc
-from processing.models import Owner, Files, Dates
+from processing.models import Dates, Files
 from processing.sql import scoped_sess as db
 from datetime import datetime
-import dash_html_components as html
 import plotly.graph_objects as go
-import pandas as pd
 from dash.dependencies import Input, Output, State
 import pprint
-from pprint import pformat
-from dash.dash import no_update
-from flask import current_app
-import flask
-from flaskr.dashapp.dash_functions import *
-from flaskr.flask_config import CONF, cache
+from flaskr.dashapp.dash_functions import Filename, PrettyPrinter, genOptList, gen_fListFig, gen_margin, idIndexMapper, namesList, np
 from processing.sql import sess
-from processing.models import Owner, Files, Dates, Closure
-from sqlalchemy.orm import joinedload
+from processing.models import Closure, Dates, Files
 from sqlalchemy import and_
 
 pprint = PrettyPrinter(indent=4).pprint

@@ -1,22 +1,11 @@
 # For use with dash app.py
-import dash
-import dash_core_components as dcc
-import dash_html_components as html
 import plotly.graph_objects as go
-import pickle
-import json
-import numpy as np
-import pandas as pd
-from datetime import datetime, timedelta
 from math import log
-from dash.dependencies import Input, Output, State
-from dash.dash import no_update
 from pprint import PrettyPrinter
 from processing.models import Owner, Dates, Files, Filename
 from sqlalchemy.sql import func
 #from flaskr.flask_config import cache
 from processing.sql import scoped_sess as db
-import flask
 
 
 #Maps fileid to index

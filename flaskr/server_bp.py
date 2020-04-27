@@ -1,11 +1,8 @@
 import pickle
 from flask import render_template, redirect, Blueprint, current_app
 import flask
-from wtforms import StringField, PasswordField
 from flaskr.form import Form
 import uuid
-import google.oauth2.credentials
-import google_auth_oauthlib.flow
 import os
 
 
@@ -49,7 +46,7 @@ def process_data(_userid=None):
         flask.session.pop("fileid")
         print("starting new task")
         from flaskr.get_files_loader import queueLoad
-        curJob = queueLoad(userid, workingPath, fileId, creds)
+        queueLoad(userid, workingPath, fileId, creds)
         htmlResponse = redirect(
             flask.url_for(
                 'server.process_data',
@@ -87,7 +84,7 @@ def formValidate():
 
     flask.session["userid"] = userid
 
-    creds = check_signin(userid)
+    check_signin(userid)
 
     if(form.validate_on_submit()):
         flask.session["fileid"] = form.fileId.data

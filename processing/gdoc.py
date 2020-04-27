@@ -16,7 +16,7 @@ logger = logging.getLogger(__name__)
 base_url = 'https://docs.google.com/document/d/{file_id}/revisions/load?id={file_id}&start=1&end={end}'
 url = 'https://www.googleapis.com/drive/v3/files/{}/revisions'
 
-timeout = aiohttp.ClientTimeout(total=15)
+timeout = aiohttp.ClientTimeout(total=10)
 
 class GDoc():
 
@@ -36,7 +36,7 @@ class GDoc():
         self.headers = headers
         self.last_revision_id = 1
 
-        code = await self.get_last_revision()
+        await self.get_last_revision()
 
 
         logger.debug("after await %s", self.last_revision_id)
@@ -48,16 +48,16 @@ class GDoc():
         try:
             async with self.session.get(url=url.format(self.fileId), 
                     headers=self.headers, timeout = timeout) as response:
-
                 code = response.status
                 if code != 200:
                     logtext = await response.text()
                     logtext = textwrap.wrap(logtext, 1000)
-                    _temp = [logger.log(1, pformat(x)) for x in logtext]
+                    [logger.log(1, pformat(x)) for x in logtext]
 
                     if retry:
                         return -1
-                    await asyncio.sleep(7)
+                    logger.info("can't get last revision, sleeping 7")
+                    await asyncio.sleep(random.uniform(10, 20))
                     await self.get_last_revision(retry = True)
                 else:
                     rev = await response.text()
@@ -69,8 +69,11 @@ class GDoc():
             logger.exception("cannot get last revision id")
 
 
-    def download_details(self,  pipe, done_event):
+    def download_details(self,  pipe):
 
+        logger.info("received job for %s",self.fileId)
+
+        dates = []
         #Retries
         for i in range(1, 3):
             url = base_url.format(file_id=self.fileId, end=self.last_revision_id)
@@ -78,34 +81,49 @@ class GDoc():
             dates = []
 
             response = SimpleNamespace(text = "Blank Filler. This will show when response is undefined")
+            logger.info("get url: %s", url)
             try:
-                response = requests.get(url = url, headers = self.headers, timeout = 5*i)
+                logger.info("starting url get")
+                response = requests.get(url = url, headers = self.headers, timeout = 5)
+                logger.info('url get sucess')
                 assert response.status_code == 200
             except:
-                logtext = response.text
-
-                logtext = textwrap.wrap(logtext, 1000)
-                _temp = [logger.log(1, pformat(x)) for x in logtext]
-
-                logger.debug("sleeping up to %d", 20*i)
+                logger.info("%s unable, sleeping up to %d", self.fileId[0:5], 20*i)
                 time.sleep(random.uniform(5, 20*i))
                 continue
 
             text = response.text
-            revision_details = json.loads(text[5:])
 
+            print("starting json load")
+            revision_details = json.loads(text[5:])
 
             dates = [None]*len(revision_details['changelog'])
 
             for count,x in enumerate(revision_details['changelog']):
+                logger.debug("processing dates, for %s", self.fileId)
                 dates[count] = x[1]/1e3
 
-            pipe.send(dates)
-            pipe.close()
-            done_event.set()
-            return
+            break
 
-        pipe.send([])
+        print(dates)
+
+        pipe.send(dates)
+
+        counter = 1
+
+        while not pipe.poll(0.1):
+            logger.debug("resending for %s", self.fileId[0:5])
+            pipe.send(dates)
+            counter +=1
+            time.sleep(6*counter)
+
+            if counter > 10:
+                pipe.send(dates)
+                pipe.close()
+                return
+
+        logger.debug("pipe received: %s correct: %s after %d", pipe.recv(), self.fileId[0:5], counter)
+
         pipe.close()
-        done_event.set()
+
         return

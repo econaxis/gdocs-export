@@ -1,7 +1,7 @@
 import asyncio
 import  multiprocessing as mp
 from multiprocessing import Process, Pipe
-import sys
+from pprint import pformat
 from time import time
 from datetime import datetime
 import random
@@ -21,33 +21,32 @@ logger = logging.getLogger(__name__)
 
 pprint = pprint.PrettyPrinter(indent=4).pprint
 
-timeout = aiohttp.ClientTimeout(total=10)
+timeout = aiohttp.ClientTimeout(total=6)
 
 
 
 # Deprecated
 
 
-MAX_FILES = 20000
+MAX_FILES = 100
 idmapper = {}
 
 
 SEED_ID = "root"
 
-workerInstances = 20
+workerInstances = 7
 
 ACCEPTED_TYPES = { "application/vnd.google-apps.presentation", "application/vnd.google-apps.spreadsheet", "application/vnd.google-apps.document", "application/pdf"}
 
 async def getIdsRecursive (drive_url, folders: asyncio.Queue,
-                          files: asyncio.Queue, session: aiohttp.ClientSession, headers):
+                          files: asyncio.Queue, session: aiohttp.ClientSession, headers, done_event):
 
-    global MAX_FILES
     # Wait random moment for folder queue to be populated
     await asyncio.sleep(random.uniform(0, 1))
 
     # Query to pass into Drive to find item
 
-    while (files.qsize() + len(TestUtil.pathedFiles) < MAX_FILES):
+    while (TestUtil.processedcount + files.qsize() + len(TestUtil.pathedFiles) < MAX_FILES) and not done_event.is_set():
         logger.debug("getIdsRecursive looping")
         # Wait for folders queue, with interval 6 seconds between each check
         # Necessary if more than one workers all starting at the same time,
@@ -61,8 +60,7 @@ async def getIdsRecursive (drive_url, folders: asyncio.Queue,
         folderIdTuple = await tryGetQueue(folders, name="getIds", interval=3)
 
         if(folderIdTuple == -1):
-            logger.warning('getId task exiting')
-            return
+            break
 
         (id, path, retries) = folderIdTuple
 
@@ -104,10 +102,14 @@ async def getIdsRecursive (drive_url, folders: asyncio.Queue,
             if(resFile["mimeType"] == "application/vnd.google-apps.folder"):
                 await folders.put((id, path + [id], 0))
             elif (resFile["mimeType"] in ACCEPTED_TYPES):
-                if(resFile["capabilities"]["canReadRevisions"] == False):
+                if(not resFile["capabilities"]["canReadRevisions"]):
                     continue
+
                 # First element id is not used for naming, only for api calls
                 await files.put([id, resFile["mimeType"], path + [id], 0])
+
+    logger.info("----------------------------------getid return")
+    logger.info("len %d:%d:%d", TestUtil.processedcount, files.qsize(), len(TestUtil.pathedFiles))
 
 
 async def queryDriveActivity(fileTuple, files, session, headers):
@@ -148,22 +150,32 @@ async def queryDriveActivity(fileTuple, files, session, headers):
     for a in activities:
         _revisions.append(dict(modifiedDate=a["timestamp"]))
 
+
     for item in _revisions:
         modifiedDate = iso8601.parse_date(item["modifiedDate"])
 
         timestamp = datetime.timestamp(modifiedDate)
 
+        #TODO: don't use TestUtil.pathedFiles, use pipe instead for multiprocessing lib use
         if((*path,) not in TestUtil.pathedFiles):
             TestUtil.pathedFiles[(*path,)] = [timestamp]
         else:
             TestUtil.pathedFiles[(*path,)].append(timestamp)
     return 0
 
-async def getRevision(files: asyncio.Queue, session: aiohttp.ClientSession, headers, endEvent):
+async def getRevision(files, session: aiohttp.ClientSession, headers, endEvent, name = 'default'):
 
     # Await random amount for more staggered requesting (?)
-    await asyncio.sleep(random.uniform(0, workerInstances * 1.5))
+    await asyncio.sleep(random.uniform(0, workerInstances * 4.5))
+
+    _t = time.time()
+
+    cycles = 0
+
     while not endEvent.is_set():
+        await asyncio.sleep(random.uniform(0, 1))
+
+        cycles +=1
         logger.debug("getRevision looping")
 
         fileTuple = await tryGetQueue(files, name="getRevision")
@@ -171,38 +183,60 @@ async def getRevision(files: asyncio.Queue, session: aiohttp.ClientSession, head
             logger.warning('getRevision task exiting')
             break
 
+
         (fileId, mimeType, path, tried) = fileTuple
 
 
-        if(mimeType != "application/vnd.google-apps.document" or True):
+        if(mimeType != "application/vnd.google-apps.document"):
             logger.debug("not google doc")
-            pass
             await queryDriveActivity(fileTuple, files, session, headers)
         else:
             gd = GDoc()
 
+            logger.debug("starting googledoc async_init for %s", fileId)
             await gd.async_init(fileId, session, headers)
 
             parent_conn, child_conn = Pipe()
-            done_event = mp.Event()
 
-            p = Process(target = gd.download_details, args = (child_conn, done_event))
+
+            p = Process(target = gd.download_details, args = (child_conn,))
+
             p.start()
 
-            while not done_event.is_set():
-                await asyncio.sleep(10)
+            logger.debug("started process for %s", fileId[0:5])
+            await asyncio.sleep(10)
 
-            dates = parent_conn.recv()
-            p.join()
+
+            counter = 0
+            while not parent_conn.poll(0.01) and counter < 10:
+                counter +=1
+                logger.debug("sleeping from poll, waiting for %s, %d", fileId[0:5], counter)
+                await asyncio.sleep(random.uniform(5 * counter, 6 * counter))
+
+            logger.debug("received goahead to receive %s", fileId[0:5])
+
+            if parent_conn.poll(0.01):
+                dates = parent_conn.recv()
+
+            parent_conn.send(f'success {fileId[0:5]}')
+
+            logger.debug("done recv")
+            p.join(1)
+            logger.debug("finished join")
 
             TestUtil.pathedFiles[(*path,)] = dates
-            logger.debug("google doc")
+
             #TestUtil.pathedFiles[(*path,)] = []
             #dates = TestUtil.pathedFiles[(*path,)]
             #getgdoc(TestUtil.creds, fileId, dates)
 
+    endEvent.set()
+    logger.info("getrev return")
+
+    return
+
     if(not endEvent.is_set()):
-        secs = 30
+        secs = 10
         logger.warning(f"getRevision task has ended, waiting for {secs} seconds for all other tasks to finish")
         await asyncio.sleep(secs)
         endEvent.set()
@@ -214,10 +248,12 @@ async def start():
 
     loop = asyncio.get_event_loop()
     loop.set_exception_handler(exchandler)
+    loop.set_debug(True)
 
 
     folders = asyncio.Queue()
     files = asyncio.Queue()
+
     await folders.put([SEED_ID, ["root"], 0])
 
 
@@ -227,7 +263,7 @@ async def start():
         endEvent = asyncio.Event()
 
         fileExplorers = [loop.create_task(getIdsRecursive("https://www.googleapis.com/drive/v3/files", \
-                                         folders, files, session, TestUtil.headers)) for i in range(1)]
+                                         folders, files, session, TestUtil.headers, endEvent)) for i in range(1)]
 
         revisionExplorer = [loop.create_task(getRevision(files, session, TestUtil.headers, endEvent))
                             for i in range(workerInstances)]
@@ -298,6 +334,8 @@ def loadFiles(USER_ID, _workingPath, fileId, _creds):
     loop = asyncio.get_event_loop()
     loop.set_exception_handler(exchandler)
     startTask = loop.create_task(start())
+
+    loop.set_debug(True)
 
     loop.run_until_complete(asyncio.gather(startTask))
 

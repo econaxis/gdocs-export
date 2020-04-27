@@ -1,5 +1,6 @@
 import pandas as pd
 from multiprocessing import Process
+import cProfile
 import os
 import ujson as json
 import sys
@@ -24,7 +25,8 @@ from google.auth.transport.requests import Request
 import logging
 
 
-if (random.random() < 1 ):
+
+if (random.random() < 0 ):
     os.environ["PROFILE"] = "true"
 
 
@@ -52,6 +54,7 @@ class TestUtil:
                 cls.creds.refresh(Request())
             else:
                 raise "cls.creds not valid!"
+
         cls.creds.apply(cls.headers)
         return cls.creds
 
@@ -81,11 +84,15 @@ class TestUtil:
             tracemalloc.start()
             cls.snapshot = tracemalloc.take_snapshot()
 
+        start_time = time.time()
         while not endEvent.is_set():
+
             gc.collect()
 
-            logger.warning('\n\n%sMemory usage: %s (kb)%s%d mins since start','-'*15,resource.getrusage(resource.RUSAGE_SELF).ru_maxrss, '-'*15,
+            logger.warning('\n\n%sMemory usage: %s (kb)%s%d mins since start'
+                    ,'-'*15,resource.getrusage(resource.RUSAGE_SELF).ru_maxrss, '-'*15,
                     (time.time() - cls.starttime)/60)
+
 
             if("PROFILE" in os.environ):
                 sns = tracemalloc.take_snapshot()
@@ -108,21 +115,38 @@ class TestUtil:
                     ,cls.fileCounter)
 
             #Temp var for thread
-            p = configlog.sendmail(return_thread = True)
+            #p = configlog.sendmail(return_thread = True)
 
-            _sleep_time = 3
-            for i in range(10:
-                if len(cls.pathedFiles)>3:
-                    cls.dump_files()
-                await asyncio.sleep(_sleep_time / 10)
+            _sleep_time = 40
+            interval = 8
 
+            df_t = []
 
-            if p:
+            for i in range(interval):
+                if endEvent.is_set():
+                    break
+                if len(cls.pathedFiles)>10:
+                    df_t.append(cls.dump_files(return_thread = True))
+
+                await asyncio.sleep(_sleep_time / interval)
+
+            logger.debug("event loop health: %d, intended: %d", time.time() - start_time, _sleep_time)
+
+            for i in df_t:
+                i.join()
+
+            start_time = time.time()
+
+            '''
+            if p and False:
                 logger.debug("awaiting email task join")
-                p.join()
+                p.join(timeout = 10)
+                logger.debug("done awaiting task join")
+            '''
+        logger.warning("print task return")
 
     @classmethod
-    def dump_files(cls):
+    def dump_files(cls, return_thread = False):
 
         histo = {}
         
@@ -147,17 +171,25 @@ class TestUtil:
 
         cls.pickleIndex.append(_filename)
 
-        p.join()
+        if return_thread:
+            return p
+        else:
+            p.join()
 
     @classmethod
     def compute_hist(cls, data, bin_method = 'fd'):
 
         _ret = np.histogram(data, bins = 'fd')
 
+        bin_width = _ret[1][1] - _ret[1][0]
+
+        trimmed_values = [(a, b) for (a, b) in zip(_ret[0], _ret[1]) if a != 0]
+
+        values = [x[0] for x in trimmed_values]
+        bins = [x[1] for x in trimmed_values]
+
         #Return list of values, bins
-        return [_ret[0].tolist(), _ret[1].tolist()]
-
-
+        return [values, bins, bin_width.item()]
 
     @classmethod
     async def handleResponse(cls, response, fileTuple = None, queue = None):
@@ -181,34 +213,6 @@ class TestUtil:
             return -1
 
 
-    '''
-    @classmethod
-    def formatData(cls, fileName = 'collapsedFiles'):
-        rdata = pickle.load(open(cls.workingPath + fileName + '.pickle', 'rb'))
-
-        ind = pd.MultiIndex.from_tuples(rdata.keys())
-        data = pd.DataFrame(rdata.values(), index = ind, columns = ["Type"])
-
-        sumDates=data.reset_index(level = 0, drop = True)
-        pickle.dump(data, open(cls.workingPath + fileName + "_p.pickle", 'wb'))
-
-
-    @classmethod
-    def activity_gen(cls):
-        data = pickle.load(open(cls.workingPath + 'collapsedFiles_p.pickle', 'rb'))
-        hists = {}
-        activity = dict(time=[], files=[], marker_size=[])
-        for f in data.index.levels[0]:
-            timesForFile = data.loc[f].index
-            activity["time"].append(data.loc[f].index[-1])
-            activity["files"].append(f)
-            activity["marker_size"].append(log(len(timesForFile), 1.3))
-            hists[f] = [0, 0]
-            hists[f][0], bins = np.histogram([i.timestamp() for i in timesForFile], bins = 'auto')
-            hists[f][1] = [datetime.fromtimestamp(i) for i in bins]
-        pickle.dump(activity, open(cls.workingPath + 'activity.pickle', 'wb'))
-        pickle.dump(hists, open(cls.workingPath + 'hists.pickle', 'wb'))
-    '''
 
 
 def dr2_urlbuilder(id: str):
@@ -233,7 +237,7 @@ async def tryGetQueue(queue: asyncio.Queue, repeatTimes:int = 5, interval:float 
         except:
             if(timesWaited>repeatTimes):
                 return -1
-            logger.debug(name + "waiting %d %d", timesWaited, repeatTimes)
+            logger.info(name + "waiting %d %d", timesWaited, repeatTimes)
             await asyncio.sleep(interval + random.randint(0, 5))
     return output
 
