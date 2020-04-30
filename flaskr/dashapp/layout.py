@@ -1,8 +1,12 @@
 import dash_core_components as dcc
+import dash
+import plotly.graph_objects as go
 import dash_html_components as html
 from flaskr.dashapp.dash_functions import gen_fListFig, gen_margin
-from processing.sql import scoped_sess
+from processing.sql import v_scoped_session
 from flaskr.dashapp.callbacks import test
+
+scoped_sess = v_scoped_session()
 
 
 def layout():
@@ -22,7 +26,16 @@ def layout():
             ),
             html.Div([
                 dcc.Graph(
-                    id="histogram"
+                    id="histogram",
+                    figure = go.Figure(
+                        layout=dict(
+                            margin=gen_margin(),
+                            xaxis=dict(
+                                type="date"
+                            ),
+                            barmode = 'overlay'
+                        )
+                    )
                 ),
                 html.Button(
                     "Get parent",
@@ -33,6 +46,10 @@ def layout():
                     options=[
                         {'label': 'Time Only', 'value': 'time'}
                     ]
+                ),
+                html.Button(
+                    "Save trace",
+                    id = "trace"
                 )
             ], className="six columns"),
         ], id="primary"),

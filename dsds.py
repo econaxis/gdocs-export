@@ -13,9 +13,9 @@ def start():
 
     uid = "527e4afc-4598-400f-8536-afa5324f0ba4"
 
-    homePath = "/home/henry/pydocs/"
-
-    if ("DSS" in os.environ):
+    if "FLASKDBG" in os.environ:
+        homePath = "/home/henry/pydocs/"
+    else:
         homePath = '/app/'
     #fileid = "1ytJocI9f4gvmpnwLNNfpQzRPhcFs5EzR"
     fileid = "0B4Fujvv5MfqbVElBU01fZUxHcUk"

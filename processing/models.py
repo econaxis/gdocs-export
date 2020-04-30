@@ -42,20 +42,23 @@ class Dates(Base):
 
     fileId = Column(Integer, ForeignKey('files.id'))
 
-    bins = Column(Float)
-    values = Column(Integer)
+    date = Column(Float)
+    adds = Column(Integer)
+    deletes = Column(Integer)
     bin_width = Column(Float)
+
 
 
 
     #Relationships
     files= relationship("Files", back_populates="dates")
+
     __table_args__ = (
         PrimaryKeyConstraint(name='dates_pk', mssql_clustered=False),
     )
 
     def __repr__(self):
-        return f"Date \n"
+        return f"Dates Object: {self.date}, {self.adds}, {self.deletes}"
 
 
 class Closure(Base):
@@ -78,6 +81,7 @@ class Closure(Base):
 
 class Filename(Base):
     __tablename__ = 'filename'
+
     id = Column(Integer, primary_key=True, autoincrement=True)
 
     fileId = Column(Integer, ForeignKey('files.id'))

@@ -10,6 +10,14 @@ echo $REDIS_HOST
 echo $REDIS_PASSW
 echo $RQ_NAME
 
+echo $SQL_SERV
+
+if [ -n "$SQL_SERV" ]; then
+    echo "SQL SERVER MODE"
+    python -u -m processing.sql
+    wait
+fi
+
 if [ -n "$AZURE" ]; then
     echo "Azure Worker mode"
 

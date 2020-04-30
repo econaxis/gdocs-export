@@ -16,14 +16,14 @@ os.environ["TZ"]="America/Vancouver"
 time.tzset()
 
 
-logFile = "data/logs/logs{}{}.txt".format(datetime.now().strftime("%-m-%d"), token)
+logFile = "data/logs/logs{}---{}.txt".format(datetime.now().strftime("%-m-%d"), token)
 
 syslog = SysLogHandler(address=('logs2.papertrailapp.com', 49905))
 filelog = FileHandler(logFile)
 stream = StreamHandler()
 
 stream.setLevel(logging.INFO)
-filelog.setLevel(logging.CRITICAL)
+filelog.setLevel(logging.NOTSET)
 
 def semidisable(logg):
     logg.propagate=False
@@ -83,12 +83,10 @@ def handle_exception(exc_type, exc_value, exc_traceback):
 
     logger.critical("Custom Uncaught exception", exc_info=(exc_type, exc_value, exc_traceback))
 
-    sendmail()
-
+    sendmail(msg = "Program ended wih exception. Check logs for more details")
     logger.critical("exiting! from sshook")
 
     #logger.info("sending to default hook")
-    #sys.__excepthook__(exc_type, exc_value, exc_traceback)
     return 0 
 
 
@@ -101,9 +99,12 @@ from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import multiprocessing as mp
+import random
 
-def sendmail(return_thread = False):
-    p = mp.Process(target = mp_sendmail, args = ())
+def sendmail(msg = "", return_thread = False):
+
+
+    p = mp.Process(target = mp_sendmail, args = (msg, ))
     p.start()
 
     if return_thread:
@@ -113,11 +114,10 @@ def sendmail(return_thread = False):
         return
 
 
-def mp_sendmail():
-    return
+def mp_sendmail(msg):
     logger.info("sending mail")
     subject = f"PYDOCS LOGS from {myip}::{token}"
-    body = f"Automatically generated logging from {myip}\nSent date: {datetime.now().__str__()}"
+    body = f"Automatically generated logging from {myip}\nSent date: {datetime.now().__str__()}\n\n{msg}"
     sender_email = "postmaster@sandboxafcb93d604f547c984f76fd927c84de2.mailgun.org"
     receiver_email = "henry2833+py@gmail.com"
     password = "efa1a3633640e1dd88cb3bc01f934dab"

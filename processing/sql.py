@@ -1,4 +1,7 @@
 import random
+from processing.datutils.test_utils import adv_read, adv_write
+import functools
+import sys
 import secrets
 from datetime import datetime
 from queue import Queue
@@ -13,13 +16,15 @@ import logging
 import configlog
 from processing.models import Owner, Files, Closure, Dates, Base, Filename
 
+
+
 scrt = secrets.token_urlsafe(7)
 token = datetime.now().strftime("%d-%H.%f") + scrt
 
 PARAMS = os.environ["SQL_CONN"]
 
-ENGINE = sqlal.create_engine("mssql+pyodbc:///?odbc_connect=%s" % PARAMS, pool_size=15, echo = False, max_overflow=300)
-#ENGINE = sqlal.create_engine('sqlite:///foo.db')
+ENGINE = sqlal.create_engine("mssql+pyodbc:///?odbc_connect=%s" % PARAMS, pool_size=30, echo = False, max_overflow=300)
+#ENGINE = sqlal.create_engine('sqlite:///foo1.db')
 
 logger = logging.getLogger(__name__)
 
@@ -32,10 +37,12 @@ _session = sessionmaker(bind=ENGINE)
 v_scoped_session = scoped_session(_session)
 
 def db_connect(func):
+
+    @functools.wraps(func)
     def inner(*args, **kwargs):
         session = v_scoped_session()
         try:
-            func(*args, **kwargs)
+            result = func(*args, **kwargs)
             session.commit()
         except:
             session.rollback()
@@ -43,21 +50,22 @@ def db_connect(func):
         finally:
             session.close()
             v_scoped_session.remove()
-
+        return result
     return inner
 
 
-def report(lt_files, print_event):
+def report(queue, threads, print_event):
+    counter = 0
     while not print_event.is_set():
-        logger.info("lt_files size %d ", lt_files.qsize())
-        time.sleep(30)
-
-        if random.random() < 0.33:
-            p = configlog.sendmail(True)
-            time.sleep(10)
-            p.join()
+        logger.info("SQL Queue size: %d, thread size: %d", queue.qsize(), len(threads))
+        time.sleep(5)
+        counter += 1
+        if counter % 20 == 0:
+            configlog.sendmail(msg = "From SQL")
 
 
+
+"""
 def adder(queue, sess):
     counter = 0
 
@@ -70,6 +78,7 @@ def adder(queue, sess):
 
     logger.info("flushing adder")
     sess.flush()
+
     return
     while(not queue.empty()):
         counter +=1
@@ -77,6 +86,8 @@ def adder(queue, sess):
         if(counter %50 == 0):
             sess.flush()
     sess.flush()
+"""
+
 
 
 @db_connect
@@ -106,23 +117,49 @@ def commit(q, _type = None, add = False):
             _temp = []
 
     logger.debug('while loop done')
-    if(_temp and add):
+
+    if(add):
         sess.bulk_save_objects(_temp)
-    elif _temp and add:
+    else:
         sess.bulk_insert_mappings(_type, _temp)
+
 
     sess.commit()
     v_scoped_session.remove()
-    logger.debug("commit func done")
+    logger.info("commit func done")
     return
 
 
+@db_connect
+def load_clos(file_data, fileid_obj_map, owner_id, dict_lock):
+    sess = v_scoped_session()
+    for files in file_data:
+        for clos in files.closure:
+            with dict_lock:
+                if clos.parent[0] not in fileid_obj_map:
+                    logger.info("new element not found: %s", clos.parent[0])
+
+                    fi = Files(fileId = clos.parent[0] + str(owner_id), parent_id = owner_id,
+                            isFile = False)
+
+                    file_name = Filename (files = fi, owner_id = owner_id, fileName = clos.parent[1])
+                    fi.name = [file_name]
+
+                    sess.add(fi)
+                    fileid_obj_map[clos.parent[0]] = fi
+
+                file_model = fileid_obj_map[clos.parent[0]]
+
+                cls = Closure(parent_relationship = fileid_obj_map[clos.parent[0]],
+                        files_relationship = file_model, depth = clos.depth,
+                        owner_id = owner_id)
+
+                sess.add(cls)
+
 
 @db_connect
-def load_from_dict(lt_files, fileid_obj_map):
+def load_from_dict(lt_files, owner_id, dict_lock):
     sess = v_scoped_session()
-
-    secrets.token_urlsafe(3)
 
     counter = 0
     lt_dates = Queue()
@@ -130,211 +167,286 @@ def load_from_dict(lt_files, fileid_obj_map):
     files = []
 
     while(lt_files.qsize()):
+
+        counter += 1
         file_model, file_data = lt_files.get_nowait()
 
-        files.append((file_model, file_data))
         sess.add(file_model)
 
-        counter +=1
-        if(counter % 10 == 0):
-            sess.commit()
+        for operation in file_data.operations:
+            d = Dates(files = file_model, adds = operation.content[0],
+                    deletes = operation.content[1], bin_width = None, date = operation.date)
+            sess.add(d)
 
-            for m, d in files:
-                fileid = m.id
-                bins = d[1][:-1]
-                values = d[0]
-                bin_width = d[2]
 
-                for counter, _bin_date in enumerate(bins):
+        logger.info("flushing objects")
+        logger.debug("new: %s, dirty: %s", sess.new, sess.dirty)
+        sess.flush()
+        logger.info("finished flush; file size: %d", lt_files.qsize())
 
-                    lt_dates.put(dict(fileId = fileid, bins = bins[counter],  \
-                        values = values[counter], bin_width = bin_width))
-
-            files = []
-
-            logger.info(f"len dates: {lt_dates.qsize()}")
-
-            p = [threading.Thread(target = commit, args = (lt_dates, Dates)) for i in range(45)]
-            [x.start() for x in p]
-            [x.join() for x in p]
-            sess.commit()
-
-def start(userid, path):
-
-    sess = v_scoped_session()
-
-    logger.info("STARTING SQL %s %s", userid, path)
-
-    logger.debug("setting sys except hook")
-
-    #Likely a bug? Excepthook not getting called, have to set again
-
-    temp = name=userid[0:15] + datetime.now().strftime("%m %d %h") + scrt
-    owner = Owner(name=temp[0:39])
-
-    logger.debug(f"Owner name: {temp[0:39]}")
-    sess.add(owner)
     sess.commit()
-
-    global owner_id
-    owner_id = owner.id
-
-    sess.close()
     v_scoped_session.remove()
 
-    logger.info("Added owner row, name: %s id: %s", owner.name, owner.id)
 
-    files = {}
+import asyncio
 
-    names = pickle.load(open(path+'pickleIndex', 'rb'))
+import collections
 
-
-    for n in names[0:1]:
-        files.update(pickle.load(open(n, 'rb')))
-        continue
-
-        '''
-        procs.append(threading.Thread(target = load_from_dict, args = (pickle.load(open(n, 'rb')), owner)))
-        procs[-1].start()
-        procs[-1].join()
-        '''
+path = '/home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/1.pathed'
+#data = pickle.load(open(path, 'rb'))
 
 
-    lt_files = Queue()
-    Queue()
-    #fileid_obj_map maps gdrive fileids to file objects defined in models
-    fileid_obj_map = {}
+def exchandler(loop, context):
+    print(context)
+    msg = context.get("exception", context["message"])
+    logging.error(f"Caught exception: {msg}")
+    logging.info("Shutting down...")
 
-    #FILES
-    for f in files:
-        fileId = f[-1]
-        logger.info("File: %s", fileId)
-        if(fileId in fileid_obj_map):
-            logger.info("duplicated fileid found, skipping")
-            continue
 
-        if(files[f]):
-            bin_edges = files[f][1]
-            #Get last bin edge, convert to datetime
-            last_mod = datetime.fromtimestamp(bin_edges[-1])
+async def send_socket():
+    info_packet = pickle.load(open('info_packet', 'rb'))
+
+    logger.info("connect working")
+    r, w = await asyncio.open_connection('127.0.0.1', 8888)
+
+    message= b"request"
+
+
+    await adv_write(w, message)
+
+    m = await adv_read(r)
+    logger.info("received: %s", m)
+
+    while m != b'go':
+        return False
+
+
+    if m == b'go':
+        await adv_write(w, info_packet, to_pickle = True)
+
+    w.close()
+    return True
+
+
+
+async def handle_request(queue):
+
+    print("handle_request")
+
+
+    loop = asyncio.get_event_loop()
+    loop.set_exception_handler(exchandler)
+    loop.set_debug(True)
+
+
+    async def req_callback(reader, writer):
+        nonlocal queue
+
+        from pprint import pformat
+        print('request received')
+
+
+
+        starting_message = await adv_read(reader)
+
+        print(starting_message)
+        assert starting_message == b'request'
+
+        message = ""
+        print("queue size: %d"%queue.qsize())
+        if(queue.qsize() > 3):
+            message = b"wait"
+            logger.warning("Job denied because queue was too large")
+            job_received = False
         else:
-            last_mod = None
+            message = b"go"
+            job_received = True
 
-        file_obj = Files(fileId = fileId + ":"+token + secrets.token_urlsafe(3),
-                lastModDate = last_mod, parent_id = owner_id, isFile = True)
+        await adv_write(writer, message)
 
-        fileid_obj_map[fileId] = file_obj
+        if job_received:
 
-        lt_files.put((file_obj, files[f]))
+            info = await adv_read(reader)
+            print("name: ", info.userid)
 
-    logger.info("len of id map %d len of files %d", len(fileid_obj_map), lt_files.qsize())
+            if info.extra == None:
+                queue.put(info)
+                print("put in queue")
+            else:
+                print(info.extra)
+
+
+    server = await asyncio.start_server(
+        req_callback, '0.0.0.0', 8888)
+
+
+    addr = server.sockets[0].getsockname()
+    print(f'Serving on {addr}')
+
+    async with server:
+        await server.serve_forever()
+
+def start_server(queue):
+    asyncio.run(handle_request(queue))
 
 
 
+def queue_worker(queue, threads):
+    while True:
+        print("new task")
+        latest = queue.get()
+        files = latest
+
+        while len(threads) > 5:
+            print("threads too many, sleeping")
+            threads[0].join()
+            threads.pop(0)
+
+            for i in threads:
+                if not i.is_alive():
+                    i.join(timeout=0.01)
+                    threads.remove(i)
+
+            print("done waiting join")
+
+        ts = threading.Thread(target = start, kwargs = dict(userid = latest.userid, files = latest.files))
+        ts.start()
+        threads.append(ts)
+
+
+
+def thread_pool():
+
+    import concurrent.futures
+    from queue import Queue
+    
     print_event = threading.Event()
 
-    pr = threading.Thread(target = report, args = (lt_files, print_event))
+
+    queue = Queue()
+    threads = []
+
+    pr = threading.Thread(target = report, args = (queue, threads, print_event))
     pr.start()
 
-    p = threading.Thread(target = load_from_dict, args = (lt_files, fileid_obj_map))
-    #p1 = threading.Thread(target = load_from_dict, args = (lt_files, fileid_obj_map))
-    #p2 = threading.Thread(target = load_from_dict, args = (lt_files, fileid_obj_map))
-    #p3 = threading.Thread(target = load_from_dict, args = (lt_files, fileid_obj_map))
+    f = []
 
+    executor = concurrent.futures.ThreadPoolExecutor(max_workers = 2)
 
-    p.start()
-    #time.sleep(5)
-    #p1.start()
-    #time.sleep(5)
-    #p2.start()
-    #time.sleep(5)
-    #p3.start()
+    f.append(executor.submit(start_server, queue))
+    f.append(executor.submit(queue_worker, queue, threads))
 
-
-    p.join()
-    #p1.join()
-    #p2.join()
-    #p3.join()
-
-
-
-    sess = v_scoped_session()
-
-    clos = pickle.load(open(path + 'closure.pickle', 'rb'))
-    idmapper = pickle.load(open(path + 'idmapper.pickle', 'rb'))
-
-    logger.debug("Finished loading pickles")
-
-
-    lt_closure = []
-    lt_filenames = []
-
-
-
-    add_count = [0, 0]
-
-    for c in clos:
-        try:
-            file_obj = fileid_obj_map[c[0]]
-        except:
-            file_obj = Files(fileId = c[0] + ":" + token, lastModDate = None, parent_id = owner_id, isFile = False)
-            fileid_obj_map[c[0]] = file_obj
-            lt_files.append(file_obj)
-
-        try:
-            file_obj1 = fileid_obj_map[c[1]]
-        except:
-            file_obj1 = Files(fileId = c[1] + ":" + token, lastModDate = None, parent_id = owner_id, isFile = False)
-            fileid_obj_map[c[1]] = file_obj1
-            lt_files.append(file_obj1)
-
-        lt_closure.append(Closure(parent_relationship = file_obj, files_relationship = fileid_obj_map[c[1]], parent_id = owner_id, depth = c[2]))
-        logger.debug("adding lt_closure")
-        add_count[0]+=1
-
-    sess.flush()
-
-    for n in idmapper:
-        try:
-            file_obj = fileid_obj_map[n]
-        except:
-            #Folder type
-            file_obj = Files(fileId = n + token, lastModDate = None, parent_id = owner_id, isFile = False)
-            fileid_obj_map[n] = file_obj
-            lt_files.put(file_obj)
-
-        lt_filenames.append(Filename(fileName = idmapper[n], files = file_obj, owner_id = owner_id))
-        logger.debug("adding lt_filenames")
-        add_count[1]+=1
-
-    logger.debug("flushing lt_filenames, lt_closure")
-
-    adder(lt_filenames, sess)
-
-    adder(lt_closure, sess)
-
-    sess.flush()
-
-    logger.warning("Done all filename, closure")
-
-
-    sess.commit()
-
-    logger.info(f"sql done, added closure: {add_count[0]}, added filename: {add_count[1]}")
+    ds = concurrent.futures.wait(f, return_when = concurrent.futures.FIRST_EXCEPTION)
 
     print_event.set()
 
-    pr.join()
+    print("rand")
+    for res in ds.done:
+        print("starting")
 
+        if(res.exception()):
+            exc =  res.exception()
+
+            executor._threads.clear()
+            concurrent.futures.thread._threads_queues.clear()
+
+            raise exc
+
+
+
+
+def start(userid, files):
+
+    from processing.sql_owner import OwnerManager
+    get_owner = OwnerManager()
+
+
+    sess = v_scoped_session()
+
+
+
+    owner, fileid_obj_map, dict_lock = get_owner(userid)
+    sess.add(owner)
+    owner_id = owner.id
+
+    print("owner id: ", owner_id)
+
+
+    lt_files = Queue()
+    #fileid_obj_map maps gdrive fileids to file objects defined in models
+
+
+    #FILES
+    for f in files:
+        fileId = f.fileId
+
+        logger.info("File: %s", fileId)
+
+        if(fileId in fileid_obj_map):
+            pass
+        #    logger.info("duplicated fileid found, skipping")
+            #continue
+
+        #Check if both lists (values and bins) are filled
+        if(f.operations):
+            weighted_avg = 0
+            count_avg = 0
+
+            for o in f.operations:
+                if not (o.content[0] or o.content[1]):
+                    continue
+                weighted_avg += o.date * (o.content[0] + o.content[1])
+                count_avg += o.content[0] + o.content[1]
+
+            weighted_avg = float(weighted_avg / count_avg)
+            weighted_avg = datetime.fromtimestamp(weighted_avg)
+        else:
+            continue
+
+        file_obj = Files(fileId = f.fileId + ":"+token + secrets.token_urlsafe(3),
+                lastModDate = weighted_avg, parent_id = owner_id,
+                isFile = True)
+
+        file_name = Filename(files = file_obj, owner_id = owner_id, fileName = f.name)
+        file_obj.name = [file_name]
+        with dict_lock:
+            fileid_obj_map[fileId] = file_obj
+
+        lt_files.put((file_obj, f))
+
+    logger.info("len of id map %d len of files %d", len(fileid_obj_map), lt_files.qsize())
+
+    t_size = min(lt_files.qsize(), 4)
+
+
+    if files:
+        p = [threading.Thread(target = load_from_dict, args = (lt_files, owner_id, dict_lock)) for i in range(5)]
+        for x in p:
+            x.start()
+        for x in p:
+            logger.info("joining")
+            x.join()
+
+    logger.info("starting load closures")
+
+    load_clos(files, fileid_obj_map, owner_id, dict_lock)
+
+
+    sess.commit()
+
+    logger.warning("Done all filename, closure")
     return
 
 
 
 if __name__ == '__main__':
-   # Owner.__table__.insert(bind = engine).values([dict(name = "default")])
-   # sess.add(Owner(name="default"))
-   # sess.commit()
 
-    wpath = "/home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/"
-    start("testing" + datetime.now().__str__(), wpath)
+    thread_pool()
 
+    """
+
+    files = pickle.load(open('/home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/1.pathed', 'rb'))
+    userid = datetime.now().__str__()
+
+    start(userid = userid, files = files)
+    """
