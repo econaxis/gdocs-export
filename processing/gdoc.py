@@ -8,38 +8,101 @@ import asyncio
 import ujson as json
 import logging
 
+from multiprocessing import Pipe, Process, Event
+
 
 from types import SimpleNamespace
+from collections import namedtuple
+
+
 
 logger = logging.getLogger(__name__)
 
 base_url = 'https://docs.google.com/document/d/{file_id}/revisions/load?id={file_id}&start=1&end={end}'
 url = 'https://www.googleapis.com/drive/v3/files/{}/revisions'
 
-timeout = aiohttp.ClientTimeout(total=10)
+timeout = aiohttp.ClientTimeout(total=3)
+
+
+Closure = namedtuple("Closure", ['parent', 'child', 'depth'])
+
+class Operation():
+    def __init__(self, date, content):
+        self.date = date
+        self.content = content
+
+    def __repr__(self):
+        return f'Date: {self.date}, content: {self.content}'
+
+def round_time(d, round_by = 60):
+    return round_by * round(d / round_by)
+
+
+gd_condensed = namedtuple('gd_condensed', ['name', 'path', 'operations', 'closure', 'fileId'])
+
 
 class GDoc():
 
-    __slots__ = ['last_revision_id', 'fileId', 'session', 'headers']
+    __slots__ = ['path', 'name', 'last_revision_id', 'fileId', 'session', 'headers', 'operations', 'closure' ]
+
+    def return_condensed(self):
+        logger.info("returning condensed: %s, %s, %s, %s, %s", self.name, self.path, self.operations, self.closure, self.fileId)
+        return gd_condensed(self.name, self.path, self.operations, self.closure, self.fileId)
+
 
     def __init__(self):
         pass
 
-    async def async_init(self, fileId, session, headers):
-        #Returns list of dates
-
+    async def async_init(self, name,  fileId, session, headers, path):
+        self.operations = []
+        self.closure = []
+        self.name = name
         self.last_revision_id = 1
 
         logger.debug("async init called")
         self.fileId = fileId
+        self.path = path
+
         self.session = session
         self.headers = headers
         self.last_revision_id = 1
 
         await self.get_last_revision()
 
+        logger.debug("starting googledoc async_init for %s", fileId)
 
-        logger.debug("after await %s", self.last_revision_id)
+        retries = 3
+
+
+        while retries:
+            retries -= 1
+
+            parent_conn, child_conn = Pipe()
+
+            p = Process(target = self._download_details, args = (child_conn,))
+            p.start()
+
+            logger.debug("started process for %s", fileId[0:5])
+            await asyncio.sleep(5)
+
+            counter = 0
+            while not parent_conn.poll(0.01) and counter < 5:
+                counter +=1
+                logger.debug("sleeping from poll, waiting for %s, %d", fileId[0:5], counter)
+                await asyncio.sleep(random.uniform(6 * counter, 10 * counter))
+
+            logger.debug("received goahead to receive %s", fileId[0:5])
+
+            if parent_conn.poll(0.01):
+                self.operations = parent_conn.recv()
+                parent_conn.send(f'success {fileId[0:5]}')
+                p.terminate()
+                p.join(0.01)
+                break
+            else:
+                continue
+
+        self.compute_closure()
 
 
 
@@ -66,29 +129,38 @@ class GDoc():
                     logger.debug("last revision id %s", self.last_revision_id)
                     return 0
         except:
-            logger.exception("cannot get last revision id")
+            logger.debug("cannot get last revision id")
+
+    def compute_closure(self):
+
+        for c, i in enumerate(self.path):
+            child = self.path[-1]
+            parent = i
+            self.closure.append(Closure(parent = parent, child = child, depth = len(self.path) -c -1))
 
 
-    def download_details(self,  pipe):
+        return self.closure
+
+
+
+    def _download_details(self,  pipe):
 
         logger.info("received job for %s",self.fileId)
 
-        dates = []
         #Retries
         for i in range(1, 3):
             url = base_url.format(file_id=self.fileId, end=self.last_revision_id)
 
-            dates = []
 
             response = SimpleNamespace(text = "Blank Filler. This will show when response is undefined")
-            logger.info("get url: %s", url)
+            logger.debug("get url: %s", url)
             try:
-                logger.info("starting url get")
-                response = requests.get(url = url, headers = self.headers, timeout = 5)
-                logger.info('url get sucess')
+                logger.debug("starting url get")
+                response = requests.get(url = url, headers = self.headers, timeout = 10)
+                logger.debug('url get sucess')
                 assert response.status_code == 200
             except:
-                logger.info("%s unable, sleeping up to %d", self.fileId[0:5], 20*i)
+                logger.debug("%s unable, sleeping up to %d", self.fileId[0:5], 20*i)
                 time.sleep(random.uniform(5, 20*i))
                 continue
 
@@ -97,28 +169,55 @@ class GDoc():
             print("starting json load")
             revision_details = json.loads(text[5:])
 
-            dates = [None]*len(revision_details['changelog'])
+
+            tot_operations = []
 
             for count,x in enumerate(revision_details['changelog']):
-                logger.debug("processing dates, for %s", self.fileId)
-                dates[count] = x[1]/1e3
+
+                if x[0]['ty'] not in {'is', 'ds'}:
+                    continue
+
+                if x[0]['ty'] == 'is':
+                    content = [len(x[0]['s']), 0]
+                elif x[0]['ty'] == 'ds':
+                    content = [0, 0, x[0]['ei'] - x[0]['si'] + 1]
+
+                cur_op = Operation(date = x[1]/1e3, content = content)
+                tot_operations.append(cur_op)
+
+
+            #Join
+
+            operation_condensed = {}
+
+            for o in tot_operations:
+                key = round_time(o.date)
+                if key not in operation_condensed:
+                    operation_condensed[key] = o
+                else:
+                    operation_condensed[key].content[0] += o.content[0]
+                    operation_condensed[key].content[1] += o.content[1]
+
+            operations = list(operation_condensed.values())
 
             break
 
-        print(dates)
 
-        pipe.send(dates)
+        pipe.send(operations)
 
         counter = 1
 
-        while not pipe.poll(0.1):
-            logger.debug("resending for %s", self.fileId[0:5])
-            pipe.send(dates)
-            counter +=1
-            time.sleep(6*counter)
+        while not pipe.poll(0.01):
 
-            if counter > 10:
-                pipe.send(dates)
+            logger.debug("resending for %s, counter %d", self.fileId[0:5], counter)
+            pipe.send(operations)
+            counter +=1
+
+            time.sleep(random.uniform(12 * counter, 15 * counter))
+
+            if counter > 5:
+                logger.debug("waited too long, not resending")
+                pipe.send(operations)
                 pipe.close()
                 return
 
@@ -127,3 +226,10 @@ class GDoc():
         pipe.close()
 
         return
+
+    def __repr__(self):
+        s = "GDoc Object\n\t%s\n\t%s"%(pformat(self.operations), pformat(self.closure))
+        return s
+
+
+

@@ -5,7 +5,13 @@ from pprint import PrettyPrinter
 from processing.models import Owner, Dates, Files, Filename
 from sqlalchemy.sql import func
 #from flaskr.flask_config import cache
-from processing.sql import scoped_sess as db
+from processing.sql import v_scoped_session
+
+import logging
+
+logger = logging.getLogger(__name__)
+
+db = v_scoped_session()
 
 
 #Maps fileid to index
@@ -46,23 +52,27 @@ def getNormalBubbleData(sess, userid):
     #Function should ideally be run only once per user, because of cache.memoize
 
     #Get all the files with their counts of edits and last modified time
-    allFiles = sess.query(Files.id, Dates.values.label('values')).join(Dates).join(Owner).filter(Owner.id == userid).subquery()
+    allFiles = sess.query(Files.id, Dates.values.label('va')).join(Dates).join(Owner).filter(Owner.id == userid).subquery()
+
 
     #TESTING: no owner query
     #allFiles = sess.query(Files.id, Dates.moddate).join(Dates).join(Owner).subquery()
 
+
     #Group by id
-    times = sess.query(allFiles.c.id, func.sum(allFiles.c.values).label('count')) \
+    times = sess.query(allFiles.c.id, func.sum(allFiles.c.va).label('count')) \
             .group_by(allFiles.c.id).subquery()
+
+
 
 
     #Join id to filename
     #per element in count: (filename, file.id, count, last mod date)
     #per elemnt in count: (id, count, filename, lastmoddate)
-    count = sess.query(times.c.id, times.c.count, Filename.fileName, Files.lastModDate).join(Filename, Filename.id == times.c.id) \
+    count = sess.query(times.c.id, times.c.count, Filename.fileName, Files.lastModDate).join(Filename, Filename.fileId == times.c.id) \
             .join(Files, Files.id == times.c.id).all()
 
-    #count = sess.query(times, Filename.fileName, Files.lastModDate, t_modtimes.c.id, times.c.count).join(times).all()
+
 
 
     activity = {}
