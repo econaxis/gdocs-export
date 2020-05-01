@@ -1,9 +1,24 @@
+#!/bin/bash
+export REDIS_PASSW=KgPh6DCLJ8tr1dq6TkiG66otuiC3GPqE
+export SQL_PASS=Infoip32
+export REDIS_HOST=redis-17608.c53.west-us.azure.cloud.redislabs.com
 
-name=${1:-henry}
-docker stop $name
+export SQL_CONN=Driver%3D%7BODBC+Driver+17+for+SQL+Server%7D%3BServer%3Dtcp%3Apydoc-db.database.windows.net%2C1433%3BDatabase%3Dpydocs%3BUid%3Dhenry2833%3BPwd%3D%7BInfoip32%7D%3BEncrypt%3Dyes%3BTrustServerCertificate%3Dno%3BConnection+Timeout%3D30%3B
+
+export AZURE=true
+echo "worker count: $AZ_WORKER_COUNT"
+export RQ_NAME=ec2-rq
+export WORKER=true
 
 
-docker build -t henry2833/pydocs --build-arg REDIS_HOST --build-arg REDIS_PASSW --build-arg SQL_CONN .
+
+procname="ec2${2:-$RANDOM}"
+RQ_NAME="${RQ_NAME}$procname"
+echo $RQ_NAME
+echo $procname
+
+
+docker pull henry2833/pydocs:latest
 
 echo "Done build"
 
@@ -12,12 +27,17 @@ docker network create --driver bridge pydocs-net
 echo "Done network"
 
 
-if [ "$2" == "s" ]; then
-    docker run -e PORT=5000 -e SQL_SERV=true --name $name --rm -d henry2833/pydocs
-elif [ "$2" == "d" ]; then
-e   docker run -p 5000:5000 -e PORT=5000 --entrypoint python --name $name --rm -d henry2833/pydocs dsds.py
-elif [ "$2" == "a" ]; then
-    docker run -m 200m -p 5000:5000 -e PORT=5000  -e WORKER -e REDIS_PASSW -e SQL_CONN -e REDIS_HOST -e WORKER=true --name $name --rm -d --network pydocs-net henry2833/pydocs
-    docker run -m 200m -e PORT=5000 -e REDIS_HOST -e REDIS_PASSW -e SQL_CONN -e SQL_SERV=true --name sql_serv --network pydocs-net --rm -d henry2833/pydocs
+if [ "$3" == "w" ]; then
+    docker run -m 170m --memory-swap 400m --memory-swappiness 60 --network pydocs-net \
+        -e REDIS_PASSW -e SQL_CONN -e REDIS_HOST -e AZURE -e AZ_WORKER_COUNT -e RQ_NAME \
+        -e WORKER --rm -d --name "$procname" henry2833/pydocs:latest
+elif [ "$3" == "a" ]; then
+    docker run -m 300m --memory-swap 500m -e PORT=5000 -e REDIS_HOST -e REDIS_PASSW -e SQL_CONN -e SQL_SERV=true \
+        --name sql_serv --network pydocs-net --rm -d henry2833/pydocs:latest
+
+    docker run -m 150m --memory-swap 400m --memory-swappiness 90 --network pydocs-net \
+        -e REDIS_PASSW -e SQL_CONN -e REDIS_HOST -e AZURE -e AZ_WORKER_COUNT -e RQ_NAME \
+        -e WORKER --rm -d --name "$procname" henry2833/pydocs:latest
+
 fi
-docker logs $name --follow
+docker logs $procname --follow

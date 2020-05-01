@@ -1,0 +1,36 @@
+version: '3.4'
+services:
+    pydocs:
+        image: 'pydocs:latest'
+        build:
+            dockerfile: Dockerfile
+            context: .
+            network: pydocs-net
+        environment:
+            REDIS_PASSW: 
+            REDIS_PASSW: 
+            SQL_CONN: 
+            REDIS_HOST:
+            RQ_NAME: 'default'
+            WORKER: 'true'
+        deploy:
+            resources:
+                limits:
+                    cpus: '0.30'
+                    memory: 130M
+                reservations:
+                    cpus: '0.10'
+                    memory: 40M
+    sql:
+        image: 'pydocs:sql'
+        build:
+            dockerfile: Dockerfile
+            network: pydocs-net
+            context: .
+        environment:
+            SQL_SERV: "true"
+            SQL_CONN:
+        container_name: sql_serv
+
+
+

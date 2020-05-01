@@ -23,13 +23,7 @@ pprint = pprint.PrettyPrinter(indent=4).pprint
 
 timeout = aiohttp.ClientTimeout(total=6)
 
-
-
-# Deprecated
-
-
-MAX_FILES = 250
-
+MAX_FILES = 300
 
 SEED_ID = "root"
 
@@ -41,28 +35,26 @@ from collections import namedtuple
 
 temp_file = namedtuple('temp_file', ['id', 'name', 'type', 'path'])
 
-tot_folders = []
+
+#For managing duplicates
+tot_folders = {}
+
 
 
 
 async def getIdsRecursive (drive_url, folders: asyncio.Queue,
                           files: asyncio.Queue, session: aiohttp.ClientSession, headers, done_event):
 
-    # Wait random moment for folder queue to be populated
-    await asyncio.sleep(random.uniform(0, 1))
 
     # Query to pass into Drive to find item
 
     while (TestUtil.processedcount + files.qsize() + len(TestUtil.files) < MAX_FILES) and not done_event.is_set():
-        logger.debug("getIdsRecursive looping")
         # Wait for folders queue, with interval 6 seconds between each check
         # Necessary if more than one workers all starting at the same time,
         # with only one seed ID to start
 
         # Deprecated, do not need to throttle google drive api
         # await drThrottle.sem.acquire()
-        logger.warning("length: %d", TestUtil.processedcount + files.qsize() + len(TestUtil.files))
-        await asyncio.sleep(random.uniform(0, 0.2))
 
         proc_file = await tryGetQueue(folders, name="getIds", interval=3)
 
@@ -112,9 +104,9 @@ async def getIdsRecursive (drive_url, folders: asyncio.Queue,
                 await folders.put((f))
             elif (resFile["mimeType"] in ACCEPTED_TYPES):
                 # First element id is not used for naming, only for api calls
-                if not resFile["capabilities"]["canReadRevisions"]:
+                if not resFile["capabilities"]["canReadRevisions"] or id in tot_folders:
                      continue
-
+                tot_folders[id] = True
                 await files.put(f)
 
 
@@ -137,21 +129,23 @@ async def getRevision(files, session: aiohttp.ClientSession, headers, endEvent, 
         #await asyncio.sleep(random.uniform(0, 1))
         cycles +=1
 
-
-        logger.debug("getRevision looping")
-
         proc_file = await tryGetQueue(files, name="getRevision")
+
         if(proc_file == -1):
             logger.warning('getRevision task exiting')
             break
-
 
         gd = GDoc()
         await gd.async_init(proc_file.name, proc_file.id, session, TestUtil.headers, proc_file.path)
 
         gd.compute_closure()
 
-        TestUtil.files.append(gd)
+
+        if gd.done and gd.operations:
+            TestUtil.files.append(gd)
+        else:
+            logger.warning("not done but tried to append, prob because no operations found file: %s, %s", gd.fileId, gd.name)
+
 
     endEvent.set()
     logger.info("getrev return")
@@ -176,8 +170,18 @@ async def start():
 
     print("TESTING SOCKET SEND")
 
-    ex = Info (extra = "testing extra function from start()")
-    #await TestUtil.send_socket(ex)
+    start_succ = False
+
+    while not start_succ:
+        try:
+            ex = Info (extra = "testing extra function from start()")
+            await TestUtil.send_socket(ex)
+        except:
+            logger.exception("Starting socket send failed, retrying after 5s")
+            await asyncio.sleep(5)
+        else:
+            start_succ = True
+
 
 
     print("==== END ====")
@@ -197,7 +201,7 @@ async def start():
         endEvent = asyncio.Event()
 
         fileExplorers = [loop.create_task(getIdsRecursive("https://www.googleapis.com/drive/v3/files", \
-                                         folders, files, session, TestUtil.headers, endEvent)) for i in range(2)]
+                                         folders, files, session, TestUtil.headers, endEvent)) for i in range(1)]
 
         revisionExplorer = [loop.create_task(getRevision(files, session, TestUtil.headers, endEvent))
                             for i in range(workerInstances)]
@@ -244,7 +248,6 @@ async def shutdown(loop, signal=None):
     loop.stop()
 
 def loadFiles(USER_ID, _workingPath, fileId, _creds):
-
 
     logger.info("Start loadFiles, %s %s", USER_ID, fileId)
 
@@ -297,7 +300,7 @@ def loadFiles(USER_ID, _workingPath, fileId, _creds):
 
     #open(_workingPath + 'done.txt', 'a+').write("DONE")
     configlog.sendmail(msg = "program ended successfully")
-    logger.info("Program ended successfully")
+    logger.info("Program ended successfully for userid %s", USER_ID)
 
 
 '''

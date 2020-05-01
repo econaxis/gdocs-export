@@ -14,22 +14,13 @@ echo $SQL_SERV
 
 if [ -n "$SQL_SERV" ]; then
     echo "SQL SERVER MODE"
-    python -u -m processing.sql
+    python -u -m processing.sql_server
     wait
-fi
-
-if [ -n "$AZURE" ]; then
-    echo "Azure Worker mode"
-
-    for i in $(seq 1 $AZ_WORKER_COUNT);
-    do
-        name=${RQ_NAME}$i
-        
-        echo "name: ${name}"
-        rq worker -c flaskr.rqsets --name ${name} &
-    done
-
-elif [ -z "${WORKER}" ]; then
+elif [ -n "${WORKER}" ]; then
+    echo "Worker mode"
+    rq worker -c flaskr.rqsets &
+    exec rq worker -c flaskr.rqsets
+else 
     echo "Not worker"
     echo "Running gunicorn server now"
     echo $SQL_CONN
@@ -37,10 +28,6 @@ elif [ -z "${WORKER}" ]; then
     exec gunicorn -b :$PORT --access-logfile - --error-logfile - run:app
     echo "Web mode" > errors.txt
     wait
-else 
-    echo "Worker mode"
-    rq worker -c flaskr.rqsets &
-    exec rq worker -c flaskr.rqsets
 fi
 
 wait

@@ -1,0 +1,19 @@
+configlo:30,17:45:42:handle_exception:84:8krVhw -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "/home/henry/pydocs/run.py", line 28, in <module>
+    app = create_flask_serv()
+  File "/home/henry/pydocs/flaskr/__init__.py", line 14, in create_flask_serv
+    from flaskr.dashapp import register_dashapp
+  File "/home/henry/pydocs/flaskr/dashapp/__init__.py", line 2, in <module>
+    from flaskr.dashapp.callbacks import test
+  File "/home/henry/pydocs/flaskr/dashapp/callbacks.py", line 6, in <module>
+    from processing.sql import v_scoped_session
+  File "/home/henry/pydocs/processing/sql.py", line 28, in <module>
+    ENGINE = sqlal.create_engine('sqlite:///ds.db', check_same_thread=False)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/__init__.py", line 479, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/strategies.py", line 164, in create
+    raise TypeError(
+TypeError: Invalid argument(s) 'check_same_thread' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components.
+configlo:30,17:45:42:mp_sendmail:121:8krVhw -- sending mail
+configlo:30,17:45:43:handle_exception:87:8krVhw -- exiting! from sshook

@@ -1,0 +1,70 @@
+base.py:30,16:34:58:__connect:653:gDg7Yg -- Created new connection <sqlite3.Connection object at 0x7f27151fe4e0>
+base.py:30,16:34:58:_cursor_execute:1311:gDg7Yg -- SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+base.py:30,16:34:58:_cursor_execute:1312:gDg7Yg -- ()
+base.py:30,16:34:58:_cursor_execute:1311:gDg7Yg -- SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+base.py:30,16:34:58:_cursor_execute:1312:gDg7Yg -- ()
+base.py:30,16:34:58:checkout:507:gDg7Yg -- Connection <sqlite3.Connection object at 0x7f27151fe4e0> checked out from pool
+base.py:30,16:34:58:_execute_context:1205:gDg7Yg -- PRAGMA main.table_info("files")
+base.py:30,16:34:58:_execute_context:1207:gDg7Yg -- ()
+result.p:30,16:34:58:_init_metadata:809:gDg7Yg -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+result.p:30,16:34:58:process_rows:1249:gDg7Yg -- Row (0, 'id', 'INTEGER', 1, None, 1)
+result.p:30,16:34:58:process_rows:1249:gDg7Yg -- Row (1, 'fileId', 'VARCHAR(300)', 0, None, 0)
+result.p:30,16:34:58:process_rows:1249:gDg7Yg -- Row (2, 'lastModDate', 'DATETIME', 0, None, 0)
+result.p:30,16:34:58:process_rows:1249:gDg7Yg -- Row (3, 'parent_id', 'INTEGER', 0, None, 0)
+result.p:30,16:34:58:process_rows:1249:gDg7Yg -- Row (4, 'isFile', 'BOOLEAN', 0, None, 0)
+base.py:30,16:34:58:_execute_context:1205:gDg7Yg -- PRAGMA main.table_info("owner")
+base.py:30,16:34:58:_execute_context:1207:gDg7Yg -- ()
+result.p:30,16:34:58:_init_metadata:809:gDg7Yg -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+result.p:30,16:34:58:process_rows:1249:gDg7Yg -- Row (0, 'id', 'INTEGER', 1, None, 1)
+result.p:30,16:34:58:process_rows:1249:gDg7Yg -- Row (1, 'name', 'VARCHAR(50)', 0, None, 0)
+base.py:30,16:34:58:_execute_context:1205:gDg7Yg -- PRAGMA main.table_info("dates")
+base.py:30,16:34:58:_execute_context:1207:gDg7Yg -- ()
+result.p:30,16:34:58:_init_metadata:809:gDg7Yg -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+result.p:30,16:34:58:process_rows:1249:gDg7Yg -- Row (0, 'id', 'INTEGER', 1, None, 1)
+result.p:30,16:34:58:process_rows:1249:gDg7Yg -- Row (1, 'fileId', 'INTEGER', 0, None, 0)
+result.p:30,16:34:58:process_rows:1249:gDg7Yg -- Row (2, 'date', 'FLOAT', 0, None, 0)
+result.p:30,16:34:58:process_rows:1249:gDg7Yg -- Row (3, 'adds', 'INTEGER', 0, None, 0)
+result.p:30,16:34:58:process_rows:1249:gDg7Yg -- Row (4, 'deletes', 'INTEGER', 0, None, 0)
+result.p:30,16:34:58:process_rows:1249:gDg7Yg -- Row (5, 'bin_width', 'FLOAT', 0, None, 0)
+base.py:30,16:34:58:_execute_context:1205:gDg7Yg -- PRAGMA main.table_info("closure")
+base.py:30,16:34:58:_execute_context:1207:gDg7Yg -- ()
+result.p:30,16:34:58:_init_metadata:809:gDg7Yg -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+result.p:30,16:34:58:process_rows:1249:gDg7Yg -- Row (0, 'id', 'INTEGER', 1, None, 1)
+result.p:30,16:34:58:process_rows:1249:gDg7Yg -- Row (1, 'parent', 'INTEGER', 0, None, 0)
+result.p:30,16:34:58:process_rows:1249:gDg7Yg -- Row (2, 'child', 'INTEGER', 0, None, 0)
+result.p:30,16:34:58:process_rows:1249:gDg7Yg -- Row (3, 'owner_id', 'INTEGER', 0, None, 0)
+result.p:30,16:34:58:process_rows:1249:gDg7Yg -- Row (4, 'depth', 'INTEGER', 0, None, 0)
+base.py:30,16:34:58:_execute_context:1205:gDg7Yg -- PRAGMA main.table_info("filename")
+base.py:30,16:34:58:_execute_context:1207:gDg7Yg -- ()
+result.p:30,16:34:58:_init_metadata:809:gDg7Yg -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+result.p:30,16:34:58:process_rows:1249:gDg7Yg -- Row (0, 'id', 'INTEGER', 1, None, 1)
+result.p:30,16:34:58:process_rows:1249:gDg7Yg -- Row (1, 'fileId', 'INTEGER', 0, None, 0)
+result.p:30,16:34:58:process_rows:1249:gDg7Yg -- Row (2, 'fileName', 'VARCHAR(600)', 0, None, 0)
+result.p:30,16:34:58:process_rows:1249:gDg7Yg -- Row (3, 'owner_id', 'INTEGER', 0, None, 0)
+base.py:30,16:34:58:_execute_context:1205:gDg7Yg -- PRAGMA main.table_info("tasks")
+base.py:30,16:34:58:_execute_context:1207:gDg7Yg -- ()
+result.p:30,16:34:58:_init_metadata:809:gDg7Yg -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+result.p:30,16:34:58:process_rows:1249:gDg7Yg -- Row (0, 'id', 'INTEGER', 1, None, 1)
+result.p:30,16:34:58:process_rows:1249:gDg7Yg -- Row (1, 'path', 'VARCHAR(600)', 0, None, 0)
+result.p:30,16:34:58:process_rows:1249:gDg7Yg -- Row (2, 'creds', 'BLOB', 0, None, 0)
+result.p:30,16:34:58:process_rows:1249:gDg7Yg -- Row (3, 'fileid', 'VARCHAR(600)', 0, None, 0)
+result.p:30,16:34:58:process_rows:1249:gDg7Yg -- Row (4, 'userid', 'VARCHAR(600)', 0, None, 0)
+base.py:30,16:34:58:_finalize_fairy:684:gDg7Yg -- Connection <sqlite3.Connection object at 0x7f27151fe4e0> being returned to pool
+base.py:30,16:34:58:_reset:872:gDg7Yg -- Connection <sqlite3.Connection object at 0x7f27151fe4e0> rollback-on-return
+base.py:30,16:34:58:_close_connection:267:gDg7Yg -- Closing connection <sqlite3.Connection object at 0x7f27151fe4e0>
+base.py:30,16:34:58:__connect:653:gDg7Yg -- Created new connection <sqlite3.Connection object at 0x7f27151fe4e0>
+base.py:30,16:34:58:checkout:507:gDg7Yg -- Connection <sqlite3.Connection object at 0x7f27151fe4e0> checked out from pool
+callback:30,16:34:58:<module>:27:gDg7Yg -- DASH CALLBACKS IMPORTED
+configlo:30,16:34:59:handle_exception:84:gDg7Yg -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "run.py", line 28, in <module>
+    app = create_flask_serv()
+  File "/home/henry/pydocs/flaskr/__init__.py", line 16, in create_flask_serv
+    register_dashapp(flask_serv)
+  File "/home/henry/pydocs/flaskr/dashapp/__init__.py", line 12, in register_dashapp
+    from flaskr.dashapp.layout import layout
+  File "/home/henry/pydocs/flaskr/dashapp/layout.py", line 5, in <module>
+    from flaskr.dashapp.dash_functions import gen_fListFig, gen_margin, gen_week_line
+ImportError: cannot import name 'gen_week_line' from 'flaskr.dashapp.dash_functions' (/home/henry/pydocs/flaskr/dashapp/dash_functions.py)
+configlo:30,16:34:59:mp_sendmail:121:gDg7Yg -- sending mail
+configlo:30,16:35:00:handle_exception:87:gDg7Yg -- exiting! from sshook

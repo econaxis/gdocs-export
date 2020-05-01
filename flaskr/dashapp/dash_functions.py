@@ -24,8 +24,6 @@ namesList = [None] * 5000
 pprint = PrettyPrinter(indent=4).pprint
 
 
-
-
 ##@cache.memoize()
 def genOptList(userid):
     #Get list of all filenames and fileids by owner id
@@ -52,7 +50,7 @@ def getNormalBubbleData(sess, userid):
     #Function should ideally be run only once per user, because of cache.memoize
 
     #Get all the files with their counts of edits and last modified time
-    allFiles = sess.query(Files.id, Dates.values.label('va')).join(Dates).join(Owner).filter(Owner.id == userid).subquery()
+    allFiles = sess.query(Files.id, Dates.date.label('va')).join(Dates).join(Owner).filter(Owner.id == userid).subquery()
 
 
     #TESTING: no owner query

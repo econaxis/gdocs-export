@@ -1,0 +1,1438 @@
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Files|files) _configure_property(owner, RelationshipProperty)
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Files|files) _configure_property(dates, RelationshipProperty)
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Files|files) _configure_property(name, RelationshipProperty)
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Files|files) _configure_property(id, Column)
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Files|files) _configure_property(fileId, Column)
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Files|files) _configure_property(lastModDate, Column)
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Files|files) _configure_property(parent_id, Column)
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Files|files) _configure_property(isFile, Column)
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Files|files) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<files>, primary_key=True, nullable=False)])
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Files|files) constructed
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Owner|owner) _configure_property(files, RelationshipProperty)
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Owner|owner) _configure_property(id, Column)
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Owner|owner) _configure_property(name, Column)
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Owner|owner) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<owner>, primary_key=True, nullable=False)])
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Owner|owner) constructed
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Dates|dates) _configure_property(files, RelationshipProperty)
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Dates|dates) _configure_property(id, Column)
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Dates|dates) _configure_property(fileId, Column)
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Dates|dates) _configure_property(date, Column)
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Dates|dates) _configure_property(adds, Column)
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Dates|dates) _configure_property(deletes, Column)
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Dates|dates) _configure_property(bin_width, Column)
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Dates|dates) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<dates>, primary_key=True, nullable=False)])
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Dates|dates) constructed
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Closure|closure) _configure_property(files_relationship, RelationshipProperty)
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Closure|closure) _configure_property(parent_relationship, RelationshipProperty)
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Closure|closure) _configure_property(owner, RelationshipProperty)
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Closure|closure) _configure_property(id, Column)
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Closure|closure) _configure_property(parent, Column)
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Closure|closure) _configure_property(child, Column)
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Closure|closure) _configure_property(owner_id, Column)
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Closure|closure) _configure_property(depth, Column)
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Closure|closure) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<closure>, primary_key=True, nullable=False)])
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Closure|closure) constructed
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Filename|filename) _configure_property(files, RelationshipProperty)
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Filename|filename) _configure_property(owner, RelationshipProperty)
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Filename|filename) _configure_property(id, Column)
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Filename|filename) _configure_property(fileId, Column)
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Filename|filename) _configure_property(fileName, Column)
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Filename|filename) _configure_property(owner_id, Column)
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Filename|filename) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<filename>, primary_key=True, nullable=False)])
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Filename|filename) constructed
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Tasks|tasks) _configure_property(id, Column)
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Tasks|tasks) _configure_property(path, Column)
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Tasks|tasks) _configure_property(creds, Column)
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Tasks|tasks) _configure_property(fileid, Column)
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Tasks|tasks) _configure_property(userid, Column)
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Tasks|tasks) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<tasks>, primary_key=True, nullable=False)])
+mapper.p:30,15:15:21:_log:1998:AdEfvg -- (Tasks|tasks) constructed
+base.py:30,15:15:21:__connect:653:AdEfvg -- Created new connection <sqlite3.Connection object at 0x7f265bc30c60>
+base.py:30,15:15:21:_cursor_execute:1311:AdEfvg -- SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+base.py:30,15:15:21:_cursor_execute:1312:AdEfvg -- ()
+base.py:30,15:15:21:_cursor_execute:1311:AdEfvg -- SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+base.py:30,15:15:21:_cursor_execute:1312:AdEfvg -- ()
+base.py:30,15:15:21:checkout:507:AdEfvg -- Connection <sqlite3.Connection object at 0x7f265bc30c60> checked out from pool
+base.py:30,15:15:21:_execute_context:1205:AdEfvg -- PRAGMA main.table_info("files")
+base.py:30,15:15:21:_execute_context:1207:AdEfvg -- ()
+result.p:30,15:15:21:_init_metadata:809:AdEfvg -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+result.p:30,15:15:21:process_rows:1249:AdEfvg -- Row (0, 'id', 'INTEGER', 1, None, 1)
+result.p:30,15:15:21:process_rows:1249:AdEfvg -- Row (1, 'fileId', 'VARCHAR(300)', 0, None, 0)
+result.p:30,15:15:21:process_rows:1249:AdEfvg -- Row (2, 'lastModDate', 'DATETIME', 0, None, 0)
+result.p:30,15:15:21:process_rows:1249:AdEfvg -- Row (3, 'parent_id', 'INTEGER', 0, None, 0)
+result.p:30,15:15:21:process_rows:1249:AdEfvg -- Row (4, 'isFile', 'BOOLEAN', 0, None, 0)
+base.py:30,15:15:21:_execute_context:1205:AdEfvg -- PRAGMA main.table_info("owner")
+base.py:30,15:15:21:_execute_context:1207:AdEfvg -- ()
+result.p:30,15:15:21:_init_metadata:809:AdEfvg -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+result.p:30,15:15:21:process_rows:1249:AdEfvg -- Row (0, 'id', 'INTEGER', 1, None, 1)
+result.p:30,15:15:21:process_rows:1249:AdEfvg -- Row (1, 'name', 'VARCHAR(50)', 0, None, 0)
+base.py:30,15:15:21:_execute_context:1205:AdEfvg -- PRAGMA main.table_info("dates")
+base.py:30,15:15:21:_execute_context:1207:AdEfvg -- ()
+result.p:30,15:15:21:_init_metadata:809:AdEfvg -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+result.p:30,15:15:21:process_rows:1249:AdEfvg -- Row (0, 'id', 'INTEGER', 1, None, 1)
+result.p:30,15:15:21:process_rows:1249:AdEfvg -- Row (1, 'fileId', 'INTEGER', 0, None, 0)
+result.p:30,15:15:21:process_rows:1249:AdEfvg -- Row (2, 'date', 'FLOAT', 0, None, 0)
+result.p:30,15:15:21:process_rows:1249:AdEfvg -- Row (3, 'adds', 'INTEGER', 0, None, 0)
+result.p:30,15:15:21:process_rows:1249:AdEfvg -- Row (4, 'deletes', 'INTEGER', 0, None, 0)
+result.p:30,15:15:21:process_rows:1249:AdEfvg -- Row (5, 'bin_width', 'FLOAT', 0, None, 0)
+base.py:30,15:15:21:_execute_context:1205:AdEfvg -- PRAGMA main.table_info("closure")
+base.py:30,15:15:21:_execute_context:1207:AdEfvg -- ()
+result.p:30,15:15:21:_init_metadata:809:AdEfvg -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+result.p:30,15:15:21:process_rows:1249:AdEfvg -- Row (0, 'id', 'INTEGER', 1, None, 1)
+result.p:30,15:15:21:process_rows:1249:AdEfvg -- Row (1, 'parent', 'INTEGER', 0, None, 0)
+result.p:30,15:15:21:process_rows:1249:AdEfvg -- Row (2, 'child', 'INTEGER', 0, None, 0)
+result.p:30,15:15:21:process_rows:1249:AdEfvg -- Row (3, 'owner_id', 'INTEGER', 0, None, 0)
+result.p:30,15:15:21:process_rows:1249:AdEfvg -- Row (4, 'depth', 'INTEGER', 0, None, 0)
+base.py:30,15:15:21:_execute_context:1205:AdEfvg -- PRAGMA main.table_info("filename")
+base.py:30,15:15:21:_execute_context:1207:AdEfvg -- ()
+result.p:30,15:15:21:_init_metadata:809:AdEfvg -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+result.p:30,15:15:21:process_rows:1249:AdEfvg -- Row (0, 'id', 'INTEGER', 1, None, 1)
+result.p:30,15:15:21:process_rows:1249:AdEfvg -- Row (1, 'fileId', 'INTEGER', 0, None, 0)
+result.p:30,15:15:21:process_rows:1249:AdEfvg -- Row (2, 'fileName', 'VARCHAR(600)', 0, None, 0)
+result.p:30,15:15:21:process_rows:1249:AdEfvg -- Row (3, 'owner_id', 'INTEGER', 0, None, 0)
+base.py:30,15:15:21:_execute_context:1205:AdEfvg -- PRAGMA main.table_info("tasks")
+base.py:30,15:15:21:_execute_context:1207:AdEfvg -- ()
+result.p:30,15:15:21:_init_metadata:809:AdEfvg -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+result.p:30,15:15:21:process_rows:1249:AdEfvg -- Row (0, 'id', 'INTEGER', 1, None, 1)
+result.p:30,15:15:21:process_rows:1249:AdEfvg -- Row (1, 'path', 'VARCHAR(600)', 0, None, 0)
+result.p:30,15:15:21:process_rows:1249:AdEfvg -- Row (2, 'creds', 'BLOB', 0, None, 0)
+result.p:30,15:15:21:process_rows:1249:AdEfvg -- Row (3, 'fileid', 'VARCHAR(600)', 0, None, 0)
+result.p:30,15:15:21:process_rows:1249:AdEfvg -- Row (4, 'userid', 'VARCHAR(600)', 0, None, 0)
+base.py:30,15:15:21:_finalize_fairy:684:AdEfvg -- Connection <sqlite3.Connection object at 0x7f265bc30c60> being returned to pool
+base.py:30,15:15:21:_reset:872:AdEfvg -- Connection <sqlite3.Connection object at 0x7f265bc30c60> rollback-on-return
+base.py:30,15:15:21:_close_connection:267:AdEfvg -- Closing connection <sqlite3.Connection object at 0x7f265bc30c60>
+base.py:30,15:15:21:__connect:653:AdEfvg -- Created new connection <sqlite3.Connection object at 0x7f265bc30c60>
+base.py:30,15:15:21:checkout:507:AdEfvg -- Connection <sqlite3.Connection object at 0x7f265bc30c60> checked out from pool
+sql_serv:30,15:15:21:<module>:202:AdEfvg -- STARTING SQL SERVER
+sql_serv:30,15:15:21:report:25:AdEfvg -- SQL Queue size: 0, thread size: 0
+selector:30,15:15:21:__init__:59:AdEfvg -- Using selector: EpollSelector
+sql_serv:30,15:15:21:handle_request:68:AdEfvg -- handle_request
+base_eve:30,15:15:21:create_server:1490:AdEfvg -- <Server sockets=(<asyncio.TransportSocket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('0.0.0.0', 8888)>,)> is serving
+sql_serv:30,15:15:21:handle_request:121:AdEfvg -- Serving on ('0.0.0.0', 8888)
+sql_serv:30,15:15:22:send_socket:43:AdEfvg -- connect working
+base_eve:30,15:15:22:_run_once:1854:AdEfvg -- Executing <Task pending name='Task-3' coro=<send_socket() running at /home/henry/pydocs/processing/sql_server.py:44> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(12)(), <TaskWakeupMethWrapper object at 0x7f2658d516d0>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> created at /usr/lib/python3.8/asyncio/tasks.py:382> took 0.130 seconds
+sql_serv:30,15:15:22:send_socket:43:AdEfvg -- connect working
+sql_serv:30,15:15:22:send_socket:43:AdEfvg -- connect working
+sql_serv:30,15:15:22:send_socket:43:AdEfvg -- connect working
+sql_serv:30,15:15:22:send_socket:43:AdEfvg -- connect working
+selector:30,15:15:22:_accept_connection:164:AdEfvg -- <Server sockets=(<asyncio.TransportSocket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('0.0.0.0', 8888)>,)> got a new connection from ('127.0.0.1', 53546): <socket.socket fd=17, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 8888), raddr=('127.0.0.1', 53546)>
+selector:30,15:15:22:_accept_connection:164:AdEfvg -- <Server sockets=(<asyncio.TransportSocket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('0.0.0.0', 8888)>,)> got a new connection from ('127.0.0.1', 53548): <socket.socket fd=18, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 8888), raddr=('127.0.0.1', 53548)>
+selector:30,15:15:22:_accept_connection:164:AdEfvg -- <Server sockets=(<asyncio.TransportSocket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('0.0.0.0', 8888)>,)> got a new connection from ('127.0.0.1', 53550): <socket.socket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 8888), raddr=('127.0.0.1', 53550)>
+selector:30,15:15:22:_accept_connection:164:AdEfvg -- <Server sockets=(<asyncio.TransportSocket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('0.0.0.0', 8888)>,)> got a new connection from ('127.0.0.1', 53552): <socket.socket fd=20, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 8888), raddr=('127.0.0.1', 53552)>
+selector:30,15:15:22:_accept_connection:164:AdEfvg -- <Server sockets=(<asyncio.TransportSocket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('0.0.0.0', 8888)>,)> got a new connection from ('127.0.0.1', 53554): <socket.socket fd=21, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 8888), raddr=('127.0.0.1', 53554)>
+sql_serv:30,15:15:22:req_callback:79:AdEfvg -- request received
+sql_serv:30,15:15:22:req_callback:79:AdEfvg -- request received
+sql_serv:30,15:15:22:req_callback:79:AdEfvg -- request received
+sql_serv:30,15:15:22:req_callback:79:AdEfvg -- request received
+sql_serv:30,15:15:22:req_callback:79:AdEfvg -- request received
+base_eve:30,15:15:22:create_connection:1057:AdEfvg -- <asyncio.TransportSocket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 53546), raddr=('127.0.0.1', 8888)> connected to 127.0.0.1:8888: (<_SelectorSocketTransport fd=12 read=polling write=<idle, bufsize=0>>, <asyncio.streams.StreamReaderProtocol object at 0x7f2658d515b0>)
+test_uti:30,15:15:22:adv_write:330:AdEfvg -- length of write: 7
+test_uti:30,15:15:22:adv_write:334:AdEfvg -- b'\x00\x00\x00\x00\x00\x00\x00\x07\x00'
+base_eve:30,15:15:22:create_connection:1057:AdEfvg -- <asyncio.TransportSocket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 53548), raddr=('127.0.0.1', 8888)> connected to 127.0.0.1:8888: (<_SelectorSocketTransport fd=13 read=polling write=<idle, bufsize=0>>, <asyncio.streams.StreamReaderProtocol object at 0x7f2658d0de20>)
+test_uti:30,15:15:22:adv_write:330:AdEfvg -- length of write: 7
+test_uti:30,15:15:22:adv_write:334:AdEfvg -- b'\x00\x00\x00\x00\x00\x00\x00\x07\x00'
+base_eve:30,15:15:22:create_connection:1057:AdEfvg -- <asyncio.TransportSocket fd=14, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 53550), raddr=('127.0.0.1', 8888)> connected to 127.0.0.1:8888: (<_SelectorSocketTransport fd=14 read=polling write=<idle, bufsize=0>>, <asyncio.streams.StreamReaderProtocol object at 0x7f2658cb36d0>)
+test_uti:30,15:15:22:adv_write:330:AdEfvg -- length of write: 7
+test_uti:30,15:15:22:adv_write:334:AdEfvg -- b'\x00\x00\x00\x00\x00\x00\x00\x07\x00'
+base_eve:30,15:15:22:create_connection:1057:AdEfvg -- <asyncio.TransportSocket fd=15, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 53552), raddr=('127.0.0.1', 8888)> connected to 127.0.0.1:8888: (<_SelectorSocketTransport fd=15 read=polling write=<idle, bufsize=0>>, <asyncio.streams.StreamReaderProtocol object at 0x7f2658cd8f40>)
+test_uti:30,15:15:22:adv_write:330:AdEfvg -- length of write: 7
+test_uti:30,15:15:22:adv_write:334:AdEfvg -- b'\x00\x00\x00\x00\x00\x00\x00\x07\x00'
+base_eve:30,15:15:22:create_connection:1057:AdEfvg -- <asyncio.TransportSocket fd=16, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 53554), raddr=('127.0.0.1', 8888)> connected to 127.0.0.1:8888: (<_SelectorSocketTransport fd=16 read=polling write=<idle, bufsize=0>>, <asyncio.streams.StreamReaderProtocol object at 0x7f2658c7f7f0>)
+test_uti:30,15:15:22:adv_write:330:AdEfvg -- length of write: 7
+test_uti:30,15:15:22:adv_write:334:AdEfvg -- b'\x00\x00\x00\x00\x00\x00\x00\x07\x00'
+sql_serv:30,15:15:22:req_callback:88:AdEfvg -- queue size: 0
+test_uti:30,15:15:22:adv_write:330:AdEfvg -- length of write: 2
+test_uti:30,15:15:22:adv_write:334:AdEfvg -- b'\x00\x00\x00\x00\x00\x00\x00\x02\x00'
+sql_serv:30,15:15:22:req_callback:88:AdEfvg -- queue size: 0
+test_uti:30,15:15:22:adv_write:330:AdEfvg -- length of write: 2
+test_uti:30,15:15:22:adv_write:334:AdEfvg -- b'\x00\x00\x00\x00\x00\x00\x00\x02\x00'
+sql_serv:30,15:15:22:req_callback:88:AdEfvg -- queue size: 0
+test_uti:30,15:15:22:adv_write:330:AdEfvg -- length of write: 2
+test_uti:30,15:15:22:adv_write:334:AdEfvg -- b'\x00\x00\x00\x00\x00\x00\x00\x02\x00'
+sql_serv:30,15:15:22:req_callback:88:AdEfvg -- queue size: 0
+test_uti:30,15:15:22:adv_write:330:AdEfvg -- length of write: 2
+test_uti:30,15:15:22:adv_write:334:AdEfvg -- b'\x00\x00\x00\x00\x00\x00\x00\x02\x00'
+sql_serv:30,15:15:22:req_callback:88:AdEfvg -- queue size: 0
+test_uti:30,15:15:22:adv_write:330:AdEfvg -- length of write: 2
+test_uti:30,15:15:22:adv_write:334:AdEfvg -- b'\x00\x00\x00\x00\x00\x00\x00\x02\x00'
+sql_serv:30,15:15:22:send_socket:52:AdEfvg -- received: b'go'
+test_uti:30,15:15:22:adv_write:330:AdEfvg -- length of write: 15208
+test_uti:30,15:15:22:adv_write:334:AdEfvg -- b'\x00\x00\x00\x00\x00\x00;h\x01'
+sql_serv:30,15:15:22:send_socket:52:AdEfvg -- received: b'go'
+test_uti:30,15:15:22:adv_write:330:AdEfvg -- length of write: 15208
+test_uti:30,15:15:22:adv_write:334:AdEfvg -- b'\x00\x00\x00\x00\x00\x00;h\x01'
+sql_serv:30,15:15:22:send_socket:52:AdEfvg -- received: b'go'
+test_uti:30,15:15:22:adv_write:330:AdEfvg -- length of write: 15208
+test_uti:30,15:15:22:adv_write:334:AdEfvg -- b'\x00\x00\x00\x00\x00\x00;h\x01'
+sql_serv:30,15:15:22:send_socket:52:AdEfvg -- received: b'go'
+test_uti:30,15:15:22:adv_write:330:AdEfvg -- length of write: 15208
+test_uti:30,15:15:22:adv_write:334:AdEfvg -- b'\x00\x00\x00\x00\x00\x00;h\x01'
+sql_serv:30,15:15:22:send_socket:52:AdEfvg -- received: b'go'
+test_uti:30,15:15:22:adv_write:330:AdEfvg -- length of write: 15208
+test_uti:30,15:15:22:adv_write:334:AdEfvg -- b'\x00\x00\x00\x00\x00\x00;h\x01'
+sql_serv:30,15:15:22:req_callback:106:AdEfvg -- Put new task in queue
+sql.py:30,15:15:22:start:152:AdEfvg -- Starting sql for userid 527e4afc-4598-400f-8536-afa5324f0ba4
+sql_serv:30,15:15:22:req_callback:106:AdEfvg -- Put new task in queue
+sql.py:30,15:15:22:start:152:AdEfvg -- Starting sql for userid 527e4afc-4598-400f-8536-afa5324f0ba4
+sql_owne:30,15:15:22:__call__:43:AdEfvg -- {}
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Files|files) _post_configure_properties() started
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Files|files) initialize prop owner
+relation:30,15:15:22:_log_joins:2426:AdEfvg -- Files.owner setup primary join owner.id = files.parent_id
+relation:30,15:15:22:_log_joins:2427:AdEfvg -- Files.owner setup secondary join None
+relation:30,15:15:22:_log_joins:2428:AdEfvg -- Files.owner synchronize pairs [(owner.id => files.parent_id)]
+relation:30,15:15:22:_log_joins:2435:AdEfvg -- Files.owner secondary synchronize pairs []
+relation:30,15:15:22:_log_joins:2443:AdEfvg -- Files.owner local/remote pairs [(files.parent_id / owner.id)]
+relation:30,15:15:22:_log_joins:2450:AdEfvg -- Files.owner remote columns [owner.id]
+relation:30,15:15:22:_log_joins:2455:AdEfvg -- Files.owner local columns [files.parent_id]
+relation:30,15:15:22:_log_joins:2460:AdEfvg -- Files.owner relationship direction symbol('MANYTOONE')
+strategi:30,15:15:22:__init__:547:AdEfvg -- Files.owner lazy loading clause owner.id = :param_1
+strategi:30,15:15:22:__init__:572:AdEfvg -- Files.owner will use query.get() to optimize instance loads
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Files|files) initialize prop dates
+relation:30,15:15:22:_log_joins:2426:AdEfvg -- Files.dates setup primary join files.id = dates."fileId"
+relation:30,15:15:22:_log_joins:2427:AdEfvg -- Files.dates setup secondary join None
+relation:30,15:15:22:_log_joins:2428:AdEfvg -- Files.dates synchronize pairs [(files.id => dates.fileId)]
+relation:30,15:15:22:_log_joins:2435:AdEfvg -- Files.dates secondary synchronize pairs []
+relation:30,15:15:22:_log_joins:2443:AdEfvg -- Files.dates local/remote pairs [(files.id / dates.fileId)]
+relation:30,15:15:22:_log_joins:2450:AdEfvg -- Files.dates remote columns [dates.fileId]
+relation:30,15:15:22:_log_joins:2455:AdEfvg -- Files.dates local columns [files.id]
+relation:30,15:15:22:_log_joins:2460:AdEfvg -- Files.dates relationship direction symbol('ONETOMANY')
+strategi:30,15:15:22:__init__:547:AdEfvg -- Files.dates lazy loading clause :param_1 = dates."fileId"
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Files|files) initialize prop name
+relation:30,15:15:22:_log_joins:2426:AdEfvg -- Files.name setup primary join files.id = filename."fileId"
+relation:30,15:15:22:_log_joins:2427:AdEfvg -- Files.name setup secondary join None
+relation:30,15:15:22:_log_joins:2428:AdEfvg -- Files.name synchronize pairs [(files.id => filename.fileId)]
+relation:30,15:15:22:_log_joins:2435:AdEfvg -- Files.name secondary synchronize pairs []
+relation:30,15:15:22:_log_joins:2443:AdEfvg -- Files.name local/remote pairs [(files.id / filename.fileId)]
+relation:30,15:15:22:_log_joins:2450:AdEfvg -- Files.name remote columns [filename.fileId]
+relation:30,15:15:22:_log_joins:2455:AdEfvg -- Files.name local columns [files.id]
+relation:30,15:15:22:_log_joins:2460:AdEfvg -- Files.name relationship direction symbol('ONETOMANY')
+strategi:30,15:15:22:__init__:547:AdEfvg -- Files.name lazy loading clause :param_1 = filename."fileId"
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Files|files) initialize prop id
+sql_serv:30,15:15:22:req_callback:106:AdEfvg -- Put new task in queue
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Files|files) initialize prop fileId
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Files|files) initialize prop lastModDate
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Files|files) initialize prop parent_id
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Files|files) initialize prop isFile
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Files|files) _post_configure_properties() complete
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Owner|owner) _post_configure_properties() started
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Owner|owner) initialize prop files
+relation:30,15:15:22:_log_joins:2426:AdEfvg -- Owner.files setup primary join owner.id = files.parent_id
+relation:30,15:15:22:_log_joins:2427:AdEfvg -- Owner.files setup secondary join None
+relation:30,15:15:22:_log_joins:2428:AdEfvg -- Owner.files synchronize pairs [(owner.id => files.parent_id)]
+relation:30,15:15:22:_log_joins:2435:AdEfvg -- Owner.files secondary synchronize pairs []
+relation:30,15:15:22:_log_joins:2443:AdEfvg -- Owner.files local/remote pairs [(owner.id / files.parent_id)]
+relation:30,15:15:22:_log_joins:2450:AdEfvg -- Owner.files remote columns [files.parent_id]
+relation:30,15:15:22:_log_joins:2455:AdEfvg -- Owner.files local columns [owner.id]
+relation:30,15:15:22:_log_joins:2460:AdEfvg -- Owner.files relationship direction symbol('ONETOMANY')
+strategi:30,15:15:22:__init__:547:AdEfvg -- Owner.files lazy loading clause :param_1 = files.parent_id
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Owner|owner) initialize prop id
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Owner|owner) initialize prop name
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Owner|owner) _post_configure_properties() complete
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Dates|dates) _post_configure_properties() started
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Dates|dates) initialize prop files
+relation:30,15:15:22:_log_joins:2426:AdEfvg -- Dates.files setup primary join files.id = dates."fileId"
+relation:30,15:15:22:_log_joins:2427:AdEfvg -- Dates.files setup secondary join None
+relation:30,15:15:22:_log_joins:2428:AdEfvg -- Dates.files synchronize pairs [(files.id => dates.fileId)]
+relation:30,15:15:22:_log_joins:2435:AdEfvg -- Dates.files secondary synchronize pairs []
+relation:30,15:15:22:_log_joins:2443:AdEfvg -- Dates.files local/remote pairs [(dates.fileId / files.id)]
+relation:30,15:15:22:_log_joins:2450:AdEfvg -- Dates.files remote columns [files.id]
+relation:30,15:15:22:_log_joins:2455:AdEfvg -- Dates.files local columns [dates.fileId]
+sql.py:30,15:15:22:start:152:AdEfvg -- Starting sql for userid 527e4afc-4598-400f-8536-afa5324f0ba4
+relation:30,15:15:22:_log_joins:2460:AdEfvg -- Dates.files relationship direction symbol('MANYTOONE')
+strategi:30,15:15:22:__init__:547:AdEfvg -- Dates.files lazy loading clause files.id = :param_1
+strategi:30,15:15:22:__init__:572:AdEfvg -- Dates.files will use query.get() to optimize instance loads
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Dates|dates) initialize prop id
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Dates|dates) initialize prop fileId
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Dates|dates) initialize prop date
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Dates|dates) initialize prop adds
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Dates|dates) initialize prop deletes
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Dates|dates) initialize prop bin_width
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Dates|dates) _post_configure_properties() complete
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Closure|closure) _post_configure_properties() started
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Closure|closure) initialize prop files_relationship
+relation:30,15:15:22:_log_joins:2426:AdEfvg -- Closure.files_relationship setup primary join files.id = closure.child
+relation:30,15:15:22:_log_joins:2427:AdEfvg -- Closure.files_relationship setup secondary join None
+relation:30,15:15:22:_log_joins:2428:AdEfvg -- Closure.files_relationship synchronize pairs [(files.id => closure.child)]
+relation:30,15:15:22:_log_joins:2435:AdEfvg -- Closure.files_relationship secondary synchronize pairs []
+relation:30,15:15:22:_log_joins:2443:AdEfvg -- Closure.files_relationship local/remote pairs [(closure.child / files.id)]
+relation:30,15:15:22:_log_joins:2450:AdEfvg -- Closure.files_relationship remote columns [files.id]
+sql_serv:30,15:15:22:req_callback:106:AdEfvg -- Put new task in queue
+relation:30,15:15:22:_log_joins:2455:AdEfvg -- Closure.files_relationship local columns [closure.child]
+relation:30,15:15:22:_log_joins:2460:AdEfvg -- Closure.files_relationship relationship direction symbol('MANYTOONE')
+strategi:30,15:15:22:__init__:547:AdEfvg -- Closure.files_relationship lazy loading clause files.id = :param_1
+strategi:30,15:15:22:__init__:572:AdEfvg -- Closure.files_relationship will use query.get() to optimize instance loads
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Closure|closure) initialize prop parent_relationship
+relation:30,15:15:22:_log_joins:2426:AdEfvg -- Closure.parent_relationship setup primary join files.id = closure.parent
+relation:30,15:15:22:_log_joins:2427:AdEfvg -- Closure.parent_relationship setup secondary join None
+relation:30,15:15:22:_log_joins:2428:AdEfvg -- Closure.parent_relationship synchronize pairs [(files.id => closure.parent)]
+relation:30,15:15:22:_log_joins:2435:AdEfvg -- Closure.parent_relationship secondary synchronize pairs []
+relation:30,15:15:22:_log_joins:2443:AdEfvg -- Closure.parent_relationship local/remote pairs [(closure.parent / files.id)]
+relation:30,15:15:22:_log_joins:2450:AdEfvg -- Closure.parent_relationship remote columns [files.id]
+relation:30,15:15:22:_log_joins:2455:AdEfvg -- Closure.parent_relationship local columns [closure.parent]
+relation:30,15:15:22:_log_joins:2460:AdEfvg -- Closure.parent_relationship relationship direction symbol('MANYTOONE')
+strategi:30,15:15:22:__init__:547:AdEfvg -- Closure.parent_relationship lazy loading clause files.id = :param_1
+strategi:30,15:15:22:__init__:572:AdEfvg -- Closure.parent_relationship will use query.get() to optimize instance loads
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Closure|closure) initialize prop owner
+relation:30,15:15:22:_log_joins:2426:AdEfvg -- Closure.owner setup primary join owner.id = closure.owner_id
+relation:30,15:15:22:_log_joins:2427:AdEfvg -- Closure.owner setup secondary join None
+relation:30,15:15:22:_log_joins:2428:AdEfvg -- Closure.owner synchronize pairs [(owner.id => closure.owner_id)]
+relation:30,15:15:22:_log_joins:2435:AdEfvg -- Closure.owner secondary synchronize pairs []
+sql.py:30,15:15:22:start:152:AdEfvg -- Starting sql for userid 527e4afc-4598-400f-8536-afa5324f0ba4
+relation:30,15:15:22:_log_joins:2443:AdEfvg -- Closure.owner local/remote pairs [(closure.owner_id / owner.id)]
+relation:30,15:15:22:_log_joins:2450:AdEfvg -- Closure.owner remote columns [owner.id]
+relation:30,15:15:22:_log_joins:2455:AdEfvg -- Closure.owner local columns [closure.owner_id]
+relation:30,15:15:22:_log_joins:2460:AdEfvg -- Closure.owner relationship direction symbol('MANYTOONE')
+strategi:30,15:15:22:__init__:547:AdEfvg -- Closure.owner lazy loading clause owner.id = :param_1
+strategi:30,15:15:22:__init__:572:AdEfvg -- Closure.owner will use query.get() to optimize instance loads
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Closure|closure) initialize prop id
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Closure|closure) initialize prop parent
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Closure|closure) initialize prop child
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Closure|closure) initialize prop owner_id
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Closure|closure) initialize prop depth
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Closure|closure) _post_configure_properties() complete
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Filename|filename) _post_configure_properties() started
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Filename|filename) initialize prop files
+relation:30,15:15:22:_log_joins:2426:AdEfvg -- Filename.files setup primary join files.id = filename."fileId"
+relation:30,15:15:22:_log_joins:2427:AdEfvg -- Filename.files setup secondary join None
+relation:30,15:15:22:_log_joins:2428:AdEfvg -- Filename.files synchronize pairs [(files.id => filename.fileId)]
+relation:30,15:15:22:_log_joins:2435:AdEfvg -- Filename.files secondary synchronize pairs []
+relation:30,15:15:22:_log_joins:2443:AdEfvg -- Filename.files local/remote pairs [(filename.fileId / files.id)]
+relation:30,15:15:22:_log_joins:2450:AdEfvg -- Filename.files remote columns [files.id]
+relation:30,15:15:22:_log_joins:2455:AdEfvg -- Filename.files local columns [filename.fileId]
+relation:30,15:15:22:_log_joins:2460:AdEfvg -- Filename.files relationship direction symbol('MANYTOONE')
+strategi:30,15:15:22:__init__:547:AdEfvg -- Filename.files lazy loading clause files.id = :param_1
+strategi:30,15:15:22:__init__:572:AdEfvg -- Filename.files will use query.get() to optimize instance loads
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Filename|filename) initialize prop owner
+relation:30,15:15:22:_log_joins:2426:AdEfvg -- Filename.owner setup primary join owner.id = filename.owner_id
+sql_serv:30,15:15:22:req_callback:106:AdEfvg -- Put new task in queue
+relation:30,15:15:22:_log_joins:2427:AdEfvg -- Filename.owner setup secondary join None
+selector:30,15:15:22:_read_ready__on_eof:869:AdEfvg -- <_SelectorSocketTransport fd=17 read=polling write=<idle, bufsize=0>> received EOF
+relation:30,15:15:22:_log_joins:2428:AdEfvg -- Filename.owner synchronize pairs [(owner.id => filename.owner_id)]
+relation:30,15:15:22:_log_joins:2435:AdEfvg -- Filename.owner secondary synchronize pairs []
+sql.py:30,15:15:22:start:152:AdEfvg -- Starting sql for userid 527e4afc-4598-400f-8536-afa5324f0ba4
+selector:30,15:15:22:_read_ready__on_eof:869:AdEfvg -- <_SelectorSocketTransport fd=18 read=polling write=<idle, bufsize=0>> received EOF
+relation:30,15:15:22:_log_joins:2443:AdEfvg -- Filename.owner local/remote pairs [(filename.owner_id / owner.id)]
+selector:30,15:15:22:_read_ready__on_eof:869:AdEfvg -- <_SelectorSocketTransport fd=19 read=polling write=<idle, bufsize=0>> received EOF
+relation:30,15:15:22:_log_joins:2450:AdEfvg -- Filename.owner remote columns [owner.id]
+selector:30,15:15:22:_read_ready__on_eof:869:AdEfvg -- <_SelectorSocketTransport fd=20 read=polling write=<idle, bufsize=0>> received EOF
+relation:30,15:15:22:_log_joins:2455:AdEfvg -- Filename.owner local columns [filename.owner_id]
+relation:30,15:15:22:_log_joins:2460:AdEfvg -- Filename.owner relationship direction symbol('MANYTOONE')
+selector:30,15:15:22:_read_ready__on_eof:869:AdEfvg -- <_SelectorSocketTransport fd=21 read=polling write=<idle, bufsize=0>> received EOF
+strategi:30,15:15:22:__init__:547:AdEfvg -- Filename.owner lazy loading clause owner.id = :param_1
+strategi:30,15:15:22:__init__:572:AdEfvg -- Filename.owner will use query.get() to optimize instance loads
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Filename|filename) initialize prop id
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Filename|filename) initialize prop fileId
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Filename|filename) initialize prop fileName
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Filename|filename) initialize prop owner_id
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Filename|filename) _post_configure_properties() complete
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Tasks|tasks) _post_configure_properties() started
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Tasks|tasks) initialize prop id
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Tasks|tasks) initialize prop path
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Tasks|tasks) initialize prop creds
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Tasks|tasks) initialize prop fileid
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Tasks|tasks) initialize prop userid
+mapper.p:30,15:15:22:_log:1998:AdEfvg -- (Tasks|tasks) _post_configure_properties() complete
+base.py:30,15:15:22:__connect:653:AdEfvg -- Created new connection <sqlite3.Connection object at 0x7f26595b13f0>
+base.py:30,15:15:22:checkout:507:AdEfvg -- Connection <sqlite3.Connection object at 0x7f26595b13f0> checked out from pool
+base.py:30,15:15:22:_begin_impl:711:AdEfvg -- BEGIN (implicit)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO owner (name) VALUES (?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- ('527e4afc-4598-400f-8536-afa5324f0ba404-30-15-1260',)
+base.py:30,15:15:22:_commit_impl:753:AdEfvg -- COMMIT
+base.py:30,15:15:22:_finalize_fairy:684:AdEfvg -- Connection <sqlite3.Connection object at 0x7f26595b13f0> being returned to pool
+base.py:30,15:15:22:_reset:872:AdEfvg -- Connection <sqlite3.Connection object at 0x7f26595b13f0> rollback-on-return
+base.py:30,15:15:22:_close_connection:267:AdEfvg -- Closing connection <sqlite3.Connection object at 0x7f26595b13f0>
+path_reg:30,15:15:22:set:83:AdEfvg -- set 'memoized_setups' on path 'CachingEntityRegistry((<Mapper at 0x7f265df1c6d0; Owner>,))' to '{}'
+base.py:30,15:15:22:__connect:653:AdEfvg -- Created new connection <sqlite3.Connection object at 0x7f26595b13f0>
+base.py:30,15:15:22:checkout:507:AdEfvg -- Connection <sqlite3.Connection object at 0x7f26595b13f0> checked out from pool
+base.py:30,15:15:22:_begin_impl:711:AdEfvg -- BEGIN (implicit)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- SELECT owner.id AS owner_id, owner.name AS owner_name 
+FROM owner 
+WHERE owner.id = ?
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (18,)
+result.p:30,15:15:22:_init_metadata:809:AdEfvg -- Col ('owner_id', 'owner_name')
+result.p:30,15:15:22:process_rows:1249:AdEfvg -- Row (18, '527e4afc-4598-400f-8536-afa5324f0ba404-30-15-1260')
+base.py:30,15:15:22:_finalize_fairy:684:AdEfvg -- Connection <sqlite3.Connection object at 0x7f26595b13f0> being returned to pool
+base.py:30,15:15:22:_reset:872:AdEfvg -- Connection <sqlite3.Connection object at 0x7f26595b13f0> rollback-on-return, via agent
+base.py:30,15:15:22:_rollback_impl:731:AdEfvg -- ROLLBACK
+base.py:30,15:15:22:_close_connection:267:AdEfvg -- Closing connection <sqlite3.Connection object at 0x7f26595b13f0>
+sql.py:30,15:15:22:start:160:AdEfvg -- Checked out owner object, fileid dict, and lock
+sql_owne:30,15:15:22:__call__:21:AdEfvg -- Found old userid, using
+sql.py:30,15:15:22:start:171:AdEfvg -- File: 1hV6DumA55fF_GwtceKjRqwuSAww_V70exrSzGFoF1Rk
+sql.py:30,15:15:22:start:160:AdEfvg -- Checked out owner object, fileid dict, and lock
+sql_owne:30,15:15:22:__call__:21:AdEfvg -- Found old userid, using
+sql.py:30,15:15:22:start:171:AdEfvg -- File: 1cGlmEaWYTHdD_Y3vlkIMMkZhdmosSZo_rQYxcSBoDbQ
+sql.py:30,15:15:22:start:171:AdEfvg -- File: 1hV6DumA55fF_GwtceKjRqwuSAww_V70exrSzGFoF1Rk
+sql.py:30,15:15:22:start:160:AdEfvg -- Checked out owner object, fileid dict, and lock
+sql_owne:30,15:15:22:__call__:21:AdEfvg -- Found old userid, using
+sql.py:30,15:15:22:start:171:AdEfvg -- File: 1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ
+sql.py:30,15:15:22:start:175:AdEfvg -- Duplicated file id found: 1hV6DumA55fF_GwtceKjRqwuSAww_V70exrSzGFoF1Rk
+sql.py:30,15:15:22:start:171:AdEfvg -- File: 1hV6DumA55fF_GwtceKjRqwuSAww_V70exrSzGFoF1Rk
+sql.py:30,15:15:22:start:160:AdEfvg -- Checked out owner object, fileid dict, and lock
+sql_owne:30,15:15:22:__call__:21:AdEfvg -- Found old userid, using
+sql.py:30,15:15:22:start:171:AdEfvg -- File: 1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s
+sql.py:30,15:15:22:start:171:AdEfvg -- File: 1cGlmEaWYTHdD_Y3vlkIMMkZhdmosSZo_rQYxcSBoDbQ
+sql.py:30,15:15:22:start:175:AdEfvg -- Duplicated file id found: 1hV6DumA55fF_GwtceKjRqwuSAww_V70exrSzGFoF1Rk
+sql.py:30,15:15:22:start:171:AdEfvg -- File: 1hV6DumA55fF_GwtceKjRqwuSAww_V70exrSzGFoF1Rk
+sql.py:30,15:15:22:start:160:AdEfvg -- Checked out owner object, fileid dict, and lock
+sql.py:30,15:15:22:start:171:AdEfvg -- File: 1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08
+sql.py:30,15:15:22:start:175:AdEfvg -- Duplicated file id found: 1cGlmEaWYTHdD_Y3vlkIMMkZhdmosSZo_rQYxcSBoDbQ
+sql.py:30,15:15:22:start:171:AdEfvg -- File: 1cGlmEaWYTHdD_Y3vlkIMMkZhdmosSZo_rQYxcSBoDbQ
+sql.py:30,15:15:22:start:175:AdEfvg -- Duplicated file id found: 1hV6DumA55fF_GwtceKjRqwuSAww_V70exrSzGFoF1Rk
+sql.py:30,15:15:22:start:171:AdEfvg -- File: 1hV6DumA55fF_GwtceKjRqwuSAww_V70exrSzGFoF1Rk
+sql.py:30,15:15:22:start:171:AdEfvg -- File: 1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4
+sql.py:30,15:15:22:start:171:AdEfvg -- File: 1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ
+sql.py:30,15:15:22:start:175:AdEfvg -- Duplicated file id found: 1cGlmEaWYTHdD_Y3vlkIMMkZhdmosSZo_rQYxcSBoDbQ
+sql.py:30,15:15:22:start:171:AdEfvg -- File: 1cGlmEaWYTHdD_Y3vlkIMMkZhdmosSZo_rQYxcSBoDbQ
+sql.py:30,15:15:22:start:175:AdEfvg -- Duplicated file id found: 1hV6DumA55fF_GwtceKjRqwuSAww_V70exrSzGFoF1Rk
+sql.py:30,15:15:22:start:171:AdEfvg -- File: 1jRrZTHn-oge2sTqxli8Um026xuniXAeezLZn4B2zVSg
+sql.py:30,15:15:22:start:175:AdEfvg -- Duplicated file id found: 1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ
+sql.py:30,15:15:22:start:171:AdEfvg -- File: 1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ
+sql.py:30,15:15:22:start:175:AdEfvg -- Duplicated file id found: 1cGlmEaWYTHdD_Y3vlkIMMkZhdmosSZo_rQYxcSBoDbQ
+sql.py:30,15:15:22:start:171:AdEfvg -- File: 1cGlmEaWYTHdD_Y3vlkIMMkZhdmosSZo_rQYxcSBoDbQ
+sql.py:30,15:15:22:start:171:AdEfvg -- File: 1C09g5-ATBpXNJOmH8ANwCnq7Pk6vClzI1lmFYcqaH6A
+sql.py:30,15:15:22:start:171:AdEfvg -- File: 1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s
+sql.py:30,15:15:22:start:175:AdEfvg -- Duplicated file id found: 1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ
+sql.py:30,15:15:22:start:171:AdEfvg -- File: 1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ
+sql.py:30,15:15:22:start:175:AdEfvg -- Duplicated file id found: 1cGlmEaWYTHdD_Y3vlkIMMkZhdmosSZo_rQYxcSBoDbQ
+sql.py:30,15:15:22:start:171:AdEfvg -- File: 1D48Gz6hmPkE6sATNqYoA3P3Hdjtq1y2zHRjrh1kH64I
+sql.py:30,15:15:22:start:175:AdEfvg -- Duplicated file id found: 1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s
+sql.py:30,15:15:22:start:171:AdEfvg -- File: 1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s
+sql.py:30,15:15:22:start:175:AdEfvg -- Duplicated file id found: 1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ
+sql.py:30,15:15:22:start:171:AdEfvg -- File: 1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ
+sql.py:30,15:15:22:start:208:AdEfvg -- len of id map 8 len of files 8
+sql.py:30,15:15:22:start:171:AdEfvg -- File: 1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08
+sql.py:30,15:15:22:start:175:AdEfvg -- Duplicated file id found: 1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s
+sql.py:30,15:15:22:start:171:AdEfvg -- File: 1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s
+sql.py:30,15:15:22:start:175:AdEfvg -- Duplicated file id found: 1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ
+sql.py:30,15:15:22:load_from_dict:133:AdEfvg -- bulk saving dates
+base.py:30,15:15:22:__connect:653:AdEfvg -- Created new connection <sqlite3.Connection object at 0x7f26595b13f0>
+base.py:30,15:15:22:checkout:507:AdEfvg -- Connection <sqlite3.Connection object at 0x7f26595b13f0> checked out from pool
+base.py:30,15:15:22:_begin_impl:711:AdEfvg -- BEGIN (implicit)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates (date, adds, deletes) VALUES (?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- ((1588095772.512, 0, 0), (1588095812.46, 7, 0), (1588099200.121, 104, 0), (1588099230.31, 213, 0), (1588099291.654, 52, 0), (1588099784.57, 52, 0), (1588099850.964, 126, 0), (1588099890.156, 222, 0)  ... displaying 10 of 81 total bound parameter sets ...  (1588209304.912, 99, 0), (1588209330.599, 58, 0))
+sql.py:30,15:15:22:start:218:AdEfvg -- joining threads load_from_dict
+sql.py:30,15:15:22:start:175:AdEfvg -- Duplicated file id found: 1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08
+sql.py:30,15:15:22:start:171:AdEfvg -- File: 1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08
+sql.py:30,15:15:22:start:175:AdEfvg -- Duplicated file id found: 1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s
+sql.py:30,15:15:22:start:171:AdEfvg -- File: 1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s
+sql.py:30,15:15:22:load_from_dict:136:AdEfvg -- flushing objects
+sql.py:30,15:15:22:start:171:AdEfvg -- File: 1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4
+sql.py:30,15:15:22:start:175:AdEfvg -- Duplicated file id found: 1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08
+sql.py:30,15:15:22:start:171:AdEfvg -- File: 1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08
+sql.py:30,15:15:22:start:175:AdEfvg -- Duplicated file id found: 1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s
+sql.py:30,15:15:22:load_from_dict:137:AdEfvg -- new: IdentitySet([Files
+, <processing.models.Filename object at 0x7f265842e790>, Dates Object: 1588095772.512, 0, 0, Dates Object: 1588095812.46, 7, 0, Dates Object: 1588099200.121, 104, 0, Dates Object: 1588099230.31, 213, 0, Dates Object: 1588099291.654, 52, 0, Dates Object: 1588099784.57, 52, 0, Dates Object: 1588099850.964, 126, 0, Dates Object: 1588099890.156, 222, 0, Dates Object: 1588099950.233, 49, 0, Dates Object: 1588100021.246, 105, 0, Dates Object: 1588100070.526, 31, 0, Dates Object: 1588100175.713, 77, 0, Dates Object: 1588100192.775, 62, 0, Dates Object: 1588100250.059, 88, 0, Dates Object: 1588100314.939, 114, 0, Dates Object: 1588100978.635, 89, 0, Dates Object: 1588101104.905, 98, 0, Dates Object: 1588101165.798, 101, 0, Dates Object: 1588101211.047, 155, 0, Dates Object: 1588101291.712, 139, 0, Dates Object: 1588101334.508, 221, 0, Dates Object: 1588101390.081, 181, 0, Dates Object: 1588101455.108, 79, 0, Dates Object: 1588101510.566, 105, 0, Dates Object: 1588101570.363, 172, 0, Dates Object: 1588102265.298, 70, 0, Dates Object: 1588102303.043, 153, 0, Dates Object: 1588102351.079, 153, 0, Dates Object: 1588102418.421, 112, 0, Dates Object: 1588102471.143, 157, 0, Dates Object: 1588102533.218, 146, 0, Dates Object: 1588102683.95, 108, 0, Dates Object: 1588102712.292, 158, 0, Dates Object: 1588102774.788, 20, 0, Dates Object: 1588106657.917, 45, 0, Dates Object: 1588106773.394, 24, 0, Dates Object: 1588106791.248, 54, 0, Dates Object: 1588106859.752, 44, 0, Dates Object: 1588109610.452, 60, 0, Dates Object: 1588109692.256, 25, 0, Dates Object: 1588115285.091, 96, 0, Dates Object: 1588115310.131, 248, 0, Dates Object: 1588115370.42, 50, 0, Dates Object: 1588117149.357, 106, 0, Dates Object: 1588117617.083, 29, 0, Dates Object: 1588117682.631, 117, 0, Dates Object: 1588117710.365, 112, 0, Dates Object: 1588118857.717, 124, 0, Dates Object: 1588119187.209, 91, 0, Dates Object: 1588119211.377, 35, 0, Dates Object: 1588122509.872, 3, 0, Dates Object: 1588122513.363, 171, 0, Dates Object: 1588122573.169, 73, 0, Dates Object: 1588122801.37, 21, 0, Dates Object: 1588122812.945, 186, 0, Dates Object: 1588123006.592, 59, 0, Dates Object: 1588123055.976, 49, 0, Dates Object: 1588123170.78, 102, 0, Dates Object: 1588123633.86, 40, 0, Dates Object: 1588123655.483, 121, 0, Dates Object: 1588124487.796, 1, 0, Dates Object: 1588124950.764, 62, 0, Dates Object: 1588124973.167, 113, 0, Dates Object: 1588125040.082, 31, 0, Dates Object: 1588125157.949, 81, 0, Dates Object: 1588134096.632, 76, 0, Dates Object: 1588137669.252, 1, 0, Dates Object: 1588198462.811, 1, 0, Dates Object: 1588201655.121, 70, 0, Dates Object: 1588202213.387, 187, 0, Dates Object: 1588202253.548, 51, 0, Dates Object: 1588204501.951, 1, 0, Dates Object: 1588207071.895, 5, 0, Dates Object: 1588208752.408, 16, 0, Dates Object: 1588208889.932, 47, 0, Dates Object: 1588208910.637, 138, 0, Dates Object: 1588208970.857, 108, 0, Dates Object: 1588209098.834, 174, 0, Dates Object: 1588209150.16, 114, 0, Dates Object: 1588209304.912, 99, 0, Dates Object: 1588209330.599, 58, 0]), dirty: IdentitySet([])
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO files ("fileId", "lastModDate", parent_id, "isFile") VALUES (?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- ('1hV6DumA55fF_GwtceKjRqwuSAww_V70exrSzGFoF1Rk:30-15.908464HkPWJPSqUgJ8jm', '2020-04-28 18:16:42.472345', 18, 1)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588095772.512, 0, 0, None)
+sql.py:30,15:15:22:start:175:AdEfvg -- Duplicated file id found: 1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588095812.46, 7, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588099200.121, 104, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588099230.31, 213, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588099291.654, 52, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588099784.57, 52, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588099850.964, 126, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588099890.156, 222, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588099950.233, 49, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588100021.246, 105, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588100070.526, 31, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588100175.713, 77, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588100192.775, 62, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588100250.059, 88, 0, None)
+sql.py:30,15:15:22:start:171:AdEfvg -- File: 1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588100314.939, 114, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588100978.635, 89, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588101104.905, 98, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588101165.798, 101, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588101211.047, 155, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588101291.712, 139, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588101334.508, 221, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588101390.081, 181, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588101455.108, 79, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588101510.566, 105, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588101570.363, 172, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588102265.298, 70, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588102303.043, 153, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588102351.079, 153, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588102418.421, 112, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588102471.143, 157, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588102533.218, 146, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588102683.95, 108, 0, None)
+sql.py:30,15:15:22:start:175:AdEfvg -- Duplicated file id found: 1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588102712.292, 158, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588102774.788, 20, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588106657.917, 45, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588106773.394, 24, 0, None)
+sql.py:30,15:15:22:start:171:AdEfvg -- File: 1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588106791.248, 54, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588106859.752, 44, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588109610.452, 60, 0, None)
+sql.py:30,15:15:22:start:171:AdEfvg -- File: 1jRrZTHn-oge2sTqxli8Um026xuniXAeezLZn4B2zVSg
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588109692.256, 25, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588115285.091, 96, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588115310.131, 248, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588115370.42, 50, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588117149.357, 106, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588117617.083, 29, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588117682.631, 117, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588117710.365, 112, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588118857.717, 124, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588119187.209, 91, 0, None)
+sql.py:30,15:15:22:start:175:AdEfvg -- Duplicated file id found: 1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588119211.377, 35, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588122509.872, 3, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588122513.363, 171, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588122573.169, 73, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588122801.37, 21, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588122812.945, 186, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588123006.592, 59, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588123055.976, 49, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588123170.78, 102, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588123633.86, 40, 0, None)
+sql.py:30,15:15:22:start:171:AdEfvg -- File: 1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588123655.483, 121, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588124487.796, 1, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588124950.764, 62, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588124973.167, 113, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588125040.082, 31, 0, None)
+sql.py:30,15:15:22:start:175:AdEfvg -- Duplicated file id found: 1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588125157.949, 81, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588134096.632, 76, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588137669.252, 1, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588198462.811, 1, 0, None)
+sql.py:30,15:15:22:start:175:AdEfvg -- Duplicated file id found: 1jRrZTHn-oge2sTqxli8Um026xuniXAeezLZn4B2zVSg
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588201655.121, 70, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588202213.387, 187, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588202253.548, 51, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588204501.951, 1, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588207071.895, 5, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588208752.408, 16, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588208889.932, 47, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588208910.637, 138, 0, None)
+sql.py:30,15:15:22:start:171:AdEfvg -- File: 1jRrZTHn-oge2sTqxli8Um026xuniXAeezLZn4B2zVSg
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588208970.857, 108, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588209098.834, 174, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588209150.16, 114, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588209304.912, 99, 0, None)
+sql.py:30,15:15:22:start:175:AdEfvg -- Duplicated file id found: 1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 1588209330.599, 58, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO filename ("fileId", "fileName", owner_id) VALUES (?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (146, 'Untitled document', 18)
+sql.py:30,15:15:22:start:171:AdEfvg -- File: 1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4
+sql.py:30,15:15:22:start:171:AdEfvg -- File: 1C09g5-ATBpXNJOmH8ANwCnq7Pk6vClzI1lmFYcqaH6A
+sql.py:30,15:15:22:start:175:AdEfvg -- Duplicated file id found: 1jRrZTHn-oge2sTqxli8Um026xuniXAeezLZn4B2zVSg
+sql.py:30,15:15:22:start:171:AdEfvg -- File: 1jRrZTHn-oge2sTqxli8Um026xuniXAeezLZn4B2zVSg
+sql.py:30,15:15:22:load_from_dict:139:AdEfvg -- finished flush; file size: 7
+sql.py:30,15:15:22:start:175:AdEfvg -- Duplicated file id found: 1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4
+sql.py:30,15:15:22:start:175:AdEfvg -- Duplicated file id found: 1C09g5-ATBpXNJOmH8ANwCnq7Pk6vClzI1lmFYcqaH6A
+sql.py:30,15:15:22:start:171:AdEfvg -- File: 1C09g5-ATBpXNJOmH8ANwCnq7Pk6vClzI1lmFYcqaH6A
+sql.py:30,15:15:22:start:175:AdEfvg -- Duplicated file id found: 1jRrZTHn-oge2sTqxli8Um026xuniXAeezLZn4B2zVSg
+sql.py:30,15:15:22:load_from_dict:133:AdEfvg -- bulk saving dates
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates (date, adds, deletes) VALUES (?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- ((1587669374.251, 15, 0), (1587669871.805, 351, 0), (1587669930.138, 144, 0), (1587670191.439, 256, 0), (1587670230.006, 116, 0), (1587671924.366, 50, 0), (1587672507.988, 9, 0), (1587672511.869, 140, 0)  ... displaying 10 of 48 total bound parameter sets ...  (1587677790.03, 190, 0), (1587677851.777, 155, 0))
+sql.py:30,15:15:22:start:171:AdEfvg -- File: 1jRrZTHn-oge2sTqxli8Um026xuniXAeezLZn4B2zVSg
+sql.py:30,15:15:22:start:171:AdEfvg -- File: 1D48Gz6hmPkE6sATNqYoA3P3Hdjtq1y2zHRjrh1kH64I
+sql.py:30,15:15:22:start:175:AdEfvg -- Duplicated file id found: 1C09g5-ATBpXNJOmH8ANwCnq7Pk6vClzI1lmFYcqaH6A
+sql.py:30,15:15:22:start:171:AdEfvg -- File: 1C09g5-ATBpXNJOmH8ANwCnq7Pk6vClzI1lmFYcqaH6A
+sql.py:30,15:15:22:load_from_dict:136:AdEfvg -- flushing objects
+sql.py:30,15:15:22:start:175:AdEfvg -- Duplicated file id found: 1jRrZTHn-oge2sTqxli8Um026xuniXAeezLZn4B2zVSg
+sql.py:30,15:15:22:start:208:AdEfvg -- len of id map 8 len of files 0
+sql.py:30,15:15:22:start:171:AdEfvg -- File: 1D48Gz6hmPkE6sATNqYoA3P3Hdjtq1y2zHRjrh1kH64I
+sql.py:30,15:15:22:start:175:AdEfvg -- Duplicated file id found: 1C09g5-ATBpXNJOmH8ANwCnq7Pk6vClzI1lmFYcqaH6A
+sql.py:30,15:15:22:load_from_dict:137:AdEfvg -- new: IdentitySet([Files
+, <processing.models.Filename object at 0x7f265842e0d0>, Dates Object: 1587669374.251, 15, 0, Dates Object: 1587669871.805, 351, 0, Dates Object: 1587669930.138, 144, 0, Dates Object: 1587670191.439, 256, 0, Dates Object: 1587670230.006, 116, 0, Dates Object: 1587671924.366, 50, 0, Dates Object: 1587672507.988, 9, 0, Dates Object: 1587672511.869, 140, 0, Dates Object: 1587674315.908, 194, 0, Dates Object: 1587674383.435, 32, 0, Dates Object: 1587674433.436, 148, 0, Dates Object: 1587674510.345, 186, 0, Dates Object: 1587674550.536, 249, 0, Dates Object: 1587674610.646, 6, 0, Dates Object: 1587674689.653, 165, 0, Dates Object: 1587674730.502, 225, 0, Dates Object: 1587674833.668, 90, 0, Dates Object: 1587674851.523, 160, 0, Dates Object: 1587674949.995, 154, 0, Dates Object: 1587674970.25, 106, 0, Dates Object: 1587675030.049, 138, 0, Dates Object: 1587675101.325, 34, 0, Dates Object: 1587675220.716, 84, 0, Dates Object: 1587675391.206, 83, 0, Dates Object: 1587675487.815, 119, 0, Dates Object: 1587675510.18, 11, 0, Dates Object: 1587675609.474, 42, 0, Dates Object: 1587675631.303, 131, 0, Dates Object: 1587675766.691, 129, 0, Dates Object: 1587675825.574, 61, 0, Dates Object: 1587676093.838, 93, 0, Dates Object: 1587676110.076, 212, 0, Dates Object: 1587676217.661, 34, 0, Dates Object: 1587676362.036, 125, 0, Dates Object: 1587676539.824, 170, 0, Dates Object: 1587676685.083, 119, 0, Dates Object: 1587676713.245, 199, 0, Dates Object: 1587676925.299, 1, 0, Dates Object: 1587676972.682, 144, 0, Dates Object: 1587677016.106, 25, 0, Dates Object: 1587677311.149, 278, 0, Dates Object: 1587677370.546, 34, 0, Dates Object: 1587677602.945, 66, 0, Dates Object: 1587677610.401, 218, 0, Dates Object: 1587677670.275, 181, 0, Dates Object: 1587677781.478, 53, 0, Dates Object: 1587677790.03, 190, 0, Dates Object: 1587677851.777, 155, 0]), dirty: IdentitySet([])
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO files ("fileId", "lastModDate", parent_id, "isFile") VALUES (?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- ('1cGlmEaWYTHdD_Y3vlkIMMkZhdmosSZo_rQYxcSBoDbQ:30-15.908464HkPWJPSqUg3qV3', '2020-04-23 13:48:53.948884', 18, 1)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO filename ("fileId", "fileName", owner_id) VALUES (?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, '458-471', 18)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587669374.251, 15, 0, None)
+sql.py:30,15:15:22:start:171:AdEfvg -- File: 1C09g5-ATBpXNJOmH8ANwCnq7Pk6vClzI1lmFYcqaH6A
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587669871.805, 351, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587669930.138, 144, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587670191.439, 256, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587670230.006, 116, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587671924.366, 50, 0, None)
+sql.py:30,15:15:22:load_from_dict:146:AdEfvg -- Done load dict
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587672507.988, 9, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587672511.869, 140, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587674315.908, 194, 0, None)
+sql.py:30,15:15:22:start:218:AdEfvg -- joining threads load_from_dict
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587674383.435, 32, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587674433.436, 148, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587674510.345, 186, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587674550.536, 249, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587674610.646, 6, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587674689.653, 165, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587674730.502, 225, 0, None)
+sql.py:30,15:15:22:start:208:AdEfvg -- len of id map 8 len of files 0
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587674833.668, 90, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587674851.523, 160, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587674949.995, 154, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587674970.25, 106, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587675030.049, 138, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587675101.325, 34, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587675220.716, 84, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587675391.206, 83, 0, None)
+sql.py:30,15:15:22:start:171:AdEfvg -- File: 1D48Gz6hmPkE6sATNqYoA3P3Hdjtq1y2zHRjrh1kH64I
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587675487.815, 119, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587675510.18, 11, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587675609.474, 42, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587675631.303, 131, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587675766.691, 129, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587675825.574, 61, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587676093.838, 93, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587676110.076, 212, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587676217.661, 34, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587676362.036, 125, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587676539.824, 170, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587676685.083, 119, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587676713.245, 199, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587676925.299, 1, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587676972.682, 144, 0, None)
+sql.py:30,15:15:22:start:175:AdEfvg -- Duplicated file id found: 1C09g5-ATBpXNJOmH8ANwCnq7Pk6vClzI1lmFYcqaH6A
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587677016.106, 25, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587677311.149, 278, 0, None)
+sql.py:30,15:15:22:start:221:AdEfvg -- starting load closures
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587677370.546, 34, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587677602.945, 66, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587677610.401, 218, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587677670.275, 181, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587677781.478, 53, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587677790.03, 190, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (147, 1587677851.777, 155, 0, None)
+sql.py:30,15:15:22:load_from_dict:146:AdEfvg -- Done load dict
+sql.py:30,15:15:22:start:218:AdEfvg -- joining threads load_from_dict
+sql.py:30,15:15:22:start:208:AdEfvg -- len of id map 8 len of files 0
+sql.py:30,15:15:22:start:171:AdEfvg -- File: 1D48Gz6hmPkE6sATNqYoA3P3Hdjtq1y2zHRjrh1kH64I
+sql.py:30,15:15:22:load_clos:89:AdEfvg -- new element not found: root
+sql.py:30,15:15:22:load_from_dict:139:AdEfvg -- finished flush; file size: 6
+sql.py:30,15:15:22:start:221:AdEfvg -- starting load closures
+sql.py:30,15:15:22:load_from_dict:146:AdEfvg -- Done load dict
+sql.py:30,15:15:22:start:218:AdEfvg -- joining threads load_from_dict
+sql.py:30,15:15:22:start:208:AdEfvg -- len of id map 8 len of files 0
+sql.py:30,15:15:22:load_from_dict:133:AdEfvg -- bulk saving dates
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates (date, adds, deletes) VALUES (?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (1587096291.305, 156, 0)
+sql.py:30,15:15:22:load_clos:89:AdEfvg -- new element not found: 1D48Gz6hmPkE6sATNqYoA3P3Hdjtq1y2zHRjrh1kH64I
+base.py:30,15:15:22:__connect:653:AdEfvg -- Created new connection <sqlite3.Connection object at 0x7f265b9e4a80>
+base.py:30,15:15:22:checkout:507:AdEfvg -- Connection <sqlite3.Connection object at 0x7f265b9e4a80> checked out from pool
+base.py:30,15:15:22:_begin_impl:711:AdEfvg -- BEGIN (implicit)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO files ("fileId", "lastModDate", parent_id, "isFile") VALUES (?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- ('root18', None, 18, 0)
+sql.py:30,15:15:22:start:221:AdEfvg -- starting load closures
+sql.py:30,15:15:22:load_from_dict:146:AdEfvg -- Done load dict
+sql.py:30,15:15:22:start:218:AdEfvg -- joining threads load_from_dict
+sql.py:30,15:15:22:load_from_dict:136:AdEfvg -- flushing objects
+sql.py:30,15:15:22:start:221:AdEfvg -- starting load closures
+sql.py:30,15:15:22:load_from_dict:137:AdEfvg -- new: IdentitySet([Files
+, <processing.models.Filename object at 0x7f265845c5e0>, Dates Object: 1587096291.305, 156, 0]), dirty: IdentitySet([])
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO files ("fileId", "lastModDate", parent_id, "isFile") VALUES (?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- ('1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ:30-15.908464HkPWJPSqUgoTNJ', '2020-04-16 21:04:51.305000', 18, 1)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO filename ("fileId", "fileName", owner_id) VALUES (?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (148, 'The Factory High School', 18)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (148, 1587096291.305, 156, 0, None)
+sql.py:30,15:15:22:start:225:AdEfvg -- Done all for owner_id 18; processed files: 0
+sql.py:30,15:15:22:load_from_dict:139:AdEfvg -- finished flush; file size: 5
+sql.py:30,15:15:22:load_from_dict:133:AdEfvg -- bulk saving dates
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates (date, adds, deletes) VALUES (?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- ((1580798534.87, 87, 0), (1580798550.336, 310, 0), (1580798615.106, 277, 0), (1580798670.397, 174, 0), (1580798731.829, 173, 0), (1580798793.257, 86, 0), (1580798852.977, 148, 0), (1580798911.127, 122, 0)  ... displaying 10 of 26 total bound parameter sets ...  (1580800170.2, 114, 0), (1580800260.506, 3, 0))
+sql.py:30,15:15:22:load_from_dict:136:AdEfvg -- flushing objects
+sql.py:30,15:15:22:start:225:AdEfvg -- Done all for owner_id 18; processed files: 0
+sql.py:30,15:15:22:load_from_dict:137:AdEfvg -- new: IdentitySet([Files
+, <processing.models.Filename object at 0x7f265845c730>, Dates Object: 1580798534.87, 87, 0, Dates Object: 1580798550.336, 310, 0, Dates Object: 1580798615.106, 277, 0, Dates Object: 1580798670.397, 174, 0, Dates Object: 1580798731.829, 173, 0, Dates Object: 1580798793.257, 86, 0, Dates Object: 1580798852.977, 148, 0, Dates Object: 1580798911.127, 122, 0, Dates Object: 1580799126.0, 42, 0, Dates Object: 1580799150.86, 205, 0, Dates Object: 1580799210.038, 138, 0, Dates Object: 1580799270.82, 56, 0, Dates Object: 1580799424.159, 14, 0, Dates Object: 1580799501.82, 22, 0, Dates Object: 1580799511.377, 239, 0, Dates Object: 1580799570.761, 152, 0, Dates Object: 1580799649.671, 106, 0, Dates Object: 1580799729.802, 26, 0, Dates Object: 1580799750.144, 309, 0, Dates Object: 1580799855.783, 56, 0, Dates Object: 1580799894.199, 167, 0, Dates Object: 1580799938.611, 133, 0, Dates Object: 1580800050.736, 160, 0, Dates Object: 1580800117.513, 163, 0, Dates Object: 1580800170.2, 114, 0, Dates Object: 1580800260.506, 3, 0]), dirty: IdentitySet([])
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO files ("fileId", "lastModDate", parent_id, "isFile") VALUES (?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- ('1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s:30-15.908464HkPWJPSqUgkcmh', '2020-02-03 22:54:45.726570', 18, 1)
+sql.py:30,15:15:22:start:225:AdEfvg -- Done all for owner_id 18; processed files: 0
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (149, 1580798534.87, 87, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (149, 1580798550.336, 310, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (149, 1580798615.106, 277, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (149, 1580798670.397, 174, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (149, 1580798731.829, 173, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (149, 1580798793.257, 86, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (149, 1580798852.977, 148, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (149, 1580798911.127, 122, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (149, 1580799126.0, 42, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (149, 1580799150.86, 205, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (149, 1580799210.038, 138, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (149, 1580799270.82, 56, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (149, 1580799424.159, 14, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (149, 1580799501.82, 22, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (149, 1580799511.377, 239, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (149, 1580799570.761, 152, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (149, 1580799649.671, 106, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (149, 1580799729.802, 26, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (149, 1580799750.144, 309, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (149, 1580799855.783, 56, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (149, 1580799894.199, 167, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (149, 1580799938.611, 133, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (149, 1580800050.736, 160, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (149, 1580800117.513, 163, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (149, 1580800170.2, 114, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (149, 1580800260.506, 3, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO filename ("fileId", "fileName", owner_id) VALUES (?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (149, '338 - 345', 18)
+sql.py:30,15:15:22:load_from_dict:139:AdEfvg -- finished flush; file size: 4
+sql.py:30,15:15:22:load_from_dict:133:AdEfvg -- bulk saving dates
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates (date, adds, deletes) VALUES (?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- ((1552438067.946, 13, 0), (1552438178.999, 143, 0), (1552438329.938, 29, 0), (1552438433.193, 85, 0), (1552438485.227, 220, 0), (1552438566.765, 107, 0), (1552438591.548, 200, 0), (1552438650.089, 9, 0)  ... displaying 10 of 63 total bound parameter sets ...  (1556322165.57, 289, 0), (1556322211.321, 121, 0))
+sql.py:30,15:15:22:load_from_dict:136:AdEfvg -- flushing objects
+sql.py:30,15:15:22:load_from_dict:137:AdEfvg -- new: IdentitySet([Files
+, <processing.models.Filename object at 0x7f265845c940>, Dates Object: 1552438067.946, 13, 0, Dates Object: 1552438178.999, 143, 0, Dates Object: 1552438329.938, 29, 0, Dates Object: 1552438433.193, 85, 0, Dates Object: 1552438485.227, 220, 0, Dates Object: 1552438566.765, 107, 0, Dates Object: 1552438591.548, 200, 0, Dates Object: 1552438650.089, 9, 0, Dates Object: 1552438827.641, 2, 0, Dates Object: 1552438955.365, 32, 0, Dates Object: 1552439069.681, 0, 0, Dates Object: 1552439070.03, 153, 0, Dates Object: 1552439130.59, 176, 0, Dates Object: 1552439254.335, 102, 0, Dates Object: 1552439331.07, 100, 0, Dates Object: 1552439370.206, 173, 0, Dates Object: 1552439430.237, 86, 0, Dates Object: 1552688184.936, 8, 0, Dates Object: 1552688206.924, 157, 0, Dates Object: 1552688250.31, 227, 0, Dates Object: 1552688478.801, 75, 0, Dates Object: 1552688490.3, 159, 0, Dates Object: 1552688604.86, 32, 0, Dates Object: 1552688610.426, 82, 0, Dates Object: 1552688670.833, 4, 0, Dates Object: 1552688731.605, 100, 0, Dates Object: 1552688790.178, 90, 0, Dates Object: 1552688925.124, 0, 0, Dates Object: 1552689065.43, 12, 0, Dates Object: 1552689095.351, 19, 0, Dates Object: 1552689164.081, 120, 0, Dates Object: 1552689211.426, 13, 0, Dates Object: 1552689274.169, 149, 0, Dates Object: 1552689546.904, 0, 0, Dates Object: 1554418263.688, 13, 0, Dates Object: 1554418292.583, 177, 0, Dates Object: 1554418384.851, 78, 0, Dates Object: 1554418414.914, 147, 0, Dates Object: 1554418486.491, 98, 0, Dates Object: 1554418530.322, 108, 0, Dates Object: 1554418590.204, 238, 0, Dates Object: 1554418662.493, 145, 0, Dates Object: 1554418713.924, 182, 0, Dates Object: 1554418770.101, 141, 0, Dates Object: 1554418833.381, 131, 0, Dates Object: 1554418890.823, 166, 0, Dates Object: 1554419004.926, 23, 0, Dates Object: 1554419012.024, 153, 0, Dates Object: 1554419070.446, 37, 0, Dates Object: 1554419237.326, 65, 0, Dates Object: 1554419250.025, 172, 0, Dates Object: 1554419310.299, 49, 0, Dates Object: 1554590838.639, 68, 0, Dates Object: 1556076106.128, 8, 0, Dates Object: 1556076150.961, 173, 0, Dates Object: 1556077179.423, 132, 0, Dates Object: 1556077236.4, 267, 0, Dates Object: 1556077290.533, 321, 0, Dates Object: 1556077351.009, 115, 0, Dates Object: 1556319672.659, 61, 0, Dates Object: 1556319690.384, 177, 0, Dates Object: 1556322165.57, 289, 0, Dates Object: 1556322211.321, 121, 0]), dirty: IdentitySet([])
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO files ("fileId", "lastModDate", parent_id, "isFile") VALUES (?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- ('1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08:30-15.908464HkPWJPSqUgqsLx', '2019-03-31 10:40:23.306210', 18, 1)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1552438067.946, 13, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1552438178.999, 143, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1552438329.938, 29, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1552438433.193, 85, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1552438485.227, 220, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1552438566.765, 107, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1552438591.548, 200, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1552438650.089, 9, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1552438827.641, 2, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1552438955.365, 32, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1552439069.681, 0, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1552439070.03, 153, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1552439130.59, 176, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1552439254.335, 102, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1552439331.07, 100, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1552439370.206, 173, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1552439430.237, 86, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1552688184.936, 8, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1552688206.924, 157, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1552688250.31, 227, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1552688478.801, 75, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1552688490.3, 159, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1552688604.86, 32, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1552688610.426, 82, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1552688670.833, 4, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1552688731.605, 100, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1552688790.178, 90, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1552688925.124, 0, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1552689065.43, 12, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1552689095.351, 19, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1552689164.081, 120, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1552689211.426, 13, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1552689274.169, 149, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1552689546.904, 0, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1554418263.688, 13, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1554418292.583, 177, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1554418384.851, 78, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1554418414.914, 147, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1554418486.491, 98, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1554418530.322, 108, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1554418590.204, 238, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1554418662.493, 145, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1554418713.924, 182, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1554418770.101, 141, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1554418833.381, 131, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1554418890.823, 166, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1554419004.926, 23, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1554419012.024, 153, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1554419070.446, 37, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1554419237.326, 65, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1554419250.025, 172, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1554419310.299, 49, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1554590838.639, 68, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1556076106.128, 8, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1556076150.961, 173, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1556077179.423, 132, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1556077236.4, 267, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1556077290.533, 321, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1556077351.009, 115, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1556319672.659, 61, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1556319690.384, 177, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1556322165.57, 289, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 1556322211.321, 121, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO filename ("fileId", "fileName", owner_id) VALUES (?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (150, 'academic intent', 18)
+sql.py:30,15:15:22:load_from_dict:139:AdEfvg -- finished flush; file size: 3
+sql.py:30,15:15:22:load_from_dict:133:AdEfvg -- bulk saving dates
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates (date, adds, deletes) VALUES (?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- ((1586235258.146, 12, 0), (1586235271.395, 128, 0), (1586235331.149, 141, 0), (1586235828.618, 44, 0), (1586235871.66, 24, 0), (1586236536.945, 47, 0), (1586236607.652, 42, 0), (1586236682.874, 19, 0)  ... displaying 10 of 36 total bound parameter sets ...  (1586238632.727, 70, 0), (1586238690.353, 84, 0))
+sql.py:30,15:15:22:load_from_dict:136:AdEfvg -- flushing objects
+sql.py:30,15:15:22:load_from_dict:137:AdEfvg -- new: IdentitySet([Files
+, <processing.models.Filename object at 0x7f265845c8b0>, Dates Object: 1586235258.146, 12, 0, Dates Object: 1586235271.395, 128, 0, Dates Object: 1586235331.149, 141, 0, Dates Object: 1586235828.618, 44, 0, Dates Object: 1586235871.66, 24, 0, Dates Object: 1586236536.945, 47, 0, Dates Object: 1586236607.652, 42, 0, Dates Object: 1586236682.874, 19, 0, Dates Object: 1586236818.45, 9, 0, Dates Object: 1586236831.498, 178, 0, Dates Object: 1586236952.401, 129, 0, Dates Object: 1586237011.365, 88, 0, Dates Object: 1586237072.819, 62, 0, Dates Object: 1586237130.796, 18, 0, Dates Object: 1586237210.035, 73, 0, Dates Object: 1586237250.494, 61, 0, Dates Object: 1586237326.415, 15, 0, Dates Object: 1586237418.175, 4, 0, Dates Object: 1586237431.841, 129, 0, Dates Object: 1586237497.749, 115, 0, Dates Object: 1586237552.446, 112, 0, Dates Object: 1586237612.799, 48, 0, Dates Object: 1586237671.494, 196, 0, Dates Object: 1586237734.327, 131, 0, Dates Object: 1586237910.651, 142, 0, Dates Object: 1586238032.097, 104, 0, Dates Object: 1586238153.775, 89, 0, Dates Object: 1586238210.84, 118, 0, Dates Object: 1586238270.913, 102, 0, Dates Object: 1586238337.312, 123, 0, Dates Object: 1586238391.602, 16, 0, Dates Object: 1586238491.516, 46, 0, Dates Object: 1586238511.715, 151, 0, Dates Object: 1586238571.253, 138, 0, Dates Object: 1586238632.727, 70, 0, Dates Object: 1586238690.353, 84, 0]), dirty: IdentitySet([])
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO files ("fileId", "lastModDate", parent_id, "isFile") VALUES (?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- ('1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4:30-15.908464HkPWJPSqUgVQe3', '2020-04-06 22:31:07.940667', 18, 1)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO filename ("fileId", "fileName", owner_id) VALUES (?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (151, 'attitudes twd children', 18)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (151, 1586235258.146, 12, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (151, 1586235271.395, 128, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (151, 1586235331.149, 141, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (151, 1586235828.618, 44, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (151, 1586235871.66, 24, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (151, 1586236536.945, 47, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (151, 1586236607.652, 42, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (151, 1586236682.874, 19, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (151, 1586236818.45, 9, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (151, 1586236831.498, 178, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (151, 1586236952.401, 129, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (151, 1586237011.365, 88, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (151, 1586237072.819, 62, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (151, 1586237130.796, 18, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (151, 1586237210.035, 73, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (151, 1586237250.494, 61, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (151, 1586237326.415, 15, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (151, 1586237418.175, 4, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (151, 1586237431.841, 129, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (151, 1586237497.749, 115, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (151, 1586237552.446, 112, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (151, 1586237612.799, 48, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (151, 1586237671.494, 196, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (151, 1586237734.327, 131, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (151, 1586237910.651, 142, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (151, 1586238032.097, 104, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (151, 1586238153.775, 89, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (151, 1586238210.84, 118, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (151, 1586238270.913, 102, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (151, 1586238337.312, 123, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (151, 1586238391.602, 16, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (151, 1586238491.516, 46, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (151, 1586238511.715, 151, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (151, 1586238571.253, 138, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (151, 1586238632.727, 70, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (151, 1586238690.353, 84, 0, None)
+sql.py:30,15:15:22:load_from_dict:139:AdEfvg -- finished flush; file size: 2
+sql.py:30,15:15:22:load_from_dict:133:AdEfvg -- bulk saving dates
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates (date, adds, deletes) VALUES (?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- ((1584482179.965, 5, 0), (1584482239.587, 26, 0), (1584482250.461, 24, 0), (1584482349.19, 49, 0), (1584482371.345, 106, 0), (1584483956.998, 15, 0), (1584487540.262, 14, 0), (1584489371.033, 14, 0)  ... displaying 10 of 73 total bound parameter sets ...  (1585700721.162, 30, 0), (1585701672.369, 0, 0))
+sql.py:30,15:15:22:load_from_dict:136:AdEfvg -- flushing objects
+sql.py:30,15:15:22:load_from_dict:137:AdEfvg -- new: IdentitySet([Files
+, <processing.models.Filename object at 0x7f265845cd30>, Dates Object: 1584482179.965, 5, 0, Dates Object: 1584482239.587, 26, 0, Dates Object: 1584482250.461, 24, 0, Dates Object: 1584482349.19, 49, 0, Dates Object: 1584482371.345, 106, 0, Dates Object: 1584483956.998, 15, 0, Dates Object: 1584487540.262, 14, 0, Dates Object: 1584489371.033, 14, 0, Dates Object: 1584489390.309, 0, 0, Dates Object: 1584491971.934, 8, 0, Dates Object: 1584492402.153, 7, 0, Dates Object: 1584493411.485, 17, 0, Dates Object: 1584496628.159, 16, 0, Dates Object: 1584496941.713, 13, 0, Dates Object: 1584503591.211, 17, 0, Dates Object: 1584537359.925, 0, 0, Dates Object: 1584550003.416, 8, 0, Dates Object: 1584550251.371, 19, 0, Dates Object: 1584560207.595, 0, 0, Dates Object: 1584561379.564, 0, 0, Dates Object: 1584572618.142, 0, 0, Dates Object: 1584573521.323, 20, 0, Dates Object: 1584573785.572, 13, 0, Dates Object: 1584578799.194, 0, 0, Dates Object: 1584621614.738, 7, 0, Dates Object: 1584660050.527, 0, 0, Dates Object: 1584708447.529, 0, 0, Dates Object: 1584708452.011, 0, 0, Dates Object: 1584712115.632, 7, 0, Dates Object: 1584712245.358, 0, 0, Dates Object: 1584822989.951, 2, 0, Dates Object: 1584822990.338, 11, 0, Dates Object: 1584882147.052, 0, 0, Dates Object: 1584882166.729, 9, 0, Dates Object: 1584882216.788, 1, 0, Dates Object: 1584903489.275, 11, 0, Dates Object: 1585053654.283, 0, 0, Dates Object: 1585075074.885, 0, 0, Dates Object: 1585079606.421, 6, 0, Dates Object: 1585079610.196, 2, 0, Dates Object: 1585110578.411, 14, 0, Dates Object: 1585169826.364, 4, 0, Dates Object: 1585172720.004, 12, 0, Dates Object: 1585172741.162, 5, 0, Dates Object: 1585199884.658, 1, 0, Dates Object: 1585228030.096, 0, 0, Dates Object: 1585235768.431, 0, 0, Dates Object: 1585235900.479, 0, 0, Dates Object: 1585235914.717, 0, 0, Dates Object: 1585266203.119, 8, 0, Dates Object: 1585400382.681, 9, 0, Dates Object: 1585412521.335, 41, 0, Dates Object: 1585412608.785, 8, 0, Dates Object: 1585412610.018, 265, 0, Dates Object: 1585414021.702, 7, 0, Dates Object: 1585414500.838, 0, 0, Dates Object: 1585414530.003, 24, 0, Dates Object: 1585414592.729, 2, 0, Dates Object: 1585423226.164, 4, 0, Dates Object: 1585423235.659, 17, 0, Dates Object: 1585508368.834, 4, 0, Dates Object: 1585508373.093, 5, 0, Dates Object: 1585513162.318, 7, 0, Dates Object: 1585514393.675, 0, 0, Dates Object: 1585528544.913, 0, 0, Dates Object: 1585572186.223, 0, 0, Dates Object: 1585572218.574, 0, 0, Dates Object: 1585572290.029, 0, 0, Dates Object: 1585680304.706, 0, 0, Dates Object: 1585682777.767, 11, 0, Dates Object: 1585697812.093, 15, 0, Dates Object: 1585700721.162, 30, 0, Dates Object: 1585701672.369, 0, 0]), dirty: IdentitySet([])
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO files ("fileId", "lastModDate", parent_id, "isFile") VALUES (?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- ('1jRrZTHn-oge2sTqxli8Um026xuniXAeezLZn4B2zVSg:30-15.908464HkPWJPSqUgD3_3', '2020-03-23 16:25:18.576285', 18, 1)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1584482179.965, 5, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1584482239.587, 26, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1584482250.461, 24, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1584482349.19, 49, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1584482371.345, 106, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1584483956.998, 15, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1584487540.262, 14, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1584489371.033, 14, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1584489390.309, 0, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1584491971.934, 8, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1584492402.153, 7, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1584493411.485, 17, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1584496628.159, 16, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1584496941.713, 13, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1584503591.211, 17, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1584537359.925, 0, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1584550003.416, 8, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1584550251.371, 19, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1584560207.595, 0, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1584561379.564, 0, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1584572618.142, 0, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1584573521.323, 20, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1584573785.572, 13, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1584578799.194, 0, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1584621614.738, 7, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1584660050.527, 0, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1584708447.529, 0, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1584708452.011, 0, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1584712115.632, 7, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1584712245.358, 0, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1584822989.951, 2, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1584822990.338, 11, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1584882147.052, 0, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1584882166.729, 9, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1584882216.788, 1, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1584903489.275, 11, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1585053654.283, 0, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1585075074.885, 0, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1585079606.421, 6, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1585079610.196, 2, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1585110578.411, 14, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1585169826.364, 4, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1585172720.004, 12, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1585172741.162, 5, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1585199884.658, 1, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1585228030.096, 0, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1585235768.431, 0, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1585235900.479, 0, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1585235914.717, 0, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1585266203.119, 8, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1585400382.681, 9, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1585412521.335, 41, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1585412608.785, 8, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1585412610.018, 265, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1585414021.702, 7, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1585414500.838, 0, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1585414530.003, 24, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1585414592.729, 2, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1585423226.164, 4, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1585423235.659, 17, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1585508368.834, 4, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1585508373.093, 5, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1585513162.318, 7, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1585514393.675, 0, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1585528544.913, 0, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1585572186.223, 0, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1585572218.574, 0, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1585572290.029, 0, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1585680304.706, 0, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1585682777.767, 11, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1585697812.093, 15, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1585700721.162, 30, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 1585701672.369, 0, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO filename ("fileId", "fileName", owner_id) VALUES (?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (152, 'Freelancers', 18)
+sql.py:30,15:15:22:load_from_dict:139:AdEfvg -- finished flush; file size: 1
+sql.py:30,15:15:22:load_from_dict:133:AdEfvg -- bulk saving dates
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates (date, adds, deletes) VALUES (?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- ((1586558277.51, 4, 0), (1586558342.679, 68, 0), (1586558371.257, 282, 0), (1586558430.038, 100, 0), (1586559155.732, 254, 0), (1586559212.211, 66, 0), (1586559600.88, 89, 0), (1586559633.916, 70, 0)  ... displaying 10 of 101 total bound parameter sets ...  (1586757214.859, 247, 0), (1586757270.15, 69, 0))
+sql.py:30,15:15:22:load_from_dict:136:AdEfvg -- flushing objects
+sql.py:30,15:15:22:load_from_dict:137:AdEfvg -- new: IdentitySet([Files
+, <processing.models.Filename object at 0x7f265845ce20>, Dates Object: 1586558277.51, 4, 0, Dates Object: 1586558342.679, 68, 0, Dates Object: 1586558371.257, 282, 0, Dates Object: 1586558430.038, 100, 0, Dates Object: 1586559155.732, 254, 0, Dates Object: 1586559212.211, 66, 0, Dates Object: 1586559600.88, 89, 0, Dates Object: 1586559633.916, 70, 0, Dates Object: 1586559728.864, 72, 0, Dates Object: 1586559750.213, 41, 0, Dates Object: 1586561313.051, 4, 0, Dates Object: 1586561377.462, 150, 0, Dates Object: 1586561665.123, 56, 0, Dates Object: 1586561670.42, 146, 0, Dates Object: 1586626125.211, 120, 0, Dates Object: 1586629658.976, 82, 0, Dates Object: 1586629898.392, 2, 0, Dates Object: 1586629993.9, 97, 0, Dates Object: 1586630010.007, 106, 0, Dates Object: 1586630491.873, 266, 0, Dates Object: 1586630550.42, 31, 0, Dates Object: 1586630704.001, 58, 0, Dates Object: 1586630744.286, 46, 0, Dates Object: 1586630793.991, 85, 0, Dates Object: 1586630866.422, 113, 0, Dates Object: 1586630910.033, 175, 0, Dates Object: 1586631013.543, 18, 0, Dates Object: 1586631031.377, 23, 0, Dates Object: 1586631152.405, 107, 0, Dates Object: 1586631210.086, 81, 0, Dates Object: 1586631758.655, 19, 0, Dates Object: 1586633083.937, 4, 0, Dates Object: 1586633193.764, 191, 0, Dates Object: 1586633250.226, 65, 0, Dates Object: 1586633541.324, 59, 0, Dates Object: 1586633551.982, 8, 0, Dates Object: 1586633979.068, 83, 0, Dates Object: 1586634031.519, 91, 0, Dates Object: 1586634597.71, 144, 0, Dates Object: 1586634919.002, 18, 0, Dates Object: 1586634930.558, 133, 0, Dates Object: 1586635178.989, 52, 0, Dates Object: 1586635418.906, 82, 0, Dates Object: 1586635470.304, 75, 0, Dates Object: 1586636048.891, 100, 0, Dates Object: 1586636072.377, 29, 0, Dates Object: 1586636164.71, 27, 0, Dates Object: 1586636193.352, 121, 0, Dates Object: 1586637355.313, 8, 0, Dates Object: 1586638521.722, 43, 0, Dates Object: 1586638531.676, 116, 0, Dates Object: 1586638916.829, 73, 0, Dates Object: 1586639106.952, 70, 0, Dates Object: 1586639136.644, 216, 0, Dates Object: 1586639458.875, 166, 0, Dates Object: 1586639492.257, 82, 0, Dates Object: 1586641715.537, 124, 0, Dates Object: 1586643660.931, 60, 0, Dates Object: 1586643783.959, 132, 0, Dates Object: 1586643878.587, 16, 0, Dates Object: 1586645042.983, 114, 0, Dates Object: 1586645070.128, 227, 0, Dates Object: 1586645763.618, 81, 0, Dates Object: 1586646368.81, 0, 0, Dates Object: 1586647417.435, 134, 0, Dates Object: 1586648214.21, 34, 0, Dates Object: 1586648300.482, 26, 0, Dates Object: 1586648311.711, 62, 0, Dates Object: 1586648374.901, 72, 0, Dates Object: 1586648848.666, 0, 0, Dates Object: 1586648851.054, 100, 0, Dates Object: 1586713215.599, 1, 0, Dates Object: 1586755347.874, 14, 0, Dates Object: 1586755350.487, 64, 0, Dates Object: 1586755431.032, 103, 0, Dates Object: 1586755487.175, 193, 0, Dates Object: 1586755545.933, 229, 0, Dates Object: 1586755590.113, 168, 0, Dates Object: 1586755650.213, 79, 0, Dates Object: 1586755710.625, 177, 0, Dates Object: 1586756098.224, 126, 0, Dates Object: 1586756130.18, 230, 0, Dates Object: 1586756190.522, 213, 0, Dates Object: 1586756288.211, 94, 0, Dates Object: 1586756314.687, 145, 0, Dates Object: 1586756372.156, 209, 0, Dates Object: 1586756433.002, 146, 0, Dates Object: 1586756490.084, 214, 0, Dates Object: 1586756556.209, 302, 0, Dates Object: 1586756611.333, 105, 0, Dates Object: 1586756671.082, 250, 0, Dates Object: 1586756736.757, 163, 0, Dates Object: 1586756795.475, 161, 0, Dates Object: 1586756850.177, 254, 0, Dates Object: 1586756914.451, 155, 0, Dates Object: 1586756986.579, 143, 0, Dates Object: 1586757030.158, 318, 0, Dates Object: 1586757092.272, 173, 0, Dates Object: 1586757150.227, 223, 0, Dates Object: 1586757214.859, 247, 0, Dates Object: 1586757270.15, 69, 0]), dirty: IdentitySet([])
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO files ("fileId", "lastModDate", parent_id, "isFile") VALUES (?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- ('1C09g5-ATBpXNJOmH8ANwCnq7Pk6vClzI1lmFYcqaH6A:30-15.908464HkPWJPSqUgjpcE', '2020-04-12 01:41:01.781760', 18, 1)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586558277.51, 4, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586558342.679, 68, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586558371.257, 282, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586558430.038, 100, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586559155.732, 254, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586559212.211, 66, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586559600.88, 89, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586559633.916, 70, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586559728.864, 72, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586559750.213, 41, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586561313.051, 4, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586561377.462, 150, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586561665.123, 56, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586561670.42, 146, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586626125.211, 120, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586629658.976, 82, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586629898.392, 2, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586629993.9, 97, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586630010.007, 106, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586630491.873, 266, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586630550.42, 31, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586630704.001, 58, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586630744.286, 46, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586630793.991, 85, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586630866.422, 113, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586630910.033, 175, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586631013.543, 18, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586631031.377, 23, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586631152.405, 107, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586631210.086, 81, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586631758.655, 19, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586633083.937, 4, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586633193.764, 191, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586633250.226, 65, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586633541.324, 59, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586633551.982, 8, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586633979.068, 83, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586634031.519, 91, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586634597.71, 144, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586634919.002, 18, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586634930.558, 133, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586635178.989, 52, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586635418.906, 82, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586635470.304, 75, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586636048.891, 100, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586636072.377, 29, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586636164.71, 27, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586636193.352, 121, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586637355.313, 8, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586638521.722, 43, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586638531.676, 116, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586638916.829, 73, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586639106.952, 70, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586639136.644, 216, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586639458.875, 166, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586639492.257, 82, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586641715.537, 124, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586643660.931, 60, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586643783.959, 132, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586643878.587, 16, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586645042.983, 114, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586645070.128, 227, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586645763.618, 81, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586646368.81, 0, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586647417.435, 134, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586648214.21, 34, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586648300.482, 26, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586648311.711, 62, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586648374.901, 72, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586648848.666, 0, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586648851.054, 100, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586713215.599, 1, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586755347.874, 14, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586755350.487, 64, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586755431.032, 103, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586755487.175, 193, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586755545.933, 229, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586755590.113, 168, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586755650.213, 79, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586755710.625, 177, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586756098.224, 126, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586756130.18, 230, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586756190.522, 213, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586756288.211, 94, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586756314.687, 145, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586756372.156, 209, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586756433.002, 146, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586756490.084, 214, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586756556.209, 302, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586756611.333, 105, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586756671.082, 250, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586756736.757, 163, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586756795.475, 161, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586756850.177, 254, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586756914.451, 155, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586756986.579, 143, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586757030.158, 318, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586757092.272, 173, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586757150.227, 223, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586757214.859, 247, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO dates ("fileId", date, adds, deletes, bin_width) VALUES (?, ?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 1586757270.15, 69, 0, None)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO filename ("fileId", "fileName", owner_id) VALUES (?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (153, 'balev case', 18)
+sql.py:30,15:15:22:load_from_dict:139:AdEfvg -- finished flush; file size: 0
+base.py:30,15:15:22:_commit_impl:753:AdEfvg -- COMMIT
+base.py:30,15:15:22:_finalize_fairy:684:AdEfvg -- Connection <sqlite3.Connection object at 0x7f26595b13f0> being returned to pool
+base.py:30,15:15:22:_reset:872:AdEfvg -- Connection <sqlite3.Connection object at 0x7f26595b13f0> rollback-on-return
+base.py:30,15:15:22:_close_connection:267:AdEfvg -- Closing connection <sqlite3.Connection object at 0x7f26595b13f0>
+sql.py:30,15:15:22:load_from_dict:146:AdEfvg -- Done load dict
+sql.py:30,15:15:22:start:221:AdEfvg -- starting load closures
+sql.py:30,15:15:22:start:225:AdEfvg -- Done all for owner_id 18; processed files: 8
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO files ("fileId", "lastModDate", parent_id, "isFile") VALUES (?, ?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- ('1D48Gz6hmPkE6sATNqYoA3P3Hdjtq1y2zHRjrh1kH64I18', None, 18, 0)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO filename ("fileId", "fileName", owner_id) VALUES (?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (154, 'root', 18)
+base.py:30,15:15:22:_execute_context:1205:AdEfvg -- INSERT INTO filename ("fileId", "fileName", owner_id) VALUES (?, ?, ?)
+base.py:30,15:15:22:_execute_context:1207:AdEfvg -- (155, 'Untitled document', 18)
+base.py:30,15:15:22:_commit_impl:753:AdEfvg -- COMMIT
+base.py:30,15:15:22:_finalize_fairy:684:AdEfvg -- Connection <sqlite3.Connection object at 0x7f265b9e4a80> being returned to pool
+base.py:30,15:15:22:_reset:872:AdEfvg -- Connection <sqlite3.Connection object at 0x7f265b9e4a80> rollback-on-return
+base.py:30,15:15:22:_close_connection:267:AdEfvg -- Closing connection <sqlite3.Connection object at 0x7f265b9e4a80>
+sql.py:30,15:15:22:start:225:AdEfvg -- Done all for owner_id 18; processed files: 0

@@ -1,0 +1,183 @@
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Files|files) _configure_property(owner, RelationshipProperty)
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Files|files) _configure_property(dates, RelationshipProperty)
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Files|files) _configure_property(name, RelationshipProperty)
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Files|files) _configure_property(id, Column)
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Files|files) _configure_property(fileId, Column)
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Files|files) _configure_property(lastModDate, Column)
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Files|files) _configure_property(parent_id, Column)
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Files|files) _configure_property(isFile, Column)
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Files|files) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<files>, primary_key=True, nullable=False)])
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Files|files) constructed
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Owner|owner) _configure_property(files, RelationshipProperty)
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Owner|owner) _configure_property(id, Column)
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Owner|owner) _configure_property(name, Column)
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Owner|owner) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<owner>, primary_key=True, nullable=False)])
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Owner|owner) constructed
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Dates|dates) _configure_property(files, RelationshipProperty)
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Dates|dates) _configure_property(id, Column)
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Dates|dates) _configure_property(fileId, Column)
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Dates|dates) _configure_property(date, Column)
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Dates|dates) _configure_property(adds, Column)
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Dates|dates) _configure_property(deletes, Column)
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Dates|dates) _configure_property(bin_width, Column)
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Dates|dates) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<dates>, primary_key=True, nullable=False)])
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Dates|dates) constructed
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Closure|closure) _configure_property(files_relationship, RelationshipProperty)
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Closure|closure) _configure_property(parent_relationship, RelationshipProperty)
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Closure|closure) _configure_property(owner, RelationshipProperty)
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Closure|closure) _configure_property(id, Column)
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Closure|closure) _configure_property(parent, Column)
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Closure|closure) _configure_property(child, Column)
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Closure|closure) _configure_property(owner_id, Column)
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Closure|closure) _configure_property(depth, Column)
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Closure|closure) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<closure>, primary_key=True, nullable=False)])
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Closure|closure) constructed
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Filename|filename) _configure_property(files, RelationshipProperty)
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Filename|filename) _configure_property(owner, RelationshipProperty)
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Filename|filename) _configure_property(id, Column)
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Filename|filename) _configure_property(fileId, Column)
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Filename|filename) _configure_property(fileName, Column)
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Filename|filename) _configure_property(owner_id, Column)
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Filename|filename) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<filename>, primary_key=True, nullable=False)])
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Filename|filename) constructed
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Tasks|tasks) _configure_property(id, Column)
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Tasks|tasks) _configure_property(path, Column)
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Tasks|tasks) _configure_property(creds, Column)
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Tasks|tasks) _configure_property(fileid, Column)
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Tasks|tasks) _configure_property(userid, Column)
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Tasks|tasks) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<tasks>, primary_key=True, nullable=False)])
+mapper.p:30,17:36:42:_log:1998:8q555A -- (Tasks|tasks) constructed
+base.py:30,17:36:42:__connect:653:8q555A -- Created new connection <sqlite3.Connection object at 0x7f632b7583f0>
+base.py:30,17:36:42:_cursor_execute:1311:8q555A -- SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+base.py:30,17:36:42:_cursor_execute:1312:8q555A -- ()
+base.py:30,17:36:42:_cursor_execute:1311:8q555A -- SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+base.py:30,17:36:42:_cursor_execute:1312:8q555A -- ()
+base.py:30,17:36:42:checkout:507:8q555A -- Connection <sqlite3.Connection object at 0x7f632b7583f0> checked out from pool
+base.py:30,17:36:42:_execute_context:1205:8q555A -- PRAGMA main.table_info("files")
+base.py:30,17:36:42:_execute_context:1207:8q555A -- ()
+result.p:30,17:36:42:_init_metadata:809:8q555A -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+base.py:30,17:36:42:_execute_context:1205:8q555A -- PRAGMA temp.table_info("files")
+base.py:30,17:36:42:_execute_context:1207:8q555A -- ()
+result.p:30,17:36:42:_init_metadata:809:8q555A -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+base.py:30,17:36:42:_execute_context:1205:8q555A -- PRAGMA main.table_info("owner")
+base.py:30,17:36:42:_execute_context:1207:8q555A -- ()
+result.p:30,17:36:42:_init_metadata:809:8q555A -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+base.py:30,17:36:42:_execute_context:1205:8q555A -- PRAGMA temp.table_info("owner")
+base.py:30,17:36:42:_execute_context:1207:8q555A -- ()
+result.p:30,17:36:42:_init_metadata:809:8q555A -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+base.py:30,17:36:42:_execute_context:1205:8q555A -- PRAGMA main.table_info("dates")
+base.py:30,17:36:42:_execute_context:1207:8q555A -- ()
+result.p:30,17:36:42:_init_metadata:809:8q555A -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+base.py:30,17:36:42:_execute_context:1205:8q555A -- PRAGMA temp.table_info("dates")
+base.py:30,17:36:42:_execute_context:1207:8q555A -- ()
+result.p:30,17:36:42:_init_metadata:809:8q555A -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+base.py:30,17:36:42:_execute_context:1205:8q555A -- PRAGMA main.table_info("closure")
+base.py:30,17:36:42:_execute_context:1207:8q555A -- ()
+result.p:30,17:36:42:_init_metadata:809:8q555A -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+base.py:30,17:36:42:_execute_context:1205:8q555A -- PRAGMA temp.table_info("closure")
+base.py:30,17:36:42:_execute_context:1207:8q555A -- ()
+result.p:30,17:36:42:_init_metadata:809:8q555A -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+base.py:30,17:36:42:_execute_context:1205:8q555A -- PRAGMA main.table_info("filename")
+base.py:30,17:36:42:_execute_context:1207:8q555A -- ()
+result.p:30,17:36:42:_init_metadata:809:8q555A -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+base.py:30,17:36:42:_execute_context:1205:8q555A -- PRAGMA temp.table_info("filename")
+base.py:30,17:36:42:_execute_context:1207:8q555A -- ()
+result.p:30,17:36:42:_init_metadata:809:8q555A -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+base.py:30,17:36:42:_execute_context:1205:8q555A -- PRAGMA main.table_info("tasks")
+base.py:30,17:36:42:_execute_context:1207:8q555A -- ()
+result.p:30,17:36:42:_init_metadata:809:8q555A -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+base.py:30,17:36:42:_execute_context:1205:8q555A -- PRAGMA temp.table_info("tasks")
+base.py:30,17:36:42:_execute_context:1207:8q555A -- ()
+result.p:30,17:36:42:_init_metadata:809:8q555A -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+base.py:30,17:36:42:_execute_context:1205:8q555A -- 
+CREATE TABLE owner (
+	id INTEGER NOT NULL, 
+	name VARCHAR(50), 
+	PRIMARY KEY (id), 
+	UNIQUE (id), 
+	UNIQUE (name)
+)
+
+
+base.py:30,17:36:42:_execute_context:1207:8q555A -- ()
+base.py:30,17:36:42:_commit_impl:753:8q555A -- COMMIT
+base.py:30,17:36:42:_execute_context:1205:8q555A -- 
+CREATE TABLE tasks (
+	id INTEGER NOT NULL, 
+	path VARCHAR(600), 
+	creds BLOB, 
+	fileid VARCHAR(600), 
+	userid VARCHAR(600), 
+	PRIMARY KEY (id)
+)
+
+
+base.py:30,17:36:42:_execute_context:1207:8q555A -- ()
+base.py:30,17:36:42:_commit_impl:753:8q555A -- COMMIT
+base.py:30,17:36:42:_execute_context:1205:8q555A -- 
+CREATE TABLE files (
+	id INTEGER NOT NULL, 
+	"fileId" VARCHAR(300), 
+	"lastModDate" DATETIME, 
+	parent_id INTEGER, 
+	"isFile" BOOLEAN, 
+	PRIMARY KEY (id), 
+	UNIQUE (id), 
+	UNIQUE ("fileId"), 
+	FOREIGN KEY(parent_id) REFERENCES owner (id), 
+	CHECK ("isFile" IN (0, 1))
+)
+
+
+base.py:30,17:36:42:_execute_context:1207:8q555A -- ()
+base.py:30,17:36:42:_commit_impl:753:8q555A -- COMMIT
+base.py:30,17:36:42:_execute_context:1205:8q555A -- 
+CREATE TABLE dates (
+	id INTEGER NOT NULL, 
+	"fileId" INTEGER, 
+	date FLOAT, 
+	adds INTEGER, 
+	deletes INTEGER, 
+	bin_width FLOAT, 
+	CONSTRAINT dates_pk PRIMARY KEY (id), 
+	FOREIGN KEY("fileId") REFERENCES files (id)
+)
+
+
+base.py:30,17:36:42:_execute_context:1207:8q555A -- ()
+base.py:30,17:36:42:_commit_impl:753:8q555A -- COMMIT
+base.py:30,17:36:42:_execute_context:1205:8q555A -- 
+CREATE TABLE closure (
+	id INTEGER NOT NULL, 
+	parent INTEGER, 
+	child INTEGER, 
+	owner_id INTEGER, 
+	depth INTEGER, 
+	CONSTRAINT closure_pk PRIMARY KEY (id), 
+	FOREIGN KEY(parent) REFERENCES files (id), 
+	FOREIGN KEY(child) REFERENCES files (id), 
+	FOREIGN KEY(owner_id) REFERENCES owner (id)
+)
+
+
+base.py:30,17:36:42:_execute_context:1207:8q555A -- ()
+base.py:30,17:36:42:_commit_impl:753:8q555A -- COMMIT
+base.py:30,17:36:42:_execute_context:1205:8q555A -- 
+CREATE TABLE filename (
+	id INTEGER NOT NULL, 
+	"fileId" INTEGER, 
+	"fileName" VARCHAR(600), 
+	owner_id INTEGER, 
+	CONSTRAINT filename_pk PRIMARY KEY (id), 
+	FOREIGN KEY("fileId") REFERENCES files (id), 
+	FOREIGN KEY(owner_id) REFERENCES owner (id)
+)
+
+
+base.py:30,17:36:42:_execute_context:1207:8q555A -- ()
+base.py:30,17:36:42:_commit_impl:753:8q555A -- COMMIT
+base.py:30,17:36:42:_finalize_fairy:684:8q555A -- Connection <sqlite3.Connection object at 0x7f632b7583f0> being returned to pool
+base.py:30,17:36:42:_reset:872:8q555A -- Connection <sqlite3.Connection object at 0x7f632b7583f0> rollback-on-return
+base.py:30,17:36:42:_close_connection:267:8q555A -- Closing connection <sqlite3.Connection object at 0x7f632b7583f0>
+base.py:30,17:36:42:__connect:653:8q555A -- Created new connection <sqlite3.Connection object at 0x7f632b7583f0>
+base.py:30,17:36:42:checkout:507:8q555A -- Connection <sqlite3.Connection object at 0x7f632b7583f0> checked out from pool
