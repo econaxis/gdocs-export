@@ -1,16 +1,15 @@
 version: '3.4'
 services:
     pydocs:
-        image: 'pydocs:latest'
+        image: 'pydocs:worker'
         build:
             dockerfile: Dockerfile
             context: .
             network: pydocs-net
         environment:
-            REDIS_PASSW: 
-            REDIS_PASSW: 
-            SQL_CONN: 
-            REDIS_HOST:
+            REDIS_PASSW: "${REDIS_PASSW}"
+            SQL_CONN:  "${SQL_CONN}"
+            REDIS_HOST: "${REDIS_HOST}"
             RQ_NAME: 'default'
             WORKER: 'true'
         deploy:
@@ -28,8 +27,10 @@ services:
             network: pydocs-net
             context: .
         environment:
+            REDIS_PASSW: "${REDIS_PASSW}"
+            SQL_CONN:  "${SQL_CONN}"
+            REDIS_HOST: "${REDIS_HOST}"
             SQL_SERV: "true"
-            SQL_CONN:
         container_name: sql_serv
 
 
