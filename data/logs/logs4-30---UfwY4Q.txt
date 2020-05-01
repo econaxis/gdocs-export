@@ -1,0 +1,402 @@
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Files|files) _configure_property(owner, RelationshipProperty)
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Files|files) _configure_property(dates, RelationshipProperty)
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Files|files) _configure_property(name, RelationshipProperty)
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Files|files) _configure_property(id, Column)
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Files|files) _configure_property(fileId, Column)
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Files|files) _configure_property(lastModDate, Column)
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Files|files) _configure_property(parent_id, Column)
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Files|files) _configure_property(isFile, Column)
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Files|files) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<files>, primary_key=True, nullable=False)])
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Files|files) constructed
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Owner|owner) _configure_property(files, RelationshipProperty)
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Owner|owner) _configure_property(id, Column)
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Owner|owner) _configure_property(name, Column)
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Owner|owner) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<owner>, primary_key=True, nullable=False)])
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Owner|owner) constructed
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Dates|dates) _configure_property(files, RelationshipProperty)
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Dates|dates) _configure_property(id, Column)
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Dates|dates) _configure_property(fileId, Column)
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Dates|dates) _configure_property(date, Column)
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Dates|dates) _configure_property(adds, Column)
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Dates|dates) _configure_property(deletes, Column)
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Dates|dates) _configure_property(bin_width, Column)
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Dates|dates) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<dates>, primary_key=True, nullable=False)])
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Dates|dates) constructed
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Closure|closure) _configure_property(files_relationship, RelationshipProperty)
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Closure|closure) _configure_property(parent_relationship, RelationshipProperty)
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Closure|closure) _configure_property(owner, RelationshipProperty)
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Closure|closure) _configure_property(id, Column)
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Closure|closure) _configure_property(parent, Column)
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Closure|closure) _configure_property(child, Column)
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Closure|closure) _configure_property(owner_id, Column)
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Closure|closure) _configure_property(depth, Column)
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Closure|closure) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<closure>, primary_key=True, nullable=False)])
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Closure|closure) constructed
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Filename|filename) _configure_property(files, RelationshipProperty)
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Filename|filename) _configure_property(owner, RelationshipProperty)
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Filename|filename) _configure_property(id, Column)
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Filename|filename) _configure_property(fileId, Column)
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Filename|filename) _configure_property(fileName, Column)
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Filename|filename) _configure_property(owner_id, Column)
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Filename|filename) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<filename>, primary_key=True, nullable=False)])
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Filename|filename) constructed
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Tasks|tasks) _configure_property(id, Column)
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Tasks|tasks) _configure_property(path, Column)
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Tasks|tasks) _configure_property(creds, Column)
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Tasks|tasks) _configure_property(fileid, Column)
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Tasks|tasks) _configure_property(userid, Column)
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Tasks|tasks) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<tasks>, primary_key=True, nullable=False)])
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Tasks|tasks) constructed
+base.py:30,14:56:00:__connect:653:UfwY4Q -- Created new connection <sqlite3.Connection object at 0x7f00ed0c4c60>
+base.py:30,14:56:00:_cursor_execute:1311:UfwY4Q -- SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+base.py:30,14:56:00:_cursor_execute:1312:UfwY4Q -- ()
+base.py:30,14:56:00:_cursor_execute:1311:UfwY4Q -- SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+base.py:30,14:56:00:_cursor_execute:1312:UfwY4Q -- ()
+base.py:30,14:56:00:checkout:507:UfwY4Q -- Connection <sqlite3.Connection object at 0x7f00ed0c4c60> checked out from pool
+base.py:30,14:56:00:_execute_context:1205:UfwY4Q -- PRAGMA main.table_info("files")
+base.py:30,14:56:00:_execute_context:1207:UfwY4Q -- ()
+result.p:30,14:56:00:_init_metadata:809:UfwY4Q -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+result.p:30,14:56:00:process_rows:1249:UfwY4Q -- Row (0, 'id', 'INTEGER', 1, None, 1)
+result.p:30,14:56:00:process_rows:1249:UfwY4Q -- Row (1, 'fileId', 'VARCHAR(300)', 0, None, 0)
+result.p:30,14:56:00:process_rows:1249:UfwY4Q -- Row (2, 'lastModDate', 'DATETIME', 0, None, 0)
+result.p:30,14:56:00:process_rows:1249:UfwY4Q -- Row (3, 'parent_id', 'INTEGER', 0, None, 0)
+result.p:30,14:56:00:process_rows:1249:UfwY4Q -- Row (4, 'isFile', 'BOOLEAN', 0, None, 0)
+base.py:30,14:56:00:_execute_context:1205:UfwY4Q -- PRAGMA main.table_info("owner")
+base.py:30,14:56:00:_execute_context:1207:UfwY4Q -- ()
+result.p:30,14:56:00:_init_metadata:809:UfwY4Q -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+result.p:30,14:56:00:process_rows:1249:UfwY4Q -- Row (0, 'id', 'INTEGER', 1, None, 1)
+result.p:30,14:56:00:process_rows:1249:UfwY4Q -- Row (1, 'name', 'VARCHAR(50)', 0, None, 0)
+base.py:30,14:56:00:_execute_context:1205:UfwY4Q -- PRAGMA main.table_info("dates")
+base.py:30,14:56:00:_execute_context:1207:UfwY4Q -- ()
+result.p:30,14:56:00:_init_metadata:809:UfwY4Q -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+result.p:30,14:56:00:process_rows:1249:UfwY4Q -- Row (0, 'id', 'INTEGER', 1, None, 1)
+result.p:30,14:56:00:process_rows:1249:UfwY4Q -- Row (1, 'fileId', 'INTEGER', 0, None, 0)
+result.p:30,14:56:00:process_rows:1249:UfwY4Q -- Row (2, 'date', 'FLOAT', 0, None, 0)
+result.p:30,14:56:00:process_rows:1249:UfwY4Q -- Row (3, 'adds', 'INTEGER', 0, None, 0)
+result.p:30,14:56:00:process_rows:1249:UfwY4Q -- Row (4, 'deletes', 'INTEGER', 0, None, 0)
+result.p:30,14:56:00:process_rows:1249:UfwY4Q -- Row (5, 'bin_width', 'FLOAT', 0, None, 0)
+base.py:30,14:56:00:_execute_context:1205:UfwY4Q -- PRAGMA main.table_info("closure")
+base.py:30,14:56:00:_execute_context:1207:UfwY4Q -- ()
+result.p:30,14:56:00:_init_metadata:809:UfwY4Q -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+result.p:30,14:56:00:process_rows:1249:UfwY4Q -- Row (0, 'id', 'INTEGER', 1, None, 1)
+result.p:30,14:56:00:process_rows:1249:UfwY4Q -- Row (1, 'parent', 'INTEGER', 0, None, 0)
+result.p:30,14:56:00:process_rows:1249:UfwY4Q -- Row (2, 'child', 'INTEGER', 0, None, 0)
+result.p:30,14:56:00:process_rows:1249:UfwY4Q -- Row (3, 'owner_id', 'INTEGER', 0, None, 0)
+result.p:30,14:56:00:process_rows:1249:UfwY4Q -- Row (4, 'depth', 'INTEGER', 0, None, 0)
+base.py:30,14:56:00:_execute_context:1205:UfwY4Q -- PRAGMA main.table_info("filename")
+base.py:30,14:56:00:_execute_context:1207:UfwY4Q -- ()
+result.p:30,14:56:00:_init_metadata:809:UfwY4Q -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+result.p:30,14:56:00:process_rows:1249:UfwY4Q -- Row (0, 'id', 'INTEGER', 1, None, 1)
+result.p:30,14:56:00:process_rows:1249:UfwY4Q -- Row (1, 'fileId', 'INTEGER', 0, None, 0)
+result.p:30,14:56:00:process_rows:1249:UfwY4Q -- Row (2, 'fileName', 'VARCHAR(600)', 0, None, 0)
+result.p:30,14:56:00:process_rows:1249:UfwY4Q -- Row (3, 'owner_id', 'INTEGER', 0, None, 0)
+base.py:30,14:56:00:_execute_context:1205:UfwY4Q -- PRAGMA main.table_info("tasks")
+base.py:30,14:56:00:_execute_context:1207:UfwY4Q -- ()
+result.p:30,14:56:00:_init_metadata:809:UfwY4Q -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+result.p:30,14:56:00:process_rows:1249:UfwY4Q -- Row (0, 'id', 'INTEGER', 1, None, 1)
+result.p:30,14:56:00:process_rows:1249:UfwY4Q -- Row (1, 'path', 'VARCHAR(600)', 0, None, 0)
+result.p:30,14:56:00:process_rows:1249:UfwY4Q -- Row (2, 'creds', 'BLOB', 0, None, 0)
+result.p:30,14:56:00:process_rows:1249:UfwY4Q -- Row (3, 'fileid', 'VARCHAR(600)', 0, None, 0)
+result.p:30,14:56:00:process_rows:1249:UfwY4Q -- Row (4, 'userid', 'VARCHAR(600)', 0, None, 0)
+base.py:30,14:56:00:_finalize_fairy:684:UfwY4Q -- Connection <sqlite3.Connection object at 0x7f00ed0c4c60> being returned to pool
+base.py:30,14:56:00:_reset:872:UfwY4Q -- Connection <sqlite3.Connection object at 0x7f00ed0c4c60> rollback-on-return
+base.py:30,14:56:00:_close_connection:267:UfwY4Q -- Closing connection <sqlite3.Connection object at 0x7f00ed0c4c60>
+base.py:30,14:56:00:__connect:653:UfwY4Q -- Created new connection <sqlite3.Connection object at 0x7f00ed0c4c60>
+base.py:30,14:56:00:checkout:507:UfwY4Q -- Connection <sqlite3.Connection object at 0x7f00ed0c4c60> checked out from pool
+sql_serv:30,14:56:00:<module>:202:UfwY4Q -- STARTING SQL SERVER
+selector:30,14:56:00:__init__:59:UfwY4Q -- Using selector: EpollSelector
+sql_serv:30,14:56:00:report:25:UfwY4Q -- SQL Queue size: 0, thread size: 0
+sql_serv:30,14:56:00:handle_request:68:UfwY4Q -- handle_request
+base_eve:30,14:56:00:create_server:1490:UfwY4Q -- <Server sockets=(<asyncio.TransportSocket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('0.0.0.0', 8888)>,)> is serving
+sql_serv:30,14:56:00:handle_request:121:UfwY4Q -- Serving on ('0.0.0.0', 8888)
+sql_serv:30,14:56:00:send_socket:43:UfwY4Q -- connect working
+base_eve:30,14:56:00:_run_once:1854:UfwY4Q -- Executing <Task pending name='Task-3' coro=<send_socket() running at /home/henry/pydocs/processing/sql_server.py:44> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(12)(), <TaskWakeupMethWrapper object at 0x7f00e61d95e0>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> created at /usr/lib/python3.8/asyncio/tasks.py:382> took 0.132 seconds
+sql_serv:30,14:56:00:send_socket:43:UfwY4Q -- connect working
+sql_serv:30,14:56:00:send_socket:43:UfwY4Q -- connect working
+sql_serv:30,14:56:00:send_socket:43:UfwY4Q -- connect working
+sql_serv:30,14:56:00:send_socket:43:UfwY4Q -- connect working
+selector:30,14:56:00:_accept_connection:164:UfwY4Q -- <Server sockets=(<asyncio.TransportSocket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('0.0.0.0', 8888)>,)> got a new connection from ('127.0.0.1', 51314): <socket.socket fd=17, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 8888), raddr=('127.0.0.1', 51314)>
+selector:30,14:56:00:_accept_connection:164:UfwY4Q -- <Server sockets=(<asyncio.TransportSocket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('0.0.0.0', 8888)>,)> got a new connection from ('127.0.0.1', 51316): <socket.socket fd=18, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 8888), raddr=('127.0.0.1', 51316)>
+selector:30,14:56:00:_accept_connection:164:UfwY4Q -- <Server sockets=(<asyncio.TransportSocket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('0.0.0.0', 8888)>,)> got a new connection from ('127.0.0.1', 51318): <socket.socket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 8888), raddr=('127.0.0.1', 51318)>
+selector:30,14:56:00:_accept_connection:164:UfwY4Q -- <Server sockets=(<asyncio.TransportSocket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('0.0.0.0', 8888)>,)> got a new connection from ('127.0.0.1', 51320): <socket.socket fd=20, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 8888), raddr=('127.0.0.1', 51320)>
+selector:30,14:56:00:_accept_connection:164:UfwY4Q -- <Server sockets=(<asyncio.TransportSocket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('0.0.0.0', 8888)>,)> got a new connection from ('127.0.0.1', 51322): <socket.socket fd=21, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 8888), raddr=('127.0.0.1', 51322)>
+sql_serv:30,14:56:00:req_callback:79:UfwY4Q -- request received
+sql_serv:30,14:56:00:req_callback:79:UfwY4Q -- request received
+sql_serv:30,14:56:00:req_callback:79:UfwY4Q -- request received
+sql_serv:30,14:56:00:req_callback:79:UfwY4Q -- request received
+sql_serv:30,14:56:00:req_callback:79:UfwY4Q -- request received
+base_eve:30,14:56:00:create_connection:1057:UfwY4Q -- <asyncio.TransportSocket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 51314), raddr=('127.0.0.1', 8888)> connected to 127.0.0.1:8888: (<_SelectorSocketTransport fd=12 read=polling write=<idle, bufsize=0>>, <asyncio.streams.StreamReaderProtocol object at 0x7f00e61d94c0>)
+test_uti:30,14:56:00:adv_write:330:UfwY4Q -- length of write: 7
+test_uti:30,14:56:00:adv_write:334:UfwY4Q -- b'\x00\x00\x00\x00\x00\x00\x00\x07\x00'
+base_eve:30,14:56:00:create_connection:1057:UfwY4Q -- <asyncio.TransportSocket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 51316), raddr=('127.0.0.1', 8888)> connected to 127.0.0.1:8888: (<_SelectorSocketTransport fd=13 read=polling write=<idle, bufsize=0>>, <asyncio.streams.StreamReaderProtocol object at 0x7f00e6193d30>)
+test_uti:30,14:56:00:adv_write:330:UfwY4Q -- length of write: 7
+test_uti:30,14:56:00:adv_write:334:UfwY4Q -- b'\x00\x00\x00\x00\x00\x00\x00\x07\x00'
+base_eve:30,14:56:00:create_connection:1057:UfwY4Q -- <asyncio.TransportSocket fd=14, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 51318), raddr=('127.0.0.1', 8888)> connected to 127.0.0.1:8888: (<_SelectorSocketTransport fd=14 read=polling write=<idle, bufsize=0>>, <asyncio.streams.StreamReaderProtocol object at 0x7f00e613a5e0>)
+test_uti:30,14:56:00:adv_write:330:UfwY4Q -- length of write: 7
+test_uti:30,14:56:00:adv_write:334:UfwY4Q -- b'\x00\x00\x00\x00\x00\x00\x00\x07\x00'
+base_eve:30,14:56:00:create_connection:1057:UfwY4Q -- <asyncio.TransportSocket fd=15, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 51320), raddr=('127.0.0.1', 8888)> connected to 127.0.0.1:8888: (<_SelectorSocketTransport fd=15 read=polling write=<idle, bufsize=0>>, <asyncio.streams.StreamReaderProtocol object at 0x7f00e615fe50>)
+test_uti:30,14:56:00:adv_write:330:UfwY4Q -- length of write: 7
+test_uti:30,14:56:00:adv_write:334:UfwY4Q -- b'\x00\x00\x00\x00\x00\x00\x00\x07\x00'
+base_eve:30,14:56:00:create_connection:1057:UfwY4Q -- <asyncio.TransportSocket fd=16, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 51322), raddr=('127.0.0.1', 8888)> connected to 127.0.0.1:8888: (<_SelectorSocketTransport fd=16 read=polling write=<idle, bufsize=0>>, <asyncio.streams.StreamReaderProtocol object at 0x7f00e6107700>)
+test_uti:30,14:56:00:adv_write:330:UfwY4Q -- length of write: 7
+test_uti:30,14:56:00:adv_write:334:UfwY4Q -- b'\x00\x00\x00\x00\x00\x00\x00\x07\x00'
+sql_serv:30,14:56:00:req_callback:88:UfwY4Q -- queue size: 0
+test_uti:30,14:56:00:adv_write:330:UfwY4Q -- length of write: 2
+test_uti:30,14:56:00:adv_write:334:UfwY4Q -- b'\x00\x00\x00\x00\x00\x00\x00\x02\x00'
+sql_serv:30,14:56:00:req_callback:88:UfwY4Q -- queue size: 0
+test_uti:30,14:56:00:adv_write:330:UfwY4Q -- length of write: 2
+test_uti:30,14:56:00:adv_write:334:UfwY4Q -- b'\x00\x00\x00\x00\x00\x00\x00\x02\x00'
+sql_serv:30,14:56:00:req_callback:88:UfwY4Q -- queue size: 0
+test_uti:30,14:56:00:adv_write:330:UfwY4Q -- length of write: 2
+test_uti:30,14:56:00:adv_write:334:UfwY4Q -- b'\x00\x00\x00\x00\x00\x00\x00\x02\x00'
+sql_serv:30,14:56:00:req_callback:88:UfwY4Q -- queue size: 0
+test_uti:30,14:56:00:adv_write:330:UfwY4Q -- length of write: 2
+test_uti:30,14:56:00:adv_write:334:UfwY4Q -- b'\x00\x00\x00\x00\x00\x00\x00\x02\x00'
+sql_serv:30,14:56:00:req_callback:88:UfwY4Q -- queue size: 0
+test_uti:30,14:56:00:adv_write:330:UfwY4Q -- length of write: 2
+test_uti:30,14:56:00:adv_write:334:UfwY4Q -- b'\x00\x00\x00\x00\x00\x00\x00\x02\x00'
+sql_serv:30,14:56:00:send_socket:52:UfwY4Q -- received: b'go'
+test_uti:30,14:56:00:adv_write:330:UfwY4Q -- length of write: 15208
+test_uti:30,14:56:00:adv_write:334:UfwY4Q -- b'\x00\x00\x00\x00\x00\x00;h\x01'
+sql_serv:30,14:56:00:send_socket:52:UfwY4Q -- received: b'go'
+test_uti:30,14:56:00:adv_write:330:UfwY4Q -- length of write: 15208
+test_uti:30,14:56:00:adv_write:334:UfwY4Q -- b'\x00\x00\x00\x00\x00\x00;h\x01'
+sql_serv:30,14:56:00:send_socket:52:UfwY4Q -- received: b'go'
+test_uti:30,14:56:00:adv_write:330:UfwY4Q -- length of write: 15208
+test_uti:30,14:56:00:adv_write:334:UfwY4Q -- b'\x00\x00\x00\x00\x00\x00;h\x01'
+sql_serv:30,14:56:00:send_socket:52:UfwY4Q -- received: b'go'
+test_uti:30,14:56:00:adv_write:330:UfwY4Q -- length of write: 15208
+test_uti:30,14:56:00:adv_write:334:UfwY4Q -- b'\x00\x00\x00\x00\x00\x00;h\x01'
+sql_serv:30,14:56:00:send_socket:52:UfwY4Q -- received: b'go'
+test_uti:30,14:56:00:adv_write:330:UfwY4Q -- length of write: 15208
+test_uti:30,14:56:00:adv_write:334:UfwY4Q -- b'\x00\x00\x00\x00\x00\x00;h\x01'
+sql_serv:30,14:56:00:req_callback:106:UfwY4Q -- Put new task in queue
+sql.py:30,14:56:00:start:142:UfwY4Q -- Starting sql for userid 527e4afc-4598-400f-8536-afa5324f0ba4
+sql_serv:30,14:56:00:req_callback:106:UfwY4Q -- Put new task in queue
+sql.py:30,14:56:00:start:142:UfwY4Q -- Starting sql for userid 527e4afc-4598-400f-8536-afa5324f0ba4
+sql_owne:30,14:56:00:__call__:42:UfwY4Q -- {}
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Files|files) _post_configure_properties() started
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Files|files) initialize prop owner
+relation:30,14:56:00:_log_joins:2426:UfwY4Q -- Files.owner setup primary join owner.id = files.parent_id
+relation:30,14:56:00:_log_joins:2427:UfwY4Q -- Files.owner setup secondary join None
+relation:30,14:56:00:_log_joins:2428:UfwY4Q -- Files.owner synchronize pairs [(owner.id => files.parent_id)]
+relation:30,14:56:00:_log_joins:2435:UfwY4Q -- Files.owner secondary synchronize pairs []
+relation:30,14:56:00:_log_joins:2443:UfwY4Q -- Files.owner local/remote pairs [(files.parent_id / owner.id)]
+relation:30,14:56:00:_log_joins:2450:UfwY4Q -- Files.owner remote columns [owner.id]
+relation:30,14:56:00:_log_joins:2455:UfwY4Q -- Files.owner local columns [files.parent_id]
+relation:30,14:56:00:_log_joins:2460:UfwY4Q -- Files.owner relationship direction symbol('MANYTOONE')
+strategi:30,14:56:00:__init__:547:UfwY4Q -- Files.owner lazy loading clause owner.id = :param_1
+strategi:30,14:56:00:__init__:572:UfwY4Q -- Files.owner will use query.get() to optimize instance loads
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Files|files) initialize prop dates
+relation:30,14:56:00:_log_joins:2426:UfwY4Q -- Files.dates setup primary join files.id = dates."fileId"
+relation:30,14:56:00:_log_joins:2427:UfwY4Q -- Files.dates setup secondary join None
+relation:30,14:56:00:_log_joins:2428:UfwY4Q -- Files.dates synchronize pairs [(files.id => dates.fileId)]
+relation:30,14:56:00:_log_joins:2435:UfwY4Q -- Files.dates secondary synchronize pairs []
+relation:30,14:56:00:_log_joins:2443:UfwY4Q -- Files.dates local/remote pairs [(files.id / dates.fileId)]
+relation:30,14:56:00:_log_joins:2450:UfwY4Q -- Files.dates remote columns [dates.fileId]
+relation:30,14:56:00:_log_joins:2455:UfwY4Q -- Files.dates local columns [files.id]
+relation:30,14:56:00:_log_joins:2460:UfwY4Q -- Files.dates relationship direction symbol('ONETOMANY')
+strategi:30,14:56:00:__init__:547:UfwY4Q -- Files.dates lazy loading clause :param_1 = dates."fileId"
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Files|files) initialize prop name
+relation:30,14:56:00:_log_joins:2426:UfwY4Q -- Files.name setup primary join files.id = filename."fileId"
+relation:30,14:56:00:_log_joins:2427:UfwY4Q -- Files.name setup secondary join None
+sql_serv:30,14:56:00:req_callback:106:UfwY4Q -- Put new task in queue
+relation:30,14:56:00:_log_joins:2428:UfwY4Q -- Files.name synchronize pairs [(files.id => filename.fileId)]
+relation:30,14:56:00:_log_joins:2435:UfwY4Q -- Files.name secondary synchronize pairs []
+relation:30,14:56:00:_log_joins:2443:UfwY4Q -- Files.name local/remote pairs [(files.id / filename.fileId)]
+relation:30,14:56:00:_log_joins:2450:UfwY4Q -- Files.name remote columns [filename.fileId]
+relation:30,14:56:00:_log_joins:2455:UfwY4Q -- Files.name local columns [files.id]
+relation:30,14:56:00:_log_joins:2460:UfwY4Q -- Files.name relationship direction symbol('ONETOMANY')
+strategi:30,14:56:00:__init__:547:UfwY4Q -- Files.name lazy loading clause :param_1 = filename."fileId"
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Files|files) initialize prop id
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Files|files) initialize prop fileId
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Files|files) initialize prop lastModDate
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Files|files) initialize prop parent_id
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Files|files) initialize prop isFile
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Files|files) _post_configure_properties() complete
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Owner|owner) _post_configure_properties() started
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Owner|owner) initialize prop files
+relation:30,14:56:00:_log_joins:2426:UfwY4Q -- Owner.files setup primary join owner.id = files.parent_id
+relation:30,14:56:00:_log_joins:2427:UfwY4Q -- Owner.files setup secondary join None
+relation:30,14:56:00:_log_joins:2428:UfwY4Q -- Owner.files synchronize pairs [(owner.id => files.parent_id)]
+relation:30,14:56:00:_log_joins:2435:UfwY4Q -- Owner.files secondary synchronize pairs []
+relation:30,14:56:00:_log_joins:2443:UfwY4Q -- Owner.files local/remote pairs [(owner.id / files.parent_id)]
+relation:30,14:56:00:_log_joins:2450:UfwY4Q -- Owner.files remote columns [files.parent_id]
+relation:30,14:56:00:_log_joins:2455:UfwY4Q -- Owner.files local columns [owner.id]
+relation:30,14:56:00:_log_joins:2460:UfwY4Q -- Owner.files relationship direction symbol('ONETOMANY')
+strategi:30,14:56:00:__init__:547:UfwY4Q -- Owner.files lazy loading clause :param_1 = files.parent_id
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Owner|owner) initialize prop id
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Owner|owner) initialize prop name
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Owner|owner) _post_configure_properties() complete
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Dates|dates) _post_configure_properties() started
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Dates|dates) initialize prop files
+relation:30,14:56:00:_log_joins:2426:UfwY4Q -- Dates.files setup primary join files.id = dates."fileId"
+relation:30,14:56:00:_log_joins:2427:UfwY4Q -- Dates.files setup secondary join None
+relation:30,14:56:00:_log_joins:2428:UfwY4Q -- Dates.files synchronize pairs [(files.id => dates.fileId)]
+relation:30,14:56:00:_log_joins:2435:UfwY4Q -- Dates.files secondary synchronize pairs []
+relation:30,14:56:00:_log_joins:2443:UfwY4Q -- Dates.files local/remote pairs [(dates.fileId / files.id)]
+relation:30,14:56:00:_log_joins:2450:UfwY4Q -- Dates.files remote columns [files.id]
+relation:30,14:56:00:_log_joins:2455:UfwY4Q -- Dates.files local columns [dates.fileId]
+relation:30,14:56:00:_log_joins:2460:UfwY4Q -- Dates.files relationship direction symbol('MANYTOONE')
+strategi:30,14:56:00:__init__:547:UfwY4Q -- Dates.files lazy loading clause files.id = :param_1
+strategi:30,14:56:00:__init__:572:UfwY4Q -- Dates.files will use query.get() to optimize instance loads
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Dates|dates) initialize prop id
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Dates|dates) initialize prop fileId
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Dates|dates) initialize prop date
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Dates|dates) initialize prop adds
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Dates|dates) initialize prop deletes
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Dates|dates) initialize prop bin_width
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Dates|dates) _post_configure_properties() complete
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Closure|closure) _post_configure_properties() started
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Closure|closure) initialize prop files_relationship
+relation:30,14:56:00:_log_joins:2426:UfwY4Q -- Closure.files_relationship setup primary join files.id = closure.child
+relation:30,14:56:00:_log_joins:2427:UfwY4Q -- Closure.files_relationship setup secondary join None
+relation:30,14:56:00:_log_joins:2428:UfwY4Q -- Closure.files_relationship synchronize pairs [(files.id => closure.child)]
+relation:30,14:56:00:_log_joins:2435:UfwY4Q -- Closure.files_relationship secondary synchronize pairs []
+relation:30,14:56:00:_log_joins:2443:UfwY4Q -- Closure.files_relationship local/remote pairs [(closure.child / files.id)]
+relation:30,14:56:00:_log_joins:2450:UfwY4Q -- Closure.files_relationship remote columns [files.id]
+relation:30,14:56:00:_log_joins:2455:UfwY4Q -- Closure.files_relationship local columns [closure.child]
+relation:30,14:56:00:_log_joins:2460:UfwY4Q -- Closure.files_relationship relationship direction symbol('MANYTOONE')
+strategi:30,14:56:00:__init__:547:UfwY4Q -- Closure.files_relationship lazy loading clause files.id = :param_1
+strategi:30,14:56:00:__init__:572:UfwY4Q -- Closure.files_relationship will use query.get() to optimize instance loads
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Closure|closure) initialize prop parent_relationship
+relation:30,14:56:00:_log_joins:2426:UfwY4Q -- Closure.parent_relationship setup primary join files.id = closure.parent
+relation:30,14:56:00:_log_joins:2427:UfwY4Q -- Closure.parent_relationship setup secondary join None
+relation:30,14:56:00:_log_joins:2428:UfwY4Q -- Closure.parent_relationship synchronize pairs [(files.id => closure.parent)]
+relation:30,14:56:00:_log_joins:2435:UfwY4Q -- Closure.parent_relationship secondary synchronize pairs []
+relation:30,14:56:00:_log_joins:2443:UfwY4Q -- Closure.parent_relationship local/remote pairs [(closure.parent / files.id)]
+relation:30,14:56:00:_log_joins:2450:UfwY4Q -- Closure.parent_relationship remote columns [files.id]
+relation:30,14:56:00:_log_joins:2455:UfwY4Q -- Closure.parent_relationship local columns [closure.parent]
+relation:30,14:56:00:_log_joins:2460:UfwY4Q -- Closure.parent_relationship relationship direction symbol('MANYTOONE')
+strategi:30,14:56:00:__init__:547:UfwY4Q -- Closure.parent_relationship lazy loading clause files.id = :param_1
+strategi:30,14:56:00:__init__:572:UfwY4Q -- Closure.parent_relationship will use query.get() to optimize instance loads
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Closure|closure) initialize prop owner
+relation:30,14:56:00:_log_joins:2426:UfwY4Q -- Closure.owner setup primary join owner.id = closure.owner_id
+relation:30,14:56:00:_log_joins:2427:UfwY4Q -- Closure.owner setup secondary join None
+relation:30,14:56:00:_log_joins:2428:UfwY4Q -- Closure.owner synchronize pairs [(owner.id => closure.owner_id)]
+relation:30,14:56:00:_log_joins:2435:UfwY4Q -- Closure.owner secondary synchronize pairs []
+relation:30,14:56:00:_log_joins:2443:UfwY4Q -- Closure.owner local/remote pairs [(closure.owner_id / owner.id)]
+relation:30,14:56:00:_log_joins:2450:UfwY4Q -- Closure.owner remote columns [owner.id]
+relation:30,14:56:00:_log_joins:2455:UfwY4Q -- Closure.owner local columns [closure.owner_id]
+sql.py:30,14:56:00:start:142:UfwY4Q -- Starting sql for userid 527e4afc-4598-400f-8536-afa5324f0ba4
+relation:30,14:56:00:_log_joins:2460:UfwY4Q -- Closure.owner relationship direction symbol('MANYTOONE')
+strategi:30,14:56:00:__init__:547:UfwY4Q -- Closure.owner lazy loading clause owner.id = :param_1
+strategi:30,14:56:00:__init__:572:UfwY4Q -- Closure.owner will use query.get() to optimize instance loads
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Closure|closure) initialize prop id
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Closure|closure) initialize prop parent
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Closure|closure) initialize prop child
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Closure|closure) initialize prop owner_id
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Closure|closure) initialize prop depth
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Closure|closure) _post_configure_properties() complete
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Filename|filename) _post_configure_properties() started
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Filename|filename) initialize prop files
+relation:30,14:56:00:_log_joins:2426:UfwY4Q -- Filename.files setup primary join files.id = filename."fileId"
+relation:30,14:56:00:_log_joins:2427:UfwY4Q -- Filename.files setup secondary join None
+relation:30,14:56:00:_log_joins:2428:UfwY4Q -- Filename.files synchronize pairs [(files.id => filename.fileId)]
+relation:30,14:56:00:_log_joins:2435:UfwY4Q -- Filename.files secondary synchronize pairs []
+relation:30,14:56:00:_log_joins:2443:UfwY4Q -- Filename.files local/remote pairs [(filename.fileId / files.id)]
+relation:30,14:56:00:_log_joins:2450:UfwY4Q -- Filename.files remote columns [files.id]
+relation:30,14:56:00:_log_joins:2455:UfwY4Q -- Filename.files local columns [filename.fileId]
+relation:30,14:56:00:_log_joins:2460:UfwY4Q -- Filename.files relationship direction symbol('MANYTOONE')
+strategi:30,14:56:00:__init__:547:UfwY4Q -- Filename.files lazy loading clause files.id = :param_1
+strategi:30,14:56:00:__init__:572:UfwY4Q -- Filename.files will use query.get() to optimize instance loads
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Filename|filename) initialize prop owner
+relation:30,14:56:00:_log_joins:2426:UfwY4Q -- Filename.owner setup primary join owner.id = filename.owner_id
+relation:30,14:56:00:_log_joins:2427:UfwY4Q -- Filename.owner setup secondary join None
+relation:30,14:56:00:_log_joins:2428:UfwY4Q -- Filename.owner synchronize pairs [(owner.id => filename.owner_id)]
+relation:30,14:56:00:_log_joins:2435:UfwY4Q -- Filename.owner secondary synchronize pairs []
+relation:30,14:56:00:_log_joins:2443:UfwY4Q -- Filename.owner local/remote pairs [(filename.owner_id / owner.id)]
+relation:30,14:56:00:_log_joins:2450:UfwY4Q -- Filename.owner remote columns [owner.id]
+relation:30,14:56:00:_log_joins:2455:UfwY4Q -- Filename.owner local columns [filename.owner_id]
+relation:30,14:56:00:_log_joins:2460:UfwY4Q -- Filename.owner relationship direction symbol('MANYTOONE')
+strategi:30,14:56:00:__init__:547:UfwY4Q -- Filename.owner lazy loading clause owner.id = :param_1
+strategi:30,14:56:00:__init__:572:UfwY4Q -- Filename.owner will use query.get() to optimize instance loads
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Filename|filename) initialize prop id
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Filename|filename) initialize prop fileId
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Filename|filename) initialize prop fileName
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Filename|filename) initialize prop owner_id
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Filename|filename) _post_configure_properties() complete
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Tasks|tasks) _post_configure_properties() started
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Tasks|tasks) initialize prop id
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Tasks|tasks) initialize prop path
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Tasks|tasks) initialize prop creds
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Tasks|tasks) initialize prop fileid
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Tasks|tasks) initialize prop userid
+mapper.p:30,14:56:00:_log:1998:UfwY4Q -- (Tasks|tasks) _post_configure_properties() complete
+base.py:30,14:56:00:__connect:653:UfwY4Q -- Created new connection <sqlite3.Connection object at 0x7f00e6a3c3f0>
+base.py:30,14:56:00:checkout:507:UfwY4Q -- Connection <sqlite3.Connection object at 0x7f00e6a3c3f0> checked out from pool
+base.py:30,14:56:00:_begin_impl:711:UfwY4Q -- BEGIN (implicit)
+base.py:30,14:56:00:_execute_context:1205:UfwY4Q -- INSERT INTO owner (name) VALUES (?)
+base.py:30,14:56:00:_execute_context:1207:UfwY4Q -- ('527e4afc-4598-400f-8536-afa5324f0ba404-30-14-8515',)
+sql_serv:30,14:56:00:req_callback:106:UfwY4Q -- Put new task in queue
+sql.py:30,14:56:00:start:142:UfwY4Q -- Starting sql for userid 527e4afc-4598-400f-8536-afa5324f0ba4
+base.py:30,14:56:00:_commit_impl:753:UfwY4Q -- COMMIT
+sql_serv:30,14:56:00:req_callback:106:UfwY4Q -- Put new task in queue
+selector:30,14:56:00:_read_ready__on_eof:869:UfwY4Q -- <_SelectorSocketTransport fd=17 read=polling write=<idle, bufsize=0>> received EOF
+selector:30,14:56:00:_read_ready__on_eof:869:UfwY4Q -- <_SelectorSocketTransport fd=18 read=polling write=<idle, bufsize=0>> received EOF
+selector:30,14:56:00:_read_ready__on_eof:869:UfwY4Q -- <_SelectorSocketTransport fd=19 read=polling write=<idle, bufsize=0>> received EOF
+sql.py:30,14:56:00:start:142:UfwY4Q -- Starting sql for userid 527e4afc-4598-400f-8536-afa5324f0ba4
+selector:30,14:56:00:_read_ready__on_eof:869:UfwY4Q -- <_SelectorSocketTransport fd=20 read=polling write=<idle, bufsize=0>> received EOF
+selector:30,14:56:00:_read_ready__on_eof:869:UfwY4Q -- <_SelectorSocketTransport fd=21 read=polling write=<idle, bufsize=0>> received EOF
+base.py:30,14:56:00:_finalize_fairy:684:UfwY4Q -- Connection <sqlite3.Connection object at 0x7f00e6a3c3f0> being returned to pool
+base.py:30,14:56:00:_reset:872:UfwY4Q -- Connection <sqlite3.Connection object at 0x7f00e6a3c3f0> rollback-on-return
+base.py:30,14:56:00:_close_connection:267:UfwY4Q -- Closing connection <sqlite3.Connection object at 0x7f00e6a3c3f0>
+sql.py:30,14:56:00:start:150:UfwY4Q -- Checked out owner object, fileid dict, and lock
+path_reg:30,14:56:00:set:83:UfwY4Q -- set 'memoized_setups' on path 'CachingEntityRegistry((<Mapper at 0x7f00ef3b5580; Owner>,))' to '{}'
+base.py:30,14:56:00:__connect:653:UfwY4Q -- Created new connection <sqlite3.Connection object at 0x7f00e6a3c3f0>
+base.py:30,14:56:00:checkout:507:UfwY4Q -- Connection <sqlite3.Connection object at 0x7f00e6a3c3f0> checked out from pool
+base.py:30,14:56:00:_begin_impl:711:UfwY4Q -- BEGIN (implicit)
+base.py:30,14:56:00:_execute_context:1205:UfwY4Q -- SELECT owner.id AS owner_id, owner.name AS owner_name 
+FROM owner 
+WHERE owner.id = ?
+base.py:30,14:56:00:_execute_context:1207:UfwY4Q -- (8,)
+sql_owne:30,14:56:00:__call__:21:UfwY4Q -- Found old userid, using
+result.p:30,14:56:00:_init_metadata:809:UfwY4Q -- Col ('owner_id', 'owner_name')
+result.p:30,14:56:00:process_rows:1249:UfwY4Q -- Row (8, '527e4afc-4598-400f-8536-afa5324f0ba404-30-14-8515')
+sql.py:30,14:56:00:start:150:UfwY4Q -- Checked out owner object, fileid dict, and lock
+path_reg:30,14:56:00:set:83:UfwY4Q -- set 'memoized_setups' on path 'CachingEntityRegistry((<Mapper at 0x7f00ef3b5580; Owner>,))' to '{}'
+base.py:30,14:56:00:__connect:653:UfwY4Q -- Created new connection <sqlite3.Connection object at 0x7f00ece7ba80>
+base.py:30,14:56:00:checkout:507:UfwY4Q -- Connection <sqlite3.Connection object at 0x7f00ece7ba80> checked out from pool
+base.py:30,14:56:00:_begin_impl:711:UfwY4Q -- BEGIN (implicit)
+base.py:30,14:56:00:_execute_context:1205:UfwY4Q -- SELECT owner.id AS owner_id, owner.name AS owner_name 
+FROM owner 
+WHERE owner.id = ?
+base.py:30,14:56:00:_execute_context:1207:UfwY4Q -- (8,)
+sql_owne:30,14:56:00:__call__:21:UfwY4Q -- Found old userid, using
+result.p:30,14:56:00:_init_metadata:809:UfwY4Q -- Col ('owner_id', 'owner_name')
+result.p:30,14:56:00:process_rows:1249:UfwY4Q -- Row (8, '527e4afc-4598-400f-8536-afa5324f0ba404-30-14-8515')
+sql.py:30,14:56:00:start:150:UfwY4Q -- Checked out owner object, fileid dict, and lock
+sql_owne:30,14:56:00:__call__:21:UfwY4Q -- Found old userid, using
+path_reg:30,14:56:00:set:83:UfwY4Q -- set 'memoized_setups' on path 'CachingEntityRegistry((<Mapper at 0x7f00ef3b5580; Owner>,))' to '{}'
+base.py:30,14:56:00:__connect:653:UfwY4Q -- Created new connection <sqlite3.Connection object at 0x7f00e6300c60>
+base.py:30,14:56:00:checkout:507:UfwY4Q -- Connection <sqlite3.Connection object at 0x7f00e6300c60> checked out from pool
+base.py:30,14:56:00:_begin_impl:711:UfwY4Q -- BEGIN (implicit)
+base.py:30,14:56:00:_execute_context:1205:UfwY4Q -- SELECT owner.id AS owner_id, owner.name AS owner_name 
+FROM owner 
+WHERE owner.id = ?
+base.py:30,14:56:00:_execute_context:1207:UfwY4Q -- (8,)
+sql.py:30,14:56:00:start:150:UfwY4Q -- Checked out owner object, fileid dict, and lock
+path_reg:30,14:56:00:set:83:UfwY4Q -- set 'memoized_setups' on path 'CachingEntityRegistry((<Mapper at 0x7f00ef3b5580; Owner>,))' to '{}'
+base.py:30,14:56:00:__connect:653:UfwY4Q -- Created new connection <sqlite3.Connection object at 0x7f00e6234210>
+base.py:30,14:56:00:checkout:507:UfwY4Q -- Connection <sqlite3.Connection object at 0x7f00e6234210> checked out from pool
+base.py:30,14:56:00:_begin_impl:711:UfwY4Q -- BEGIN (implicit)
+base.py:30,14:56:00:_execute_context:1205:UfwY4Q -- SELECT owner.id AS owner_id, owner.name AS owner_name 
+FROM owner 
+WHERE owner.id = ?
+base.py:30,14:56:00:_execute_context:1207:UfwY4Q -- (8,)
+result.p:30,14:56:00:_init_metadata:809:UfwY4Q -- Col ('owner_id', 'owner_name')
+result.p:30,14:56:00:process_rows:1249:UfwY4Q -- Row (8, '527e4afc-4598-400f-8536-afa5324f0ba404-30-14-8515')
+result.p:30,14:56:00:_init_metadata:809:UfwY4Q -- Col ('owner_id', 'owner_name')
+sql_owne:30,14:56:00:__call__:21:UfwY4Q -- Found old userid, using
+result.p:30,14:56:00:process_rows:1249:UfwY4Q -- Row (8, '527e4afc-4598-400f-8536-afa5324f0ba404-30-14-8515')
+sql.py:30,14:56:00:start:150:UfwY4Q -- Checked out owner object, fileid dict, and lock
+path_reg:30,14:56:00:set:83:UfwY4Q -- set 'memoized_setups' on path 'CachingEntityRegistry((<Mapper at 0x7f00ef3b5580; Owner>,))' to '{}'
+base.py:30,14:56:00:__connect:653:UfwY4Q -- Created new connection <sqlite3.Connection object at 0x7f00e6234300>
+base.py:30,14:56:00:checkout:507:UfwY4Q -- Connection <sqlite3.Connection object at 0x7f00e6234300> checked out from pool
+base.py:30,14:56:00:_begin_impl:711:UfwY4Q -- BEGIN (implicit)
+base.py:30,14:56:00:_execute_context:1205:UfwY4Q -- SELECT owner.id AS owner_id, owner.name AS owner_name 
+FROM owner 
+WHERE owner.id = ?
+base.py:30,14:56:00:_execute_context:1207:UfwY4Q -- (8,)
+result.p:30,14:56:00:_init_metadata:809:UfwY4Q -- Col ('owner_id', 'owner_name')
+result.p:30,14:56:00:process_rows:1249:UfwY4Q -- Row (8, '527e4afc-4598-400f-8536-afa5324f0ba404-30-14-8515')

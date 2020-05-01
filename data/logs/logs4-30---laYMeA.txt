@@ -1,0 +1,74 @@
+base.py:30,16:35:34:__connect:653:laYMeA -- Created new connection <sqlite3.Connection object at 0x7f0e67c274e0>
+base.py:30,16:35:34:_cursor_execute:1311:laYMeA -- SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+base.py:30,16:35:34:_cursor_execute:1312:laYMeA -- ()
+base.py:30,16:35:34:_cursor_execute:1311:laYMeA -- SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+base.py:30,16:35:34:_cursor_execute:1312:laYMeA -- ()
+base.py:30,16:35:34:checkout:507:laYMeA -- Connection <sqlite3.Connection object at 0x7f0e67c274e0> checked out from pool
+base.py:30,16:35:34:_execute_context:1205:laYMeA -- PRAGMA main.table_info("files")
+base.py:30,16:35:34:_execute_context:1207:laYMeA -- ()
+result.p:30,16:35:34:_init_metadata:809:laYMeA -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+result.p:30,16:35:34:process_rows:1249:laYMeA -- Row (0, 'id', 'INTEGER', 1, None, 1)
+result.p:30,16:35:34:process_rows:1249:laYMeA -- Row (1, 'fileId', 'VARCHAR(300)', 0, None, 0)
+result.p:30,16:35:34:process_rows:1249:laYMeA -- Row (2, 'lastModDate', 'DATETIME', 0, None, 0)
+result.p:30,16:35:34:process_rows:1249:laYMeA -- Row (3, 'parent_id', 'INTEGER', 0, None, 0)
+result.p:30,16:35:34:process_rows:1249:laYMeA -- Row (4, 'isFile', 'BOOLEAN', 0, None, 0)
+base.py:30,16:35:34:_execute_context:1205:laYMeA -- PRAGMA main.table_info("owner")
+base.py:30,16:35:34:_execute_context:1207:laYMeA -- ()
+result.p:30,16:35:34:_init_metadata:809:laYMeA -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+result.p:30,16:35:34:process_rows:1249:laYMeA -- Row (0, 'id', 'INTEGER', 1, None, 1)
+result.p:30,16:35:34:process_rows:1249:laYMeA -- Row (1, 'name', 'VARCHAR(50)', 0, None, 0)
+base.py:30,16:35:34:_execute_context:1205:laYMeA -- PRAGMA main.table_info("dates")
+base.py:30,16:35:34:_execute_context:1207:laYMeA -- ()
+result.p:30,16:35:34:_init_metadata:809:laYMeA -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+result.p:30,16:35:34:process_rows:1249:laYMeA -- Row (0, 'id', 'INTEGER', 1, None, 1)
+result.p:30,16:35:34:process_rows:1249:laYMeA -- Row (1, 'fileId', 'INTEGER', 0, None, 0)
+result.p:30,16:35:34:process_rows:1249:laYMeA -- Row (2, 'date', 'FLOAT', 0, None, 0)
+result.p:30,16:35:34:process_rows:1249:laYMeA -- Row (3, 'adds', 'INTEGER', 0, None, 0)
+result.p:30,16:35:34:process_rows:1249:laYMeA -- Row (4, 'deletes', 'INTEGER', 0, None, 0)
+result.p:30,16:35:34:process_rows:1249:laYMeA -- Row (5, 'bin_width', 'FLOAT', 0, None, 0)
+base.py:30,16:35:34:_execute_context:1205:laYMeA -- PRAGMA main.table_info("closure")
+base.py:30,16:35:34:_execute_context:1207:laYMeA -- ()
+result.p:30,16:35:34:_init_metadata:809:laYMeA -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+result.p:30,16:35:34:process_rows:1249:laYMeA -- Row (0, 'id', 'INTEGER', 1, None, 1)
+result.p:30,16:35:34:process_rows:1249:laYMeA -- Row (1, 'parent', 'INTEGER', 0, None, 0)
+result.p:30,16:35:34:process_rows:1249:laYMeA -- Row (2, 'child', 'INTEGER', 0, None, 0)
+result.p:30,16:35:34:process_rows:1249:laYMeA -- Row (3, 'owner_id', 'INTEGER', 0, None, 0)
+result.p:30,16:35:34:process_rows:1249:laYMeA -- Row (4, 'depth', 'INTEGER', 0, None, 0)
+base.py:30,16:35:34:_execute_context:1205:laYMeA -- PRAGMA main.table_info("filename")
+base.py:30,16:35:34:_execute_context:1207:laYMeA -- ()
+result.p:30,16:35:34:_init_metadata:809:laYMeA -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+result.p:30,16:35:34:process_rows:1249:laYMeA -- Row (0, 'id', 'INTEGER', 1, None, 1)
+result.p:30,16:35:34:process_rows:1249:laYMeA -- Row (1, 'fileId', 'INTEGER', 0, None, 0)
+result.p:30,16:35:34:process_rows:1249:laYMeA -- Row (2, 'fileName', 'VARCHAR(600)', 0, None, 0)
+result.p:30,16:35:34:process_rows:1249:laYMeA -- Row (3, 'owner_id', 'INTEGER', 0, None, 0)
+base.py:30,16:35:34:_execute_context:1205:laYMeA -- PRAGMA main.table_info("tasks")
+base.py:30,16:35:34:_execute_context:1207:laYMeA -- ()
+result.p:30,16:35:34:_init_metadata:809:laYMeA -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+result.p:30,16:35:34:process_rows:1249:laYMeA -- Row (0, 'id', 'INTEGER', 1, None, 1)
+result.p:30,16:35:34:process_rows:1249:laYMeA -- Row (1, 'path', 'VARCHAR(600)', 0, None, 0)
+result.p:30,16:35:34:process_rows:1249:laYMeA -- Row (2, 'creds', 'BLOB', 0, None, 0)
+result.p:30,16:35:34:process_rows:1249:laYMeA -- Row (3, 'fileid', 'VARCHAR(600)', 0, None, 0)
+result.p:30,16:35:34:process_rows:1249:laYMeA -- Row (4, 'userid', 'VARCHAR(600)', 0, None, 0)
+base.py:30,16:35:34:_finalize_fairy:684:laYMeA -- Connection <sqlite3.Connection object at 0x7f0e67c274e0> being returned to pool
+base.py:30,16:35:34:_reset:872:laYMeA -- Connection <sqlite3.Connection object at 0x7f0e67c274e0> rollback-on-return
+base.py:30,16:35:34:_close_connection:267:laYMeA -- Closing connection <sqlite3.Connection object at 0x7f0e67c274e0>
+base.py:30,16:35:34:__connect:653:laYMeA -- Created new connection <sqlite3.Connection object at 0x7f0e67c274e0>
+base.py:30,16:35:34:checkout:507:laYMeA -- Connection <sqlite3.Connection object at 0x7f0e67c274e0> checked out from pool
+callback:30,16:35:34:<module>:27:laYMeA -- DASH CALLBACKS IMPORTED
+configlo:30,16:35:34:handle_exception:84:laYMeA -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "run.py", line 28, in <module>
+    app = create_flask_serv()
+  File "/home/henry/pydocs/flaskr/__init__.py", line 16, in create_flask_serv
+    register_dashapp(flask_serv)
+  File "/home/henry/pydocs/flaskr/dashapp/__init__.py", line 29, in register_dashapp
+    dashapp.layout = layout()
+  File "/home/henry/pydocs/flaskr/dashapp/layout.py", line 18, in layout
+    figure=gen_fListFig(scoped_sess, test["userid"])
+  File "/home/henry/pydocs/flaskr/dashapp/dash_functions.py", line 115, in gen_fListFig
+    fListFig = getNormalBubbleData(sess, userid)
+  File "/home/henry/pydocs/flaskr/dashapp/dash_functions.py", line 53, in getNormalBubbleData
+    allFiles = sess.query(Files.id, Dates.dates.label('va')).join(Dates).join(Owner).filter(Owner.id == userid).subquery()
+AttributeError: type object 'Dates' has no attribute 'dates'
+configlo:30,16:35:34:mp_sendmail:121:laYMeA -- sending mail
+configlo:30,16:35:35:handle_exception:87:laYMeA -- exiting! from sshook

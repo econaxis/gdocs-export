@@ -86,6 +86,9 @@ def handle_exception(exc_type, exc_value, exc_traceback):
     sendmail(msg = "Program ended wih exception. Check logs for more details")
     logger.critical("exiting! from sshook")
 
+    import os
+    os._exit(2)
+
     #logger.info("sending to default hook")
     return 0 
 

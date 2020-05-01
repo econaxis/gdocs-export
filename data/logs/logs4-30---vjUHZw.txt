@@ -1,0 +1,134 @@
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Files|files) _configure_property(owner, RelationshipProperty)
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Files|files) _configure_property(dates, RelationshipProperty)
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Files|files) _configure_property(name, RelationshipProperty)
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Files|files) _configure_property(id, Column)
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Files|files) _configure_property(fileId, Column)
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Files|files) _configure_property(lastModDate, Column)
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Files|files) _configure_property(parent_id, Column)
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Files|files) _configure_property(isFile, Column)
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Files|files) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<files>, primary_key=True, nullable=False)])
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Files|files) constructed
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Owner|owner) _configure_property(files, RelationshipProperty)
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Owner|owner) _configure_property(id, Column)
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Owner|owner) _configure_property(name, Column)
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Owner|owner) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<owner>, primary_key=True, nullable=False)])
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Owner|owner) constructed
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Dates|dates) _configure_property(files, RelationshipProperty)
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Dates|dates) _configure_property(id, Column)
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Dates|dates) _configure_property(fileId, Column)
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Dates|dates) _configure_property(date, Column)
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Dates|dates) _configure_property(adds, Column)
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Dates|dates) _configure_property(deletes, Column)
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Dates|dates) _configure_property(bin_width, Column)
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Dates|dates) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<dates>, primary_key=True, nullable=False)])
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Dates|dates) constructed
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Closure|closure) _configure_property(files_relationship, RelationshipProperty)
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Closure|closure) _configure_property(parent_relationship, RelationshipProperty)
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Closure|closure) _configure_property(owner, RelationshipProperty)
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Closure|closure) _configure_property(id, Column)
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Closure|closure) _configure_property(parent, Column)
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Closure|closure) _configure_property(child, Column)
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Closure|closure) _configure_property(owner_id, Column)
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Closure|closure) _configure_property(depth, Column)
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Closure|closure) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<closure>, primary_key=True, nullable=False)])
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Closure|closure) constructed
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Filename|filename) _configure_property(files, RelationshipProperty)
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Filename|filename) _configure_property(owner, RelationshipProperty)
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Filename|filename) _configure_property(id, Column)
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Filename|filename) _configure_property(fileId, Column)
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Filename|filename) _configure_property(fileName, Column)
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Filename|filename) _configure_property(owner_id, Column)
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Filename|filename) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<filename>, primary_key=True, nullable=False)])
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Filename|filename) constructed
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Tasks|tasks) _configure_property(id, Column)
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Tasks|tasks) _configure_property(path, Column)
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Tasks|tasks) _configure_property(creds, Column)
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Tasks|tasks) _configure_property(fileid, Column)
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Tasks|tasks) _configure_property(userid, Column)
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Tasks|tasks) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<tasks>, primary_key=True, nullable=False)])
+mapper.p:30,17:23:34:_log:1998:vjUHZw -- (Tasks|tasks) constructed
+base.py:30,17:23:34:__connect:653:vjUHZw -- Created new connection <sqlite3.Connection object at 0x7fa8691fdc60>
+base.py:30,17:23:34:_cursor_execute:1311:vjUHZw -- SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+base.py:30,17:23:34:_cursor_execute:1312:vjUHZw -- ()
+base.py:30,17:23:34:_cursor_execute:1311:vjUHZw -- SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+base.py:30,17:23:34:_cursor_execute:1312:vjUHZw -- ()
+base.py:30,17:23:34:checkout:507:vjUHZw -- Connection <sqlite3.Connection object at 0x7fa8691fdc60> checked out from pool
+base.py:30,17:23:34:_execute_context:1205:vjUHZw -- PRAGMA main.table_info("files")
+base.py:30,17:23:34:_execute_context:1207:vjUHZw -- ()
+result.p:30,17:23:34:_init_metadata:809:vjUHZw -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+result.p:30,17:23:34:process_rows:1249:vjUHZw -- Row (0, 'id', 'INTEGER', 1, None, 1)
+result.p:30,17:23:34:process_rows:1249:vjUHZw -- Row (1, 'fileId', 'VARCHAR(300)', 0, None, 0)
+result.p:30,17:23:34:process_rows:1249:vjUHZw -- Row (2, 'lastModDate', 'DATETIME', 0, None, 0)
+result.p:30,17:23:34:process_rows:1249:vjUHZw -- Row (3, 'parent_id', 'INTEGER', 0, None, 0)
+result.p:30,17:23:34:process_rows:1249:vjUHZw -- Row (4, 'isFile', 'BOOLEAN', 0, None, 0)
+base.py:30,17:23:34:_execute_context:1205:vjUHZw -- PRAGMA main.table_info("owner")
+base.py:30,17:23:34:_execute_context:1207:vjUHZw -- ()
+result.p:30,17:23:34:_init_metadata:809:vjUHZw -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+result.p:30,17:23:34:process_rows:1249:vjUHZw -- Row (0, 'id', 'INTEGER', 1, None, 1)
+result.p:30,17:23:34:process_rows:1249:vjUHZw -- Row (1, 'name', 'VARCHAR(50)', 0, None, 0)
+base.py:30,17:23:34:_execute_context:1205:vjUHZw -- PRAGMA main.table_info("dates")
+base.py:30,17:23:34:_execute_context:1207:vjUHZw -- ()
+result.p:30,17:23:34:_init_metadata:809:vjUHZw -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+result.p:30,17:23:34:process_rows:1249:vjUHZw -- Row (0, 'id', 'INTEGER', 1, None, 1)
+result.p:30,17:23:34:process_rows:1249:vjUHZw -- Row (1, 'fileId', 'INTEGER', 0, None, 0)
+result.p:30,17:23:34:process_rows:1249:vjUHZw -- Row (2, 'date', 'FLOAT', 0, None, 0)
+result.p:30,17:23:34:process_rows:1249:vjUHZw -- Row (3, 'adds', 'INTEGER', 0, None, 0)
+result.p:30,17:23:34:process_rows:1249:vjUHZw -- Row (4, 'deletes', 'INTEGER', 0, None, 0)
+result.p:30,17:23:34:process_rows:1249:vjUHZw -- Row (5, 'bin_width', 'FLOAT', 0, None, 0)
+base.py:30,17:23:34:_execute_context:1205:vjUHZw -- PRAGMA main.table_info("closure")
+base.py:30,17:23:34:_execute_context:1207:vjUHZw -- ()
+result.p:30,17:23:34:_init_metadata:809:vjUHZw -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+result.p:30,17:23:34:process_rows:1249:vjUHZw -- Row (0, 'id', 'INTEGER', 1, None, 1)
+result.p:30,17:23:34:process_rows:1249:vjUHZw -- Row (1, 'parent', 'INTEGER', 0, None, 0)
+result.p:30,17:23:34:process_rows:1249:vjUHZw -- Row (2, 'child', 'INTEGER', 0, None, 0)
+result.p:30,17:23:34:process_rows:1249:vjUHZw -- Row (3, 'owner_id', 'INTEGER', 0, None, 0)
+result.p:30,17:23:34:process_rows:1249:vjUHZw -- Row (4, 'depth', 'INTEGER', 0, None, 0)
+base.py:30,17:23:34:_execute_context:1205:vjUHZw -- PRAGMA main.table_info("filename")
+base.py:30,17:23:34:_execute_context:1207:vjUHZw -- ()
+result.p:30,17:23:34:_init_metadata:809:vjUHZw -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+result.p:30,17:23:34:process_rows:1249:vjUHZw -- Row (0, 'id', 'INTEGER', 1, None, 1)
+result.p:30,17:23:34:process_rows:1249:vjUHZw -- Row (1, 'fileId', 'INTEGER', 0, None, 0)
+result.p:30,17:23:34:process_rows:1249:vjUHZw -- Row (2, 'fileName', 'VARCHAR(600)', 0, None, 0)
+result.p:30,17:23:34:process_rows:1249:vjUHZw -- Row (3, 'owner_id', 'INTEGER', 0, None, 0)
+base.py:30,17:23:34:_execute_context:1205:vjUHZw -- PRAGMA main.table_info("tasks")
+base.py:30,17:23:34:_execute_context:1207:vjUHZw -- ()
+result.p:30,17:23:34:_init_metadata:809:vjUHZw -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+result.p:30,17:23:34:process_rows:1249:vjUHZw -- Row (0, 'id', 'INTEGER', 1, None, 1)
+result.p:30,17:23:34:process_rows:1249:vjUHZw -- Row (1, 'path', 'VARCHAR(600)', 0, None, 0)
+result.p:30,17:23:34:process_rows:1249:vjUHZw -- Row (2, 'creds', 'BLOB', 0, None, 0)
+result.p:30,17:23:34:process_rows:1249:vjUHZw -- Row (3, 'fileid', 'VARCHAR(600)', 0, None, 0)
+result.p:30,17:23:34:process_rows:1249:vjUHZw -- Row (4, 'userid', 'VARCHAR(600)', 0, None, 0)
+base.py:30,17:23:34:_finalize_fairy:684:vjUHZw -- Connection <sqlite3.Connection object at 0x7fa8691fdc60> being returned to pool
+base.py:30,17:23:34:_reset:872:vjUHZw -- Connection <sqlite3.Connection object at 0x7fa8691fdc60> rollback-on-return
+base.py:30,17:23:34:_close_connection:267:vjUHZw -- Closing connection <sqlite3.Connection object at 0x7fa8691fdc60>
+base.py:30,17:23:34:__connect:653:vjUHZw -- Created new connection <sqlite3.Connection object at 0x7fa8691fdc60>
+base.py:30,17:23:34:checkout:507:vjUHZw -- Connection <sqlite3.Connection object at 0x7fa8691fdc60> checked out from pool
+sql_serv:30,17:23:34:<module>:204:vjUHZw -- STARTING SQL SERVER
+selector:30,17:23:34:__init__:59:vjUHZw -- Using selector: EpollSelector
+sql_serv:30,17:23:34:report:25:vjUHZw -- SQL Queue size: 0, thread size: 0
+sql_serv:30,17:23:34:handle_request:70:vjUHZw -- handle_request
+base_eve:30,17:23:34:create_server:1490:vjUHZw -- <Server sockets=(<asyncio.TransportSocket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('0.0.0.0', 8888)>,)> is serving
+sql_serv:30,17:23:34:handle_request:123:vjUHZw -- Serving on ('0.0.0.0', 8888)
+base_eve:30,17:23:35:_run_once:1854:vjUHZw -- Executing <Task finished name='Task-3' coro=<send_socket() done, defined at /home/henry/pydocs/processing/sql_server.py:40> exception=TypeError('can only concatenate str (not "float") to str') created at /usr/lib/python3.8/asyncio/tasks.py:382> took 0.134 seconds
+sql_serv:30,17:23:35:exchandler:33:vjUHZw -- {'message': 'Task exception was never retrieved', 'exception': TypeError('can only concatenate str (not "float") to str'), 'future': <Task finished name='Task-3' coro=<send_socket() done, defined at /home/henry/pydocs/processing/sql_server.py:40> exception=TypeError('can only concatenate str (not "float") to str') created at /usr/lib/python3.8/asyncio/tasks.py:382>, 'source_traceback': [<FrameSummary file /usr/lib/python3.8/threading.py, line 890 in _bootstrap>, <FrameSummary file /usr/lib/python3.8/threading.py, line 932 in _bootstrap_inner>, <FrameSummary file /usr/lib/python3.8/threading.py, line 870 in run>, <FrameSummary file /usr/lib/python3.8/concurrent/futures/thread.py, line 80 in _worker>, <FrameSummary file /usr/lib/python3.8/concurrent/futures/thread.py, line 57 in run>, <FrameSummary file /home/henry/pydocs/processing/sql_server.py, line 129 in start_server>, <FrameSummary file /usr/lib/python3.8/asyncio/runners.py, line 43 in run>, <FrameSummary file /usr/lib/python3.8/asyncio/base_events.py, line 603 in run_until_complete>, <FrameSummary file /usr/lib/python3.8/asyncio/base_events.py, line 570 in run_forever>, <FrameSummary file /usr/lib/python3.8/asyncio/base_events.py, line 1851 in _run_once>, <FrameSummary file /usr/lib/python3.8/asyncio/events.py, line 81 in _run>, <FrameSummary file /home/henry/pydocs/processing/sql_server.py, line 120 in handle_request>, <FrameSummary file /usr/lib/python3.8/asyncio/tasks.py, line 382 in create_task>]}
+sql_serv:30,17:23:35:exchandler:35:vjUHZw -- Caught exception: can only concatenate str (not "float") to str
+sql_serv:30,17:23:35:exchandler:36:vjUHZw -- Shutting down...
+configlo:30,17:23:38:handle_exception:84:vjUHZw -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 193, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/henry/pydocs/processing/sql_server.py", line 205, in <module>
+    thread_pool()
+  File "/home/henry/pydocs/processing/sql_server.py", line 183, in thread_pool
+    ds = concurrent.futures.wait(exec_tasks, return_when = concurrent.futures.FIRST_EXCEPTION)
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 305, in wait
+    waiter.event.wait(timeout)
+  File "/usr/lib/python3.8/threading.py", line 558, in wait
+    signaled = self._cond.wait(timeout)
+  File "/usr/lib/python3.8/threading.py", line 302, in wait
+    waiter.acquire()
+KeyboardInterrupt
+configlo:30,17:23:38:mp_sendmail:121:vjUHZw -- sending mail
+configlo:30,17:23:39:handle_exception:87:vjUHZw -- exiting! from sshook

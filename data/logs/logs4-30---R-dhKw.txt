@@ -1,0 +1,39 @@
+dsds.py:30,17:32:53:start:12:R-dhKw -- start
+get_file:30,17:32:53:loadFiles:243:R-dhKw -- Start loadFiles, 527e4afc-4598-400f-8536-afa5324f0ba4 root
+requests:30,17:32:53:__call__:117:R-dhKw -- Making request: POST https://oauth2.googleapis.com/token
+connecti:30,17:32:53:_new_conn:817:R-dhKw -- Starting new HTTPS connection (1): oauth2.googleapis.com
+connecti:30,17:32:53:_make_request:393:R-dhKw -- https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+selector:30,17:32:53:__init__:59:R-dhKw -- Using selector: EpollSelector
+test_uti:30,17:32:53:send_socket:186:R-dhKw -- 
+Info(userid='default2020-04-30 17:32:53.753703', files=[], extra='testing extra function from start()')
+
+test_uti:30,17:32:53:send_socket:190:R-dhKw -- connect working
+configlo:30,17:32:53:handle_exception:84:R-dhKw -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "dsds.py", line 33, in <module>
+    start()
+  File "dsds.py", line 30, in start
+    loadFiles(uid, workingPath, fileid, creds)
+  File "/home/henry/pydocs/processing/get_files.py", line 270, in loadFiles
+    loop.run_until_complete(asyncio.gather(startTask))
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+    return future.result()
+  File "/home/henry/pydocs/processing/get_files.py", line 175, in start
+    await TestUtil.send_socket(ex)
+  File "/home/henry/pydocs/processing/datutils/test_utils.py", line 191, in send_socket
+    r, w = await asyncio.open_connection(SERVER_ADDR, 8888)
+  File "/usr/lib/python3.8/asyncio/streams.py", line 52, in open_connection
+    transport, _ = await loop.create_connection(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 1025, in create_connection
+    raise exceptions[0]
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 1010, in create_connection
+    sock = await self._connect_sock(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 924, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/usr/lib/python3.8/asyncio/selector_events.py", line 494, in sock_connect
+    return await fut
+  File "/usr/lib/python3.8/asyncio/selector_events.py", line 526, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8888)
+configlo:30,17:32:53:mp_sendmail:121:R-dhKw -- sending mail
+configlo:30,17:32:54:handle_exception:87:R-dhKw -- exiting! from sshook

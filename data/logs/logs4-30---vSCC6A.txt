@@ -1,0 +1,65 @@
+dsds.py:30,17:33:17:start:12:vSCC6A -- start
+get_file:30,17:33:17:loadFiles:243:vSCC6A -- Start loadFiles, 527e4afc-4598-400f-8536-afa5324f0ba4 root
+requests:30,17:33:17:__call__:117:vSCC6A -- Making request: POST https://oauth2.googleapis.com/token
+connecti:30,17:33:17:_new_conn:817:vSCC6A -- Starting new HTTPS connection (1): oauth2.googleapis.com
+connecti:30,17:33:18:_make_request:393:vSCC6A -- https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+selector:30,17:33:18:__init__:59:vSCC6A -- Using selector: EpollSelector
+test_uti:30,17:33:18:print_size:95:vSCC6A -- 
+
+---------------Memory usage: 41152 (kb)---------------0 mins since start
+test_uti:30,17:33:18:print_size:116:vSCC6A -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/0 discovered items at 2020-04-30 17:33:18.095368
+dump count: 0
+get_file:30,17:33:18:getRevision:136:vSCC6A -- getRevision looping
+test_uti:30,17:33:18:tryGetQueue:288:vSCC6A -- getRevisionwaiting 1 5
+get_file:30,17:33:18:getIdsRecursive:52:vSCC6A -- getIdsRecursive looping
+get_file:30,17:33:18:getIdsRecursive:59:vSCC6A -- length: 0
+base_eve:30,17:33:18:_getaddrinfo_debug:805:vSCC6A -- Get address info www.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1>
+base_eve:30,17:33:18:_getaddrinfo_debug:815:vSCC6A -- Getting address info www.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1> took 35.616ms: [(<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('172.217.14.202', 443)), (<AddressFamily.AF_INET6: 10>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('2607:f8b0:400a:803::200a', 443, 0, 0))]
+sslproto:30,17:33:18:_start_handshake:603:vSCC6A -- <asyncio.sslproto.SSLProtocol object at 0x7f0503a6fe50> starts SSL handshake
+get_file:30,17:33:18:getRevision:136:vSCC6A -- getRevision looping
+test_uti:30,17:33:18:tryGetQueue:288:vSCC6A -- getRevisionwaiting 1 5
+get_file:30,17:33:18:getIdsRecursive:52:vSCC6A -- getIdsRecursive looping
+get_file:30,17:33:18:getIdsRecursive:59:vSCC6A -- length: 0
+sslproto:30,17:33:18:_on_handshake_complete:647:vSCC6A -- <asyncio.sslproto.SSLProtocol object at 0x7f0503a6fe50>: SSL handshake took 37.0 ms
+base_eve:30,17:33:18:create_connection:1057:vSCC6A -- <asyncio.TransportSocket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.27.101.251', 52850), raddr=('172.217.14.202', 443)> connected to 172.217.14.202:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7f0503175e20>, <aiohttp.client_proto.ResponseHandler object at 0x7f05039da640>)
+test_uti:30,17:33:18:tryGetQueue:288:vSCC6A -- getIdswaiting 1 5
+get_file:30,17:33:20:getIdsRecursive:117:vSCC6A -- ----------------------------------getid return
+get_file:30,17:33:20:getIdsRecursive:118:vSCC6A -- len 0:27:0
+get_file:30,17:33:20:getRevision:136:vSCC6A -- getRevision looping
+gdoc.py:30,17:33:20:async_init:62:vSCC6A -- async init called
+gdoc.py:30,17:33:21:get_last_revision:129:vSCC6A -- last revision id 2916
+gdoc.py:30,17:33:21:async_init:72:vSCC6A -- starting googledoc async_init for 1hV6DumA55fF_GwtceKjRqwuSAww_V70exrSzGFoF1Rk
+gdoc.py:30,17:33:21:async_init:85:vSCC6A -- started process for 1hV6D
+gdoc.py:30,17:33:21:_download_details:150:vSCC6A -- received job for 1hV6DumA55fF_GwtceKjRqwuSAww_V70exrSzGFoF1Rk
+gdoc.py:30,17:33:21:_download_details:158:vSCC6A -- get url: https://docs.google.com/document/d/1hV6DumA55fF_GwtceKjRqwuSAww_V70exrSzGFoF1Rk/revisions/load?id=1hV6DumA55fF_GwtceKjRqwuSAww_V70exrSzGFoF1Rk&start=1&end=2916
+gdoc.py:30,17:33:21:_download_details:160:vSCC6A -- starting url get
+connecti:30,17:33:21:_new_conn:817:vSCC6A -- Starting new HTTPS connection (1): docs.google.com
+connecti:30,17:33:21:_make_request:393:vSCC6A -- https://docs.google.com:443 "GET /document/d/1hV6DumA55fF_GwtceKjRqwuSAww_V70exrSzGFoF1Rk/revisions/load?id=1hV6DumA55fF_GwtceKjRqwuSAww_V70exrSzGFoF1Rk&start=1&end=2916 HTTP/1.1" 200 None
+gdoc.py:30,17:33:21:_download_details:162:vSCC6A -- url get sucess
+gdoc.py:30,17:33:22:_download_details:212:vSCC6A -- resending for 1hV6D, counter 1
+get_file:30,17:33:23:getIdsRecursive:117:vSCC6A -- ----------------------------------getid return
+get_file:30,17:33:23:getIdsRecursive:118:vSCC6A -- len 0:49:0
+gdoc.py:30,17:33:26:async_init:62:vSCC6A -- async init called
+gdoc.py:30,17:33:26:async_init:94:vSCC6A -- received goahead to receive 1hV6D
+configlo:30,17:33:26:handle_exception:84:vSCC6A -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "dsds.py", line 33, in <module>
+    start()
+  File "dsds.py", line 30, in start
+    loadFiles(uid, workingPath, fileid, creds)
+  File "/home/henry/pydocs/processing/get_files.py", line 270, in loadFiles
+    loop.run_until_complete(asyncio.gather(startTask))
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+    return future.result()
+  File "/home/henry/pydocs/processing/get_files.py", line 205, in start
+    await asyncio.gather(*revisionExplorer, *fileExplorers, printTask)
+  File "/home/henry/pydocs/processing/get_files.py", line 145, in getRevision
+    await gd.async_init(proc_file.name, proc_file.id, session, TestUtil.headers, proc_file.path)
+  File "/home/henry/pydocs/processing/gdoc.py", line 105, in async_init
+    self.compute_closure()
+  File "/home/henry/pydocs/processing/gdoc.py", line 136, in compute_closure
+    assert self.path[-1] == self.fileId
+AssertionError
+configlo:30,17:33:26:mp_sendmail:121:vSCC6A -- sending mail
+configlo:30,17:33:27:handle_exception:87:vSCC6A -- exiting! from sshook

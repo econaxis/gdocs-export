@@ -19,6 +19,11 @@ from google.auth.transport.requests import Request
 import logging
 
 
+if "FLASKDBG" in os.environ:
+    print("flask debug in os environ")
+    SERVER_ADDR = "127.0.0.1"
+else:
+    SERVER_ADDR = 'sql_serv'
 
 if (random.random() < 0 ):
     os.environ["PROFILE"] = "true"
@@ -31,7 +36,6 @@ logger = logging.getLogger(__name__)
 class TestUtil:
 
 
-    ROUND_BY = 500
     fileCounter = 0
     creds = None
     headers = {}
@@ -123,7 +127,7 @@ class TestUtil:
             for i in range(interval):
                 if endEvent.is_set():
                     break
-                if len(cls.files)>10:
+                if len(cls.files)>5:
                     code = await cls.dump_files()
                     while not code:
                         logger.warning ("SQL Socket Send denied, retrying")
@@ -150,14 +154,16 @@ class TestUtil:
     async def dump_files(cls, return_thread = False):
 
         condensed_files = [x.return_condensed() for x in cls.files]
-        info_packet = Info(userid = cls.userid, files = condensed_files)
 
+        info_packet = Info(userid = cls.userid, files = condensed_files)
 
         success = await cls.send_socket(info_packet)
 
         while not success:
-            logger.info("send socket not succeeded")
-            time.sleep(40)
+            logger.info("send socket not succeeded, sleeping 60")
+
+            #Blocks the event loop
+            time.sleep(random.randint(40, 70))
             success = await cls.send_socket(info_packet)
 
         if success:
@@ -172,15 +178,16 @@ class TestUtil:
     @classmethod
     async def send_socket(cls, info_packet):
 
+        pickle.dump(info_packet, open('info_packet', 'wb'))
         s = pformat(info_packet)
-        _step = 5000
+        _step = 10000
         for i in range(0, len(s), _step):
             logger.debug("\n%s\n", s[i:i+_step])
 
 
 
         logger.info("connect working")
-        r, w = await asyncio.open_connection('sql_serv', 8888)
+        r, w = await asyncio.open_connection(SERVER_ADDR, 8888)
 
         message= b"request"
 
@@ -196,23 +203,19 @@ class TestUtil:
 
         if m == b'go':
             await adv_write(w, info_packet, to_pickle = True)
-
         w.close()
         return True
 
+    """
     @classmethod
     def _round_func(cls, x, round_by = None):
 
         if round_by == None:
             round_by = cls.ROUND_BY
         return round_by * round(x/round_by)
-
-    """
-
     @classmethod
     def compute_hist(cls, data, bin_method = 'fd'):
         #Data is a list of timestamps
-
         values = []
         bins = []
         bin_width = cls.ROUND_BY
@@ -222,23 +225,17 @@ class TestUtil:
             bins.append(key)
             values.append(len(list(group)))
             isTime.append(False)
-
-
         times = []
         for x in data:
             dt = datetime.fromtimestamp(x).replace(year = 2, month = 1, day =1).timestamp()
-
             #Five second precision
             times.append(cls._round_func(dt, round_by = 5))
-
         for key, group in groupby(times):
             bins.append(key)
             values.append(len(list(group)))
             isTime.append(True)
-
         #Return list of values, bins
         return [values, bins, isTime, bin_width]
-
     """
 
     @classmethod

@@ -1,0 +1,96 @@
+dsds.py:30,17:34:07:start:12:hDA6kw -- start
+get_file:30,17:34:07:loadFiles:243:hDA6kw -- Start loadFiles, 527e4afc-4598-400f-8536-afa5324f0ba4 root
+requests:30,17:34:07:__call__:117:hDA6kw -- Making request: POST https://oauth2.googleapis.com/token
+connecti:30,17:34:07:_new_conn:817:hDA6kw -- Starting new HTTPS connection (1): oauth2.googleapis.com
+connecti:30,17:34:07:_make_request:393:hDA6kw -- https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+selector:30,17:34:07:__init__:59:hDA6kw -- Using selector: EpollSelector
+configlo:30,17:34:07:mp_sendmail:121:hDA6kw -- sending mail
+test_uti:30,17:34:07:print_size:95:hDA6kw -- 
+
+---------------Memory usage: 41020 (kb)---------------0 mins since start
+test_uti:30,17:34:07:print_size:116:hDA6kw -- /home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/
+0/0 discovered items at 2020-04-30 17:34:07.210640
+dump count: 0
+get_file:30,17:34:07:getIdsRecursive:52:hDA6kw -- getIdsRecursive looping
+get_file:30,17:34:07:getIdsRecursive:59:hDA6kw -- length: 0
+base_eve:30,17:34:07:_getaddrinfo_debug:805:hDA6kw -- Get address info www.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1>
+base_eve:30,17:34:07:_getaddrinfo_debug:815:hDA6kw -- Getting address info www.googleapis.com:443, type=<SocketKind.SOCK_STREAM: 1> took 1.447ms: [(<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('172.217.14.202', 443)), (<AddressFamily.AF_INET6: 10>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('2607:f8b0:400a:803::200a', 443, 0, 0))]
+sslproto:30,17:34:07:_start_handshake:603:hDA6kw -- <asyncio.sslproto.SSLProtocol object at 0x7f04f145fee0> starts SSL handshake
+sslproto:30,17:34:07:_on_handshake_complete:647:hDA6kw -- <asyncio.sslproto.SSLProtocol object at 0x7f04f145fee0>: SSL handshake took 27.4 ms
+base_eve:30,17:34:07:create_connection:1057:hDA6kw -- <asyncio.TransportSocket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.27.101.251', 53048), raddr=('172.217.14.202', 443)> connected to 172.217.14.202:443: (<asyncio.sslproto._SSLProtocolTransport object at 0x7f04f0c28880>, <aiohttp.client_proto.ResponseHandler object at 0x7f04f146f160>)
+get_file:30,17:34:07:getIdsRecursive:52:hDA6kw -- getIdsRecursive looping
+get_file:30,17:34:07:getIdsRecursive:59:hDA6kw -- length: 0
+test_uti:30,17:34:07:tryGetQueue:288:hDA6kw -- getIdswaiting 1 5
+get_file:30,17:34:08:getRevision:136:hDA6kw -- getRevision looping
+test_uti:30,17:34:08:tryGetQueue:288:hDA6kw -- getRevisionwaiting 1 5
+get_file:30,17:34:08:getIdsRecursive:117:hDA6kw -- ----------------------------------getid return
+get_file:30,17:34:08:getIdsRecursive:118:hDA6kw -- len 0:27:0
+get_file:30,17:34:08:getRevision:136:hDA6kw -- getRevision looping
+gdoc.py:30,17:34:08:async_init:62:hDA6kw -- async init called
+gdoc.py:30,17:34:09:get_last_revision:129:hDA6kw -- last revision id 2916
+gdoc.py:30,17:34:09:async_init:72:hDA6kw -- starting googledoc async_init for 1hV6DumA55fF_GwtceKjRqwuSAww_V70exrSzGFoF1Rk
+gdoc.py:30,17:34:09:async_init:85:hDA6kw -- started process for 1hV6D
+gdoc.py:30,17:34:09:_download_details:150:hDA6kw -- received job for 1hV6DumA55fF_GwtceKjRqwuSAww_V70exrSzGFoF1Rk
+gdoc.py:30,17:34:09:_download_details:158:hDA6kw -- get url: https://docs.google.com/document/d/1hV6DumA55fF_GwtceKjRqwuSAww_V70exrSzGFoF1Rk/revisions/load?id=1hV6DumA55fF_GwtceKjRqwuSAww_V70exrSzGFoF1Rk&start=1&end=2916
+gdoc.py:30,17:34:09:_download_details:160:hDA6kw -- starting url get
+connecti:30,17:34:09:_new_conn:817:hDA6kw -- Starting new HTTPS connection (1): docs.google.com
+get_file:30,17:34:09:getRevision:136:hDA6kw -- getRevision looping
+gdoc.py:30,17:34:09:async_init:62:hDA6kw -- async init called
+connecti:30,17:34:09:_make_request:393:hDA6kw -- https://docs.google.com:443 "GET /document/d/1hV6DumA55fF_GwtceKjRqwuSAww_V70exrSzGFoF1Rk/revisions/load?id=1hV6DumA55fF_GwtceKjRqwuSAww_V70exrSzGFoF1Rk&start=1&end=2916 HTTP/1.1" 200 None
+gdoc.py:30,17:34:09:get_last_revision:129:hDA6kw -- last revision id 1784
+gdoc.py:30,17:34:09:async_init:72:hDA6kw -- starting googledoc async_init for 1cGlmEaWYTHdD_Y3vlkIMMkZhdmosSZo_rQYxcSBoDbQ
+gdoc.py:30,17:34:09:async_init:85:hDA6kw -- started process for 1cGlm
+gdoc.py:30,17:34:09:_download_details:150:hDA6kw -- received job for 1cGlmEaWYTHdD_Y3vlkIMMkZhdmosSZo_rQYxcSBoDbQ
+gdoc.py:30,17:34:09:_download_details:158:hDA6kw -- get url: https://docs.google.com/document/d/1cGlmEaWYTHdD_Y3vlkIMMkZhdmosSZo_rQYxcSBoDbQ/revisions/load?id=1cGlmEaWYTHdD_Y3vlkIMMkZhdmosSZo_rQYxcSBoDbQ&start=1&end=1784
+gdoc.py:30,17:34:09:_download_details:160:hDA6kw -- starting url get
+connecti:30,17:34:09:_new_conn:817:hDA6kw -- Starting new HTTPS connection (1): docs.google.com
+gdoc.py:30,17:34:09:_download_details:162:hDA6kw -- url get sucess
+gdoc.py:30,17:34:09:_download_details:212:hDA6kw -- resending for 1hV6D, counter 1
+connecti:30,17:34:10:_make_request:393:hDA6kw -- https://docs.google.com:443 "GET /document/d/1cGlmEaWYTHdD_Y3vlkIMMkZhdmosSZo_rQYxcSBoDbQ/revisions/load?id=1cGlmEaWYTHdD_Y3vlkIMMkZhdmosSZo_rQYxcSBoDbQ&start=1&end=1784 HTTP/1.1" 200 None
+gdoc.py:30,17:34:10:_download_details:162:hDA6kw -- url get sucess
+gdoc.py:30,17:34:10:_download_details:212:hDA6kw -- resending for 1cGlm, counter 1
+gdoc.py:30,17:34:11:async_init:62:hDA6kw -- async init called
+gdoc.py:30,17:34:12:get_last_revision:129:hDA6kw -- last revision id 14
+gdoc.py:30,17:34:12:async_init:72:hDA6kw -- starting googledoc async_init for 1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ
+gdoc.py:30,17:34:12:async_init:85:hDA6kw -- started process for 1VJe9
+gdoc.py:30,17:34:12:_download_details:150:hDA6kw -- received job for 1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ
+gdoc.py:30,17:34:12:_download_details:158:hDA6kw -- get url: https://docs.google.com/document/d/1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ/revisions/load?id=1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ&start=1&end=14
+gdoc.py:30,17:34:12:_download_details:160:hDA6kw -- starting url get
+connecti:30,17:34:12:_new_conn:817:hDA6kw -- Starting new HTTPS connection (1): docs.google.com
+connecti:30,17:34:12:_make_request:393:hDA6kw -- https://docs.google.com:443 "GET /document/d/1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ/revisions/load?id=1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ&start=1&end=14 HTTP/1.1" 200 None
+gdoc.py:30,17:34:12:_download_details:162:hDA6kw -- url get sucess
+gdoc.py:30,17:34:12:_download_details:212:hDA6kw -- resending for 1VJe9, counter 1
+get_file:30,17:34:13:getIdsRecursive:117:hDA6kw -- ----------------------------------getid return
+get_file:30,17:34:13:getIdsRecursive:118:hDA6kw -- len 0:47:0
+gdoc.py:30,17:34:14:async_init:94:hDA6kw -- received goahead to receive 1hV6D
+configlo:30,17:34:14:handle_exception:84:hDA6kw -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "dsds.py", line 33, in <module>
+    start()
+  File "dsds.py", line 30, in start
+    loadFiles(uid, workingPath, fileid, creds)
+  File "/home/henry/pydocs/processing/get_files.py", line 270, in loadFiles
+    loop.run_until_complete(asyncio.gather(startTask))
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+    return future.result()
+  File "/home/henry/pydocs/processing/get_files.py", line 205, in start
+    await asyncio.gather(*revisionExplorer, *fileExplorers, printTask)
+  File "/home/henry/pydocs/processing/get_files.py", line 145, in getRevision
+    await gd.async_init(proc_file.name, proc_file.id, session, TestUtil.headers, proc_file.path)
+  File "/home/henry/pydocs/processing/gdoc.py", line 105, in async_init
+    self.compute_closure()
+  File "/home/henry/pydocs/processing/gdoc.py", line 136, in compute_closure
+    assert self.path[-1] == self.fileId, f"{self.path[-1]};{self.fileId}"
+AssertionError: ('1hV6DumA55fF_GwtceKjRqwuSAww_V70exrSzGFoF1Rk', 'eight');1hV6DumA55fF_GwtceKjRqwuSAww_V70exrSzGFoF1Rk
+configlo:30,17:34:14:mp_sendmail:121:hDA6kw -- sending mail
+configlo:30,17:34:15:handle_exception:87:hDA6kw -- exiting! from sshook
+gdoc.py:30,17:34:37:_download_details:212:hDA6kw -- resending for 1cGlm, counter 2
+gdoc.py:30,17:34:41:_download_details:212:hDA6kw -- resending for 1VJe9, counter 2
+gdoc.py:30,17:35:14:_download_details:212:hDA6kw -- resending for 1cGlm, counter 3
+gdoc.py:30,17:35:23:_download_details:212:hDA6kw -- resending for 1VJe9, counter 3
+gdoc.py:30,17:36:11:_download_details:212:hDA6kw -- resending for 1cGlm, counter 4
+gdoc.py:30,17:36:14:_download_details:212:hDA6kw -- resending for 1VJe9, counter 4
+gdoc.py:30,17:37:23:_download_details:212:hDA6kw -- resending for 1cGlm, counter 5
+gdoc.py:30,17:37:24:_download_details:212:hDA6kw -- resending for 1VJe9, counter 5
+gdoc.py:30,17:38:45:_download_details:219:hDA6kw -- waited too long, not resending
+gdoc.py:30,17:38:53:_download_details:219:hDA6kw -- waited too long, not resending

@@ -34,7 +34,7 @@ class Operation():
     def __repr__(self):
         return f'Date: {self.date}, content: {self.content}'
 
-def round_time(d, round_by = 60):
+def round_time(d, round_by = 120):
     return round_by * round(d / round_by)
 
 
@@ -43,15 +43,17 @@ gd_condensed = namedtuple('gd_condensed', ['name', 'path', 'operations', 'closur
 
 class GDoc():
 
-    __slots__ = ['path', 'name', 'last_revision_id', 'fileId', 'session', 'headers', 'operations', 'closure' ]
+    __slots__ = ['path', 'name', 'last_revision_id', 'fileId', 'session', 'headers', 'operations', 'closure', 'done']
 
     def return_condensed(self):
-        logger.info("returning condensed: %s, %s, %s, %s, %s", self.name, self.path, self.operations, self.closure, self.fileId)
+        logger.debug("returning condensed: %s, %s, %s, %s, %s", self.name, self.path, self.operations, self.closure, self.fileId)
+        if not self.operations:
+            logger.critical("Operations not found but still returning condensed!! %s %s %s", self.name, self.fileId, self.operations)
         return gd_condensed(self.name, self.path, self.operations, self.closure, self.fileId)
 
 
     def __init__(self):
-        pass
+        self.done = False
 
     async def async_init(self, name,  fileId, session, headers, path):
         self.operations = []
@@ -95,6 +97,11 @@ class GDoc():
 
             if parent_conn.poll(0.01):
                 self.operations = parent_conn.recv()
+                logger.info("Success for %s, received following operations: %s\n", self.fileId, self.operations)
+
+                if self.operations == []:
+                    logger.warning("No content received for: %s, %s.", self.fileId, self.name)
+
                 parent_conn.send(f'success {fileId[0:5]}')
                 p.terminate()
                 p.join(0.01)
@@ -103,6 +110,12 @@ class GDoc():
                 continue
 
         self.compute_closure()
+
+        if self.operations:
+            self.done = True
+        else:
+            self.done = False
+        logger.info("Done computing gdoc for %s %s", self.name, self.fileId)
 
 
 
@@ -132,6 +145,8 @@ class GDoc():
             logger.debug("cannot get last revision id")
 
     def compute_closure(self):
+
+        assert self.path[-1][0] == self.fileId, f"{self.path[-1]};{self.fileId}"
 
         for c, i in enumerate(self.path):
             child = self.path[-1]
@@ -180,14 +195,13 @@ class GDoc():
                 if x[0]['ty'] == 'is':
                     content = [len(x[0]['s']), 0]
                 elif x[0]['ty'] == 'ds':
-                    content = [0, 0, x[0]['ei'] - x[0]['si'] + 1]
+                    content = [0, x[0]['ei'] - x[0]['si'] + 1]
 
                 cur_op = Operation(date = x[1]/1e3, content = content)
                 tot_operations.append(cur_op)
 
 
-            #Join
-
+            #Condense all operations into minute-operations
             operation_condensed = {}
 
             for o in tot_operations:
@@ -205,8 +219,9 @@ class GDoc():
 
         pipe.send(operations)
 
-        counter = 1
+        time.sleep(10)
 
+        counter = 1
         while not pipe.poll(0.01):
 
             logger.debug("resending for %s, counter %d", self.fileId[0:5], counter)
@@ -222,7 +237,6 @@ class GDoc():
                 return
 
         logger.debug("pipe received: %s correct: %s after %d", pipe.recv(), self.fileId[0:5], counter)
-
         pipe.close()
 
         return

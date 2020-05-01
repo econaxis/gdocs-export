@@ -1,0 +1,107 @@
+base.py:30,22:15:52:__connect:653:VEpVKg -- Created new connection <sqlite3.Connection object at 0x7fede76754e0>
+base.py:30,22:15:52:_cursor_execute:1311:VEpVKg -- SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+base.py:30,22:15:52:_cursor_execute:1312:VEpVKg -- ()
+base.py:30,22:15:52:_cursor_execute:1311:VEpVKg -- SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+base.py:30,22:15:52:_cursor_execute:1312:VEpVKg -- ()
+base.py:30,22:15:52:checkout:507:VEpVKg -- Connection <sqlite3.Connection object at 0x7fede76754e0> checked out from pool
+base.py:30,22:15:52:_execute_context:1205:VEpVKg -- PRAGMA main.table_info("files")
+base.py:30,22:15:52:_execute_context:1207:VEpVKg -- ()
+result.p:30,22:15:52:_init_metadata:809:VEpVKg -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+result.p:30,22:15:52:process_rows:1249:VEpVKg -- Row (0, 'id', 'INTEGER', 1, None, 1)
+result.p:30,22:15:52:process_rows:1249:VEpVKg -- Row (1, 'fileId', 'VARCHAR(300)', 0, None, 0)
+result.p:30,22:15:52:process_rows:1249:VEpVKg -- Row (2, 'lastModDate', 'DATETIME', 0, None, 0)
+result.p:30,22:15:52:process_rows:1249:VEpVKg -- Row (3, 'parent_id', 'INTEGER', 0, None, 0)
+result.p:30,22:15:52:process_rows:1249:VEpVKg -- Row (4, 'isFile', 'BOOLEAN', 0, None, 0)
+base.py:30,22:15:52:_execute_context:1205:VEpVKg -- PRAGMA main.table_info("owner")
+base.py:30,22:15:52:_execute_context:1207:VEpVKg -- ()
+result.p:30,22:15:52:_init_metadata:809:VEpVKg -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+result.p:30,22:15:52:process_rows:1249:VEpVKg -- Row (0, 'id', 'INTEGER', 1, None, 1)
+result.p:30,22:15:52:process_rows:1249:VEpVKg -- Row (1, 'name', 'VARCHAR(50)', 0, None, 0)
+base.py:30,22:15:52:_execute_context:1205:VEpVKg -- PRAGMA main.table_info("dates")
+base.py:30,22:15:52:_execute_context:1207:VEpVKg -- ()
+result.p:30,22:15:52:_init_metadata:809:VEpVKg -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+result.p:30,22:15:52:process_rows:1249:VEpVKg -- Row (0, 'id', 'INTEGER', 1, None, 1)
+result.p:30,22:15:52:process_rows:1249:VEpVKg -- Row (1, 'fileId', 'INTEGER', 0, None, 0)
+result.p:30,22:15:52:process_rows:1249:VEpVKg -- Row (2, 'date', 'FLOAT', 0, None, 0)
+result.p:30,22:15:52:process_rows:1249:VEpVKg -- Row (3, 'adds', 'INTEGER', 0, None, 0)
+result.p:30,22:15:52:process_rows:1249:VEpVKg -- Row (4, 'deletes', 'INTEGER', 0, None, 0)
+result.p:30,22:15:52:process_rows:1249:VEpVKg -- Row (5, 'bin_width', 'FLOAT', 0, None, 0)
+base.py:30,22:15:52:_execute_context:1205:VEpVKg -- PRAGMA main.table_info("closure")
+base.py:30,22:15:52:_execute_context:1207:VEpVKg -- ()
+result.p:30,22:15:52:_init_metadata:809:VEpVKg -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+result.p:30,22:15:52:process_rows:1249:VEpVKg -- Row (0, 'id', 'INTEGER', 1, None, 1)
+result.p:30,22:15:52:process_rows:1249:VEpVKg -- Row (1, 'parent', 'INTEGER', 0, None, 0)
+result.p:30,22:15:52:process_rows:1249:VEpVKg -- Row (2, 'child', 'INTEGER', 0, None, 0)
+result.p:30,22:15:52:process_rows:1249:VEpVKg -- Row (3, 'owner_id', 'INTEGER', 0, None, 0)
+result.p:30,22:15:52:process_rows:1249:VEpVKg -- Row (4, 'depth', 'INTEGER', 0, None, 0)
+base.py:30,22:15:52:_execute_context:1205:VEpVKg -- PRAGMA main.table_info("filename")
+base.py:30,22:15:52:_execute_context:1207:VEpVKg -- ()
+result.p:30,22:15:52:_init_metadata:809:VEpVKg -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+result.p:30,22:15:52:process_rows:1249:VEpVKg -- Row (0, 'id', 'INTEGER', 1, None, 1)
+result.p:30,22:15:52:process_rows:1249:VEpVKg -- Row (1, 'fileId', 'INTEGER', 0, None, 0)
+result.p:30,22:15:52:process_rows:1249:VEpVKg -- Row (2, 'fileName', 'VARCHAR(600)', 0, None, 0)
+result.p:30,22:15:52:process_rows:1249:VEpVKg -- Row (3, 'owner_id', 'INTEGER', 0, None, 0)
+base.py:30,22:15:52:_execute_context:1205:VEpVKg -- PRAGMA main.table_info("tasks")
+base.py:30,22:15:52:_execute_context:1207:VEpVKg -- ()
+result.p:30,22:15:52:_init_metadata:809:VEpVKg -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+result.p:30,22:15:52:process_rows:1249:VEpVKg -- Row (0, 'id', 'INTEGER', 1, None, 1)
+result.p:30,22:15:52:process_rows:1249:VEpVKg -- Row (1, 'path', 'VARCHAR(600)', 0, None, 0)
+result.p:30,22:15:52:process_rows:1249:VEpVKg -- Row (2, 'creds', 'BLOB', 0, None, 0)
+result.p:30,22:15:52:process_rows:1249:VEpVKg -- Row (3, 'fileid', 'VARCHAR(600)', 0, None, 0)
+result.p:30,22:15:52:process_rows:1249:VEpVKg -- Row (4, 'userid', 'VARCHAR(600)', 0, None, 0)
+base.py:30,22:15:52:_finalize_fairy:684:VEpVKg -- Connection <sqlite3.Connection object at 0x7fede76754e0> being returned to pool
+base.py:30,22:15:52:_reset:872:VEpVKg -- Connection <sqlite3.Connection object at 0x7fede76754e0> rollback-on-return
+base.py:30,22:15:52:_close_connection:267:VEpVKg -- Closing connection <sqlite3.Connection object at 0x7fede76754e0>
+base.py:30,22:15:52:__connect:653:VEpVKg -- Created new connection <sqlite3.Connection object at 0x7fede76754e0>
+base.py:30,22:15:52:checkout:507:VEpVKg -- Connection <sqlite3.Connection object at 0x7fede76754e0> checked out from pool
+callback:30,22:15:52:<module>:30:VEpVKg -- DASH CALLBACKS IMPORTED
+base.py:30,22:15:52:__connect:653:VEpVKg -- Created new connection <sqlite3.Connection object at 0x7fedc5e1e030>
+base.py:30,22:15:52:checkout:507:VEpVKg -- Connection <sqlite3.Connection object at 0x7fedc5e1e030> checked out from pool
+base.py:30,22:15:52:_begin_impl:711:VEpVKg -- BEGIN (implicit)
+base.py:30,22:15:52:_execute_context:1205:VEpVKg -- SELECT anon_1.id AS anon_1_id, anon_1.count AS anon_1_count, filename."fileName" AS "filename_fileName", files."lastModDate" AS "files_lastModDate" 
+FROM (SELECT anon_2.id AS id, sum(anon_2.va) AS count 
+FROM (SELECT files.id AS id, dates.date AS va 
+FROM files JOIN dates ON files.id = dates."fileId" JOIN owner ON owner.id = files.parent_id 
+WHERE owner.id = ?) AS anon_2 GROUP BY anon_2.id) AS anon_1 JOIN filename ON filename."fileId" = anon_1.id JOIN files ON files.id = anon_1.id
+base.py:30,22:15:52:_execute_context:1207:VEpVKg -- (1,)
+result.p:30,22:15:52:_init_metadata:809:VEpVKg -- Col ('anon_1_id', 'anon_1_count', 'filename_fileName', 'files_lastModDate')
+result.p:30,22:15:52:process_rows:1249:VEpVKg -- Row (1, 115935850842.60706, 'eight', '2020-04-28 22:52:12.075566')
+result.p:30,22:15:52:process_rows:1249:VEpVKg -- Row (2, 57156293780.342995, '458-471', '2020-04-23 13:51:53.797642')
+result.p:30,22:15:52:process_rows:1249:VEpVKg -- Row (3, 1587096291.305, 'The Factory High School', '2020-04-16 21:04:51.305000')
+result.p:30,22:15:52:process_rows:1249:VEpVKg -- Row (4, 23711990678.267, '338 - 345', '2020-02-03 22:54:22.695256')
+result.p:30,22:15:52:process_rows:1249:VEpVKg -- Row (5, 34897220812.29001, 'attitudes twd children', '2020-04-06 22:32:09.743056')
+result.p:30,22:15:52:process_rows:1249:VEpVKg -- Row (6, 60595441504.95497, 'academic intent', '2019-04-02 18:43:58.048275')
+result.p:30,22:15:52:process_rows:1249:VEpVKg -- Row (7, 114239010594.42899, 'balev case', '2020-04-12 01:18:23.893502')
+result.p:30,22:15:52:process_rows:1249:VEpVKg -- Row (8, 93514371360.25998, 'Freelancers', '2020-03-25 16:19:01.558854')
+dash.py:30,22:15:53:run_server:1491:VEpVKg -- Running on http://127.0.0.1:8050/dash/
+dash.py:30,22:15:53:run_server:1507:VEpVKg -- Debugger PIN: 957-887-994
+base.py:30,22:15:54:_execute_context:1205:VEpVKg -- SELECT files.id AS files_id, filename."fileName" AS "filename_fileName" 
+FROM files JOIN filename ON files.id = filename."fileId" JOIN owner ON owner.id = filename.owner_id 
+WHERE owner.id = ?
+base.py:30,22:15:54:_execute_context:1207:VEpVKg -- (1,)
+base.py:30,22:15:54:_execute_context:1205:VEpVKg -- SELECT files.id AS files_id, filename."fileName" AS "filename_fileName" 
+FROM files JOIN filename ON files.id = filename."fileId" JOIN owner ON owner.id = filename.owner_id 
+WHERE owner.id = ?
+base.py:30,22:15:54:_execute_context:1207:VEpVKg -- (1,)
+result.p:30,22:15:54:_init_metadata:809:VEpVKg -- Col ('files_id', 'filename_fileName')
+result.p:30,22:15:54:process_rows:1249:VEpVKg -- Row (1, 'eight')
+result.p:30,22:15:54:process_rows:1249:VEpVKg -- Row (2, '458-471')
+result.p:30,22:15:54:process_rows:1249:VEpVKg -- Row (3, 'The Factory High School')
+result.p:30,22:15:54:process_rows:1249:VEpVKg -- Row (4, '338 - 345')
+result.p:30,22:15:54:process_rows:1249:VEpVKg -- Row (5, 'attitudes twd children')
+result.p:30,22:15:54:process_rows:1249:VEpVKg -- Row (6, 'academic intent')
+result.p:30,22:15:54:process_rows:1249:VEpVKg -- Row (7, 'balev case')
+result.p:30,22:15:54:process_rows:1249:VEpVKg -- Row (8, 'Freelancers')
+result.p:30,22:15:54:process_rows:1249:VEpVKg -- Row (9, 'Untitled document')
+result.p:30,22:15:54:process_rows:1249:VEpVKg -- Row (10, 'root')
+result.p:30,22:15:54:_init_metadata:809:VEpVKg -- Col ('files_id', 'filename_fileName')
+result.p:30,22:15:54:process_rows:1249:VEpVKg -- Row (1, 'eight')
+result.p:30,22:15:54:process_rows:1249:VEpVKg -- Row (2, '458-471')
+result.p:30,22:15:54:process_rows:1249:VEpVKg -- Row (3, 'The Factory High School')
+result.p:30,22:15:54:process_rows:1249:VEpVKg -- Row (4, '338 - 345')
+result.p:30,22:15:54:process_rows:1249:VEpVKg -- Row (5, 'attitudes twd children')
+result.p:30,22:15:54:process_rows:1249:VEpVKg -- Row (6, 'academic intent')
+result.p:30,22:15:54:process_rows:1249:VEpVKg -- Row (7, 'balev case')
+result.p:30,22:15:54:process_rows:1249:VEpVKg -- Row (8, 'Freelancers')
+result.p:30,22:15:54:process_rows:1249:VEpVKg -- Row (9, 'Untitled document')
+result.p:30,22:15:54:process_rows:1249:VEpVKg -- Row (10, 'root')

@@ -57,11 +57,19 @@ def layout():
             id="parent_span"
         ),
         html.Div([
-            dcc.Graph(
-                id="lineWord"
-            )
-        ], className="four columns",
-            style={'display': 'none'}),
+            dcc.Slider(
+                id='bin-slider',
+                min=0,
+                max=750,
+                step=1,
+                value=40
+            ),
+            dcc.Slider(
+                id='window-slider',
+                min=4,
+                max=60,
+                step=0.1,
+                value=15
+        )], className="twelve columns",),
         dcc.Location(id='url', refresh=False),
-
     ])

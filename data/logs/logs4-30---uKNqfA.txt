@@ -1,0 +1,579 @@
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Files|files) _configure_property(owner, RelationshipProperty)
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Files|files) _configure_property(dates, RelationshipProperty)
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Files|files) _configure_property(name, RelationshipProperty)
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Files|files) _configure_property(id, Column)
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Files|files) _configure_property(fileId, Column)
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Files|files) _configure_property(lastModDate, Column)
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Files|files) _configure_property(parent_id, Column)
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Files|files) _configure_property(isFile, Column)
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Files|files) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<files>, primary_key=True, nullable=False)])
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Files|files) constructed
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Owner|owner) _configure_property(files, RelationshipProperty)
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Owner|owner) _configure_property(id, Column)
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Owner|owner) _configure_property(name, Column)
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Owner|owner) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<owner>, primary_key=True, nullable=False)])
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Owner|owner) constructed
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Dates|dates) _configure_property(files, RelationshipProperty)
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Dates|dates) _configure_property(id, Column)
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Dates|dates) _configure_property(fileId, Column)
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Dates|dates) _configure_property(date, Column)
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Dates|dates) _configure_property(adds, Column)
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Dates|dates) _configure_property(deletes, Column)
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Dates|dates) _configure_property(bin_width, Column)
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Dates|dates) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<dates>, primary_key=True, nullable=False)])
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Dates|dates) constructed
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Closure|closure) _configure_property(files_relationship, RelationshipProperty)
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Closure|closure) _configure_property(parent_relationship, RelationshipProperty)
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Closure|closure) _configure_property(owner, RelationshipProperty)
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Closure|closure) _configure_property(id, Column)
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Closure|closure) _configure_property(parent, Column)
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Closure|closure) _configure_property(child, Column)
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Closure|closure) _configure_property(owner_id, Column)
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Closure|closure) _configure_property(depth, Column)
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Closure|closure) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<closure>, primary_key=True, nullable=False)])
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Closure|closure) constructed
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Filename|filename) _configure_property(files, RelationshipProperty)
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Filename|filename) _configure_property(owner, RelationshipProperty)
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Filename|filename) _configure_property(id, Column)
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Filename|filename) _configure_property(fileId, Column)
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Filename|filename) _configure_property(fileName, Column)
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Filename|filename) _configure_property(owner_id, Column)
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Filename|filename) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<filename>, primary_key=True, nullable=False)])
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Filename|filename) constructed
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Tasks|tasks) _configure_property(id, Column)
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Tasks|tasks) _configure_property(path, Column)
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Tasks|tasks) _configure_property(creds, Column)
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Tasks|tasks) _configure_property(fileid, Column)
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Tasks|tasks) _configure_property(userid, Column)
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Tasks|tasks) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<tasks>, primary_key=True, nullable=False)])
+mapper.p:30,14:59:41:_log:1998:uKNqfA -- (Tasks|tasks) constructed
+base.py:30,14:59:41:__connect:653:uKNqfA -- Created new connection <sqlite3.Connection object at 0x7f007a558c60>
+base.py:30,14:59:41:_cursor_execute:1311:uKNqfA -- SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+base.py:30,14:59:41:_cursor_execute:1312:uKNqfA -- ()
+base.py:30,14:59:41:_cursor_execute:1311:uKNqfA -- SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+base.py:30,14:59:41:_cursor_execute:1312:uKNqfA -- ()
+base.py:30,14:59:41:checkout:507:uKNqfA -- Connection <sqlite3.Connection object at 0x7f007a558c60> checked out from pool
+base.py:30,14:59:41:_execute_context:1205:uKNqfA -- PRAGMA main.table_info("files")
+base.py:30,14:59:41:_execute_context:1207:uKNqfA -- ()
+result.p:30,14:59:41:_init_metadata:809:uKNqfA -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+result.p:30,14:59:41:process_rows:1249:uKNqfA -- Row (0, 'id', 'INTEGER', 1, None, 1)
+result.p:30,14:59:41:process_rows:1249:uKNqfA -- Row (1, 'fileId', 'VARCHAR(300)', 0, None, 0)
+result.p:30,14:59:41:process_rows:1249:uKNqfA -- Row (2, 'lastModDate', 'DATETIME', 0, None, 0)
+result.p:30,14:59:41:process_rows:1249:uKNqfA -- Row (3, 'parent_id', 'INTEGER', 0, None, 0)
+result.p:30,14:59:41:process_rows:1249:uKNqfA -- Row (4, 'isFile', 'BOOLEAN', 0, None, 0)
+base.py:30,14:59:41:_execute_context:1205:uKNqfA -- PRAGMA main.table_info("owner")
+base.py:30,14:59:41:_execute_context:1207:uKNqfA -- ()
+result.p:30,14:59:41:_init_metadata:809:uKNqfA -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+result.p:30,14:59:41:process_rows:1249:uKNqfA -- Row (0, 'id', 'INTEGER', 1, None, 1)
+result.p:30,14:59:41:process_rows:1249:uKNqfA -- Row (1, 'name', 'VARCHAR(50)', 0, None, 0)
+base.py:30,14:59:41:_execute_context:1205:uKNqfA -- PRAGMA main.table_info("dates")
+base.py:30,14:59:41:_execute_context:1207:uKNqfA -- ()
+result.p:30,14:59:41:_init_metadata:809:uKNqfA -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+result.p:30,14:59:41:process_rows:1249:uKNqfA -- Row (0, 'id', 'INTEGER', 1, None, 1)
+result.p:30,14:59:41:process_rows:1249:uKNqfA -- Row (1, 'fileId', 'INTEGER', 0, None, 0)
+result.p:30,14:59:41:process_rows:1249:uKNqfA -- Row (2, 'date', 'FLOAT', 0, None, 0)
+result.p:30,14:59:41:process_rows:1249:uKNqfA -- Row (3, 'adds', 'INTEGER', 0, None, 0)
+result.p:30,14:59:41:process_rows:1249:uKNqfA -- Row (4, 'deletes', 'INTEGER', 0, None, 0)
+result.p:30,14:59:41:process_rows:1249:uKNqfA -- Row (5, 'bin_width', 'FLOAT', 0, None, 0)
+base.py:30,14:59:41:_execute_context:1205:uKNqfA -- PRAGMA main.table_info("closure")
+base.py:30,14:59:41:_execute_context:1207:uKNqfA -- ()
+result.p:30,14:59:41:_init_metadata:809:uKNqfA -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+result.p:30,14:59:41:process_rows:1249:uKNqfA -- Row (0, 'id', 'INTEGER', 1, None, 1)
+result.p:30,14:59:41:process_rows:1249:uKNqfA -- Row (1, 'parent', 'INTEGER', 0, None, 0)
+result.p:30,14:59:41:process_rows:1249:uKNqfA -- Row (2, 'child', 'INTEGER', 0, None, 0)
+result.p:30,14:59:41:process_rows:1249:uKNqfA -- Row (3, 'owner_id', 'INTEGER', 0, None, 0)
+result.p:30,14:59:41:process_rows:1249:uKNqfA -- Row (4, 'depth', 'INTEGER', 0, None, 0)
+base.py:30,14:59:41:_execute_context:1205:uKNqfA -- PRAGMA main.table_info("filename")
+base.py:30,14:59:41:_execute_context:1207:uKNqfA -- ()
+result.p:30,14:59:41:_init_metadata:809:uKNqfA -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+result.p:30,14:59:41:process_rows:1249:uKNqfA -- Row (0, 'id', 'INTEGER', 1, None, 1)
+result.p:30,14:59:41:process_rows:1249:uKNqfA -- Row (1, 'fileId', 'INTEGER', 0, None, 0)
+result.p:30,14:59:41:process_rows:1249:uKNqfA -- Row (2, 'fileName', 'VARCHAR(600)', 0, None, 0)
+result.p:30,14:59:41:process_rows:1249:uKNqfA -- Row (3, 'owner_id', 'INTEGER', 0, None, 0)
+base.py:30,14:59:41:_execute_context:1205:uKNqfA -- PRAGMA main.table_info("tasks")
+base.py:30,14:59:41:_execute_context:1207:uKNqfA -- ()
+result.p:30,14:59:41:_init_metadata:809:uKNqfA -- Col ('cid', 'name', 'type', 'notnull', 'dflt_value', 'pk')
+result.p:30,14:59:41:process_rows:1249:uKNqfA -- Row (0, 'id', 'INTEGER', 1, None, 1)
+result.p:30,14:59:41:process_rows:1249:uKNqfA -- Row (1, 'path', 'VARCHAR(600)', 0, None, 0)
+result.p:30,14:59:41:process_rows:1249:uKNqfA -- Row (2, 'creds', 'BLOB', 0, None, 0)
+result.p:30,14:59:41:process_rows:1249:uKNqfA -- Row (3, 'fileid', 'VARCHAR(600)', 0, None, 0)
+result.p:30,14:59:41:process_rows:1249:uKNqfA -- Row (4, 'userid', 'VARCHAR(600)', 0, None, 0)
+base.py:30,14:59:41:_finalize_fairy:684:uKNqfA -- Connection <sqlite3.Connection object at 0x7f007a558c60> being returned to pool
+base.py:30,14:59:41:_reset:872:uKNqfA -- Connection <sqlite3.Connection object at 0x7f007a558c60> rollback-on-return
+base.py:30,14:59:41:_close_connection:267:uKNqfA -- Closing connection <sqlite3.Connection object at 0x7f007a558c60>
+base.py:30,14:59:41:__connect:653:uKNqfA -- Created new connection <sqlite3.Connection object at 0x7f007a558c60>
+base.py:30,14:59:41:checkout:507:uKNqfA -- Connection <sqlite3.Connection object at 0x7f007a558c60> checked out from pool
+sql_serv:30,14:59:41:<module>:202:uKNqfA -- STARTING SQL SERVER
+selector:30,14:59:41:__init__:59:uKNqfA -- Using selector: EpollSelector
+sql_serv:30,14:59:41:report:25:uKNqfA -- SQL Queue size: 0, thread size: 0
+sql_serv:30,14:59:41:handle_request:68:uKNqfA -- handle_request
+base_eve:30,14:59:42:create_server:1490:uKNqfA -- <Server sockets=(<asyncio.TransportSocket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('0.0.0.0', 8888)>,)> is serving
+sql_serv:30,14:59:42:handle_request:121:uKNqfA -- Serving on ('0.0.0.0', 8888)
+sql_serv:30,14:59:42:send_socket:43:uKNqfA -- connect working
+base_eve:30,14:59:42:_run_once:1854:uKNqfA -- Executing <Task pending name='Task-3' coro=<send_socket() running at /home/henry/pydocs/processing/sql_server.py:44> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(12)(), <TaskWakeupMethWrapper object at 0x7f006b5db8e0>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> created at /usr/lib/python3.8/asyncio/tasks.py:382> took 0.128 seconds
+sql_serv:30,14:59:42:send_socket:43:uKNqfA -- connect working
+sql_serv:30,14:59:42:send_socket:43:uKNqfA -- connect working
+sql_serv:30,14:59:42:send_socket:43:uKNqfA -- connect working
+sql_serv:30,14:59:42:send_socket:43:uKNqfA -- connect working
+selector:30,14:59:42:_accept_connection:164:uKNqfA -- <Server sockets=(<asyncio.TransportSocket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('0.0.0.0', 8888)>,)> got a new connection from ('127.0.0.1', 51600): <socket.socket fd=17, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 8888), raddr=('127.0.0.1', 51600)>
+selector:30,14:59:42:_accept_connection:164:uKNqfA -- <Server sockets=(<asyncio.TransportSocket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('0.0.0.0', 8888)>,)> got a new connection from ('127.0.0.1', 51602): <socket.socket fd=18, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 8888), raddr=('127.0.0.1', 51602)>
+selector:30,14:59:42:_accept_connection:164:uKNqfA -- <Server sockets=(<asyncio.TransportSocket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('0.0.0.0', 8888)>,)> got a new connection from ('127.0.0.1', 51604): <socket.socket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 8888), raddr=('127.0.0.1', 51604)>
+selector:30,14:59:42:_accept_connection:164:uKNqfA -- <Server sockets=(<asyncio.TransportSocket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('0.0.0.0', 8888)>,)> got a new connection from ('127.0.0.1', 51606): <socket.socket fd=20, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 8888), raddr=('127.0.0.1', 51606)>
+selector:30,14:59:42:_accept_connection:164:uKNqfA -- <Server sockets=(<asyncio.TransportSocket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('0.0.0.0', 8888)>,)> got a new connection from ('127.0.0.1', 51608): <socket.socket fd=21, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 8888), raddr=('127.0.0.1', 51608)>
+sql_serv:30,14:59:42:req_callback:79:uKNqfA -- request received
+sql_serv:30,14:59:42:req_callback:79:uKNqfA -- request received
+sql_serv:30,14:59:42:req_callback:79:uKNqfA -- request received
+sql_serv:30,14:59:42:req_callback:79:uKNqfA -- request received
+sql_serv:30,14:59:42:req_callback:79:uKNqfA -- request received
+base_eve:30,14:59:42:create_connection:1057:uKNqfA -- <asyncio.TransportSocket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 51600), raddr=('127.0.0.1', 8888)> connected to 127.0.0.1:8888: (<_SelectorSocketTransport fd=12 read=polling write=<idle, bufsize=0>>, <asyncio.streams.StreamReaderProtocol object at 0x7f006b5db7c0>)
+test_uti:30,14:59:42:adv_write:330:uKNqfA -- length of write: 7
+test_uti:30,14:59:42:adv_write:334:uKNqfA -- b'\x00\x00\x00\x00\x00\x00\x00\x07\x00'
+base_eve:30,14:59:42:create_connection:1057:uKNqfA -- <asyncio.TransportSocket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 51602), raddr=('127.0.0.1', 8888)> connected to 127.0.0.1:8888: (<_SelectorSocketTransport fd=13 read=polling write=<idle, bufsize=0>>, <asyncio.streams.StreamReaderProtocol object at 0x7f006b5d3040>)
+test_uti:30,14:59:42:adv_write:330:uKNqfA -- length of write: 7
+test_uti:30,14:59:42:adv_write:334:uKNqfA -- b'\x00\x00\x00\x00\x00\x00\x00\x07\x00'
+base_eve:30,14:59:42:create_connection:1057:uKNqfA -- <asyncio.TransportSocket fd=14, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 51604), raddr=('127.0.0.1', 8888)> connected to 127.0.0.1:8888: (<_SelectorSocketTransport fd=14 read=polling write=<idle, bufsize=0>>, <asyncio.streams.StreamReaderProtocol object at 0x7f006b5be8e0>)
+test_uti:30,14:59:42:adv_write:330:uKNqfA -- length of write: 7
+test_uti:30,14:59:42:adv_write:334:uKNqfA -- b'\x00\x00\x00\x00\x00\x00\x00\x07\x00'
+base_eve:30,14:59:42:create_connection:1057:uKNqfA -- <asyncio.TransportSocket fd=15, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 51606), raddr=('127.0.0.1', 8888)> connected to 127.0.0.1:8888: (<_SelectorSocketTransport fd=15 read=polling write=<idle, bufsize=0>>, <asyncio.streams.StreamReaderProtocol object at 0x7f006b567190>)
+test_uti:30,14:59:42:adv_write:330:uKNqfA -- length of write: 7
+test_uti:30,14:59:42:adv_write:334:uKNqfA -- b'\x00\x00\x00\x00\x00\x00\x00\x07\x00'
+base_eve:30,14:59:42:create_connection:1057:uKNqfA -- <asyncio.TransportSocket fd=16, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 51608), raddr=('127.0.0.1', 8888)> connected to 127.0.0.1:8888: (<_SelectorSocketTransport fd=16 read=polling write=<idle, bufsize=0>>, <asyncio.streams.StreamReaderProtocol object at 0x7f006b50aa00>)
+test_uti:30,14:59:42:adv_write:330:uKNqfA -- length of write: 7
+test_uti:30,14:59:42:adv_write:334:uKNqfA -- b'\x00\x00\x00\x00\x00\x00\x00\x07\x00'
+sql_serv:30,14:59:42:req_callback:88:uKNqfA -- queue size: 0
+test_uti:30,14:59:42:adv_write:330:uKNqfA -- length of write: 2
+test_uti:30,14:59:42:adv_write:334:uKNqfA -- b'\x00\x00\x00\x00\x00\x00\x00\x02\x00'
+sql_serv:30,14:59:42:req_callback:88:uKNqfA -- queue size: 0
+test_uti:30,14:59:42:adv_write:330:uKNqfA -- length of write: 2
+test_uti:30,14:59:42:adv_write:334:uKNqfA -- b'\x00\x00\x00\x00\x00\x00\x00\x02\x00'
+sql_serv:30,14:59:42:req_callback:88:uKNqfA -- queue size: 0
+test_uti:30,14:59:42:adv_write:330:uKNqfA -- length of write: 2
+test_uti:30,14:59:42:adv_write:334:uKNqfA -- b'\x00\x00\x00\x00\x00\x00\x00\x02\x00'
+sql_serv:30,14:59:42:req_callback:88:uKNqfA -- queue size: 0
+test_uti:30,14:59:42:adv_write:330:uKNqfA -- length of write: 2
+test_uti:30,14:59:42:adv_write:334:uKNqfA -- b'\x00\x00\x00\x00\x00\x00\x00\x02\x00'
+sql_serv:30,14:59:42:req_callback:88:uKNqfA -- queue size: 0
+test_uti:30,14:59:42:adv_write:330:uKNqfA -- length of write: 2
+test_uti:30,14:59:42:adv_write:334:uKNqfA -- b'\x00\x00\x00\x00\x00\x00\x00\x02\x00'
+sql_serv:30,14:59:42:send_socket:52:uKNqfA -- received: b'go'
+test_uti:30,14:59:42:adv_write:330:uKNqfA -- length of write: 15208
+test_uti:30,14:59:42:adv_write:334:uKNqfA -- b'\x00\x00\x00\x00\x00\x00;h\x01'
+sql_serv:30,14:59:42:send_socket:52:uKNqfA -- received: b'go'
+test_uti:30,14:59:42:adv_write:330:uKNqfA -- length of write: 15208
+test_uti:30,14:59:42:adv_write:334:uKNqfA -- b'\x00\x00\x00\x00\x00\x00;h\x01'
+sql_serv:30,14:59:42:send_socket:52:uKNqfA -- received: b'go'
+test_uti:30,14:59:42:adv_write:330:uKNqfA -- length of write: 15208
+test_uti:30,14:59:42:adv_write:334:uKNqfA -- b'\x00\x00\x00\x00\x00\x00;h\x01'
+sql_serv:30,14:59:42:send_socket:52:uKNqfA -- received: b'go'
+test_uti:30,14:59:42:adv_write:330:uKNqfA -- length of write: 15208
+test_uti:30,14:59:42:adv_write:334:uKNqfA -- b'\x00\x00\x00\x00\x00\x00;h\x01'
+sql_serv:30,14:59:42:send_socket:52:uKNqfA -- received: b'go'
+test_uti:30,14:59:42:adv_write:330:uKNqfA -- length of write: 15208
+test_uti:30,14:59:42:adv_write:334:uKNqfA -- b'\x00\x00\x00\x00\x00\x00;h\x01'
+sql_serv:30,14:59:42:req_callback:106:uKNqfA -- Put new task in queue
+sql.py:30,14:59:42:start:142:uKNqfA -- Starting sql for userid 527e4afc-4598-400f-8536-afa5324f0ba4
+sql_serv:30,14:59:42:req_callback:106:uKNqfA -- Put new task in queue
+sql.py:30,14:59:42:start:142:uKNqfA -- Starting sql for userid 527e4afc-4598-400f-8536-afa5324f0ba4
+sql_owne:30,14:59:42:__call__:43:uKNqfA -- {}
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Files|files) _post_configure_properties() started
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Files|files) initialize prop owner
+relation:30,14:59:42:_log_joins:2426:uKNqfA -- Files.owner setup primary join owner.id = files.parent_id
+relation:30,14:59:42:_log_joins:2427:uKNqfA -- Files.owner setup secondary join None
+relation:30,14:59:42:_log_joins:2428:uKNqfA -- Files.owner synchronize pairs [(owner.id => files.parent_id)]
+relation:30,14:59:42:_log_joins:2435:uKNqfA -- Files.owner secondary synchronize pairs []
+sql_serv:30,14:59:42:req_callback:106:uKNqfA -- Put new task in queue
+relation:30,14:59:42:_log_joins:2443:uKNqfA -- Files.owner local/remote pairs [(files.parent_id / owner.id)]
+relation:30,14:59:42:_log_joins:2450:uKNqfA -- Files.owner remote columns [owner.id]
+relation:30,14:59:42:_log_joins:2455:uKNqfA -- Files.owner local columns [files.parent_id]
+relation:30,14:59:42:_log_joins:2460:uKNqfA -- Files.owner relationship direction symbol('MANYTOONE')
+strategi:30,14:59:42:__init__:547:uKNqfA -- Files.owner lazy loading clause owner.id = :param_1
+strategi:30,14:59:42:__init__:572:uKNqfA -- Files.owner will use query.get() to optimize instance loads
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Files|files) initialize prop dates
+relation:30,14:59:42:_log_joins:2426:uKNqfA -- Files.dates setup primary join files.id = dates."fileId"
+relation:30,14:59:42:_log_joins:2427:uKNqfA -- Files.dates setup secondary join None
+relation:30,14:59:42:_log_joins:2428:uKNqfA -- Files.dates synchronize pairs [(files.id => dates.fileId)]
+relation:30,14:59:42:_log_joins:2435:uKNqfA -- Files.dates secondary synchronize pairs []
+relation:30,14:59:42:_log_joins:2443:uKNqfA -- Files.dates local/remote pairs [(files.id / dates.fileId)]
+relation:30,14:59:42:_log_joins:2450:uKNqfA -- Files.dates remote columns [dates.fileId]
+relation:30,14:59:42:_log_joins:2455:uKNqfA -- Files.dates local columns [files.id]
+relation:30,14:59:42:_log_joins:2460:uKNqfA -- Files.dates relationship direction symbol('ONETOMANY')
+strategi:30,14:59:42:__init__:547:uKNqfA -- Files.dates lazy loading clause :param_1 = dates."fileId"
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Files|files) initialize prop name
+relation:30,14:59:42:_log_joins:2426:uKNqfA -- Files.name setup primary join files.id = filename."fileId"
+relation:30,14:59:42:_log_joins:2427:uKNqfA -- Files.name setup secondary join None
+relation:30,14:59:42:_log_joins:2428:uKNqfA -- Files.name synchronize pairs [(files.id => filename.fileId)]
+relation:30,14:59:42:_log_joins:2435:uKNqfA -- Files.name secondary synchronize pairs []
+relation:30,14:59:42:_log_joins:2443:uKNqfA -- Files.name local/remote pairs [(files.id / filename.fileId)]
+relation:30,14:59:42:_log_joins:2450:uKNqfA -- Files.name remote columns [filename.fileId]
+relation:30,14:59:42:_log_joins:2455:uKNqfA -- Files.name local columns [files.id]
+relation:30,14:59:42:_log_joins:2460:uKNqfA -- Files.name relationship direction symbol('ONETOMANY')
+strategi:30,14:59:42:__init__:547:uKNqfA -- Files.name lazy loading clause :param_1 = filename."fileId"
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Files|files) initialize prop id
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Files|files) initialize prop fileId
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Files|files) initialize prop lastModDate
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Files|files) initialize prop parent_id
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Files|files) initialize prop isFile
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Files|files) _post_configure_properties() complete
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Owner|owner) _post_configure_properties() started
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Owner|owner) initialize prop files
+relation:30,14:59:42:_log_joins:2426:uKNqfA -- Owner.files setup primary join owner.id = files.parent_id
+relation:30,14:59:42:_log_joins:2427:uKNqfA -- Owner.files setup secondary join None
+relation:30,14:59:42:_log_joins:2428:uKNqfA -- Owner.files synchronize pairs [(owner.id => files.parent_id)]
+relation:30,14:59:42:_log_joins:2435:uKNqfA -- Owner.files secondary synchronize pairs []
+relation:30,14:59:42:_log_joins:2443:uKNqfA -- Owner.files local/remote pairs [(owner.id / files.parent_id)]
+relation:30,14:59:42:_log_joins:2450:uKNqfA -- Owner.files remote columns [files.parent_id]
+relation:30,14:59:42:_log_joins:2455:uKNqfA -- Owner.files local columns [owner.id]
+relation:30,14:59:42:_log_joins:2460:uKNqfA -- Owner.files relationship direction symbol('ONETOMANY')
+strategi:30,14:59:42:__init__:547:uKNqfA -- Owner.files lazy loading clause :param_1 = files.parent_id
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Owner|owner) initialize prop id
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Owner|owner) initialize prop name
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Owner|owner) _post_configure_properties() complete
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Dates|dates) _post_configure_properties() started
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Dates|dates) initialize prop files
+relation:30,14:59:42:_log_joins:2426:uKNqfA -- Dates.files setup primary join files.id = dates."fileId"
+relation:30,14:59:42:_log_joins:2427:uKNqfA -- Dates.files setup secondary join None
+relation:30,14:59:42:_log_joins:2428:uKNqfA -- Dates.files synchronize pairs [(files.id => dates.fileId)]
+relation:30,14:59:42:_log_joins:2435:uKNqfA -- Dates.files secondary synchronize pairs []
+relation:30,14:59:42:_log_joins:2443:uKNqfA -- Dates.files local/remote pairs [(dates.fileId / files.id)]
+relation:30,14:59:42:_log_joins:2450:uKNqfA -- Dates.files remote columns [files.id]
+relation:30,14:59:42:_log_joins:2455:uKNqfA -- Dates.files local columns [dates.fileId]
+relation:30,14:59:42:_log_joins:2460:uKNqfA -- Dates.files relationship direction symbol('MANYTOONE')
+sql.py:30,14:59:42:start:142:uKNqfA -- Starting sql for userid 527e4afc-4598-400f-8536-afa5324f0ba4
+strategi:30,14:59:42:__init__:547:uKNqfA -- Dates.files lazy loading clause files.id = :param_1
+strategi:30,14:59:42:__init__:572:uKNqfA -- Dates.files will use query.get() to optimize instance loads
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Dates|dates) initialize prop id
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Dates|dates) initialize prop fileId
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Dates|dates) initialize prop date
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Dates|dates) initialize prop adds
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Dates|dates) initialize prop deletes
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Dates|dates) initialize prop bin_width
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Dates|dates) _post_configure_properties() complete
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Closure|closure) _post_configure_properties() started
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Closure|closure) initialize prop files_relationship
+relation:30,14:59:42:_log_joins:2426:uKNqfA -- Closure.files_relationship setup primary join files.id = closure.child
+relation:30,14:59:42:_log_joins:2427:uKNqfA -- Closure.files_relationship setup secondary join None
+relation:30,14:59:42:_log_joins:2428:uKNqfA -- Closure.files_relationship synchronize pairs [(files.id => closure.child)]
+relation:30,14:59:42:_log_joins:2435:uKNqfA -- Closure.files_relationship secondary synchronize pairs []
+relation:30,14:59:42:_log_joins:2443:uKNqfA -- Closure.files_relationship local/remote pairs [(closure.child / files.id)]
+relation:30,14:59:42:_log_joins:2450:uKNqfA -- Closure.files_relationship remote columns [files.id]
+relation:30,14:59:42:_log_joins:2455:uKNqfA -- Closure.files_relationship local columns [closure.child]
+relation:30,14:59:42:_log_joins:2460:uKNqfA -- Closure.files_relationship relationship direction symbol('MANYTOONE')
+strategi:30,14:59:42:__init__:547:uKNqfA -- Closure.files_relationship lazy loading clause files.id = :param_1
+strategi:30,14:59:42:__init__:572:uKNqfA -- Closure.files_relationship will use query.get() to optimize instance loads
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Closure|closure) initialize prop parent_relationship
+relation:30,14:59:42:_log_joins:2426:uKNqfA -- Closure.parent_relationship setup primary join files.id = closure.parent
+relation:30,14:59:42:_log_joins:2427:uKNqfA -- Closure.parent_relationship setup secondary join None
+relation:30,14:59:42:_log_joins:2428:uKNqfA -- Closure.parent_relationship synchronize pairs [(files.id => closure.parent)]
+relation:30,14:59:42:_log_joins:2435:uKNqfA -- Closure.parent_relationship secondary synchronize pairs []
+relation:30,14:59:42:_log_joins:2443:uKNqfA -- Closure.parent_relationship local/remote pairs [(closure.parent / files.id)]
+sql_serv:30,14:59:42:req_callback:106:uKNqfA -- Put new task in queue
+relation:30,14:59:42:_log_joins:2450:uKNqfA -- Closure.parent_relationship remote columns [files.id]
+sql.py:30,14:59:42:start:142:uKNqfA -- Starting sql for userid 527e4afc-4598-400f-8536-afa5324f0ba4
+relation:30,14:59:42:_log_joins:2455:uKNqfA -- Closure.parent_relationship local columns [closure.parent]
+relation:30,14:59:42:_log_joins:2460:uKNqfA -- Closure.parent_relationship relationship direction symbol('MANYTOONE')
+strategi:30,14:59:42:__init__:547:uKNqfA -- Closure.parent_relationship lazy loading clause files.id = :param_1
+strategi:30,14:59:42:__init__:572:uKNqfA -- Closure.parent_relationship will use query.get() to optimize instance loads
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Closure|closure) initialize prop owner
+relation:30,14:59:42:_log_joins:2426:uKNqfA -- Closure.owner setup primary join owner.id = closure.owner_id
+relation:30,14:59:42:_log_joins:2427:uKNqfA -- Closure.owner setup secondary join None
+relation:30,14:59:42:_log_joins:2428:uKNqfA -- Closure.owner synchronize pairs [(owner.id => closure.owner_id)]
+relation:30,14:59:42:_log_joins:2435:uKNqfA -- Closure.owner secondary synchronize pairs []
+relation:30,14:59:42:_log_joins:2443:uKNqfA -- Closure.owner local/remote pairs [(closure.owner_id / owner.id)]
+relation:30,14:59:42:_log_joins:2450:uKNqfA -- Closure.owner remote columns [owner.id]
+sql_serv:30,14:59:42:req_callback:106:uKNqfA -- Put new task in queue
+relation:30,14:59:42:_log_joins:2455:uKNqfA -- Closure.owner local columns [closure.owner_id]
+selector:30,14:59:42:_read_ready__on_eof:869:uKNqfA -- <_SelectorSocketTransport fd=17 read=polling write=<idle, bufsize=0>> received EOF
+relation:30,14:59:42:_log_joins:2460:uKNqfA -- Closure.owner relationship direction symbol('MANYTOONE')
+selector:30,14:59:42:_read_ready__on_eof:869:uKNqfA -- <_SelectorSocketTransport fd=18 read=polling write=<idle, bufsize=0>> received EOF
+strategi:30,14:59:42:__init__:547:uKNqfA -- Closure.owner lazy loading clause owner.id = :param_1
+sql.py:30,14:59:42:start:142:uKNqfA -- Starting sql for userid 527e4afc-4598-400f-8536-afa5324f0ba4
+selector:30,14:59:42:_read_ready__on_eof:869:uKNqfA -- <_SelectorSocketTransport fd=19 read=polling write=<idle, bufsize=0>> received EOF
+strategi:30,14:59:42:__init__:572:uKNqfA -- Closure.owner will use query.get() to optimize instance loads
+selector:30,14:59:42:_read_ready__on_eof:869:uKNqfA -- <_SelectorSocketTransport fd=20 read=polling write=<idle, bufsize=0>> received EOF
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Closure|closure) initialize prop id
+selector:30,14:59:42:_read_ready__on_eof:869:uKNqfA -- <_SelectorSocketTransport fd=21 read=polling write=<idle, bufsize=0>> received EOF
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Closure|closure) initialize prop parent
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Closure|closure) initialize prop child
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Closure|closure) initialize prop owner_id
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Closure|closure) initialize prop depth
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Closure|closure) _post_configure_properties() complete
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Filename|filename) _post_configure_properties() started
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Filename|filename) initialize prop files
+relation:30,14:59:42:_log_joins:2426:uKNqfA -- Filename.files setup primary join files.id = filename."fileId"
+relation:30,14:59:42:_log_joins:2427:uKNqfA -- Filename.files setup secondary join None
+relation:30,14:59:42:_log_joins:2428:uKNqfA -- Filename.files synchronize pairs [(files.id => filename.fileId)]
+relation:30,14:59:42:_log_joins:2435:uKNqfA -- Filename.files secondary synchronize pairs []
+relation:30,14:59:42:_log_joins:2443:uKNqfA -- Filename.files local/remote pairs [(filename.fileId / files.id)]
+relation:30,14:59:42:_log_joins:2450:uKNqfA -- Filename.files remote columns [files.id]
+relation:30,14:59:42:_log_joins:2455:uKNqfA -- Filename.files local columns [filename.fileId]
+relation:30,14:59:42:_log_joins:2460:uKNqfA -- Filename.files relationship direction symbol('MANYTOONE')
+strategi:30,14:59:42:__init__:547:uKNqfA -- Filename.files lazy loading clause files.id = :param_1
+strategi:30,14:59:42:__init__:572:uKNqfA -- Filename.files will use query.get() to optimize instance loads
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Filename|filename) initialize prop owner
+relation:30,14:59:42:_log_joins:2426:uKNqfA -- Filename.owner setup primary join owner.id = filename.owner_id
+relation:30,14:59:42:_log_joins:2427:uKNqfA -- Filename.owner setup secondary join None
+relation:30,14:59:42:_log_joins:2428:uKNqfA -- Filename.owner synchronize pairs [(owner.id => filename.owner_id)]
+relation:30,14:59:42:_log_joins:2435:uKNqfA -- Filename.owner secondary synchronize pairs []
+relation:30,14:59:42:_log_joins:2443:uKNqfA -- Filename.owner local/remote pairs [(filename.owner_id / owner.id)]
+relation:30,14:59:42:_log_joins:2450:uKNqfA -- Filename.owner remote columns [owner.id]
+relation:30,14:59:42:_log_joins:2455:uKNqfA -- Filename.owner local columns [filename.owner_id]
+relation:30,14:59:42:_log_joins:2460:uKNqfA -- Filename.owner relationship direction symbol('MANYTOONE')
+strategi:30,14:59:42:__init__:547:uKNqfA -- Filename.owner lazy loading clause owner.id = :param_1
+strategi:30,14:59:42:__init__:572:uKNqfA -- Filename.owner will use query.get() to optimize instance loads
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Filename|filename) initialize prop id
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Filename|filename) initialize prop fileId
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Filename|filename) initialize prop fileName
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Filename|filename) initialize prop owner_id
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Filename|filename) _post_configure_properties() complete
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Tasks|tasks) _post_configure_properties() started
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Tasks|tasks) initialize prop id
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Tasks|tasks) initialize prop path
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Tasks|tasks) initialize prop creds
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Tasks|tasks) initialize prop fileid
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Tasks|tasks) initialize prop userid
+mapper.p:30,14:59:42:_log:1998:uKNqfA -- (Tasks|tasks) _post_configure_properties() complete
+base.py:30,14:59:42:__connect:653:uKNqfA -- Created new connection <sqlite3.Connection object at 0x7f006b70a4e0>
+base.py:30,14:59:42:checkout:507:uKNqfA -- Connection <sqlite3.Connection object at 0x7f006b70a4e0> checked out from pool
+base.py:30,14:59:42:_begin_impl:711:uKNqfA -- BEGIN (implicit)
+base.py:30,14:59:42:_execute_context:1205:uKNqfA -- INSERT INTO owner (name) VALUES (?)
+base.py:30,14:59:42:_execute_context:1207:uKNqfA -- ('527e4afc-4598-400f-8536-afa5324f0ba404-30-14-1970',)
+base.py:30,14:59:42:_commit_impl:753:uKNqfA -- COMMIT
+base.py:30,14:59:42:_finalize_fairy:684:uKNqfA -- Connection <sqlite3.Connection object at 0x7f006b70a4e0> being returned to pool
+base.py:30,14:59:42:_reset:872:uKNqfA -- Connection <sqlite3.Connection object at 0x7f006b70a4e0> rollback-on-return
+base.py:30,14:59:42:_close_connection:267:uKNqfA -- Closing connection <sqlite3.Connection object at 0x7f006b70a4e0>
+sql.py:30,14:59:42:start:150:uKNqfA -- Checked out owner object, fileid dict, and lock
+path_reg:30,14:59:42:set:83:uKNqfA -- set 'memoized_setups' on path 'CachingEntityRegistry((<Mapper at 0x7f007a48a940; Owner>,))' to '{}'
+base.py:30,14:59:42:__connect:653:uKNqfA -- Created new connection <sqlite3.Connection object at 0x7f006b70a4e0>
+base.py:30,14:59:42:checkout:507:uKNqfA -- Connection <sqlite3.Connection object at 0x7f006b70a4e0> checked out from pool
+base.py:30,14:59:42:_begin_impl:711:uKNqfA -- BEGIN (implicit)
+base.py:30,14:59:42:_execute_context:1205:uKNqfA -- SELECT owner.id AS owner_id, owner.name AS owner_name 
+FROM owner 
+WHERE owner.id = ?
+base.py:30,14:59:42:_execute_context:1207:uKNqfA -- (9,)
+sql_owne:30,14:59:42:__call__:21:uKNqfA -- Found old userid, using
+result.p:30,14:59:42:_init_metadata:809:uKNqfA -- Col ('owner_id', 'owner_name')
+result.p:30,14:59:42:process_rows:1249:uKNqfA -- Row (9, '527e4afc-4598-400f-8536-afa5324f0ba404-30-14-1970')
+sql.py:30,14:59:42:start:150:uKNqfA -- Checked out owner object, fileid dict, and lock
+sql_owne:30,14:59:42:__call__:21:uKNqfA -- Found old userid, using
+path_reg:30,14:59:42:set:83:uKNqfA -- set 'memoized_setups' on path 'CachingEntityRegistry((<Mapper at 0x7f007a48a940; Owner>,))' to '{}'
+base.py:30,14:59:42:__connect:653:uKNqfA -- Created new connection <sqlite3.Connection object at 0x7f007a30ba80>
+base.py:30,14:59:42:checkout:507:uKNqfA -- Connection <sqlite3.Connection object at 0x7f007a30ba80> checked out from pool
+base.py:30,14:59:42:_begin_impl:711:uKNqfA -- BEGIN (implicit)
+base.py:30,14:59:42:_execute_context:1205:uKNqfA -- SELECT owner.id AS owner_id, owner.name AS owner_name 
+FROM owner 
+WHERE owner.id = ?
+base.py:30,14:59:42:_execute_context:1207:uKNqfA -- (9,)
+result.p:30,14:59:42:_init_metadata:809:uKNqfA -- Col ('owner_id', 'owner_name')
+result.p:30,14:59:42:process_rows:1249:uKNqfA -- Row (9, '527e4afc-4598-400f-8536-afa5324f0ba404-30-14-1970')
+sql.py:30,14:59:42:start:150:uKNqfA -- Checked out owner object, fileid dict, and lock
+path_reg:30,14:59:42:set:83:uKNqfA -- set 'memoized_setups' on path 'CachingEntityRegistry((<Mapper at 0x7f007a48a940; Owner>,))' to '{}'
+sql_owne:30,14:59:42:__call__:21:uKNqfA -- Found old userid, using
+base.py:30,14:59:42:__connect:653:uKNqfA -- Created new connection <sqlite3.Connection object at 0x7f006b671120>
+base.py:30,14:59:42:checkout:507:uKNqfA -- Connection <sqlite3.Connection object at 0x7f006b671120> checked out from pool
+base.py:30,14:59:42:_begin_impl:711:uKNqfA -- BEGIN (implicit)
+base.py:30,14:59:42:_execute_context:1205:uKNqfA -- SELECT owner.id AS owner_id, owner.name AS owner_name 
+FROM owner 
+WHERE owner.id = ?
+base.py:30,14:59:42:_execute_context:1207:uKNqfA -- (9,)
+sql.py:30,14:59:42:start:150:uKNqfA -- Checked out owner object, fileid dict, and lock
+result.p:30,14:59:42:_init_metadata:809:uKNqfA -- Col ('owner_id', 'owner_name')
+path_reg:30,14:59:42:set:83:uKNqfA -- set 'memoized_setups' on path 'CachingEntityRegistry((<Mapper at 0x7f007a48a940; Owner>,))' to '{}'
+result.p:30,14:59:42:process_rows:1249:uKNqfA -- Row (9, '527e4afc-4598-400f-8536-afa5324f0ba404-30-14-1970')
+sql_owne:30,14:59:42:__call__:21:uKNqfA -- Found old userid, using
+base.py:30,14:59:42:__connect:653:uKNqfA -- Created new connection <sqlite3.Connection object at 0x7f006b671300>
+base.py:30,14:59:42:checkout:507:uKNqfA -- Connection <sqlite3.Connection object at 0x7f006b671300> checked out from pool
+base.py:30,14:59:42:_begin_impl:711:uKNqfA -- BEGIN (implicit)
+base.py:30,14:59:42:_execute_context:1205:uKNqfA -- SELECT owner.id AS owner_id, owner.name AS owner_name 
+FROM owner 
+WHERE owner.id = ?
+base.py:30,14:59:42:_execute_context:1207:uKNqfA -- (9,)
+result.p:30,14:59:42:_init_metadata:809:uKNqfA -- Col ('owner_id', 'owner_name')
+sql.py:30,14:59:42:start:150:uKNqfA -- Checked out owner object, fileid dict, and lock
+result.p:30,14:59:42:process_rows:1249:uKNqfA -- Row (9, '527e4afc-4598-400f-8536-afa5324f0ba404-30-14-1970')
+path_reg:30,14:59:42:set:83:uKNqfA -- set 'memoized_setups' on path 'CachingEntityRegistry((<Mapper at 0x7f007a48a940; Owner>,))' to '{}'
+base.py:30,14:59:42:__connect:653:uKNqfA -- Created new connection <sqlite3.Connection object at 0x7f006b671210>
+base.py:30,14:59:42:checkout:507:uKNqfA -- Connection <sqlite3.Connection object at 0x7f006b671210> checked out from pool
+base.py:30,14:59:42:_begin_impl:711:uKNqfA -- BEGIN (implicit)
+base.py:30,14:59:42:_execute_context:1205:uKNqfA -- SELECT owner.id AS owner_id, owner.name AS owner_name 
+FROM owner 
+WHERE owner.id = ?
+base.py:30,14:59:42:_execute_context:1207:uKNqfA -- (9,)
+result.p:30,14:59:42:_init_metadata:809:uKNqfA -- Col ('owner_id', 'owner_name')
+result.p:30,14:59:42:process_rows:1249:uKNqfA -- Row (9, '527e4afc-4598-400f-8536-afa5324f0ba404-30-14-1970')
+configlo:30,14:59:43:handle_exception:84:uKNqfA -- Custom Uncaught exception
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 193, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/henry/pydocs/processing/sql_server.py", line 203, in <module>
+    thread_pool()
+  File "/home/henry/pydocs/processing/sql_server.py", line 181, in thread_pool
+    ds = concurrent.futures.wait(exec_tasks, return_when = concurrent.futures.FIRST_EXCEPTION)
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 305, in wait
+    waiter.event.wait(timeout)
+  File "/usr/lib/python3.8/threading.py", line 558, in wait
+    signaled = self._cond.wait(timeout)
+  File "/usr/lib/python3.8/threading.py", line 302, in wait
+    waiter.acquire()
+KeyboardInterrupt
+configlo:30,14:59:43:mp_sendmail:121:uKNqfA -- sending mail
+configlo:30,14:59:43:handle_exception:87:uKNqfA -- exiting! from sshook
+base.py:30,14:59:44:_finalize_fairy:684:uKNqfA -- Connection <sqlite3.Connection object at 0x7f006b671120> being returned to pool
+base.py:30,14:59:44:_reset:872:uKNqfA -- Connection <sqlite3.Connection object at 0x7f006b671120> rollback-on-return
+base.py:30,14:59:44:_finalize_fairy:701:uKNqfA -- Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 693, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 880, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 540, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139639760344832 and this is thread id 139640128952128.
+base.py:30,14:59:44:invalidate:570:uKNqfA -- Invalidate connection <sqlite3.Connection object at 0x7f006b671120> (reason: ProgrammingError:SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139639760344832 and this is thread id 139640128952128.)
+base.py:30,14:59:44:_close_connection:267:uKNqfA -- Closing connection <sqlite3.Connection object at 0x7f006b671120>
+base.py:30,14:59:44:_close_connection:272:uKNqfA -- Exception closing connection <sqlite3.Connection object at 0x7f006b671120>
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 693, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 880, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 540, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139639760344832 and this is thread id 139640128952128.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 270, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 546, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139639760344832 and this is thread id 139640128952128.
+base.py:30,14:59:44:_finalize_fairy:684:uKNqfA -- Connection <sqlite3.Connection object at 0x7f006b671300> being returned to pool
+base.py:30,14:59:44:_reset:872:uKNqfA -- Connection <sqlite3.Connection object at 0x7f006b671300> rollback-on-return
+base.py:30,14:59:44:_finalize_fairy:701:uKNqfA -- Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 693, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 880, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 540, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139639751952128 and this is thread id 139640128952128.
+base.py:30,14:59:44:invalidate:570:uKNqfA -- Invalidate connection <sqlite3.Connection object at 0x7f006b671300> (reason: ProgrammingError:SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139639751952128 and this is thread id 139640128952128.)
+base.py:30,14:59:44:_close_connection:267:uKNqfA -- Closing connection <sqlite3.Connection object at 0x7f006b671300>
+base.py:30,14:59:44:_close_connection:272:uKNqfA -- Exception closing connection <sqlite3.Connection object at 0x7f006b671300>
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 693, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 880, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 540, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139639751952128 and this is thread id 139640128952128.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 270, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 546, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139639751952128 and this is thread id 139640128952128.
+base.py:30,14:59:44:_finalize_fairy:684:uKNqfA -- Connection <sqlite3.Connection object at 0x7f006b671210> being returned to pool
+base.py:30,14:59:44:_reset:872:uKNqfA -- Connection <sqlite3.Connection object at 0x7f006b671210> rollback-on-return
+base.py:30,14:59:44:_finalize_fairy:701:uKNqfA -- Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 693, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 880, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 540, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139639743297280 and this is thread id 139640128952128.
+base.py:30,14:59:44:invalidate:570:uKNqfA -- Invalidate connection <sqlite3.Connection object at 0x7f006b671210> (reason: ProgrammingError:SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139639743297280 and this is thread id 139640128952128.)
+base.py:30,14:59:44:_close_connection:267:uKNqfA -- Closing connection <sqlite3.Connection object at 0x7f006b671210>
+base.py:30,14:59:44:_close_connection:272:uKNqfA -- Exception closing connection <sqlite3.Connection object at 0x7f006b671210>
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 693, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 880, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 540, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139639743297280 and this is thread id 139640128952128.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 270, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 546, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139639743297280 and this is thread id 139640128952128.
+base.py:30,14:59:44:_finalize_fairy:684:uKNqfA -- Connection <sqlite3.Connection object at 0x7f006b70a4e0> being returned to pool
+base.py:30,14:59:44:_reset:872:uKNqfA -- Connection <sqlite3.Connection object at 0x7f006b70a4e0> rollback-on-return
+base.py:30,14:59:44:_finalize_fairy:701:uKNqfA -- Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 693, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 880, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 540, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139639777130240 and this is thread id 139640128952128.
+base.py:30,14:59:44:invalidate:570:uKNqfA -- Invalidate connection <sqlite3.Connection object at 0x7f006b70a4e0> (reason: ProgrammingError:SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139639777130240 and this is thread id 139640128952128.)
+base.py:30,14:59:44:_close_connection:267:uKNqfA -- Closing connection <sqlite3.Connection object at 0x7f006b70a4e0>
+base.py:30,14:59:44:_close_connection:272:uKNqfA -- Exception closing connection <sqlite3.Connection object at 0x7f006b70a4e0>
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 693, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 880, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 540, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139639777130240 and this is thread id 139640128952128.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 270, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 546, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139639777130240 and this is thread id 139640128952128.
+base.py:30,14:59:44:_finalize_fairy:684:uKNqfA -- Connection <sqlite3.Connection object at 0x7f007a30ba80> being returned to pool
+base.py:30,14:59:44:_reset:872:uKNqfA -- Connection <sqlite3.Connection object at 0x7f007a30ba80> rollback-on-return
+base.py:30,14:59:44:_finalize_fairy:701:uKNqfA -- Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 693, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 880, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 540, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139639768737536 and this is thread id 139640128952128.
+base.py:30,14:59:44:invalidate:570:uKNqfA -- Invalidate connection <sqlite3.Connection object at 0x7f007a30ba80> (reason: ProgrammingError:SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139639768737536 and this is thread id 139640128952128.)
+base.py:30,14:59:44:_close_connection:267:uKNqfA -- Closing connection <sqlite3.Connection object at 0x7f007a30ba80>
+base.py:30,14:59:44:_close_connection:272:uKNqfA -- Exception closing connection <sqlite3.Connection object at 0x7f007a30ba80>
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 693, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 880, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 540, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139639768737536 and this is thread id 139640128952128.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 270, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/henry/.virtualenvs/pydocs/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 546, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139639768737536 and this is thread id 139640128952128.
+base.py:30,14:59:44:_finalize_fairy:684:uKNqfA -- Connection <sqlite3.Connection object at 0x7f007a558c60> being returned to pool
+base.py:30,14:59:44:_reset:872:uKNqfA -- Connection <sqlite3.Connection object at 0x7f007a558c60> rollback-on-return
+base.py:30,14:59:44:_close_connection:267:uKNqfA -- Closing connection <sqlite3.Connection object at 0x7f007a558c60>
