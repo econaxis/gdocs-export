@@ -25,7 +25,7 @@ if "FLASKDBG" in os.environ:
 else:
     SERVER_ADDR = 'sql_serv'
 
-if (random.random() < 0 ):
+if (random.random() < 0.0 ):
     os.environ["PROFILE"] = "true"
 
 
@@ -87,26 +87,22 @@ class TestUtil:
         p = None
         while not endEvent.is_set():
 
-            if random.random() < 0.3:
+            if random.random() < 0.1:
                 p = configlog.sendmail(msg = str(datetime.now()), return_thread = True)
 
             gc.collect()
 
-            logger.warning('\n\n%sMemory usage: %s (kb)%s%d mins since start'
+            logger.warning('\n\n%sMemory usage: %s (kb)%s%f mins since start'
                     ,'-'*15,resource.getrusage(resource.RUSAGE_SELF).ru_maxrss, '-'*15,
                     (time.time() - cls.starttime)/60)
-
 
             if("PROFILE" in os.environ):
                 sns = tracemalloc.take_snapshot()
                 for i in sns.compare_to(cls.snapshot, 'lineno')[0:5]:
                     logger.info(i)
-
                 logger.info('%s','-'*60)
-
                 for i in sns.statistics('lineno')[0:5]:
                     logger.info(i)
-
                 cls.snapshot = sns
 
 
@@ -119,7 +115,7 @@ class TestUtil:
 
             #Temp var for thread
 
-            _sleep_time = 16
+            _sleep_time = 32
             interval = 2
 
             df_t = []
@@ -127,11 +123,12 @@ class TestUtil:
             for i in range(interval):
                 if endEvent.is_set():
                     break
-                if len(cls.files)>5:
+                if len(cls.files)>10:
                     code = await cls.dump_files()
                     while not code:
-                        logger.warning ("SQL Socket Send denied, retrying")
-                        time.sleep(30)
+                        secs = random.randint(100, 300)
+                        logger.error("SQL Socket Send denied, retrying in %d", secs)
+                        time.sleep(secs)
                         code = await cls.dump_files()
 
                 await asyncio.sleep(_sleep_time / interval)
@@ -143,7 +140,6 @@ class TestUtil:
             start_time = time.time()
 
             if p:
-                logger.debug("awaiting email task join")
                 p.join(timeout = 0.01)
                 logger.debug("done awaiting task join")
 
@@ -177,15 +173,6 @@ class TestUtil:
 
     @classmethod
     async def send_socket(cls, info_packet):
-
-        pickle.dump(info_packet, open('info_packet', 'wb'))
-        s = pformat(info_packet)
-        _step = 10000
-        for i in range(0, len(s), _step):
-            logger.debug("\n%s\n", s[i:i+_step])
-
-
-
         logger.info("connect working")
         r, w = await asyncio.open_connection(SERVER_ADDR, 8888)
 
@@ -249,8 +236,6 @@ class TestUtil:
             e = sys.exc_info()[0]
             rev = await response.text()
             logger.log(5, rev)
-
-
 
             if(fileTuple and queue and fileTuple[-1] < 2):
                 fileTuple = list(fileTuple)
@@ -320,8 +305,6 @@ async def adv_read(reader):
 
     data = b"".join(data)
 
-    print("length of read: ", len(data), _length)
-
     if to_pickle:
         return pickle.loads(data)
     else:
@@ -333,12 +316,8 @@ async def adv_write(writer, data, to_pickle = False):
     if to_pickle:
         data = pickle.dumps(data)
 
-    logger.info("length of write: %d", len(data))
 
     header = struct.pack('!Q?', len(data), to_pickle)
-
-    logger.info(header)
-
     writer.write(header)
     writer.write(data)
     await writer.drain()

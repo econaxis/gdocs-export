@@ -1,0 +1,1631 @@
+Attaching to pydocs1_pydocs_2, pydocs1_pydocs_1, sql_serv, pydocs1_pydocs_3
+[36mpydocs_2  |[0m STARTING
+[36mpydocs_2  |[0m /app
+[36mpydocs_2  |[0m Driver%3D%7BODBC+Driver+17+for+SQL+Server%7D%3BServer%3Dtcp%3Apydoc-db.database.windows.net%2C1433%3BDatabase%3Dpydocs%3BUid%3Dhenry2833%3BPwd%3D%7BInfoip32%7D%3BEncrypt%3Dyes%3BTrustServerCertificate%3Dno%3BConnection+Timeout%3D30%3B
+[36mpydocs_2  |[0m redis-17608.c53.west-us.azure.cloud.redislabs.com
+[36mpydocs_2  |[0m KgPh6DCLJ8tr1dq6TkiG66otuiC3GPqE
+[36mpydocs_2  |[0m default
+[36mpydocs_2  |[0m 
+[36mpydocs_2  |[0m Worker mode
+[36mpydocs_2  |[0m 00:26:15 Worker rq:worker:a0661584013e4a3eaea3571e82270d5a: started, version 1.3.0
+[36mpydocs_2  |[0m 00:26:15 *** Listening on default...
+[36mpydocs_2  |[0m 00:26:16 default: loader.load('testing123mhRmCg', '/app/data/testing123mhRmCg/', 'root', <google.oauth2.credentials.Credentials object at 0x7f952e761ee0>) (c0754727-9645-4cae-85ef-7b47530b90ef)
+[36mpydocs_2  |[0m get_file:01,17:26:18:loadFiles:252:AZHoyg -- Start loadFiles, testing123mhRmCg root
+[36mpydocs_2  |[0m test_uti:01,17:26:18:send_socket:176:AZHoyg -- connect working
+[36mpydocs_2  |[0m test_uti:01,17:26:18:send_socket:185:AZHoyg -- received: b'go'
+[36mpydocs_2  |[0m TESTING SOCKET SEND
+[36mpydocs_2  |[0m ==== END ====
+[36mpydocs_2  |[0m configlo:01,17:26:18:mp_sendmail:121:AZHoyg -- sending mail
+[36mpydocs_2  |[0m test_uti:01,17:26:18:print_size:95:AZHoyg -- 
+[36mpydocs_2  |[0m 
+[36mpydocs_2  |[0m ---------------Memory usage: 47960 (kb)---------------0.001017 mins since start
+[36mpydocs_2  |[0m test_uti:01,17:26:18:print_size:112:AZHoyg -- /app/data/testing123mhRmCg/
+[36mpydocs_2  |[0m 0/0 discovered items at 2020-05-01 17:26:18.237712
+[36mpydocs_2  |[0m dump count: 0
+[36mpydocs_2  |[0m test_uti:01,17:26:18:tryGetQueue:272:AZHoyg -- getRevisionwaiting 1 5
+[36mpydocs_2  |[0m test_uti:01,17:26:18:tryGetQueue:272:AZHoyg -- getRevisionwaiting 1 5
+[36mpydocs_2  |[0m gdoc.py:01,17:26:20:_download_details:159:AZHoyg -- received job for 1hV6DumA55fF_GwtceKjRqwuSAww_V70exrSzGFoF1Rk
+[36mpydocs_2  |[0m gdoc.py:01,17:26:23:_download_details:159:AZHoyg -- received job for 1cGlmEaWYTHdD_Y3vlkIMMkZhdmosSZo_rQYxcSBoDbQ
+[36mpydocs_2  |[0m gdoc.py:01,17:26:25:async_init:118:AZHoyg -- Done computing gdoc for eight 1hV6DumA55fF_GwtceKjRqwuSAww_V70exrSzGFoF1Rk
+[36mpydocs_2  |[0m get_file:01,17:26:25:getIdsRecursive:114:AZHoyg -- ----------------------------------getid return
+[36mpydocs_2  |[0m get_file:01,17:26:25:getIdsRecursive:115:AZHoyg -- len 0:187:1
+[36mpydocs_2  |[0m gdoc.py:01,17:26:25:_download_details:159:AZHoyg -- received job for 1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ
+[36mpydocs_2  |[0m gdoc.py:01,17:26:26:_download_details:159:AZHoyg -- received job for 1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s
+[36mpydocs_2  |[0m gdoc.py:01,17:26:28:async_init:118:AZHoyg -- Done computing gdoc for 458-471 1cGlmEaWYTHdD_Y3vlkIMMkZhdmosSZo_rQYxcSBoDbQ
+[36mpydocs_2  |[0m gdoc.py:01,17:26:28:_download_details:159:AZHoyg -- received job for 1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08
+[36mpydocs_2  |[0m gdoc.py:01,17:26:30:async_init:118:AZHoyg -- Done computing gdoc for The Factory High School 1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ
+[36mpydocs_2  |[0m gdoc.py:01,17:26:30:_download_details:159:AZHoyg -- received job for 1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4
+[36mpydocs_2  |[0m gdoc.py:01,17:26:31:async_init:118:AZHoyg -- Done computing gdoc for 338 - 345 1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s
+[36mpydocs_2  |[0m gdoc.py:01,17:26:31:_download_details:159:AZHoyg -- received job for 1C09g5-ATBpXNJOmH8ANwCnq7Pk6vClzI1lmFYcqaH6A
+[36mpydocs_2  |[0m gdoc.py:01,17:26:33:async_init:118:AZHoyg -- Done computing gdoc for academic intent 1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08
+[36mpydocs_2  |[0m gdoc.py:01,17:26:33:_download_details:159:AZHoyg -- received job for 1jRrZTHn-oge2sTqxli8Um026xuniXAeezLZn4B2zVSg
+[36mpydocs_2  |[0m gdoc.py:01,17:26:35:async_init:118:AZHoyg -- Done computing gdoc for attitudes twd children 1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4
+[36mpydocs_2  |[0m gdoc.py:01,17:26:35:_download_details:159:AZHoyg -- received job for 1D48Gz6hmPkE6sATNqYoA3P3Hdjtq1y2zHRjrh1kH64I
+[36mpydocs_2  |[0m gdoc.py:01,17:26:36:async_init:118:AZHoyg -- Done computing gdoc for balev case 1C09g5-ATBpXNJOmH8ANwCnq7Pk6vClzI1lmFYcqaH6A
+[36mpydocs_2  |[0m gdoc.py:01,17:26:37:_download_details:159:AZHoyg -- received job for 1cctIQ_TyhvRFgFVkzjwcfDL1w0i4L2lF-78_WM7Hy6A
+[33mpydocs_1  |[0m STARTING
+[33mpydocs_1  |[0m /app
+[33mpydocs_1  |[0m Driver%3D%7BODBC+Driver+17+for+SQL+Server%7D%3BServer%3Dtcp%3Apydoc-db.database.windows.net%2C1433%3BDatabase%3Dpydocs%3BUid%3Dhenry2833%3BPwd%3D%7BInfoip32%7D%3BEncrypt%3Dyes%3BTrustServerCertificate%3Dno%3BConnection+Timeout%3D30%3B
+[33mpydocs_1  |[0m redis-17608.c53.west-us.azure.cloud.redislabs.com
+[33mpydocs_1  |[0m KgPh6DCLJ8tr1dq6TkiG66otuiC3GPqE
+[33mpydocs_1  |[0m default
+[33mpydocs_1  |[0m 
+[33mpydocs_1  |[0m Worker mode
+[33mpydocs_1  |[0m 00:26:15 Worker rq:worker:e069ffef596b43c79a9ad047a5e82690: started, version 1.3.0
+[33mpydocs_1  |[0m 00:26:15 *** Listening on default...
+[33mpydocs_1  |[0m 00:26:16 default: loader.load('testing123X15DNQ', '/app/data/testing123X15DNQ/', 'root', <google.oauth2.credentials.Credentials object at 0x7f952e761ee0>) (8a7bb748-51d9-450f-8120-fb026e2cf455)
+[33mpydocs_1  |[0m get_file:01,17:26:18:loadFiles:252:LFrZEA -- Start loadFiles, testing123X15DNQ root
+[33mpydocs_1  |[0m test_uti:01,17:26:18:send_socket:176:LFrZEA -- connect working
+[33mpydocs_1  |[0m test_uti:01,17:26:18:send_socket:185:LFrZEA -- received: b'go'
+[33mpydocs_1  |[0m test_uti:01,17:26:18:print_size:95:LFrZEA -- 
+[33mpydocs_1  |[0m 
+[33mpydocs_1  |[0m ---------------Memory usage: 47692 (kb)---------------0.000608 mins since start
+[33mpydocs_1  |[0m test_uti:01,17:26:18:print_size:112:LFrZEA -- /app/data/testing123X15DNQ/
+[33mpydocs_1  |[0m 0/0 discovered items at 2020-05-01 17:26:18.210039
+[33mpydocs_1  |[0m dump count: 0
+[33mpydocs_1  |[0m test_uti:01,17:26:18:tryGetQueue:272:LFrZEA -- getRevisionwaiting 1 5
+[33mpydocs_1  |[0m test_uti:01,17:26:18:tryGetQueue:272:LFrZEA -- getRevisionwaiting 1 5
+[33mpydocs_1  |[0m TESTING SOCKET SEND
+[33mpydocs_1  |[0m ==== END ====
+[33mpydocs_1  |[0m gdoc.py:01,17:26:21:_download_details:159:LFrZEA -- received job for 1hV6DumA55fF_GwtceKjRqwuSAww_V70exrSzGFoF1Rk
+[33mpydocs_1  |[0m gdoc.py:01,17:26:22:_download_details:159:LFrZEA -- received job for 1cGlmEaWYTHdD_Y3vlkIMMkZhdmosSZo_rQYxcSBoDbQ
+[33mpydocs_1  |[0m get_file:01,17:26:25:getIdsRecursive:114:LFrZEA -- ----------------------------------getid return
+[33mpydocs_1  |[0m get_file:01,17:26:25:getIdsRecursive:115:LFrZEA -- len 0:188:0
+[33mpydocs_1  |[0m gdoc.py:01,17:26:26:async_init:118:LFrZEA -- Done computing gdoc for eight 1hV6DumA55fF_GwtceKjRqwuSAww_V70exrSzGFoF1Rk
+[33mpydocs_1  |[0m gdoc.py:01,17:26:26:_download_details:159:LFrZEA -- received job for 1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s
+[33mpydocs_1  |[0m gdoc.py:01,17:26:26:_download_details:159:LFrZEA -- received job for 1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ
+[33mpydocs_1  |[0m gdoc.py:01,17:26:27:async_init:118:LFrZEA -- Done computing gdoc for 458-471 1cGlmEaWYTHdD_Y3vlkIMMkZhdmosSZo_rQYxcSBoDbQ
+[33mpydocs_1  |[0m gdoc.py:01,17:26:27:_download_details:159:LFrZEA -- received job for 1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08
+[33mpydocs_1  |[0m gdoc.py:01,17:26:31:async_init:118:LFrZEA -- Done computing gdoc for 338 - 345 1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s
+[33mpydocs_1  |[0m gdoc.py:01,17:26:31:async_init:118:LFrZEA -- Done computing gdoc for The Factory High School 1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ
+[33mpydocs_1  |[0m gdoc.py:01,17:26:31:_download_details:159:LFrZEA -- received job for 1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4
+[33mpydocs_1  |[0m gdoc.py:01,17:26:31:_download_details:159:LFrZEA -- received job for 1C09g5-ATBpXNJOmH8ANwCnq7Pk6vClzI1lmFYcqaH6A
+[33mpydocs_1  |[0m gdoc.py:01,17:26:32:async_init:118:LFrZEA -- Done computing gdoc for academic intent 1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08
+[33mpydocs_1  |[0m gdoc.py:01,17:26:33:_download_details:159:LFrZEA -- received job for 1jRrZTHn-oge2sTqxli8Um026xuniXAeezLZn4B2zVSg
+[33mpydocs_1  |[0m gdoc.py:01,17:26:36:async_init:118:LFrZEA -- Done computing gdoc for attitudes twd children 1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4
+[33mpydocs_1  |[0m gdoc.py:01,17:26:36:async_init:118:LFrZEA -- Done computing gdoc for balev case 1C09g5-ATBpXNJOmH8ANwCnq7Pk6vClzI1lmFYcqaH6A
+[33mpydocs_1  |[0m gdoc.py:01,17:26:37:_download_details:159:LFrZEA -- received job for 1D48Gz6hmPkE6sATNqYoA3P3Hdjtq1y2zHRjrh1kH64I
+[33mpydocs_1  |[0m gdoc.py:01,17:26:37:_download_details:159:LFrZEA -- received job for 1cctIQ_TyhvRFgFVkzjwcfDL1w0i4L2lF-78_WM7Hy6A
+[32msql_serv  |[0m STARTING
+[32msql_serv  |[0m /app
+[32msql_serv  |[0m Driver%3D%7BODBC+Driver+17+for+SQL+Server%7D%3BServer%3Dtcp%3Apydoc-db.database.windows.net%2C1433%3BDatabase%3Dpydocs%3BUid%3Dhenry2833%3BPwd%3D%7BInfoip32%7D%3BEncrypt%3Dyes%3BTrustServerCertificate%3Dno%3BConnection+Timeout%3D30%3B
+[32msql_serv  |[0m redis-17608.c53.west-us.azure.cloud.redislabs.com
+[32msql_serv  |[0m KgPh6DCLJ8tr1dq6TkiG66otuiC3GPqE
+[32msql_serv  |[0m 
+[32msql_serv  |[0m true
+[32msql_serv  |[0m SQL SERVER MODE
+[32msql_serv  |[0m sql_serv:01,17:26:15:<module>:211:YyuwkA -- STARTING SQL SERVER
+[32msql_serv  |[0m sql_serv:01,17:26:16:report:28:YyuwkA -- SQL Queue size: 0, thread size: 0
+[32msql_serv  |[0m sql_serv:01,17:26:16:remove_dead_threads:149:YyuwkA -- Removed finished threads: 0, total resolved threads: 0
+[32msql_serv  |[0m new task
+[32msql_serv  |[0m sql_serv:01,17:26:16:handle_request:129:YyuwkA -- Serving on ('0.0.0.0', 8888)
+[32msql_serv  |[0m sql_serv:01,17:26:18:req_callback:95:YyuwkA -- queue size: 0
+[32msql_serv  |[0m name:  default2020-05-01 17:26:17.949104
+[32msql_serv  |[0m sql_serv:01,17:26:18:req_callback:95:YyuwkA -- queue size: 0
+[32msql_serv  |[0m sql_serv:01,17:26:18:req_callback:95:YyuwkA -- queue size: 0
+[32msql_serv  |[0m name:  default2020-05-01 17:26:18.041551
+[32msql_serv  |[0m name:  default2020-05-01 17:26:18.040407
+[32msql_serv  |[0m sql_serv:01,17:26:26:report:28:YyuwkA -- SQL Queue size: 0, thread size: 0
+[32msql_serv  |[0m sql_serv:01,17:26:26:remove_dead_threads:149:YyuwkA -- Removed finished threads: 0, total resolved threads: 0
+[32msql_serv  |[0m sql_serv:01,17:26:36:report:28:YyuwkA -- SQL Queue size: 0, thread size: 0
+[32msql_serv  |[0m sql_serv:01,17:26:36:remove_dead_threads:149:YyuwkA -- Removed finished threads: 0, total resolved threads: 0
+[35mpydocs_3  |[0m STARTING
+[35mpydocs_3  |[0m /app
+[35mpydocs_3  |[0m Driver%3D%7BODBC+Driver+17+for+SQL+Server%7D%3BServer%3Dtcp%3Apydoc-db.database.windows.net%2C1433%3BDatabase%3Dpydocs%3BUid%3Dhenry2833%3BPwd%3D%7BInfoip32%7D%3BEncrypt%3Dyes%3BTrustServerCertificate%3Dno%3BConnection+Timeout%3D30%3B
+[35mpydocs_3  |[0m redis-17608.c53.west-us.azure.cloud.redislabs.com
+[35mpydocs_3  |[0m KgPh6DCLJ8tr1dq6TkiG66otuiC3GPqE
+[35mpydocs_3  |[0m default
+[35mpydocs_3  |[0m 
+[35mpydocs_3  |[0m Worker mode
+[35mpydocs_3  |[0m 00:26:15 Worker rq:worker:515ea694b9af480180ccfb23e20a9ddf: started, version 1.3.0
+[35mpydocs_3  |[0m 00:26:15 *** Listening on default...
+[35mpydocs_3  |[0m 00:26:16 default: loader.load('testing123ZXvULg', '/app/data/testing123ZXvULg/', 'root', <google.oauth2.credentials.Credentials object at 0x7f952e761ee0>) (fa253b91-5767-4766-b795-78fc6111b5f3)
+[35mpydocs_3  |[0m get_file:01,17:26:17:loadFiles:252:0PLjCw -- Start loadFiles, testing123ZXvULg root
+[35mpydocs_3  |[0m test_uti:01,17:26:18:send_socket:176:0PLjCw -- connect working
+[35mpydocs_3  |[0m test_uti:01,17:26:18:send_socket:185:0PLjCw -- received: b'go'
+[35mpydocs_3  |[0m test_uti:01,17:26:18:print_size:95:0PLjCw -- 
+[35mpydocs_3  |[0m 
+[35mpydocs_3  |[0m ---------------Memory usage: 47672 (kb)---------------0.000245 mins since start
+[35mpydocs_3  |[0m test_uti:01,17:26:18:print_size:112:0PLjCw -- /app/data/testing123ZXvULg/
+[35mpydocs_3  |[0m 0/0 discovered items at 2020-05-01 17:26:18.113508
+[35mpydocs_3  |[0m dump count: 0
+[35mpydocs_3  |[0m test_uti:01,17:26:18:tryGetQueue:272:0PLjCw -- getRevisionwaiting 1 5
+[35mpydocs_3  |[0m TESTING SOCKET SEND
+[35mpydocs_3  |[0m ==== END ====
+[35mpydocs_3  |[0m gdoc.py:01,17:26:20:_download_details:159:0PLjCw -- received job for 1hV6DumA55fF_GwtceKjRqwuSAww_V70exrSzGFoF1Rk
+[35mpydocs_3  |[0m gdoc.py:01,17:26:21:_download_details:159:0PLjCw -- received job for 1cGlmEaWYTHdD_Y3vlkIMMkZhdmosSZo_rQYxcSBoDbQ
+[35mpydocs_3  |[0m gdoc.py:01,17:26:21:_download_details:159:0PLjCw -- received job for 1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ
+[35mpydocs_3  |[0m gdoc.py:01,17:26:25:async_init:118:0PLjCw -- Done computing gdoc for eight 1hV6DumA55fF_GwtceKjRqwuSAww_V70exrSzGFoF1Rk
+[35mpydocs_3  |[0m get_file:01,17:26:25:getIdsRecursive:114:0PLjCw -- ----------------------------------getid return
+[35mpydocs_3  |[0m get_file:01,17:26:25:getIdsRecursive:115:0PLjCw -- len 0:186:1
+[35mpydocs_3  |[0m gdoc.py:01,17:26:25:_download_details:159:0PLjCw -- received job for 1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s
+[35mpydocs_3  |[0m gdoc.py:01,17:26:26:async_init:118:0PLjCw -- Done computing gdoc for 458-471 1cGlmEaWYTHdD_Y3vlkIMMkZhdmosSZo_rQYxcSBoDbQ
+[35mpydocs_3  |[0m gdoc.py:01,17:26:26:_download_details:159:0PLjCw -- received job for 1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08
+[35mpydocs_3  |[0m gdoc.py:01,17:26:26:async_init:118:0PLjCw -- Done computing gdoc for The Factory High School 1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ
+[35mpydocs_3  |[0m gdoc.py:01,17:26:27:_download_details:159:0PLjCw -- received job for 1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4
+[35mpydocs_3  |[0m gdoc.py:01,17:26:30:async_init:118:0PLjCw -- Done computing gdoc for 338 - 345 1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s
+[35mpydocs_3  |[0m gdoc.py:01,17:26:31:_download_details:159:0PLjCw -- received job for 1C09g5-ATBpXNJOmH8ANwCnq7Pk6vClzI1lmFYcqaH6A
+[35mpydocs_3  |[0m gdoc.py:01,17:26:31:async_init:118:0PLjCw -- Done computing gdoc for academic intent 1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08
+[35mpydocs_3  |[0m gdoc.py:01,17:26:32:_download_details:159:0PLjCw -- received job for 1jRrZTHn-oge2sTqxli8Um026xuniXAeezLZn4B2zVSg
+[35mpydocs_3  |[0m gdoc.py:01,17:26:32:async_init:118:0PLjCw -- Done computing gdoc for attitudes twd children 1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4
+[35mpydocs_3  |[0m gdoc.py:01,17:26:32:_download_details:159:0PLjCw -- received job for 1D48Gz6hmPkE6sATNqYoA3P3Hdjtq1y2zHRjrh1kH64I
+[35mpydocs_3  |[0m gdoc.py:01,17:26:36:async_init:118:0PLjCw -- Done computing gdoc for balev case 1C09g5-ATBpXNJOmH8ANwCnq7Pk6vClzI1lmFYcqaH6A
+[35mpydocs_3  |[0m gdoc.py:01,17:26:37:_download_details:159:0PLjCw -- received job for 1cctIQ_TyhvRFgFVkzjwcfDL1w0i4L2lF-78_WM7Hy6A
+[35mpydocs_3  |[0m gdoc.py:01,17:26:37:async_init:118:0PLjCw -- Done computing gdoc for Freelancers 1jRrZTHn-oge2sTqxli8Um026xuniXAeezLZn4B2zVSg
+[35mpydocs_3  |[0m gdoc.py:01,17:26:37:async_init:102:0PLjCw -- No content received for: 1D48Gz6hmPkE6sATNqYoA3P3Hdjtq1y2zHRjrh1kH64I, Untitled document.
+[35mpydocs_3  |[0m gdoc.py:01,17:26:37:async_init:118:0PLjCw -- Done computing gdoc for Untitled document 1D48Gz6hmPkE6sATNqYoA3P3Hdjtq1y2zHRjrh1kH64I
+[35mpydocs_3  |[0m get_file:01,17:26:37:getRevision:147:0PLjCw -- not done but tried to append, prob because no operations found file: 1D48Gz6hmPkE6sATNqYoA3P3Hdjtq1y2zHRjrh1kH64I, Untitled document
+[33mpydocs_1  |[0m gdoc.py:01,17:26:38:async_init:118:LFrZEA -- Done computing gdoc for Freelancers 1jRrZTHn-oge2sTqxli8Um026xuniXAeezLZn4B2zVSg
+[35mpydocs_3  |[0m gdoc.py:01,17:26:38:_download_details:159:0PLjCw -- received job for 186ge00t4G7kcx1QdCIHxRhTnZfzpSTGDgfAXkdbD_Ig
+[33mpydocs_1  |[0m gdoc.py:01,17:26:38:_download_details:159:LFrZEA -- received job for 186ge00t4G7kcx1QdCIHxRhTnZfzpSTGDgfAXkdbD_Ig
+[35mpydocs_3  |[0m gdoc.py:01,17:26:38:_download_details:159:0PLjCw -- received job for 15e68EIS9xXe5Yvzju4GtkyhFKJ_UgUA9juJKiUpPeUA
+[36mpydocs_2  |[0m gdoc.py:01,17:26:38:async_init:118:AZHoyg -- Done computing gdoc for Freelancers 1jRrZTHn-oge2sTqxli8Um026xuniXAeezLZn4B2zVSg
+[36mpydocs_2  |[0m gdoc.py:01,17:26:39:_download_details:159:AZHoyg -- received job for 186ge00t4G7kcx1QdCIHxRhTnZfzpSTGDgfAXkdbD_Ig
+[36mpydocs_2  |[0m gdoc.py:01,17:26:40:async_init:102:AZHoyg -- No content received for: 1D48Gz6hmPkE6sATNqYoA3P3Hdjtq1y2zHRjrh1kH64I, Untitled document.
+[36mpydocs_2  |[0m gdoc.py:01,17:26:40:async_init:118:AZHoyg -- Done computing gdoc for Untitled document 1D48Gz6hmPkE6sATNqYoA3P3Hdjtq1y2zHRjrh1kH64I
+[36mpydocs_2  |[0m get_file:01,17:26:40:getRevision:147:AZHoyg -- not done but tried to append, prob because no operations found file: 1D48Gz6hmPkE6sATNqYoA3P3Hdjtq1y2zHRjrh1kH64I, Untitled document
+[36mpydocs_2  |[0m gdoc.py:01,17:26:41:_download_details:159:AZHoyg -- received job for 15e68EIS9xXe5Yvzju4GtkyhFKJ_UgUA9juJKiUpPeUA
+[33mpydocs_1  |[0m gdoc.py:01,17:26:42:async_init:102:LFrZEA -- No content received for: 1D48Gz6hmPkE6sATNqYoA3P3Hdjtq1y2zHRjrh1kH64I, Untitled document.
+[33mpydocs_1  |[0m gdoc.py:01,17:26:42:async_init:118:LFrZEA -- Done computing gdoc for Untitled document 1D48Gz6hmPkE6sATNqYoA3P3Hdjtq1y2zHRjrh1kH64I
+[33mpydocs_1  |[0m get_file:01,17:26:42:getRevision:147:LFrZEA -- not done but tried to append, prob because no operations found file: 1D48Gz6hmPkE6sATNqYoA3P3Hdjtq1y2zHRjrh1kH64I, Untitled document
+[36mpydocs_2  |[0m gdoc.py:01,17:26:42:async_init:118:AZHoyg -- Done computing gdoc for ds 1cctIQ_TyhvRFgFVkzjwcfDL1w0i4L2lF-78_WM7Hy6A
+[35mpydocs_3  |[0m gdoc.py:01,17:26:42:async_init:118:0PLjCw -- Done computing gdoc for ds 1cctIQ_TyhvRFgFVkzjwcfDL1w0i4L2lF-78_WM7Hy6A
+[33mpydocs_1  |[0m gdoc.py:01,17:26:42:async_init:118:LFrZEA -- Done computing gdoc for ds 1cctIQ_TyhvRFgFVkzjwcfDL1w0i4L2lF-78_WM7Hy6A
+[33mpydocs_1  |[0m gdoc.py:01,17:26:42:_download_details:159:LFrZEA -- received job for 15e68EIS9xXe5Yvzju4GtkyhFKJ_UgUA9juJKiUpPeUA
+[35mpydocs_3  |[0m gdoc.py:01,17:26:43:async_init:118:0PLjCw -- Done computing gdoc for Coding Club LP (2020/03/10) 186ge00t4G7kcx1QdCIHxRhTnZfzpSTGDgfAXkdbD_Ig
+[33mpydocs_1  |[0m gdoc.py:01,17:26:43:async_init:118:LFrZEA -- Done computing gdoc for Coding Club LP (2020/03/10) 186ge00t4G7kcx1QdCIHxRhTnZfzpSTGDgfAXkdbD_Ig
+[36mpydocs_2  |[0m gdoc.py:01,17:26:43:_download_details:159:AZHoyg -- received job for 1sF1pFtL8fsnQBBAoTt8P7YGOVZVr6-6a4BLeU3PBncI
+[33mpydocs_1  |[0m gdoc.py:01,17:26:43:_download_details:159:LFrZEA -- received job for 1sF1pFtL8fsnQBBAoTt8P7YGOVZVr6-6a4BLeU3PBncI
+[35mpydocs_3  |[0m gdoc.py:01,17:26:43:_download_details:159:0PLjCw -- received job for 1sF1pFtL8fsnQBBAoTt8P7YGOVZVr6-6a4BLeU3PBncI
+[35mpydocs_3  |[0m gdoc.py:01,17:26:43:async_init:118:0PLjCw -- Done computing gdoc for Literary Devices 15e68EIS9xXe5Yvzju4GtkyhFKJ_UgUA9juJKiUpPeUA
+[36mpydocs_2  |[0m gdoc.py:01,17:26:44:async_init:118:AZHoyg -- Done computing gdoc for Coding Club LP (2020/03/10) 186ge00t4G7kcx1QdCIHxRhTnZfzpSTGDgfAXkdbD_Ig
+[35mpydocs_3  |[0m gdoc.py:01,17:26:44:_download_details:159:0PLjCw -- received job for 1wfaH9BSg8wrDaKXR54KK1y8pd-miEOQNj3E8GL6fTfg
+[33mpydocs_1  |[0m gdoc.py:01,17:26:44:_download_details:159:LFrZEA -- received job for 1G1g252JtmrFnXI5HaLLEafe8apipzquYwQQ0hbQIaho
+[35mpydocs_3  |[0m gdoc.py:01,17:26:44:_download_details:159:0PLjCw -- received job for 1G1g252JtmrFnXI5HaLLEafe8apipzquYwQQ0hbQIaho
+[36mpydocs_2  |[0m gdoc.py:01,17:26:44:_download_details:159:AZHoyg -- received job for 1G1g252JtmrFnXI5HaLLEafe8apipzquYwQQ0hbQIaho
+[32msql_serv  |[0m sql_serv:01,17:26:46:report:28:YyuwkA -- SQL Queue size: 0, thread size: 0
+[32msql_serv  |[0m sql_serv:01,17:26:46:remove_dead_threads:149:YyuwkA -- Removed finished threads: 0, total resolved threads: 0
+[36mpydocs_2  |[0m gdoc.py:01,17:26:46:async_init:118:AZHoyg -- Done computing gdoc for Literary Devices 15e68EIS9xXe5Yvzju4GtkyhFKJ_UgUA9juJKiUpPeUA
+[36mpydocs_2  |[0m gdoc.py:01,17:26:46:_download_details:159:AZHoyg -- received job for 1wfaH9BSg8wrDaKXR54KK1y8pd-miEOQNj3E8GL6fTfg
+[33mpydocs_1  |[0m gdoc.py:01,17:26:47:async_init:118:LFrZEA -- Done computing gdoc for Literary Devices 15e68EIS9xXe5Yvzju4GtkyhFKJ_UgUA9juJKiUpPeUA
+[33mpydocs_1  |[0m gdoc.py:01,17:26:47:_download_details:159:LFrZEA -- received job for 1wfaH9BSg8wrDaKXR54KK1y8pd-miEOQNj3E8GL6fTfg
+[36mpydocs_2  |[0m gdoc.py:01,17:26:48:async_init:118:AZHoyg -- Done computing gdoc for shockspeeeeear 1sF1pFtL8fsnQBBAoTt8P7YGOVZVr6-6a4BLeU3PBncI
+[33mpydocs_1  |[0m gdoc.py:01,17:26:48:async_init:118:LFrZEA -- Done computing gdoc for shockspeeeeear 1sF1pFtL8fsnQBBAoTt8P7YGOVZVr6-6a4BLeU3PBncI
+[35mpydocs_3  |[0m gdoc.py:01,17:26:48:async_init:118:0PLjCw -- Done computing gdoc for shockspeeeeear 1sF1pFtL8fsnQBBAoTt8P7YGOVZVr6-6a4BLeU3PBncI
+[33mpydocs_1  |[0m gdoc.py:01,17:26:48:_download_details:159:LFrZEA -- received job for 1LuJ1Ln_dAc7n3Qj0zNE4yuYfFG6NEgxO-hsDA9M4qpQ
+[36mpydocs_2  |[0m gdoc.py:01,17:26:48:_download_details:159:AZHoyg -- received job for 1LuJ1Ln_dAc7n3Qj0zNE4yuYfFG6NEgxO-hsDA9M4qpQ
+[35mpydocs_3  |[0m gdoc.py:01,17:26:48:_download_details:159:0PLjCw -- received job for 1LuJ1Ln_dAc7n3Qj0zNE4yuYfFG6NEgxO-hsDA9M4qpQ
+[35mpydocs_3  |[0m gdoc.py:01,17:26:49:async_init:118:0PLjCw -- Done computing gdoc for Prenuptial Agreement 1wfaH9BSg8wrDaKXR54KK1y8pd-miEOQNj3E8GL6fTfg
+[33mpydocs_1  |[0m gdoc.py:01,17:26:49:async_init:118:LFrZEA -- Done computing gdoc for Love Poem 1G1g252JtmrFnXI5HaLLEafe8apipzquYwQQ0hbQIaho
+[35mpydocs_3  |[0m gdoc.py:01,17:26:49:async_init:118:0PLjCw -- Done computing gdoc for Love Poem 1G1g252JtmrFnXI5HaLLEafe8apipzquYwQQ0hbQIaho
+[36mpydocs_2  |[0m gdoc.py:01,17:26:49:async_init:118:AZHoyg -- Done computing gdoc for Love Poem 1G1g252JtmrFnXI5HaLLEafe8apipzquYwQQ0hbQIaho
+[35mpydocs_3  |[0m gdoc.py:01,17:26:49:_download_details:159:0PLjCw -- received job for 15Fi6RHQtC8H-GOJC_gjiED_9rNxtCdahEGtLvBUZcv4
+[33mpydocs_1  |[0m gdoc.py:01,17:26:49:_download_details:159:LFrZEA -- received job for 15Fi6RHQtC8H-GOJC_gjiED_9rNxtCdahEGtLvBUZcv4
+[36mpydocs_2  |[0m gdoc.py:01,17:26:49:_download_details:159:AZHoyg -- received job for 15Fi6RHQtC8H-GOJC_gjiED_9rNxtCdahEGtLvBUZcv4
+[35mpydocs_3  |[0m gdoc.py:01,17:26:49:_download_details:159:0PLjCw -- received job for 1H1aSubiwctKw-qMV6t1aGlfooY2Qn9V6Y01phHpg-kw
+[35mpydocs_3  |[0m test_uti:01,17:26:50:print_size:95:0PLjCw -- 
+[35mpydocs_3  |[0m 
+[35mpydocs_3  |[0m ---------------Memory usage: 49520 (kb)---------------0.535424 mins since start
+[35mpydocs_3  |[0m test_uti:01,17:26:50:print_size:112:0PLjCw -- /app/data/testing123ZXvULg/
+[35mpydocs_3  |[0m 14/186 discovered items at 2020-05-01 17:26:50.226048
+[35mpydocs_3  |[0m dump count: 0
+[35mpydocs_3  |[0m test_uti:01,17:26:50:send_socket:176:0PLjCw -- connect working
+[32msql_serv  |[0m sql_serv:01,17:26:50:req_callback:95:YyuwkA -- queue size: 0
+[35mpydocs_3  |[0m test_uti:01,17:26:50:send_socket:185:0PLjCw -- received: b'go'
+[36mpydocs_2  |[0m configlo:01,17:26:50:mp_sendmail:121:AZHoyg -- sending mail
+[36mpydocs_2  |[0m test_uti:01,17:26:50:print_size:95:AZHoyg -- 
+[36mpydocs_2  |[0m 
+[36mpydocs_2  |[0m ---------------Memory usage: 49752 (kb)---------------0.536981 mins since start
+[36mpydocs_2  |[0m test_uti:01,17:26:50:print_size:112:AZHoyg -- /app/data/testing123mhRmCg/
+[36mpydocs_2  |[0m 13/186 discovered items at 2020-05-01 17:26:50.396959
+[36mpydocs_2  |[0m dump count: 0
+[36mpydocs_2  |[0m test_uti:01,17:26:50:send_socket:176:AZHoyg -- connect working
+[33mpydocs_1  |[0m test_uti:01,17:26:50:print_size:95:LFrZEA -- 
+[33mpydocs_1  |[0m 
+[33mpydocs_1  |[0m ---------------Memory usage: 49336 (kb)---------------0.539252 mins since start
+[33mpydocs_1  |[0m test_uti:01,17:26:50:print_size:112:LFrZEA -- /app/data/testing123X15DNQ/
+[33mpydocs_1  |[0m 13/186 discovered items at 2020-05-01 17:26:50.534397
+[33mpydocs_1  |[0m dump count: 0
+[33mpydocs_1  |[0m test_uti:01,17:26:50:send_socket:176:LFrZEA -- connect working
+[32msql_serv  |[0m name:  testing123ZXvULg
+[32msql_serv  |[0m new task
+[32msql_serv  |[0m creating new user: %s testing123ZXvULg
+[32msql_serv  |[0m sql_serv:01,17:26:50:req_callback:95:YyuwkA -- queue size: 0
+[36mpydocs_2  |[0m test_uti:01,17:26:50:send_socket:185:AZHoyg -- received: b'go'
+[32msql_serv  |[0m sql_serv:01,17:26:50:req_callback:95:YyuwkA -- queue size: 0
+[33mpydocs_1  |[0m test_uti:01,17:26:50:send_socket:185:LFrZEA -- received: b'go'
+[32msql_serv  |[0m name:  testing123mhRmCg
+[32msql_serv  |[0m new task
+[32msql_serv  |[0m name:  testing123X15DNQ
+[32msql_serv  |[0m new task
+[32msql_serv  |[0m creating new user: %s testing123mhRmCg
+[32msql_serv  |[0m sql.py:01,17:26:50:insert_sql:174:YyuwkA -- Checked out owner object, fileid dict, and lock
+[32msql_serv  |[0m sql.py:01,17:26:50:insert_sql:223:YyuwkA -- len of id map 14 len of files 14
+[32msql_serv  |[0m creating new user: %s testing123X15DNQ
+[32msql_serv  |[0m sql.py:01,17:26:50:insert_sql:174:YyuwkA -- Checked out owner object, fileid dict, and lock
+[32msql_serv  |[0m sql.py:01,17:26:50:insert_sql:223:YyuwkA -- len of id map 13 len of files 13
+[32msql_serv  |[0m sql.py:01,17:26:50:insert_sql:174:YyuwkA -- Checked out owner object, fileid dict, and lock
+[32msql_serv  |[0m sql.py:01,17:26:50:insert_sql:223:YyuwkA -- len of id map 13 len of files 13
+[36mpydocs_2  |[0m gdoc.py:01,17:26:51:async_init:118:AZHoyg -- Done computing gdoc for Prenuptial Agreement 1wfaH9BSg8wrDaKXR54KK1y8pd-miEOQNj3E8GL6fTfg
+[36mpydocs_2  |[0m gdoc.py:01,17:26:51:_download_details:159:AZHoyg -- received job for 1H1aSubiwctKw-qMV6t1aGlfooY2Qn9V6Y01phHpg-kw
+[33mpydocs_1  |[0m gdoc.py:01,17:26:52:async_init:118:LFrZEA -- Done computing gdoc for Prenuptial Agreement 1wfaH9BSg8wrDaKXR54KK1y8pd-miEOQNj3E8GL6fTfg
+[33mpydocs_1  |[0m gdoc.py:01,17:26:52:_download_details:159:LFrZEA -- received job for 1H1aSubiwctKw-qMV6t1aGlfooY2Qn9V6Y01phHpg-kw
+[33mpydocs_1  |[0m gdoc.py:01,17:26:53:async_init:118:LFrZEA -- Done computing gdoc for snells 1LuJ1Ln_dAc7n3Qj0zNE4yuYfFG6NEgxO-hsDA9M4qpQ
+[36mpydocs_2  |[0m gdoc.py:01,17:26:53:async_init:118:AZHoyg -- Done computing gdoc for snells 1LuJ1Ln_dAc7n3Qj0zNE4yuYfFG6NEgxO-hsDA9M4qpQ
+[35mpydocs_3  |[0m gdoc.py:01,17:26:53:async_init:118:0PLjCw -- Done computing gdoc for snells 1LuJ1Ln_dAc7n3Qj0zNE4yuYfFG6NEgxO-hsDA9M4qpQ
+[35mpydocs_3  |[0m gdoc.py:01,17:26:54:async_init:102:0PLjCw -- No content received for: 15Fi6RHQtC8H-GOJC_gjiED_9rNxtCdahEGtLvBUZcv4, 86318068_2724846374263865_4035687713842659328_n.
+[35mpydocs_3  |[0m gdoc.py:01,17:26:54:async_init:118:0PLjCw -- Done computing gdoc for 86318068_2724846374263865_4035687713842659328_n 15Fi6RHQtC8H-GOJC_gjiED_9rNxtCdahEGtLvBUZcv4
+[35mpydocs_3  |[0m get_file:01,17:26:54:getRevision:147:0PLjCw -- not done but tried to append, prob because no operations found file: 15Fi6RHQtC8H-GOJC_gjiED_9rNxtCdahEGtLvBUZcv4, 86318068_2724846374263865_4035687713842659328_n
+[36mpydocs_2  |[0m gdoc.py:01,17:26:54:_download_details:159:AZHoyg -- received job for 1WbGMwYDyqP6aCDpf5fBbR7sneMicXtvEtfm3Z4k0Vzs
+[33mpydocs_1  |[0m gdoc.py:01,17:26:54:_download_details:159:LFrZEA -- received job for 1WbGMwYDyqP6aCDpf5fBbR7sneMicXtvEtfm3Z4k0Vzs
+[35mpydocs_3  |[0m gdoc.py:01,17:26:54:_download_details:159:0PLjCw -- received job for 1WbGMwYDyqP6aCDpf5fBbR7sneMicXtvEtfm3Z4k0Vzs
+[33mpydocs_1  |[0m gdoc.py:01,17:26:54:async_init:102:LFrZEA -- No content received for: 15Fi6RHQtC8H-GOJC_gjiED_9rNxtCdahEGtLvBUZcv4, 86318068_2724846374263865_4035687713842659328_n.
+[33mpydocs_1  |[0m gdoc.py:01,17:26:54:async_init:118:LFrZEA -- Done computing gdoc for 86318068_2724846374263865_4035687713842659328_n 15Fi6RHQtC8H-GOJC_gjiED_9rNxtCdahEGtLvBUZcv4
+[33mpydocs_1  |[0m get_file:01,17:26:54:getRevision:147:LFrZEA -- not done but tried to append, prob because no operations found file: 15Fi6RHQtC8H-GOJC_gjiED_9rNxtCdahEGtLvBUZcv4, 86318068_2724846374263865_4035687713842659328_n
+[36mpydocs_2  |[0m gdoc.py:01,17:26:54:async_init:102:AZHoyg -- No content received for: 15Fi6RHQtC8H-GOJC_gjiED_9rNxtCdahEGtLvBUZcv4, 86318068_2724846374263865_4035687713842659328_n.
+[36mpydocs_2  |[0m gdoc.py:01,17:26:54:async_init:118:AZHoyg -- Done computing gdoc for 86318068_2724846374263865_4035687713842659328_n 15Fi6RHQtC8H-GOJC_gjiED_9rNxtCdahEGtLvBUZcv4
+[36mpydocs_2  |[0m get_file:01,17:26:54:getRevision:147:AZHoyg -- not done but tried to append, prob because no operations found file: 15Fi6RHQtC8H-GOJC_gjiED_9rNxtCdahEGtLvBUZcv4, 86318068_2724846374263865_4035687713842659328_n
+[35mpydocs_3  |[0m gdoc.py:01,17:26:54:async_init:118:0PLjCw -- Done computing gdoc for Untitled document 1H1aSubiwctKw-qMV6t1aGlfooY2Qn9V6Y01phHpg-kw
+[35mpydocs_3  |[0m gdoc.py:01,17:26:55:_download_details:159:0PLjCw -- received job for 16wh_FgWE8Y0tUpAdIte4WyuB91_ypCySi82lvdhAiFY
+[36mpydocs_2  |[0m gdoc.py:01,17:26:55:_download_details:159:AZHoyg -- received job for 16wh_FgWE8Y0tUpAdIte4WyuB91_ypCySi82lvdhAiFY
+[33mpydocs_1  |[0m gdoc.py:01,17:26:55:_download_details:159:LFrZEA -- received job for 16wh_FgWE8Y0tUpAdIte4WyuB91_ypCySi82lvdhAiFY
+[35mpydocs_3  |[0m gdoc.py:01,17:26:55:_download_details:159:0PLjCw -- received job for 1WKk8W5cG-CYKBYN_cWpAdziiPVhvQZEAarnPwf58z4Y
+[32msql_serv  |[0m sql_serv:01,17:26:56:report:28:YyuwkA -- SQL Queue size: 0, thread size: 3
+[32msql_serv  |[0m sql_serv:01,17:26:56:remove_dead_threads:149:YyuwkA -- Removed finished threads: 0, total resolved threads: 0
+[36mpydocs_2  |[0m gdoc.py:01,17:26:56:async_init:118:AZHoyg -- Done computing gdoc for Untitled document 1H1aSubiwctKw-qMV6t1aGlfooY2Qn9V6Y01phHpg-kw
+[36mpydocs_2  |[0m gdoc.py:01,17:26:56:_download_details:159:AZHoyg -- received job for 1WKk8W5cG-CYKBYN_cWpAdziiPVhvQZEAarnPwf58z4Y
+[33mpydocs_1  |[0m gdoc.py:01,17:26:57:async_init:118:LFrZEA -- Done computing gdoc for Untitled document 1H1aSubiwctKw-qMV6t1aGlfooY2Qn9V6Y01phHpg-kw
+[33mpydocs_1  |[0m gdoc.py:01,17:26:57:_download_details:159:LFrZEA -- received job for 1WKk8W5cG-CYKBYN_cWpAdziiPVhvQZEAarnPwf58z4Y
+[33mpydocs_1  |[0m gdoc.py:01,17:26:59:async_init:118:LFrZEA -- Done computing gdoc for Coding Club LP 20200219 1WbGMwYDyqP6aCDpf5fBbR7sneMicXtvEtfm3Z4k0Vzs
+[36mpydocs_2  |[0m gdoc.py:01,17:26:59:async_init:118:AZHoyg -- Done computing gdoc for Coding Club LP 20200219 1WbGMwYDyqP6aCDpf5fBbR7sneMicXtvEtfm3Z4k0Vzs
+[35mpydocs_3  |[0m gdoc.py:01,17:26:59:async_init:118:0PLjCw -- Done computing gdoc for Coding Club LP 20200219 1WbGMwYDyqP6aCDpf5fBbR7sneMicXtvEtfm3Z4k0Vzs
+[35mpydocs_3  |[0m gdoc.py:01,17:27:00:async_init:118:0PLjCw -- Done computing gdoc for Coding Club 20200205 Process/Script 16wh_FgWE8Y0tUpAdIte4WyuB91_ypCySi82lvdhAiFY
+[36mpydocs_2  |[0m gdoc.py:01,17:27:00:async_init:118:AZHoyg -- Done computing gdoc for Coding Club 20200205 Process/Script 16wh_FgWE8Y0tUpAdIte4WyuB91_ypCySi82lvdhAiFY
+[33mpydocs_1  |[0m gdoc.py:01,17:27:00:async_init:118:LFrZEA -- Done computing gdoc for Coding Club 20200205 Process/Script 16wh_FgWE8Y0tUpAdIte4WyuB91_ypCySi82lvdhAiFY
+[36mpydocs_2  |[0m gdoc.py:01,17:27:00:_download_details:159:AZHoyg -- received job for 1YJPVyeYstaXiTguoSGCe_Kb3y4yv49N224nUrfLo7rU
+[35mpydocs_3  |[0m gdoc.py:01,17:27:00:_download_details:159:0PLjCw -- received job for 1YJPVyeYstaXiTguoSGCe_Kb3y4yv49N224nUrfLo7rU
+[33mpydocs_1  |[0m gdoc.py:01,17:27:00:_download_details:159:LFrZEA -- received job for 1YJPVyeYstaXiTguoSGCe_Kb3y4yv49N224nUrfLo7rU
+[35mpydocs_3  |[0m gdoc.py:01,17:27:00:async_init:118:0PLjCw -- Done computing gdoc for Coding Club LP 2020/02/05 1WKk8W5cG-CYKBYN_cWpAdziiPVhvQZEAarnPwf58z4Y
+[35mpydocs_3  |[0m gdoc.py:01,17:27:00:_download_details:159:0PLjCw -- received job for 1YlY2MTwu_I6PGWgmkNqFXYJVvNSQKMi7j0WulyoD75w
+[36mpydocs_2  |[0m gdoc.py:01,17:27:01:_download_details:159:AZHoyg -- received job for 1PscMFhdtA31Nh7ELmM18NqjUfLDeGiexKI6q-lI0fKY
+[33mpydocs_1  |[0m gdoc.py:01,17:27:01:_download_details:159:LFrZEA -- received job for 1PscMFhdtA31Nh7ELmM18NqjUfLDeGiexKI6q-lI0fKY
+[35mpydocs_3  |[0m gdoc.py:01,17:27:01:_download_details:159:0PLjCw -- received job for 1PscMFhdtA31Nh7ELmM18NqjUfLDeGiexKI6q-lI0fKY
+[36mpydocs_2  |[0m gdoc.py:01,17:27:01:async_init:118:AZHoyg -- Done computing gdoc for Coding Club LP 2020/02/05 1WKk8W5cG-CYKBYN_cWpAdziiPVhvQZEAarnPwf58z4Y
+[36mpydocs_2  |[0m gdoc.py:01,17:27:01:_download_details:159:AZHoyg -- received job for 1YlY2MTwu_I6PGWgmkNqFXYJVvNSQKMi7j0WulyoD75w
+[33mpydocs_1  |[0m gdoc.py:01,17:27:02:async_init:118:LFrZEA -- Done computing gdoc for Coding Club LP 2020/02/05 1WKk8W5cG-CYKBYN_cWpAdziiPVhvQZEAarnPwf58z4Y
+[33mpydocs_1  |[0m gdoc.py:01,17:27:03:_download_details:159:LFrZEA -- received job for 1YlY2MTwu_I6PGWgmkNqFXYJVvNSQKMi7j0WulyoD75w
+[35mpydocs_3  |[0m gdoc.py:01,17:27:05:async_init:118:0PLjCw -- Done computing gdoc for Go Eng Go 1YJPVyeYstaXiTguoSGCe_Kb3y4yv49N224nUrfLo7rU
+[33mpydocs_1  |[0m gdoc.py:01,17:27:05:async_init:118:LFrZEA -- Done computing gdoc for Go Eng Go 1YJPVyeYstaXiTguoSGCe_Kb3y4yv49N224nUrfLo7rU
+[36mpydocs_2  |[0m gdoc.py:01,17:27:05:async_init:118:AZHoyg -- Done computing gdoc for Go Eng Go 1YJPVyeYstaXiTguoSGCe_Kb3y4yv49N224nUrfLo7rU
+[35mpydocs_3  |[0m gdoc.py:01,17:27:05:async_init:118:0PLjCw -- Done computing gdoc for Coding Club LP 2020/01/22 1YlY2MTwu_I6PGWgmkNqFXYJVvNSQKMi7j0WulyoD75w
+[33mpydocs_1  |[0m gdoc.py:01,17:27:05:_download_details:159:LFrZEA -- received job for 1Gxvc-37IOivNHIPUJBI1v3jf5e-Hwcby_VZbN-k-Bfc
+[36mpydocs_2  |[0m gdoc.py:01,17:27:05:_download_details:159:AZHoyg -- received job for 1Gxvc-37IOivNHIPUJBI1v3jf5e-Hwcby_VZbN-k-Bfc
+[35mpydocs_3  |[0m gdoc.py:01,17:27:05:_download_details:159:0PLjCw -- received job for 1Gxvc-37IOivNHIPUJBI1v3jf5e-Hwcby_VZbN-k-Bfc
+[33mpydocs_1  |[0m gdoc.py:01,17:27:06:async_init:118:LFrZEA -- Done computing gdoc for quote analysis-hunt 1PscMFhdtA31Nh7ELmM18NqjUfLDeGiexKI6q-lI0fKY
+[36mpydocs_2  |[0m gdoc.py:01,17:27:06:async_init:118:AZHoyg -- Done computing gdoc for quote analysis-hunt 1PscMFhdtA31Nh7ELmM18NqjUfLDeGiexKI6q-lI0fKY
+[32msql_serv  |[0m sql_serv:01,17:27:06:report:28:YyuwkA -- SQL Queue size: 0, thread size: 3
+[32msql_serv  |[0m sql_serv:01,17:27:06:remove_dead_threads:149:YyuwkA -- Removed finished threads: 0, total resolved threads: 0
+[35mpydocs_3  |[0m gdoc.py:01,17:27:06:async_init:118:0PLjCw -- Done computing gdoc for quote analysis-hunt 1PscMFhdtA31Nh7ELmM18NqjUfLDeGiexKI6q-lI0fKY
+[35mpydocs_3  |[0m gdoc.py:01,17:27:06:_download_details:159:0PLjCw -- received job for 1T1Sj69DxCTpEQI2pH0O04l_PSx1V3xsxYOnkiHPEPis
+[36mpydocs_2  |[0m gdoc.py:01,17:27:06:_download_details:159:AZHoyg -- received job for 1T1Sj69DxCTpEQI2pH0O04l_PSx1V3xsxYOnkiHPEPis
+[33mpydocs_1  |[0m gdoc.py:01,17:27:06:_download_details:159:LFrZEA -- received job for 1T1Sj69DxCTpEQI2pH0O04l_PSx1V3xsxYOnkiHPEPis
+[35mpydocs_3  |[0m gdoc.py:01,17:27:06:_download_details:159:0PLjCw -- received job for 1VrK4o4hKCSJyT8P4hKL9la_FO7-29hcBJMJDsvjXo2A
+[36mpydocs_2  |[0m gdoc.py:01,17:27:06:async_init:118:AZHoyg -- Done computing gdoc for Coding Club LP 2020/01/22 1YlY2MTwu_I6PGWgmkNqFXYJVvNSQKMi7j0WulyoD75w
+[36mpydocs_2  |[0m gdoc.py:01,17:27:07:_download_details:159:AZHoyg -- received job for 1VrK4o4hKCSJyT8P4hKL9la_FO7-29hcBJMJDsvjXo2A
+[33mpydocs_1  |[0m gdoc.py:01,17:27:08:async_init:118:LFrZEA -- Done computing gdoc for Coding Club LP 2020/01/22 1YlY2MTwu_I6PGWgmkNqFXYJVvNSQKMi7j0WulyoD75w
+[33mpydocs_1  |[0m gdoc.py:01,17:27:08:_download_details:159:LFrZEA -- received job for 1VrK4o4hKCSJyT8P4hKL9la_FO7-29hcBJMJDsvjXo2A
+[36mpydocs_2  |[0m gdoc.py:01,17:27:10:async_init:118:AZHoyg -- Done computing gdoc for IT Club Term 2 Curriculum 1Gxvc-37IOivNHIPUJBI1v3jf5e-Hwcby_VZbN-k-Bfc
+[33mpydocs_1  |[0m gdoc.py:01,17:27:10:async_init:118:LFrZEA -- Done computing gdoc for IT Club Term 2 Curriculum 1Gxvc-37IOivNHIPUJBI1v3jf5e-Hwcby_VZbN-k-Bfc
+[35mpydocs_3  |[0m gdoc.py:01,17:27:10:async_init:118:0PLjCw -- Done computing gdoc for IT Club Term 2 Curriculum 1Gxvc-37IOivNHIPUJBI1v3jf5e-Hwcby_VZbN-k-Bfc
+[35mpydocs_3  |[0m gdoc.py:01,17:27:11:async_init:118:0PLjCw -- Done computing gdoc for Coding Club 2020/01/22 Outline 1T1Sj69DxCTpEQI2pH0O04l_PSx1V3xsxYOnkiHPEPis
+[33mpydocs_1  |[0m gdoc.py:01,17:27:11:async_init:118:LFrZEA -- Done computing gdoc for Coding Club 2020/01/22 Outline 1T1Sj69DxCTpEQI2pH0O04l_PSx1V3xsxYOnkiHPEPis
+[36mpydocs_2  |[0m gdoc.py:01,17:27:11:async_init:118:AZHoyg -- Done computing gdoc for Coding Club 2020/01/22 Outline 1T1Sj69DxCTpEQI2pH0O04l_PSx1V3xsxYOnkiHPEPis
+[33mpydocs_1  |[0m gdoc.py:01,17:27:11:_download_details:159:LFrZEA -- received job for 1ZSCKTVjGJu6pUx7auNWEyfs83DLJtOeA3AbwuGuY8kI
+[35mpydocs_3  |[0m gdoc.py:01,17:27:11:_download_details:159:0PLjCw -- received job for 1ZSCKTVjGJu6pUx7auNWEyfs83DLJtOeA3AbwuGuY8kI
+[36mpydocs_2  |[0m gdoc.py:01,17:27:11:_download_details:159:AZHoyg -- received job for 1ZSCKTVjGJu6pUx7auNWEyfs83DLJtOeA3AbwuGuY8kI
+[35mpydocs_3  |[0m gdoc.py:01,17:27:11:async_init:118:0PLjCw -- Done computing gdoc for IT Club Admin Meeting Plan/Notes 2020/01/08 1VrK4o4hKCSJyT8P4hKL9la_FO7-29hcBJMJDsvjXo2A
+[35mpydocs_3  |[0m gdoc.py:01,17:27:11:_download_details:159:0PLjCw -- received job for 1R9fH_VyHSB3k-yCrmzD5fzj25Ga8neQLtKLceiEhdt0
+[36mpydocs_2  |[0m gdoc.py:01,17:27:11:_download_details:159:AZHoyg -- received job for 1R9fH_VyHSB3k-yCrmzD5fzj25Ga8neQLtKLceiEhdt0
+[33mpydocs_1  |[0m gdoc.py:01,17:27:11:_download_details:159:LFrZEA -- received job for 1R9fH_VyHSB3k-yCrmzD5fzj25Ga8neQLtKLceiEhdt0
+[35mpydocs_3  |[0m gdoc.py:01,17:27:11:_download_details:159:0PLjCw -- received job for 1gS0ZLEc-tkOVw-QM-oeezt-ATZgZt_g5wDuW2U4KvF8
+[36mpydocs_2  |[0m gdoc.py:01,17:27:12:async_init:118:AZHoyg -- Done computing gdoc for IT Club Admin Meeting Plan/Notes 2020/01/08 1VrK4o4hKCSJyT8P4hKL9la_FO7-29hcBJMJDsvjXo2A
+[36mpydocs_2  |[0m gdoc.py:01,17:27:12:_download_details:159:AZHoyg -- received job for 1gS0ZLEc-tkOVw-QM-oeezt-ATZgZt_g5wDuW2U4KvF8
+[33mpydocs_1  |[0m gdoc.py:01,17:27:13:async_init:118:LFrZEA -- Done computing gdoc for IT Club Admin Meeting Plan/Notes 2020/01/08 1VrK4o4hKCSJyT8P4hKL9la_FO7-29hcBJMJDsvjXo2A
+[33mpydocs_1  |[0m gdoc.py:01,17:27:13:_download_details:159:LFrZEA -- received job for 1gS0ZLEc-tkOVw-QM-oeezt-ATZgZt_g5wDuW2U4KvF8
+[32msql_serv  |[0m sql_serv:01,17:27:16:report:28:YyuwkA -- SQL Queue size: 0, thread size: 3
+[32msql_serv  |[0m sql_serv:01,17:27:16:remove_dead_threads:149:YyuwkA -- Removed finished threads: 0, total resolved threads: 0
+[35mpydocs_3  |[0m gdoc.py:01,17:27:16:async_init:102:0PLjCw -- No content received for: 1ZSCKTVjGJu6pUx7auNWEyfs83DLJtOeA3AbwuGuY8kI, Research Proposal.
+[33mpydocs_1  |[0m gdoc.py:01,17:27:16:async_init:102:LFrZEA -- No content received for: 1ZSCKTVjGJu6pUx7auNWEyfs83DLJtOeA3AbwuGuY8kI, Research Proposal.
+[36mpydocs_2  |[0m gdoc.py:01,17:27:16:async_init:102:AZHoyg -- No content received for: 1ZSCKTVjGJu6pUx7auNWEyfs83DLJtOeA3AbwuGuY8kI, Research Proposal.
+[33mpydocs_1  |[0m gdoc.py:01,17:27:16:async_init:118:LFrZEA -- Done computing gdoc for Research Proposal 1ZSCKTVjGJu6pUx7auNWEyfs83DLJtOeA3AbwuGuY8kI
+[35mpydocs_3  |[0m gdoc.py:01,17:27:16:async_init:118:0PLjCw -- Done computing gdoc for Research Proposal 1ZSCKTVjGJu6pUx7auNWEyfs83DLJtOeA3AbwuGuY8kI
+[36mpydocs_2  |[0m gdoc.py:01,17:27:16:async_init:118:AZHoyg -- Done computing gdoc for Research Proposal 1ZSCKTVjGJu6pUx7auNWEyfs83DLJtOeA3AbwuGuY8kI
+[33mpydocs_1  |[0m get_file:01,17:27:16:getRevision:147:LFrZEA -- not done but tried to append, prob because no operations found file: 1ZSCKTVjGJu6pUx7auNWEyfs83DLJtOeA3AbwuGuY8kI, Research Proposal
+[36mpydocs_2  |[0m get_file:01,17:27:16:getRevision:147:AZHoyg -- not done but tried to append, prob because no operations found file: 1ZSCKTVjGJu6pUx7auNWEyfs83DLJtOeA3AbwuGuY8kI, Research Proposal
+[35mpydocs_3  |[0m get_file:01,17:27:16:getRevision:147:0PLjCw -- not done but tried to append, prob because no operations found file: 1ZSCKTVjGJu6pUx7auNWEyfs83DLJtOeA3AbwuGuY8kI, Research Proposal
+[33mpydocs_1  |[0m gdoc.py:01,17:27:16:async_init:102:LFrZEA -- No content received for: 1R9fH_VyHSB3k-yCrmzD5fzj25Ga8neQLtKLceiEhdt0, ShannaYeung_research.
+[36mpydocs_2  |[0m gdoc.py:01,17:27:16:async_init:102:AZHoyg -- No content received for: 1R9fH_VyHSB3k-yCrmzD5fzj25Ga8neQLtKLceiEhdt0, ShannaYeung_research.
+[35mpydocs_3  |[0m gdoc.py:01,17:27:16:async_init:102:0PLjCw -- No content received for: 1R9fH_VyHSB3k-yCrmzD5fzj25Ga8neQLtKLceiEhdt0, ShannaYeung_research.
+[35mpydocs_3  |[0m gdoc.py:01,17:27:16:async_init:118:0PLjCw -- Done computing gdoc for ShannaYeung_research 1R9fH_VyHSB3k-yCrmzD5fzj25Ga8neQLtKLceiEhdt0
+[33mpydocs_1  |[0m gdoc.py:01,17:27:16:async_init:118:LFrZEA -- Done computing gdoc for ShannaYeung_research 1R9fH_VyHSB3k-yCrmzD5fzj25Ga8neQLtKLceiEhdt0
+[36mpydocs_2  |[0m gdoc.py:01,17:27:16:async_init:118:AZHoyg -- Done computing gdoc for ShannaYeung_research 1R9fH_VyHSB3k-yCrmzD5fzj25Ga8neQLtKLceiEhdt0
+[35mpydocs_3  |[0m get_file:01,17:27:16:getRevision:147:0PLjCw -- not done but tried to append, prob because no operations found file: 1R9fH_VyHSB3k-yCrmzD5fzj25Ga8neQLtKLceiEhdt0, ShannaYeung_research
+[33mpydocs_1  |[0m get_file:01,17:27:16:getRevision:147:LFrZEA -- not done but tried to append, prob because no operations found file: 1R9fH_VyHSB3k-yCrmzD5fzj25Ga8neQLtKLceiEhdt0, ShannaYeung_research
+[36mpydocs_2  |[0m get_file:01,17:27:16:getRevision:147:AZHoyg -- not done but tried to append, prob because no operations found file: 1R9fH_VyHSB3k-yCrmzD5fzj25Ga8neQLtKLceiEhdt0, ShannaYeung_research
+[33mpydocs_1  |[0m gdoc.py:01,17:27:16:_download_details:159:LFrZEA -- received job for 1ECJHKZpyfd75nEg20CQdICaWhZzri2SX_mQjfIFN-Wk
+[35mpydocs_3  |[0m gdoc.py:01,17:27:16:_download_details:159:0PLjCw -- received job for 1ECJHKZpyfd75nEg20CQdICaWhZzri2SX_mQjfIFN-Wk
+[36mpydocs_2  |[0m gdoc.py:01,17:27:16:_download_details:159:AZHoyg -- received job for 1ECJHKZpyfd75nEg20CQdICaWhZzri2SX_mQjfIFN-Wk
+[35mpydocs_3  |[0m gdoc.py:01,17:27:16:async_init:102:0PLjCw -- No content received for: 1gS0ZLEc-tkOVw-QM-oeezt-ATZgZt_g5wDuW2U4KvF8, ibpf.org.
+[35mpydocs_3  |[0m gdoc.py:01,17:27:16:async_init:118:0PLjCw -- Done computing gdoc for ibpf.org 1gS0ZLEc-tkOVw-QM-oeezt-ATZgZt_g5wDuW2U4KvF8
+[35mpydocs_3  |[0m get_file:01,17:27:16:getRevision:147:0PLjCw -- not done but tried to append, prob because no operations found file: 1gS0ZLEc-tkOVw-QM-oeezt-ATZgZt_g5wDuW2U4KvF8, ibpf.org
+[35mpydocs_3  |[0m gdoc.py:01,17:27:16:_download_details:159:0PLjCw -- received job for 1e7IjM7tgdUxRQcmg2bbYvLArkghX129Cz_lOLFpnF34
+[33mpydocs_1  |[0m gdoc.py:01,17:27:16:_download_details:159:LFrZEA -- received job for 1e7IjM7tgdUxRQcmg2bbYvLArkghX129Cz_lOLFpnF34
+[36mpydocs_2  |[0m gdoc.py:01,17:27:16:_download_details:159:AZHoyg -- received job for 1e7IjM7tgdUxRQcmg2bbYvLArkghX129Cz_lOLFpnF34
+[35mpydocs_3  |[0m gdoc.py:01,17:27:17:_download_details:159:0PLjCw -- received job for 1adckvxMM48z9k3sSG_JP2w-9T5WOqLNocASrGMkmaEs
+[36mpydocs_2  |[0m gdoc.py:01,17:27:17:async_init:102:AZHoyg -- No content received for: 1gS0ZLEc-tkOVw-QM-oeezt-ATZgZt_g5wDuW2U4KvF8, ibpf.org.
+[36mpydocs_2  |[0m gdoc.py:01,17:27:17:async_init:118:AZHoyg -- Done computing gdoc for ibpf.org 1gS0ZLEc-tkOVw-QM-oeezt-ATZgZt_g5wDuW2U4KvF8
+[36mpydocs_2  |[0m get_file:01,17:27:17:getRevision:147:AZHoyg -- not done but tried to append, prob because no operations found file: 1gS0ZLEc-tkOVw-QM-oeezt-ATZgZt_g5wDuW2U4KvF8, ibpf.org
+[36mpydocs_2  |[0m gdoc.py:01,17:27:17:_download_details:159:AZHoyg -- received job for 1adckvxMM48z9k3sSG_JP2w-9T5WOqLNocASrGMkmaEs
+[33mpydocs_1  |[0m gdoc.py:01,17:27:18:async_init:102:LFrZEA -- No content received for: 1gS0ZLEc-tkOVw-QM-oeezt-ATZgZt_g5wDuW2U4KvF8, ibpf.org.
+[33mpydocs_1  |[0m gdoc.py:01,17:27:18:async_init:118:LFrZEA -- Done computing gdoc for ibpf.org 1gS0ZLEc-tkOVw-QM-oeezt-ATZgZt_g5wDuW2U4KvF8
+[33mpydocs_1  |[0m get_file:01,17:27:18:getRevision:147:LFrZEA -- not done but tried to append, prob because no operations found file: 1gS0ZLEc-tkOVw-QM-oeezt-ATZgZt_g5wDuW2U4KvF8, ibpf.org
+[33mpydocs_1  |[0m gdoc.py:01,17:27:18:_download_details:159:LFrZEA -- received job for 1adckvxMM48z9k3sSG_JP2w-9T5WOqLNocASrGMkmaEs
+[36mpydocs_2  |[0m gdoc.py:01,17:27:21:async_init:118:AZHoyg -- Done computing gdoc for T 1ECJHKZpyfd75nEg20CQdICaWhZzri2SX_mQjfIFN-Wk
+[33mpydocs_1  |[0m gdoc.py:01,17:27:21:async_init:118:LFrZEA -- Done computing gdoc for T 1ECJHKZpyfd75nEg20CQdICaWhZzri2SX_mQjfIFN-Wk
+[35mpydocs_3  |[0m gdoc.py:01,17:27:21:async_init:118:0PLjCw -- Done computing gdoc for T 1ECJHKZpyfd75nEg20CQdICaWhZzri2SX_mQjfIFN-Wk
+[33mpydocs_1  |[0m gdoc.py:01,17:27:21:async_init:102:LFrZEA -- No content received for: 1e7IjM7tgdUxRQcmg2bbYvLArkghX129Cz_lOLFpnF34, library exposay.
+[36mpydocs_2  |[0m gdoc.py:01,17:27:21:async_init:102:AZHoyg -- No content received for: 1e7IjM7tgdUxRQcmg2bbYvLArkghX129Cz_lOLFpnF34, library exposay.
+[35mpydocs_3  |[0m gdoc.py:01,17:27:21:async_init:102:0PLjCw -- No content received for: 1e7IjM7tgdUxRQcmg2bbYvLArkghX129Cz_lOLFpnF34, library exposay.
+[33mpydocs_1  |[0m gdoc.py:01,17:27:21:async_init:118:LFrZEA -- Done computing gdoc for library exposay 1e7IjM7tgdUxRQcmg2bbYvLArkghX129Cz_lOLFpnF34
+[36mpydocs_2  |[0m gdoc.py:01,17:27:21:async_init:118:AZHoyg -- Done computing gdoc for library exposay 1e7IjM7tgdUxRQcmg2bbYvLArkghX129Cz_lOLFpnF34
+[35mpydocs_3  |[0m gdoc.py:01,17:27:21:async_init:118:0PLjCw -- Done computing gdoc for library exposay 1e7IjM7tgdUxRQcmg2bbYvLArkghX129Cz_lOLFpnF34
+[33mpydocs_1  |[0m get_file:01,17:27:21:getRevision:147:LFrZEA -- not done but tried to append, prob because no operations found file: 1e7IjM7tgdUxRQcmg2bbYvLArkghX129Cz_lOLFpnF34, library exposay
+[35mpydocs_3  |[0m get_file:01,17:27:21:getRevision:147:0PLjCw -- not done but tried to append, prob because no operations found file: 1e7IjM7tgdUxRQcmg2bbYvLArkghX129Cz_lOLFpnF34, library exposay
+[36mpydocs_2  |[0m get_file:01,17:27:21:getRevision:147:AZHoyg -- not done but tried to append, prob because no operations found file: 1e7IjM7tgdUxRQcmg2bbYvLArkghX129Cz_lOLFpnF34, library exposay
+[35mpydocs_3  |[0m gdoc.py:01,17:27:22:_download_details:159:0PLjCw -- received job for 1cZg8adblMjYv0HOMh9qeEGR5Hhx59fhEAYD_mG1tfL0
+[36mpydocs_2  |[0m gdoc.py:01,17:27:22:_download_details:159:AZHoyg -- received job for 1cZg8adblMjYv0HOMh9qeEGR5Hhx59fhEAYD_mG1tfL0
+[33mpydocs_1  |[0m gdoc.py:01,17:27:22:_download_details:159:LFrZEA -- received job for 1cZg8adblMjYv0HOMh9qeEGR5Hhx59fhEAYD_mG1tfL0
+[35mpydocs_3  |[0m gdoc.py:01,17:27:22:async_init:102:0PLjCw -- No content received for: 1adckvxMM48z9k3sSG_JP2w-9T5WOqLNocASrGMkmaEs, skribt.
+[35mpydocs_3  |[0m gdoc.py:01,17:27:22:async_init:118:0PLjCw -- Done computing gdoc for skribt 1adckvxMM48z9k3sSG_JP2w-9T5WOqLNocASrGMkmaEs
+[35mpydocs_3  |[0m get_file:01,17:27:22:getRevision:147:0PLjCw -- not done but tried to append, prob because no operations found file: 1adckvxMM48z9k3sSG_JP2w-9T5WOqLNocASrGMkmaEs, skribt
+[35mpydocs_3  |[0m test_uti:01,17:27:22:print_size:95:0PLjCw -- 
+[35mpydocs_3  |[0m 
+[35mpydocs_3  |[0m ---------------Memory usage: 49520 (kb)---------------1.070192 mins since start
+[35mpydocs_3  |[0m test_uti:01,17:27:22:print_size:112:0PLjCw -- /app/data/testing123ZXvULg/
+[35mpydocs_3  |[0m 26/180 discovered items at 2020-05-01 17:27:22.311176
+[35mpydocs_3  |[0m dump count: 1
+[35mpydocs_3  |[0m test_uti:01,17:27:22:send_socket:176:0PLjCw -- connect working
+[32msql_serv  |[0m sql_serv:01,17:27:22:req_callback:95:YyuwkA -- queue size: 0
+[35mpydocs_3  |[0m test_uti:01,17:27:22:send_socket:185:0PLjCw -- received: b'go'
+[32msql_serv  |[0m name:  testing123ZXvULg
+[32msql_serv  |[0m new task
+[32msql_serv  |[0m sql_owne:01,17:27:22:__call__:21:YyuwkA -- Found old userid, using
+[32msql_serv  |[0m sql.py:01,17:27:22:insert_sql:174:YyuwkA -- Checked out owner object, fileid dict, and lock
+[32msql_serv  |[0m sql.py:01,17:27:22:insert_sql:223:YyuwkA -- len of id map 26 len of files 12
+[33mpydocs_1  |[0m gdoc.py:01,17:27:22:_download_details:159:LFrZEA -- received job for 1_BIMsBsouGOgicFcBVR7gHXNHaSP4iVZGb6ezTcaHg8
+[36mpydocs_2  |[0m gdoc.py:01,17:27:22:_download_details:159:AZHoyg -- received job for 1_BIMsBsouGOgicFcBVR7gHXNHaSP4iVZGb6ezTcaHg8
+[35mpydocs_3  |[0m gdoc.py:01,17:27:22:_download_details:159:0PLjCw -- received job for 1x8Vlo2OmIPQX7_XYCRzaAG2DgEULR8QVA588B6rCcOg
+[35mpydocs_3  |[0m gdoc.py:01,17:27:22:_download_details:159:0PLjCw -- received job for 1_BIMsBsouGOgicFcBVR7gHXNHaSP4iVZGb6ezTcaHg8
+[36mpydocs_2  |[0m gdoc.py:01,17:27:22:async_init:102:AZHoyg -- No content received for: 1adckvxMM48z9k3sSG_JP2w-9T5WOqLNocASrGMkmaEs, skribt.
+[36mpydocs_2  |[0m gdoc.py:01,17:27:22:async_init:118:AZHoyg -- Done computing gdoc for skribt 1adckvxMM48z9k3sSG_JP2w-9T5WOqLNocASrGMkmaEs
+[36mpydocs_2  |[0m get_file:01,17:27:22:getRevision:147:AZHoyg -- not done but tried to append, prob because no operations found file: 1adckvxMM48z9k3sSG_JP2w-9T5WOqLNocASrGMkmaEs, skribt
+[36mpydocs_2  |[0m test_uti:01,17:27:22:print_size:95:AZHoyg -- 
+[36mpydocs_2  |[0m 
+[36mpydocs_2  |[0m ---------------Memory usage: 49752 (kb)---------------1.074761 mins since start
+[36mpydocs_2  |[0m test_uti:01,17:27:22:print_size:112:AZHoyg -- /app/data/testing123mhRmCg/
+[36mpydocs_2  |[0m 26/180 discovered items at 2020-05-01 17:27:22.679806
+[36mpydocs_2  |[0m dump count: 1
+[33mpydocs_1  |[0m test_uti:01,17:27:22:print_size:95:LFrZEA -- 
+[33mpydocs_1  |[0m 
+[33mpydocs_1  |[0m ---------------Memory usage: 49336 (kb)---------------1.075062 mins since start
+[36mpydocs_2  |[0m test_uti:01,17:27:22:send_socket:176:AZHoyg -- connect working
+[33mpydocs_1  |[0m test_uti:01,17:27:22:print_size:112:LFrZEA -- /app/data/testing123X15DNQ/
+[33mpydocs_1  |[0m 26/181 discovered items at 2020-05-01 17:27:22.685313
+[33mpydocs_1  |[0m dump count: 1
+[33mpydocs_1  |[0m test_uti:01,17:27:22:send_socket:176:LFrZEA -- connect working
+[32msql_serv  |[0m sql_serv:01,17:27:22:req_callback:95:YyuwkA -- queue size: 0
+[32msql_serv  |[0m sql_serv:01,17:27:22:req_callback:95:YyuwkA -- queue size: 0
+[33mpydocs_1  |[0m test_uti:01,17:27:22:send_socket:185:LFrZEA -- received: b'go'
+[36mpydocs_2  |[0m test_uti:01,17:27:22:send_socket:185:AZHoyg -- received: b'go'
+[32msql_serv  |[0m name:  testing123mhRmCg
+[32msql_serv  |[0m new task
+[32msql_serv  |[0m name:  testing123X15DNQ
+[32msql_serv  |[0m new task
+[32msql_serv  |[0m sql_owne:01,17:27:22:__call__:21:YyuwkA -- Found old userid, using
+[32msql_serv  |[0m sql.py:01,17:27:22:insert_sql:174:YyuwkA -- Checked out owner object, fileid dict, and lock
+[32msql_serv  |[0m sql_owne:01,17:27:22:__call__:21:YyuwkA -- Found old userid, using
+[32msql_serv  |[0m sql.py:01,17:27:22:insert_sql:174:YyuwkA -- Checked out owner object, fileid dict, and lock
+[36mpydocs_2  |[0m gdoc.py:01,17:27:22:_download_details:159:AZHoyg -- received job for 1x8Vlo2OmIPQX7_XYCRzaAG2DgEULR8QVA588B6rCcOg
+[32msql_serv  |[0m sql.py:01,17:27:22:insert_sql:223:YyuwkA -- len of id map 26 len of files 13
+[32msql_serv  |[0m sql.py:01,17:27:22:insert_sql:223:YyuwkA -- len of id map 26 len of files 13
+[33mpydocs_1  |[0m gdoc.py:01,17:27:23:async_init:102:LFrZEA -- No content received for: 1adckvxMM48z9k3sSG_JP2w-9T5WOqLNocASrGMkmaEs, skribt.
+[33mpydocs_1  |[0m gdoc.py:01,17:27:23:async_init:118:LFrZEA -- Done computing gdoc for skribt 1adckvxMM48z9k3sSG_JP2w-9T5WOqLNocASrGMkmaEs
+[33mpydocs_1  |[0m get_file:01,17:27:23:getRevision:147:LFrZEA -- not done but tried to append, prob because no operations found file: 1adckvxMM48z9k3sSG_JP2w-9T5WOqLNocASrGMkmaEs, skribt
+[33mpydocs_1  |[0m gdoc.py:01,17:27:23:_download_details:159:LFrZEA -- received job for 1x8Vlo2OmIPQX7_XYCRzaAG2DgEULR8QVA588B6rCcOg
+[32msql_serv  |[0m sql_serv:01,17:27:26:report:28:YyuwkA -- SQL Queue size: 0, thread size: 6
+[32msql_serv  |[0m sql_serv:01,17:27:26:remove_dead_threads:149:YyuwkA -- Removed finished threads: 0, total resolved threads: 0
+[36mpydocs_2  |[0m gdoc.py:01,17:27:27:async_init:102:AZHoyg -- No content received for: 1cZg8adblMjYv0HOMh9qeEGR5Hhx59fhEAYD_mG1tfL0, news research.
+[35mpydocs_3  |[0m gdoc.py:01,17:27:27:async_init:102:0PLjCw -- No content received for: 1cZg8adblMjYv0HOMh9qeEGR5Hhx59fhEAYD_mG1tfL0, news research.
+[33mpydocs_1  |[0m gdoc.py:01,17:27:27:async_init:102:LFrZEA -- No content received for: 1cZg8adblMjYv0HOMh9qeEGR5Hhx59fhEAYD_mG1tfL0, news research.
+[36mpydocs_2  |[0m gdoc.py:01,17:27:27:async_init:118:AZHoyg -- Done computing gdoc for news research 1cZg8adblMjYv0HOMh9qeEGR5Hhx59fhEAYD_mG1tfL0
+[33mpydocs_1  |[0m gdoc.py:01,17:27:27:async_init:118:LFrZEA -- Done computing gdoc for news research 1cZg8adblMjYv0HOMh9qeEGR5Hhx59fhEAYD_mG1tfL0
+[36mpydocs_2  |[0m get_file:01,17:27:27:getRevision:147:AZHoyg -- not done but tried to append, prob because no operations found file: 1cZg8adblMjYv0HOMh9qeEGR5Hhx59fhEAYD_mG1tfL0, news research
+[33mpydocs_1  |[0m get_file:01,17:27:27:getRevision:147:LFrZEA -- not done but tried to append, prob because no operations found file: 1cZg8adblMjYv0HOMh9qeEGR5Hhx59fhEAYD_mG1tfL0, news research
+[35mpydocs_3  |[0m gdoc.py:01,17:27:27:async_init:118:0PLjCw -- Done computing gdoc for news research 1cZg8adblMjYv0HOMh9qeEGR5Hhx59fhEAYD_mG1tfL0
+[35mpydocs_3  |[0m get_file:01,17:27:27:getRevision:147:0PLjCw -- not done but tried to append, prob because no operations found file: 1cZg8adblMjYv0HOMh9qeEGR5Hhx59fhEAYD_mG1tfL0, news research
+[33mpydocs_1  |[0m gdoc.py:01,17:27:27:_download_details:159:LFrZEA -- received job for 1jqJ0-FMfB3RjcqrSJxckdoC-jzHHMa3nLcRMP6CquRQ
+[35mpydocs_3  |[0m gdoc.py:01,17:27:27:_download_details:159:0PLjCw -- received job for 1jqJ0-FMfB3RjcqrSJxckdoC-jzHHMa3nLcRMP6CquRQ
+[36mpydocs_2  |[0m gdoc.py:01,17:27:27:_download_details:159:AZHoyg -- received job for 1jqJ0-FMfB3RjcqrSJxckdoC-jzHHMa3nLcRMP6CquRQ
+[36mpydocs_2  |[0m gdoc.py:01,17:27:27:async_init:102:AZHoyg -- No content received for: 1_BIMsBsouGOgicFcBVR7gHXNHaSP4iVZGb6ezTcaHg8, library ecsposey.
+[35mpydocs_3  |[0m gdoc.py:01,17:27:27:async_init:102:0PLjCw -- No content received for: 1x8Vlo2OmIPQX7_XYCRzaAG2DgEULR8QVA588B6rCcOg, book review.
+[33mpydocs_1  |[0m gdoc.py:01,17:27:27:async_init:102:LFrZEA -- No content received for: 1_BIMsBsouGOgicFcBVR7gHXNHaSP4iVZGb6ezTcaHg8, library ecsposey.
+[35mpydocs_3  |[0m gdoc.py:01,17:27:27:async_init:118:0PLjCw -- Done computing gdoc for book review 1x8Vlo2OmIPQX7_XYCRzaAG2DgEULR8QVA588B6rCcOg
+[36mpydocs_2  |[0m gdoc.py:01,17:27:27:async_init:118:AZHoyg -- Done computing gdoc for library ecsposey 1_BIMsBsouGOgicFcBVR7gHXNHaSP4iVZGb6ezTcaHg8
+[35mpydocs_3  |[0m get_file:01,17:27:27:getRevision:147:0PLjCw -- not done but tried to append, prob because no operations found file: 1x8Vlo2OmIPQX7_XYCRzaAG2DgEULR8QVA588B6rCcOg, book review
+[36mpydocs_2  |[0m get_file:01,17:27:27:getRevision:147:AZHoyg -- not done but tried to append, prob because no operations found file: 1_BIMsBsouGOgicFcBVR7gHXNHaSP4iVZGb6ezTcaHg8, library ecsposey
+[33mpydocs_1  |[0m gdoc.py:01,17:27:27:async_init:118:LFrZEA -- Done computing gdoc for library ecsposey 1_BIMsBsouGOgicFcBVR7gHXNHaSP4iVZGb6ezTcaHg8
+[33mpydocs_1  |[0m get_file:01,17:27:27:getRevision:147:LFrZEA -- not done but tried to append, prob because no operations found file: 1_BIMsBsouGOgicFcBVR7gHXNHaSP4iVZGb6ezTcaHg8, library ecsposey
+[35mpydocs_3  |[0m gdoc.py:01,17:27:27:async_init:102:0PLjCw -- No content received for: 1_BIMsBsouGOgicFcBVR7gHXNHaSP4iVZGb6ezTcaHg8, library ecsposey.
+[35mpydocs_3  |[0m gdoc.py:01,17:27:27:async_init:118:0PLjCw -- Done computing gdoc for library ecsposey 1_BIMsBsouGOgicFcBVR7gHXNHaSP4iVZGb6ezTcaHg8
+[35mpydocs_3  |[0m get_file:01,17:27:27:getRevision:147:0PLjCw -- not done but tried to append, prob because no operations found file: 1_BIMsBsouGOgicFcBVR7gHXNHaSP4iVZGb6ezTcaHg8, library ecsposey
+[36mpydocs_2  |[0m gdoc.py:01,17:27:27:async_init:102:AZHoyg -- No content received for: 1x8Vlo2OmIPQX7_XYCRzaAG2DgEULR8QVA588B6rCcOg, book review.
+[36mpydocs_2  |[0m gdoc.py:01,17:27:27:async_init:118:AZHoyg -- Done computing gdoc for book review 1x8Vlo2OmIPQX7_XYCRzaAG2DgEULR8QVA588B6rCcOg
+[36mpydocs_2  |[0m get_file:01,17:27:27:getRevision:147:AZHoyg -- not done but tried to append, prob because no operations found file: 1x8Vlo2OmIPQX7_XYCRzaAG2DgEULR8QVA588B6rCcOg, book review
+[35mpydocs_3  |[0m gdoc.py:01,17:27:27:_download_details:159:0PLjCw -- received job for 1VSIZknJPJGRXuMPnSk9gjDStnMEXty0XJR1KO4z7QBk
+[36mpydocs_2  |[0m gdoc.py:01,17:27:27:_download_details:159:AZHoyg -- received job for 1F6-Z7HfxAQ-F5SIBuApsQr141gOfpxG4y3_h7W7xN0E
+[33mpydocs_1  |[0m gdoc.py:01,17:27:27:_download_details:159:LFrZEA -- received job for 1F6-Z7HfxAQ-F5SIBuApsQr141gOfpxG4y3_h7W7xN0E
+[35mpydocs_3  |[0m gdoc.py:01,17:27:27:_download_details:159:0PLjCw -- received job for 1F6-Z7HfxAQ-F5SIBuApsQr141gOfpxG4y3_h7W7xN0E
+[36mpydocs_2  |[0m gdoc.py:01,17:27:27:_download_details:159:AZHoyg -- received job for 1VSIZknJPJGRXuMPnSk9gjDStnMEXty0XJR1KO4z7QBk
+[33mpydocs_1  |[0m gdoc.py:01,17:27:28:async_init:102:LFrZEA -- No content received for: 1x8Vlo2OmIPQX7_XYCRzaAG2DgEULR8QVA588B6rCcOg, book review.
+[33mpydocs_1  |[0m gdoc.py:01,17:27:28:async_init:118:LFrZEA -- Done computing gdoc for book review 1x8Vlo2OmIPQX7_XYCRzaAG2DgEULR8QVA588B6rCcOg
+[33mpydocs_1  |[0m get_file:01,17:27:28:getRevision:147:LFrZEA -- not done but tried to append, prob because no operations found file: 1x8Vlo2OmIPQX7_XYCRzaAG2DgEULR8QVA588B6rCcOg, book review
+[33mpydocs_1  |[0m gdoc.py:01,17:27:29:_download_details:159:LFrZEA -- received job for 1VSIZknJPJGRXuMPnSk9gjDStnMEXty0XJR1KO4z7QBk
+[33mpydocs_1  |[0m gdoc.py:01,17:27:32:async_init:102:LFrZEA -- No content received for: 1jqJ0-FMfB3RjcqrSJxckdoC-jzHHMa3nLcRMP6CquRQ, library exposay.
+[36mpydocs_2  |[0m gdoc.py:01,17:27:32:async_init:102:AZHoyg -- No content received for: 1jqJ0-FMfB3RjcqrSJxckdoC-jzHHMa3nLcRMP6CquRQ, library exposay.
+[35mpydocs_3  |[0m gdoc.py:01,17:27:32:async_init:102:0PLjCw -- No content received for: 1jqJ0-FMfB3RjcqrSJxckdoC-jzHHMa3nLcRMP6CquRQ, library exposay.
+[33mpydocs_1  |[0m gdoc.py:01,17:27:32:async_init:118:LFrZEA -- Done computing gdoc for library exposay 1jqJ0-FMfB3RjcqrSJxckdoC-jzHHMa3nLcRMP6CquRQ
+[35mpydocs_3  |[0m gdoc.py:01,17:27:32:async_init:118:0PLjCw -- Done computing gdoc for library exposay 1jqJ0-FMfB3RjcqrSJxckdoC-jzHHMa3nLcRMP6CquRQ
+[36mpydocs_2  |[0m gdoc.py:01,17:27:32:async_init:118:AZHoyg -- Done computing gdoc for library exposay 1jqJ0-FMfB3RjcqrSJxckdoC-jzHHMa3nLcRMP6CquRQ
+[33mpydocs_1  |[0m get_file:01,17:27:32:getRevision:147:LFrZEA -- not done but tried to append, prob because no operations found file: 1jqJ0-FMfB3RjcqrSJxckdoC-jzHHMa3nLcRMP6CquRQ, library exposay
+[35mpydocs_3  |[0m get_file:01,17:27:32:getRevision:147:0PLjCw -- not done but tried to append, prob because no operations found file: 1jqJ0-FMfB3RjcqrSJxckdoC-jzHHMa3nLcRMP6CquRQ, library exposay
+[36mpydocs_2  |[0m get_file:01,17:27:32:getRevision:147:AZHoyg -- not done but tried to append, prob because no operations found file: 1jqJ0-FMfB3RjcqrSJxckdoC-jzHHMa3nLcRMP6CquRQ, library exposay
+[35mpydocs_3  |[0m gdoc.py:01,17:27:32:async_init:102:0PLjCw -- No content received for: 1VSIZknJPJGRXuMPnSk9gjDStnMEXty0XJR1KO4z7QBk, discussion director.
+[35mpydocs_3  |[0m gdoc.py:01,17:27:32:async_init:118:0PLjCw -- Done computing gdoc for discussion director 1VSIZknJPJGRXuMPnSk9gjDStnMEXty0XJR1KO4z7QBk
+[35mpydocs_3  |[0m get_file:01,17:27:32:getRevision:147:0PLjCw -- not done but tried to append, prob because no operations found file: 1VSIZknJPJGRXuMPnSk9gjDStnMEXty0XJR1KO4z7QBk, discussion director
+[36mpydocs_2  |[0m gdoc.py:01,17:27:32:async_init:102:AZHoyg -- No content received for: 1F6-Z7HfxAQ-F5SIBuApsQr141gOfpxG4y3_h7W7xN0E, Activist Plan.
+[36mpydocs_2  |[0m gdoc.py:01,17:27:32:async_init:118:AZHoyg -- Done computing gdoc for Activist Plan 1F6-Z7HfxAQ-F5SIBuApsQr141gOfpxG4y3_h7W7xN0E
+[36mpydocs_2  |[0m get_file:01,17:27:32:getRevision:147:AZHoyg -- not done but tried to append, prob because no operations found file: 1F6-Z7HfxAQ-F5SIBuApsQr141gOfpxG4y3_h7W7xN0E, Activist Plan
+[33mpydocs_1  |[0m gdoc.py:01,17:27:32:async_init:102:LFrZEA -- No content received for: 1F6-Z7HfxAQ-F5SIBuApsQr141gOfpxG4y3_h7W7xN0E, Activist Plan.
+[33mpydocs_1  |[0m gdoc.py:01,17:27:32:async_init:118:LFrZEA -- Done computing gdoc for Activist Plan 1F6-Z7HfxAQ-F5SIBuApsQr141gOfpxG4y3_h7W7xN0E
+[33mpydocs_1  |[0m get_file:01,17:27:32:getRevision:147:LFrZEA -- not done but tried to append, prob because no operations found file: 1F6-Z7HfxAQ-F5SIBuApsQr141gOfpxG4y3_h7W7xN0E, Activist Plan
+[35mpydocs_3  |[0m gdoc.py:01,17:27:32:async_init:102:0PLjCw -- No content received for: 1F6-Z7HfxAQ-F5SIBuApsQr141gOfpxG4y3_h7W7xN0E, Activist Plan.
+[35mpydocs_3  |[0m gdoc.py:01,17:27:32:async_init:118:0PLjCw -- Done computing gdoc for Activist Plan 1F6-Z7HfxAQ-F5SIBuApsQr141gOfpxG4y3_h7W7xN0E
+[35mpydocs_3  |[0m get_file:01,17:27:32:getRevision:147:0PLjCw -- not done but tried to append, prob because no operations found file: 1F6-Z7HfxAQ-F5SIBuApsQr141gOfpxG4y3_h7W7xN0E, Activist Plan
+[36mpydocs_2  |[0m gdoc.py:01,17:27:32:async_init:102:AZHoyg -- No content received for: 1VSIZknJPJGRXuMPnSk9gjDStnMEXty0XJR1KO4z7QBk, discussion director.
+[36mpydocs_2  |[0m gdoc.py:01,17:27:33:async_init:118:AZHoyg -- Done computing gdoc for discussion director 1VSIZknJPJGRXuMPnSk9gjDStnMEXty0XJR1KO4z7QBk
+[36mpydocs_2  |[0m get_file:01,17:27:33:getRevision:147:AZHoyg -- not done but tried to append, prob because no operations found file: 1VSIZknJPJGRXuMPnSk9gjDStnMEXty0XJR1KO4z7QBk, discussion director
+[35mpydocs_3  |[0m gdoc.py:01,17:27:33:_download_details:159:0PLjCw -- received job for 1h1FUpGxFne9y7IFDVl7IQZGCPE1vhm3rJbCf5WgovQo
+[33mpydocs_1  |[0m gdoc.py:01,17:27:33:_download_details:159:LFrZEA -- received job for 1h1FUpGxFne9y7IFDVl7IQZGCPE1vhm3rJbCf5WgovQo
+[36mpydocs_2  |[0m gdoc.py:01,17:27:33:_download_details:159:AZHoyg -- received job for 1h1FUpGxFne9y7IFDVl7IQZGCPE1vhm3rJbCf5WgovQo
+[35mpydocs_3  |[0m gdoc.py:01,17:27:33:_download_details:159:0PLjCw -- received job for 1wqRmLVKxvm7w--kMAMGzVAjoILC593KzG-z6AFTdt_8
+[36mpydocs_2  |[0m gdoc.py:01,17:27:33:_download_details:159:AZHoyg -- received job for 1wqRmLVKxvm7w--kMAMGzVAjoILC593KzG-z6AFTdt_8
+[33mpydocs_1  |[0m gdoc.py:01,17:27:33:_download_details:159:LFrZEA -- received job for 1wqRmLVKxvm7w--kMAMGzVAjoILC593KzG-z6AFTdt_8
+[36mpydocs_2  |[0m gdoc.py:01,17:27:33:_download_details:159:AZHoyg -- received job for 1XGCuTdCzlBbB5B0rAu29ButWuims-VeTYBdfozFaFPk
+[35mpydocs_3  |[0m gdoc.py:01,17:27:33:_download_details:159:0PLjCw -- received job for 1XGCuTdCzlBbB5B0rAu29ButWuims-VeTYBdfozFaFPk
+[33mpydocs_1  |[0m gdoc.py:01,17:27:34:async_init:102:LFrZEA -- No content received for: 1VSIZknJPJGRXuMPnSk9gjDStnMEXty0XJR1KO4z7QBk, discussion director.
+[33mpydocs_1  |[0m gdoc.py:01,17:27:34:async_init:118:LFrZEA -- Done computing gdoc for discussion director 1VSIZknJPJGRXuMPnSk9gjDStnMEXty0XJR1KO4z7QBk
+[33mpydocs_1  |[0m get_file:01,17:27:34:getRevision:147:LFrZEA -- not done but tried to append, prob because no operations found file: 1VSIZknJPJGRXuMPnSk9gjDStnMEXty0XJR1KO4z7QBk, discussion director
+[33mpydocs_1  |[0m gdoc.py:01,17:27:34:_download_details:159:LFrZEA -- received job for 1XGCuTdCzlBbB5B0rAu29ButWuims-VeTYBdfozFaFPk
+[32msql_serv  |[0m sql_serv:01,17:27:36:report:28:YyuwkA -- SQL Queue size: 0, thread size: 6
+[32msql_serv  |[0m sql_serv:01,17:27:36:remove_dead_threads:149:YyuwkA -- Removed finished threads: 0, total resolved threads: 0
+[33mpydocs_1  |[0m gdoc.py:01,17:27:38:async_init:102:LFrZEA -- No content received for: 1h1FUpGxFne9y7IFDVl7IQZGCPE1vhm3rJbCf5WgovQo, social experiment.
+[36mpydocs_2  |[0m gdoc.py:01,17:27:38:async_init:102:AZHoyg -- No content received for: 1h1FUpGxFne9y7IFDVl7IQZGCPE1vhm3rJbCf5WgovQo, social experiment.
+[35mpydocs_3  |[0m gdoc.py:01,17:27:38:async_init:102:0PLjCw -- No content received for: 1h1FUpGxFne9y7IFDVl7IQZGCPE1vhm3rJbCf5WgovQo, social experiment.
+[35mpydocs_3  |[0m gdoc.py:01,17:27:38:async_init:118:0PLjCw -- Done computing gdoc for social experiment 1h1FUpGxFne9y7IFDVl7IQZGCPE1vhm3rJbCf5WgovQo
+[33mpydocs_1  |[0m gdoc.py:01,17:27:38:async_init:118:LFrZEA -- Done computing gdoc for social experiment 1h1FUpGxFne9y7IFDVl7IQZGCPE1vhm3rJbCf5WgovQo
+[36mpydocs_2  |[0m gdoc.py:01,17:27:38:async_init:118:AZHoyg -- Done computing gdoc for social experiment 1h1FUpGxFne9y7IFDVl7IQZGCPE1vhm3rJbCf5WgovQo
+[33mpydocs_1  |[0m get_file:01,17:27:38:getRevision:147:LFrZEA -- not done but tried to append, prob because no operations found file: 1h1FUpGxFne9y7IFDVl7IQZGCPE1vhm3rJbCf5WgovQo, social experiment
+[35mpydocs_3  |[0m get_file:01,17:27:38:getRevision:147:0PLjCw -- not done but tried to append, prob because no operations found file: 1h1FUpGxFne9y7IFDVl7IQZGCPE1vhm3rJbCf5WgovQo, social experiment
+[36mpydocs_2  |[0m get_file:01,17:27:38:getRevision:147:AZHoyg -- not done but tried to append, prob because no operations found file: 1h1FUpGxFne9y7IFDVl7IQZGCPE1vhm3rJbCf5WgovQo, social experiment
+[35mpydocs_3  |[0m gdoc.py:01,17:27:38:async_init:102:0PLjCw -- No content received for: 1wqRmLVKxvm7w--kMAMGzVAjoILC593KzG-z6AFTdt_8, linguist 2.
+[33mpydocs_1  |[0m gdoc.py:01,17:27:38:async_init:102:LFrZEA -- No content received for: 1wqRmLVKxvm7w--kMAMGzVAjoILC593KzG-z6AFTdt_8, linguist 2.
+[36mpydocs_2  |[0m gdoc.py:01,17:27:38:async_init:102:AZHoyg -- No content received for: 1wqRmLVKxvm7w--kMAMGzVAjoILC593KzG-z6AFTdt_8, linguist 2.
+[33mpydocs_1  |[0m gdoc.py:01,17:27:38:async_init:118:LFrZEA -- Done computing gdoc for linguist 2 1wqRmLVKxvm7w--kMAMGzVAjoILC593KzG-z6AFTdt_8
+[35mpydocs_3  |[0m gdoc.py:01,17:27:38:async_init:118:0PLjCw -- Done computing gdoc for linguist 2 1wqRmLVKxvm7w--kMAMGzVAjoILC593KzG-z6AFTdt_8
+[33mpydocs_1  |[0m get_file:01,17:27:38:getRevision:147:LFrZEA -- not done but tried to append, prob because no operations found file: 1wqRmLVKxvm7w--kMAMGzVAjoILC593KzG-z6AFTdt_8, linguist 2
+[36mpydocs_2  |[0m gdoc.py:01,17:27:38:async_init:118:AZHoyg -- Done computing gdoc for linguist 2 1wqRmLVKxvm7w--kMAMGzVAjoILC593KzG-z6AFTdt_8
+[35mpydocs_3  |[0m get_file:01,17:27:38:getRevision:147:0PLjCw -- not done but tried to append, prob because no operations found file: 1wqRmLVKxvm7w--kMAMGzVAjoILC593KzG-z6AFTdt_8, linguist 2
+[36mpydocs_2  |[0m get_file:01,17:27:38:getRevision:147:AZHoyg -- not done but tried to append, prob because no operations found file: 1wqRmLVKxvm7w--kMAMGzVAjoILC593KzG-z6AFTdt_8, linguist 2
+[35mpydocs_3  |[0m gdoc.py:01,17:27:38:async_init:102:0PLjCw -- No content received for: 1XGCuTdCzlBbB5B0rAu29ButWuims-VeTYBdfozFaFPk, j.
+[36mpydocs_2  |[0m gdoc.py:01,17:27:38:async_init:102:AZHoyg -- No content received for: 1XGCuTdCzlBbB5B0rAu29ButWuims-VeTYBdfozFaFPk, j.
+[36mpydocs_2  |[0m gdoc.py:01,17:27:38:async_init:118:AZHoyg -- Done computing gdoc for j 1XGCuTdCzlBbB5B0rAu29ButWuims-VeTYBdfozFaFPk
+[35mpydocs_3  |[0m gdoc.py:01,17:27:38:async_init:118:0PLjCw -- Done computing gdoc for j 1XGCuTdCzlBbB5B0rAu29ButWuims-VeTYBdfozFaFPk
+[36mpydocs_2  |[0m get_file:01,17:27:38:getRevision:147:AZHoyg -- not done but tried to append, prob because no operations found file: 1XGCuTdCzlBbB5B0rAu29ButWuims-VeTYBdfozFaFPk, j
+[35mpydocs_3  |[0m get_file:01,17:27:38:getRevision:147:0PLjCw -- not done but tried to append, prob because no operations found file: 1XGCuTdCzlBbB5B0rAu29ButWuims-VeTYBdfozFaFPk, j
+[33mpydocs_1  |[0m gdoc.py:01,17:27:38:_download_details:159:LFrZEA -- received job for 1ecDoneIykl54KGJhMUpcvdNKg350pGauVB9v0uCuFbI
+[36mpydocs_2  |[0m gdoc.py:01,17:27:38:_download_details:159:AZHoyg -- received job for 1ecDoneIykl54KGJhMUpcvdNKg350pGauVB9v0uCuFbI
+[35mpydocs_3  |[0m gdoc.py:01,17:27:38:_download_details:159:0PLjCw -- received job for 1ecDoneIykl54KGJhMUpcvdNKg350pGauVB9v0uCuFbI
+[36mpydocs_2  |[0m gdoc.py:01,17:27:38:_download_details:159:AZHoyg -- received job for 1ZIuPeHFKHzM1yn1G47W92JbGijyxWqaOfKhkejWXMdA
+[35mpydocs_3  |[0m gdoc.py:01,17:27:38:_download_details:159:0PLjCw -- received job for 1ZIuPeHFKHzM1yn1G47W92JbGijyxWqaOfKhkejWXMdA
+[33mpydocs_1  |[0m gdoc.py:01,17:27:38:_download_details:159:LFrZEA -- received job for 1b1ARGMmgTYWTMHAnv5biEbQKVzTLLQ3vt2n2YLicEws
+[36mpydocs_2  |[0m gdoc.py:01,17:27:38:_download_details:159:AZHoyg -- received job for 1b1ARGMmgTYWTMHAnv5biEbQKVzTLLQ3vt2n2YLicEws
+[35mpydocs_3  |[0m gdoc.py:01,17:27:38:_download_details:159:0PLjCw -- received job for 1b1ARGMmgTYWTMHAnv5biEbQKVzTLLQ3vt2n2YLicEws
+[33mpydocs_1  |[0m gdoc.py:01,17:27:39:async_init:102:LFrZEA -- No content received for: 1XGCuTdCzlBbB5B0rAu29ButWuims-VeTYBdfozFaFPk, j.
+[33mpydocs_1  |[0m gdoc.py:01,17:27:39:async_init:118:LFrZEA -- Done computing gdoc for j 1XGCuTdCzlBbB5B0rAu29ButWuims-VeTYBdfozFaFPk
+[33mpydocs_1  |[0m get_file:01,17:27:39:getRevision:147:LFrZEA -- not done but tried to append, prob because no operations found file: 1XGCuTdCzlBbB5B0rAu29ButWuims-VeTYBdfozFaFPk, j
+[33mpydocs_1  |[0m gdoc.py:01,17:27:39:_download_details:159:LFrZEA -- received job for 1ZIuPeHFKHzM1yn1G47W92JbGijyxWqaOfKhkejWXMdA
+[36mpydocs_2  |[0m gdoc.py:01,17:27:43:async_init:102:AZHoyg -- No content received for: 1ecDoneIykl54KGJhMUpcvdNKg350pGauVB9v0uCuFbI, cultural interview.
+[33mpydocs_1  |[0m gdoc.py:01,17:27:43:async_init:102:LFrZEA -- No content received for: 1ecDoneIykl54KGJhMUpcvdNKg350pGauVB9v0uCuFbI, cultural interview.
+[35mpydocs_3  |[0m gdoc.py:01,17:27:43:async_init:102:0PLjCw -- No content received for: 1ecDoneIykl54KGJhMUpcvdNKg350pGauVB9v0uCuFbI, cultural interview.
+[35mpydocs_3  |[0m gdoc.py:01,17:27:43:async_init:118:0PLjCw -- Done computing gdoc for cultural interview 1ecDoneIykl54KGJhMUpcvdNKg350pGauVB9v0uCuFbI
+[36mpydocs_2  |[0m gdoc.py:01,17:27:43:async_init:118:AZHoyg -- Done computing gdoc for cultural interview 1ecDoneIykl54KGJhMUpcvdNKg350pGauVB9v0uCuFbI
+[33mpydocs_1  |[0m gdoc.py:01,17:27:43:async_init:118:LFrZEA -- Done computing gdoc for cultural interview 1ecDoneIykl54KGJhMUpcvdNKg350pGauVB9v0uCuFbI
+[35mpydocs_3  |[0m get_file:01,17:27:43:getRevision:147:0PLjCw -- not done but tried to append, prob because no operations found file: 1ecDoneIykl54KGJhMUpcvdNKg350pGauVB9v0uCuFbI, cultural interview
+[36mpydocs_2  |[0m get_file:01,17:27:43:getRevision:147:AZHoyg -- not done but tried to append, prob because no operations found file: 1ecDoneIykl54KGJhMUpcvdNKg350pGauVB9v0uCuFbI, cultural interview
+[33mpydocs_1  |[0m get_file:01,17:27:43:getRevision:147:LFrZEA -- not done but tried to append, prob because no operations found file: 1ecDoneIykl54KGJhMUpcvdNKg350pGauVB9v0uCuFbI, cultural interview
+[35mpydocs_3  |[0m gdoc.py:01,17:27:43:async_init:102:0PLjCw -- No content received for: 1ZIuPeHFKHzM1yn1G47W92JbGijyxWqaOfKhkejWXMdA, debate round.
+[36mpydocs_2  |[0m gdoc.py:01,17:27:43:async_init:102:AZHoyg -- No content received for: 1ZIuPeHFKHzM1yn1G47W92JbGijyxWqaOfKhkejWXMdA, debate round.
+[35mpydocs_3  |[0m gdoc.py:01,17:27:43:async_init:118:0PLjCw -- Done computing gdoc for debate round 1ZIuPeHFKHzM1yn1G47W92JbGijyxWqaOfKhkejWXMdA
+[36mpydocs_2  |[0m gdoc.py:01,17:27:43:async_init:118:AZHoyg -- Done computing gdoc for debate round 1ZIuPeHFKHzM1yn1G47W92JbGijyxWqaOfKhkejWXMdA
+[35mpydocs_3  |[0m get_file:01,17:27:43:getRevision:147:0PLjCw -- not done but tried to append, prob because no operations found file: 1ZIuPeHFKHzM1yn1G47W92JbGijyxWqaOfKhkejWXMdA, debate round
+[36mpydocs_2  |[0m get_file:01,17:27:43:getRevision:147:AZHoyg -- not done but tried to append, prob because no operations found file: 1ZIuPeHFKHzM1yn1G47W92JbGijyxWqaOfKhkejWXMdA, debate round
+[33mpydocs_1  |[0m gdoc.py:01,17:27:43:async_init:102:LFrZEA -- No content received for: 1b1ARGMmgTYWTMHAnv5biEbQKVzTLLQ3vt2n2YLicEws, cultural anthropologist.
+[33mpydocs_1  |[0m gdoc.py:01,17:27:43:async_init:118:LFrZEA -- Done computing gdoc for cultural anthropologist 1b1ARGMmgTYWTMHAnv5biEbQKVzTLLQ3vt2n2YLicEws
+[33mpydocs_1  |[0m get_file:01,17:27:43:getRevision:147:LFrZEA -- not done but tried to append, prob because no operations found file: 1b1ARGMmgTYWTMHAnv5biEbQKVzTLLQ3vt2n2YLicEws, cultural anthropologist
+[35mpydocs_3  |[0m gdoc.py:01,17:27:43:async_init:102:0PLjCw -- No content received for: 1b1ARGMmgTYWTMHAnv5biEbQKVzTLLQ3vt2n2YLicEws, cultural anthropologist.
+[36mpydocs_2  |[0m gdoc.py:01,17:27:43:async_init:102:AZHoyg -- No content received for: 1b1ARGMmgTYWTMHAnv5biEbQKVzTLLQ3vt2n2YLicEws, cultural anthropologist.
+[35mpydocs_3  |[0m gdoc.py:01,17:27:43:async_init:118:0PLjCw -- Done computing gdoc for cultural anthropologist 1b1ARGMmgTYWTMHAnv5biEbQKVzTLLQ3vt2n2YLicEws
+[36mpydocs_2  |[0m gdoc.py:01,17:27:43:async_init:118:AZHoyg -- Done computing gdoc for cultural anthropologist 1b1ARGMmgTYWTMHAnv5biEbQKVzTLLQ3vt2n2YLicEws
+[35mpydocs_3  |[0m get_file:01,17:27:43:getRevision:147:0PLjCw -- not done but tried to append, prob because no operations found file: 1b1ARGMmgTYWTMHAnv5biEbQKVzTLLQ3vt2n2YLicEws, cultural anthropologist
+[36mpydocs_2  |[0m get_file:01,17:27:43:getRevision:147:AZHoyg -- not done but tried to append, prob because no operations found file: 1b1ARGMmgTYWTMHAnv5biEbQKVzTLLQ3vt2n2YLicEws, cultural anthropologist
+[33mpydocs_1  |[0m gdoc.py:01,17:27:44:_download_details:159:LFrZEA -- received job for 12K516OwpugshsvDcQqP4cSvg-ku6pJuAJGfrEmbDqGc
+[36mpydocs_2  |[0m gdoc.py:01,17:27:44:_download_details:159:AZHoyg -- received job for 12K516OwpugshsvDcQqP4cSvg-ku6pJuAJGfrEmbDqGc
+[35mpydocs_3  |[0m gdoc.py:01,17:27:44:_download_details:159:0PLjCw -- received job for 12K516OwpugshsvDcQqP4cSvg-ku6pJuAJGfrEmbDqGc
+[33mpydocs_1  |[0m gdoc.py:01,17:27:44:_download_details:159:LFrZEA -- received job for 1a7puy4GkUsAx2u9lu1i3MnxJAx0JyFPFozhkGYlCT5I
+[36mpydocs_2  |[0m gdoc.py:01,17:27:44:_download_details:159:AZHoyg -- received job for 1a7puy4GkUsAx2u9lu1i3MnxJAx0JyFPFozhkGYlCT5I
+[35mpydocs_3  |[0m gdoc.py:01,17:27:44:_download_details:159:0PLjCw -- received job for 1a7puy4GkUsAx2u9lu1i3MnxJAx0JyFPFozhkGYlCT5I
+[35mpydocs_3  |[0m gdoc.py:01,17:27:44:_download_details:159:0PLjCw -- received job for 1jEPinYNleGwKDF0SJddLTTeVvYZbF40sbV5FxvJyNCU
+[36mpydocs_2  |[0m gdoc.py:01,17:27:44:_download_details:159:AZHoyg -- received job for 1jEPinYNleGwKDF0SJddLTTeVvYZbF40sbV5FxvJyNCU
+[33mpydocs_1  |[0m gdoc.py:01,17:27:44:async_init:102:LFrZEA -- No content received for: 1ZIuPeHFKHzM1yn1G47W92JbGijyxWqaOfKhkejWXMdA, debate round.
+[33mpydocs_1  |[0m gdoc.py:01,17:27:44:async_init:118:LFrZEA -- Done computing gdoc for debate round 1ZIuPeHFKHzM1yn1G47W92JbGijyxWqaOfKhkejWXMdA
+[33mpydocs_1  |[0m get_file:01,17:27:44:getRevision:147:LFrZEA -- not done but tried to append, prob because no operations found file: 1ZIuPeHFKHzM1yn1G47W92JbGijyxWqaOfKhkejWXMdA, debate round
+[33mpydocs_1  |[0m gdoc.py:01,17:27:44:_download_details:159:LFrZEA -- received job for 1jEPinYNleGwKDF0SJddLTTeVvYZbF40sbV5FxvJyNCU
+[32msql_serv  |[0m sql_serv:01,17:27:46:report:28:YyuwkA -- SQL Queue size: 0, thread size: 6
+[32msql_serv  |[0m sql_serv:01,17:27:46:remove_dead_threads:149:YyuwkA -- Removed finished threads: 0, total resolved threads: 0
+[33mpydocs_1  |[0m gdoc.py:01,17:27:49:async_init:102:LFrZEA -- No content received for: 12K516OwpugshsvDcQqP4cSvg-ku6pJuAJGfrEmbDqGc, goipeace.
+[33mpydocs_1  |[0m gdoc.py:01,17:27:49:async_init:118:LFrZEA -- Done computing gdoc for goipeace 12K516OwpugshsvDcQqP4cSvg-ku6pJuAJGfrEmbDqGc
+[35mpydocs_3  |[0m gdoc.py:01,17:27:49:async_init:102:0PLjCw -- No content received for: 12K516OwpugshsvDcQqP4cSvg-ku6pJuAJGfrEmbDqGc, goipeace.
+[36mpydocs_2  |[0m gdoc.py:01,17:27:49:async_init:102:AZHoyg -- No content received for: 12K516OwpugshsvDcQqP4cSvg-ku6pJuAJGfrEmbDqGc, goipeace.
+[35mpydocs_3  |[0m gdoc.py:01,17:27:49:async_init:118:0PLjCw -- Done computing gdoc for goipeace 12K516OwpugshsvDcQqP4cSvg-ku6pJuAJGfrEmbDqGc
+[33mpydocs_1  |[0m get_file:01,17:27:49:getRevision:147:LFrZEA -- not done but tried to append, prob because no operations found file: 12K516OwpugshsvDcQqP4cSvg-ku6pJuAJGfrEmbDqGc, goipeace
+[36mpydocs_2  |[0m gdoc.py:01,17:27:49:async_init:118:AZHoyg -- Done computing gdoc for goipeace 12K516OwpugshsvDcQqP4cSvg-ku6pJuAJGfrEmbDqGc
+[35mpydocs_3  |[0m get_file:01,17:27:49:getRevision:147:0PLjCw -- not done but tried to append, prob because no operations found file: 12K516OwpugshsvDcQqP4cSvg-ku6pJuAJGfrEmbDqGc, goipeace
+[36mpydocs_2  |[0m get_file:01,17:27:49:getRevision:147:AZHoyg -- not done but tried to append, prob because no operations found file: 12K516OwpugshsvDcQqP4cSvg-ku6pJuAJGfrEmbDqGc, goipeace
+[33mpydocs_1  |[0m gdoc.py:01,17:27:49:async_init:102:LFrZEA -- No content received for: 1a7puy4GkUsAx2u9lu1i3MnxJAx0JyFPFozhkGYlCT5I, chernos.
+[35mpydocs_3  |[0m gdoc.py:01,17:27:49:async_init:102:0PLjCw -- No content received for: 1a7puy4GkUsAx2u9lu1i3MnxJAx0JyFPFozhkGYlCT5I, chernos.
+[36mpydocs_2  |[0m gdoc.py:01,17:27:49:async_init:102:AZHoyg -- No content received for: 1a7puy4GkUsAx2u9lu1i3MnxJAx0JyFPFozhkGYlCT5I, chernos.
+[33mpydocs_1  |[0m gdoc.py:01,17:27:49:async_init:118:LFrZEA -- Done computing gdoc for chernos 1a7puy4GkUsAx2u9lu1i3MnxJAx0JyFPFozhkGYlCT5I
+[35mpydocs_3  |[0m gdoc.py:01,17:27:49:async_init:118:0PLjCw -- Done computing gdoc for chernos 1a7puy4GkUsAx2u9lu1i3MnxJAx0JyFPFozhkGYlCT5I
+[36mpydocs_2  |[0m gdoc.py:01,17:27:49:async_init:118:AZHoyg -- Done computing gdoc for chernos 1a7puy4GkUsAx2u9lu1i3MnxJAx0JyFPFozhkGYlCT5I
+[33mpydocs_1  |[0m get_file:01,17:27:49:getRevision:147:LFrZEA -- not done but tried to append, prob because no operations found file: 1a7puy4GkUsAx2u9lu1i3MnxJAx0JyFPFozhkGYlCT5I, chernos
+[35mpydocs_3  |[0m get_file:01,17:27:49:getRevision:147:0PLjCw -- not done but tried to append, prob because no operations found file: 1a7puy4GkUsAx2u9lu1i3MnxJAx0JyFPFozhkGYlCT5I, chernos
+[36mpydocs_2  |[0m get_file:01,17:27:49:getRevision:147:AZHoyg -- not done but tried to append, prob because no operations found file: 1a7puy4GkUsAx2u9lu1i3MnxJAx0JyFPFozhkGYlCT5I, chernos
+[36mpydocs_2  |[0m gdoc.py:01,17:27:49:async_init:102:AZHoyg -- No content received for: 1jEPinYNleGwKDF0SJddLTTeVvYZbF40sbV5FxvJyNCU, LAB REPORT 2.
+[35mpydocs_3  |[0m gdoc.py:01,17:27:49:async_init:102:0PLjCw -- No content received for: 1jEPinYNleGwKDF0SJddLTTeVvYZbF40sbV5FxvJyNCU, LAB REPORT 2.
+[36mpydocs_2  |[0m gdoc.py:01,17:27:49:async_init:118:AZHoyg -- Done computing gdoc for LAB REPORT 2 1jEPinYNleGwKDF0SJddLTTeVvYZbF40sbV5FxvJyNCU
+[35mpydocs_3  |[0m gdoc.py:01,17:27:49:async_init:118:0PLjCw -- Done computing gdoc for LAB REPORT 2 1jEPinYNleGwKDF0SJddLTTeVvYZbF40sbV5FxvJyNCU
+[36mpydocs_2  |[0m get_file:01,17:27:49:getRevision:147:AZHoyg -- not done but tried to append, prob because no operations found file: 1jEPinYNleGwKDF0SJddLTTeVvYZbF40sbV5FxvJyNCU, LAB REPORT 2
+[35mpydocs_3  |[0m get_file:01,17:27:49:getRevision:147:0PLjCw -- not done but tried to append, prob because no operations found file: 1jEPinYNleGwKDF0SJddLTTeVvYZbF40sbV5FxvJyNCU, LAB REPORT 2
+[33mpydocs_1  |[0m gdoc.py:01,17:27:49:_download_details:159:LFrZEA -- received job for 12bPKEMHnfEBwlDfZnXYlPZRRwnRiHPVtDkcBZqNxBA4
+[36mpydocs_2  |[0m gdoc.py:01,17:27:49:_download_details:159:AZHoyg -- received job for 12bPKEMHnfEBwlDfZnXYlPZRRwnRiHPVtDkcBZqNxBA4
+[35mpydocs_3  |[0m gdoc.py:01,17:27:49:_download_details:159:0PLjCw -- received job for 12bPKEMHnfEBwlDfZnXYlPZRRwnRiHPVtDkcBZqNxBA4
+[33mpydocs_1  |[0m gdoc.py:01,17:27:49:async_init:102:LFrZEA -- No content received for: 1jEPinYNleGwKDF0SJddLTTeVvYZbF40sbV5FxvJyNCU, LAB REPORT 2.
+[33mpydocs_1  |[0m gdoc.py:01,17:27:49:async_init:118:LFrZEA -- Done computing gdoc for LAB REPORT 2 1jEPinYNleGwKDF0SJddLTTeVvYZbF40sbV5FxvJyNCU
+[33mpydocs_1  |[0m get_file:01,17:27:49:getRevision:147:LFrZEA -- not done but tried to append, prob because no operations found file: 1jEPinYNleGwKDF0SJddLTTeVvYZbF40sbV5FxvJyNCU, LAB REPORT 2
+[33mpydocs_1  |[0m gdoc.py:01,17:27:50:_download_details:159:LFrZEA -- received job for 125AyhViQoEQKg-wVD4y2hv82aynGTyK7SmeqVHpXvQs
+[35mpydocs_3  |[0m gdoc.py:01,17:27:50:_download_details:159:0PLjCw -- received job for 125AyhViQoEQKg-wVD4y2hv82aynGTyK7SmeqVHpXvQs
+[36mpydocs_2  |[0m gdoc.py:01,17:27:50:_download_details:159:AZHoyg -- received job for 125AyhViQoEQKg-wVD4y2hv82aynGTyK7SmeqVHpXvQs
+[35mpydocs_3  |[0m gdoc.py:01,17:27:51:_download_details:159:0PLjCw -- received job for 1LyrolWAEdF9g6y9DyEk_FIH8B7V1cGDowMv8NvVTjow
+[36mpydocs_2  |[0m gdoc.py:01,17:27:51:_download_details:159:AZHoyg -- received job for 1LyrolWAEdF9g6y9DyEk_FIH8B7V1cGDowMv8NvVTjow
+[33mpydocs_1  |[0m gdoc.py:01,17:27:52:_download_details:159:LFrZEA -- received job for 1LyrolWAEdF9g6y9DyEk_FIH8B7V1cGDowMv8NvVTjow
+[33mpydocs_1  |[0m gdoc.py:01,17:27:54:async_init:102:LFrZEA -- No content received for: 12bPKEMHnfEBwlDfZnXYlPZRRwnRiHPVtDkcBZqNxBA4, linguist.
+[33mpydocs_1  |[0m gdoc.py:01,17:27:54:async_init:118:LFrZEA -- Done computing gdoc for linguist 12bPKEMHnfEBwlDfZnXYlPZRRwnRiHPVtDkcBZqNxBA4
+[36mpydocs_2  |[0m gdoc.py:01,17:27:54:async_init:102:AZHoyg -- No content received for: 12bPKEMHnfEBwlDfZnXYlPZRRwnRiHPVtDkcBZqNxBA4, linguist.
+[33mpydocs_1  |[0m get_file:01,17:27:54:getRevision:147:LFrZEA -- not done but tried to append, prob because no operations found file: 12bPKEMHnfEBwlDfZnXYlPZRRwnRiHPVtDkcBZqNxBA4, linguist
+[36mpydocs_2  |[0m gdoc.py:01,17:27:54:async_init:118:AZHoyg -- Done computing gdoc for linguist 12bPKEMHnfEBwlDfZnXYlPZRRwnRiHPVtDkcBZqNxBA4
+[36mpydocs_2  |[0m get_file:01,17:27:54:getRevision:147:AZHoyg -- not done but tried to append, prob because no operations found file: 12bPKEMHnfEBwlDfZnXYlPZRRwnRiHPVtDkcBZqNxBA4, linguist
+[35mpydocs_3  |[0m gdoc.py:01,17:27:54:async_init:102:0PLjCw -- No content received for: 12bPKEMHnfEBwlDfZnXYlPZRRwnRiHPVtDkcBZqNxBA4, linguist.
+[35mpydocs_3  |[0m gdoc.py:01,17:27:54:async_init:118:0PLjCw -- Done computing gdoc for linguist 12bPKEMHnfEBwlDfZnXYlPZRRwnRiHPVtDkcBZqNxBA4
+[35mpydocs_3  |[0m get_file:01,17:27:54:getRevision:147:0PLjCw -- not done but tried to append, prob because no operations found file: 12bPKEMHnfEBwlDfZnXYlPZRRwnRiHPVtDkcBZqNxBA4, linguist
+[35mpydocs_3  |[0m test_uti:01,17:27:54:print_size:95:0PLjCw -- 
+[35mpydocs_3  |[0m 
+[35mpydocs_3  |[0m ---------------Memory usage: 49520 (kb)---------------1.604899 mins since start
+[35mpydocs_3  |[0m test_uti:01,17:27:54:print_size:112:0PLjCw -- /app/data/testing123ZXvULg/
+[35mpydocs_3  |[0m 26/164 discovered items at 2020-05-01 17:27:54.393588
+[35mpydocs_3  |[0m dump count: 2
+[36mpydocs_2  |[0m configlo:01,17:27:54:mp_sendmail:121:AZHoyg -- sending mail
+[33mpydocs_1  |[0m test_uti:01,17:27:54:print_size:95:LFrZEA -- 
+[33mpydocs_1  |[0m 
+[33mpydocs_1  |[0m ---------------Memory usage: 49336 (kb)---------------1.610098 mins since start
+[33mpydocs_1  |[0m test_uti:01,17:27:54:print_size:112:LFrZEA -- /app/data/testing123X15DNQ/
+[33mpydocs_1  |[0m 26/164 discovered items at 2020-05-01 17:27:54.780195
+[33mpydocs_1  |[0m dump count: 2
+[36mpydocs_2  |[0m test_uti:01,17:27:54:print_size:95:AZHoyg -- 
+[36mpydocs_2  |[0m 
+[36mpydocs_2  |[0m ---------------Memory usage: 49752 (kb)---------------1.610261 mins since start
+[36mpydocs_2  |[0m test_uti:01,17:27:54:print_size:112:AZHoyg -- /app/data/testing123mhRmCg/
+[36mpydocs_2  |[0m 26/164 discovered items at 2020-05-01 17:27:54.792393
+[36mpydocs_2  |[0m dump count: 2
+[36mpydocs_2  |[0m gdoc.py:01,17:27:55:async_init:118:AZHoyg -- Done computing gdoc for Activist Plan 125AyhViQoEQKg-wVD4y2hv82aynGTyK7SmeqVHpXvQs
+[35mpydocs_3  |[0m gdoc.py:01,17:27:55:async_init:118:0PLjCw -- Done computing gdoc for Activist Plan 125AyhViQoEQKg-wVD4y2hv82aynGTyK7SmeqVHpXvQs
+[33mpydocs_1  |[0m gdoc.py:01,17:27:55:async_init:118:LFrZEA -- Done computing gdoc for Activist Plan 125AyhViQoEQKg-wVD4y2hv82aynGTyK7SmeqVHpXvQs
+[35mpydocs_3  |[0m gdoc.py:01,17:27:55:_download_details:159:0PLjCw -- received job for 1gvFEgWgxaLnNlgLpfwtdH_-UVEY1rglxelRy307hjns
+[35mpydocs_3  |[0m gdoc.py:01,17:27:55:_download_details:159:0PLjCw -- received job for 19qkWrA-moW3LlnMEtT1VSoCGU5TpOwB_17goJbrvWHM
+[36mpydocs_2  |[0m gdoc.py:01,17:27:55:_download_details:159:AZHoyg -- received job for 1gvFEgWgxaLnNlgLpfwtdH_-UVEY1rglxelRy307hjns
+[36mpydocs_2  |[0m gdoc.py:01,17:27:55:_download_details:159:AZHoyg -- received job for 19qkWrA-moW3LlnMEtT1VSoCGU5TpOwB_17goJbrvWHM
+[33mpydocs_1  |[0m gdoc.py:01,17:27:55:_download_details:159:LFrZEA -- received job for 1gvFEgWgxaLnNlgLpfwtdH_-UVEY1rglxelRy307hjns
+[33mpydocs_1  |[0m gdoc.py:01,17:27:55:_download_details:159:LFrZEA -- received job for 19qkWrA-moW3LlnMEtT1VSoCGU5TpOwB_17goJbrvWHM
+[32msql_serv  |[0m configlo:01,17:27:56:mp_sendmail:121:YyuwkA -- sending mail
+[32msql_serv  |[0m sql_serv:01,17:27:56:report:28:YyuwkA -- SQL Queue size: 0, thread size: 6
+[32msql_serv  |[0m sql_serv:01,17:27:56:remove_dead_threads:149:YyuwkA -- Removed finished threads: 0, total resolved threads: 0
+[32msql_serv  |[0m sql.py:01,17:27:58:load_from_dict:151:YyuwkA -- Done load dict
+[32msql_serv  |[0m sql.py:01,17:27:58:insert_sql:236:YyuwkA -- starting load closures
+[35mpydocs_3  |[0m gdoc.py:01,17:28:00:async_init:118:0PLjCw -- Done computing gdoc for The Vietnamese Good Child 1gvFEgWgxaLnNlgLpfwtdH_-UVEY1rglxelRy307hjns
+[36mpydocs_2  |[0m gdoc.py:01,17:28:00:async_init:118:AZHoyg -- Done computing gdoc for The Vietnamese Good Child 1gvFEgWgxaLnNlgLpfwtdH_-UVEY1rglxelRy307hjns
+[33mpydocs_1  |[0m gdoc.py:01,17:28:00:async_init:118:LFrZEA -- Done computing gdoc for The Vietnamese Good Child 1gvFEgWgxaLnNlgLpfwtdH_-UVEY1rglxelRy307hjns
+[32msql_serv  |[0m sql.py:01,17:28:01:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1LuJ1Ln_dAc7n3Qj0zNE4yuYfFG6NEgxO-hsDA9M4qpQ.id'
+[35mpydocs_3  |[0m gdoc.py:01,17:28:01:async_init:118:0PLjCw -- Done computing gdoc for ocean 19qkWrA-moW3LlnMEtT1VSoCGU5TpOwB_17goJbrvWHM
+[36mpydocs_2  |[0m gdoc.py:01,17:28:01:async_init:118:AZHoyg -- Done computing gdoc for ocean 19qkWrA-moW3LlnMEtT1VSoCGU5TpOwB_17goJbrvWHM
+[33mpydocs_1  |[0m gdoc.py:01,17:28:01:async_init:118:LFrZEA -- Done computing gdoc for ocean 19qkWrA-moW3LlnMEtT1VSoCGU5TpOwB_17goJbrvWHM
+[35mpydocs_3  |[0m gdoc.py:01,17:28:02:_download_details:159:0PLjCw -- received job for 1RFm8X0JkBTJj7iR7YLxsrpzbiBTMANScjSeDO9l2aQw
+[36mpydocs_2  |[0m gdoc.py:01,17:28:02:_download_details:159:AZHoyg -- received job for 1RFm8X0JkBTJj7iR7YLxsrpzbiBTMANScjSeDO9l2aQw
+[33mpydocs_1  |[0m gdoc.py:01,17:28:02:_download_details:159:LFrZEA -- received job for 1RFm8X0JkBTJj7iR7YLxsrpzbiBTMANScjSeDO9l2aQw
+[32msql_serv  |[0m sql.py:01,17:28:02:load_from_dict:151:YyuwkA -- Done load dict
+[32msql_serv  |[0m sql.py:01,17:28:02:insert_sql:236:YyuwkA -- starting load closures
+[32msql_serv  |[0m sql.py:01,17:28:02:load_from_dict:151:YyuwkA -- Done load dict
+[32msql_serv  |[0m sql.py:01,17:28:02:insert_sql:236:YyuwkA -- starting load closures
+[32msql_serv  |[0m sql.py:01,17:28:03:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1LuJ1Ln_dAc7n3Qj0zNE4yuYfFG6NEgxO-hsDA9M4qpQ.id'
+[35mpydocs_3  |[0m gdoc.py:01,17:28:03:_download_details:159:0PLjCw -- received job for 1F5C4F51m7TcoiVU-U3s2TERMRIMoe_RxQFA8GBf6-64
+[36mpydocs_2  |[0m gdoc.py:01,17:28:03:_download_details:159:AZHoyg -- received job for 1F5C4F51m7TcoiVU-U3s2TERMRIMoe_RxQFA8GBf6-64
+[33mpydocs_1  |[0m gdoc.py:01,17:28:03:_download_details:159:LFrZEA -- received job for 1F5C4F51m7TcoiVU-U3s2TERMRIMoe_RxQFA8GBf6-64
+[36mpydocs_2  |[0m gdoc.py:01,17:28:03:async_init:118:AZHoyg -- Done computing gdoc for school library 1LyrolWAEdF9g6y9DyEk_FIH8B7V1cGDowMv8NvVTjow
+[32msql_serv  |[0m sql.py:01,17:28:04:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1wfaH9BSg8wrDaKXR54KK1y8pd-miEOQNj3E8GL6fTfg.id'
+[32msql_serv  |[0m sql.py:01,17:28:05:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1wfaH9BSg8wrDaKXR54KK1y8pd-miEOQNj3E8GL6fTfg.id'
+[32msql_serv  |[0m sql.py:01,17:28:05:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1H1aSubiwctKw-qMV6t1aGlfooY2Qn9V6Y01phHpg-kw.id'
+[35mpydocs_3  |[0m gdoc.py:01,17:28:05:async_init:118:0PLjCw -- Done computing gdoc for school library 1LyrolWAEdF9g6y9DyEk_FIH8B7V1cGDowMv8NvVTjow
+[36mpydocs_2  |[0m gdoc.py:01,17:28:05:_download_details:159:AZHoyg -- received job for 1XJ5BlIal28QXAMwFOiNr81G7U0xElvy16JUj-39MTrU
+[33mpydocs_1  |[0m gdoc.py:01,17:28:06:async_init:118:LFrZEA -- Done computing gdoc for school library 1LyrolWAEdF9g6y9DyEk_FIH8B7V1cGDowMv8NvVTjow
+[32msql_serv  |[0m sql_serv:01,17:28:06:report:28:YyuwkA -- SQL Queue size: 0, thread size: 6
+[32msql_serv  |[0m sql_serv:01,17:28:06:remove_dead_threads:149:YyuwkA -- Removed finished threads: 0, total resolved threads: 0
+[35mpydocs_3  |[0m gdoc.py:01,17:28:06:_download_details:159:0PLjCw -- received job for 1XJ5BlIal28QXAMwFOiNr81G7U0xElvy16JUj-39MTrU
+[33mpydocs_1  |[0m gdoc.py:01,17:28:06:_download_details:159:LFrZEA -- received job for 1XJ5BlIal28QXAMwFOiNr81G7U0xElvy16JUj-39MTrU
+[32msql_serv  |[0m sql.py:01,17:28:06:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1wfaH9BSg8wrDaKXR54KK1y8pd-miEOQNj3E8GL6fTfg.id'
+[32msql_serv  |[0m sql.py:01,17:28:07:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1wfaH9BSg8wrDaKXR54KK1y8pd-miEOQNj3E8GL6fTfg.id'
+[32msql_serv  |[0m sql.py:01,17:28:07:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1H1aSubiwctKw-qMV6t1aGlfooY2Qn9V6Y01phHpg-kw.id'
+[35mpydocs_3  |[0m gdoc.py:01,17:28:07:async_init:118:0PLjCw -- Done computing gdoc for poem #2 1RFm8X0JkBTJj7iR7YLxsrpzbiBTMANScjSeDO9l2aQw
+[36mpydocs_2  |[0m gdoc.py:01,17:28:07:async_init:118:AZHoyg -- Done computing gdoc for poem #2 1RFm8X0JkBTJj7iR7YLxsrpzbiBTMANScjSeDO9l2aQw
+[33mpydocs_1  |[0m gdoc.py:01,17:28:07:async_init:118:LFrZEA -- Done computing gdoc for poem #2 1RFm8X0JkBTJj7iR7YLxsrpzbiBTMANScjSeDO9l2aQw
+[35mpydocs_3  |[0m gdoc.py:01,17:28:08:async_init:118:0PLjCw -- Done computing gdoc for LAB REPORT 2 1F5C4F51m7TcoiVU-U3s2TERMRIMoe_RxQFA8GBf6-64
+[33mpydocs_1  |[0m gdoc.py:01,17:28:08:async_init:118:LFrZEA -- Done computing gdoc for LAB REPORT 2 1F5C4F51m7TcoiVU-U3s2TERMRIMoe_RxQFA8GBf6-64
+[32msql_serv  |[0m sql.py:01,17:28:08:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1LuJ1Ln_dAc7n3Qj0zNE4yuYfFG6NEgxO-hsDA9M4qpQ.id'
+[32msql_serv  |[0m sql.py:01,17:28:09:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1LuJ1Ln_dAc7n3Qj0zNE4yuYfFG6NEgxO-hsDA9M4qpQ.id'
+[32msql_serv  |[0m sql.py:01,17:28:09:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1WbGMwYDyqP6aCDpf5fBbR7sneMicXtvEtfm3Z4k0Vzs.id'
+[33mpydocs_1  |[0m gdoc.py:01,17:28:09:_download_details:159:LFrZEA -- received job for 1Visfq9vleQOXgJ3svv3Yj5A3qf3GOY4VMIcq4E7J5q0
+[33mpydocs_1  |[0m gdoc.py:01,17:28:09:_download_details:159:LFrZEA -- received job for 1kIbHXyKc4uI2MzuXFMhT73ZIAPnP32_jW1kv2yMNoUU
+[35mpydocs_3  |[0m gdoc.py:01,17:28:10:_download_details:159:0PLjCw -- received job for 1kIbHXyKc4uI2MzuXFMhT73ZIAPnP32_jW1kv2yMNoUU
+[35mpydocs_3  |[0m gdoc.py:01,17:28:10:_download_details:159:0PLjCw -- received job for 1Visfq9vleQOXgJ3svv3Yj5A3qf3GOY4VMIcq4E7J5q0
+[36mpydocs_2  |[0m gdoc.py:01,17:28:10:async_init:118:AZHoyg -- Done computing gdoc for LAB REPORT 2 1F5C4F51m7TcoiVU-U3s2TERMRIMoe_RxQFA8GBf6-64
+[32msql_serv  |[0m sql.py:01,17:28:10:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1LuJ1Ln_dAc7n3Qj0zNE4yuYfFG6NEgxO-hsDA9M4qpQ.id'
+[32msql_serv  |[0m sql.py:01,17:28:11:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1LuJ1Ln_dAc7n3Qj0zNE4yuYfFG6NEgxO-hsDA9M4qpQ.id'
+[32msql_serv  |[0m sql.py:01,17:28:11:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1WbGMwYDyqP6aCDpf5fBbR7sneMicXtvEtfm3Z4k0Vzs.id'
+[32msql_serv  |[0m sql.py:01,17:28:11:load_from_dict:151:YyuwkA -- Done load dict
+[32msql_serv  |[0m sql.py:01,17:28:11:insert_sql:236:YyuwkA -- starting load closures
+[32msql_serv  |[0m sql.py:01,17:28:11:load_from_dict:151:YyuwkA -- Done load dict
+[32msql_serv  |[0m sql.py:01,17:28:11:insert_sql:236:YyuwkA -- starting load closures
+[36mpydocs_2  |[0m gdoc.py:01,17:28:12:_download_details:159:AZHoyg -- received job for 1Visfq9vleQOXgJ3svv3Yj5A3qf3GOY4VMIcq4E7J5q0
+[36mpydocs_2  |[0m gdoc.py:01,17:28:12:_download_details:159:AZHoyg -- received job for 1kIbHXyKc4uI2MzuXFMhT73ZIAPnP32_jW1kv2yMNoUU
+[32msql_serv  |[0m sql.py:01,17:28:12:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1H1aSubiwctKw-qMV6t1aGlfooY2Qn9V6Y01phHpg-kw.id'
+[32msql_serv  |[0m sql.py:01,17:28:13:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1H1aSubiwctKw-qMV6t1aGlfooY2Qn9V6Y01phHpg-kw.id'
+[32msql_serv  |[0m sql.py:01,17:28:13:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '16wh_FgWE8Y0tUpAdIte4WyuB91_ypCySi82lvdhAiFY.id'
+[32msql_serv  |[0m sql.py:01,17:28:13:load_from_dict:151:YyuwkA -- Done load dict
+[32msql_serv  |[0m sql.py:01,17:28:13:insert_sql:236:YyuwkA -- starting load closures
+[32msql_serv  |[0m sql.py:01,17:28:13:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1hV6DumA55fF_GwtceKjRqwuSAww_V70exrSzGFoF1Rk.id'
+[32msql_serv  |[0m sql.py:01,17:28:13:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1hV6DumA55fF_GwtceKjRqwuSAww_V70exrSzGFoF1Rk.id'
+[33mpydocs_1  |[0m gdoc.py:01,17:28:14:async_init:118:LFrZEA -- Done computing gdoc for skribt 1kIbHXyKc4uI2MzuXFMhT73ZIAPnP32_jW1kv2yMNoUU
+[33mpydocs_1  |[0m gdoc.py:01,17:28:14:async_init:118:LFrZEA -- Done computing gdoc for news research 1Visfq9vleQOXgJ3svv3Yj5A3qf3GOY4VMIcq4E7J5q0
+[32msql_serv  |[0m sql.py:01,17:28:14:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1H1aSubiwctKw-qMV6t1aGlfooY2Qn9V6Y01phHpg-kw.id'
+[32msql_serv  |[0m sql.py:01,17:28:15:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1H1aSubiwctKw-qMV6t1aGlfooY2Qn9V6Y01phHpg-kw.id'
+[32msql_serv  |[0m sql.py:01,17:28:15:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '16wh_FgWE8Y0tUpAdIte4WyuB91_ypCySi82lvdhAiFY.id'
+[35mpydocs_3  |[0m gdoc.py:01,17:28:15:async_init:118:0PLjCw -- Done computing gdoc for skribt 1kIbHXyKc4uI2MzuXFMhT73ZIAPnP32_jW1kv2yMNoUU
+[32msql_serv  |[0m sql.py:01,17:28:15:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1hV6DumA55fF_GwtceKjRqwuSAww_V70exrSzGFoF1Rk.id'
+[32msql_serv  |[0m sql.py:01,17:28:15:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1hV6DumA55fF_GwtceKjRqwuSAww_V70exrSzGFoF1Rk.id'
+[35mpydocs_3  |[0m gdoc.py:01,17:28:15:async_init:118:0PLjCw -- Done computing gdoc for news research 1Visfq9vleQOXgJ3svv3Yj5A3qf3GOY4VMIcq4E7J5q0
+[32msql_serv  |[0m sql.py:01,17:28:15:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1hV6DumA55fF_GwtceKjRqwuSAww_V70exrSzGFoF1Rk.id'
+[35mpydocs_3  |[0m gdoc.py:01,17:28:15:_download_details:159:0PLjCw -- received job for 1AOfGsW5I-aG8b0WdSsq4IqMlGiDqDYUCUQfFoEJ1ll4
+[35mpydocs_3  |[0m gdoc.py:01,17:28:15:_download_details:159:0PLjCw -- received job for 18vcbSvvx_xRDIq0vUFjpKkYGdu00l5XbORDG5EKfWNw
+[33mpydocs_1  |[0m gdoc.py:01,17:28:16:_download_details:159:LFrZEA -- received job for 18vcbSvvx_xRDIq0vUFjpKkYGdu00l5XbORDG5EKfWNw
+[33mpydocs_1  |[0m gdoc.py:01,17:28:16:_download_details:159:LFrZEA -- received job for 1AOfGsW5I-aG8b0WdSsq4IqMlGiDqDYUCUQfFoEJ1ll4
+[32msql_serv  |[0m sql_serv:01,17:28:16:report:28:YyuwkA -- SQL Queue size: 0, thread size: 6
+[32msql_serv  |[0m sql_serv:01,17:28:16:remove_dead_threads:149:YyuwkA -- Removed finished threads: 0, total resolved threads: 0
+[36mpydocs_2  |[0m gdoc.py:01,17:28:16:async_init:102:AZHoyg -- No content received for: 1Visfq9vleQOXgJ3svv3Yj5A3qf3GOY4VMIcq4E7J5q0, news research.
+[36mpydocs_2  |[0m gdoc.py:01,17:28:16:async_init:118:AZHoyg -- Done computing gdoc for news research 1Visfq9vleQOXgJ3svv3Yj5A3qf3GOY4VMIcq4E7J5q0
+[36mpydocs_2  |[0m get_file:01,17:28:16:getRevision:147:AZHoyg -- not done but tried to append, prob because no operations found file: 1Visfq9vleQOXgJ3svv3Yj5A3qf3GOY4VMIcq4E7J5q0, news research
+[36mpydocs_2  |[0m gdoc.py:01,17:28:16:async_init:118:AZHoyg -- Done computing gdoc for skribt 1kIbHXyKc4uI2MzuXFMhT73ZIAPnP32_jW1kv2yMNoUU
+[32msql_serv  |[0m sql.py:01,17:28:16:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1WbGMwYDyqP6aCDpf5fBbR7sneMicXtvEtfm3Z4k0Vzs.id'
+[36mpydocs_2  |[0m gdoc.py:01,17:28:17:_download_details:159:AZHoyg -- received job for 1AOfGsW5I-aG8b0WdSsq4IqMlGiDqDYUCUQfFoEJ1ll4
+[32msql_serv  |[0m sql.py:01,17:28:17:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1WbGMwYDyqP6aCDpf5fBbR7sneMicXtvEtfm3Z4k0Vzs.id'
+[32msql_serv  |[0m sql.py:01,17:28:17:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1WKk8W5cG-CYKBYN_cWpAdziiPVhvQZEAarnPwf58z4Y.id'
+[32msql_serv  |[0m sql.py:01,17:28:17:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1hV6DumA55fF_GwtceKjRqwuSAww_V70exrSzGFoF1Rk.id'
+[36mpydocs_2  |[0m gdoc.py:01,17:28:17:_download_details:159:AZHoyg -- received job for 18vcbSvvx_xRDIq0vUFjpKkYGdu00l5XbORDG5EKfWNw
+[32msql_serv  |[0m sql.py:01,17:28:17:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1cGlmEaWYTHdD_Y3vlkIMMkZhdmosSZo_rQYxcSBoDbQ.id'
+[32msql_serv  |[0m sql.py:01,17:28:17:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1cGlmEaWYTHdD_Y3vlkIMMkZhdmosSZo_rQYxcSBoDbQ.id'
+[32msql_serv  |[0m sql.py:01,17:28:18:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1WbGMwYDyqP6aCDpf5fBbR7sneMicXtvEtfm3Z4k0Vzs.id'
+[32msql_serv  |[0m sql.py:01,17:28:19:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1WbGMwYDyqP6aCDpf5fBbR7sneMicXtvEtfm3Z4k0Vzs.id'
+[32msql_serv  |[0m sql.py:01,17:28:19:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1WKk8W5cG-CYKBYN_cWpAdziiPVhvQZEAarnPwf58z4Y.id'
+[32msql_serv  |[0m sql.py:01,17:28:19:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1cGlmEaWYTHdD_Y3vlkIMMkZhdmosSZo_rQYxcSBoDbQ.id'
+[32msql_serv  |[0m sql.py:01,17:28:19:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1cGlmEaWYTHdD_Y3vlkIMMkZhdmosSZo_rQYxcSBoDbQ.id'
+[32msql_serv  |[0m sql.py:01,17:28:19:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1cGlmEaWYTHdD_Y3vlkIMMkZhdmosSZo_rQYxcSBoDbQ.id'
+[33mpydocs_1  |[0m gdoc.py:01,17:28:20:async_init:118:LFrZEA -- Done computing gdoc for discussion director 18vcbSvvx_xRDIq0vUFjpKkYGdu00l5XbORDG5EKfWNw
+[35mpydocs_3  |[0m gdoc.py:01,17:28:20:async_init:118:0PLjCw -- Done computing gdoc for book review 1AOfGsW5I-aG8b0WdSsq4IqMlGiDqDYUCUQfFoEJ1ll4
+[32msql_serv  |[0m sql.py:01,17:28:20:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '16wh_FgWE8Y0tUpAdIte4WyuB91_ypCySi82lvdhAiFY.id'
+[33mpydocs_1  |[0m gdoc.py:01,17:28:20:async_init:118:LFrZEA -- Done computing gdoc for book review 1AOfGsW5I-aG8b0WdSsq4IqMlGiDqDYUCUQfFoEJ1ll4
+[35mpydocs_3  |[0m gdoc.py:01,17:28:20:async_init:118:0PLjCw -- Done computing gdoc for discussion director 18vcbSvvx_xRDIq0vUFjpKkYGdu00l5XbORDG5EKfWNw
+[32msql_serv  |[0m sql.py:01,17:28:21:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '16wh_FgWE8Y0tUpAdIte4WyuB91_ypCySi82lvdhAiFY.id'
+[32msql_serv  |[0m sql.py:01,17:28:21:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1YJPVyeYstaXiTguoSGCe_Kb3y4yv49N224nUrfLo7rU.id'
+[32msql_serv  |[0m sql.py:01,17:28:21:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1cGlmEaWYTHdD_Y3vlkIMMkZhdmosSZo_rQYxcSBoDbQ.id'
+[32msql_serv  |[0m sql.py:01,17:28:21:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s.id'
+[35mpydocs_3  |[0m gdoc.py:01,17:28:21:_download_details:159:0PLjCw -- received job for 1kn3xhSXmFhPNdSs3J-4x4F95PXucVOdAJAwycd591Ns
+[33mpydocs_1  |[0m gdoc.py:01,17:28:21:_download_details:159:LFrZEA -- received job for 1kn3xhSXmFhPNdSs3J-4x4F95PXucVOdAJAwycd591Ns
+[32msql_serv  |[0m sql.py:01,17:28:21:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ.id'
+[33mpydocs_1  |[0m gdoc.py:01,17:28:22:_download_details:159:LFrZEA -- received job for 1iMp4WTH5NG-vtb4UkJiqLA7D3ck7MkjS2Mu9gw8rOKs
+[35mpydocs_3  |[0m gdoc.py:01,17:28:22:_download_details:159:0PLjCw -- received job for 1iMp4WTH5NG-vtb4UkJiqLA7D3ck7MkjS2Mu9gw8rOKs
+[36mpydocs_2  |[0m gdoc.py:01,17:28:22:async_init:118:AZHoyg -- Done computing gdoc for book review 1AOfGsW5I-aG8b0WdSsq4IqMlGiDqDYUCUQfFoEJ1ll4
+[36mpydocs_2  |[0m gdoc.py:01,17:28:22:async_init:118:AZHoyg -- Done computing gdoc for discussion director 18vcbSvvx_xRDIq0vUFjpKkYGdu00l5XbORDG5EKfWNw
+[36mpydocs_2  |[0m gdoc.py:01,17:28:22:_download_details:159:AZHoyg -- received job for 1kn3xhSXmFhPNdSs3J-4x4F95PXucVOdAJAwycd591Ns
+[36mpydocs_2  |[0m gdoc.py:01,17:28:22:_download_details:159:AZHoyg -- received job for 1iMp4WTH5NG-vtb4UkJiqLA7D3ck7MkjS2Mu9gw8rOKs
+[32msql_serv  |[0m sql.py:01,17:28:22:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '16wh_FgWE8Y0tUpAdIte4WyuB91_ypCySi82lvdhAiFY.id'
+[32msql_serv  |[0m sql.py:01,17:28:23:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '16wh_FgWE8Y0tUpAdIte4WyuB91_ypCySi82lvdhAiFY.id'
+[32msql_serv  |[0m sql.py:01,17:28:23:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1YJPVyeYstaXiTguoSGCe_Kb3y4yv49N224nUrfLo7rU.id'
+[32msql_serv  |[0m sql.py:01,17:28:23:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ.id'
+[32msql_serv  |[0m sql.py:01,17:28:23:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s.id'
+[32msql_serv  |[0m sql.py:01,17:28:23:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ.id'
+[32msql_serv  |[0m sql.py:01,17:28:24:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1WKk8W5cG-CYKBYN_cWpAdziiPVhvQZEAarnPwf58z4Y.id'
+[32msql_serv  |[0m sql.py:01,17:28:25:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1YlY2MTwu_I6PGWgmkNqFXYJVvNSQKMi7j0WulyoD75w.id'
+[32msql_serv  |[0m sql.py:01,17:28:25:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1WKk8W5cG-CYKBYN_cWpAdziiPVhvQZEAarnPwf58z4Y.id'
+[32msql_serv  |[0m sql.py:01,17:28:25:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ.id'
+[32msql_serv  |[0m sql.py:01,17:28:25:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ.id'
+[32msql_serv  |[0m sql.py:01,17:28:25:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s.id'
+[32msql_serv  |[0m sql_serv:01,17:28:26:report:28:YyuwkA -- SQL Queue size: 0, thread size: 6
+[32msql_serv  |[0m sql_serv:01,17:28:26:remove_dead_threads:149:YyuwkA -- Removed finished threads: 0, total resolved threads: 0
+[33mpydocs_1  |[0m gdoc.py:01,17:28:26:async_init:118:LFrZEA -- Done computing gdoc for cultural interview 1kn3xhSXmFhPNdSs3J-4x4F95PXucVOdAJAwycd591Ns
+[32msql_serv  |[0m sql.py:01,17:28:26:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1WKk8W5cG-CYKBYN_cWpAdziiPVhvQZEAarnPwf58z4Y.id'
+[32msql_serv  |[0m sql.py:01,17:28:27:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1YlY2MTwu_I6PGWgmkNqFXYJVvNSQKMi7j0WulyoD75w.id'
+[32msql_serv  |[0m sql.py:01,17:28:27:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1WKk8W5cG-CYKBYN_cWpAdziiPVhvQZEAarnPwf58z4Y.id'
+[32msql_serv  |[0m sql.py:01,17:28:27:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s.id'
+[32msql_serv  |[0m sql.py:01,17:28:27:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1VJe9pAq5wUkMz1cgNAOYLtvRbDehNWGZLwq4vtX3QVQ.id'
+[36mpydocs_2  |[0m gdoc.py:01,17:28:27:async_init:118:AZHoyg -- Done computing gdoc for cultural interview 1kn3xhSXmFhPNdSs3J-4x4F95PXucVOdAJAwycd591Ns
+[32msql_serv  |[0m sql.py:01,17:28:27:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s.id'
+[32msql_serv  |[0m sql.py:01,17:28:28:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1YJPVyeYstaXiTguoSGCe_Kb3y4yv49N224nUrfLo7rU.id'
+[32msql_serv  |[0m sql.py:01,17:28:29:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1PscMFhdtA31Nh7ELmM18NqjUfLDeGiexKI6q-lI0fKY.id'
+[32msql_serv  |[0m sql.py:01,17:28:29:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1YJPVyeYstaXiTguoSGCe_Kb3y4yv49N224nUrfLo7rU.id'
+[32msql_serv  |[0m sql.py:01,17:28:29:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1NpTHMCkLa6lHL9Ok8a9hejyXihpujcQpVgSa7JNBP6s.id'
+[32msql_serv  |[0m sql.py:01,17:28:29:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08.id'
+[32msql_serv  |[0m sql.py:01,17:28:29:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08.id'
+[32msql_serv  |[0m sql.py:01,17:28:30:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1YJPVyeYstaXiTguoSGCe_Kb3y4yv49N224nUrfLo7rU.id'
+[32msql_serv  |[0m sql.py:01,17:28:31:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1PscMFhdtA31Nh7ELmM18NqjUfLDeGiexKI6q-lI0fKY.id'
+[32msql_serv  |[0m sql.py:01,17:28:31:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1YJPVyeYstaXiTguoSGCe_Kb3y4yv49N224nUrfLo7rU.id'
+[32msql_serv  |[0m sql.py:01,17:28:31:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08.id'
+[32msql_serv  |[0m sql.py:01,17:28:31:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08.id'
+[32msql_serv  |[0m sql.py:01,17:28:31:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08.id'
+[32msql_serv  |[0m sql.py:01,17:28:33:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1PscMFhdtA31Nh7ELmM18NqjUfLDeGiexKI6q-lI0fKY.id'
+[32msql_serv  |[0m sql.py:01,17:28:33:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1Gxvc-37IOivNHIPUJBI1v3jf5e-Hwcby_VZbN-k-Bfc.id'
+[32msql_serv  |[0m sql.py:01,17:28:33:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1PscMFhdtA31Nh7ELmM18NqjUfLDeGiexKI6q-lI0fKY.id'
+[32msql_serv  |[0m sql.py:01,17:28:33:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1JEcM-IFEodRvDg7EE9AntQ4wwOBTRXcDFqRK5SR2I08.id'
+[32msql_serv  |[0m sql.py:01,17:28:33:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4.id'
+[32msql_serv  |[0m sql.py:01,17:28:33:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4.id'
+[36mpydocs_2  |[0m test_uti:01,17:28:34:print_size:95:AZHoyg -- 
+[36mpydocs_2  |[0m 
+[36mpydocs_2  |[0m ---------------Memory usage: 49752 (kb)---------------2.270615 mins since start
+[36mpydocs_2  |[0m test_uti:01,17:28:34:print_size:112:AZHoyg -- /app/data/testing123mhRmCg/
+[36mpydocs_2  |[0m 36/163 discovered items at 2020-05-01 17:28:34.419096
+[36mpydocs_2  |[0m dump count: 2
+[36mpydocs_2  |[0m gdoc.py:01,17:28:34:async_init:118:AZHoyg -- Done computing gdoc for cultural anthropologist 1iMp4WTH5NG-vtb4UkJiqLA7D3ck7MkjS2Mu9gw8rOKs
+[36mpydocs_2  |[0m gdoc.py:01,17:28:34:_download_details:159:AZHoyg -- received job for 1b6qJW2miNoybz6Y2_UdB51prtkzfFmWcKbbZ6YpSAbg
+[32msql_serv  |[0m sql.py:01,17:28:35:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1PscMFhdtA31Nh7ELmM18NqjUfLDeGiexKI6q-lI0fKY.id'
+[36mpydocs_2  |[0m gdoc.py:01,17:28:35:_download_details:159:AZHoyg -- received job for 1LvrNb0X-i_B-0eXh_cLDTHGqGukf5UcyNwtVIzimL4E
+[32msql_serv  |[0m sql.py:01,17:28:35:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1Gxvc-37IOivNHIPUJBI1v3jf5e-Hwcby_VZbN-k-Bfc.id'
+[32msql_serv  |[0m sql.py:01,17:28:35:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1PscMFhdtA31Nh7ELmM18NqjUfLDeGiexKI6q-lI0fKY.id'
+[32msql_serv  |[0m sql.py:01,17:28:35:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4.id'
+[32msql_serv  |[0m sql.py:01,17:28:35:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4.id'
+[35mpydocs_3  |[0m test_uti:01,17:28:35:print_size:95:0PLjCw -- 
+[35mpydocs_3  |[0m 
+[35mpydocs_3  |[0m ---------------Memory usage: 49520 (kb)---------------2.292510 mins since start
+[35mpydocs_3  |[0m test_uti:01,17:28:35:print_size:112:0PLjCw -- /app/data/testing123ZXvULg/
+[35mpydocs_3  |[0m 36/164 discovered items at 2020-05-01 17:28:35.677392
+[35mpydocs_3  |[0m dump count: 2
+[35mpydocs_3  |[0m gdoc.py:01,17:28:35:async_init:118:0PLjCw -- Done computing gdoc for cultural interview 1kn3xhSXmFhPNdSs3J-4x4F95PXucVOdAJAwycd591Ns
+[35mpydocs_3  |[0m gdoc.py:01,17:28:35:async_init:118:0PLjCw -- Done computing gdoc for cultural anthropologist 1iMp4WTH5NG-vtb4UkJiqLA7D3ck7MkjS2Mu9gw8rOKs
+[35mpydocs_3  |[0m gdoc.py:01,17:28:35:async_init:118:0PLjCw -- Done computing gdoc for doc.exe 1XJ5BlIal28QXAMwFOiNr81G7U0xElvy16JUj-39MTrU
+[32msql_serv  |[0m sql.py:01,17:28:35:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4.id'
+[35mpydocs_3  |[0m gdoc.py:01,17:28:35:_download_details:159:0PLjCw -- received job for 1b6qJW2miNoybz6Y2_UdB51prtkzfFmWcKbbZ6YpSAbg
+[35mpydocs_3  |[0m gdoc.py:01,17:28:36:_download_details:159:0PLjCw -- received job for 1LvrNb0X-i_B-0eXh_cLDTHGqGukf5UcyNwtVIzimL4E
+[33mpydocs_1  |[0m test_uti:01,17:28:36:print_size:95:LFrZEA -- 
+[33mpydocs_1  |[0m 
+[33mpydocs_1  |[0m ---------------Memory usage: 49336 (kb)---------------2.304072 mins since start
+[33mpydocs_1  |[0m test_uti:01,17:28:36:print_size:112:LFrZEA -- /app/data/testing123X15DNQ/
+[33mpydocs_1  |[0m 37/164 discovered items at 2020-05-01 17:28:36.433743
+[33mpydocs_1  |[0m dump count: 2
+[33mpydocs_1  |[0m test_uti:01,17:28:36:send_socket:176:LFrZEA -- connect working
+[33mpydocs_1  |[0m gdoc.py:01,17:28:36:async_init:118:LFrZEA -- Done computing gdoc for cultural anthropologist 1iMp4WTH5NG-vtb4UkJiqLA7D3ck7MkjS2Mu9gw8rOKs
+[33mpydocs_1  |[0m gdoc.py:01,17:28:36:_download_details:159:LFrZEA -- received job for 1b6qJW2miNoybz6Y2_UdB51prtkzfFmWcKbbZ6YpSAbg
+[32msql_serv  |[0m sql_serv:01,17:28:36:report:28:YyuwkA -- SQL Queue size: 0, thread size: 6
+[32msql_serv  |[0m sql_serv:01,17:28:36:remove_dead_threads:149:YyuwkA -- Removed finished threads: 0, total resolved threads: 0
+[32msql_serv  |[0m sql_serv:01,17:28:36:req_callback:95:YyuwkA -- queue size: 0
+[33mpydocs_1  |[0m test_uti:01,17:28:36:send_socket:185:LFrZEA -- received: b'go'
+[32msql_serv  |[0m name:  testing123X15DNQ
+[32msql_serv  |[0m new task
+[32msql_serv  |[0m sql_owne:01,17:28:36:__call__:21:YyuwkA -- Found old userid, using
+[32msql_serv  |[0m sql.py:01,17:28:36:insert_sql:174:YyuwkA -- Checked out owner object, fileid dict, and lock
+[32msql_serv  |[0m sql.py:01,17:28:36:insert_sql:223:YyuwkA -- len of id map 39 len of files 11
+[33mpydocs_1  |[0m gdoc.py:01,17:28:36:_download_details:159:LFrZEA -- received job for 1LvrNb0X-i_B-0eXh_cLDTHGqGukf5UcyNwtVIzimL4E
+[32msql_serv  |[0m sql.py:01,17:28:37:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1YlY2MTwu_I6PGWgmkNqFXYJVvNSQKMi7j0WulyoD75w.id'
+[32msql_serv  |[0m sql.py:01,17:28:37:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1YlY2MTwu_I6PGWgmkNqFXYJVvNSQKMi7j0WulyoD75w.id'
+[32msql_serv  |[0m sql.py:01,17:28:37:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1T1Sj69DxCTpEQI2pH0O04l_PSx1V3xsxYOnkiHPEPis.id'
+[32msql_serv  |[0m sql.py:01,17:28:37:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1LcO1aZmE6Jap4GF5ZpBGetjUSFeVBYg__DgWYlDwWY4.id'
+[32msql_serv  |[0m sql.py:01,17:28:37:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1C09g5-ATBpXNJOmH8ANwCnq7Pk6vClzI1lmFYcqaH6A.id'
+[32msql_serv  |[0m sql.py:01,17:28:37:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1C09g5-ATBpXNJOmH8ANwCnq7Pk6vClzI1lmFYcqaH6A.id'
+[35mpydocs_3  |[0m gdoc.py:01,17:28:38:_download_details:159:0PLjCw -- received job for 1_wRTbPygF0D0H8VlY-aHjCKTKBQ_Yr8jhCaemuGypXg
+[32msql_serv  |[0m sql.py:01,17:28:39:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1YlY2MTwu_I6PGWgmkNqFXYJVvNSQKMi7j0WulyoD75w.id'
+[32msql_serv  |[0m sql.py:01,17:28:39:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1YlY2MTwu_I6PGWgmkNqFXYJVvNSQKMi7j0WulyoD75w.id'
+[32msql_serv  |[0m sql.py:01,17:28:39:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1T1Sj69DxCTpEQI2pH0O04l_PSx1V3xsxYOnkiHPEPis.id'
+[32msql_serv  |[0m sql.py:01,17:28:39:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1C09g5-ATBpXNJOmH8ANwCnq7Pk6vClzI1lmFYcqaH6A.id'
+[36mpydocs_2  |[0m gdoc.py:01,17:28:39:async_init:102:AZHoyg -- No content received for: 1b6qJW2miNoybz6Y2_UdB51prtkzfFmWcKbbZ6YpSAbg, linguist.
+[36mpydocs_2  |[0m gdoc.py:01,17:28:39:async_init:118:AZHoyg -- Done computing gdoc for linguist 1b6qJW2miNoybz6Y2_UdB51prtkzfFmWcKbbZ6YpSAbg
+[36mpydocs_2  |[0m get_file:01,17:28:39:getRevision:147:AZHoyg -- not done but tried to append, prob because no operations found file: 1b6qJW2miNoybz6Y2_UdB51prtkzfFmWcKbbZ6YpSAbg, linguist
+[32msql_serv  |[0m sql.py:01,17:28:39:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1C09g5-ATBpXNJOmH8ANwCnq7Pk6vClzI1lmFYcqaH6A.id'
+[32msql_serv  |[0m sql.py:01,17:28:39:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1C09g5-ATBpXNJOmH8ANwCnq7Pk6vClzI1lmFYcqaH6A.id'
+[36mpydocs_2  |[0m gdoc.py:01,17:28:40:async_init:118:AZHoyg -- Done computing gdoc for Wanted poster 1LvrNb0X-i_B-0eXh_cLDTHGqGukf5UcyNwtVIzimL4E
+[36mpydocs_2  |[0m gdoc.py:01,17:28:40:_download_details:159:AZHoyg -- received job for 1DGlo99pbjGwp3lZne4o98aEBS-oC_FaPV0BGUOHCrNo
+[35mpydocs_3  |[0m gdoc.py:01,17:28:40:async_init:118:0PLjCw -- Done computing gdoc for linguist 1b6qJW2miNoybz6Y2_UdB51prtkzfFmWcKbbZ6YpSAbg
+[35mpydocs_3  |[0m gdoc.py:01,17:28:41:async_init:118:0PLjCw -- Done computing gdoc for Wanted poster 1LvrNb0X-i_B-0eXh_cLDTHGqGukf5UcyNwtVIzimL4E
+[32msql_serv  |[0m sql.py:01,17:28:41:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1Gxvc-37IOivNHIPUJBI1v3jf5e-Hwcby_VZbN-k-Bfc.id'
+[36mpydocs_2  |[0m gdoc.py:01,17:28:41:_download_details:159:AZHoyg -- received job for 1_wRTbPygF0D0H8VlY-aHjCKTKBQ_Yr8jhCaemuGypXg
+[35mpydocs_3  |[0m gdoc.py:01,17:28:41:_download_details:159:0PLjCw -- received job for 1DGlo99pbjGwp3lZne4o98aEBS-oC_FaPV0BGUOHCrNo
+[32msql_serv  |[0m sql.py:01,17:28:41:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1Gxvc-37IOivNHIPUJBI1v3jf5e-Hwcby_VZbN-k-Bfc.id'
+[32msql_serv  |[0m sql.py:01,17:28:41:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1VrK4o4hKCSJyT8P4hKL9la_FO7-29hcBJMJDsvjXo2A.id'
+[32msql_serv  |[0m sql.py:01,17:28:41:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1C09g5-ATBpXNJOmH8ANwCnq7Pk6vClzI1lmFYcqaH6A.id'
+[35mpydocs_3  |[0m gdoc.py:01,17:28:41:_download_details:159:0PLjCw -- received job for 1DE8JkISOGvpaUbmFRqQ_zVwh-29QmyD1t7ap73cr0KU
+[32msql_serv  |[0m sql.py:01,17:28:41:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1jRrZTHn-oge2sTqxli8Um026xuniXAeezLZn4B2zVSg.id'
+[33mpydocs_1  |[0m gdoc.py:01,17:28:41:async_init:102:LFrZEA -- No content received for: 1b6qJW2miNoybz6Y2_UdB51prtkzfFmWcKbbZ6YpSAbg, linguist.
+[33mpydocs_1  |[0m gdoc.py:01,17:28:41:async_init:118:LFrZEA -- Done computing gdoc for linguist 1b6qJW2miNoybz6Y2_UdB51prtkzfFmWcKbbZ6YpSAbg
+[33mpydocs_1  |[0m get_file:01,17:28:41:getRevision:147:LFrZEA -- not done but tried to append, prob because no operations found file: 1b6qJW2miNoybz6Y2_UdB51prtkzfFmWcKbbZ6YpSAbg, linguist
+[33mpydocs_1  |[0m gdoc.py:01,17:28:41:async_init:118:LFrZEA -- Done computing gdoc for Wanted poster 1LvrNb0X-i_B-0eXh_cLDTHGqGukf5UcyNwtVIzimL4E
+[33mpydocs_1  |[0m gdoc.py:01,17:28:41:_download_details:159:LFrZEA -- received job for 1_wRTbPygF0D0H8VlY-aHjCKTKBQ_Yr8jhCaemuGypXg
+[32msql_serv  |[0m sql.py:01,17:28:41:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1jRrZTHn-oge2sTqxli8Um026xuniXAeezLZn4B2zVSg.id'
+[33mpydocs_1  |[0m gdoc.py:01,17:28:41:_download_details:159:LFrZEA -- received job for 1DGlo99pbjGwp3lZne4o98aEBS-oC_FaPV0BGUOHCrNo
+[32msql_serv  |[0m sql.py:01,17:28:43:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1Gxvc-37IOivNHIPUJBI1v3jf5e-Hwcby_VZbN-k-Bfc.id'
+[32msql_serv  |[0m sql.py:01,17:28:43:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1Gxvc-37IOivNHIPUJBI1v3jf5e-Hwcby_VZbN-k-Bfc.id'
+[32msql_serv  |[0m sql.py:01,17:28:43:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1VrK4o4hKCSJyT8P4hKL9la_FO7-29hcBJMJDsvjXo2A.id'
+[32msql_serv  |[0m sql.py:01,17:28:43:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1jRrZTHn-oge2sTqxli8Um026xuniXAeezLZn4B2zVSg.id'
+[32msql_serv  |[0m sql.py:01,17:28:43:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1jRrZTHn-oge2sTqxli8Um026xuniXAeezLZn4B2zVSg.id'
+[32msql_serv  |[0m sql.py:01,17:28:43:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1jRrZTHn-oge2sTqxli8Um026xuniXAeezLZn4B2zVSg.id'
+[32msql_serv  |[0m sql.py:01,17:28:45:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1T1Sj69DxCTpEQI2pH0O04l_PSx1V3xsxYOnkiHPEPis.id'
+[32msql_serv  |[0m sql.py:01,17:28:45:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1T1Sj69DxCTpEQI2pH0O04l_PSx1V3xsxYOnkiHPEPis.id'
+[32msql_serv  |[0m sql.py:01,17:28:45:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1jRrZTHn-oge2sTqxli8Um026xuniXAeezLZn4B2zVSg.id'
+[32msql_serv  |[0m sql.py:01,17:28:45:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1cctIQ_TyhvRFgFVkzjwcfDL1w0i4L2lF-78_WM7Hy6A.id'
+[32msql_serv  |[0m sql.py:01,17:28:45:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1cctIQ_TyhvRFgFVkzjwcfDL1w0i4L2lF-78_WM7Hy6A.id'
+[36mpydocs_2  |[0m gdoc.py:01,17:28:46:async_init:118:AZHoyg -- Done computing gdoc for Letter to Sal Khan 1DGlo99pbjGwp3lZne4o98aEBS-oC_FaPV0BGUOHCrNo
+[35mpydocs_3  |[0m gdoc.py:01,17:28:46:async_init:118:0PLjCw -- Done computing gdoc for Letter to Sal Khan 1DGlo99pbjGwp3lZne4o98aEBS-oC_FaPV0BGUOHCrNo
+[36mpydocs_2  |[0m gdoc.py:01,17:28:46:async_init:118:AZHoyg -- Done computing gdoc for Prologue 1_wRTbPygF0D0H8VlY-aHjCKTKBQ_Yr8jhCaemuGypXg
+[36mpydocs_2  |[0m gdoc.py:01,17:28:46:_download_details:159:AZHoyg -- received job for 1DE8JkISOGvpaUbmFRqQ_zVwh-29QmyD1t7ap73cr0KU
+[35mpydocs_3  |[0m gdoc.py:01,17:28:46:async_init:118:0PLjCw -- Done computing gdoc for Controversial Hydro Dam 1DE8JkISOGvpaUbmFRqQ_zVwh-29QmyD1t7ap73cr0KU
+[32msql_serv  |[0m sql_serv:01,17:28:46:report:28:YyuwkA -- SQL Queue size: 0, thread size: 7
+[32msql_serv  |[0m sql_serv:01,17:28:46:remove_dead_threads:149:YyuwkA -- Removed finished threads: 0, total resolved threads: 0
+[32msql_serv  |[0m sql.py:01,17:28:46:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1ECJHKZpyfd75nEg20CQdICaWhZzri2SX_mQjfIFN-Wk.id'
+[33mpydocs_1  |[0m gdoc.py:01,17:28:46:async_init:118:LFrZEA -- Done computing gdoc for Prologue 1_wRTbPygF0D0H8VlY-aHjCKTKBQ_Yr8jhCaemuGypXg
+[33mpydocs_1  |[0m gdoc.py:01,17:28:47:async_init:118:LFrZEA -- Done computing gdoc for Letter to Sal Khan 1DGlo99pbjGwp3lZne4o98aEBS-oC_FaPV0BGUOHCrNo
+[32msql_serv  |[0m sql.py:01,17:28:47:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1T1Sj69DxCTpEQI2pH0O04l_PSx1V3xsxYOnkiHPEPis.id'
+[35mpydocs_3  |[0m gdoc.py:01,17:28:47:_download_details:159:0PLjCw -- received job for 1RMi1U6KwIBwORi6hYYv4HQiypu8bD1obKFyiCthf7pw
+[36mpydocs_2  |[0m gdoc.py:01,17:28:47:_download_details:159:AZHoyg -- received job for 1NpHQsdIiUQJTN0Bwdl__Kn69Ix3I3FEZM-6XWD-hCQ4
+[35mpydocs_3  |[0m gdoc.py:01,17:28:47:_download_details:159:0PLjCw -- received job for 1NpHQsdIiUQJTN0Bwdl__Kn69Ix3I3FEZM-6XWD-hCQ4
+[32msql_serv  |[0m sql.py:01,17:28:47:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1T1Sj69DxCTpEQI2pH0O04l_PSx1V3xsxYOnkiHPEPis.id'
+[33mpydocs_1  |[0m gdoc.py:01,17:28:47:_download_details:159:LFrZEA -- received job for 1DE8JkISOGvpaUbmFRqQ_zVwh-29QmyD1t7ap73cr0KU
+[33mpydocs_1  |[0m gdoc.py:01,17:28:47:_download_details:159:LFrZEA -- received job for 1NpHQsdIiUQJTN0Bwdl__Kn69Ix3I3FEZM-6XWD-hCQ4
+[32msql_serv  |[0m sql.py:01,17:28:47:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1cctIQ_TyhvRFgFVkzjwcfDL1w0i4L2lF-78_WM7Hy6A.id'
+[32msql_serv  |[0m sql.py:01,17:28:47:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1cctIQ_TyhvRFgFVkzjwcfDL1w0i4L2lF-78_WM7Hy6A.id'
+[32msql_serv  |[0m sql.py:01,17:28:47:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1cctIQ_TyhvRFgFVkzjwcfDL1w0i4L2lF-78_WM7Hy6A.id'
+[32msql_serv  |[0m sql.py:01,17:28:49:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1VrK4o4hKCSJyT8P4hKL9la_FO7-29hcBJMJDsvjXo2A.id'
+[32msql_serv  |[0m sql.py:01,17:28:49:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1VrK4o4hKCSJyT8P4hKL9la_FO7-29hcBJMJDsvjXo2A.id'
+[32msql_serv  |[0m sql.py:01,17:28:49:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1cctIQ_TyhvRFgFVkzjwcfDL1w0i4L2lF-78_WM7Hy6A.id'
+[32msql_serv  |[0m sql.py:01,17:28:49:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '186ge00t4G7kcx1QdCIHxRhTnZfzpSTGDgfAXkdbD_Ig.id'
+[32msql_serv  |[0m sql.py:01,17:28:49:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1ECJHKZpyfd75nEg20CQdICaWhZzri2SX_mQjfIFN-Wk.id'
+[32msql_serv  |[0m sql.py:01,17:28:49:insert_sql:240:YyuwkA -- Done all for owner_id 2693; processed files: 12
+[32msql_serv  |[0m sql.py:01,17:28:49:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '186ge00t4G7kcx1QdCIHxRhTnZfzpSTGDgfAXkdbD_Ig.id'
+[36mpydocs_2  |[0m test_uti:01,17:28:50:send_socket:176:AZHoyg -- connect working
+[32msql_serv  |[0m sql_serv:01,17:28:50:req_callback:95:YyuwkA -- queue size: 0
+[36mpydocs_2  |[0m test_uti:01,17:28:50:send_socket:185:AZHoyg -- received: b'go'
+[32msql_serv  |[0m name:  testing123mhRmCg
+[32msql_serv  |[0m new task
+[32msql_serv  |[0m sql_owne:01,17:28:50:__call__:21:YyuwkA -- Found old userid, using
+[32msql_serv  |[0m sql.py:01,17:28:50:insert_sql:174:YyuwkA -- Checked out owner object, fileid dict, and lock
+[32msql_serv  |[0m sql.py:01,17:28:50:insert_sql:223:YyuwkA -- len of id map 42 len of files 14
+[35mpydocs_3  |[0m gdoc.py:01,17:28:50:async_init:118:0PLjCw -- Done computing gdoc for Prologue 1_wRTbPygF0D0H8VlY-aHjCKTKBQ_Yr8jhCaemuGypXg
+[32msql_serv  |[0m sql.py:01,17:28:51:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1VrK4o4hKCSJyT8P4hKL9la_FO7-29hcBJMJDsvjXo2A.id'
+[32msql_serv  |[0m sql.py:01,17:28:51:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1VrK4o4hKCSJyT8P4hKL9la_FO7-29hcBJMJDsvjXo2A.id'
+[36mpydocs_2  |[0m gdoc.py:01,17:28:51:async_init:118:AZHoyg -- Done computing gdoc for Controversial Hydro Dam 1DE8JkISOGvpaUbmFRqQ_zVwh-29QmyD1t7ap73cr0KU
+[32msql_serv  |[0m sql.py:01,17:28:51:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '186ge00t4G7kcx1QdCIHxRhTnZfzpSTGDgfAXkdbD_Ig.id'
+[32msql_serv  |[0m sql.py:01,17:28:51:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '186ge00t4G7kcx1QdCIHxRhTnZfzpSTGDgfAXkdbD_Ig.id'
+[36mpydocs_2  |[0m gdoc.py:01,17:28:51:_download_details:159:AZHoyg -- received job for 1RMi1U6KwIBwORi6hYYv4HQiypu8bD1obKFyiCthf7pw
+[35mpydocs_3  |[0m test_uti:01,17:28:51:send_socket:176:0PLjCw -- connect working
+[32msql_serv  |[0m sql_serv:01,17:28:51:req_callback:95:YyuwkA -- queue size: 0
+[35mpydocs_3  |[0m test_uti:01,17:28:51:send_socket:185:0PLjCw -- received: b'go'
+[32msql_serv  |[0m name:  testing123ZXvULg
+[32msql_serv  |[0m new task
+[32msql_serv  |[0m sql_owne:01,17:28:51:__call__:21:YyuwkA -- Found old userid, using
+[32msql_serv  |[0m sql.py:01,17:28:51:insert_sql:174:YyuwkA -- Checked out owner object, fileid dict, and lock
+[32msql_serv  |[0m sql.py:01,17:28:51:insert_sql:223:YyuwkA -- len of id map 48 len of files 18
+[35mpydocs_3  |[0m gdoc.py:01,17:28:51:_download_details:159:0PLjCw -- received job for 1MQSAawInjoU_bWoc22FZS1s-qXWkPZNXwZDM-lFUoU0
+[32msql_serv  |[0m sql.py:01,17:28:51:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '186ge00t4G7kcx1QdCIHxRhTnZfzpSTGDgfAXkdbD_Ig.id'
+[35mpydocs_3  |[0m gdoc.py:01,17:28:52:async_init:118:0PLjCw -- Done computing gdoc for Diary Voice Journal 1RMi1U6KwIBwORi6hYYv4HQiypu8bD1obKFyiCthf7pw
+[36mpydocs_2  |[0m gdoc.py:01,17:28:52:async_init:118:AZHoyg -- Done computing gdoc for Recipe for climate change 1NpHQsdIiUQJTN0Bwdl__Kn69Ix3I3FEZM-6XWD-hCQ4
+[35mpydocs_3  |[0m gdoc.py:01,17:28:52:async_init:118:0PLjCw -- Done computing gdoc for Recipe for climate change 1NpHQsdIiUQJTN0Bwdl__Kn69Ix3I3FEZM-6XWD-hCQ4
+[33mpydocs_1  |[0m gdoc.py:01,17:28:52:async_init:118:LFrZEA -- Done computing gdoc for Controversial Hydro Dam 1DE8JkISOGvpaUbmFRqQ_zVwh-29QmyD1t7ap73cr0KU
+[33mpydocs_1  |[0m gdoc.py:01,17:28:52:async_init:118:LFrZEA -- Done computing gdoc for Recipe for climate change 1NpHQsdIiUQJTN0Bwdl__Kn69Ix3I3FEZM-6XWD-hCQ4
+[36mpydocs_2  |[0m gdoc.py:01,17:28:52:_download_details:159:AZHoyg -- received job for 1MQSAawInjoU_bWoc22FZS1s-qXWkPZNXwZDM-lFUoU0
+[33mpydocs_1  |[0m gdoc.py:01,17:28:52:_download_details:159:LFrZEA -- received job for 1RMi1U6KwIBwORi6hYYv4HQiypu8bD1obKFyiCthf7pw
+[33mpydocs_1  |[0m gdoc.py:01,17:28:52:_download_details:159:LFrZEA -- received job for 1MQSAawInjoU_bWoc22FZS1s-qXWkPZNXwZDM-lFUoU0
+[35mpydocs_3  |[0m gdoc.py:01,17:28:52:_download_details:159:0PLjCw -- received job for 1pWqW84PU9HyaS_FLl_qn80OAdv0gFum7_FkO6a82EyE
+[35mpydocs_3  |[0m gdoc.py:01,17:28:52:_download_details:159:0PLjCw -- received job for 1fZgygLRoHAb-498SXVjIXpGUIvLGU9qeRU63qzQx9nQ
+[32msql_serv  |[0m sql.py:01,17:28:53:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '15e68EIS9xXe5Yvzju4GtkyhFKJ_UgUA9juJKiUpPeUA.id'
+[32msql_serv  |[0m sql.py:01,17:28:54:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '15e68EIS9xXe5Yvzju4GtkyhFKJ_UgUA9juJKiUpPeUA.id'
+[32msql_serv  |[0m sql.py:01,17:28:54:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '186ge00t4G7kcx1QdCIHxRhTnZfzpSTGDgfAXkdbD_Ig.id'
+[32msql_serv  |[0m sql.py:01,17:28:55:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1ECJHKZpyfd75nEg20CQdICaWhZzri2SX_mQjfIFN-Wk.id'
+[32msql_serv  |[0m sql.py:01,17:28:55:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1ECJHKZpyfd75nEg20CQdICaWhZzri2SX_mQjfIFN-Wk.id'
+[32msql_serv  |[0m sql.py:01,17:28:55:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '15e68EIS9xXe5Yvzju4GtkyhFKJ_UgUA9juJKiUpPeUA.id'
+[36mpydocs_2  |[0m gdoc.py:01,17:28:56:async_init:118:AZHoyg -- Done computing gdoc for Diary Voice Journal 1RMi1U6KwIBwORi6hYYv4HQiypu8bD1obKFyiCthf7pw
+[32msql_serv  |[0m sql.py:01,17:28:56:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '15e68EIS9xXe5Yvzju4GtkyhFKJ_UgUA9juJKiUpPeUA.id'
+[32msql_serv  |[0m sql_serv:01,17:28:56:report:28:YyuwkA -- SQL Queue size: 0, thread size: 9
+[32msql_serv  |[0m sql_serv:01,17:28:56:remove_dead_threads:149:YyuwkA -- Removed finished threads: 1, total resolved threads: 1
+[32msql_serv  |[0m sql.py:01,17:28:56:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '15e68EIS9xXe5Yvzju4GtkyhFKJ_UgUA9juJKiUpPeUA.id'
+[35mpydocs_3  |[0m gdoc.py:01,17:28:56:async_init:118:0PLjCw -- Done computing gdoc for Math proposal 1MQSAawInjoU_bWoc22FZS1s-qXWkPZNXwZDM-lFUoU0
+[36mpydocs_2  |[0m gdoc.py:01,17:28:56:_download_details:159:AZHoyg -- received job for 1fZgygLRoHAb-498SXVjIXpGUIvLGU9qeRU63qzQx9nQ
+[36mpydocs_2  |[0m gdoc.py:01,17:28:57:async_init:118:AZHoyg -- Done computing gdoc for Math proposal 1MQSAawInjoU_bWoc22FZS1s-qXWkPZNXwZDM-lFUoU0
+[33mpydocs_1  |[0m gdoc.py:01,17:28:57:async_init:118:LFrZEA -- Done computing gdoc for Diary Voice Journal 1RMi1U6KwIBwORi6hYYv4HQiypu8bD1obKFyiCthf7pw
+[33mpydocs_1  |[0m gdoc.py:01,17:28:57:async_init:118:LFrZEA -- Done computing gdoc for Math proposal 1MQSAawInjoU_bWoc22FZS1s-qXWkPZNXwZDM-lFUoU0
+[35mpydocs_3  |[0m gdoc.py:01,17:28:57:async_init:118:0PLjCw -- Done computing gdoc for Memoir.docx 1pWqW84PU9HyaS_FLl_qn80OAdv0gFum7_FkO6a82EyE
+[36mpydocs_2  |[0m gdoc.py:01,17:28:57:_download_details:159:AZHoyg -- received job for 1pWqW84PU9HyaS_FLl_qn80OAdv0gFum7_FkO6a82EyE
+[33mpydocs_1  |[0m gdoc.py:01,17:28:57:_download_details:159:LFrZEA -- received job for 1fZgygLRoHAb-498SXVjIXpGUIvLGU9qeRU63qzQx9nQ
+[33mpydocs_1  |[0m gdoc.py:01,17:28:57:_download_details:159:LFrZEA -- received job for 1pWqW84PU9HyaS_FLl_qn80OAdv0gFum7_FkO6a82EyE
+[35mpydocs_3  |[0m gdoc.py:01,17:28:57:async_init:118:0PLjCw -- Done computing gdoc for Discussion Director 1fZgygLRoHAb-498SXVjIXpGUIvLGU9qeRU63qzQx9nQ
+[35mpydocs_3  |[0m gdoc.py:01,17:28:57:_download_details:159:0PLjCw -- received job for 1ohuX_SQlBRAEoBP1lszH7C5sU4UixwKTJsjyRB4hSWw
+[36mpydocs_2  |[0m gdoc.py:01,17:28:57:async_init:118:AZHoyg -- Done computing gdoc for doc.exe 1XJ5BlIal28QXAMwFOiNr81G7U0xElvy16JUj-39MTrU
+[32msql_serv  |[0m sql.py:01,17:28:58:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1sF1pFtL8fsnQBBAoTt8P7YGOVZVr6-6a4BLeU3PBncI.id'
+[32msql_serv  |[0m sql.py:01,17:28:58:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1ECJHKZpyfd75nEg20CQdICaWhZzri2SX_mQjfIFN-Wk.id'
+[32msql_serv  |[0m sql.py:01,17:28:58:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1sF1pFtL8fsnQBBAoTt8P7YGOVZVr6-6a4BLeU3PBncI.id'
+[32msql_serv  |[0m sql.py:01,17:28:58:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1ECJHKZpyfd75nEg20CQdICaWhZzri2SX_mQjfIFN-Wk.id'
+[32msql_serv  |[0m sql.py:01,17:28:58:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '15e68EIS9xXe5Yvzju4GtkyhFKJ_UgUA9juJKiUpPeUA.id'
+[32msql_serv  |[0m sql.py:01,17:28:58:insert_sql:240:YyuwkA -- Done all for owner_id 2695; processed files: 13
+[36mpydocs_2  |[0m gdoc.py:01,17:28:58:_download_details:159:AZHoyg -- received job for 1R6xbWkbfzsQajjjcXW8tMQWAHqG2Kw6fUzCtSVa3rKI
+[35mpydocs_3  |[0m gdoc.py:01,17:28:58:_download_details:159:0PLjCw -- received job for 1R6xbWkbfzsQajjjcXW8tMQWAHqG2Kw6fUzCtSVa3rKI
+[32msql_serv  |[0m sql.py:01,17:28:58:insert_sql:240:YyuwkA -- Done all for owner_id 2694; processed files: 13
+[35mpydocs_3  |[0m gdoc.py:01,17:28:59:_download_details:159:0PLjCw -- received job for 11pQJMPSqdBII6CieoNmfHahRsuvHflXvehfOaWt8H7k
+[32msql_serv  |[0m sql.py:01,17:29:00:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1sF1pFtL8fsnQBBAoTt8P7YGOVZVr6-6a4BLeU3PBncI.id'
+[32msql_serv  |[0m sql.py:01,17:29:00:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1sF1pFtL8fsnQBBAoTt8P7YGOVZVr6-6a4BLeU3PBncI.id'
+[32msql_serv  |[0m sql.py:01,17:29:00:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1sF1pFtL8fsnQBBAoTt8P7YGOVZVr6-6a4BLeU3PBncI.id'
+[36mpydocs_2  |[0m gdoc.py:01,17:29:01:async_init:118:AZHoyg -- Done computing gdoc for Discussion Director 1fZgygLRoHAb-498SXVjIXpGUIvLGU9qeRU63qzQx9nQ
+[32msql_serv  |[0m sql.py:01,17:29:02:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1wfaH9BSg8wrDaKXR54KK1y8pd-miEOQNj3E8GL6fTfg.id'
+[36mpydocs_2  |[0m gdoc.py:01,17:29:02:_download_details:159:AZHoyg -- received job for 1ohuX_SQlBRAEoBP1lszH7C5sU4UixwKTJsjyRB4hSWw
+[36mpydocs_2  |[0m gdoc.py:01,17:29:02:async_init:118:AZHoyg -- Done computing gdoc for Memoir.docx 1pWqW84PU9HyaS_FLl_qn80OAdv0gFum7_FkO6a82EyE
+[32msql_serv  |[0m sql.py:01,17:29:02:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1G1g252JtmrFnXI5HaLLEafe8apipzquYwQQ0hbQIaho.id'
+[33mpydocs_1  |[0m gdoc.py:01,17:29:02:async_init:118:LFrZEA -- Done computing gdoc for Discussion Director 1fZgygLRoHAb-498SXVjIXpGUIvLGU9qeRU63qzQx9nQ
+[36mpydocs_2  |[0m gdoc.py:01,17:29:02:_download_details:159:AZHoyg -- received job for 11pQJMPSqdBII6CieoNmfHahRsuvHflXvehfOaWt8H7k
+[32msql_serv  |[0m sql.py:01,17:29:02:load_clos:111:YyuwkA -- clos
+[32msql_serv  |[0m Traceback (most recent call last):
+[32msql_serv  |[0m   File "/app/processing/sql.py", line 109, in load_clos
+[32msql_serv  |[0m     parent_id = fileid_obj_map[clos.parent[0]+'.id']
+[32msql_serv  |[0m KeyError: '1sF1pFtL8fsnQBBAoTt8P7YGOVZVr6-6a4BLeU3PBncI.id'
+[33mpydocs_1  |[0m gdoc.py:01,17:29:02:async_init:118:LFrZEA -- Done computing gdoc for Memoir.docx 1pWqW84PU9HyaS_FLl_qn80OAdv0gFum7_FkO6a82EyE
+[35mpydocs_3  |[0m gdoc.py:01,17:29:02:async_init:118:0PLjCw -- Done computing gdoc for Game show questions 1ohuX_SQlBRAEoBP1lszH7C5sU4UixwKTJsjyRB4hSWw
+[33mpydocs_1  |[0m gdoc.py:01,17:29:02:_download_details:159:LFrZEA -- received job for 1R6xbWkbfzsQajjjcXW8tMQWAHqG2Kw6fUzCtSVa3rKI
+[33mpydocs_1  |[0m gdoc.py:01,17:29:02:_download_details:159:LFrZEA -- received job for 1ohuX_SQlBRAEoBP1lszH7C5sU4UixwKTJsjyRB4hSWw
+[35mpydocs_3  |[0m gdoc.py:01,17:29:03:_download_details:159:0PLjCw -- received job for 1WbvAv_ymDwWk-BGlPHw8SzD163SnYVFrw7IIt4mHjiM
+[33mpydocs_1  |[0m gdoc.py:01,17:29:03:async_init:118:LFrZEA -- Done computing gdoc for doc.exe 1XJ5BlIal28QXAMwFOiNr81G7U0xElvy16JUj-39MTrU
+[33mpydocs_1  |[0m gdoc.py:01,17:29:03:_download_details:159:LFrZEA -- received job for 11pQJMPSqdBII6CieoNmfHahRsuvHflXvehfOaWt8H7k
+[36mpydocs_2  |[0m gdoc.py:01,17:29:03:async_init:118:AZHoyg -- Done computing gdoc for 20 Questions involving Stress 1R6xbWkbfzsQajjjcXW8tMQWAHqG2Kw6fUzCtSVa3rKI
+[35mpydocs_3  |[0m gdoc.py:01,17:29:03:async_init:118:0PLjCw -- Done computing gdoc for 20 Questions involving Stress 1R6xbWkbfzsQajjjcXW8tMQWAHqG2Kw6fUzCtSVa3rKI

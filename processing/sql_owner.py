@@ -36,11 +36,10 @@ class OwnerManager():
 
             fileid_obj_map = {}
             dict_lock = Lock()
+
             return owner_id, fileid_obj_map, dict_lock
 
         with self.owner_lock:
-            print("creating new user: %s", userid)
-            logger.warning(self.owners)
             self.owners[userid] = create_owner(userid)
             return self.owners[userid]
 

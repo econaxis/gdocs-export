@@ -32,8 +32,7 @@ def layout():
                             margin=gen_margin(),
                             xaxis=dict(
                                 type="date"
-                            ),
-                            barmode = 'overlay'
+                            )
                         )
                     )
                 ),
@@ -41,10 +40,12 @@ def layout():
                     "Get parent",
                     id="get_parent"
                 ),
-                dcc.Checklist(
+                dcc.RadioItems(
                     id="timeck",
                     options=[
-                        {'label': 'Time Only', 'value': 'time'}
+                        {'label': 'Time Only', 'value': 'day'},
+                        {'label': 'Week Only', 'value': 'week'},
+                        {'label': 'None', 'value': 'none'}
                     ]
                 ),
                 html.Button(
@@ -60,9 +61,9 @@ def layout():
             dcc.Slider(
                 id='bin-slider',
                 min=0,
-                max=750,
+                max=500,
                 step=1,
-                value=40
+                value=30
             ),
             dcc.Slider(
                 id='window-slider',

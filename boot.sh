@@ -18,7 +18,6 @@ if [ -n "$SQL_SERV" ]; then
     wait
 elif [ -n "${WORKER}" ]; then
     echo "Worker mode"
-    rq worker -c flaskr.rqsets &
     exec rq worker -c flaskr.rqsets
 else 
     echo "Not worker"
