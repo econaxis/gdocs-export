@@ -14,8 +14,6 @@ from multiprocessing import Pipe, Process, Event
 from types import SimpleNamespace
 from collections import namedtuple
 
-
-
 logger = logging.getLogger(__name__)
 
 base_url = 'https://docs.google.com/document/d/{file_id}/revisions/load?id={file_id}&start=1&end={end}'
@@ -45,8 +43,9 @@ class GDoc():
 
     __slots__ = ['path', 'name', 'last_revision_id', 'fileId', 'session', 'headers', 'operations', 'closure', 'done']
 
+    sem = asyncio.Semaphore(value = 9)
+
     def return_condensed(self):
-        logger.debug("returning condensed: %s, %s, %s, %s, %s", self.name, self.path, self.operations, self.closure, self.fileId)
         if not self.operations:
             logger.critical("Operations not found but still returning condensed!! %s %s %s", self.name, self.fileId, self.operations)
         return gd_condensed(self.name, self.path, self.operations, self.closure, self.fileId)
@@ -73,8 +72,7 @@ class GDoc():
 
         logger.debug("starting googledoc async_init for %s", fileId)
 
-        retries = 3
-
+        retries = 1
 
         while retries:
             retries -= 1
@@ -82,32 +80,34 @@ class GDoc():
             parent_conn, child_conn = Pipe()
 
             p = Process(target = self._download_details, args = (child_conn,))
-            p.start()
 
-            logger.debug("started process for %s", fileId[0:5])
-            await asyncio.sleep(5)
+            async with GDoc.sem:
 
-            counter = 0
-            while not parent_conn.poll(0.01) and counter < 5:
-                counter +=1
-                logger.debug("sleeping from poll, waiting for %s, %d", fileId[0:5], counter)
-                await asyncio.sleep(random.uniform(6 * counter, 10 * counter))
+                p.start()
 
-            logger.debug("received goahead to receive %s", fileId[0:5])
+                logger.debug("started process for %s", fileId[0:5])
+                await asyncio.sleep(5)
 
-            if parent_conn.poll(0.01):
-                self.operations = parent_conn.recv()
-                logger.info("Success for %s, received following operations: %s\n", self.fileId, self.operations)
+                counter = 0
+                while not parent_conn.poll(0.01) and counter < 5:
+                    counter +=1
+                    logger.debug("sleeping from poll, waiting for %s, %d", fileId[0:5], counter)
+                    await asyncio.sleep(random.uniform(6 * counter, 10 * counter))
 
-                if self.operations == []:
-                    logger.warning("No content received for: %s, %s.", self.fileId, self.name)
+                logger.debug("received goahead to receive %s", fileId[0:5])
 
-                parent_conn.send(f'success {fileId[0:5]}')
-                p.terminate()
-                p.join(0.01)
-                break
-            else:
-                continue
+                if parent_conn.poll(0.01):
+                    self.operations = parent_conn.recv()
+                    if self.operations == []:
+                        logger.warning("No content received for: %s, %s.", self.fileId, self.name)
+                    parent_conn.send(f'success {fileId[0:5]}')
+                    p.terminate()
+                    p.join(0.01)
+                    retries = 0
+                else:
+                    p.terminate()
+                    p.join(0.01)
+                parent_conn.close()
 
         self.compute_closure()
 
@@ -126,10 +126,6 @@ class GDoc():
                     headers=self.headers, timeout = timeout) as response:
                 code = response.status
                 if code != 200:
-                    logtext = await response.text()
-                    logtext = textwrap.wrap(logtext, 1000)
-                    [logger.log(1, pformat(x)) for x in logtext]
-
                     if retry:
                         return -1
                     logger.info("can't get last revision, sleeping 7")
@@ -162,63 +158,51 @@ class GDoc():
 
         logger.info("received job for %s",self.fileId)
 
+        revision_details = dict(changelog = [])
+
         #Retries
         for i in range(1, 3):
             url = base_url.format(file_id=self.fileId, end=self.last_revision_id)
-
-
             response = SimpleNamespace(text = "Blank Filler. This will show when response is undefined")
-            logger.debug("get url: %s", url)
             try:
-                logger.debug("starting url get")
                 response = requests.get(url = url, headers = self.headers, timeout = 10)
-                logger.debug('url get sucess')
                 assert response.status_code == 200
             except:
                 logger.debug("%s unable, sleeping up to %d", self.fileId[0:5], 20*i)
                 time.sleep(random.uniform(5, 20*i))
                 continue
-
             text = response.text
-
-            print("starting json load")
             revision_details = json.loads(text[5:])
-
-
-            tot_operations = []
-
-            for count,x in enumerate(revision_details['changelog']):
-
-                if x[0]['ty'] not in {'is', 'ds'}:
-                    continue
-
-                if x[0]['ty'] == 'is':
-                    content = [len(x[0]['s']), 0]
-                elif x[0]['ty'] == 'ds':
-                    content = [0, x[0]['ei'] - x[0]['si'] + 1]
-
-                cur_op = Operation(date = x[1]/1e3, content = content)
-                tot_operations.append(cur_op)
-
-
-            #Condense all operations into minute-operations
-            operation_condensed = {}
-
-            for o in tot_operations:
-                key = round_time(o.date)
-                if key not in operation_condensed:
-                    operation_condensed[key] = o
-                else:
-                    operation_condensed[key].content[0] += o.content[0]
-                    operation_condensed[key].content[1] += o.content[1]
-
-            operations = list(operation_condensed.values())
-
             break
 
+        tot_operations = []
+        for count,x in enumerate(revision_details['changelog']):
+
+            if x[0]['ty'] not in {'is', 'ds'}:
+                continue
+
+            if x[0]['ty'] == 'is':
+                content = [len(x[0]['s']), 0]
+            elif x[0]['ty'] == 'ds':
+                content = [0, x[0]['ei'] - x[0]['si'] + 1]
+
+            cur_op = Operation(date = x[1]/1e3, content = content)
+            tot_operations.append(cur_op)
+
+
+        #Condense all operations into minute-operations
+        operation_condensed = {}
+        for o in tot_operations:
+            key = round_time(o.date)
+            if key not in operation_condensed:
+                operation_condensed[key] = o
+            else:
+                operation_condensed[key].content[0] += o.content[0]
+                operation_condensed[key].content[1] += o.content[1]
+
+        operations = list(operation_condensed.values())
 
         pipe.send(operations)
-
         time.sleep(10)
 
         counter = 1

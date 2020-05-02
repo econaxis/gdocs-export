@@ -38,21 +38,16 @@ test = {}
 
 trace_map = {}
 
-"""
-
-DEBUG FOR HISTOGRAM
-
-ftable = Files.__table__
-q = select([literal_column("floor((datediff(second, '2010-05-06 12:00:00', moddate)/1000)*1000").label("bins"), ftable.c.id]).select_from(dtable.join(ftable)).alias()
-q1 = select([q.c.fl, func.count('*')]).select_from(q).group_by(q.c.fl).order_by(q.c.fl)
-CONN.execute(q1)
-"""
-
-replace_values = {'foo'}
-
-
 g_values = []
 g_weights = []
+
+traces = []
+
+prev_mode = None
+
+prev_bins = None
+
+prev_trace = [[], []]
 
 
 def get_activity(files, smooth = False, window = 51, num_bins = 30, x_limits = [0, 2e9], aggregate_by = ''):
@@ -65,55 +60,61 @@ def get_activity(files, smooth = False, window = 51, num_bins = 30, x_limits = [
         results = db.query(Dates.adds, Dates.deletes, Dates.date).join(Files).join(Owner, Owner.id == Files.parent_id) \
                 .filter(Owner.id==test["userid"]).all()
 
-
-
     adds = []
     deletes_abs = []
     timestamps = []
 
-    [adds, deletes, timestamps] = zip(*results)
+    [adds, deletes, timestamps] = map(list, zip(*results))
+    """
+    adds.insert(0, 0)
+    deletes.insert(0, 0)
 
-
+    timestamps.insert(0, timestamps[0]-1)
+    timestamps.append(timestamps[-1]+1)
+    """
     if aggregate_by == '':
         #No aggregate
         pass
     elif aggregate_by == 'day':
         timestamps = [datetime.fromtimestamp(x).replace(year=2000, month = 1, day = 1).timestamp() for x in timestamps]
+        x_limits = [0, 3e9]
     elif aggregate_by == 'week':
         timestamps = [datetime.fromtimestamp(x) for x in timestamps]
         timestamps = [x.replace(year=2019, month=7, day=x.weekday()+1).timestamp() for x in timestamps]
+        x_limits = [0, 3e9]
 
     deletes = [-1 * x for x in deletes]
+
+    #timestamps.extend(prev_trace[1])
+    #adds.extend(prev_trace[0])
+
 
     adds = np.array(adds)
     deletes = np.array(deletes)
     timestamps = np.array(timestamps)
-    add_dates = timestamps
-    delete_dates = timestamps
+    add_dates = timestamps[:-1]
+    delete_dates = timestamps[:-1]
 
 
     x_limits[0] = max(timestamps.min(), x_limits[0])
     x_limits[1] = min(timestamps.max(), x_limits[1])
 
 
-    adds, add_dates, bin_number = map(list, binned_statistic(timestamps, adds, 'sum', bins=num_bins, range=x_limits))
-    deletes, delete_dates, bin_number = map(list, binned_statistic(timestamps, deletes, 'sum', bins=num_bins, range = x_limits))
 
-    add_dates = add_dates[:-1]
-    delete_dates = delete_dates[:-1]
+    global prev_bins
+
+    adds, add_dates, bin_number = map(list, binned_statistic(timestamps, adds, 'sum', bins = prev_bins if prev_bins else 100 \
+        , range = x_limits))
+
+    prev_bins = add_dates
+    #deletes, delete_dates, bin_number = map(list, binned_statistic(timestamps, deletes, 'sum', bins=num_bins, range = x_limits))
+
 
     if smooth:
-        print(len(deletes), len(delete_dates))
-        add_dates1 = np.linspace(min(add_dates), max(add_dates), 50)
-        delete_dates1 = np.linspace(min(delete_dates), max(delete_dates), 50)
-
         #adds = interpolate.interp1d(add_dates, adds, kind='cubic')(add_dates1)
         #deletes = interpolate.interp1d(delete_dates, deletes, kind='cubic')(delete_dates1)
         #add_dates = add_dates1
         #delete_dates = delete_dates1
-
-
-
         #adds = np.interp(np.linspace(add_dates[0], add_dates[-1], 50), add_dates, adds)
         #deletes = np.interp(np.linspace(delete_dates[0], delete_dates[-1], 50), delete_dates, deletes)
 
@@ -127,14 +128,14 @@ def get_activity(files, smooth = False, window = 51, num_bins = 30, x_limits = [
 
 
         adds = scipy.signal.savgol_filter(adds, window, poly_order)
-        deletes = scipy.signal.savgol_filter(deletes, window, poly_order)
+        #deletes = scipy.signal.savgol_filter(deletes, window, poly_order)
 
         adds = [0 if x < 0 else x for x in adds]
-        deletes = [0 if x > 0 else x for x in deletes]
+        #deletes = [0 if x > 0 else x for x in deletes]
+
 
     add_dates = [datetime.fromtimestamp(x) for x in add_dates]
     delete_dates = [datetime.fromtimestamp(x) for x in delete_dates]
-
 
     from types import SimpleNamespace
 
@@ -180,9 +181,19 @@ def _update_histogram(times, ddvalue, bubble_figure, selectedData, trace, hist_f
     aggregate_by = ""
     tickformat = ""
 
-    if times:
+    if times == 'day':
         tickformat = "%H:%M"
         aggregate_by = 'day'
+    elif times == 'week':
+        tickformat = "%a %H:%M"
+        aggregate_by = 'week'
+
+    global prev_mode, prev_bins
+    if times != prev_mode:
+        prev_mode = times
+        hist_figure["data"] = []
+        prev_bins = None
+
 
     ret = get_activity(selectedFiles, num_bins = bin_slider_value, x_limits = x_limits, 
             window = window_slider_value, aggregate_by = aggregate_by)
@@ -190,27 +201,26 @@ def _update_histogram(times, ddvalue, bubble_figure, selectedData, trace, hist_f
     ret1 = get_activity(selectedFiles, smooth = True, num_bins = bin_slider_value, 
             x_limits = x_limits, window = window_slider_value, aggregate_by = aggregate_by)
 
-    trace_map['add-nosmooth'] = dict(x = ret.add_dates, y = ret.adds)
-    trace_map['delete-nosmooth'] = dict(x=ret.delete_dates, y=ret.deletes)
-    trace_map['add-yessmooth'] = dict(x=ret1.add_dates, y = ret1.adds)
-    trace_map['delete-yessmooth'] = dict(x=ret1.delete_dates, y = ret1.deletes)
 
-    if hist_figure["data"]:
-        for t in hist_figure["data"]:
-            t['x'] = trace_map[t['meta']]['x']
-            t['y'] = trace_map[t['meta']]['y']
-    else:
-        add_trace = go.Scatter(x = ret.add_dates, y = ret.adds, mode='lines', name='no smooth', meta = "add-nosmooth")
-        delete_trace = go.Scatter(x = ret.delete_dates, y = ret.deletes, mode='lines', name='no smooth', meta = "delete-nosmooth")
+    ret1.adds
 
-        add_trace1 = go.Scatter(x = ret1.add_dates, y = ret1.adds, mode='lines', name='yes smooth', meta = "add-yessmooth")
-        delete_trace1 = go.Scatter(x = ret1.delete_dates, y = ret1.deletes, mode='lines', name='yes smooth', meta = "delete-yessmooth")
+    #add_trace = go.Scatter(x = ret.add_dates, y = ret.adds, mode='lines', name='no smooth', meta = "add-nosmooth")
+    #delete_trace = go.Scatter(x = ret.delete_dates, y = ret.deletes, mode='lines', name='no smooth', meta = "delete-nosmooth")
 
-        hist_figure["data"] = [add_trace, delete_trace, add_trace1, delete_trace1]
+    add_trace1 = go.Scatter(x = ret1.add_dates, y = ret1.adds, mode='lines', name='add', meta = "add-yessmooth", stackgroup = 'a')
+
+
+    hist_figure["data"].insert(0, add_trace1)
+    #delete_trace1 = go.Scatter(x = ret1.delete_dates, y = ret1.deletes, mode='lines', name='delete', meta = "delete-yessmooth", stackgroup = "b")
+
+    #hist_figure["data"].extend([add_trace1, delete_trace1])
 
     hist_figure["layout"]["xaxis"]["tickformat"] = tickformat
 
     return hist_figure
+
+
+    #Following is deprecated 
 
 
     for count, i in enumerate(dates_uf):
@@ -337,6 +347,8 @@ def register_callback(app):
         [State('histogram', 'figure')]
     )
     def update_histogram(times, ddvalue, bubble_figure, selectedData, trace, bin_slider, relayout, window_slider, hist_figure):
+
+        print("relyout: ", relayout)
 
 
         b = '1980-03-27 23:54:15.5691'

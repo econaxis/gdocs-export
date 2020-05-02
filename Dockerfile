@@ -5,8 +5,6 @@ ENV DOCKERWDIR /app/
 
 WORKDIR ${DOCKERWDIR}
 
-
-
 COPY installation ./installation
 
 RUN chmod +x ./installation/instodbc.sh && \
@@ -20,21 +18,20 @@ RUN chmod +x ./installation/instodbc.sh && \
 
 COPY secret ./secret
 
-ARG WORKER
-ARG REDIS_PASSW
-ARG REDIS_HOST
-ARG SQL_PASS
-ARG SQL_CONN
-ARG AZURE 
-
-ENV AZURE=${AZURE} \
-    WORKER=${WORKER} \
-    REDIS_PASSW=${REDIS_PASSW} \
-    REDIS_HOST=${REDIS_HOST} \
-    SQL_PASS=${SQL_PASS} \
-    SQL_CONN=${SQL_CONN} \
-    RQ_NAME=default
-
+#ARG WORKER
+#ARG REDIS_PASSW
+#ARG REDIS_HOST
+#ARG SQL_PASS
+#ARG SQL_CONN
+#ARG AZURE 
+#
+#ENV AZURE=${AZURE} \
+#    WORKER=${WORKER} \
+#    REDIS_PASSW=${REDIS_PASSW} \
+#    REDIS_HOST=${REDIS_HOST} \
+###    SQL_PASS=${SQL_PASS} \
+#    SQL_CONN=${SQL_CONN} \
+#    RQ_NAME=default
 
 
 COPY configlog.py boot.sh loader.py dsds.py run.py Dockerfile ./

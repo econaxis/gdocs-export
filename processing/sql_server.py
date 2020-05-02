@@ -10,13 +10,15 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-#Needs high memory to run
-QUEUE_SIZE = 10
-THREAD_SIZE = 40
+#Needs high memory to run, the higher threads
+QUEUE_SIZE = 30
+THREAD_SIZE = 100
 
 from processing.sql_owner import OwnerManager
 
 owner_manager = OwnerManager()
+
+finished_threads = 0
 
 
 
@@ -134,14 +136,17 @@ def start_server(queue):
 
 
 def remove_dead_threads(threads):
+    global finished_threads
+
     removed_count = 0
     for i in threads:
         if not i.is_alive():
             i.join(timeout=2)
             threads.remove(i)
             removed_count += 1
+            finished_threads += 1
             logger.debug("removed thread, done")
-    logger.info("Removed finished threads: %d", removed_count)
+    logger.info("Removed finished threads: %d, total resolved threads: %d", removed_count, finished_threads)
     return
 
 

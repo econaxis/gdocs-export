@@ -21,9 +21,9 @@ logger = logging.getLogger(__name__)
 
 pprint = pprint.PrettyPrinter(indent=4).pprint
 
-timeout = aiohttp.ClientTimeout(total=6)
+timeout = aiohttp.ClientTimeout(total=8)
 
-MAX_FILES = 300
+MAX_FILES = 150
 
 SEED_ID = "root"
 
@@ -56,7 +56,7 @@ async def getIdsRecursive (drive_url, folders: asyncio.Queue,
         # Deprecated, do not need to throttle google drive api
         # await drThrottle.sem.acquire()
 
-        proc_file = await tryGetQueue(folders, name="getIds", interval=3)
+        proc_file = await tryGetQueue(folders, name="getIds", interval=3,repeatTimes = 20)
 
 
         if(proc_file == -1):

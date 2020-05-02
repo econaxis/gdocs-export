@@ -17,21 +17,22 @@ from processing.models import Owner, Files, Closure, Dates, Base, Filename
 
 pprint = PrettyPrinter().pprint
 
-
-
 scrt = secrets.token_urlsafe(7)
 token = datetime.now().strftime("%d-%H.%f") + scrt
 
 PARAMS = os.environ["SQL_CONN"]
 
-#ENGINE = sqlal.create_engine("mssql+pyodbc:///?odbc_connect=%s" % PARAMS, pool_size=30, echo = False, max_overflow=300)
-ENGINE = sqlal.create_engine('sqlite:///ds.db', connect_args = dict(check_same_thread=False))
+
+
+if "FLASKDBG" in os.environ or True:
+    ENGINE = sqlal.create_engine('sqlite:///ds.db', connect_args = dict(check_same_thread=False))
+else:
+    ENGINE = sqlal.create_engine("mssql+pyodbc:///?odbc_connect=%s" % PARAMS, pool_size=30, echo = True, max_overflow=300)
+
 
 logger = logging.getLogger(__name__)
 
 Base.metadata.create_all(bind=ENGINE)
-
-CONN = ENGINE.connect()
 
 _session = sessionmaker(bind=ENGINE)
 
@@ -84,8 +85,9 @@ def load_clos(file_data, fileid_obj_map, owner_id, dict_lock):
     sess = v_scoped_session()
     for files in file_data:
         for clos in files.closure:
+            time.sleep(1)
             with dict_lock:
-                if clos.parent[0] not in fileid_obj_map:
+                if "{}.id".format(clos.parent[0]) not in fileid_obj_map:
                     logger.debug("new element not found: %s", clos.parent[0])
 
                     fi = Files(fileId = clos.parent[0] + str(owner_id), parent_id = owner_id,
@@ -94,23 +96,25 @@ def load_clos(file_data, fileid_obj_map, owner_id, dict_lock):
                     file_name = Filename (files = fi, owner_id = owner_id, fileName = clos.parent[1])
                     fi.name = [file_name]
 
-                    sess.add(fi)
-                    sess.flush()
-                    fileid_obj_map[clos.parent[0]] = fi
-
-
-                sess.add(fileid_obj_map[clos.child[0]])
-                sess.add(fileid_obj_map[clos.parent[0]])
-
+                    try:
+                        sess.add(fi)
+                        sess.flush()
+                    except:
+                        logger.exception("sqlexc: ")
+                    else:
+                        fileid_obj_map[clos.parent[0]] = fi
+                        fileid_obj_map[clos.parent[0]+'.id'] = fi.id
+                        sess.commit()
                 try:
+                    sess.add(fileid_obj_map[clos.child[0]])
                     child_id = fileid_obj_map[clos.child[0]].id
-                    parent_id = fileid_obj_map[clos.parent[0]].id
+                    #sess.add(fileid_obj_map[clos.parent[0]])
+                    parent_id = fileid_obj_map[clos.parent[0]+'.id']
                 except:
                     logger.exception("clos")
                 else:
                     cls = Closure(parent = parent_id, child = child_id, owner_id = owner_id, depth = clos.depth)
                     sess.add(cls)
-
 
 @db_connect
 def load_from_dict(lt_files, owner_id, dict_lock):
@@ -152,7 +156,16 @@ def load_from_dict(lt_files, owner_id, dict_lock):
 
 
 def start(userid, files):
+    import sys
+    try:
+        insert_sql(userid, files)
+    except:
+        logger.critical("Exception in SQL!")
+        logger.exception("-")
+        sys.excepthook(*sys.exc_info())
 
+
+def insert_sql(userid, files):
     logger.debug("Starting sql for userid %s", userid)
 
     from processing.sql_server import owner_manager

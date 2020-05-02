@@ -1,4 +1,0 @@
-mapper.p:30,15:14:45:_log:1998:9rR9Ew -- (Files|files) _configure_property(owner, RelationshipProperty)
-mapper.p:30,15:14:45:_log:1998:9rR9Ew -- (Files|files) _configure_property(dates, RelationshipProperty)
-mapper.p:30,15:14:45:_log:1998:9rR9Ew -- (Files|files) _configure_property(name, RelationshipProperty)
-mapper.p:30,15:14:45:_log:1998:9rR9Ew -- (Files|files) _configure_property(id, Column)
