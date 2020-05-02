@@ -8,7 +8,9 @@ streaming.txt
 
 *.swp
 *.swo
-logs.txt
+logs*.txt
 
 profile
 .env
+
+data/logs/**
