@@ -60,7 +60,7 @@ def oauth():
 
     userid = flask.session["userid"]
 
-    workingPath = current_app.config["HOMEPATH"] + "data/" + userid + "/"
+    workingPath = current_app.config["HOMEDATAPATH"] + userid + "/"
     Path(workingPath).mkdir(exist_ok=True)
 
     credentials = flow.credentials

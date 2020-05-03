@@ -12,7 +12,10 @@ from sqlalchemy.orm import sessionmaker, scoped_session
 import os
 import logging
 import configlog
-from processing.models import Owner, Files, Closure, Dates, Base, Filename
+from processing.models import  Files, Closure, Dates, Base, Filename
+
+
+logger = logging.getLogger(__name__)
 
 
 pprint = PrettyPrinter().pprint
@@ -24,25 +27,37 @@ PARAMS = os.environ["SQL_CONN"]
 
 
 
-if "FLASKDBG" in os.environ or True:
-    ENGINE = sqlal.create_engine('sqlite:///ds.db', connect_args = dict(check_same_thread=False))
-else:
-    ENGINE = sqlal.create_engine("mssql+pyodbc:///?odbc_connect=%s" % PARAMS, pool_size=30, echo = True, max_overflow=300)
+sessions = {}
+sessions_lock = threading.Lock()
+
+def reload_engine(path):
+    global sessions, sessions_lock
+
+    with sessions_lock:
+        if path in sessions:
+            return sessions[path]
+
+        print("creating new database for ", path)
+        ENGINE = sqlal.create_engine(f'sqlite:///data/dbs/{path}.db', connect_args = dict(check_same_thread=False))
+
+        Base.metadata.create_all(bind=ENGINE)
+        _session = sessionmaker(bind=ENGINE)
+        v_scoped_session = scoped_session(_session)
 
 
-logger = logging.getLogger(__name__)
-
-Base.metadata.create_all(bind=ENGINE)
-
-_session = sessionmaker(bind=ENGINE)
-
-v_scoped_session = scoped_session(_session)
+        sessions[path] = v_scoped_session
+        return v_scoped_session
 
 def db_connect(func):
 
     @functools.wraps(func)
     def inner(*args, **kwargs):
-        session = v_scoped_session()
+
+        print(kwargs, args)
+
+        print("userid: ", kwargs["owner_id"])
+        session_manager = reload_engine(kwargs["owner_id"])
+        session = session_manager()
         try:
             result = func(*args, **kwargs)
             session.commit()
@@ -51,38 +66,14 @@ def db_connect(func):
             raise
         finally:
             session.close()
-            v_scoped_session.remove()
+            session_manager.remove()
         return result
     return inner
 
-
-"""
-def adder(queue, sess):
-    counter = 0
-
-    for i in queue:
-        counter+=1
-        sess.add(i)
-        if(counter%60==0):
-            logger.info("rem %d/%d", counter, len(queue))
-            sess.flush()
-
-    logger.info("flushing adder")
-    sess.flush()
-
-    return
-    while(not queue.empty()):
-        counter +=1
-        sess.add(queue.get_nowait())
-        if(counter %50 == 0):
-            sess.flush()
-    sess.flush()
-"""
-
-
 @db_connect
-def load_clos(file_data, fileid_obj_map, owner_id, dict_lock):
-    sess = v_scoped_session()
+def load_clos(file_data, fileid_obj_map, dict_lock, owner_id = None):
+    assert owner_id != None, "Ownerid is none err"
+    sess = reload_engine(owner_id)()
     for files in file_data:
         for clos in files.closure:
             time.sleep(1)
@@ -90,10 +81,10 @@ def load_clos(file_data, fileid_obj_map, owner_id, dict_lock):
                 if "{}.id".format(clos.parent[0]) not in fileid_obj_map:
                     logger.debug("new element not found: %s", clos.parent[0])
 
-                    fi = Files(fileId = clos.parent[0] + str(owner_id), parent_id = owner_id,
+                    fi = Files(fileId = clos.parent[0] + str(owner_id), 
                             isFile = False)
 
-                    file_name = Filename (files = fi, owner_id = owner_id, fileName = clos.parent[1])
+                    file_name = Filename (files = fi, fileName = clos.parent[1])
                     fi.name = [file_name]
 
                     try:
@@ -101,6 +92,7 @@ def load_clos(file_data, fileid_obj_map, owner_id, dict_lock):
                         sess.flush()
                     except:
                         logger.exception("sqlexc: ")
+                        sess.rollback()
                     else:
                         fileid_obj_map[clos.parent[0]] = fi
                         fileid_obj_map[clos.parent[0]+'.id'] = fi.id
@@ -113,12 +105,15 @@ def load_clos(file_data, fileid_obj_map, owner_id, dict_lock):
                 except:
                     logger.exception("clos")
                 else:
-                    cls = Closure(parent = parent_id, child = child_id, owner_id = owner_id, depth = clos.depth)
+                    cls = Closure(parent = parent_id, child = child_id, depth = clos.depth)
                     sess.add(cls)
 
 @db_connect
-def load_from_dict(lt_files, owner_id, dict_lock):
-    sess = v_scoped_session()
+def load_from_dict(lt_files, dict_lock, owner_id = None):
+    assert owner_id != None, "Ownerid is none err"
+
+
+    sess = reload_engine(owner_id)()
 
     counter = 0
     lt_dates = Queue()
@@ -146,10 +141,7 @@ def load_from_dict(lt_files, owner_id, dict_lock):
         sess.flush()
         logger.debug("finished flush; file size: %d", lt_files.qsize())
 
-
-    sess.expunge_all()
     sess.commit()
-    v_scoped_session.remove()
 
     logger.warning("Done load dict")
 
@@ -170,12 +162,11 @@ def insert_sql(userid, files):
 
     from processing.sql_server import owner_manager
 
-    sess = v_scoped_session()
+    sess = reload_engine(userid)()
 
-    owner_id, fileid_obj_map, dict_lock = owner_manager(userid)
+    fileid_obj_map, dict_lock = owner_manager(owner_id = userid)
 
     logger.info("Checked out owner object, fileid dict, and lock")
-
 
     lt_files = Queue()
     #fileid_obj_map maps gdrive fileids to file objects defined in models
@@ -209,10 +200,9 @@ def insert_sql(userid, files):
 
 
         file_obj = Files(fileId = f.fileId + ":"+token + secrets.token_urlsafe(3),
-                lastModDate = weighted_avg, parent_id = owner_id,
-                isFile = True)
+                lastModDate = weighted_avg, isFile = True)
 
-        file_name = Filename(files = file_obj, owner_id = owner_id, fileName = f.name)
+        file_name = Filename(files = file_obj,  fileName = f.name)
 
         file_obj.name = [file_name]
 
@@ -229,7 +219,7 @@ def insert_sql(userid, files):
 
 
     if files:
-        p = [threading.Thread(target = load_from_dict, args = (lt_files, owner_id, dict_lock)) for i in range(1)]
+        p = [threading.Thread(target = load_from_dict, args = (lt_files, dict_lock), kwargs = dict(owner_id = userid)) for i in range(1)]
         for x in p:
             x.start()
         for x in p:
@@ -238,9 +228,9 @@ def insert_sql(userid, files):
 
     logger.info("starting load closures")
 
-    load_clos(files, fileid_obj_map, owner_id, dict_lock)
+    #load_clos(files, fileid_obj_map,  dict_lock, owner_id = owner_id)
     sess.commit()
-    logger.warning("Done all for owner_id %s; processed files: %d", owner_id, SZ_FILES)
+    logger.warning("Done all for owner_id %s; processed files: %d",userid,  SZ_FILES)
     return
 
 
