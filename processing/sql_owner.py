@@ -1,6 +1,5 @@
-from processing.sql import db_connect, v_scoped_session, scrt
+from processing.sql import db_connect, reload_engine, scrt
 from threading import Lock
-from processing.models import Owner
 from datetime import datetime
 
 import logging
@@ -14,33 +13,29 @@ class OwnerManager():
         self.owner_lock = Lock()
         self.owners = {}
 
-    def __call__(self, userid):
+    def __call__(self, owner_id):
 
         with self.owner_lock:
-            if userid in self.owners:
-                logger.warning("Found old userid, using")
-                return self.owners[userid]
+            if owner_id in self.owners:
+                logger.warning("Found old owner_id, using")
+                return self.owners[owner_id]
 
         @db_connect
-        def create_owner(userid):
-            sess = v_scoped_session()
+        def create_owner(owner_id = None):
+
+            assert owner_id != None, "owner_id is none"
+
+
+            sess = reload_engine(owner_id)
             #Debugging, added secret for no unique key constraint
-            temp = userid[0:45] + datetime.now().strftime("%m-%d-%H-%f") + scrt
-            owner = Owner(name=temp[0:49])
 
-            sess.add(owner)
-            sess.commit()
-
-            owner_id = owner.id
-            v_scoped_session.remove()
+            reload_engine(owner_id).remove()
 
             fileid_obj_map = {}
             dict_lock = Lock()
 
-            return owner_id, fileid_obj_map, dict_lock
+            return fileid_obj_map, dict_lock
 
         with self.owner_lock:
-            self.owners[userid] = create_owner(userid)
-            return self.owners[userid]
-
-
+            self.owners[owner_id] = create_owner(owner_id = owner_id)
+            return self.owners[owner_id]

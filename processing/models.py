@@ -13,10 +13,8 @@ class Files(Base):
 
     lastModDate = Column(DateTime)
 
-    parent_id = Column(Integer, ForeignKey('owner.id'))
     isFile = Column(Boolean)
 
-    owner = relationship("Owner", back_populates="files")
     dates = relationship("Dates", back_populates="files", lazy = "select")
     name = relationship("Filename", back_populates="files", lazy = "select")
 
@@ -24,16 +22,6 @@ class Files(Base):
     def __repr__(self):
         return f"Files\n"
 
-
-class Owner(Base):
-    __tablename__ = "owner"
-    id = Column(Integer, primary_key=True, unique=True, autoincrement=True)
-    name = Column(String(50), unique=True)
-
-    files = relationship("Files", back_populates="owner")
-
-    def __repr__(self):
-        return f"Owner \n"
 
 
 class Dates(Base):
@@ -67,12 +55,10 @@ class Closure(Base):
 
     parent = Column(Integer, ForeignKey('files.id'))
     child = Column(Integer, ForeignKey('files.id'))
-    owner_id = Column(Integer, ForeignKey('owner.id'))
     depth = Column(Integer)
 
     files_relationship = relationship("Files", foreign_keys=[child])
     parent_relationship = relationship("Files", foreign_keys=[parent])
-    owner = relationship("Owner", foreign_keys=[owner_id])
 
     __table_args__ = (
         PrimaryKeyConstraint(name='closure_pk', mssql_clustered=False),
@@ -86,10 +72,8 @@ class Filename(Base):
 
     fileId = Column(Integer, ForeignKey('files.id'))
     fileName = Column(String(600))
-    owner_id = Column(Integer, ForeignKey('owner.id'))
 
     files = relationship("Files", back_populates="name", foreign_keys = [fileId])
-    owner = relationship("Owner", foreign_keys=[owner_id])
 
 
     __table_args__ = (

@@ -8,15 +8,20 @@ from logging.handlers import SysLogHandler
 from datetime import datetime
 import secrets
 import urllib.request
-
+from flaskr import flask_config
 
 token = secrets.token_urlsafe(4)
+
+
+def set_token(tok):
+    global token
+    token = tok
 
 os.environ["TZ"]="America/Vancouver"
 time.tzset()
 
 
-logFile = "data/logs/logs{}---{}.txt".format(datetime.now().strftime("%-m-%d"), token)
+logFile = flask_config.Config.HOMEDATAPATH + "logs/logs{}---{}.txt".format(datetime.now().strftime("%-m-%d"), token)
 
 syslog = SysLogHandler(address=('logs2.papertrailapp.com', 49905))
 filelog = FileHandler(logFile)

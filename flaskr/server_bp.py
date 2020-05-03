@@ -27,13 +27,14 @@ def process_data(_userid=None):
         return "no user id found"
 
     creds = check_signin(userid, load_creds=True)
-    if(creds is None or creds is False and userid != 'a'):
-        return "creds not found for this userid, go back to home page"
+    if(not creds and userid != 'a'):
+        pass
+        #return "creds not found for this userid, go back to home page"
     else:
         print("creds are valid")
     flask.session['userid'] = userid
 
-    workingPath = current_app.config.get("HOMEPATH") + "data/" + userid + "/"
+    workingPath = current_app.config.get("HOMEDATAPATH") + userid + "/"
 
     flask.session['workingPath'] = workingPath
 
@@ -42,7 +43,9 @@ def process_data(_userid=None):
     htmlResponse = flask.make_response()
 
     if ('fileid' in flask.session):
-        fileId = flask.session.get("fileid")
+        #This is called when a NEW task is contributed
+
+        fileId = flask.session["fileid"]
         flask.session.pop("fileid")
         print("starting new task")
         from flaskr.get_files_loader import queueLoad
@@ -127,7 +130,7 @@ def dbg1():
 
 
 def check_signin(userid, load_creds=False):
-    workingPath = current_app.config.get("HOMEPATH") + "data/" + userid + "/"
+    workingPath = current_app.config.get("HOMEDATAPATH") + userid + "/"
     if (not os.path.exists(workingPath + "creds.pickle")):
         # Pickle doesn't exist?
         # Reload back to authenticate screen

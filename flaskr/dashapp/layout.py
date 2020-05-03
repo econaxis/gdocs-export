@@ -3,19 +3,19 @@ import dash
 import plotly.graph_objects as go
 import dash_html_components as html
 from flaskr.dashapp.dash_functions import gen_fListFig, gen_margin
-from processing.sql import v_scoped_session
+from processing.sql import reload_engine
 from flaskr.dashapp.callbacks import test
+import flask
 
-scoped_sess = v_scoped_session()
 
 
 def layout():
+
     return html.Div([
         html.Div([
             html.Div([
                 dcc.Graph(
-                    id="fList",
-                    figure=gen_fListFig(scoped_sess, test["userid"])
+                    id="fList"
                 ), dcc.Dropdown(
                     id="dropdown"
                 )
@@ -45,7 +45,8 @@ def layout():
                     options=[
                         {'label': 'Time Only', 'value': 'day'},
                         {'label': 'Week Only', 'value': 'week'},
-                        {'label': 'None', 'value': 'none'}
+                        {'label': 'None', 'value': 'none'},
+                        {'label': 'Month', 'value': 'month'}
                     ]
                 ),
                 html.Button(
@@ -73,4 +74,40 @@ def layout():
                 value=15
         )], className="twelve columns",),
         dcc.Location(id='url', refresh=False),
+
+        html.Div([
+            dcc.Graph(
+                id="year-all",
+                figure = go.Figure(
+                    layout=dict(
+                        margin=gen_margin(),
+                        xaxis=dict(
+                            type="date"
+                        )
+                    )
+                )
+            ),
+            dcc.Graph(
+                id="week-all",
+                figure = go.Figure(
+                    layout=dict(
+                        margin=gen_margin(),
+                        xaxis=dict(
+                            type="date"
+                        )
+                    )
+                )
+            ),
+            dcc.Graph(
+                id="day-all",
+                figure = go.Figure(
+                    layout=dict(
+                        margin=gen_margin(),
+                        xaxis=dict(
+                            type="date"
+                        )
+                    )
+                )
+            )
+        ], className = 'twelve columns')
     ])

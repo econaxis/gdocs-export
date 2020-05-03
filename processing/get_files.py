@@ -249,11 +249,11 @@ async def shutdown(loop, signal=None):
 
 def loadFiles(USER_ID, _workingPath, fileId, _creds):
 
+    configlog.set_token(USER_ID)
+
     logger.info("Start loadFiles, %s %s", USER_ID, fileId)
 
     Path(_workingPath).mkdir(exist_ok=True)
-
-
 
     # Load pickle file. Should have been made by Flask/App.py
     # in authorization step

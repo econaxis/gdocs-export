@@ -1,4 +1,5 @@
 import asyncio
+import secrets
 import os
 import time
 from processing.datutils.test_utils import adv_read, adv_write
@@ -45,7 +46,7 @@ async def send_socket():
 
     info_packet = pickle.load(open('info_packet', 'rb'))
 
-    info_packet = info_packet._replace(userid="send_socket" + str(time.time()))
+    info_packet = info_packet._replace(userid="send_socket" + secrets.token_urlsafe(4))
 
     logger.info("connect working")
     r, w = await asyncio.open_connection('127.0.0.1', 8888)
@@ -66,6 +67,8 @@ async def send_socket():
         await adv_write(w, info_packet, to_pickle = True)
 
     w.close()
+
+    await asyncio.sleep(0.1)
     return True
 
 
@@ -120,7 +123,7 @@ async def handle_request(queue):
     #Used for debugging
 
     if "FLASKDBG" in os.environ:
-        reps = 10
+        reps = 200
         while reps:
             reps-=1
             asyncio.create_task(send_socket())

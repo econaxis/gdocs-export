@@ -12,24 +12,17 @@ def register_dashapp(flask_serv):
     from flaskr.dashapp.layout import layout
     external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
-#    dashapp = dash.Dash( __name__, server=flask_serv, external_stylesheets=external_stylesheets, url_base_pathname="/dash/")
+    dashapp = dash.Dash( __name__, server=flask_serv, external_stylesheets=external_stylesheets, url_base_pathname="/dash/")
 
-    dashapp = dash.Dash(__name__,external_stylesheets=external_stylesheets, url_base_pathname = "/dash/")
-
-
-    if flask_serv is None:
-        flask_serv = dashapp.server
+#    dashapp = dash.Dash(__name__,external_stylesheets=external_stylesheets, url_base_pathname = "/dash/")
 
     # DEbug params
     test["workingPath"] = "/home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/"
     test["userid"] =2
 
-
     with flask_serv.app_context():
         dashapp.layout = layout()
         register_callback(dashapp)
-        dashapp.run_server(debug=True)
-
 
 if __name__ == "__main__":
     register_dashapp(None)

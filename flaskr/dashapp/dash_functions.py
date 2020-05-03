@@ -2,16 +2,14 @@
 import plotly.graph_objects as go
 from math import log
 from pprint import PrettyPrinter
-from processing.models import Owner, Dates, Files, Filename
+from processing.models import Dates, Files, Filename
 from sqlalchemy.sql import func
 #from flaskr.flask_config import cache
-from processing.sql import v_scoped_session
+from processing.sql import reload_engine
 
 import logging
 
 logger = logging.getLogger(__name__)
-
-db = v_scoped_session()
 
 
 #Maps fileid to index
@@ -26,9 +24,11 @@ pprint = PrettyPrinter(indent=4).pprint
 
 ##@cache.memoize()
 def genOptList(userid):
+
+    db = reload_engine(userid)()
     #Get list of all filenames and fileids by owner id
 
-    names = db.query(Files.id, Filename.fileName).join(Filename).join(Owner).filter( Owner.id == userid).all()
+    names = db.query(Files.id, Filename.fileName).join(Filename).all()
 
     #DEBUG: no owner filter
     #names = db.query(Filename.fileName, Files.id).join(Files).join(Owner).all()
@@ -42,15 +42,13 @@ def genOptList(userid):
     return ret
 
 
-
-
 ##@cache.memoize()
 def getNormalBubbleData(sess, userid):
 
     #Function should ideally be run only once per user, because of cache.memoize
 
     #Get all the files with their counts of edits and last modified time
-    allFiles = sess.query(Files.id, Dates.date.label('va')).join(Dates).join(Owner).filter(Owner.id == userid).subquery()
+    allFiles = sess.query(Files.id, Dates.date.label('va')).join(Dates).subquery()
 
 
     #TESTING: no owner query
@@ -76,7 +74,7 @@ def getNormalBubbleData(sess, userid):
     activity = {}
     activity["time"] = [x[3] for x in count]
     activity["files"] = [x[2] for x in count]
-    activity["marker"] = [log(x[1], 2) * 1.3 for x in count]
+    activity["marker"] = [log(x[1], 10) for x in count]
 
     #Custom represents file.id
     activity["custom"] = [x[0] for x in count]

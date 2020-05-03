@@ -10,7 +10,6 @@ def timeout(time):
     signal.signal(signal.SIGALRM, raise_timeout)
     # Schedule the signal to be sent after ``time``.
     signal.alarm(time)
-
     try:
         yield
     except TimeoutError:
@@ -28,5 +27,4 @@ def raise_timeout(signum, frame):
 app = create_flask_serv()
 
 if __name__ == '__main__':
-    with timeout(100):
-        app.run(debug=True, port=4000)
+    app.run(debug=True, port=4000)
