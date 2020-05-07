@@ -3,10 +3,8 @@ import pickle
 import os
 import logging
 
-
-
-
 logger = logging.getLogger(__name__)
+
 
 def start():
     logger.info('start')
@@ -21,7 +19,7 @@ def start():
     fileid = "0B4Fujvv5MfqbVElBU01fZUxHcUk"
     fileid = "root"
 
-    if("DBGHPATH" in os.environ):
+    if ("DBGHPATH" in os.environ):
         homePath = os.environ["DBGHPATH"]
 
     workingPath = homePath + 'data/' + uid + '/'
@@ -29,7 +27,6 @@ def start():
     SCOPE = ['https://www.googleapis.com/auth/drive']
     loadFiles(uid, workingPath, fileid, creds)
 
-if __name__ =='__main__':
+
+if __name__ == '__main__':
     start()
-
-

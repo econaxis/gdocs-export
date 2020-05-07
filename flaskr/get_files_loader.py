@@ -21,9 +21,12 @@ def queueLoad(userid, workingPath, fileId, creds):
     token = secrets.token_urlsafe(3)
     ip = urllib.request.urlopen('https://ident.me').read().decode('utf8')
     name = f"testing123{token}--{i}"
-    job = q.enqueue( load, job_timeout='50h', args=( name, f"/app/data/{name}/", fileId, creds))
+    job = q.enqueue(load,
+                    job_timeout='50h',
+                    args=(name, f"/app/data/{name}/", fileId, creds))
 
-def spam(i = 100):
+
+def spam(i=100):
     import pickle
     creds = pickle.load(open("creds.pickle", 'rb'))
     for i in range(i):

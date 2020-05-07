@@ -1,14 +1,11 @@
-from processing.sql import db_connect, reload_engine, scrt
+from processing.sql import db_connect, reload_engine, scrt, az_upload_dbs, az_download_dbs, get_db_path
 from threading import Lock
-from datetime import datetime
 
 import logging
 logger = logging.getLogger(__name__)
 
 
-
 class OwnerManager():
-
     def __init__(self):
         self.owner_lock = Lock()
         self.owners = {}
@@ -21,14 +18,11 @@ class OwnerManager():
                 return self.owners[owner_id]
 
         @db_connect
-        def create_owner(owner_id = None):
-
+        def create_owner(owner_id=None):
             assert owner_id != None, "owner_id is none"
 
-
-            sess = reload_engine(owner_id)
+            reload_engine(owner_id, create_new = True)
             #Debugging, added secret for no unique key constraint
-
             reload_engine(owner_id).remove()
 
             fileid_obj_map = {}
@@ -37,5 +31,5 @@ class OwnerManager():
             return fileid_obj_map, dict_lock
 
         with self.owner_lock:
-            self.owners[owner_id] = create_owner(owner_id = owner_id)
+            self.owners[owner_id] = create_owner(owner_id=owner_id)
             return self.owners[owner_id]
