@@ -25,7 +25,7 @@ class Config:
         HOMEDATAPATH = "/home/henry/pydocs/data/"
         #HOMEDATAPATH = "/mnt/az-pydocs/data/"
     elif ('DOCKERENV' in os.environ):
-        HOMEPATH = os.environ["DOCKERWDIR"]
+        HOMEPATH = os.environ["HOMEPATH"]
         HOMEDATAPATH = HOMEPATH + 'data/'
     else:
         HOMEPATH = "/app/"

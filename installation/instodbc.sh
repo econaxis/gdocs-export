@@ -1,7 +1,5 @@
 #!/bin/bash
 
-
-
 # curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 # #
 # #Download appropriate package for the OS version
@@ -10,11 +8,6 @@
 # #Debian 10
 # curl https://packages.microsoft.com/config/debian/10/prod.list > /etc/apt/sources.list.d/mssql-release.list
 # 
-apt-get update
-# ACCEPT_EULA=Y apt-get install -y msodbcsql17
-# # optional: for bcp and sqlcmd
-# ACCEPT_EULA=Y apt-get install -y mssql-tools
-# echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
 # echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 # source ~/.bashrc
 # # optional: for unixODBC development headers
@@ -23,9 +16,9 @@ apt-get update
 # apt-get install -y libgssapi-krb5-2
 
 
-
-apt-get install -y cifs-utils build-essential libsasl2-dev python-dev libldap2-dev libssl-dev
-#Setup Azure storage mounting
+apt-get update
+apt-get install -y cifs-utils gcc g++ libsasl2-dev libldap2-dev libssl-dev
+#Setup Azure storage mounting 
 
 #resourceGroupName="pydocs"
 #storageAccountName="pydocs"
@@ -53,3 +46,23 @@ apt-get install -y cifs-utils build-essential libsasl2-dev python-dev libldap2-d
 #echo "================"
 #echo "$(cat ${STORAGE_PATH}test.txt)"
 #echo "================"
+
+
+echo "===="
+
+echo $HOMEPATH
+echo $REQ_FILE
+
+
+echo "===="
+
+
+
+pip install --upgrade pip && \ 
+pip install pyopenssl && \
+pip install -r installation/${REQ_FILE} && \
+
+
+apt-get purge -y cifs-utils build-essential libsasl2-dev libldap2-dev libssl-dev
+apt-get autoremove -y
+echo "Installation done!"
