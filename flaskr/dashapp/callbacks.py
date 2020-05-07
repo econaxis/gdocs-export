@@ -27,19 +27,26 @@ times_tickf = {
 import threading
 import shelve
 
-ms = shelve.open('selected_files.pickle')
+ms = shelve.open('selected_files')
+ms["sl"] = []
+ms.close()
 
 FNAME = 'selected_files.pickle'
+
+
 sel_lock = threading.Lock()
 
 def get_sel(val):
-    with  shelve.open('selected_files.pickle') as f:
+    with shelve.open('selected_files', flag = 'r') as f:
+        print(f["sl"], val)
         return f["sl"][val]
 
 def add_sel(val):
     with sel_lock:
-        with  shelve.open('selected_files.pickle') as f:
-            f["sl"].append(val)
+        with shelve.open('selected_files', flag = 'w') as f:
+            t = f["sl"]
+            t.append(val)
+            f["sl"] = t
             return len(f["sl"])-1
 
 
@@ -178,7 +185,7 @@ def get_activity(files=None,
         num_bins = prev_bins
 
     dbg_x = list(map(datetime.fromtimestamp, x_limits))
-    print(dbg_x)
+    print("DBG_X: ",dbg_x)
 
 
 
@@ -192,6 +199,11 @@ def get_activity(files=None,
 
     deletes, delete_dates, bin_number = binned_statistic(timestamps, deletes, 'sum', bins=num_bins, range=x_limits)
 
+    np.insert(adds, 0, 0)
+    np.insert(add_dates, 0, add_dates[0]-1*24*3600)
+
+    np.insert(deletes, 0, 0)
+    np.insert(delete_dates, 0, delete_dates[0]-1*24*3600)
 
 
     dels = []
@@ -209,8 +221,8 @@ def get_activity(files=None,
 
     prev_bins = add_dates
 
-    adds = apply_smoothing (adds, min(len(adds), window))
-    deletes = apply_smoothing (deletes, min(len(deletes), window), negative = True)
+    adds[1:] = apply_smoothing (adds[1:], min(len(adds), window))
+    deletes[1:] = apply_smoothing (deletes[1:], min(len(deletes), window), negative = True)
 
     add_dates = [datetime.fromtimestamp(x) for x in add_dates]
     delete_dates = [datetime.fromtimestamp(x) for x in delete_dates]
@@ -305,12 +317,12 @@ def get_traces(times,
 
     add_trace1 = go.Scatter(x=ret1.add_dates,
                             y=ret1.adds,
-                            mode='line',
+                            mode='lines',
                             name='add',
                             stackgroup='add')
     delete_trace1 = go.Scatter(x=ret1.delete_dates,
                                y=ret1.deletes,
-                               mode='line',
+                               mode='lines',
                                name='delete',
                                stackgroup="delete")
 

@@ -1,27 +1,24 @@
-FROM python:3.8.2-buster
+FROM python:3.8.2-slim
 
 ENV DOCKERENV 1
-ENV DOCKERWDIR /app/
 
-WORKDIR ${DOCKERWDIR}
+ARG HOMEPATH=/app/
 
-COPY installation ./installation
+WORKDIR ${HOMEPATH}
+ARG REQ_FILE=requirements.txt
 
-ARG AZURESTORAGEKEY
-ARG STORAGE_PATH
-
+COPY ./installation ./installation
 RUN chmod +x ./installation/instodbc.sh && \
-    ./installation/instodbc.sh && \ 
-    pip install --upgrade pip && \ 
-    pip install pyopenssl && \
-    pip install -r installation/requirements.txt && \
-    apt-get update && apt-get install nano vim -y
+    ./installation/instodbc.sh && \
+    echo "Installation done!"
+
+RUN ls -a && ls installation
+
+
+COPY . .
 
 
 #EXPOSE 5000
-
-COPY secret ./secret
-
 
 #ARG WORKER
 #ARG REDIS_PASSW
@@ -39,12 +36,6 @@ COPY secret ./secret
 #    RQ_NAME=default
 
 
-COPY configlog.py boot.sh loader.py dsds.py run.py Dockerfile ./
-COPY data ./data
-
-
-COPY flaskr ./flaskr
-COPY processing ./processing
 
 #RUN chmod +x ./boot.sh
 
