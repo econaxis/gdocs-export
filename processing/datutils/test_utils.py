@@ -18,23 +18,22 @@ import pickle
 from google.auth.transport.requests import Request
 import logging
 
-
 if "FLASKDBG" in os.environ:
     print("flask debug in os environ")
     SERVER_ADDR = "127.0.0.1"
 else:
-    SERVER_ADDR = 'sql_serv'
+    SERVER_ADDR = 'sql'
 
-if (random.random() < 0.0 ):
+if (random.random() < 0.0):
     os.environ["PROFILE"] = "true"
 
-
 Info = collections.namedtuple('Info', ['userid', 'files', 'extra'],
-        defaults = ('default' + str(datetime.now()), [], None))
+                              defaults=('default' + str(datetime.now()), [],
+                                        'task'))
 logger = logging.getLogger(__name__)
 
-class TestUtil:
 
+class TestUtil:
 
     fileCounter = 0
     creds = None
@@ -45,7 +44,6 @@ class TestUtil:
     workingPath = None
     pickleIndex = []
     processedcount = 0
-
 
     @classmethod
     def refresh_creds(cls, creds):
@@ -61,8 +59,6 @@ class TestUtil:
         cls.creds.apply(cls.headers)
         return cls.creds
 
-
-
     @classmethod
     def dractivity_builder(cls, id):
         headers = cls.headers
@@ -71,10 +67,11 @@ class TestUtil:
         pageSize = 1000
         filter = "detail.action_detail_case: EDIT"
 
-        params = dict(ancestorName = ancName, pageSize = pageSize,
-            filter = filter)
-        return dict(params = params, headers = headers, url = "https://driveactivity.googleapis.com/v2/activity:query")
-
+        params = dict(ancestorName=ancName, pageSize=pageSize, filter=filter)
+        return dict(
+            params=params,
+            headers=headers,
+            url="https://driveactivity.googleapis.com/v2/activity:query")
 
     @classmethod
     async def print_size(cls, files, endEvent):
@@ -88,23 +85,24 @@ class TestUtil:
         while not endEvent.is_set():
 
             if random.random() < 0.1:
-                p = configlog.sendmail(msg = str(datetime.now()), return_thread = True)
+                p = configlog.sendmail(msg=str(datetime.now()),
+                                       return_thread=True)
 
             gc.collect()
 
-            logger.warning('\n\n%sMemory usage: %s (kb)%s%f mins since start'
-                    ,'-'*15,resource.getrusage(resource.RUSAGE_SELF).ru_maxrss, '-'*15,
-                    (time.time() - cls.starttime)/60)
+            logger.warning('\n\n%sMemory usage: %s (kb)%s%f mins since start',
+                           '-' * 15,
+                           resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,
+                           '-' * 15, (time.time() - cls.starttime) / 60)
 
-            if("PROFILE" in os.environ):
+            if ("PROFILE" in os.environ):
                 sns = tracemalloc.take_snapshot()
                 for i in sns.compare_to(cls.snapshot, 'lineno')[0:5]:
                     logger.info(i)
-                logger.info('%s','-'*60)
+                logger.info('%s', '-' * 60)
                 for i in sns.statistics('lineno')[0:5]:
                     logger.info(i)
                 cls.snapshot = sns
-
 
             totsize = files.qsize() + len(cls.files) + cls.processedcount
 
@@ -115,19 +113,20 @@ class TestUtil:
 
             #Temp var for thread
 
-            _sleep_time = 32
-            interval = 2
+            _sleep_time = 10
+            interval = 4
 
             df_t = []
 
             for i in range(interval):
                 if endEvent.is_set():
                     break
-                if len(cls.files)>10:
+                if len(cls.files) > 3:
                     code = await cls.dump_files()
                     while not code:
                         secs = random.randint(100, 300)
-                        logger.error("SQL Socket Send denied, retrying in %d", secs)
+                        logger.error("SQL Socket Send denied, retrying in %d",
+                                     secs)
                         time.sleep(secs)
                         code = await cls.dump_files()
 
@@ -136,22 +135,22 @@ class TestUtil:
             a0 = time.time()
             logger.debug("file save time: %f", time.time() - a0)
 
-            logger.debug("event loop health: %d, intended: %d", time.time() - start_time, _sleep_time)
+            logger.debug("event loop health: %d, intended: %d",
+                         time.time() - start_time, _sleep_time)
             start_time = time.time()
 
             if p:
-                p.join(timeout = 0.01)
+                p.join(timeout=0.01)
                 logger.debug("done awaiting task join")
 
         logger.warning("print task return")
 
-
     @classmethod
-    async def dump_files(cls, return_thread = False):
+    async def dump_files(cls, return_thread=False, upload = False):
 
         condensed_files = [x.return_condensed() for x in cls.files]
 
-        info_packet = Info(userid = cls.userid, files = condensed_files)
+        info_packet = Info(userid=cls.userid, files=condensed_files, extra = 'upload' if upload else None)
 
         success = await cls.send_socket(info_packet)
 
@@ -174,10 +173,11 @@ class TestUtil:
     @classmethod
     async def send_socket(cls, info_packet):
         logger.info("connect working")
+
+        logger.info("server addr: %s", SERVER_ADDR)
         r, w = await asyncio.open_connection(SERVER_ADDR, 8888)
 
-        message= b"request"
-
+        message = b"request"
 
         await adv_write(w, message)
 
@@ -187,9 +187,8 @@ class TestUtil:
         if m != b'go':
             return False
 
-
         if m == b'go':
-            await adv_write(w, info_packet, to_pickle = True)
+            await adv_write(w, info_packet, to_pickle=True)
         w.close()
         return True
 
@@ -226,7 +225,7 @@ class TestUtil:
     """
 
     @classmethod
-    async def handleResponse(cls, response, fileTuple = None, queue = None):
+    async def handleResponse(cls, response, fileTuple=None, queue=None):
         try:
             rev = await response.text()
             rev = json.loads(rev)
@@ -237,7 +236,7 @@ class TestUtil:
             rev = await response.text()
             logger.log(5, rev)
 
-            if(fileTuple and queue and fileTuple[-1] < 2):
+            if (fileTuple and queue and fileTuple[-1] < 2):
                 fileTuple = list(fileTuple)
                 fileTuple[-1] += 1
                 await queue.put(fileTuple)
@@ -245,12 +244,11 @@ class TestUtil:
             return -1
 
 
-
-
 def dr2_urlbuilder(id: str):
     return "https://www.googleapis.com/drive/v2/files/" + id + "/revisions"
 
-async def API_RESET(seconds = 6, throttle = None, decrease = False):
+
+async def API_RESET(seconds=6, throttle=None, decrease=False):
 
     if throttle and decrease:
         await throttle.decrease()
@@ -259,25 +257,27 @@ async def API_RESET(seconds = 6, throttle = None, decrease = False):
     await asyncio.sleep(secs)
     return
 
-async def tryGetQueue(queue: asyncio.Queue, repeatTimes:int = 5, interval:float = 3.5, name:str = ""):
+
+async def tryGetQueue(queue: asyncio.Queue,
+                      repeatTimes: int = 5,
+                      interval: float = 3.5,
+                      name: str = ""):
     output = None
     timesWaited = 0
-    while(output==None):
+    while (output == None):
         try:
-            timesWaited+=1
+            timesWaited += 1
             output = queue.get_nowait()
         except:
-            if(timesWaited>repeatTimes):
+            if (timesWaited > repeatTimes):
                 return -1
             logger.info(name + "waiting %d %d", timesWaited, repeatTimes)
             await asyncio.sleep(interval + random.randint(0, 5))
     return output
 
 
-
 def mp_dump(info, filename):
     pickle.dump(info, open(filename, 'wb'))
-
 
 
 async def adv_read(reader):
@@ -310,12 +310,12 @@ async def adv_read(reader):
     else:
         return data
 
-async def adv_write(writer, data, to_pickle = False):
+
+async def adv_write(writer, data, to_pickle=False):
     import struct
 
     if to_pickle:
         data = pickle.dumps(data)
-
 
     header = struct.pack('!Q?', len(data), to_pickle)
     writer.write(header)
@@ -323,4 +323,3 @@ async def adv_write(writer, data, to_pickle = False):
     await writer.drain()
 
     return
-

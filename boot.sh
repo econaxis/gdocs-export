@@ -8,9 +8,14 @@ export PYTHONPATH=$PWD
 echo $SQL_CONN
 echo $REDIS_HOST
 echo $REDIS_PASSW
+
+echo $HOMEDATAPATH
+echo $HOMEPATH
 echo $RQ_NAME
 
 echo $SQL_SERV
+sleep 30
+exit
 
 if [ -n "$SQL_SERV" ]; then
     echo "SQL SERVER MODE"
@@ -24,7 +29,10 @@ else
     echo "Running gunicorn server now"
     echo $SQL_CONN
     echo $PORT
-    exec gunicorn -b :$PORT --access-logfile - --error-logfile - run:app
+
+    exec gunicorn -b :$PORT --access-logfile=access.txt --error-logfile - --log-syslog \
+            --log-level debug --log-syslog-to tcp://logs2.papertrailapp.com:49905 --preload \
+            --timeout=120 --workers=4 run:app
     echo "Web mode" > errors.txt
     wait
 fi

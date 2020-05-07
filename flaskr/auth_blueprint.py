@@ -5,13 +5,12 @@ from pathlib import Path
 import pickle
 import google_auth_oauthlib.flow
 
-
 auth_bp = Blueprint('auth_bp', __name__)
 
 
 @auth_bp.route('/authorize')
 def authorize():
-    if(not flask.session.get('signedin')):
+    if (not flask.session.get('signedin')):
         return redirect(flask.url_for('auth_bp.glogin'))
     else:
         # Sign out called
@@ -28,14 +27,14 @@ def glogin():
 
     # Use server secret file
     flow = google_auth_oauthlib.flow.Flow.from_client_secrets_file(
-        current_app.config["HOMEPATH"] + 'secret/credentials.json', current_app.config["SCOPES"])
+        current_app.config["HOMEPATH"] + 'secret/credentials.json',
+        current_app.config["SCOPES"])
 
     # Set redirect URI for when authentication starts
     flow.redirect_uri = flask.url_for('auth_bp.oauth', _external=True)
 
     authorization_url, state = flow.authorization_url(
-        access_type='offline',
-        include_granted_scopes='true', prompt='consent')
+        access_type='offline', include_granted_scopes='true', prompt='consent')
     print("requesting")
 
     flask.session['state'] = state
@@ -50,7 +49,9 @@ def oauth():
     state = flask.session['state']
 
     flow = google_auth_oauthlib.flow.Flow.from_client_secrets_file(
-        current_app.config["HOMEPATH"] + 'secret/credentials.json', scopes=current_app.config["SCOPES"], state=state)
+        current_app.config["HOMEPATH"] + 'secret/credentials.json',
+        scopes=current_app.config["SCOPES"],
+        state=state)
 
     flow.redirect_uri = flask.url_for('auth_bp.oauth', _external=True)
 

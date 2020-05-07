@@ -9,19 +9,17 @@ Base = declarative_base()
 class Files(Base):
     __tablename__ = "files"
     id = Column(Integer, primary_key=True, unique=True, autoincrement=True)
-    fileId = Column(String(300),unique=True)
+    fileId = Column(String(300), unique=True)
 
     lastModDate = Column(DateTime)
 
     isFile = Column(Boolean)
 
-    dates = relationship("Dates", back_populates="files", lazy = "select")
-    name = relationship("Filename", back_populates="files", lazy = "select")
-
+    dates = relationship("Dates", back_populates="files", lazy="select")
+    name = relationship("Filename", back_populates="files", lazy="select")
 
     def __repr__(self):
         return f"Files\n"
-
 
 
 class Dates(Base):
@@ -35,15 +33,11 @@ class Dates(Base):
     deletes = Column(Integer)
     bin_width = Column(Float)
 
-
-
-
     #Relationships
-    files= relationship("Files", back_populates="dates")
+    files = relationship("Files", back_populates="dates")
 
-    __table_args__ = (
-        PrimaryKeyConstraint(name='dates_pk', mssql_clustered=False),
-    )
+    __table_args__ = (PrimaryKeyConstraint(name='dates_pk',
+                                           mssql_clustered=False), )
 
     def __repr__(self):
         return f"Dates Object: {self.date}, {self.adds}, {self.deletes}"
@@ -60,9 +54,8 @@ class Closure(Base):
     files_relationship = relationship("Files", foreign_keys=[child])
     parent_relationship = relationship("Files", foreign_keys=[parent])
 
-    __table_args__ = (
-        PrimaryKeyConstraint(name='closure_pk', mssql_clustered=False),
-    )
+    __table_args__ = (PrimaryKeyConstraint(name='closure_pk',
+                                           mssql_clustered=False), )
 
 
 class Filename(Base):
@@ -73,12 +66,10 @@ class Filename(Base):
     fileId = Column(Integer, ForeignKey('files.id'))
     fileName = Column(String(600))
 
-    files = relationship("Files", back_populates="name", foreign_keys = [fileId])
+    files = relationship("Files", back_populates="name", foreign_keys=[fileId])
 
-
-    __table_args__ = (
-        PrimaryKeyConstraint(name='filename_pk', mssql_clustered=False),
-    )
+    __table_args__ = (PrimaryKeyConstraint(name='filename_pk',
+                                           mssql_clustered=False), )
 
 
 class Tasks(Base):
@@ -88,6 +79,7 @@ class Tasks(Base):
     creds = Column(PickleType)
     fileid = Column(String(600))
     userid = Column(String(600))
+
 
 def create(engine, sess):
     print("creating" * 100)

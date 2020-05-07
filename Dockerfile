@@ -7,9 +7,13 @@ WORKDIR ${DOCKERWDIR}
 
 COPY installation ./installation
 
+ARG AZURESTORAGEKEY
+ARG STORAGE_PATH
+
 RUN chmod +x ./installation/instodbc.sh && \
     ./installation/instodbc.sh && \ 
     pip install --upgrade pip && \ 
+    pip install pyopenssl && \
     pip install -r installation/requirements.txt && \
     apt-get update && apt-get install nano vim -y
 
@@ -17,6 +21,7 @@ RUN chmod +x ./installation/instodbc.sh && \
 #EXPOSE 5000
 
 COPY secret ./secret
+
 
 #ARG WORKER
 #ARG REDIS_PASSW
@@ -44,6 +49,5 @@ COPY processing ./processing
 #RUN chmod +x ./boot.sh
 
 #RUN chmod -R 777 ./
-
 
 ENTRYPOINT ["./boot.sh"]

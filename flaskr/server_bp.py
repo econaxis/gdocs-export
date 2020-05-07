@@ -5,7 +5,6 @@ from flaskr.form import Form
 import uuid
 import os
 
-
 server = Blueprint('server', __name__)
 
 
@@ -17,7 +16,7 @@ def process_data(_userid=None):
     # function can be called normally from oauth, when user first authenticates
     # or function can be called from URL without authenticate
     userid = None
-    if(_userid is not None):
+    if (_userid != None):
         userid = _userid
     elif ('userid' in flask.session):
         userid = flask.session['userid']
@@ -27,7 +26,7 @@ def process_data(_userid=None):
         return "no user id found"
 
     creds = check_signin(userid, load_creds=True)
-    if(not creds and userid != 'a'):
+    if (not creds and userid != 'a'):
         pass
         #return "creds not found for this userid, go back to home page"
     else:
@@ -51,21 +50,26 @@ def process_data(_userid=None):
         from flaskr.get_files_loader import queueLoad
         queueLoad(userid, workingPath, fileId, creds)
         htmlResponse = redirect(
-            flask.url_for(
-                'server.process_data',
-                _userid=userid))
+            flask.url_for('server.process_data', _userid=userid))
     elif (os.path.exists(workingPath + 'streaming.txt')):
         data = None
         print("session found")
         data = open(workingPath + 'streaming.txt', 'r').read()
         DONE = os.path.exists(workingPath + 'done.txt')
 
-        htmlResponse.set_data(render_template('process.html', data=data, userid=userid, DONE=DONE,
-                                              DASH_LOC="/dashapp/" + userid))
+        htmlResponse.set_data(
+            render_template('process.html',
+                            data=data,
+                            userid=userid,
+                            DONE=DONE,
+                            DASH_LOC="/dashapp/" + userid))
     else:
-        return """
+
+        flask.session["userid"] = _userid
+        return f"""
             There is no file id found for the requested userid. This may be because you did not enter a fileid in <br>
             the previous page, or you entered the wrong userid. Your job may have not started processing yet.
+            DEBUG MODE ONLY: {_userid}
             """
 
     htmlResponse.set_cookie('userid', userid, max_age=60 * 60 * 24 * 30)
@@ -89,12 +93,13 @@ def formValidate():
 
     check_signin(userid)
 
-    if(form.validate_on_submit()):
+    if (form.validate_on_submit()):
         flask.session["fileid"] = form.fileId.data
         if (check_signin(flask.session['userid'])
                 and flask.session.get('signedin')):
-            return redirect(flask.url_for('server.process_data',
-                                          _userid=flask.session["userid"]))
+            return redirect(
+                flask.url_for('server.process_data',
+                              _userid=flask.session["userid"]))
         else:
             return "No credentials found for current user! This may be a bug, \
                 you need to go back to the homepage, sign out, then sign in again."
@@ -111,7 +116,8 @@ def home():
 
 @server.route('/dashapp/<userid>')
 def dashapp(userid):
-    if(os.path.exists(current_app.config['HOMEDATAPATH'] + userid + '/done.txt')):
+    if (os.path.exists(current_app.config['HOMEDATAPATH'] + userid +
+                       '/done.txt')):
         return redirect("/dash/" + userid)
     else:
         return "cur job not done, don't try to access dash app"
@@ -119,14 +125,14 @@ def dashapp(userid):
 
 @server.route('/debug')
 def dbg():
-    return flask.send_from_directory(
-        directory=current_app.config["HOMEPATH"], filename='streaming.txt')
+    return flask.send_from_directory(directory=current_app.config["HOMEPATH"],
+                                     filename='streaming.txt')
 
 
 @server.route('/errors')
 def dbg1():
-    return flask.send_from_directory(
-        directory=current_app.config["HOMEPATH"], filename='errors.txt')
+    return flask.send_from_directory(directory=current_app.config["HOMEPATH"],
+                                     filename='errors.txt')
 
 
 def check_signin(userid, load_creds=False):
@@ -155,5 +161,6 @@ def wakedyno():
 @server.route('/google41579b1449e3ad61.html')
 def gver():
     print(current_app.root_path)
-    return flask.send_from_directory(directory=current_app.root_path
-                                     + '/static', filename='google41579b1449e3ad61.html')
+    return flask.send_from_directory(directory=current_app.root_path +
+                                     '/static',
+                                     filename='google41579b1449e3ad61.html')

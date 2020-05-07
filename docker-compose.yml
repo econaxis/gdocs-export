@@ -12,18 +12,12 @@ services:
             REDIS_HOST: "${REDIS_HOST}"
             RQ_NAME: 'default'
             WORKER: 'true'
-            HOMEDATAPATH: "/data/"
-            HOMEPATH: '/app/'
         deploy:
             resources:
                 limits:
                     memory: 160M
                 reservations:
                     memory: 100M
-        volumes:
-            - type: bind
-              source: ./data
-              target: /data
     web:
         image: 'henry2833/pydocs:web'
         build:
@@ -34,19 +28,19 @@ services:
             REDIS_PASSW: "${REDIS_PASSW}"
             SQL_CONN:  "${SQL_CONN}"
             REDIS_HOST: "${REDIS_HOST}"
-            HOMEDATAPATH: "/data/"
-            HOMEPATH: '/app/'
+            HOMEDATAPATH: "${HOMEDATAPATH}"
+            HOMEPATH: "${HOMEPATH}"
             PORT: 5000
+            AZURESTORAGEKEY: "${AZURESTORAGEKEY}"
         deploy:
             resources:
                 limits:
-                    memory: 400M
+                    memory: 500M
                 reservations:
-                    memory: 100M
-        volumes:
-            - type: bind
-              source: ./data
-              target: /data
+                    memory: 200M
+        ports:
+            - target: 5000
+              published: 80
     sql:
         image: 'henry2833/pydocs:sql'
         build:
@@ -58,13 +52,10 @@ services:
             SQL_CONN:  "${SQL_CONN}"
             REDIS_HOST: "${REDIS_HOST}"
             SQL_SERV: "true"
-            HOMEDATAPATH: "/data/"
-            HOMEPATH: '/app/'
+            HOMEDATAPATH: "${HOMEDATAPATH}"
+            HOMEPATH: "${HOMEPATH}"
+            AZURESTORAGEKEY: "${AZURESTORAGEKEY}"
         container_name: sql_serv
-        volumes:
-            - type: bind
-              source: ./data
-              target: /data
 
 
 

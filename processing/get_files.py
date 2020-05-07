@@ -1,11 +1,6 @@
 import asyncio
-import  multiprocessing as mp
-from multiprocessing import Process, Pipe
-from pprint import pformat
 from time import time
-from datetime import datetime
 import random
-import pickle
 import aiohttp
 import pprint
 import iso8601
@@ -23,7 +18,7 @@ pprint = pprint.PrettyPrinter(indent=4).pprint
 
 timeout = aiohttp.ClientTimeout(total=8)
 
-MAX_FILES = 150
+MAX_FILES = 300
 
 SEED_ID = "root"
 
@@ -35,20 +30,18 @@ from collections import namedtuple
 
 temp_file = namedtuple('temp_file', ['id', 'name', 'type', 'path'])
 
-
 #For managing duplicates
 tot_folders = {}
 
 
-
-
-async def getIdsRecursive (drive_url, folders: asyncio.Queue,
-                          files: asyncio.Queue, session: aiohttp.ClientSession, headers, done_event):
-
+async def getIdsRecursive(drive_url, folders: asyncio.Queue,
+                          files: asyncio.Queue, session: aiohttp.ClientSession,
+                          headers, done_event):
 
     # Query to pass into Drive to find item
 
-    while (TestUtil.processedcount + files.qsize() + len(TestUtil.files) < MAX_FILES) and not done_event.is_set():
+    while (TestUtil.processedcount + files.qsize() + len(TestUtil.files) <
+           MAX_FILES) and not done_event.is_set():
         # Wait for folders queue, with interval 6 seconds between each check
         # Necessary if more than one workers all starting at the same time,
         # with only one seed ID to start
@@ -56,110 +49,135 @@ async def getIdsRecursive (drive_url, folders: asyncio.Queue,
         # Deprecated, do not need to throttle google drive api
         # await drThrottle.sem.acquire()
 
-        proc_file = await tryGetQueue(folders, name="getIds", interval=3,repeatTimes = 20)
+        proc_file = await tryGetQueue(folders,
+                                      name="getIds",
+                                      interval=3,
+                                      repeatTimes=20)
 
-
-        if(proc_file == -1):
+        if (proc_file == -1):
             break
 
         # Root id is different structure
-        if(proc_file.id == "root"):
-            data = dict(corpora="allDrives", includeItemsFromAllDrives='true',
-                        supportsTeamDrives='true',
-                        fields = 'files/mimeType, files/id, files/name, files/capabilities/canReadRevisions')
+        if (proc_file.id == "root"):
+            data = dict(
+                corpora="allDrives",
+                includeItemsFromAllDrives='true',
+                supportsTeamDrives='true',
+                fields=
+                'files/mimeType, files/id, files/name, files/capabilities/canReadRevisions'
+            )
         else:
             query = "'" + proc_file.id + "' in parents"
-            data = dict(q=query, corpora="allDrives",
-                        includeItemsFromAllDrives='true', supportsTeamDrives='true',
-                        fields = 'files/mimeType, files/id, files/name, files/capabilities/canReadRevisions')
+            data = dict(
+                q=query,
+                corpora="allDrives",
+                includeItemsFromAllDrives='true',
+                supportsTeamDrives='true',
+                fields=
+                'files/mimeType, files/id, files/name, files/capabilities/canReadRevisions'
+            )
 
         try:
-            async with session.get(url=drive_url, params=data, headers=headers) as response:
+            async with session.get(url=drive_url, params=data,
+                                   headers=headers) as response:
                 resp = await TestUtil.handleResponse(response)
-                if(resp == -1):
+                if (resp == -1):
                     del resp
                     del response
                     continue
         #except aiohttp.client_exceptions:
         except:
             secs = random.uniform(5, 40)
-            logger.exception("connection closed prematurely with gdrive, sleeping for %d", secs)
+            logger.exception(
+                "connection closed prematurely with gdrive, sleeping for %d",
+                secs)
             await asyncio.sleep(secs)
             continue
 
         # Parse file and folder names to make them filesystem safe, limit to
         # 120 characters
 
-
         for resFile in resp["files"]:
             id = resFile["id"]
 
+            ent_name = "".join([
+                "" if c in ['\"', '\'', '\\', '"', "'"] else c
+                for c in resFile["name"]
+            ]).rstrip()[0:298]
 
-            ent_name = "".join(["" if c in ['\"', '\'', '\\', '"', "'"]
-                        else c for c in resFile["name"]]).rstrip()[0:298]
+            f = temp_file(name=ent_name,
+                          id=id,
+                          path=proc_file.path + [(id, ent_name)],
+                          type=resFile["mimeType"])
 
-            f = temp_file(name = ent_name, id = id, path = proc_file.path + [(id, ent_name)], type = resFile["mimeType"])
-
-            if(resFile["mimeType"] == "application/vnd.google-apps.folder"):
+            if (resFile["mimeType"] == "application/vnd.google-apps.folder"):
                 await folders.put((f))
             elif (resFile["mimeType"] in ACCEPTED_TYPES):
                 # First element id is not used for naming, only for api calls
-                if not resFile["capabilities"]["canReadRevisions"] or id in tot_folders:
-                     continue
+                if not resFile["capabilities"][
+                        "canReadRevisions"] or id in tot_folders:
+                    continue
                 tot_folders[id] = True
                 await files.put(f)
 
-
-
     logger.info("----------------------------------getid return")
-    logger.info("len %d:%d:%d", TestUtil.processedcount, files.qsize(), len(TestUtil.files))
+    logger.info("len %d:%d:%d", TestUtil.processedcount, files.qsize(),
+                len(TestUtil.files))
 
 
-
-async def getRevision(files, session: aiohttp.ClientSession, headers, endEvent, name = 'default'):
+async def getRevision(files,
+                      session: aiohttp.ClientSession,
+                      headers,
+                      endEvent,
+                      name='default'):
 
     # Await random amount for more staggered requesting (?)
     await asyncio.sleep(random.uniform(0, workerInstances * 1))
 
-    _t = time.time()
+    time.time()
 
     cycles = 0
 
     while not endEvent.is_set():
         #await asyncio.sleep(random.uniform(0, 1))
-        cycles +=1
+        cycles += 1
 
         proc_file = await tryGetQueue(files, name="getRevision")
 
-        if(proc_file == -1):
+        if (proc_file == -1):
             logger.warning('getRevision task exiting')
             break
 
         gd = GDoc()
-        await gd.async_init(proc_file.name, proc_file.id, session, TestUtil.headers, proc_file.path)
+        await gd.async_init(proc_file.name, proc_file.id, session,
+                            TestUtil.headers, proc_file.path)
 
         gd.compute_closure()
-
 
         if gd.done and gd.operations:
             TestUtil.files.append(gd)
         else:
-            logger.warning("not done but tried to append, prob because no operations found file: %s, %s", gd.fileId, gd.name)
-
+            logger.warning(
+                "not done but tried to append, prob because no operations found file: %s, %s",
+                gd.fileId, gd.name)
 
     endEvent.set()
     logger.info("getrev return")
 
     return
 
-    if(not endEvent.is_set()):
+    if (not endEvent.is_set()):
         secs = 10
-        logger.warning(f"getRevision task has ended, waiting for {secs} seconds for all other tasks to finish")
+        logger.warning(
+            f"getRevision task has ended, waiting for {secs} seconds for all other tasks to finish"
+        )
         await asyncio.sleep(secs)
         endEvent.set()
-        logger.warning("Close event has been set. Expect print task to finish soon")
+        logger.warning(
+            "Close event has been set. Expect print task to finish soon")
 
     logger.info("getrev return")
+
 
 async def start():
 
@@ -167,14 +185,13 @@ async def start():
     loop.set_exception_handler(exchandler)
     loop.set_debug(True)
 
-
     print("TESTING SOCKET SEND")
 
     start_succ = False
 
     while not start_succ:
         try:
-            ex = Info (extra = "testing extra function from start()")
+            ex = Info(extra="testing extra function from start()")
             await TestUtil.send_socket(ex)
         except:
             logger.exception("Starting socket send failed, retrying after 5s")
@@ -182,20 +199,19 @@ async def start():
         else:
             start_succ = True
 
-
-
     print("==== END ====")
-
 
     folders = asyncio.Queue()
     files = asyncio.Queue()
 
-    first_folder = temp_file(name = 'root', id = 'root', type = '', path = [('root', 'root')])
+    first_folder = temp_file(name='root',
+                             id='root',
+                             type='',
+                             path=[('root', 'root')])
 
     await folders.put(first_folder)
 
-
-    async with aiohttp.ClientSession(timeout = timeout) as session:
+    async with aiohttp.ClientSession(timeout=timeout) as session:
         # Generate list of Workers to explore folder structure
 
         endEvent = asyncio.Event()
@@ -203,11 +219,14 @@ async def start():
         fileExplorers = [loop.create_task(getIdsRecursive("https://www.googleapis.com/drive/v3/files", \
                                          folders, files, session, TestUtil.headers, endEvent)) for i in range(1)]
 
-        revisionExplorer = [loop.create_task(getRevision(files, session, TestUtil.headers, endEvent))
-                            for i in range(workerInstances)]
+        revisionExplorer = [
+            loop.create_task(
+                getRevision(files, session, TestUtil.headers, endEvent))
+            for i in range(workerInstances)
+        ]
 
         # Generate Print Task that prints data every X seconds
-        printTask = loop.create_task( TestUtil.print_size(files, endEvent))
+        printTask = loop.create_task(TestUtil.print_size(files, endEvent))
         # Wait until all folders are properly processed, or until FILE_MAX is
         # reached
 
@@ -215,7 +234,7 @@ async def start():
 
         logger.info("await gather revisions done")
 
-    await TestUtil.dump_files()
+    await TestUtil.dump_files(upload = True)
 
     printTask.cancel()
 
@@ -235,8 +254,7 @@ async def shutdown(loop, signal=None):
     from configlog import sendmail
     if signal:
         logging.info(f"Received exit signal {signal.name}...")
-    tasks = [t for t in asyncio.all_tasks() if t is not
-             asyncio.current_task()]
+    tasks = [t for t in asyncio.all_tasks() if t is not asyncio.current_task()]
 
     [task.cancel() for task in tasks]
 
@@ -246,6 +264,7 @@ async def shutdown(loop, signal=None):
     sendmail()
     logging.info("Stopping")
     loop.stop()
+
 
 def loadFiles(USER_ID, _workingPath, fileId, _creds):
 
@@ -262,9 +281,7 @@ def loadFiles(USER_ID, _workingPath, fileId, _creds):
     TestUtil.workingPath = _workingPath
     TestUtil.userid = USER_ID
 
-
-
-    if(fileId is not None):
+    if (fileId is not None):
         global SEED_ID
         SEED_ID = fileId
         TestUtil.idmapper[SEED_ID] = 'root'
@@ -283,23 +300,18 @@ def loadFiles(USER_ID, _workingPath, fileId, _creds):
     #Dump files before proceeding
     #TestUtil.dump_files()
 
-
     #pickle.dump(TestUtil.closure, open(_workingPath + 'closure.pickle', 'wb'))
     #pickle.dump(TestUtil.pathedFiles, open(_workingPath + 'pathedFiles.pickle', 'wb'))
     #pickle.dump(TestUtil.idmapper, open(_workingPath + 'idmapper.pickle', 'wb'))
     #pickle.dump(TestUtil.pickleIndex, open(_workingPath + 'pickleIndex', 'wb'))
 
     logger.info("dumped pickle files")
-
-
-
-
     # Writing data to SQL
     #import processing.sql
     #processing.sql.start(USER_ID, _workingPath)
 
     #open(_workingPath + 'done.txt', 'a+').write("DONE")
-    configlog.sendmail(msg = "program ended successfully")
+    configlog.sendmail(msg="program ended successfully")
     logger.info("Program ended successfully for userid %s", USER_ID)
 
 

@@ -1,7 +1,10 @@
 import os
+import logging
 from flask_caching import Cache
 import sys
 
+
+logger = logging.getLogger(__name__)
 
 # Necessary for non HTTPS OAUTH calls
 os.environ["OAUTHLIB_RELAX_TOKEN_SCOPE"] = "1"
@@ -19,8 +22,9 @@ class Config:
         HOMEDATAPATH = os.environ["HOMEDATAPATH"]
     elif ('FLASKDBG' in os.environ):
         HOMEPATH = "/home/henry/pydocs/"
-        HOMEDATAPATH = "/home/henry/pydocs/data/testdir/"
-    elif('DOCKERENV' in os.environ):
+        HOMEDATAPATH = "/home/henry/pydocs/data/"
+        #HOMEDATAPATH = "/mnt/az-pydocs/data/"
+    elif ('DOCKERENV' in os.environ):
         HOMEPATH = os.environ["DOCKERWDIR"]
         HOMEDATAPATH = HOMEPATH + 'data/'
     else:
@@ -30,9 +34,12 @@ class Config:
     PRESERVE_CONTEXT_ON_EXCEPTION = True
     TRAP_HTTP_EXCEPTIONS = True
     TRAP_BAD_REQUEST_ERRORS = True
-    SCOPES = [ 'https://www.googleapis.com/auth/drive']
+    SCOPES = ['https://www.googleapis.com/auth/drive']
     TEMPLATES_AUTO_RELOAD = True
 
 
 CONF = Config()
+
+logger.warning("Config: %s", Config.__dict__)
+
 cache = Cache(config={"CACHE_TYPE": 'simple'})

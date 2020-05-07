@@ -17,23 +17,26 @@ def set_token(tok):
     global token
     token = tok
 
-os.environ["TZ"]="America/Vancouver"
+
+os.environ["TZ"] = "America/Vancouver"
 time.tzset()
 
-
-logFile = flask_config.Config.HOMEDATAPATH + "logs/logs{}---{}.txt".format(datetime.now().strftime("%-m-%d"), token)
+#logFile = flask_config.Config.HOMEDATAPATH + "logs/logs{}---{}.txt".format(
+    #datetime.now().strftime("%-m-%d"), token)
 
 syslog = SysLogHandler(address=('logs2.papertrailapp.com', 49905))
-filelog = FileHandler(logFile)
+#filelog = FileHandler(logFile)
 stream = StreamHandler()
 
 stream.setLevel(logging.INFO)
-filelog.setLevel(logging.NOTSET)
+##filelog.setLevel(logging.NOTSET)
+
 
 def semidisable(logg):
-    logg.propagate=False
+    logg.propagate = False
     logg.setLevel(logging.DEBUG)
-    logg.addHandler(filelog)
+    #logg.addHandler(#filelog)
+
 
 class bcolors:
     HEADER = '\033[95m'
@@ -47,55 +50,54 @@ class bcolors:
 
 
 myip = urllib.request.urlopen('https://ident.me').read().decode('utf8')
-formatter =logging.Formatter(f"%(filename).8s:%(asctime)s:%(funcName)s:%(lineno)d:{token} -- %(message)s", "%d,%H:%M:%S")
+formatter = logging.Formatter(
+    f"%(filename).8s:%(asctime)s:%(funcName)s:%(lineno)d:{token} -- %(message)s",
+    "%d,%H:%M:%S")
 
 #syslog = SysLogHandler(address=('syslog-a.logdna.com', 49905))
 
-
-
 syslog.setFormatter(formatter)
-filelog.setFormatter(formatter)
+#filelog.setFormatter(formatter)
 stream.setFormatter(formatter)
-
-
 
 logger = logging.getLogger()
 logger.addHandler(syslog)
-logger.addHandler(filelog)
 logger.addHandler(stream)
 
 logger.setLevel(logging.NOTSET)
 
+gun = logging.getLogger('gunicorn')
+gun.setLevel(logging.NOTSET)
+gun.addHandler(stream)
+gun.addHandler(syslog)
 
-semidisable( logging.getLogger("googleapiclient"))
-semidisable( logging.getLogger("asyncio"))
-semidisable( logging.getLogger('urllib3'))
-semidisable( logging.getLogger('gdocrevisions.operation'))
+semidisable(logging.getLogger("googleapiclient"))
+semidisable(logging.getLogger("asyncio"))
+semidisable(logging.getLogger('urllib3'))
+semidisable(logging.getLogger('gdocrevisions.operation'))
 
 sqlal = logging.getLogger('sqlalchemy')
 sqlal.setLevel(logging.DEBUG)
 sqlal.propagate = False
-sqlal.addHandler(filelog)
+#sqlal.addHandler(filelog)
 #semidisable( logging.getLogger('sqlalchemy.engine'))
-
-
-
 
 Profiler = None
 
 
 def handle_exception(exc_type, exc_value, exc_traceback):
 
-    logger.critical("Custom Uncaught exception", exc_info=(exc_type, exc_value, exc_traceback))
+    logger.critical("Custom Uncaught exception",
+                    exc_info=(exc_type, exc_value, exc_traceback))
 
-    sendmail(msg = "Program ended wih exception. Check logs for more details")
+    sendmail(msg="Program ended wih exception. Check logs for more details")
     logger.critical("exiting! from sshook")
 
     import os
     os._exit(2)
 
     #logger.info("sending to default hook")
-    return 0 
+    return 0
 
 
 sys.excepthook = handle_exception
@@ -107,12 +109,11 @@ from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import multiprocessing as mp
-import random
-
-def sendmail(msg = "", return_thread = False):
 
 
-    p = mp.Process(target = mp_sendmail, args = (msg, ))
+def sendmail(msg="", return_thread=False):
+
+    p = mp.Process(target=mp_sendmail, args=(msg, ))
     p.start()
 
     if return_thread:
@@ -123,6 +124,7 @@ def sendmail(msg = "", return_thread = False):
 
 
 def mp_sendmail(msg):
+    return
     logger.info("sending mail")
     subject = f"PYDOCS LOGS from {myip}::{token}"
     body = f"Automatically generated logging from {myip}\nSent date: {datetime.now().__str__()}\n\n{msg}"
@@ -140,7 +142,6 @@ def mp_sendmail(msg):
     # Add body to email
     message.attach(MIMEText(body, "plain"))
 
-
     # Open PDF file in binary mode
     with open(logFile, 'r') as attachment:
         # Add file as application/octet-stream
@@ -148,7 +149,7 @@ def mp_sendmail(msg):
         part = MIMEBase("application", "octet-stream")
         part.set_payload(attachment.read())
 
-    # Encode file in ASCII characters to send by email    
+    # Encode file in ASCII characters to send by email
     encoders.encode_base64(part)
 
     # Add header as key/value pair to attachment part
