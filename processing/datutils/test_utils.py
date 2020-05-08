@@ -172,6 +172,7 @@ class TestUtil:
 
     @classmethod
     async def send_socket(cls, info_packet):
+        return True
         logger.info("connect working")
 
         logger.info("server addr: %s", SERVER_ADDR)
@@ -259,8 +260,8 @@ async def API_RESET(seconds=6, throttle=None, decrease=False):
 
 
 async def tryGetQueue(queue: asyncio.Queue,
-                      repeatTimes: int = 5,
-                      interval: float = 3.5,
+                      repeatTimes: int = 4,
+                      interval: float = 2,
                       name: str = ""):
     output = None
     timesWaited = 0
@@ -272,7 +273,7 @@ async def tryGetQueue(queue: asyncio.Queue,
             if (timesWaited > repeatTimes):
                 return -1
             logger.info(name + "waiting %d %d", timesWaited, repeatTimes)
-            await asyncio.sleep(interval + random.randint(0, 5))
+            await asyncio.sleep(random.uniform(0.8*inteval, 1.4*interval))
     return output
 
 

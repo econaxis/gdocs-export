@@ -28,9 +28,9 @@ def report(queue, threads, print_event):
         logger.info("SQL Queue size: %d, thread size: %d", queue.qsize(),
                     len(threads))
         remove_dead_threads(threads)
-        time.sleep(10)
+        time.sleep(30)
         counter += 1
-        if counter % 10 == 0:
+        if counter % 1000 == 0:
             configlog.sendmail(msg="From SQL")
 
 
@@ -42,12 +42,13 @@ def exchandler(loop, context):
 
 
 #Used for debugging
+
+fdsfs = secrets.token_urlsafe(4)
 async def send_socket():
 
     info_packet = pickle.load(open('info_packet', 'rb'))
 
-    info_packet = info_packet._replace(userid="send_sot" +
-                                       secrets.token_urlsafe(6))
+    info_packet = info_packet._replace(userid="send_sot" + fdsfs)
 
     logger.info("connect working")
     r, w = await asyncio.open_connection('127.0.0.1', 8888)
@@ -67,7 +68,7 @@ async def send_socket():
 
     w.close()
 
-    await asyncio.sleep(0.1)
+    await asyncio.sleep(1.2)
     return True
 
 
@@ -119,7 +120,7 @@ async def handle_request(queue):
     #Used for debugging
 
     if "FLASKDBG" in os.environ:
-        reps = 1
+        reps = 40
         while reps:
             reps -= 1
             asyncio.create_task(send_socket())
@@ -154,7 +155,6 @@ def remove_dead_threads(threads):
 def queue_worker(queue, threads):
     while True:
         print("new task")
-
         latest = queue.get()
 
         while len(threads) > THREAD_SIZE:
@@ -217,4 +217,10 @@ def thread_pool():
 
 if __name__ == '__main__':
     logger.warning("STARTING SQL SERVER")
-    thread_pool()
+
+    try:
+        thread_pool()
+    except KeyboardInterrupt:
+        import sys
+        close_shelve()
+        sys.exit(0)

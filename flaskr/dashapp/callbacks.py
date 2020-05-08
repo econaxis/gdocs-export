@@ -4,6 +4,8 @@ import itertools
 import dash
 import logging
 from processing.sql import reload_engine
+from sqlalchemy.orm import aliased, joinedload
+from sqlalchemy.sql import func
 from datetime import datetime, timedelta
 import plotly.graph_objects as go
 from dash.dependencies import Input, Output, State
@@ -12,7 +14,7 @@ import flask
 import numpy as np
 from scipy.stats import binned_statistic
 import scipy.signal
-from processing.models import Dates, Files, Filename
+from processing.models import Dates, Files, Filename, Closure
 from functools import lru_cache, partial
 
 
@@ -23,6 +25,8 @@ times_tickf = {
         'year': '%m %d'
 }
 
+flask.session = dict(userid = 'testing1239KjMbA')
+    
 
 import threading
 import shelve
@@ -36,9 +40,13 @@ FNAME = 'selected_files.pickle'
 
 sel_lock = threading.Lock()
 
+sessions_lock = threading.Lock()
+
+
+
 def get_sel(val):
     with shelve.open('selected_files', flag = 'r') as f:
-        print(f["sl"], val)
+        #print(f["sl"], val)
         return f["sl"][val]
 
 def add_sel(val):
@@ -97,17 +105,105 @@ def aggregate_dates(timestamps, aggregate_by):
     return timestamps
 
 
+dir_lock = threading.Lock()
+
+def direct_parent():
+
+
+    #Returns three lists: direct child id, direct parent id, child name
+    logger.info("userid: %s", flask.session["userid"])
+
+    db = reload_engine(flask.session["userid"], download=True, lock = sessions_lock)
+
+
+    try:
+        fn1, fn2 = aliased(Filename), aliased(Filename)
+
+        ds = db.query(Closure, fn1, fn2).join(fn1, fn1.fileId == Closure.parent).join(fn2, fn2.fileId == Closure.child).all()
+
+
+        for df in ds:
+            print(df[0].parent, df[0].child, df[1].fileId, df[2].fileId, df[1].fileName, df[2].fileName)
+
+        ds = db.query(Closure.depth.label('__d'),
+                    fn1.fileName.label('fn1_name'), fn1.fileId.label('fn1_id') ,
+                    fn2.fileName.label('fn2_name'), fn2.fileId.label('fn2_id')) \
+                    .join(fn1, fn1.fileId == Closure.parent).join(fn2, fn2.fileId == Closure.child).distinct().filter(Closure.depth==1).subquery()
+
+        sds=db.query(Files.id.label('f_id'), func.sum(Dates.adds).label('adds'), func.sum(Dates.deletes).label("deletes")).join(Dates).group_by(Files.id).subquery()
+
+        res = db.query(ds, sds).outerjoin(sds, sds.c.f_id == ds.c.fn2_id).all()
+
+        parents = [x.fn1_id for x in res]
+        children = [x.fn2_id for x in res]
+
+        values = [x.adds + x.deletes if x.adds and x.deletes else 0 for x in res]
+        names = [x.fn2_name for x in res]
+
+        print(len(names), len(values), len(children), len(parents))
+
+        for i in range(len(res)):
+            if i < len(parents) and parents[i] == children[i]:
+                parents.pop(i)
+                children.pop(i)
+                values.pop(i)
+                names.pop(i)
+                i-=1
+
+        parents.append("")
+        values.append(0)
+        names.append("root")
+        children.append(6)
 
 
 
-@lru_cache(maxsize=6)
+        fig =go.Figure(go.Sunburst(
+                labels=["Eve", "Cain", "Seth", "Enos", "Noam", "Abel", "Awan", "Enoch", "Azura"],
+                    parents=["", "Eve", "Eve", "Seth", "Seth", "Eve", "Eve", "Awan", "Eve" ],
+                        values=[10, 14, 12, 10, 2, 6, 6, 4, 4],
+                        ))
+
+        return go.Figure(data = [ go.Sunburst(
+                ids = children,
+                labels = names,
+                parents = parents
+        )], layout = dict(margin = dict(t=0 , l=0, r=0,b=0)))
+
+
+
+        prim1 = db.query(Closure).filter(Closure.depth == 1) \
+                    .options(joinedload(Closure.parent_r).joinedload(Files.name)) \
+                    .options(joinedload(Closure.child_r).joinedload(Files.name)).distinct().all()
+
+        res = [(x.parent_r.name[0].fileName, x.child_r.name[0].fileName) for x in prim1]
+
+        res = list(set(res))
+
+        [parent, child] = list(zip(*res))
+        breakpoint()
+    except:
+        logger.exception("e")
+        breakpoint()
+
+
+    print("="*10)
+    print(parent, child)
+
+    return parent, child
+
+
+
+
+#@lru_cache(maxsize=6)
 def query_db(files):
+
+
 
     logger.warning("query_db called")
 
     logger.warning("userid: %s", flask.session["userid"])
 
-    db = reload_engine(flask.session["userid"], download = True)()
+    db = reload_engine(flask.session["userid"], download=True, lock = sessions_lock)
 
     if files:
         results = db.query(Dates.adds, Dates.deletes, Dates.date).join(Files) \
@@ -120,12 +216,19 @@ def query_db(files):
     return results
 
 
+def gen_sunburst():
+    return direct_parent()
+
+
+    #fig["data"][0]["labels"] = 
+
+
 def get_activity(files=None,
                  smooth=True,
                  window=20,
                  num_bins=70,
                  x_limits=None,
-                 aggregate_by='',
+                 aggregate_by='none',
                  filter_func=bool,
                  use_prev_bins=True):
 
@@ -164,7 +267,7 @@ def get_activity(files=None,
     delete_dates = timestamps[:-1]
 
 
-    if not x_limits:
+    if not x_limits and aggregate_by == 'none':
         x_limits = [timestamps.min(), timestamps.max()]
 
 
@@ -184,8 +287,10 @@ def get_activity(files=None,
     if use_prev_bins and len(prev_bins):
         num_bins = prev_bins
 
-    dbg_x = list(map(datetime.fromtimestamp, x_limits))
-    print("DBG_X: ",dbg_x)
+
+    if x_limits:
+        dbg_x = list(map(datetime.fromtimestamp, x_limits))
+        print("DBG_X: ",dbg_x)
 
 
 
@@ -294,7 +399,6 @@ def get_traces(times,
 
     hist_figure["layout"]["xaxis"]["tickformat"] = tickformat
 
-    
     #if we are generating a cumalative view, then we dont want to smoothen
     smoothing = not cumalative
 
@@ -392,7 +496,7 @@ def _updateBubbleChart(_n_clicks, selection):
 
     logger.info("userid: %s", flask.session["userid"])
 
-    db = reload_engine(flask.session["userid"], download = True)
+    db = reload_engine(flask.session["userid"], download = True, lock = sessions_lock)
 
     parentLabel = ""
 
@@ -439,11 +543,24 @@ def _updateBubbleChart(_n_clicks, selection):
 
 # Moved functions out of register_callback for profiling to work
 def register_callback(app):
+
+    @app.callback(
+        Output("sunburst", "figure"),
+        [Input("url", "pathname")])
+    def sunburst(url):
+        dsf = gen_sunburst()
+        print(dsf)
+        return dsf
+
+
+    """
+
     @app.callback(
         [Output("fList", "figure"),
          Output("parent_span", "children")], [Input('get_parent', "n_clicks")],
         [State("fList", "selectedData")])
     def updateBubbleChart(_n_clicks, selection):
+        return
         return _updateBubbleChart(_n_clicks, selection)
 
     @app.callback(Output("histogram", "figure"), [
@@ -458,6 +575,7 @@ def register_callback(app):
     ], [State('histogram', 'figure')])
     def update_histogram(times, ddvalue, bubble_figure, selectedData, trace,
                          bin_slider, relayout, window_slider, hist_figure):
+        return
 
 
 
@@ -471,11 +589,14 @@ def register_callback(app):
         recalc_all = False
 
         ctx = dash.callback_context
+        for i in ctx.triggered:
+            logger.info("ctx.triggered: %s", i["prop_id"])
 
         global prev_bins
         for i in ctx.triggered:
             #TODO: fix
             prop_id = i["prop_id"]
+
             if prop_id == 'histogram.relayoutData':
                 if "xaxis.range[0]" in relayout:
                     x_limits = [
@@ -492,6 +613,7 @@ def register_callback(app):
                 #Only here can we add new traces
                 only_smoothen = False
                 hist_figure["layout"]["xaxis"]["autorange"]=True
+                x_limits = None
             elif prop_id == 'trace':
                 pass
             elif prop_id in {'bin-slider.value', 'window-slider.value'}:
@@ -503,6 +625,7 @@ def register_callback(app):
                 hist_figure["data"] = []
                 prev_bins = []
                 hist_figure["layout"]["xaxis"]["autorange"]=True
+                x_limits = None
 
 
         window_slider = round(window_slider)
@@ -570,6 +693,7 @@ def register_callback(app):
         State('day-all', 'figure')
     ])
     def get_all(_filler, year_fig, week_fig, day_fig):
+        return
 
         logger.warning("getting yearly traces")
 
@@ -584,7 +708,6 @@ def register_callback(app):
         week_traces = []
         day_traces = []
         for y in years:
-
             logger.info("processing for year %d", y)
             edges = [
                 datetime(y, 1, 1).timestamp(),
@@ -656,13 +779,16 @@ def register_callback(app):
 
     @app.callback(Output("dropdown", "options"), [Input("url", "pathname")])
     def genDropdownOptions(value):
+        return
         #Use this to download db from azure
         userid = flask.session["userid"]
-        reload_engine(userid, download=True)
+        reload_engine(userid, download=True, lock = sessions_lock)
 
         logger.warning("done download db and crete connectoin")
 
         return genOptList(flask.session["userid"])
+
+    """
 
 
 def betw(_min, _max, val):

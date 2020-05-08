@@ -10,6 +10,9 @@ import flask
 def layout():
 
     return html.Div([
+        html.Div(id = "maifd",
+            children = [dcc.Graph(id="sunburst")], className="twelve columns"),
+
         html.Div([
             html.Div([dcc.Graph(id="fList"),
                       dcc.Dropdown(id="dropdown")],
@@ -48,6 +51,8 @@ def layout():
             ],
             className="twelve columns",
         ),
+
+
         html.Header(children="""
             <!-- Global site tag (gtag.js) - Google Analytics -->
             <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104236791-2"></script>

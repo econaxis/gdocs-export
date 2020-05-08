@@ -49,8 +49,7 @@ def register_dashapp(flask_serv):
         return response
 
     if "FLASKDBG" in os.environ:
-        pass
-        #dashapp.server.run(debug=True);
+        dashapp.run_server(debug=True);
 
 
 if __name__ == "__main__":

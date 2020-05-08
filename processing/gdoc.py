@@ -31,7 +31,7 @@ class Operation():
         return f'Date: {self.date}, content: {self.content}'
 
 
-def round_time(d, round_by=120):
+def round_time(d, round_by=30):
     return round_by * round(d / round_by)
 
 
@@ -46,11 +46,11 @@ class GDoc():
         'operations', 'closure', 'done'
     ]
 
-    sem = asyncio.Semaphore(value=9)
+    sem = asyncio.Semaphore(value=30)
 
     def return_condensed(self):
         if not self.operations:
-            logger.critical(
+            logger.warning(
                 "Operations not found but still returning condensed!! %s %s %s",
                 self.name, self.fileId, self.operations)
         return gd_condensed(self.name, self.path, self.operations,
@@ -87,19 +87,17 @@ class GDoc():
             p = Process(target=self._download_details, args=(child_conn, ))
 
             async with GDoc.sem:
-
                 p.start()
-
                 logger.debug("started process for %s", fileId[0:5])
                 await asyncio.sleep(5)
 
                 counter = 0
                 while not parent_conn.poll(0.01) and counter < 5:
                     counter += 1
-                    logger.debug("sleeping from poll, waiting for %s, %d",
+                    logger.info("sleeping from poll, waiting for %s, %d",
                                  fileId[0:5], counter)
                     await asyncio.sleep(
-                        random.uniform(6 * counter, 10 * counter))
+                        random.uniform(1 * counter, 5 * counter))
 
                 logger.debug("received goahead to receive %s", fileId[0:5])
 
@@ -147,20 +145,25 @@ class GDoc():
         except:
             logger.debug("cannot get last revision id")
 
+
+
+
     def compute_closure(self):
 
-        assert self.path[-1][
-            0] == self.fileId, f"{self.path[-1]};{self.fileId}"
+        assert self.path[-1][0] == self.fileId, f"Last path is not fileId? {self.path[-1]};{self.fileId}"
 
         for c, i in enumerate(self.path):
-            child = self.path[-1]
-            parent = i
-            self.closure.append(
-                Closure(parent=parent,
-                        child=child,
-                        depth=len(self.path) - c - 1))
+            for c1, i1 in enumerate(self.path[c:]):
+                child = i1
+                parent = i
+                depth = c1
+
+                self.closure.append(
+                    Closure(parent=parent, child=child, depth=depth))
 
         return self.closure
+
+
 
     def _download_details(self, pipe):
 
@@ -178,11 +181,14 @@ class GDoc():
                 response = requests.get(url=url,
                                         headers=self.headers,
                                         timeout=10)
+
+
                 assert response.status_code == 200
             except:
-                logger.debug("%s unable, sleeping up to %d", self.fileId[0:5],
+
+                logger.info("%s unable, sleeping up to %d", self.fileId[0:5],
                              20 * i)
-                time.sleep(random.uniform(5, 20 * i))
+                time.sleep(random.uniform(5, 6 * i))
                 continue
             text = response.text
             revision_details = json.loads(text[5:])
@@ -210,22 +216,8 @@ class GDoc():
 
 
             cur_op = Operation(date=x[1] / 1e3, content=content)
-            #tot_operations.append(cur_op)
-
-
-
-        for count, x in enumerate(revision_details['changelog']):
-
-            if x[0]['ty'] not in {'is', 'ds'}:
-                continue
-
-            if x[0]['ty'] == 'is':
-                content = [len(x[0]['s']), 0]
-            elif x[0]['ty'] == 'ds':
-                content = [0, x[0]['ei'] - x[0]['si'] + 1]
-
-            cur_op = Operation(date=x[1] / 1e3, content=content)
             tot_operations.append(cur_op)
+
 
         #Condense all operations into minute-operations
         operation_condensed = {}
@@ -240,12 +232,12 @@ class GDoc():
         operations = list(operation_condensed.values())
 
         pipe.send(operations)
-        time.sleep(10)
+        time.sleep(5)
 
         counter = 1
         while not pipe.poll(0.01):
 
-            logger.debug("resending for %s, counter %d", self.fileId[0:5],
+            logger.info("resending for %s, counter %d", self.fileId[0:5],
                          counter)
             pipe.send(operations)
             counter += 1
@@ -270,38 +262,19 @@ class GDoc():
         return s
 
 
-"""
 if __name__ == '__main__':
-    import pickle
-    s = pickle.load(open('chg', 'rb'))
 
-    orig = len(s)
+    path = list(range(20))
+    closure = []
+    for c, i in enumerate(path):
+        for c1, i1 in enumerate(path[c:]):
+            child = i1
+            parent = i
+            depth = c1
 
-    for count, x in enumerate(s):
-        try:
-            if x[0]['ty'] not in {'is', 'ds', 'mlti'}:
-                continue
-        except:
-            print(x)
-
-        if x[0]['ty'] == 'mlti':
-            print("reached mlti!")
-            for i in x[0]['mts']:
-                print(i)
-                s.append([i, x[1]])
-            continue
-
-        if x[0]['ty'] == 'is':
-            content = [len(x[0]['s']), 0]
-        elif x[0]['ty'] == 'ds':
-            content = [0, x[0]['ei'] - x[0]['si'] + 1]
-
-        if count >= orig:
-            print("mlti discovered: ", content)
+            closure.append((child, parent, depth))
 
 
-        cur_op = Operation(date=x[1] / 1e3, content=content)
-        #tot_operations.append(cur_op)
+    from pprint import pformat
+    print(pformat(closure))
 
-
-"""
