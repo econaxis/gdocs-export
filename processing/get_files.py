@@ -18,11 +18,11 @@ pprint = pprint.PrettyPrinter(indent=4).pprint
 
 timeout = aiohttp.ClientTimeout(total=8)
 
-MAX_FILES = 300
+MAX_FILES = 50
 
 SEED_ID = "root"
 
-workerInstances = 3
+workerInstances = 10
 
 ACCEPTED_TYPES = {"application/vnd.google-apps.document"}
 
@@ -158,8 +158,8 @@ async def getRevision(files,
             TestUtil.files.append(gd)
         else:
             logger.warning(
-                "not done but tried to append, prob because no operations found file: %s, %s",
-                gd.fileId, gd.name)
+                "not done but tried to append, prob because no operations found file: %s, %s %s %s",
+                gd.fileId, gd.name, gd.done, gd.operations)
 
     endEvent.set()
     logger.info("getrev return")
@@ -183,7 +183,7 @@ async def start():
 
     loop = asyncio.get_event_loop()
     loop.set_exception_handler(exchandler)
-    loop.set_debug(True)
+    #loop.set_debug(True)
 
     print("TESTING SOCKET SEND")
 
@@ -291,7 +291,7 @@ def loadFiles(USER_ID, _workingPath, fileId, _creds):
     loop.set_exception_handler(exchandler)
     startTask = loop.create_task(start())
 
-    loop.set_debug(True)
+    #loop.set_debug(True)
 
     loop.run_until_complete(asyncio.gather(startTask))
 

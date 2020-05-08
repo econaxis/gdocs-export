@@ -17,7 +17,7 @@
 
 
 apt-get update
-apt-get install -y cifs-utils gcc g++ libsasl2-dev libldap2-dev libssl-dev
+apt-get install -y gcc libldap2-dev libsasl2-dev libssl-dev
 #Setup Azure storage mounting 
 
 #resourceGroupName="pydocs"
@@ -58,11 +58,11 @@ echo "===="
 
 
 
-pip install --upgrade pip && \ 
+pip install --upgrade pip && \
 pip install pyopenssl && \
 pip install -r installation/${REQ_FILE} && \
 
+apt-get purge -y gcc libldap2-dev libsasl2-dev libssl-dev
 
-apt-get purge -y cifs-utils build-essential libsasl2-dev libldap2-dev libssl-dev
 apt-get autoremove -y
 echo "Installation done!"

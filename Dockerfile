@@ -5,6 +5,8 @@ ENV DOCKERENV 1
 ARG HOMEPATH=/app/
 
 WORKDIR ${HOMEPATH}
+
+
 ARG REQ_FILE=requirements.txt
 
 COPY ./installation ./installation
@@ -12,8 +14,10 @@ RUN chmod +x ./installation/instodbc.sh && \
     ./installation/instodbc.sh && \
     echo "Installation done!"
 
-RUN ls -a && ls installation
 
+
+
+RUN ls -a && ls installation 
 
 COPY . .
 

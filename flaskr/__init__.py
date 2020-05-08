@@ -15,7 +15,6 @@ def create_flask_serv():
 
     register_dashapp(flask_serv)
 
-
     import os
 
     if "FLASKDBG" not in os.environ or True:

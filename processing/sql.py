@@ -1,6 +1,4 @@
-import functools
 from pprint import PrettyPrinter
-import secrets
 from datetime import datetime
 from queue import Queue
 import time
@@ -8,9 +6,9 @@ import threading
 import secrets
 import sqlalchemy as sqlal
 from sqlalchemy.orm import sessionmaker, scoped_session
-import os
-import logging
-import configlog
+import os, functools
+import logging, configlog
+
 from processing.models import Files, Closure, Dates, Base, Filename
 
 from flaskr.flask_config import Config
@@ -36,6 +34,8 @@ logger.warning("hdatapath: %s", hdatapath)
 #Used to access files on Azure File Storage, defaults to None to prevent unnecessary connections unless called
 az_driver = None
 
+import azure.common
+
 def setup_azure():
     global az_driver
     from azure.storage.file import FileService
@@ -43,28 +43,28 @@ def setup_azure():
 
 
 def az_download_dbs(owner_id , download_file):
-
     logger.info("requested az file: %s", owner_id)
     try:
         az_driver.get_file_to_path('def', 'data/dbs', f"{owner_id}.db" , download_file)
-    except Exception as e:
+    except azure.common.AzureMissingResourceHttpError as e:
         logger.exception("cannot download file")
 
 def az_upload_dbs(owner_id,  from_file):
     upload_path = f"{owner_id}.db"
     try:
         az_driver.create_file_from_path('def', 'data/dbs', upload_path , from_file)
-    except Exception as e:
+    except azure.common as e:
         logger.exception("canot upload file")
-        raise e
 
 def get_db_path(owner_id):
     return os.path.join(hdatapath, f'dbs/{owner_id}.db')
 
-brkpt = True
-
-def reload_engine(owner_id, create_new = False, download = False):
+def reload_engine(owner_id, create_new = False, download = False, lock = None):
     global sessions
+
+    if not lock:
+        lock = sessions_lock
+
 
     if owner_id in sessions:
         logger.info("found old engine")
@@ -75,7 +75,7 @@ def reload_engine(owner_id, create_new = False, download = False):
         setup_azure()
 
 
-    with sessions_lock:
+    with lock:
         #Check if the DB file already exists; if yes, then we load it,
         #else, we download it from AZ file storage
 
@@ -98,7 +98,7 @@ def reload_engine(owner_id, create_new = False, download = False):
 
         logger.info("Init DB Conn at %s", sqlite_owner_id)
 
-        ENGINE = sqlal.create_engine(f'sqlite:////{sqlite_owner_id}',
+        ENGINE = sqlal.create_engine(f'sqlite:////{sqlite_owner_id}', echo = True,
                                      connect_args=dict(check_same_thread=False))
 
         Base.metadata.create_all(bind=ENGINE)
@@ -107,8 +107,15 @@ def reload_engine(owner_id, create_new = False, download = False):
         v_scoped_session = scoped_session(_session)
 
 
-        logger.warning("set session for ownerid to %s", owner_id)
+        logger.warning("set session for ownerid %s", owner_id)
         sessions[owner_id] = v_scoped_session
+
+        if download:
+            logger.warning("Testing session for any data")
+            ds = v_scoped_session().query(Files).all()
+            logger.warning("Files Data: %s", ds)
+
+
         return v_scoped_session
 
 
@@ -116,7 +123,7 @@ def db_connect(func):
     @functools.wraps(func)
     def inner(*args, **kwargs):
 
-        print(kwargs, args)
+        #print(kwargs, args)
 
         print("userid: ", kwargs["owner_id"])
         session_manager = reload_engine(kwargs["owner_id"])
@@ -135,44 +142,60 @@ def db_connect(func):
     return inner
 
 
+added_list = []
+
+
 @db_connect
 def load_clos(file_data, fileid_obj_map, dict_lock, owner_id=None):
     assert owner_id != None, "Ownerid is none err"
     sess = reload_engine(owner_id)()
     for files in file_data:
         for clos in files.closure:
-            time.sleep(1)
             with dict_lock:
-                if "{}.id".format(clos.parent[0]) not in fileid_obj_map:
+                if clos.parent[0] not in fileid_obj_map:
                     logger.debug("new element not found: %s", clos.parent[0])
 
                     fi = Files(fileId=clos.parent[0] + str(owner_id),
                                isFile=False)
 
-                    file_name = Filename(files=fi, fileName=clos.parent[1])
-                    fi.name = [file_name]
+                    fi.name = [Filename(files=fi, fileName=clos.parent[1])]
+                    sess.add(fi)
+                    fileid_obj_map[clos.parent[0]] = fi
 
-                    try:
-                        sess.add(fi)
-                        sess.flush()
-                    except:
-                        logger.exception("sqlexc: ")
-                        sess.rollback()
-                    else:
-                        fileid_obj_map[clos.parent[0]] = fi
-                        fileid_obj_map[clos.parent[0] + '.id'] = fi.id
-                        sess.commit()
+
+                sess.commit()
+
+                if clos.child[0] not in fileid_obj_map:
+                    logger.debug("new element not found: %s", clos.child[0])
+
+                    fi = Files(fileId=clos.child[0] + str(owner_id),
+                               isFile=False)
+
+                    fi.name = [Filename(files=fi, fileName=clos.child[1])]
+                    sess.add(fi)
+                    fileid_obj_map[clos.child[0]] = fi
+
+                sess.commit()
                 try:
                     sess.add(fileid_obj_map[clos.child[0]])
+                    sess.add(fileid_obj_map[clos.parent[0]])
+
                     child_id = fileid_obj_map[clos.child[0]].id
-                    #sess.add(fileid_obj_map[clos.parent[0]])
-                    parent_id = fileid_obj_map[clos.parent[0] + '.id']
-                except:
-                    logger.exception("clos")
+                    parent_id = fileid_obj_map[clos.parent[0]].id
+
+                    sess.commit()
+                    sess.expunge_all()
+
+                    added_list.append((child_id, clos.child[0][-4:]))
+                except sqlal.exc.InvalidRequestError as e:
+                    logger.exception("clos %s", '+'*30)
+                    breakpoint()
+                    raise e
                 else:
                     cls = Closure(parent=parent_id,
                                   child=child_id,
                                   depth=clos.depth)
+
                     sess.add(cls)
 
 
@@ -301,7 +324,7 @@ def insert_sql(userid, files, upload = False):
 
     logger.info("starting load closures")
 
-    #load_clos(files, fileid_obj_map,  dict_lock, owner_id = owner_id)
+    load_clos(files, fileid_obj_map,  dict_lock, owner_id = userid)
     sess.commit()
     logger.warning("Done all for owner_id %s; processed files: %d", userid,
                    SZ_FILES)

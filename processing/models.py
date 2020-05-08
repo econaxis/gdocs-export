@@ -51,8 +51,8 @@ class Closure(Base):
     child = Column(Integer, ForeignKey('files.id'))
     depth = Column(Integer)
 
-    files_relationship = relationship("Files", foreign_keys=[child])
-    parent_relationship = relationship("Files", foreign_keys=[parent])
+    child_r = relationship("Files", foreign_keys=[child])
+    parent_r = relationship("Files", foreign_keys=[parent])
 
     __table_args__ = (PrimaryKeyConstraint(name='closure_pk',
                                            mssql_clustered=False), )
