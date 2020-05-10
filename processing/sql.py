@@ -1,13 +1,12 @@
 from pprint import PrettyPrinter
 from datetime import datetime
 from queue import Queue
-import time
 import threading
 import secrets
 import sqlalchemy as sqlal
 from sqlalchemy.orm import sessionmaker, scoped_session
 import os, functools
-import logging, configlog
+import logging
 
 from processing.models import Files, Closure, Dates, Base, Filename
 

@@ -3,7 +3,6 @@ from time import time
 import random
 import aiohttp
 import pprint
-import iso8601
 from pathlib import Path
 import logging
 import configlog

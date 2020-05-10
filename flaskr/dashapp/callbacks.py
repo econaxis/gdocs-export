@@ -1,21 +1,17 @@
 from types import SimpleNamespace
-from pprint import pformat
-import itertools
-import dash
 import logging
 from processing.sql import reload_engine
 from sqlalchemy.orm import aliased, joinedload
 from sqlalchemy.sql import func
-from datetime import datetime, timedelta
+from datetime import datetime
 import plotly.graph_objects as go
-from dash.dependencies import Input, Output, State
-from flaskr.dashapp.dash_functions import genOptList, gen_fListFig, namesList
+from dash.dependencies import Input, Output
+from flaskr.dashapp.dash_functions import gen_fListFig, namesList
 import flask
 import numpy as np
 from scipy.stats import binned_statistic
 import scipy.signal
 from processing.models import Dates, Files, Filename, Closure
-from functools import lru_cache, partial
 
 
 times_tickf = {
@@ -81,26 +77,22 @@ def aggregate_dates(timestamps, aggregate_by):
                                               day=1).timestamp()
             for x in timestamps
         ]
-        x_limits = [0, 3e9]
     elif aggregate_by == 'week':
         timestamps = [datetime.fromtimestamp(x) for x in timestamps]
         timestamps = [
             x.replace(year=2019, month=7, day=x.weekday() + 1).timestamp()
             for x in timestamps
         ]
-        x_limits = [0, 3e9]
     elif aggregate_by == 'month':
         timestamps = [
             datetime.fromtimestamp(x).replace(year=2000, month=1).timestamp()
             for x in timestamps
         ]
-        x_limits = [0, 3e9]
     elif aggregate_by == 'year':
         timestamps = [
             datetime.fromtimestamp(x).replace(year=2000).timestamp()
             for x in timestamps
         ]
-        x_limits = [0, 3e9]
 
     return timestamps
 

@@ -1,10 +1,7 @@
 import dash_core_components as dcc
-import dash
 import plotly.graph_objects as go
 import dash_html_components as html
-from flaskr.dashapp.dash_functions import gen_fListFig, gen_margin
-from flaskr.dashapp.callbacks import test
-import flask
+from flaskr.dashapp.dash_functions import gen_margin
 
 
 def layout():

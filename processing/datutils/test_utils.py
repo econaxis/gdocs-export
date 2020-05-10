@@ -1,6 +1,4 @@
 import collections
-from multiprocessing import Process
-from pprint import pformat
 import os
 import ujson as json
 import sys
@@ -11,7 +9,6 @@ import configlog
 import tracemalloc
 import random
 from datetime import datetime
-import google.oauth2.credentials
 import asyncio
 import time
 import pickle
@@ -47,7 +44,7 @@ class TestUtil:
 
     @classmethod
     def refresh_creds(cls, creds):
-        path = cls.workingPath
+        cls.workingPath
         cls.creds = creds
 
         if not cls.creds or not cls.creds.valid:
@@ -116,7 +113,6 @@ class TestUtil:
             _sleep_time = 10
             interval = 4
 
-            df_t = []
 
             for i in range(interval):
                 if endEvent.is_set():
@@ -233,7 +229,7 @@ class TestUtil:
             assert response.status == 200, "Response not 200"
             return rev
         except:
-            e = sys.exc_info()[0]
+            sys.exc_info()[0]
             rev = await response.text()
             logger.log(5, rev)
 
@@ -291,7 +287,6 @@ async def adv_read(reader):
 
     data = []
 
-    _length = length
 
     per_read = 5000
 

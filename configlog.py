@@ -3,12 +3,11 @@ import smtplib
 import time
 import os
 import sys
-from logging import FileHandler, StreamHandler
+from logging import StreamHandler
 from logging.handlers import SysLogHandler
 from datetime import datetime
 import secrets
 import urllib.request
-from flaskr import flask_config
 
 token = secrets.token_urlsafe(4)
 
