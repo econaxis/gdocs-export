@@ -373,17 +373,25 @@ def stream():
     def gen():
         try:
             i = 0
-            while True:
-                data = 'this is line {}'.format(i)
-                i += 1
-                print(data)
-                yield data + '<br>'
-                time.sleep(0.2)
-        except GeneratorExit:
+            rng = 10
+            for i in range(rng):
+                if i >= rng-1:
+                    data = 'event: test\ndata: end event {}\n\n'.format(i)
+                    i += 1
+                    print(data)
+                    yield data
+                else:
+                    data = 'data: this is line {}'.format(i)
+                    i += 1
+                    print(data)
+                    yield data + '\n\n'
+                time.sleep(0.4)
+
+        except:
             print("closed")
         finally:
             print("gen exit")
-    return Response(stream_with_context(gen()), mimetype= 'text/event-stream')
+    return Response(gen(), mimetype= 'text/event-stream')
 
 
 @app.route('/')
@@ -392,4 +400,4 @@ def m():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, threaded = False, processes=1)
+    app.run(debug=True,  processes=1)

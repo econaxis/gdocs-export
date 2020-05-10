@@ -1,0 +1,45 @@
+<html>
+
+    <body> 
+    <div id="target_div">Watch this space...</div>
+    </body> 
+
+<script>
+    var targetContainer = document.getElementById("target_div");
+    evts = [];
+
+    function make_new() {
+        console.log("making new")
+        var eventSource = new EventSource("/stream");
+
+        evts.push(eventSource);
+
+
+        eventSource.addEventListener('message', function(e) {
+            targetContainer.innerHTML += e.data;
+        });
+        eventSource.addEventListener('test', function(e) {
+            targetContainer.innerHTML += e.data;
+            console.log(e);
+            console.log("starting making new")
+            make_new()
+            console.log("done making new")
+            window.setTimeout(function() {
+                console.log("closing")
+                eventSource.close()
+            }, 1000);
+        });
+        return eventSource
+    }
+
+    window.onbeforeunload = function() {
+        console.log("unloading");
+        eventSource.close();
+        return "onunlaod test"
+    };
+    eventSource = make_new()
+
+</script>
+
+
+</html> 
