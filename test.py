@@ -308,6 +308,10 @@ p = [threading.Thread(target=start) for i in range(100)]
 [x.join() for x in p]
 
 
+<<<<<<< HEAD
+=======
+"""
+>>>>>>> origin/dev
 
 tups = [(204, 1, 1527052191.579),
 (26, 0, 1527052264.144),
