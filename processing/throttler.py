@@ -1,19 +1,4 @@
 import asyncio
-import sys
-import random
-import json
-import os
-import uuid
-import pickle
-import aiohttp
-import pprint
-import math
-from googleapiclient.discovery import build
-import pandas as pd
-import iso8601
-from google_auth_oauthlib.flow import InstalledAppFlow
-from google.auth.transport.requests import Request
-from pathlib import Path
 import time
 
 
@@ -31,8 +16,8 @@ class Throttle:
                 self.sem.release()
 
     async def decrease(self):
-        self.rpm -= 3.3
-        self.rpm = max(self.rpm, 85)
+        self.rpm -= 4.5
+        self.rpm = max(self.rpm, 20)
 
         while (not self.sem.locked()):
             try:
@@ -44,7 +29,7 @@ class Throttle:
 
     def increase(self):
         self.rpm += 0.25
-        self.rpm = min(self.rpm, 125)
+        self.rpm = min(self.rpm, 50)
 
     async def acquire(self):
         self.counter += 1

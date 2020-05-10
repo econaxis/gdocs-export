@@ -1,57 +1,49 @@
-import pandas as pd
-from processing.throttler import Throttle
-import numpy as np
+import collections
+from multiprocessing import Process
+from pprint import pformat
+import os
+import ujson as json
+import sys
+#from memory_profiler import profile
+import gc
+import resource
+import configlog
+import tracemalloc
 import random
-from math import log
 from datetime import datetime
 import google.oauth2.credentials
-import google_auth_oauthlib.flow
 import asyncio
 import time
-import uuid
 import pickle
-import math
 from google.auth.transport.requests import Request
+import logging
 
+if "FLASKDBG" in os.environ:
+    print("flask debug in os environ")
+    SERVER_ADDR = "127.0.0.1"
+else:
+    SERVER_ADDR = 'sql'
+
+if (random.random() < 0.0):
+    os.environ["PROFILE"] = "true"
+
+Info = collections.namedtuple('Info', ['userid', 'files', 'extra'],
+                              defaults=('default' + str(datetime.now()), [],
+                                        'task'))
+logger = logging.getLogger(__name__)
 
 
 class TestUtil:
-    SCOPES = ['https://www.googleapis.com/auth/drive.metadata.readonly', 'https://www.googleapis.com/auth/drive.activity.readonly']
+
+    fileCounter = 0
     creds = None
     headers = {}
-    consecutiveErrors = 0
+    files = []
+    idmapper = {}
+    userid = None
     workingPath = None
-    maxSize = 0
-    errMsg = "BEGIN" + str(datetime.now()) + "<br> \n\n"
-    throttle = None
-
-    @classmethod
-    def formatData(cls, fileName = 'collapsedFiles'):
-        rdata = pickle.load(open(cls.workingPath + fileName + '.pickle', 'rb'))
-
-        ind = pd.MultiIndex.from_tuples(rdata.keys())
-        data = pd.DataFrame(rdata.values(), index = ind, columns = ["Type"])
-
-        sumDates=data.reset_index(level = 0, drop = True)
-        pickle.dump(data, open(cls.workingPath + fileName + "_p.pickle", 'wb'))
-
-
-    @classmethod
-    def activity_gen(cls):
-        data = pickle.load(open(cls.workingPath + 'collapsedFiles_p.pickle', 'rb'))
-        hists = {}
-        activity = dict(time=[], files=[], marker_size=[])
-        for f in data.index.levels[0]:
-            timesForFile = data.loc[f].index
-            activity["time"].append(data.loc[f].index[-1])
-            activity["files"].append(f)
-            activity["marker_size"].append(log(len(timesForFile), 1.3))
-            hists[f] = [0, 0]
-            hists[f][0], bins = np.histogram([i.timestamp() for i in timesForFile], bins = 'auto')
-            hists[f][1] = [datetime.fromtimestamp(i) for i in bins]
-        pickle.dump(activity, open(cls.workingPath + 'activity.pickle', 'wb'))
-        pickle.dump(hists, open(cls.workingPath + 'hists.pickle', 'wb'))
-
+    pickleIndex = []
+    processedcount = 0
 
     @classmethod
     def refresh_creds(cls, creds):
@@ -63,10 +55,9 @@ class TestUtil:
                 cls.creds.refresh(Request())
             else:
                 raise "cls.creds not valid!"
+
         cls.creds.apply(cls.headers)
         return cls.creds
-
-
 
     @classmethod
     def dractivity_builder(cls, id):
@@ -76,71 +67,260 @@ class TestUtil:
         pageSize = 1000
         filter = "detail.action_detail_case: EDIT"
 
-        #Generate random quotaUser
-        quotaUser = str(uuid.uuid4())
-
-        params = dict(ancestorName = ancName, pageSize = pageSize,
-            filter = filter, quotaUser = quotaUser)
-        return dict(params = params, headers = headers, url = "https://driveactivity.googleapis.com/v2/activity:query")
-
-    @classmethod 
-    def errors(cls, msg):
-        cls.errMsg += str(msg) + '<br> \n'
+        params = dict(ancestorName=ancName, pageSize=pageSize, filter=filter)
+        return dict(
+            params=params,
+            headers=headers,
+            url="https://driveactivity.googleapis.com/v2/activity:query")
 
     @classmethod
-    async def print_size(cls, FilePrintText, pathedFiles, files):
-        while True:
+    async def print_size(cls, files, endEvent):
+        cls.starttime = time.time()
+        if ("PROFILE" in os.environ):
+            tracemalloc.start()
+            cls.snapshot = tracemalloc.take_snapshot()
 
-            totsize = files.qsize() + len(pathedFiles)
-            outputString = "%s\n<br> <b>%d/%d (discovered items)</b> %s<br>\n" %(FilePrintText.text,len(pathedFiles), totsize,
-                    datetime.now().__str__())
+        start_time = time.time()
+        p = None
+        while not endEvent.is_set():
 
-            outputString += "counter: %f rpm: %f\n"%(cls.throttle.gcount(), cls.throttle.rpm)
+            if random.random() < 0.1:
+                p = configlog.sendmail(msg=str(datetime.now()),
+                                       return_thread=True)
 
-            FilePrintText.clear()
+            gc.collect()
 
-            cls.strToFile(outputString, 'streaming.txt')
-            cls.strToFile(cls.errMsg, 'errors.txt')
+            logger.warning('\n\n%sMemory usage: %s (kb)%s%f mins since start',
+                           '-' * 15,
+                           resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,
+                           '-' * 15, (time.time() - cls.starttime) / 60)
 
-            cls.errMsg = "CLEARED " + str(datetime.now() )+ "\n"
+            if ("PROFILE" in os.environ):
+                sns = tracemalloc.take_snapshot()
+                for i in sns.compare_to(cls.snapshot, 'lineno')[0:5]:
+                    logger.info(i)
+                logger.info('%s', '-' * 60)
+                for i in sns.statistics('lineno')[0:5]:
+                    logger.info(i)
+                cls.snapshot = sns
 
-            print(outputString)
+            totsize = files.qsize() + len(cls.files) + cls.processedcount
 
-            if(random.randint(0, 100) > 97):
-                print("resetting counter")
-                cls.throttle.reset()
 
-            await asyncio.sleep(5)
+            logger.info("%s\n%d/%d discovered items at %s\ndump count: %d", \
+                    cls.workingPath,len(cls.files) + cls.processedcount, totsize, datetime.now().__str__() \
+                    ,cls.fileCounter)
 
+            #Temp var for thread
+
+            _sleep_time = 10
+            interval = 4
+
+            df_t = []
+
+            for i in range(interval):
+                if endEvent.is_set():
+                    break
+                if len(cls.files) > 3:
+                    code = await cls.dump_files()
+                    while not code:
+                        secs = random.randint(100, 300)
+                        logger.error("SQL Socket Send denied, retrying in %d",
+                                     secs)
+                        time.sleep(secs)
+                        code = await cls.dump_files()
+
+                await asyncio.sleep(_sleep_time / interval)
+
+            a0 = time.time()
+            logger.debug("file save time: %f", time.time() - a0)
+
+            logger.debug("event loop health: %d, intended: %d",
+                         time.time() - start_time, _sleep_time)
+            start_time = time.time()
+
+            if p:
+                p.join(timeout=0.01)
+                logger.debug("done awaiting task join")
+
+        logger.warning("print task return")
 
     @classmethod
-    def strToFile(cls, string, filename):
-        open(cls.workingPath + filename, 'a+').write(string)
-        open(filename, 'a+').write(string)
+    async def dump_files(cls, return_thread=False, upload = False):
+
+        condensed_files = [x.return_condensed() for x in cls.files]
+
+        info_packet = Info(userid=cls.userid, files=condensed_files, extra = 'upload' if upload else None)
+
+        success = await cls.send_socket(info_packet)
+
+        while not success:
+            logger.info("send socket not succeeded, sleeping 60")
+
+            #Blocks the event loop
+            time.sleep(random.randint(40, 70))
+            success = await cls.send_socket(info_packet)
+
+        if success:
+            cls.fileCounter += 1
+            cls.processedcount += len(cls.files)
+            cls.files = []
+        else:
+            logger.warning("dump_files socket send denied")
+
+        return success
+
+    @classmethod
+    async def send_socket(cls, info_packet):
+        return True
+        logger.info("connect working")
+
+        logger.info("server addr: %s", SERVER_ADDR)
+        r, w = await asyncio.open_connection(SERVER_ADDR, 8888)
+
+        message = b"request"
+
+        await adv_write(w, message)
+
+        m = await adv_read(r)
+        logger.info("received: %s", m)
+
+        if m != b'go':
+            return False
+
+        if m == b'go':
+            await adv_write(w, info_packet, to_pickle=True)
+        w.close()
+        return True
+
+    """
+    @classmethod
+    def _round_func(cls, x, round_by = None):
+
+        if round_by == None:
+            round_by = cls.ROUND_BY
+        return round_by * round(x/round_by)
+    @classmethod
+    def compute_hist(cls, data, bin_method = 'fd'):
+        #Data is a list of timestamps
+        values = []
+        bins = []
+        bin_width = cls.ROUND_BY
+        isTime = []
+        data = sorted(data, key = cls._round_func)
+        for key, group in groupby(data, cls._round_func):
+            bins.append(key)
+            values.append(len(list(group)))
+            isTime.append(False)
+        times = []
+        for x in data:
+            dt = datetime.fromtimestamp(x).replace(year = 2, month = 1, day =1).timestamp()
+            #Five second precision
+            times.append(cls._round_func(dt, round_by = 5))
+        for key, group in groupby(times):
+            bins.append(key)
+            values.append(len(list(group)))
+            isTime.append(True)
+        #Return list of values, bins
+        return [values, bins, isTime, bin_width]
+    """
+
+    @classmethod
+    async def handleResponse(cls, response, fileTuple=None, queue=None):
+        try:
+            rev = await response.text()
+            rev = json.loads(rev)
+            assert response.status == 200, "Response not 200"
+            return rev
+        except:
+            e = sys.exc_info()[0]
+            rev = await response.text()
+            logger.log(5, rev)
+
+            if (fileTuple and queue and fileTuple[-1] < 2):
+                fileTuple = list(fileTuple)
+                fileTuple[-1] += 1
+                await queue.put(fileTuple)
+
+            return -1
+
 
 def dr2_urlbuilder(id: str):
     return "https://www.googleapis.com/drive/v2/files/" + id + "/revisions"
 
-async def API_RESET(seconds = 6, throttle = None, decrease = False):
+
+async def API_RESET(seconds=6, throttle=None, decrease=False):
 
     if throttle and decrease:
         await throttle.decrease()
     secs = random.randint(0, seconds)
-    TestUtil.strToFile("Waiting for GDrive... %d<br>"%(secs), 'streaming.txt')
+    logger.debug("Waiting for GDrive... %d", secs)
     await asyncio.sleep(secs)
     return
 
-async def tryGetQueue(queue: asyncio.Queue, repeatTimes:int = 2, interval:float = 2, name:str = ""):
+
+async def tryGetQueue(queue: asyncio.Queue,
+                      repeatTimes: int = 4,
+                      interval: float = 2,
+                      name: str = ""):
     output = None
     timesWaited = 0
-    while(output==None):
+    while (output == None):
         try:
-            timesWaited+=1
+            timesWaited += 1
             output = queue.get_nowait()
         except:
-            if(timesWaited>repeatTimes):
+            if (timesWaited > repeatTimes):
                 return -1
-            print(name, "  waiting %d / %d"%(timesWaited, repeatTimes))
-            await asyncio.sleep(interval + random.randint(0, 15))
+            logger.info(name + "waiting %d %d", timesWaited, repeatTimes)
+            await asyncio.sleep(random.uniform(0.8*inteval, 1.4*interval))
     return output
 
+
+def mp_dump(info, filename):
+    pickle.dump(info, open(filename, 'wb'))
+
+
+async def adv_read(reader):
+    import struct
+    header = await reader.readexactly(9)
+    header = struct.unpack('!Q?', header)
+
+    to_pickle = header[1]
+    length = header[0]
+
+    data = []
+
+    _length = length
+
+    per_read = 5000
+
+    while length > 0:
+        try:
+            data.append(await reader.readexactly(min(length, per_read)))
+        except asyncio.IncompleteReadError as e:
+            data.append(e.partial)
+            length -= len(e.partial)
+        else:
+            length -= min(length, per_read)
+
+    data = b"".join(data)
+
+    if to_pickle:
+        return pickle.loads(data)
+    else:
+        return data
+
+
+async def adv_write(writer, data, to_pickle=False):
+    import struct
+
+    if to_pickle:
+        data = pickle.dumps(data)
+
+    header = struct.pack('!Q?', len(data), to_pickle)
+    writer.write(header)
+    writer.write(data)
+    await writer.drain()
+
+    return

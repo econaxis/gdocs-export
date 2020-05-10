@@ -1,5 +1,4 @@
 from flask import Flask
-import flask
 from flaskr.flask_config import CONF, cache
 
 
@@ -16,10 +15,11 @@ def create_flask_serv():
 
     register_dashapp(flask_serv)
 
-    #flask_serv.register_blueprint(auth_bp)
-    #flask_serv.register_blueprint(server)
+    import os
 
-    print("returning")
+    if "FLASKDBG" not in os.environ or True:
+        flask_serv.register_blueprint(auth_bp)
+        flask_serv.register_blueprint(server)
 
     return flask_serv
 
