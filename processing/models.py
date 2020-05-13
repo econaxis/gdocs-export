@@ -37,7 +37,7 @@ class Dates(Base):
     files = relationship("Files", back_populates="dates")
 
     __table_args__ = (PrimaryKeyConstraint(name='dates_pk',
-                                           mssql_clustered=False), )
+                                           mssql_clustered=False),)
 
     def __repr__(self):
         return f"Dates Object: {self.date}, {self.adds}, {self.deletes}"
@@ -55,7 +55,7 @@ class Closure(Base):
     parent_r = relationship("Files", foreign_keys=[parent])
 
     __table_args__ = (PrimaryKeyConstraint(name='closure_pk',
-                                           mssql_clustered=False), )
+                                           mssql_clustered=False),)
 
 
 class Filename(Base):
@@ -69,7 +69,7 @@ class Filename(Base):
     files = relationship("Files", back_populates="name", foreign_keys=[fileId])
 
     __table_args__ = (PrimaryKeyConstraint(name='filename_pk',
-                                           mssql_clustered=False), )
+                                           mssql_clustered=False),)
 
 
 class Tasks(Base):

@@ -95,8 +95,8 @@ def formValidate():
 
     if (form.validate_on_submit()):
         flask.session["fileid"] = form.fileId.data
-        if (check_signin(flask.session['userid'])
-                and flask.session.get('signedin')):
+        if (check_signin(flask.session['userid']) and
+                flask.session.get('signedin')):
             return redirect(
                 flask.url_for('server.process_data',
                               _userid=flask.session["userid"]))
@@ -123,7 +123,6 @@ def dashapp(userid):
         return "cur job not done, don't try to access dash app"
 
 
-
 def check_signin(userid, load_creds=False):
     workingPath = current_app.config.get("HOMEDATAPATH") + userid + "/"
     if (not os.path.exists(workingPath + "creds.pickle")):
@@ -140,7 +139,6 @@ def check_signin(userid, load_creds=False):
 @server.route('/favicon.ico')
 def favicon():
     return redirect(flask.url_for('static', filename='favicon.ico'))
-
 
 
 @server.route('/google41579b1449e3ad61.html')

@@ -43,8 +43,8 @@ def exchandler(loop, context):
 
 #Used for debugging
 
-async def send_socket(info_packet):
 
+async def send_socket(info_packet):
 
     logger.info("connect working")
     r, w = await asyncio.open_connection('127.0.0.1', 8888)
@@ -103,8 +103,6 @@ async def handle_request(queue):
             info = await adv_read(reader)
             print("name: ", info.userid)
 
-
-
             if info.extra in {'task', 'upload', None, 'none'}:
                 queue.put(info)
                 logger.debug("Put new task in queue")
@@ -162,14 +160,14 @@ def queue_worker(queue, threads):
             logger.info("done waiting join, resulting thread size %d",
                         len(threads))
 
-
         upload = False
         if latest.extra == 'upload':
             upload = True
 
         ts = threading.Thread(target=sql.start,
                               kwargs=dict(userid=latest.userid,
-                                          files=latest.files, upload = upload))
+                                          files=latest.files,
+                                          upload=upload))
         ts.start()
         threads.append(ts)
 
@@ -192,8 +190,8 @@ def thread_pool():
     exec_tasks.append(executor.submit(start_server, queue))
     exec_tasks.append(executor.submit(queue_worker, queue, threads))
 
-    ds = concurrent.futures.wait(
-        exec_tasks, return_when=concurrent.futures.FIRST_EXCEPTION)
+    ds = concurrent.futures.wait(exec_tasks,
+                                 return_when=concurrent.futures.FIRST_EXCEPTION)
 
     logger.critical("Tasks ended")
 

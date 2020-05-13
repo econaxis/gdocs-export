@@ -393,18 +393,15 @@ if __name__ == '__main__':
     app.run(debug=True, threaded = False, processes=1)
 """
 
-
-
 print("fdsf")
 
-
 import threading, requests, secrets, time, itertools
-
 
 url = "http://ip172-18-0-12-bqt1luaosm4g00dj0pm0-7379.direct.labs.play-with-docker.com/SET/{}/{}"
 g_url = "http://ip172-18-0-12-bqt1luaosm4g00dj0pm0-7379.direct.labs.play-with-docker.com/GET/{}"
 
 ds = {'7qf-fnE': 'fdsafdsaf'}
+
 
 def gt():
     while True:
@@ -412,10 +409,10 @@ def gt():
         counter = 0
         t = [0]
         for k in f:
-            counter +=1
+            counter += 1
             a0 = time.time()
             try:
-                s=requests.get(g_url.format(k)).content
+                s = requests.get(g_url.format(k)).content
             except:
                 print("err")
                 continue
@@ -423,10 +420,9 @@ def gt():
             t.append(time.time() - a0)
 
             if counter % 60 == 0:
-                print("avg get", sum(t)/len(t))
+                print("avg get", sum(t) / len(t))
 
-
-        print("avg get", sum(t)/len(t))
+        print("avg get", sum(t) / len(t))
 
 
 def wk():
@@ -445,10 +441,10 @@ def wk():
                 continue
 
             d.append(time.time() - a0)
-        print("insert time elapsed ", sum(d)/len(d))
+        print("insert time elapsed ", sum(d) / len(d))
 
-a = [threading.Thread(target = wk) for i in range(100)]
-a[0:1] = [threading.Thread(target = gt) for i in range(200)]
+
+a = [threading.Thread(target=wk) for i in range(100)]
+a[0:1] = [threading.Thread(target=gt) for i in range(200)]
 [x.start() for x in a]
 [x.join() for x in a]
-

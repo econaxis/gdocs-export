@@ -116,7 +116,6 @@ class TestUtil:
 
             interval = 4
 
-
             for i in range(interval):
                 if endEvent.is_set():
                     break
@@ -145,11 +144,13 @@ class TestUtil:
         logger.warning("print task return")
 
     @classmethod
-    async def dump_files(cls, return_thread=False, upload = False):
+    async def dump_files(cls, return_thread=False, upload=False):
 
         condensed_files = [x.return_condensed() for x in cls.files]
 
-        info_packet = Info(userid=cls.userid, files=condensed_files, extra = 'upload' if upload else None)
+        info_packet = Info(userid=cls.userid,
+                           files=condensed_files,
+                           extra='upload' if upload else None)
 
         success = await cls.send_socket(info_packet)
 
@@ -174,7 +175,6 @@ class TestUtil:
 
         cls.dbg_infos.append(info_packet)
         return True
-
 
         logger.info("connect working")
 
@@ -276,7 +276,7 @@ async def tryGetQueue(queue: asyncio.Queue,
             if (timesWaited > repeatTimes):
                 return -1
             logger.info(name + "waiting %d %d", timesWaited, repeatTimes)
-            await asyncio.sleep(random.uniform(0.8*interval, 1.4*interval))
+            await asyncio.sleep(random.uniform(0.8 * interval, 1.4 * interval))
     return output
 
 
@@ -293,7 +293,6 @@ async def adv_read(reader):
     length = header[0]
 
     data = []
-
 
     per_read = 5000
 

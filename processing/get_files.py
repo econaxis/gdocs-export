@@ -26,7 +26,6 @@ workerInstances = 10
 
 ACCEPTED_TYPES = {"application/vnd.google-apps.document"}
 
-
 temp_file = namedtuple('temp_file', ['id', 'name', 'type', 'path'])
 
 #For managing duplicates
@@ -151,7 +150,6 @@ async def getRevision(files,
         await gd.async_init(proc_file.name, proc_file.id, session,
                             TestUtil.headers, proc_file.path)
 
-
         if gd.done and gd.operations:
             TestUtil.files.append(gd)
         else:
@@ -232,7 +230,7 @@ async def start():
 
         logger.info("await gather revisions done")
 
-    await TestUtil.dump_files(upload = True)
+    await TestUtil.dump_files(upload=True)
 
     printTask.cancel()
 

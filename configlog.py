@@ -21,7 +21,7 @@ os.environ["TZ"] = "America/Vancouver"
 time.tzset()
 
 #logFile = flask_config.Config.HOMEDATAPATH + "logs/logs{}---{}.txt".format(
-    #datetime.now().strftime("%-m-%d"), token)
+#datetime.now().strftime("%-m-%d"), token)
 
 syslog = SysLogHandler(address=('logs2.papertrailapp.com', 49905))
 #filelog = FileHandler(logFile)
@@ -112,7 +112,7 @@ import multiprocessing as mp
 
 def sendmail(msg="", return_thread=False):
 
-    p = mp.Process(target=mp_sendmail, args=(msg, ))
+    p = mp.Process(target=mp_sendmail, args=(msg,))
     p.start()
 
     if return_thread:

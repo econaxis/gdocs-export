@@ -7,9 +7,9 @@ from flaskr.dashapp.dash_functions import gen_margin
 def layout():
 
     return html.Div([
-        html.Div(id = "maifd",
-            children = [dcc.Graph(id="sunburst")], className="twelve columns"),
-
+        html.Div(id="maifd",
+                 children=[dcc.Graph(id="sunburst")],
+                 className="twelve columns"),
         html.Div([
             html.Div([dcc.Graph(id="fList"),
                       dcc.Dropdown(id="dropdown")],
@@ -48,8 +48,6 @@ def layout():
             ],
             className="twelve columns",
         ),
-
-
         html.Header(children="""
             <!-- Global site tag (gtag.js) - Google Analytics -->
             <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104236791-2"></script>
@@ -66,13 +64,11 @@ def layout():
             dcc.Graph(
                 id="year-all",
                 figure=go.Figure(
-                    layout=dict(margin=gen_margin(), xaxis=dict(
-                        type="date")))),
+                    layout=dict(margin=gen_margin(), xaxis=dict(type="date")))),
             dcc.Graph(
                 id="week-all",
                 figure=go.Figure(
-                    layout=dict(margin=gen_margin(), xaxis=dict(
-                        type="date")))),
+                    layout=dict(margin=gen_margin(), xaxis=dict(type="date")))),
             dcc.Graph(
                 id="day-all",
                 figure=go.Figure(
