@@ -16,13 +16,13 @@ logger = logging.getLogger(__name__)
 
 pprint = pprint.PrettyPrinter(indent=4).pprint
 
-timeout = aiohttp.ClientTimeout(total=8)
+timeout = aiohttp.ClientTimeout(total=15)
 
-MAX_FILES = 20
+MAX_FILES = 2000
 
 SEED_ID = "root"
 
-workerInstances = 10
+workerInstances = 15
 
 ACCEPTED_TYPES = {"application/vnd.google-apps.document"}
 
@@ -58,21 +58,28 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
         # Root id is different structure
         if (proc_file.id == "root"):
             data = dict(
+                q = "(mimeType='application/vnd.google-apps.folder' or mimeType= 'application/vnd.google-apps.document') and  \
+                    trashed = False",
+
                 corpora="allDrives",
                 includeItemsFromAllDrives='true',
                 supportsTeamDrives='true',
                 fields=
-                'files/mimeType, files/id, files/name, files/capabilities/canReadRevisions'
+                'files/mimeType, files/id, files/name, files/capabilities/canReadRevisions',
+                pageSize=1000
             )
         else:
-            query = "'" + proc_file.id + "' in parents"
+            query = "'" + proc_file.id + "' in parents and \
+                (mimeType='application/vnd.google-apps.folder' or mimeType= 'application/vnd.google-apps.document') and \
+                trashed = False"
             data = dict(
                 q=query,
                 corpora="allDrives",
                 includeItemsFromAllDrives='true',
                 supportsTeamDrives='true',
                 fields=
-                'files/mimeType, files/id, files/name, files/capabilities/canReadRevisions'
+                'files/mimeType, files/id, files/name, files/capabilities/canReadRevisions',
+                pageSize = 1000
             )
 
         try:
@@ -213,7 +220,7 @@ async def start():
         endEvent = asyncio.Event()
 
         fileExplorers = [loop.create_task(getIdsRecursive("https://www.googleapis.com/drive/v3/files", \
-                                         folders, files, session, TestUtil.headers, endEvent)) for i in range(1)]
+                                         folders, files, session, TestUtil.headers, endEvent)) for i in range(3)]
 
         revisionExplorer = [
             loop.create_task(
@@ -309,7 +316,7 @@ def loadFiles(USER_ID, _workingPath, fileId, _creds):
     #open(_workingPath + 'done.txt', 'a+').write("DONE")
     configlog.sendmail(msg="program ended successfully")
 
-    pickle.dump(TestUtil.dbg_infos, open('dbg_infos', 'wb'))
+    #pickle.dump(TestUtil.dbg_infos, open('dbg_infos', 'wb'))
     logger.info("Program ended successfully for userid %s", USER_ID)
 
 

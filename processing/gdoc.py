@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 base_url = 'https://docs.google.com/document/d/{file_id}/revisions/load?id={file_id}&start=1&end={end}'
 url = 'https://www.googleapis.com/drive/v3/files/{}/revisions'
 
-timeout = aiohttp.ClientTimeout(total=3)
+timeout = aiohttp.ClientTimeout(total=10)
 
 Closure = namedtuple("Closure", ['parent', 'child', 'depth'])
 
@@ -124,7 +124,7 @@ class GDoc():
             self.done = False
         logger.info("Done computing gdoc for %s %s", self.name, self.fileId)
 
-    async def get_last_revision(self, retry=False):
+    async def get_last_revision(self, retry=0):
 
         try:
             async with self.session.get(url=url.format(self.fileId),
@@ -132,11 +132,12 @@ class GDoc():
                                         timeout=timeout) as response:
                 code = response.status
                 if code != 200:
-                    if retry:
+                    if retry > 5:
                         return -1
                     logger.info("can't get last revision, sleeping 7")
-                    await asyncio.sleep(random.uniform(10, 20))
-                    await self.get_last_revision(retry=True)
+                    await asyncio.sleep(random.uniform(5, 35))
+                    await self.get_last_revision(retry=retry+1)
+                    return 0
                 else:
                     rev = await response.text()
                     rev = json.loads(rev)
@@ -176,7 +177,7 @@ class GDoc():
             try:
                 response = requests.get(url=url,
                                         headers=self.headers,
-                                        timeout=10)
+                                        timeout=15)
 
                 assert response.status_code == 200
             except:

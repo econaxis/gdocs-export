@@ -146,6 +146,9 @@ class TestUtil:
     @classmethod
     async def dump_files(cls, return_thread=False, upload=False):
 
+        if not upload:
+            return True
+
         condensed_files = [x.return_condensed() for x in cls.files]
 
         info_packet = Info(userid=cls.userid,
@@ -172,10 +175,6 @@ class TestUtil:
 
     @classmethod
     async def send_socket(cls, info_packet):
-
-        cls.dbg_infos.append(info_packet)
-        return True
-
         logger.info("connect working")
 
         logger.info("server addr: %s", SERVER_ADDR)
@@ -263,8 +262,8 @@ async def API_RESET(seconds=6, throttle=None, decrease=False):
 
 
 async def tryGetQueue(queue: asyncio.Queue,
-                      repeatTimes: int = 4,
-                      interval: float = 2,
+                      repeatTimes: int = 2,
+                      interval: float = 5,
                       name: str = ""):
     output = None
     timesWaited = 0
