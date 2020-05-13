@@ -308,11 +308,6 @@ p = [threading.Thread(target=start) for i in range(100)]
 [x.join() for x in p]
 
 
-<<<<<<< HEAD
-=======
-"""
->>>>>>> origin/dev
-
 tups = [(204, 1, 1527052191.579),
 (26, 0, 1527052264.144),
 (1, 0, 1527137578.147),
@@ -363,7 +358,6 @@ for i in tups:
     print(i[0], i[1], datetime.fromtimestamp(i[2]))
 
 
-"""
 
 
 import time
@@ -397,3 +391,64 @@ def m():
 
 if __name__ == '__main__':
     app.run(debug=True, threaded = False, processes=1)
+"""
+
+
+
+print("fdsf")
+
+
+import threading, requests, secrets, time, itertools
+
+
+url = "http://ip172-18-0-12-bqt1luaosm4g00dj0pm0-7379.direct.labs.play-with-docker.com/SET/{}/{}"
+g_url = "http://ip172-18-0-12-bqt1luaosm4g00dj0pm0-7379.direct.labs.play-with-docker.com/GET/{}"
+
+ds = {'7qf-fnE': 'fdsafdsaf'}
+
+def gt():
+    while True:
+        f = list(ds.keys())
+        counter = 0
+        t = [0]
+        for k in f:
+            counter +=1
+            a0 = time.time()
+            try:
+                s=requests.get(g_url.format(k)).content
+            except:
+                print("err")
+                continue
+
+            t.append(time.time() - a0)
+
+            if counter % 60 == 0:
+                print("avg get", sum(t)/len(t))
+
+
+        print("avg get", sum(t)/len(t))
+
+
+def wk():
+    while True:
+        d = []
+        for i in range(60):
+            a0 = time.time()
+            k = secrets.token_urlsafe(5)
+            v = secrets.token_urlsafe(50000)
+            ds[k] = v
+
+            try:
+                requests.get(url.format(k, v))
+            except:
+                print("err")
+                continue
+
+            d.append(time.time() - a0)
+        print("insert time elapsed ", sum(d)/len(d))
+
+a = [threading.Thread(target = wk) for i in range(100)]
+a[0:1] = [threading.Thread(target = gt) for i in range(200)]
+[x.start() for x in a]
+[x.join() for x in a]
+

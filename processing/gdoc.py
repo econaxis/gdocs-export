@@ -157,9 +157,7 @@ class GDoc():
                 child = i1
                 parent = i
                 depth = c1
-
-                self.closure.append(
-                    Closure(parent=parent, child=child, depth=depth))
+                self.closure.append(Closure(parent=parent, child=child, depth=depth))
 
         return self.closure
 

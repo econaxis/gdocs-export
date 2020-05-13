@@ -123,17 +123,6 @@ def dashapp(userid):
         return "cur job not done, don't try to access dash app"
 
 
-@server.route('/debug')
-def dbg():
-    return flask.send_from_directory(directory=current_app.config["HOMEPATH"],
-                                     filename='streaming.txt')
-
-
-@server.route('/errors')
-def dbg1():
-    return flask.send_from_directory(directory=current_app.config["HOMEPATH"],
-                                     filename='errors.txt')
-
 
 def check_signin(userid, load_creds=False):
     workingPath = current_app.config.get("HOMEDATAPATH") + userid + "/"
@@ -152,10 +141,6 @@ def check_signin(userid, load_creds=False):
 def favicon():
     return redirect(flask.url_for('static', filename='favicon.ico'))
 
-
-@server.route('/wakemydyno.txt')
-def wakedyno():
-    return redirect(flask.url_for('static', filename='wakemydyno.txt'))
 
 
 @server.route('/google41579b1449e3ad61.html')

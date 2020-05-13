@@ -48,7 +48,7 @@ def register_dashapp(flask_serv):
         response.headers['Content-Security-Policy']= 'frame-src * data: blob: ;'
         return response
 
-    if "FLASKDBG" in os.environ:
+    if "FLASKDBG" in os.environ and False:
         dashapp.run_server(debug=True);
 
 

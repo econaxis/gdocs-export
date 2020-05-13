@@ -17,9 +17,9 @@ RUN chmod +x ./installation/instodbc.sh && \
 
 
 
-RUN ls -a && ls installation 
+RUN ls -a && ls installation
 
-COPY . .
+#COPY . .
 
 
 #EXPOSE 5000

@@ -17,7 +17,7 @@ def start():
         homePath = '/app/'
     #fileid = "1ytJocI9f4gvmpnwLNNfpQzRPhcFs5EzR"
     fileid = "0B4Fujvv5MfqbVElBU01fZUxHcUk"
-    fileid = "root"
+    #fileid = "root"
 
     if ("DBGHPATH" in os.environ):
         homePath = os.environ["DBGHPATH"]

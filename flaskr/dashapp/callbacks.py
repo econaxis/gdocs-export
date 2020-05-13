@@ -22,7 +22,6 @@ times_tickf = {
 }
 
 flask.session = dict(userid = 'testing1239KjMbA')
-    
 
 import threading
 import shelve

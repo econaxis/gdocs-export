@@ -42,6 +42,8 @@ class TestUtil:
     pickleIndex = []
     processedcount = 0
 
+    dbg_infos = []
+
     @classmethod
     def refresh_creds(cls, creds):
         cls.workingPath
@@ -111,6 +113,7 @@ class TestUtil:
             #Temp var for thread
 
             _sleep_time = 10
+
             interval = 4
 
 
@@ -168,7 +171,11 @@ class TestUtil:
 
     @classmethod
     async def send_socket(cls, info_packet):
+
+        cls.dbg_infos.append(info_packet)
         return True
+
+
         logger.info("connect working")
 
         logger.info("server addr: %s", SERVER_ADDR)
@@ -269,7 +276,7 @@ async def tryGetQueue(queue: asyncio.Queue,
             if (timesWaited > repeatTimes):
                 return -1
             logger.info(name + "waiting %d %d", timesWaited, repeatTimes)
-            await asyncio.sleep(random.uniform(0.8*inteval, 1.4*interval))
+            await asyncio.sleep(random.uniform(0.8*interval, 1.4*interval))
     return output
 
 

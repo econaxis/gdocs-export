@@ -24,9 +24,12 @@ services:
                 reservations:
                     memory: 100M
         volumes:
-            - .:${HOMEPATH}
+            - type: bind
+              source: .
+              target: ${HOMEPATH}
     web:
         image: 'henry2833/pydocs:latest'
+        entrypoint: ['echo', 'Service disabled']
         environment:
             REDIS_PASSW: "${REDIS_PASSW}"
             SQL_CONN:  "${SQL_CONN}"
@@ -44,9 +47,10 @@ services:
         ports:
             - target: 5000
               published: 80
-
         volumes:
-            - .:${HOMEPATH}
+            - type: bind
+              source: .
+              target: ${HOMEPATH}
     sql:
         image: 'henry2833/pydocs:latest'
         environment:
@@ -57,9 +61,12 @@ services:
             HOMEDATAPATH: "${HOMEDATAPATH}"
             HOMEPATH: "${HOMEPATH}"
             AZURESTORAGEKEY: "${AZURESTORAGEKEY}"
-        #container_name: sql_serv
         volumes:
-            - .:${HOMEPATH}
+            - type: bind
+              source: .
+              target: ${HOMEPATH}
 
-
-
+networks:
+    default:
+        external:
+            name: pydocs-net

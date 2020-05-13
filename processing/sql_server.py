@@ -43,12 +43,8 @@ def exchandler(loop, context):
 
 #Used for debugging
 
-fdsfs = secrets.token_urlsafe(4)
-async def send_socket():
+async def send_socket(info_packet):
 
-    info_packet = pickle.load(open('info_packet', 'rb'))
-
-    info_packet = info_packet._replace(userid="send_sot" + fdsfs)
 
     logger.info("connect working")
     r, w = await asyncio.open_connection('127.0.0.1', 8888)
@@ -120,10 +116,12 @@ async def handle_request(queue):
     #Used for debugging
 
     if "FLASKDBG" in os.environ:
-        reps = 40
-        while reps:
-            reps -= 1
-            asyncio.create_task(send_socket())
+        tok = secrets.token_urlsafe(4)
+        info_packet = pickle.load(open('dbg_infos', 'rb'))
+        info_packet = [x._replace(userid="send_sot" + tok) for x in info_packet]
+
+        for i in info_packet:
+            asyncio.create_task(send_socket(i))
 
     addr = server.sockets[0].getsockname()
     logger.info(f'Serving on {addr}')

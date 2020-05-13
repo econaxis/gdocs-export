@@ -1,4 +1,5 @@
 import asyncio
+from collections import namedtuple
 from time import time
 import random
 import aiohttp
@@ -17,7 +18,7 @@ pprint = pprint.PrettyPrinter(indent=4).pprint
 
 timeout = aiohttp.ClientTimeout(total=8)
 
-MAX_FILES = 50
+MAX_FILES = 20
 
 SEED_ID = "root"
 
@@ -25,7 +26,6 @@ workerInstances = 10
 
 ACCEPTED_TYPES = {"application/vnd.google-apps.document"}
 
-from collections import namedtuple
 
 temp_file = namedtuple('temp_file', ['id', 'name', 'type', 'path'])
 
@@ -151,7 +151,6 @@ async def getRevision(files,
         await gd.async_init(proc_file.name, proc_file.id, session,
                             TestUtil.headers, proc_file.path)
 
-        gd.compute_closure()
 
         if gd.done and gd.operations:
             TestUtil.files.append(gd)
@@ -311,6 +310,8 @@ def loadFiles(USER_ID, _workingPath, fileId, _creds):
 
     #open(_workingPath + 'done.txt', 'a+').write("DONE")
     configlog.sendmail(msg="program ended successfully")
+
+    pickle.dump(TestUtil.dbg_infos, open('dbg_infos', 'wb'))
     logger.info("Program ended successfully for userid %s", USER_ID)
 
 

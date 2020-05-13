@@ -79,8 +79,6 @@ def reload_engine(owner_id, create_new = False, download = False, lock = None):
         #else, we download it from AZ file storage
 
         sqlite_owner_id = get_db_path(owner_id)
-
-
         #Only download if the file doesn't exist
         if download and not os.path.isfile(sqlite_owner_id):
             az_download_dbs(owner_id, sqlite_owner_id)
@@ -97,7 +95,7 @@ def reload_engine(owner_id, create_new = False, download = False, lock = None):
 
         logger.info("Init DB Conn at %s", sqlite_owner_id)
 
-        ENGINE = sqlal.create_engine(f'sqlite:////{sqlite_owner_id}', echo = True,
+        ENGINE = sqlal.create_engine(f'sqlite:////{sqlite_owner_id}', echo = False,
                                      connect_args=dict(check_same_thread=False))
 
         Base.metadata.create_all(bind=ENGINE)
@@ -141,7 +139,6 @@ def db_connect(func):
     return inner
 
 
-added_list = []
 
 
 @db_connect
@@ -184,18 +181,19 @@ def load_clos(file_data, fileid_obj_map, dict_lock, owner_id=None):
 
                     sess.commit()
                     sess.expunge_all()
-
-                    added_list.append((child_id, clos.child[0][-4:]))
                 except sqlal.exc.InvalidRequestError as e:
                     logger.exception("clos %s", '+'*30)
                     breakpoint()
                     raise e
                 else:
-                    cls = Closure(parent=parent_id,
-                                  child=child_id,
-                                  depth=clos.depth)
+                    if not sess.query(Closure).filter_by(parent=parent_id, child=child_id, depth=clos.depth).scalar():
+                        cls = Closure(parent=parent_id,
+                                      child=child_id,
+                                      depth=clos.depth)
 
-                    sess.add(cls)
+                        sess.add(cls)
+                    else:
+                        print("Duplicate closure found, ", parent_id, child_id, clos.depth)
 
 
 @db_connect
