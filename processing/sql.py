@@ -19,7 +19,6 @@ pprint = PrettyPrinter().pprint
 scrt = secrets.token_urlsafe(7)
 token = datetime.now().strftime("%d-%H.%f") + scrt
 
-PARAMS = os.environ["SQL_CONN"]
 
 sessions = {}
 sessions_lock = threading.Lock()
