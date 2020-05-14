@@ -2,6 +2,10 @@ FROM gitpod/workspace-full
 
 USER gitpod
 
+WORKDIR pydocs
+
+COPY . .
+
 RUN sudo apt-get update && \
     sudo apt-get install -y gcc libldap2-dev libsasl2-dev libssl-dev&& \
     pip install --upgrade pip && \
