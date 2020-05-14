@@ -2,8 +2,8 @@ FROM gitpod/workspace-full
 
 USER gitpod
 
-RUN apt-get update && \
-    apt-get install -y gcc libldap2-dev libsasl2-dev libssl-dev&& \
+RUN sudo apt-get update && \
+    sudo apt-get install -y gcc libldap2-dev libsasl2-dev libssl-dev&& \
     pip install --upgrade pip && \
     pip install pyopenssl && \
     pip install -r installation/requirements.txt 
