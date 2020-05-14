@@ -1,0 +1,17 @@
+highlight Normal ctermfg=black ctermbg=lightgrey
+
+
+call plug#begin('~/vimconfig/plugins')
+
+"Fugitive Vim Github Wrapper
+Plug 'tpope/vim-fugitive'
+Plug 'ycm-core/YouCompleteMe'
+Plug 'vim-airline/vim-airline'
+Plug 'tpope/vim-surround'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'vim-scripts/bufexplorer.zip'
+Plug 'flazz/vim-colorschemes'
+Plug 'bling/vim-bufferline'
+Plug 'tpope/vim-fugitive'
+
+call plug#end()
