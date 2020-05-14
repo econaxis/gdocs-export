@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h3> View your results: {{ userid }} </h3>
+
+<div class = "scrolltext twelve columns">
+
+<pre>
+{% autoescape false %}
+{{data}}
+{% endautoescape %}
+</pre>
+</div>
+
+{% if DONE %}
+<button class = "button button4 twelve columns" onclick = "location.href='{{ DASH_LOC }}'"> View results </button>
+{% else %}
+  <button class = "button button4 twelve columns disabled" onclick = "alert('Wait a moment until all data has been processed')"> View results (data has not finished yet) </button>
+{% endif %}
+{% endblock %}
+

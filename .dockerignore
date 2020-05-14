@@ -1,0 +1,6 @@
+local.settings.json
+data/logs/**
+drun.sh
+dockerbuild.sh
+__pycache_
+**/__pycache__
