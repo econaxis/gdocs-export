@@ -8,9 +8,9 @@ COPY . .
 
 RUN sudo apt-get update && \
     sudo apt-get install -y gcc libldap2-dev libsasl2-dev libssl-dev&& \
-    pip install --upgrade pip && \
-    pip install pyopenssl && \
-    pip install -r installation/requirements.txt 
+    pip3.8 install --upgrade pip && \
+    pip3.8 install pyopenssl && \
+    pip3.8 install -r installation/requirements.txt 
 
 # Install custom tools, runtime, etc. using apt-get
 # For example, the command below would install "bastet" - a command line tetris clone:
