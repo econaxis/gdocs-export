@@ -175,6 +175,10 @@ class TestUtil:
 
     @classmethod
     async def send_socket(cls, info_packet):
+
+        print(info_packet)
+
+        return True
         logger.info("connect working")
 
         logger.info("server addr: %s", SERVER_ADDR)
