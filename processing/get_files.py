@@ -1,4 +1,5 @@
 import asyncio
+from collections import namedtuple
 from time import time
 import random
 import aiohttp
@@ -15,17 +16,15 @@ logger = logging.getLogger(__name__)
 
 pprint = pprint.PrettyPrinter(indent=4).pprint
 
-timeout = aiohttp.ClientTimeout(total=8)
+timeout = aiohttp.ClientTimeout(total=15)
 
-MAX_FILES = 50
+MAX_FILES = 2000
 
 SEED_ID = "root"
 
-workerInstances = 10
+workerInstances = 15
 
 ACCEPTED_TYPES = {"application/vnd.google-apps.document"}
-
-from collections import namedtuple
 
 temp_file = namedtuple('temp_file', ['id', 'name', 'type', 'path'])
 
@@ -59,21 +58,28 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
         # Root id is different structure
         if (proc_file.id == "root"):
             data = dict(
+                q = "(mimeType='application/vnd.google-apps.folder' or mimeType= 'application/vnd.google-apps.document') and  \
+                    trashed = False",
+
                 corpora="allDrives",
                 includeItemsFromAllDrives='true',
                 supportsTeamDrives='true',
                 fields=
-                'files/mimeType, files/id, files/name, files/capabilities/canReadRevisions'
+                'files/mimeType, files/id, files/name, files/capabilities/canReadRevisions',
+                pageSize=1000
             )
         else:
-            query = "'" + proc_file.id + "' in parents"
+            query = "'" + proc_file.id + "' in parents and \
+                (mimeType='application/vnd.google-apps.folder' or mimeType= 'application/vnd.google-apps.document') and \
+                trashed = False"
             data = dict(
                 q=query,
                 corpora="allDrives",
                 includeItemsFromAllDrives='true',
                 supportsTeamDrives='true',
                 fields=
-                'files/mimeType, files/id, files/name, files/capabilities/canReadRevisions'
+                'files/mimeType, files/id, files/name, files/capabilities/canReadRevisions',
+                pageSize = 1000
             )
 
         try:
@@ -151,8 +157,6 @@ async def getRevision(files,
         await gd.async_init(proc_file.name, proc_file.id, session,
                             TestUtil.headers, proc_file.path)
 
-        gd.compute_closure()
-
         if gd.done and gd.operations:
             TestUtil.files.append(gd)
         else:
@@ -216,7 +220,7 @@ async def start():
         endEvent = asyncio.Event()
 
         fileExplorers = [loop.create_task(getIdsRecursive("https://www.googleapis.com/drive/v3/files", \
-                                         folders, files, session, TestUtil.headers, endEvent)) for i in range(1)]
+                                         folders, files, session, TestUtil.headers, endEvent)) for i in range(3)]
 
         revisionExplorer = [
             loop.create_task(
@@ -233,7 +237,7 @@ async def start():
 
         logger.info("await gather revisions done")
 
-    await TestUtil.dump_files(upload = True)
+    await TestUtil.dump_files(upload=True)
 
     printTask.cancel()
 
@@ -311,6 +315,8 @@ def loadFiles(USER_ID, _workingPath, fileId, _creds):
 
     #open(_workingPath + 'done.txt', 'a+').write("DONE")
     configlog.sendmail(msg="program ended successfully")
+
+    #pickle.dump(TestUtil.dbg_infos, open('dbg_infos', 'wb'))
     logger.info("Program ended successfully for userid %s", USER_ID)
 
 

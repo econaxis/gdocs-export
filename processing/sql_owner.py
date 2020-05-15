@@ -6,6 +6,7 @@ logger = logging.getLogger(__name__)
 
 
 class OwnerManager():
+
     def __init__(self):
         self.owner_lock = Lock()
         self.owners = {}
@@ -21,7 +22,7 @@ class OwnerManager():
         def create_owner(owner_id=None):
             assert owner_id != None, "owner_id is none"
 
-            reload_engine(owner_id, create_new = True)
+            reload_engine(owner_id, create_new=True)
             #Debugging, added secret for no unique key constraint
             reload_engine(owner_id).remove()
 

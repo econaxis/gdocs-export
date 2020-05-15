@@ -23,7 +23,6 @@ token = datetime.now().strftime("%d-%H.%f") + scrt
 sessions = {}
 sessions_lock = threading.Lock()
 
-
 #Global variable for data path
 hdatapath = Config.HOMEDATAPATH
 
@@ -34,52 +33,54 @@ az_driver = None
 
 import azure.common
 
+
 def setup_azure():
     global az_driver
     from azure.storage.file import FileService
-    az_driver = FileService(account_name = 'pydocs', account_key = os.environ["AZURESTORAGEKEY"])
+    az_driver = FileService(account_name='pydocs',
+                            account_key=os.environ["AZURESTORAGEKEY"])
 
 
-def az_download_dbs(owner_id , download_file):
+def az_download_dbs(owner_id, download_file):
     logger.info("requested az file: %s", owner_id)
     try:
-        az_driver.get_file_to_path('def', 'data/dbs', f"{owner_id}.db" , download_file)
+        az_driver.get_file_to_path('def', 'data/dbs', f"{owner_id}.db",
+                                   download_file)
     except azure.common.AzureMissingResourceHttpError as e:
         logger.exception("cannot download file")
 
-def az_upload_dbs(owner_id,  from_file):
+
+def az_upload_dbs(owner_id, from_file):
     upload_path = f"{owner_id}.db"
     try:
-        az_driver.create_file_from_path('def', 'data/dbs', upload_path , from_file)
+        az_driver.create_file_from_path('def', 'data/dbs', upload_path,
+                                        from_file)
     except azure.common as e:
         logger.exception("canot upload file")
+
 
 def get_db_path(owner_id):
     return os.path.join(hdatapath, f'dbs/{owner_id}.db')
 
-def reload_engine(owner_id, create_new = False, download = False, lock = None):
+
+def reload_engine(owner_id, create_new=False, download=False, lock=None):
     global sessions
 
     if not lock:
         lock = sessions_lock
 
-
     if owner_id in sessions:
         logger.info("found old engine")
         return sessions[owner_id]
 
-
     if not az_driver:
         setup_azure()
-
 
     with lock:
         #Check if the DB file already exists; if yes, then we load it,
         #else, we download it from AZ file storage
 
         sqlite_owner_id = get_db_path(owner_id)
-
-
         #Only download if the file doesn't exist
         if download and not os.path.isfile(sqlite_owner_id):
             az_download_dbs(owner_id, sqlite_owner_id)
@@ -89,21 +90,20 @@ def reload_engine(owner_id, create_new = False, download = False, lock = None):
             logger.warning(f"SQLITE doesn't exist! {owner_id}")
 
         #if not create_new and not os.owner_id.isfile(sqlite_owner_id):
-            #az_download_dbs(owner_id = owner_id, download_file = sqlite_owner_id)
-
+        #az_download_dbs(owner_id = owner_id, download_file = sqlite_owner_id)
 
         logger.warning("RELOADING ENGINE")
 
         logger.info("Init DB Conn at %s", sqlite_owner_id)
 
-        ENGINE = sqlal.create_engine(f'sqlite:////{sqlite_owner_id}', echo = True,
+        ENGINE = sqlal.create_engine(f'sqlite:////{sqlite_owner_id}',
+                                     echo=False,
                                      connect_args=dict(check_same_thread=False))
 
         Base.metadata.create_all(bind=ENGINE)
 
         _session = sessionmaker(bind=ENGINE)
         v_scoped_session = scoped_session(_session)
-
 
         logger.warning("set session for ownerid %s", owner_id)
         sessions[owner_id] = v_scoped_session
@@ -113,11 +113,11 @@ def reload_engine(owner_id, create_new = False, download = False, lock = None):
             ds = v_scoped_session().query(Files).all()
             logger.warning("Files Data: %s", ds)
 
-
         return v_scoped_session
 
 
 def db_connect(func):
+
     @functools.wraps(func)
     def inner(*args, **kwargs):
 
@@ -140,9 +140,6 @@ def db_connect(func):
     return inner
 
 
-added_list = []
-
-
 @db_connect
 def load_clos(file_data, fileid_obj_map, dict_lock, owner_id=None):
     assert owner_id != None, "Ownerid is none err"
@@ -159,7 +156,6 @@ def load_clos(file_data, fileid_obj_map, dict_lock, owner_id=None):
                     fi.name = [Filename(files=fi, fileName=clos.parent[1])]
                     sess.add(fi)
                     fileid_obj_map[clos.parent[0]] = fi
-
 
                 sess.commit()
 
@@ -183,18 +179,22 @@ def load_clos(file_data, fileid_obj_map, dict_lock, owner_id=None):
 
                     sess.commit()
                     sess.expunge_all()
-
-                    added_list.append((child_id, clos.child[0][-4:]))
                 except sqlal.exc.InvalidRequestError as e:
-                    logger.exception("clos %s", '+'*30)
+                    logger.exception("clos %s", '+' * 30)
                     breakpoint()
                     raise e
                 else:
-                    cls = Closure(parent=parent_id,
-                                  child=child_id,
-                                  depth=clos.depth)
+                    if not sess.query(Closure).filter_by(
+                            parent=parent_id, child=child_id,
+                            depth=clos.depth).scalar():
+                        cls = Closure(parent=parent_id,
+                                      child=child_id,
+                                      depth=clos.depth)
 
-                    sess.add(cls)
+                        sess.add(cls)
+                    else:
+                        print("Duplicate closure found, ", parent_id, child_id,
+                              clos.depth)
 
 
 @db_connect
@@ -235,7 +235,7 @@ def load_from_dict(lt_files, dict_lock, owner_id=None):
     logger.warning("Done load dict")
 
 
-def start(*args ,**kwargs):
+def start(*args, **kwargs):
     import sys
     try:
         insert_sql(*args, **kwargs)
@@ -245,16 +245,14 @@ def start(*args ,**kwargs):
         sys.excepthook(*sys.exc_info())
 
 
-def insert_sql(userid, files, upload = False):
+def insert_sql(userid, files, upload=False):
     logger.debug("Starting sql for userid %s", userid)
 
     from processing.sql_server import owner_manager
 
-
     fileid_obj_map, dict_lock = owner_manager(owner_id=userid)
 
     sess = reload_engine(userid)()
-
 
     logger.info("Checked out owner object, fileid dict, and lock")
 
@@ -281,8 +279,8 @@ def insert_sql(userid, files, upload = False):
 
         if not count_avg or not weighted_avg:
             #Go to next file, this file has no data, and avoid division by zero error
-            logger.warning("File content empty: %s, %s, operations: %s",
-                           f.name, f.fileId, f.operations)
+            logger.warning("File content empty: %s, %s, operations: %s", f.name,
+                           f.fileId, f.operations)
             weighted_avg = None
         else:
             weighted_avg = float(weighted_avg / count_avg)
@@ -322,17 +320,15 @@ def insert_sql(userid, files, upload = False):
 
     logger.info("starting load closures")
 
-    load_clos(files, fileid_obj_map,  dict_lock, owner_id = userid)
+    load_clos(files, fileid_obj_map, dict_lock, owner_id=userid)
     sess.commit()
     logger.warning("Done all for owner_id %s; processed files: %d", userid,
                    SZ_FILES)
 
-
     if upload:
         db_path = get_db_path(userid)
-        az_upload_dbs(owner_id = userid, from_file =db_path)
+        az_upload_dbs(owner_id=userid, from_file=db_path)
         logger.warning("Uploaded db at %s", db_path)
-
 
     return
     """

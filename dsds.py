@@ -15,7 +15,7 @@ def start():
     homePath=Config.HOMEPATH
     #fileid = "1ytJocI9f4gvmpnwLNNfpQzRPhcFs5EzR"
     fileid = "0B4Fujvv5MfqbVElBU01fZUxHcUk"
-    fileid = "root"
+    #fileid = "root"
 
 
     workingPath = Config.HOMEDATAPATH

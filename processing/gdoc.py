@@ -17,12 +17,13 @@ logger = logging.getLogger(__name__)
 base_url = 'https://docs.google.com/document/d/{file_id}/revisions/load?id={file_id}&start=1&end={end}'
 url = 'https://www.googleapis.com/drive/v3/files/{}/revisions'
 
-timeout = aiohttp.ClientTimeout(total=3)
+timeout = aiohttp.ClientTimeout(total=10)
 
 Closure = namedtuple("Closure", ['parent', 'child', 'depth'])
 
 
 class Operation():
+
     def __init__(self, date, content):
         self.date = date
         self.content = content
@@ -53,8 +54,8 @@ class GDoc():
             logger.warning(
                 "Operations not found but still returning condensed!! %s %s %s",
                 self.name, self.fileId, self.operations)
-        return gd_condensed(self.name, self.path, self.operations,
-                            self.closure, self.fileId)
+        return gd_condensed(self.name, self.path, self.operations, self.closure,
+                            self.fileId)
 
     def __init__(self):
         self.done = False
@@ -84,7 +85,7 @@ class GDoc():
 
             parent_conn, child_conn = Pipe()
 
-            p = Process(target=self._download_details, args=(child_conn, ))
+            p = Process(target=self._download_details, args=(child_conn,))
 
             async with GDoc.sem:
                 p.start()
@@ -95,9 +96,9 @@ class GDoc():
                 while not parent_conn.poll(0.01) and counter < 5:
                     counter += 1
                     logger.info("sleeping from poll, waiting for %s, %d",
-                                 fileId[0:5], counter)
-                    await asyncio.sleep(
-                        random.uniform(1 * counter, 5 * counter))
+                                fileId[0:5], counter)
+                    await asyncio.sleep(random.uniform(1 * counter,
+                                                       5 * counter))
 
                 logger.debug("received goahead to receive %s", fileId[0:5])
 
@@ -123,7 +124,7 @@ class GDoc():
             self.done = False
         logger.info("Done computing gdoc for %s %s", self.name, self.fileId)
 
-    async def get_last_revision(self, retry=False):
+    async def get_last_revision(self, retry=0):
 
         try:
             async with self.session.get(url=url.format(self.fileId),
@@ -131,11 +132,12 @@ class GDoc():
                                         timeout=timeout) as response:
                 code = response.status
                 if code != 200:
-                    if retry:
+                    if retry > 5:
                         return -1
                     logger.info("can't get last revision, sleeping 7")
-                    await asyncio.sleep(random.uniform(10, 20))
-                    await self.get_last_revision(retry=True)
+                    await asyncio.sleep(random.uniform(5, 35))
+                    await self.get_last_revision(retry=retry+1)
+                    return 0
                 else:
                     rev = await response.text()
                     rev = json.loads(rev)
@@ -145,25 +147,20 @@ class GDoc():
         except:
             logger.debug("cannot get last revision id")
 
-
-
-
     def compute_closure(self):
 
-        assert self.path[-1][0] == self.fileId, f"Last path is not fileId? {self.path[-1]};{self.fileId}"
+        assert self.path[-1][
+            0] == self.fileId, f"Last path is not fileId? {self.path[-1]};{self.fileId}"
 
         for c, i in enumerate(self.path):
             for c1, i1 in enumerate(self.path[c:]):
                 child = i1
                 parent = i
                 depth = c1
-
                 self.closure.append(
                     Closure(parent=parent, child=child, depth=depth))
 
         return self.closure
-
-
 
     def _download_details(self, pipe):
 
@@ -180,14 +177,13 @@ class GDoc():
             try:
                 response = requests.get(url=url,
                                         headers=self.headers,
-                                        timeout=10)
-
+                                        timeout=15)
 
                 assert response.status_code == 200
             except:
 
                 logger.info("%s unable, sleeping up to %d", self.fileId[0:5],
-                             20 * i)
+                            20 * i)
                 time.sleep(random.uniform(5, 6 * i))
                 continue
             text = response.text
@@ -195,7 +191,6 @@ class GDoc():
             break
 
         tot_operations = []
-
 
         for count, x in enumerate(revision_details['changelog']):
             try:
@@ -214,10 +209,8 @@ class GDoc():
             elif x[0]['ty'] == 'ds':
                 content = [0, x[0]['ei'] - x[0]['si'] + 1]
 
-
             cur_op = Operation(date=x[1] / 1e3, content=content)
             tot_operations.append(cur_op)
-
 
         #Condense all operations into minute-operations
         operation_condensed = {}
@@ -238,7 +231,7 @@ class GDoc():
         while not pipe.poll(0.01):
 
             logger.info("resending for %s, counter %d", self.fileId[0:5],
-                         counter)
+                        counter)
             pipe.send(operations)
             counter += 1
 
@@ -274,7 +267,5 @@ if __name__ == '__main__':
 
             closure.append((child, parent, depth))
 
-
     from pprint import pformat
     print(pformat(closure))
-

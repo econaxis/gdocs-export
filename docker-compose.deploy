@@ -2,12 +2,12 @@ version: '3.4'
 services:
     pydocs:
         build:
-            dockerfile: Dockerfile
+            dockerfile: Dockerfile.deploy
             context: .
             network: pydocs-net
             args:
                 REQ_FILE: 'pydocs_reqs.txt'
-        image: henry2833/pydocs:latest
+        image: henry2833/pydocs:deploy
         environment:
             REDIS_PASSW: "${REDIS_PASSW}"
             SQL_CONN:  "${SQL_CONN}"
@@ -23,12 +23,8 @@ services:
                     memory: 200M
                 reservations:
                     memory: 100M
-        volumes:
-            - type: bind
-              source: .
-              target: ${HOMEPATH}
     web:
-        image: 'henry2833/pydocs:latest'
+        image: 'henry2833/pydocs:deploy'
         entrypoint: ['echo', 'Service disabled']
         environment:
             REDIS_PASSW: "${REDIS_PASSW}"
@@ -47,12 +43,8 @@ services:
         ports:
             - target: 5000
               published: 80
-        volumes:
-            - type: bind
-              source: .
-              target: ${HOMEPATH}
     sql:
-        image: 'henry2833/pydocs:latest'
+        image: 'henry2833/pydocs:deploy'
         environment:
             REDIS_PASSW: "${REDIS_PASSW}"
             SQL_CONN:  "${SQL_CONN}"
@@ -61,10 +53,6 @@ services:
             HOMEDATAPATH: "${HOMEDATAPATH}"
             HOMEPATH: "${HOMEPATH}"
             AZURESTORAGEKEY: "${AZURESTORAGEKEY}"
-        volumes:
-            - type: bind
-              source: .
-              target: ${HOMEPATH}
 
 networks:
     default:

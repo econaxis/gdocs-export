@@ -13,16 +13,14 @@ from scipy.stats import binned_statistic
 import scipy.signal
 from processing.models import Dates, Files, Filename, Closure
 
-
 times_tickf = {
-        'day': '%H:%M',
-        'week': '%a %H:%M',
-        'month': '%d', 
-        'year': '%m %d'
+    'day': '%H:%M',
+    'week': '%a %H:%M',
+    'month': '%d',
+    'year': '%m %d'
 }
 
-flask.session = dict(userid = 'testing1239KjMbA')
-    
+flask.session = dict(userid='testing1239KjMbA')
 
 import threading
 import shelve
@@ -33,27 +31,24 @@ ms.close()
 
 FNAME = 'selected_files.pickle'
 
-
 sel_lock = threading.Lock()
 
 sessions_lock = threading.Lock()
 
 
-
 def get_sel(val):
-    with shelve.open('selected_files', flag = 'r') as f:
+    with shelve.open('selected_files', flag='r') as f:
         #print(f["sl"], val)
         return f["sl"][val]
 
+
 def add_sel(val):
     with sel_lock:
-        with shelve.open('selected_files', flag = 'w') as f:
+        with shelve.open('selected_files', flag='w') as f:
             t = f["sl"]
             t.append(val)
             f["sl"] = t
-            return len(f["sl"])-1
-
-
+            return len(f["sl"]) - 1
 
 
 logger = logging.getLogger(__name__)
@@ -65,6 +60,7 @@ test = {}
 traces = []
 
 prev_bins = []
+
 
 def aggregate_dates(timestamps, aggregate_by):
     #Utility function to aggregate a list of timestamps by any value (month, year, week, ...)
@@ -99,37 +95,46 @@ def aggregate_dates(timestamps, aggregate_by):
 
 dir_lock = threading.Lock()
 
-def direct_parent():
 
+def direct_parent():
 
     #Returns three lists: direct child id, direct parent id, child name
     logger.info("userid: %s", flask.session["userid"])
 
-    db = reload_engine(flask.session["userid"], download=True, lock = sessions_lock)
-
+    db = reload_engine(flask.session["userid"],
+                       download=True,
+                       lock=sessions_lock)
 
     try:
         fn1, fn2 = aliased(Filename), aliased(Filename)
 
-        ds = db.query(Closure, fn1, fn2).join(fn1, fn1.fileId == Closure.parent).join(fn2, fn2.fileId == Closure.child).all()
-
+        ds = db.query(Closure, fn1,
+                      fn2).join(fn1, fn1.fileId == Closure.parent).join(
+                          fn2, fn2.fileId == Closure.child).all()
 
         for df in ds:
-            print(df[0].parent, df[0].child, df[1].fileId, df[2].fileId, df[1].fileName, df[2].fileName)
+            print(df[0].parent, df[0].child, df[1].fileId, df[2].fileId,
+                  df[1].fileName, df[2].fileName)
 
         ds = db.query(Closure.depth.label('__d'),
                     fn1.fileName.label('fn1_name'), fn1.fileId.label('fn1_id') ,
                     fn2.fileName.label('fn2_name'), fn2.fileId.label('fn2_id')) \
                     .join(fn1, fn1.fileId == Closure.parent).join(fn2, fn2.fileId == Closure.child).distinct().filter(Closure.depth==1).subquery()
 
-        sds=db.query(Files.id.label('f_id'), func.sum(Dates.adds).label('adds'), func.sum(Dates.deletes).label("deletes")).join(Dates).group_by(Files.id).subquery()
+        sds = db.query(
+            Files.id.label('f_id'),
+            func.sum(Dates.adds).label('adds'),
+            func.sum(Dates.deletes).label("deletes")).join(Dates).group_by(
+                Files.id).subquery()
 
         res = db.query(ds, sds).outerjoin(sds, sds.c.f_id == ds.c.fn2_id).all()
 
         parents = [x.fn1_id for x in res]
         children = [x.fn2_id for x in res]
 
-        values = [x.adds + x.deletes if x.adds and x.deletes else 0 for x in res]
+        values = [
+            x.adds + x.deletes if x.adds and x.deletes else 0 for x in res
+        ]
         names = [x.fn2_name for x in res]
 
         print(len(names), len(values), len(children), len(parents))
@@ -140,26 +145,29 @@ def direct_parent():
                 children.pop(i)
                 values.pop(i)
                 names.pop(i)
-                i-=1
+                i -= 1
 
         parents.append("")
         values.append(0)
         names.append("root")
         children.append(6)
 
+        fig = go.Figure(
+            go.Sunburst(
+                labels=[
+                    "Eve", "Cain", "Seth", "Enos", "Noam", "Abel", "Awan",
+                    "Enoch", "Azura"
+                ],
+                parents=[
+                    "", "Eve", "Eve", "Seth", "Seth", "Eve", "Eve", "Awan",
+                    "Eve"
+                ],
+                values=[10, 14, 12, 10, 2, 6, 6, 4, 4],
+            ))
 
-
-        fig =go.Figure(go.Sunburst(
-                labels=["Eve", "Cain", "Seth", "Enos", "Noam", "Abel", "Awan", "Enoch", "Azura"],
-                    parents=["", "Eve", "Eve", "Seth", "Seth", "Eve", "Eve", "Awan", "Eve" ],
-                        values=[10, 14, 12, 10, 2, 6, 6, 4, 4],
-                        ))
-
-        return go.Figure(data = [ go.Sunburst(
-                ids = children,
-                labels = names,
-                parents = parents
-        )], layout = dict(margin = dict(t=0 , l=0, r=0,b=0)))
+        return go.Figure(
+            data=[go.Sunburst(ids=children, labels=names, parents=parents)],
+            layout=dict(margin=dict(t=0, l=0, r=0, b=0)))
 
 
 
@@ -167,7 +175,8 @@ def direct_parent():
                     .options(joinedload(Closure.parent_r).joinedload(Files.name)) \
                     .options(joinedload(Closure.child_r).joinedload(Files.name)).distinct().all()
 
-        res = [(x.parent_r.name[0].fileName, x.child_r.name[0].fileName) for x in prim1]
+        res = [(x.parent_r.name[0].fileName, x.child_r.name[0].fileName)
+               for x in prim1]
 
         res = list(set(res))
 
@@ -177,25 +186,22 @@ def direct_parent():
         logger.exception("e")
         breakpoint()
 
-
-    print("="*10)
+    print("=" * 10)
     print(parent, child)
 
     return parent, child
 
 
-
-
 #@lru_cache(maxsize=6)
 def query_db(files):
-
-
 
     logger.warning("query_db called")
 
     logger.warning("userid: %s", flask.session["userid"])
 
-    db = reload_engine(flask.session["userid"], download=True, lock = sessions_lock)
+    db = reload_engine(flask.session["userid"],
+                       download=True,
+                       lock=sessions_lock)
 
     if files:
         results = db.query(Dates.adds, Dates.deletes, Dates.date).join(Files) \
@@ -211,8 +217,7 @@ def query_db(files):
 def gen_sunburst():
     return direct_parent()
 
-
-    #fig["data"][0]["labels"] = 
+    #fig["data"][0]["labels"] =
 
 
 def get_activity(files=None,
@@ -224,9 +229,12 @@ def get_activity(files=None,
                  filter_func=bool,
                  use_prev_bins=True):
 
-    #Returns histogram of adds/deletes 
+    #Returns histogram of adds/deletes
 
-    early_ret = SimpleNamespace(adds=[], deletes=[], add_dates=[], delete_dates=[]) 
+    early_ret = SimpleNamespace(adds=[],
+                                deletes=[],
+                                add_dates=[],
+                                delete_dates=[])
 
     results = query_db(tuple(files) if files else None)
 
@@ -251,21 +259,19 @@ def get_activity(files=None,
         print("early exit")
         return early_ret
 
-    timestamps = aggregate_dates(timestamps = timestamps, aggregate_by = aggregate_by)
+    timestamps = aggregate_dates(timestamps=timestamps,
+                                 aggregate_by=aggregate_by)
 
-    [adds, deletes, timestamps] = list(map(np.array, [adds, deletes, timestamps]))
+    [adds, deletes,
+     timestamps] = list(map(np.array, [adds, deletes, timestamps]))
 
     add_dates = timestamps[:-1]
     delete_dates = timestamps[:-1]
 
-
     if not x_limits and aggregate_by == 'none':
         x_limits = [timestamps.min(), timestamps.max()]
 
-
     #print("x_limits, ", x_limits)
-
-
     """
     if use_prev_bins and prev_bins:
         #Previous bins existing and we are allowed to use, but don't know if range fits?
@@ -279,29 +285,31 @@ def get_activity(files=None,
     if use_prev_bins and len(prev_bins):
         num_bins = prev_bins
 
-
     if x_limits:
         dbg_x = list(map(datetime.fromtimestamp, x_limits))
-        print("DBG_X: ",dbg_x)
+        print("DBG_X: ", dbg_x)
 
+    adds, add_dates, bin_number = binned_statistic(
+        timestamps,
+        adds,
+        'sum',
+        #Only use previous bins if prev-bins exists and we are allowed to.
+        #When overlaying various selections and adding, we need to have the same bin
+        #configuration for plotly to work properly
+        bins=num_bins,
+        range=x_limits)
 
-
-
-    adds, add_dates, bin_number = binned_statistic(timestamps, adds, 'sum',
-                         #Only use previous bins if prev-bins exists and we are allowed to.
-                         #When overlaying various selections and adding, we need to have the same bin
-                         #configuration for plotly to work properly
-                         bins=num_bins,
-                         range=x_limits)
-
-    deletes, delete_dates, bin_number = binned_statistic(timestamps, deletes, 'sum', bins=num_bins, range=x_limits)
+    deletes, delete_dates, bin_number = binned_statistic(timestamps,
+                                                         deletes,
+                                                         'sum',
+                                                         bins=num_bins,
+                                                         range=x_limits)
 
     np.insert(adds, 0, 0)
-    np.insert(add_dates, 0, add_dates[0]-1*24*3600)
+    np.insert(add_dates, 0, add_dates[0] - 1 * 24 * 3600)
 
     np.insert(deletes, 0, 0)
-    np.insert(delete_dates, 0, delete_dates[0]-1*24*3600)
-
+    np.insert(delete_dates, 0, delete_dates[0] - 1 * 24 * 3600)
 
     dels = []
     for c in range(len(adds)):
@@ -318,14 +326,13 @@ def get_activity(files=None,
 
     prev_bins = add_dates
 
-    adds[1:] = apply_smoothing (adds[1:], min(len(adds), window))
-    deletes[1:] = apply_smoothing (deletes[1:], min(len(deletes), window), negative = True)
+    adds[1:] = apply_smoothing(adds[1:], min(len(adds), window))
+    deletes[1:] = apply_smoothing(deletes[1:],
+                                  min(len(deletes), window),
+                                  negative=True)
 
     add_dates = [datetime.fromtimestamp(x) for x in add_dates]
     delete_dates = [datetime.fromtimestamp(x) for x in delete_dates]
-
-
-
 
     #Returns object with adds = magnitude character addition, add_dates = pydatetime with same shape as adds
     #Will get processed by calling function into appropriate go.Scatter objects
@@ -335,8 +342,7 @@ def get_activity(files=None,
                            delete_dates=delete_dates)
 
 
-
-def apply_smoothing(data, window, poly_order = 3, negative = False):
+def apply_smoothing(data, window, poly_order=3, negative=False):
     window -= window % 2 + 1
 
     data = scipy.signal.savgol_filter(data, window, poly_order)
@@ -349,18 +355,17 @@ def apply_smoothing(data, window, poly_order = 3, negative = False):
     return data
 
 
-
 #Returns go Traces from selectedData ids, can be cumalative or no
 def get_traces(times,
-                      ddvalue,
-                      bubble_figure,
-                      selectedData,
-                      trace,
-                      hist_figure,
-                      window_slider_value=30,
-                      bin_slider_value=40,
-                      x_limits=None,
-                      cumalative = False):
+               ddvalue,
+               bubble_figure,
+               selectedData,
+               trace,
+               hist_figure,
+               window_slider_value=30,
+               bin_slider_value=40,
+               x_limits=None,
+               cumalative=False):
 
     logger.debug("updating histogram")
 
@@ -371,13 +376,11 @@ def get_traces(times,
     else:
         selectedFiles = []
 
-
     #Prepare selectedFiles (list of file ids in SQLite) to send to query_db
     selectedFiles.append(ddvalue)
 
     #Default value for adding new traces, always use the previous bins
     use_prev_bins = True
-
 
     #Times is variable with id timeck
 
@@ -400,16 +403,19 @@ def get_traces(times,
                         x_limits=x_limits,
                         window=window_slider_value,
                         aggregate_by=times,
-                        use_prev_bins = use_prev_bins)
-
+                        use_prev_bins=use_prev_bins)
 
     if cumalative:
         #Further processing by cumalative sum
         ret1.adds = np.cumsum(ret1.adds)
         ret1.deletes = np.cumsum(ret1.deletes)
 
-        ret1.adds = apply_smoothing(ret1.adds, min(len(ret1.adds), window_slider_value))
-        ret1.deletes = apply_smoothing(ret1.deletes, min(len(ret1.deletes), window_slider_value), negative = True)
+        ret1.adds = apply_smoothing(ret1.adds,
+                                    min(len(ret1.adds), window_slider_value))
+        ret1.deletes = apply_smoothing(ret1.deletes,
+                                       min(len(ret1.deletes),
+                                           window_slider_value),
+                                       negative=True)
 
     add_trace1 = go.Scatter(x=ret1.add_dates,
                             y=ret1.adds,
@@ -424,7 +430,6 @@ def get_traces(times,
 
     #Returns tuples of traces to add to figure["data"] property
     return add_trace1, delete_trace1, ret1
-
     """
 
 
@@ -488,7 +493,9 @@ def _updateBubbleChart(_n_clicks, selection):
 
     logger.info("userid: %s", flask.session["userid"])
 
-    db = reload_engine(flask.session["userid"], download = True, lock = sessions_lock)
+    db = reload_engine(flask.session["userid"],
+                       download=True,
+                       lock=sessions_lock)
 
     parentLabel = ""
 
@@ -536,14 +543,11 @@ def _updateBubbleChart(_n_clicks, selection):
 # Moved functions out of register_callback for profiling to work
 def register_callback(app):
 
-    @app.callback(
-        Output("sunburst", "figure"),
-        [Input("url", "pathname")])
+    @app.callback(Output("sunburst", "figure"), [Input("url", "pathname")])
     def sunburst(url):
         dsf = gen_sunburst()
         print(dsf)
         return dsf
-
 
     """
 

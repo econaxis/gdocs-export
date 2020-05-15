@@ -361,21 +361,22 @@ for i in tups:
 
 """
 
-
 import time
 
 from flask import Flask, Response, render_template
 
 app = Flask(__name__)
 
+
 @app.route('/stream')
 def stream():
+
     def gen():
         try:
             i = 0
             rng = 10
             for i in range(rng):
-                if i >= rng-1:
+                if i >= rng - 1:
                     data = 'event: test\ndata: end event {}\n\n'.format(i)
                     i += 1
                     print(data)
@@ -391,7 +392,8 @@ def stream():
             print("closed")
         finally:
             print("gen exit")
-    return Response(gen(), mimetype= 'text/event-stream')
+
+    return Response(gen(), mimetype='text/event-stream')
 
 
 @app.route('/')
@@ -400,4 +402,4 @@ def m():
 
 
 if __name__ == '__main__':
-    app.run(debug=True,  processes=1)
+    app.run(debug=True, processes=1)

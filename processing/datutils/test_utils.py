@@ -42,6 +42,8 @@ class TestUtil:
     pickleIndex = []
     processedcount = 0
 
+    dbg_infos = []
+
     @classmethod
     def refresh_creds(cls, creds):
         cls.workingPath
@@ -111,8 +113,8 @@ class TestUtil:
             #Temp var for thread
 
             _sleep_time = 10
-            interval = 4
 
+            interval = 4
 
             for i in range(interval):
                 if endEvent.is_set():
@@ -142,11 +144,16 @@ class TestUtil:
         logger.warning("print task return")
 
     @classmethod
-    async def dump_files(cls, return_thread=False, upload = False):
+    async def dump_files(cls, return_thread=False, upload=False):
+
+        if not upload:
+            return True
 
         condensed_files = [x.return_condensed() for x in cls.files]
 
-        info_packet = Info(userid=cls.userid, files=condensed_files, extra = 'upload' if upload else None)
+        info_packet = Info(userid=cls.userid,
+                           files=condensed_files,
+                           extra='upload' if upload else None)
 
         success = await cls.send_socket(info_packet)
 
@@ -168,7 +175,6 @@ class TestUtil:
 
     @classmethod
     async def send_socket(cls, info_packet):
-        return True
         logger.info("connect working")
 
         logger.info("server addr: %s", SERVER_ADDR)
@@ -256,8 +262,8 @@ async def API_RESET(seconds=6, throttle=None, decrease=False):
 
 
 async def tryGetQueue(queue: asyncio.Queue,
-                      repeatTimes: int = 4,
-                      interval: float = 2,
+                      repeatTimes: int = 2,
+                      interval: float = 5,
                       name: str = ""):
     output = None
     timesWaited = 0
@@ -269,7 +275,7 @@ async def tryGetQueue(queue: asyncio.Queue,
             if (timesWaited > repeatTimes):
                 return -1
             logger.info(name + "waiting %d %d", timesWaited, repeatTimes)
-            await asyncio.sleep(random.uniform(0.8*inteval, 1.4*interval))
+            await asyncio.sleep(random.uniform(0.8 * interval, 1.4 * interval))
     return output
 
 
@@ -286,7 +292,6 @@ async def adv_read(reader):
     length = header[0]
 
     data = []
-
 
     per_read = 5000
 

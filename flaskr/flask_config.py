@@ -3,7 +3,6 @@ import logging
 from flask_caching import Cache
 import sys
 
-
 logger = logging.getLogger(__name__)
 
 # Necessary for non HTTPS OAUTH calls

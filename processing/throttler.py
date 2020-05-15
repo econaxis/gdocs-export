@@ -3,6 +3,7 @@ import time
 
 
 class Throttle:
+
     def __init__(self, rpm):
         self.sem = asyncio.Semaphore(2)
         self.rpm = rpm

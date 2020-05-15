@@ -43,12 +43,8 @@ def exchandler(loop, context):
 
 #Used for debugging
 
-fdsfs = secrets.token_urlsafe(4)
-async def send_socket():
 
-    info_packet = pickle.load(open('info_packet', 'rb'))
-
-    info_packet = info_packet._replace(userid="send_sot" + fdsfs)
+async def send_socket(info_packet):
 
     logger.info("connect working")
     r, w = await asyncio.open_connection('127.0.0.1', 8888)
@@ -107,8 +103,6 @@ async def handle_request(queue):
             info = await adv_read(reader)
             print("name: ", info.userid)
 
-
-
             if info.extra in {'task', 'upload', None, 'none'}:
                 queue.put(info)
                 logger.debug("Put new task in queue")
@@ -120,10 +114,12 @@ async def handle_request(queue):
     #Used for debugging
 
     if "FLASKDBG" in os.environ:
-        reps = 40
-        while reps:
-            reps -= 1
-            asyncio.create_task(send_socket())
+        tok = secrets.token_urlsafe(4)
+        info_packet = pickle.load(open('dbg_infos', 'rb'))
+        info_packet = [x._replace(userid="send_sot" + tok) for x in info_packet]
+
+        for i in info_packet:
+            asyncio.create_task(send_socket(i))
 
     addr = server.sockets[0].getsockname()
     logger.info(f'Serving on {addr}')
@@ -164,14 +160,14 @@ def queue_worker(queue, threads):
             logger.info("done waiting join, resulting thread size %d",
                         len(threads))
 
-
         upload = False
         if latest.extra == 'upload':
             upload = True
 
         ts = threading.Thread(target=sql.start,
                               kwargs=dict(userid=latest.userid,
-                                          files=latest.files, upload = upload))
+                                          files=latest.files,
+                                          upload=upload))
         ts.start()
         threads.append(ts)
 
@@ -194,8 +190,8 @@ def thread_pool():
     exec_tasks.append(executor.submit(start_server, queue))
     exec_tasks.append(executor.submit(queue_worker, queue, threads))
 
-    ds = concurrent.futures.wait(
-        exec_tasks, return_when=concurrent.futures.FIRST_EXCEPTION)
+    ds = concurrent.futures.wait(exec_tasks,
+                                 return_when=concurrent.futures.FIRST_EXCEPTION)
 
     logger.critical("Tasks ended")
 
