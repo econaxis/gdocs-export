@@ -86,14 +86,15 @@ Profiler = None
 
 def handle_exception(exc_type, exc_value, exc_traceback):
 
+
     logger.critical("Custom Uncaught exception",
                     exc_info=(exc_type, exc_value, exc_traceback))
+
+    breakpoint()
 
     sendmail(msg="Program ended wih exception. Check logs for more details")
     logger.critical("exiting! from sshook")
 
-    import os
-    os._exit(2)
 
     #logger.info("sending to default hook")
     return 0

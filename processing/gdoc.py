@@ -21,6 +21,10 @@ timeout = aiohttp.ClientTimeout(total=10)
 
 Closure = namedtuple("Closure", ['parent', 'child', 'depth'])
 
+class Closure (namedtuple("Closure", ['parent', 'child', 'depth'])):
+    def __repr__ (self) :
+        return 'p: {} c: {}\n'.format(self.parent[1], self.child[1])
+
 
 class Operation():
 
@@ -149,8 +153,9 @@ class GDoc():
 
     def compute_closure(self):
 
-        assert self.path[-1][
-            0] == self.fileId, f"Last path is not fileId? {self.path[-1]};{self.fileId}"
+        logger.info("Self path: %s", list(zip(*self.path))[1])
+
+        assert self.path[-1][ 0] == self.fileId, f"Last path is not fileId? {self.path[-1]};{self.fileId}"
 
         for c, i in enumerate(self.path):
             for c1, i1 in enumerate(self.path[c:]):
@@ -159,6 +164,8 @@ class GDoc():
                 depth = c1
                 self.closure.append(
                     Closure(parent=parent, child=child, depth=depth))
+
+        logger.info('closure: %s', self.closure)
 
         return self.closure
 

@@ -37,12 +37,16 @@ class TestUtil:
     headers = {}
     files = []
     idmapper = {}
+    sql_server_active = False
     userid = None
     workingPath = None
     pickleIndex = []
     processedcount = 0
 
     dbg_infos = []
+
+
+    info = Info()
 
     @classmethod
     def refresh_creds(cls, creds):
@@ -155,14 +159,13 @@ class TestUtil:
                            files=condensed_files,
                            extra='upload' if upload else None)
 
-        success = await cls.send_socket(info_packet)
+        success = False
 
-        while not success:
+        while not (await cls.send_socket(info_packet)):
             logger.info("send socket not succeeded, sleeping 60")
 
             #Blocks the event loop
             time.sleep(random.randint(40, 70))
-            success = await cls.send_socket(info_packet)
 
         if success:
             cls.fileCounter += 1
@@ -174,7 +177,41 @@ class TestUtil:
         return success
 
     @classmethod
+    async def test_server(cls, info_packet):
+        logger.info("connect working")
+
+        logger.info("server addr: %s", SERVER_ADDR)
+        r, w = await asyncio.open_connection(SERVER_ADDR, 8888)
+
+        message = b"request"
+
+        await adv_write(w, message)
+
+        m = await adv_read(r)
+        logger.info("received: %s", m)
+
+        if m != b'go':
+            return False
+
+        if m == b'go':
+            await adv_write(w, info_packet, to_pickle=True)
+        w.close()
+        return True
+
+
+
+    @classmethod
     async def send_socket(cls, info_packet):
+
+        if not cls.sql_server_active:
+            cls.info = info_packet._replace(files = cls.info.files + info_packet.files)
+
+            if info_packet.extra=='upload':
+                logger.info("Uploading info")
+                pickle.dump(cls.info, open('info', 'wb'))
+
+            return True
+
         logger.info("connect working")
 
         logger.info("server addr: %s", SERVER_ADDR)
@@ -263,7 +300,7 @@ async def API_RESET(seconds=6, throttle=None, decrease=False):
 
 async def tryGetQueue(queue: asyncio.Queue,
                       repeatTimes: int = 2,
-                      interval: float = 5,
+                      interval: float = 3,
                       name: str = ""):
     output = None
     timesWaited = 0
