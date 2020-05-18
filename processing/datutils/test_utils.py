@@ -21,8 +21,11 @@ if "FLASKDBG" in os.environ:
 else:
     SERVER_ADDR = 'sql'
 
+
+"""
 if (random.random() < 0.0):
     os.environ["PROFILE"] = "true"
+"""
 
 Info = collections.namedtuple('Info', ['userid', 'files', 'extra'],
                               defaults=('default' + str(datetime.now()), [],

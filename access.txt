@@ -1,8 +1,0 @@
-172.19.0.1 - - [13/May/2020:10:04:07 -0700] "GET / HTTP/1.1" 302 217 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36"
-172.19.0.1 - - [13/May/2020:10:04:07 -0700] "GET /robots.txt HTTP/1.1" 500 290 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36"
-172.19.0.1 - - [13/May/2020:10:04:07 -0700] "GET /form HTTP/1.1" 200 680 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36"
-172.19.0.1 - - [13/May/2020:10:04:07 -0700] "GET /static/air.css HTTP/1.1" 200 1634 "http://localhost/form" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36"
-172.19.0.1 - - [13/May/2020:10:04:08 -0700] "GET /static/favicon.ico HTTP/1.1" 200 0 "http://localhost/form" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36"
-172.19.0.1 - - [13/May/2020:10:04:09 -0700] "GET /form HTTP/1.1" 200 680 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36"
-172.19.0.1 - - [13/May/2020:10:04:09 -0700] "GET /form HTTP/1.1" 200 680 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36"
-172.19.0.1 - - [13/May/2020:10:04:09 -0700] "GET /static/favicon.ico HTTP/1.1" 200 0 "http://localhost/form" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36"

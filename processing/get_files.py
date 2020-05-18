@@ -57,39 +57,32 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
 
         # Root id is different structure
         if (proc_file.id == "root"):
-            data = dict(
-                q = "(mimeType='application/vnd.google-apps.folder' or mimeType= 'application/vnd.google-apps.document') and  \
-                    trashed = False",
-                corpora="allDrives",
-                includeItemsFromAllDrives='true',
-                supportsTeamDrives='true',
-                fields=
-                'files/mimeType, files/id, files/name, files/capabilities/canReadRevisions',
-                pageSize=1000
-            )
+            query = "(mimeType='application/vnd.google-apps.folder' or mimeType= 'application/vnd.google-apps.document') and  \
+                        trashed = False",
         else:
             query = "'" + proc_file.id + "' in parents and \
                 (mimeType='application/vnd.google-apps.folder' or mimeType= 'application/vnd.google-apps.document') and \
                 trashed = False"
-            data = dict(
-                q=query,
-                corpora="allDrives",
-                includeItemsFromAllDrives='true',
-                supportsTeamDrives='true',
-                fields=
-                'files/mimeType, files/id, files/name, files/capabilities/canReadRevisions',
-                pageSize = 1000
-            )
+
+        data = dict(
+            q = query,
+            corpora="allDrives",
+            includeItemsFromAllDrives='true',
+            supportsTeamDrives='true',
+            fields=
+            'files/mimeType, files/id, files/name, files/capabilities/canReadRevisions',
+            pageSize=1000
+        )
+
 
         try:
             async with session.get(url=drive_url, params=data,
                                    headers=headers) as response:
                 resp = await TestUtil.handleResponse(response)
                 if (resp == -1):
-                    del resp
-                    del response
+                    #If response code is negative, means there is an error, most likely
+                    #related to permissions. There is no need to process further
                     continue
-        #except aiohttp.client_exceptions:
         except:
             secs = random.uniform(5, 40)
             logger.exception(
@@ -97,9 +90,6 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
                 secs)
             await asyncio.sleep(secs)
             continue
-
-        # Parse file and folder names to make them filesystem safe, limit to
-        # 120 characters
 
         for resFile in resp["files"]:
             id = resFile["id"]
@@ -123,8 +113,7 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
                 tot_folders[id] = True
                 await files.put(f)
 
-    logger.info("----------------------------------getid return")
-    logger.info("len %d:%d:%d", TestUtil.processedcount, files.qsize(),
+    logger.info("getid return, len %d:%d:%d", TestUtil.processedcount, files.qsize(),
                 len(TestUtil.files))
 
 
