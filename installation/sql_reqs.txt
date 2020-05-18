@@ -5,7 +5,7 @@ numpy==1.18.2
 plotly==4.6.0
 scipy==1.4.1
 dash_html_components==1.0.3
-requests==2.18.1
+requests==2.20.0
 redis==3.4.1
 WTForms==2.2.1
 ujson==2.0.3
