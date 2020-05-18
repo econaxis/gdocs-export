@@ -209,6 +209,9 @@ class TestUtil:
 
             return True
 
+        print(info_packet)
+
+        return True
         logger.info("connect working")
 
         logger.info("server addr: %s", SERVER_ADDR)
