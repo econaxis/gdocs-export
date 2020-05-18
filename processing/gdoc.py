@@ -94,15 +94,15 @@ class GDoc():
             async with GDoc.sem:
                 p.start()
                 logger.debug("started process for %s", fileId[0:5])
-                await asyncio.sleep(5)
+                await asyncio.sleep(3)
 
                 counter = 0
                 while not parent_conn.poll(0.01) and counter < 5:
                     counter += 1
-                    logger.info("sleeping from poll, waiting for %s, %d",
+                    logger.debug("sleeping from poll, waiting for %s, %d",
                                 fileId[0:5], counter)
                     await asyncio.sleep(random.uniform(1 * counter,
-                                                       5 * counter))
+                                                       3 * counter))
 
                 logger.debug("received goahead to receive %s", fileId[0:5])
 
@@ -126,7 +126,7 @@ class GDoc():
             self.done = True
         else:
             self.done = False
-        logger.info("Done computing gdoc for %s %s", self.name, self.fileId)
+        logger.debug("Done computing gdoc for %s %s", self.name, self.fileId)
 
     async def get_last_revision(self, retry=0):
 
@@ -138,7 +138,7 @@ class GDoc():
                 if code != 200:
                     if retry > 5:
                         return -1
-                    logger.info("can't get last revision, sleeping 7")
+                    logger.debug("can't get last revision, sleeping ")
                     await asyncio.sleep(random.uniform(5, 35))
                     await self.get_last_revision(retry=retry+1)
                     return 0
@@ -153,9 +153,9 @@ class GDoc():
 
     def compute_closure(self):
 
-        logger.info("Self path: %s", list(zip(*self.path))[1])
+        logger.debug("Self path: %s", list(zip(*self.path))[1])
 
-        assert self.path[-1][ 0] == self.fileId, f"Last path is not fileId? {self.path[-1]};{self.fileId}"
+        assert self.path[-1][0] == self.fileId, f"Last path is not fileId? {self.path[-1]};{self.fileId}"
 
         for c, i in enumerate(self.path):
             for c1, i1 in enumerate(self.path[c:]):
@@ -165,13 +165,11 @@ class GDoc():
                 self.closure.append(
                     Closure(parent=parent, child=child, depth=depth))
 
-        logger.info('closure: %s', self.closure)
-
         return self.closure
 
     def _download_details(self, pipe):
 
-        logger.info("received job for %s", self.fileId)
+        logger.debug("received job for %s", self.fileId)
 
         revision_details = dict(changelog=[])
 
@@ -189,9 +187,9 @@ class GDoc():
                 assert response.status_code == 200
             except:
 
-                logger.info("%s unable, sleeping up to %d", self.fileId[0:5],
+                logger.debug("%s unable, sleeping up to %d", self.fileId[0:5],
                             20 * i)
-                time.sleep(random.uniform(5, 6 * i))
+                time.sleep(random.uniform(5, 3 * i))
                 continue
             text = response.text
             revision_details = json.loads(text[5:])
@@ -232,17 +230,17 @@ class GDoc():
         operations = list(operation_condensed.values())
 
         pipe.send(operations)
-        time.sleep(5)
+        time.sleep(3)
 
         counter = 1
         while not pipe.poll(0.01):
 
-            logger.info("resending for %s, counter %d", self.fileId[0:5],
+            logger.debug("resending for %s, counter %d", self.fileId[0:5],
                         counter)
             pipe.send(operations)
             counter += 1
 
-            time.sleep(random.uniform(12 * counter, 15 * counter))
+            time.sleep(random.uniform(3* counter, 6*counter))
 
             if counter > 5:
                 logger.debug("waited too long, not resending")

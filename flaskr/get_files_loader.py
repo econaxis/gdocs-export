@@ -4,6 +4,12 @@ from redis import Redis
 from pprint import PrettyPrinter
 from flaskr.rqsets import returnConfig
 
+import os
+
+homedata = os.environ["HOMEDATAPATH"]
+
+assert homedata
+
 import urllib.request
 
 pp = PrettyPrinter(indent=4)
@@ -24,12 +30,20 @@ def queueLoad(userid, workingPath, fileId, creds):
     name = f"{userid}-{token}"
     job = q.enqueue(load,
                     job_timeout='50h',
-                    args=(name, f"/app/data/{name}/", fileId, creds))
+                    args=(name, None, fileId, creds))
 
 
 def spam(i=100):
+
     import pickle
     creds = pickle.load(open("creds.pickle", 'rb'))
     for i in range(i):
         print(i)
-        queueLoad("v2", "/app/data/v2", "root", creds)
+        queueLoad("v2", None, "root", creds)
+
+def spam_threaded():
+    import threading
+
+    ths = [threading.Thread(target = spam) for x in range(10)]
+    [x.start() for x in ths]
+    [x.join() for x in ths]

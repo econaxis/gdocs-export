@@ -18,7 +18,7 @@ pprint = pprint.PrettyPrinter(indent=4).pprint
 
 timeout = aiohttp.ClientTimeout(total=15)
 
-MAX_FILES = 50
+MAX_FILES = 5000
 
 SEED_ID = "root"
 
@@ -135,7 +135,7 @@ async def getRevision(files,
                       name='default'):
 
     # Await random amount for more staggered requesting (?)
-    await asyncio.sleep(random.uniform(5, workerInstances * 3))
+    await asyncio.sleep(random.uniform(workerInstances*1, workerInstances * 1.5))
 
     time.time()
 
@@ -151,7 +151,7 @@ async def getRevision(files,
             logger.warning('getRevision task exiting')
             break
 
-        logger.info("proc file path: %s", list(zip(*proc_file.path))[1])
+        logger.debug("proc file path: %s", list(zip(*proc_file.path))[1])
 
         gd = GDoc()
         await gd.async_init(proc_file.name, proc_file.id, session,
@@ -278,6 +278,9 @@ async def shutdown(loop, signal=None):
 
 
 def loadFiles(USER_ID, _workingPath, fileId, _creds):
+
+
+    _workingPath = os.environ["HOMEDATAPATH"]
 
     configlog.set_token(USER_ID)
 

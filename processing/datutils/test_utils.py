@@ -46,6 +46,10 @@ class TestUtil:
     dbg_infos = []
 
 
+    #Used for debugging purposes for measuring rate
+    _prev_count = (0, time.time())
+
+
     info = Info()
 
     @classmethod
@@ -79,11 +83,11 @@ class TestUtil:
     @classmethod
     async def print_size(cls, files, endEvent):
         cls.starttime = time.time()
+
         if ("PROFILE" in os.environ):
             tracemalloc.start()
             cls.snapshot = tracemalloc.take_snapshot()
 
-        start_time = time.time()
         p = None
         while not endEvent.is_set():
 
@@ -109,37 +113,30 @@ class TestUtil:
 
             totsize = files.qsize() + len(cls.files) + cls.processedcount
 
+            cur_count = len(cls.files) + cls.processedcount
 
-            logger.info("%s\n%d/%d discovered items at %s\ndump count: %d", \
+            rate = (cur_count - cls._prev_count[0])/(time.time() - cls._prev_count[1]) * 60
+
+            logger.info("%s\n%d/%d discovered items at %s\ndump count: %d; rate is %d per min", \
                     cls.workingPath,len(cls.files) + cls.processedcount, totsize, datetime.now().__str__() \
-                    ,cls.fileCounter)
+                    ,cls.fileCounter, rate)
 
-            #Temp var for thread
+            cls._prev_count = (cur_count, time.time())
 
-            _sleep_time = 10
 
-            interval = 4
+            _sleep_time = 20
 
-            for i in range(interval):
-                if endEvent.is_set():
-                    break
-                if len(cls.files) > 3:
+
+            if len(cls.files) > 10:
+                code = await cls.dump_files()
+                while not code:
+                    secs = random.randint(50, 200)
+                    logger.info("SQL Socket Send denied, retrying in %d",
+                                 secs)
+                    time.sleep(secs)
                     code = await cls.dump_files()
-                    while not code:
-                        secs = random.randint(100, 300)
-                        logger.error("SQL Socket Send denied, retrying in %d",
-                                     secs)
-                        time.sleep(secs)
-                        code = await cls.dump_files()
 
-                await asyncio.sleep(_sleep_time / interval)
-
-            a0 = time.time()
-            logger.debug("file save time: %f", time.time() - a0)
-
-            logger.debug("event loop health: %d, intended: %d",
-                         time.time() - start_time, _sleep_time)
-            start_time = time.time()
+            await asyncio.sleep(_sleep_time)
 
             if p:
                 p.join(timeout=0.01)

@@ -20,7 +20,7 @@ def start():
 
     #Folders test
 #    fileid = "0Bx5kvRIrXW4JOHlPRm96cVcySTg"
-    #fileid = "root"
+    fileid = "root"
 
 
     workingPath = Config.HOMEDATAPATH

@@ -225,8 +225,7 @@ def load_from_dict(lt_files, dict_lock, owner_id=None):
         logger.debug("bulk saving dates")
         sess.bulk_save_objects(bulk_dates)
 
-        logger.debug("flushing objects")
-        logger.debug("new: %s, dirty: %s", sess.new, sess.dirty)
+        logger.info("flushing objects")
         sess.flush()
         logger.debug("finished flush; file size: %d", lt_files.qsize())
 
@@ -304,8 +303,6 @@ def insert_sql(userid, files, upload=False):
     logger.info("len of id map %d len of files %d", len(fileid_obj_map),
                 SZ_FILES)
 
-    min(lt_files.qsize(), 5)
-
     if files:
         p = [
             threading.Thread(target=load_from_dict,
@@ -315,7 +312,7 @@ def insert_sql(userid, files, upload=False):
         for x in p:
             x.start()
         for x in p:
-            logger.debug("joining threads load_from_dict")
+            logger.info("joining threads load_from_dict")
             x.join()
 
     logger.info("starting load closures")
