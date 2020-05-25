@@ -1,4 +1,3 @@
-from pprint import PrettyPrinter
 from datetime import datetime
 from queue import Queue
 import threading
@@ -14,12 +13,8 @@ from flaskr.flask_config import Config
 
 logger = logging.getLogger(__name__)
 
-pprint = PrettyPrinter().pprint
 
-scrt = secrets.token_urlsafe(7)
-token = datetime.now().strftime("%d-%H.%f") + scrt
-
-PARAMS = os.environ["SQL_CONN"]
+token = datetime.now().strftime("%d-%H.%f") + secrets.token_urlsafe(7)
 
 sessions = {}
 sessions_lock = threading.Lock()
@@ -27,17 +22,15 @@ sessions_lock = threading.Lock()
 #Global variable for data path
 hdatapath = Config.HOMEDATAPATH
 
-logger.warning("hdatapath: %s", hdatapath)
-
 #Used to access files on Azure File Storage, defaults to None to prevent unnecessary connections unless called
 az_driver = None
 
 import azure.common
 
-
 def setup_azure():
     global az_driver
     from azure.storage.file import FileService
+
     az_driver = FileService(account_name='pydocs',
                             account_key=os.environ["AZURESTORAGEKEY"])
 
@@ -45,10 +38,11 @@ def setup_azure():
 def az_download_dbs(owner_id, download_file):
     logger.info("requested az file: %s", owner_id)
     try:
-        az_driver.get_file_to_path('def', 'data/dbs', f"{owner_id}.db",
-                                   download_file)
+        az_driver.get_file_to_path('def', 'data/dbs', f"{owner_id}.db", \
+               download_file)
     except azure.common.AzureMissingResourceHttpError as e:
         logger.exception("cannot download file")
+        raise FileNotFoundError
 
 
 def az_upload_dbs(owner_id, from_file):
@@ -85,8 +79,7 @@ def reload_engine(owner_id, create_new=False, download=False, lock=None):
         #Only download if the file doesn't exist
         if download and not os.path.isfile(sqlite_owner_id):
             az_download_dbs(owner_id, sqlite_owner_id)
-            logger.warning("Downloaded db!")
-
+            logger.info("Downloaded db!")
         if not os.path.isfile(sqlite_owner_id):
             logger.warning(f"SQLITE doesn't exist! {owner_id}")
 
@@ -101,18 +94,23 @@ def reload_engine(owner_id, create_new=False, download=False, lock=None):
                                      echo=False,
                                      connect_args=dict(check_same_thread=False))
 
-        Base.metadata.create_all(bind=ENGINE)
+        try:
+            Base.metadata.create_all(bind=ENGINE)
+        except Exception as e:
+            logger.exception("Exception when trying to load database")
+            raise e
 
-        _session = sessionmaker(bind=ENGINE)
-        v_scoped_session = scoped_session(_session)
+        v_scoped_session = scoped_session(sessionmaker(bind=ENGINE))
 
         logger.warning("set session for ownerid %s", owner_id)
         sessions[owner_id] = v_scoped_session
 
-        if download:
-            logger.warning("Testing session for any data")
-            ds = v_scoped_session().query(Files).all()
-            logger.warning("Files Data: %s", ds)
+        test_session = v_scoped_session()
+
+
+        #Check that the database has at least some rows
+        assert not create_new and test_session.query(test_session.query(Files).exists()).scalar(), \
+                "create_new is not true and the database does not have any rows"
 
         return v_scoped_session
 
@@ -142,60 +140,61 @@ def db_connect(func):
 
 
 @db_connect
-def load_clos(file_data, fileid_obj_map, dict_lock, owner_id=None):
+def load_clos(file_data, fileid_obj_map,  owner_id=None):
     assert owner_id != None, "Ownerid is none err"
+
     sess = reload_engine(owner_id)()
+
     for files in file_data:
         for clos in files.closure:
-            with dict_lock:
-                if clos.parent[0] not in fileid_obj_map:
-                    logger.debug("new element not found: %s", clos.parent[0])
+            if clos.parent[0] not in fileid_obj_map:
+                logger.debug("new element not found: %s", clos.parent[0])
 
-                    fi = Files(fileId=clos.parent[0] + str(owner_id),
-                               isFile=False)
+                fi = Files(fileId=clos.parent[0] + str(owner_id),
+                           isFile=False)
 
-                    fi.name = [Filename(files=fi, fileName=clos.parent[1])]
-                    sess.add(fi)
-                    fileid_obj_map[clos.parent[0]] = fi
+                fi.name = [Filename(files=fi, fileName=clos.parent[1])]
+                sess.add(fi)
+                fileid_obj_map[clos.parent[0]] = fi
+
+            sess.commit()
+
+            if clos.child[0] not in fileid_obj_map:
+                logger.debug("new element not found: %s", clos.child[0])
+
+                fi = Files(fileId=clos.child[0] + str(owner_id),
+                           isFile=False)
+
+                fi.name = [Filename(files=fi, fileName=clos.child[1])]
+                sess.add(fi)
+                fileid_obj_map[clos.child[0]] = fi
+
+            sess.commit()
+            try:
+                sess.add(fileid_obj_map[clos.child[0]])
+                sess.add(fileid_obj_map[clos.parent[0]])
+
+                child_id = fileid_obj_map[clos.child[0]].id
+                parent_id = fileid_obj_map[clos.parent[0]].id
 
                 sess.commit()
+                sess.expunge_all()
+            except sqlal.exc.InvalidRequestError as e:
+                logger.exception("clos %s", '+' * 30)
+                #breakpoint()
+                raise e
+            else:
+                if not sess.query(Closure).filter_by(
+                        parent=parent_id, child=child_id,
+                        depth=clos.depth).scalar():
+                    cls = Closure(parent=parent_id,
+                                  child=child_id,
+                                  depth=clos.depth)
 
-                if clos.child[0] not in fileid_obj_map:
-                    logger.debug("new element not found: %s", clos.child[0])
-
-                    fi = Files(fileId=clos.child[0] + str(owner_id),
-                               isFile=False)
-
-                    fi.name = [Filename(files=fi, fileName=clos.child[1])]
-                    sess.add(fi)
-                    fileid_obj_map[clos.child[0]] = fi
-
-                sess.commit()
-                try:
-                    sess.add(fileid_obj_map[clos.child[0]])
-                    sess.add(fileid_obj_map[clos.parent[0]])
-
-                    child_id = fileid_obj_map[clos.child[0]].id
-                    parent_id = fileid_obj_map[clos.parent[0]].id
-
-                    sess.commit()
-                    sess.expunge_all()
-                except sqlal.exc.InvalidRequestError as e:
-                    logger.exception("clos %s", '+' * 30)
-                    breakpoint()
-                    raise e
+                    sess.add(cls)
                 else:
-                    if not sess.query(Closure).filter_by(
-                            parent=parent_id, child=child_id,
-                            depth=clos.depth).scalar():
-                        cls = Closure(parent=parent_id,
-                                      child=child_id,
-                                      depth=clos.depth)
-
-                        sess.add(cls)
-                    else:
-                        print("Duplicate closure found, ", parent_id, child_id,
-                              clos.depth)
+                    print("Duplicate closure found, ", parent_id, child_id,
+                          clos.depth)
 
 
 @db_connect
@@ -204,12 +203,8 @@ def load_from_dict(lt_files, dict_lock, owner_id=None):
 
     sess = reload_engine(owner_id)()
 
-    counter = 0
-    Queue()
-
     while (lt_files.qsize()):
 
-        counter += 1
         file_model, file_data = lt_files.get_nowait()
 
         sess.add(file_model)
@@ -223,13 +218,9 @@ def load_from_dict(lt_files, dict_lock, owner_id=None):
                       date=operation.date)
             bulk_dates.append(d)
 
-        logger.debug("bulk saving dates")
         sess.bulk_save_objects(bulk_dates)
 
-        logger.debug("flushing objects")
-        logger.debug("new: %s, dirty: %s", sess.new, sess.dirty)
         sess.flush()
-        logger.debug("finished flush; file size: %d", lt_files.qsize())
 
     sess.commit()
 
@@ -321,7 +312,10 @@ def insert_sql(userid, files, upload=False):
 
     logger.info("starting load closures")
 
-    load_clos(files, fileid_obj_map, dict_lock, owner_id=userid)
+    with dict_lock:
+        load_clos(files, fileid_obj_map, owner_id=userid)
+
+
     sess.commit()
     logger.warning("Done all for owner_id %s; processed files: %d", userid,
                    SZ_FILES)

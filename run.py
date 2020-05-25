@@ -36,4 +36,5 @@ app.logger.addHandler(configlog.stream)
 app.logger.setLevel(logging.DEBUG)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=4000)
+    pass
+    #app.run(debug=True, port=4000)

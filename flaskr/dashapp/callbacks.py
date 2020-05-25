@@ -1,5 +1,6 @@
 from types import SimpleNamespace
 import logging
+
 from processing.sql import reload_engine
 from sqlalchemy.orm import aliased, joinedload
 from sqlalchemy.sql import func
@@ -9,8 +10,6 @@ from dash.dependencies import Input, Output
 from flaskr.dashapp.dash_functions import gen_fListFig, namesList
 import flask
 import numpy as np
-from scipy.stats import binned_statistic
-import scipy.signal
 from processing.models import Dates, Files, Filename, Closure
 
 times_tickf = {
@@ -20,19 +19,11 @@ times_tickf = {
     'year': '%m %d'
 }
 
-flask.session = dict(userid='testing1239KjMbA')
+flask.session = dict(userid='testing123wq0piA')
 
 import threading
-import shelve
-
-ms = shelve.open('selected_files')
-ms["sl"] = []
-ms.close()
-
-FNAME = 'selected_files.pickle'
 
 sel_lock = threading.Lock()
-
 sessions_lock = threading.Lock()
 
 
@@ -108,18 +99,23 @@ def direct_parent():
     try:
         fn1, fn2 = aliased(Filename), aliased(Filename)
 
-        ds = db.query(Closure, fn1,
-                      fn2).join(fn1, fn1.fileId == Closure.parent).join(
-                          fn2, fn2.fileId == Closure.child).all()
+        """
+
+        ds = db.query(Closure, fn1, fn2) \
+                .join(fn1, fn1.fileId == Closure.parent) \
+                .join(fn2, fn2.fileId == Closure.child).all()
 
         for df in ds:
             print(df[0].parent, df[0].child, df[1].fileId, df[2].fileId,
                   df[1].fileName, df[2].fileName)
+        """
 
         ds = db.query(Closure.depth.label('__d'),
                     fn1.fileName.label('fn1_name'), fn1.fileId.label('fn1_id') ,
                     fn2.fileName.label('fn2_name'), fn2.fileId.label('fn2_id')) \
-                    .join(fn1, fn1.fileId == Closure.parent).join(fn2, fn2.fileId == Closure.child).distinct().filter(Closure.depth==1).subquery()
+                    .join(fn1, fn1.fileId == Closure.parent) \
+                    .join(fn2, fn2.fileId == Closure.child).distinct() \
+                    .filter(Closure.depth==1).subquery()
 
         sds = db.query(
             Files.id.label('f_id'),
@@ -127,7 +123,7 @@ def direct_parent():
             func.sum(Dates.deletes).label("deletes")).join(Dates).group_by(
                 Files.id).subquery()
 
-        res = db.query(ds, sds).outerjoin(sds, sds.c.f_id == ds.c.fn2_id).all()
+        res = db.query(ds, sds).join(sds, sds.c.f_id == ds.c.fn2_id).all()
 
         parents = [x.fn1_id for x in res]
         children = [x.fn2_id for x in res]
@@ -164,6 +160,8 @@ def direct_parent():
                 ],
                 values=[10, 14, 12, 10, 2, 6, 6, 4, 4],
             ))
+
+        return fig
 
         return go.Figure(
             data=[go.Sunburst(ids=children, labels=names, parents=parents)],
@@ -217,7 +215,6 @@ def query_db(files):
 def gen_sunburst():
     return direct_parent()
 
-    #fig["data"][0]["labels"] =
 
 
 def get_activity(files=None,
@@ -228,6 +225,8 @@ def get_activity(files=None,
                  aggregate_by='none',
                  filter_func=bool,
                  use_prev_bins=True):
+
+    from scipy.stats import binned_statistic
 
     #Returns histogram of adds/deletes
 
@@ -343,6 +342,7 @@ def get_activity(files=None,
 
 
 def apply_smoothing(data, window, poly_order=3, negative=False):
+    import scipy.signal
     window -= window % 2 + 1
 
     data = scipy.signal.savgol_filter(data, window, poly_order)

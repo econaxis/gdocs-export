@@ -15,7 +15,7 @@ storageAccountName="pydocs"
 AZURESTORAGEKEY="M7ReBg04PlL6QrpelQJAi2zkrhiqOfYRberVZgarvu4AdS7Le+Cu+sTOnJ1nOl57KUmmMN5bm75vj0TP136xAQ=="
 STORAGEACCT="pydocs"
 STORAGEKEY=$AZURESTORAGEKEY
-STORAGE_PATH=/mnt/az-pydocs
+STORAGE_PATH=/mnt/az-pydocs/
 
 
 echo "Storage key: ${STORAGEKEY}, path: ${STORAGE_PATH}"
