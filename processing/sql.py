@@ -14,7 +14,9 @@ from flaskr.flask_config import Config
 logger = logging.getLogger(__name__)
 
 
-token = datetime.now().strftime("%d-%H.%f") + secrets.token_urlsafe(7)
+scrt = secrets.token_urlsafe(7)
+token = datetime.now().strftime("%d-%H.%f") + scrt
+
 
 sessions = {}
 sessions_lock = threading.Lock()
@@ -296,8 +298,6 @@ def insert_sql(userid, files, upload=False):
     logger.info("len of id map %d len of files %d", len(fileid_obj_map),
                 SZ_FILES)
 
-    min(lt_files.qsize(), 5)
-
     if files:
         p = [
             threading.Thread(target=load_from_dict,
@@ -307,7 +307,7 @@ def insert_sql(userid, files, upload=False):
         for x in p:
             x.start()
         for x in p:
-            logger.debug("joining threads load_from_dict")
+            logger.info("joining threads load_from_dict")
             x.join()
 
     logger.info("starting load closures")

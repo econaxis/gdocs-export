@@ -18,7 +18,7 @@ pprint = pprint.PrettyPrinter(indent=4).pprint
 
 timeout = aiohttp.ClientTimeout(total=15)
 
-MAX_FILES = 2000
+MAX_FILES = 5000
 
 SEED_ID = "root"
 
@@ -57,40 +57,32 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
 
         # Root id is different structure
         if (proc_file.id == "root"):
-            data = dict(
-                q = "(mimeType='application/vnd.google-apps.folder' or mimeType= 'application/vnd.google-apps.document') and  \
-                    trashed = False",
-
-                corpora="allDrives",
-                includeItemsFromAllDrives='true',
-                supportsTeamDrives='true',
-                fields=
-                'files/mimeType, files/id, files/name, files/capabilities/canReadRevisions',
-                pageSize=1000
-            )
+            query = "(mimeType='application/vnd.google-apps.folder' or mimeType= 'application/vnd.google-apps.document') and  \
+                        trashed = False",
         else:
             query = "'" + proc_file.id + "' in parents and \
                 (mimeType='application/vnd.google-apps.folder' or mimeType= 'application/vnd.google-apps.document') and \
                 trashed = False"
-            data = dict(
-                q=query,
-                corpora="allDrives",
-                includeItemsFromAllDrives='true',
-                supportsTeamDrives='true',
-                fields=
-                'files/mimeType, files/id, files/name, files/capabilities/canReadRevisions',
-                pageSize = 1000
-            )
+
+        data = dict(
+            q = query,
+            corpora="allDrives",
+            includeItemsFromAllDrives='true',
+            supportsTeamDrives='true',
+            fields=
+            'files/mimeType, files/id, files/name, files/capabilities/canReadRevisions',
+            pageSize=1000
+        )
+
 
         try:
             async with session.get(url=drive_url, params=data,
                                    headers=headers) as response:
                 resp = await TestUtil.handleResponse(response)
                 if (resp == -1):
-                    del resp
-                    del response
+                    #If response code is negative, means there is an error, most likely
+                    #related to permissions. There is no need to process further
                     continue
-        #except aiohttp.client_exceptions:
         except:
             secs = random.uniform(5, 40)
             logger.exception(
@@ -99,16 +91,12 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
             await asyncio.sleep(secs)
             continue
 
-        # Parse file and folder names to make them filesystem safe, limit to
-        # 120 characters
-
         for resFile in resp["files"]:
             id = resFile["id"]
 
             ent_name = "".join([
-                "" if c in ['\"', '\'', '\\', '"', "'"] else c
-                for c in resFile["name"]
-            ]).rstrip()[0:298]
+                "" if c in {'\"', '\'', '\\', '"', "'"} else c
+                for c in resFile["name"] ]).rstrip()[0:298]
 
             f = temp_file(name=ent_name,
                           id=id,
@@ -116,7 +104,7 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
                           type=resFile["mimeType"])
 
             if (resFile["mimeType"] == "application/vnd.google-apps.folder"):
-                await folders.put((f))
+                await folders.put(f)
             elif (resFile["mimeType"] in ACCEPTED_TYPES):
                 # First element id is not used for naming, only for api calls
                 if not resFile["capabilities"][
@@ -125,8 +113,7 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
                 tot_folders[id] = True
                 await files.put(f)
 
-    logger.info("----------------------------------getid return")
-    logger.info("len %d:%d:%d", TestUtil.processedcount, files.qsize(),
+    logger.info("getid return, len %d:%d:%d", TestUtil.processedcount, files.qsize(),
                 len(TestUtil.files))
 
 
@@ -137,7 +124,7 @@ async def getRevision(files,
                       name='default'):
 
     # Await random amount for more staggered requesting (?)
-    await asyncio.sleep(random.uniform(0, workerInstances * 1))
+    await asyncio.sleep(random.uniform(workerInstances*1, workerInstances * 1.5))
 
     time.time()
 
@@ -147,11 +134,13 @@ async def getRevision(files,
         #await asyncio.sleep(random.uniform(0, 1))
         cycles += 1
 
-        proc_file = await tryGetQueue(files, name="getRevision")
+        proc_file = await tryGetQueue(files, name="getRevision", interval = 2)
 
         if (proc_file == -1):
             logger.warning('getRevision task exiting')
             break
+
+        logger.debug("proc file path: %s", list(zip(*proc_file.path))[1])
 
         gd = GDoc()
         await gd.async_init(proc_file.name, proc_file.id, session,
@@ -190,17 +179,22 @@ async def start():
 
     print("TESTING SOCKET SEND")
 
-    start_succ = False
+    socket_tries = 2
 
-    while not start_succ:
+    while socket_tries:
         try:
             ex = Info(extra="testing extra function from start()")
-            await TestUtil.send_socket(ex)
+            await TestUtil.test_server(ex)
         except:
-            logger.exception("Starting socket send failed, retrying after 5s")
-            await asyncio.sleep(5)
+            logger.info("Starting socket send failed, retrying after 5s")
+            socket_tries -=1
+            await asyncio.sleep(3)
         else:
-            start_succ = True
+            socket_tries = 1
+            break
+
+    TestUtil.sql_server_active = bool(socket_tries)
+
 
     print("==== END ====")
 
@@ -208,9 +202,12 @@ async def start():
     files = asyncio.Queue()
 
     first_folder = temp_file(name='root',
-                             id='root',
+                             id=SEED_ID,
                              type='',
                              path=[('root', 'root')])
+
+
+    print("first_foldre: ", first_folder.id)
 
     await folders.put(first_folder)
 
@@ -271,6 +268,9 @@ async def shutdown(loop, signal=None):
 
 def loadFiles(USER_ID, _workingPath, fileId, _creds):
 
+
+    _workingPath = os.environ["HOMEDATAPATH"]
+
     configlog.set_token(USER_ID)
 
     logger.info("Start loadFiles, %s %s", USER_ID, fileId)
@@ -284,7 +284,7 @@ def loadFiles(USER_ID, _workingPath, fileId, _creds):
     TestUtil.workingPath = _workingPath
     TestUtil.userid = USER_ID
 
-    if (fileId is not None):
+    if (fileId != None):
         global SEED_ID
         SEED_ID = fileId
         TestUtil.idmapper[SEED_ID] = 'root'
@@ -309,11 +309,14 @@ def loadFiles(USER_ID, _workingPath, fileId, _creds):
     #pickle.dump(TestUtil.pickleIndex, open(_workingPath + 'pickleIndex', 'wb'))
 
     logger.info("dumped pickle files")
-    # Writing data to SQL
-    #import processing.sql
-    #processing.sql.start(USER_ID, _workingPath)
 
-    #open(_workingPath + 'done.txt', 'a+').write("DONE")
+
+    if not TestUtil.sql_server_active:
+        # Writing data to SQL
+        import processing.sql
+        processing.sql.start(USER_ID, TestUtil.info.files, upload = True)
+
+    open(_workingPath + 'done.txt', 'a+').write("DONE")
     configlog.sendmail(msg="program ended successfully")
 
     #pickle.dump(TestUtil.dbg_infos, open('dbg_infos', 'wb'))

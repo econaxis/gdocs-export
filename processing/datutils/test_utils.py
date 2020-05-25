@@ -21,8 +21,11 @@ if "FLASKDBG" in os.environ:
 else:
     SERVER_ADDR = 'sql'
 
+
+"""
 if (random.random() < 0.0):
     os.environ["PROFILE"] = "true"
+"""
 
 Info = collections.namedtuple('Info', ['userid', 'files', 'extra'],
                               defaults=('default' + str(datetime.now()), [],
@@ -37,12 +40,20 @@ class TestUtil:
     headers = {}
     files = []
     idmapper = {}
+    sql_server_active = False
     userid = None
     workingPath = None
     pickleIndex = []
     processedcount = 0
 
     dbg_infos = []
+
+
+    #Used for debugging purposes for measuring rate
+    _prev_count = (0, time.time())
+
+
+    info = Info()
 
     @classmethod
     def refresh_creds(cls, creds):
@@ -75,11 +86,11 @@ class TestUtil:
     @classmethod
     async def print_size(cls, files, endEvent):
         cls.starttime = time.time()
+
         if ("PROFILE" in os.environ):
             tracemalloc.start()
             cls.snapshot = tracemalloc.take_snapshot()
 
-        start_time = time.time()
         p = None
         while not endEvent.is_set():
 
@@ -105,37 +116,30 @@ class TestUtil:
 
             totsize = files.qsize() + len(cls.files) + cls.processedcount
 
+            cur_count = len(cls.files) + cls.processedcount
 
-            logger.info("%s\n%d/%d discovered items at %s\ndump count: %d", \
+            rate = (cur_count - cls._prev_count[0])/(time.time() - cls._prev_count[1]) * 60
+
+            logger.info("%s\n%d/%d discovered items at %s\ndump count: %d; rate is %d per min", \
                     cls.workingPath,len(cls.files) + cls.processedcount, totsize, datetime.now().__str__() \
-                    ,cls.fileCounter)
+                    ,cls.fileCounter, rate)
 
-            #Temp var for thread
+            cls._prev_count = (cur_count, time.time())
 
-            _sleep_time = 10
 
-            interval = 4
+            _sleep_time = 20
 
-            for i in range(interval):
-                if endEvent.is_set():
-                    break
-                if len(cls.files) > 3:
+
+            if len(cls.files) > 10:
+                code = await cls.dump_files()
+                while not code:
+                    secs = random.randint(50, 200)
+                    logger.info("SQL Socket Send denied, retrying in %d",
+                                 secs)
+                    time.sleep(secs)
                     code = await cls.dump_files()
-                    while not code:
-                        secs = random.randint(100, 300)
-                        logger.error("SQL Socket Send denied, retrying in %d",
-                                     secs)
-                        time.sleep(secs)
-                        code = await cls.dump_files()
 
-                await asyncio.sleep(_sleep_time / interval)
-
-            a0 = time.time()
-            logger.debug("file save time: %f", time.time() - a0)
-
-            logger.debug("event loop health: %d, intended: %d",
-                         time.time() - start_time, _sleep_time)
-            start_time = time.time()
+            await asyncio.sleep(_sleep_time)
 
             if p:
                 p.join(timeout=0.01)
@@ -155,14 +159,13 @@ class TestUtil:
                            files=condensed_files,
                            extra='upload' if upload else None)
 
-        success = await cls.send_socket(info_packet)
+        success = False
 
-        while not success:
+        while not (await cls.send_socket(info_packet)):
             logger.info("send socket not succeeded, sleeping 60")
 
             #Blocks the event loop
             time.sleep(random.randint(40, 70))
-            success = await cls.send_socket(info_packet)
 
         if success:
             cls.fileCounter += 1
@@ -174,7 +177,44 @@ class TestUtil:
         return success
 
     @classmethod
+    async def test_server(cls, info_packet):
+        logger.info("connect working")
+
+        logger.info("server addr: %s", SERVER_ADDR)
+        r, w = await asyncio.open_connection(SERVER_ADDR, 8888)
+
+        message = b"request"
+
+        await adv_write(w, message)
+
+        m = await adv_read(r)
+        logger.info("received: %s", m)
+
+        if m != b'go':
+            return False
+
+        if m == b'go':
+            await adv_write(w, info_packet, to_pickle=True)
+        w.close()
+        return True
+
+
+
+    @classmethod
     async def send_socket(cls, info_packet):
+
+        if not cls.sql_server_active:
+            cls.info = info_packet._replace(files = cls.info.files + info_packet.files)
+
+            if info_packet.extra=='upload':
+                logger.info("Uploading info")
+                pickle.dump(cls.info, open('info', 'wb'))
+
+            return True
+
+        print(info_packet)
+
+        return True
         logger.info("connect working")
 
         logger.info("server addr: %s", SERVER_ADDR)
@@ -263,7 +303,7 @@ async def API_RESET(seconds=6, throttle=None, decrease=False):
 
 async def tryGetQueue(queue: asyncio.Queue,
                       repeatTimes: int = 2,
-                      interval: float = 5,
+                      interval: float = 3,
                       name: str = ""):
     output = None
     timesWaited = 0
