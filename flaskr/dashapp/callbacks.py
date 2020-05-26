@@ -14,6 +14,8 @@ import flask
 import numpy as np
 from processing.models import Dates, Files, Filename, Closure
 
+logger = logging.getLogger(__name__)
+
 times_tickf = {
     'day': '%H:%M',
     'week': '%a %H:%M',
@@ -44,7 +46,6 @@ def add_sel(val):
             return len(f["sl"]) - 1
 
 
-logger = logging.getLogger(__name__)
 
 logger.info("DASH CALLBACKS IMPORTED")
 # Debug in place for flask.session

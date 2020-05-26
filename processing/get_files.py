@@ -110,7 +110,7 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
                 # DEBUGGING
                 # Testing paths, force all files to be part of SOME folder
 
-                if len(f.path) <= 2:
+                if len(f.path) <= 2 and "FLASKDBG" in os.environ:
                     #There is no pathing, so we ignore. For debugging only
                     continue
 
