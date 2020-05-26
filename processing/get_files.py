@@ -1,6 +1,5 @@
 import asyncio
 from collections import namedtuple
-from time import time
 import random
 import aiohttp
 import pprint
@@ -9,7 +8,7 @@ import logging
 import configlog
 
 # Imports TestUtil and corresponding functions
-from processing.datutils.test_utils import *
+from processing.datutils.test_utils import TestUtil, os, tryGetQueue
 from processing.gdoc import GDoc
 
 logger = logging.getLogger(__name__)

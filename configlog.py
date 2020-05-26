@@ -4,7 +4,6 @@ import time
 import os
 import sys
 from logging import StreamHandler, FileHandler
-from logging.handlers import SysLogHandler
 from datetime import datetime
 import secrets
 import urllib.request

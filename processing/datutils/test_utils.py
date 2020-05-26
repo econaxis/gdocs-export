@@ -5,7 +5,6 @@ import sys
 #from memory_profiler import profile
 import gc
 import resource
-import configlog
 import tracemalloc
 import random
 from datetime import datetime

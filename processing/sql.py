@@ -4,8 +4,7 @@ import threading
 import secrets
 import sqlalchemy as sqlal
 from sqlalchemy.orm import sessionmaker, scoped_session
-import os, functools
-import logging
+import os, functools, logging
 
 from processing.models import Files, Closure, Dates, Base, Filename
 
