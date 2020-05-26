@@ -19,6 +19,9 @@ token = datetime.now().strftime("%d-%H.%f") + scrt
 
 
 sessions = {}
+
+
+#TODO: check whether lock is truly necessary?
 sessions_lock = threading.Lock()
 
 #Global variable for data path
@@ -111,7 +114,7 @@ def reload_engine(owner_id, create_new=False, download=False, lock=None):
 
 
         #Check that the database has at least some rows
-        assert not create_new and test_session.query(test_session.query(Files).exists()).scalar(), \
+        assert not create_new or test_session.query(test_session.query(Files).exists()).scalar(), \
                 "create_new is not true and the database does not have any rows"
 
         return v_scoped_session
@@ -230,23 +233,26 @@ def load_from_dict(lt_files, dict_lock, owner_id=None):
 
 
 def start(*args, **kwargs):
+
+    #The only purpose of this wrapper is to handle all errors and print them accordingly
     import sys
     try:
         insert_sql(*args, **kwargs)
-    except:
-        logger.critical("Exception in SQL!")
-        logger.exception("-")
-        sys.excepthook(*sys.exc_info())
+    except Exception as e:
+        logger.exception("Exception in SQL!")
+        raise e
 
 
-def insert_sql(userid, files, upload=False):
+def insert_sql(userid, files, upload=False, create_new = False):
+    #create_new must be True if this is the first time we are running
+
     logger.debug("Starting sql for userid %s", userid)
 
     from processing.sql_server import owner_manager
 
     fileid_obj_map, dict_lock = owner_manager(owner_id=userid)
 
-    sess = reload_engine(userid)()
+    sess = reload_engine(userid, create_new = True)()
 
     logger.info("Checked out owner object, fileid dict, and lock")
 

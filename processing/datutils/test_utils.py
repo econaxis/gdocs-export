@@ -41,6 +41,7 @@ class TestUtil:
     files = []
     idmapper = {}
     sql_server_active = False
+    MAX_FILES = 3000
     userid = None
     workingPath = None
     pickleIndex = []
@@ -91,15 +92,8 @@ class TestUtil:
             tracemalloc.start()
             cls.snapshot = tracemalloc.take_snapshot()
 
-        p = None
         while not endEvent.is_set():
-
-            if random.random() < 0.1:
-                p = configlog.sendmail(msg=str(datetime.now()),
-                                       return_thread=True)
-
             gc.collect()
-
             logger.warning('\n\n%sMemory usage: %s (kb)%s%f mins since start',
                            '-' * 15,
                            resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,
@@ -120,30 +114,24 @@ class TestUtil:
 
             rate = (cur_count - cls._prev_count[0])/(time.time() - cls._prev_count[1]) * 60
 
-            logger.info("%s\n%d/%d discovered items at %s\ndump count: %d; rate is %d per min", \
-                    cls.workingPath,len(cls.files) + cls.processedcount, totsize, datetime.now().__str__() \
+            logger.info("%s\n%d/%d discovered items \ndump count: %d; rate is %d per min", \
+                    cls.workingPath,len(cls.files) + cls.processedcount, totsize \
                     ,cls.fileCounter, rate)
 
             cls._prev_count = (cur_count, time.time())
 
 
-            _sleep_time = 20
+            _sleep_time = 15
+            check_times = 10
 
-
-            if len(cls.files) > 10:
-                code = await cls.dump_files()
-                while not code:
-                    secs = random.randint(50, 200)
-                    logger.info("SQL Socket Send denied, retrying in %d",
-                                 secs)
-                    time.sleep(secs)
-                    code = await cls.dump_files()
-
-            await asyncio.sleep(_sleep_time)
-
-            if p:
-                p.join(timeout=0.01)
-                logger.debug("done awaiting task join")
+            for _ in range(check_times):
+                await asyncio.sleep(_sleep_time / check_times)
+                if cur_count > cls.MAX_FILES:
+                    #We have exceeded the max file limit. We set the endEvent so hopefully all the other workers will
+                    #end too
+                    logger.info("cur_count %d is larger than max_files", cur_count)
+                    endEvent.set()
+                    break
 
         logger.warning("print task return")
 
@@ -209,12 +197,13 @@ class TestUtil:
             if info_packet.extra=='upload':
                 logger.info("Uploading info")
                 pickle.dump(cls.info, open('info', 'wb'))
-
             return True
 
-        print(info_packet)
 
         return True
+
+        #The rest is deprecated code. We now handle SQL insertion by ourselves.
+
         logger.info("connect working")
 
         logger.info("server addr: %s", SERVER_ADDR)

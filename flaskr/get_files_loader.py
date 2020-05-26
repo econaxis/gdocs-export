@@ -7,7 +7,6 @@ from flaskr.rqsets import returnConfig
 import os
 
 homedata = os.environ["HOMEDATAPATH"]
-
 assert homedata
 
 import urllib.request

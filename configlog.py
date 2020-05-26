@@ -3,11 +3,12 @@ import smtplib
 import time
 import os
 import sys
-from logging import StreamHandler
-from logging.handlers import SysLogHandler
+from logging import StreamHandler, FileHandler
+from logging.handlers import SysLogHandler 
 from datetime import datetime
 import secrets
 import urllib.request
+from flaskr import flask_config
 
 token = secrets.token_urlsafe(4)
 
@@ -20,15 +21,14 @@ def set_token(tok):
 os.environ["TZ"] = "America/Vancouver"
 time.tzset()
 
-#logFile = flask_config.Config.HOMEDATAPATH + "logs/logs{}---{}.txt".format(
-#datetime.now().strftime("%-m-%d"), token)
+logFile = flask_config.Config.HOMEDATAPATH + "logs/logs.txt"
 
-syslog = SysLogHandler(address=('logs2.papertrailapp.com', 49905))
-#filelog = FileHandler(logFile)
+#syslog = SysLogHandler(address=('logs2.papertrailapp.com', 49905))
+filelog = FileHandler(logFile)
 stream = StreamHandler()
 
 stream.setLevel(logging.INFO)
-##filelog.setLevel(logging.NOTSET)
+filelog.setLevel(logging.DEBUG)
 
 
 def semidisable(logg):
@@ -55,20 +55,22 @@ formatter = logging.Formatter(
 
 #syslog = SysLogHandler(address=('syslog-a.logdna.com', 49905))
 
-syslog.setFormatter(formatter)
-#filelog.setFormatter(formatter)
+#syslog.setFormatter(formatter)
+filelog.setFormatter(formatter)
 stream.setFormatter(formatter)
 
 logger = logging.getLogger()
-logger.addHandler(syslog)
+logger.addHandler(filelog)
 logger.addHandler(stream)
+
+
+logger.info(f"====================={token}")
 
 logger.setLevel(logging.NOTSET)
 
 gun = logging.getLogger('gunicorn')
 gun.setLevel(logging.NOTSET)
 gun.addHandler(stream)
-gun.addHandler(syslog)
 
 semidisable(logging.getLogger("googleapiclient"))
 semidisable(logging.getLogger("asyncio"))
@@ -90,7 +92,6 @@ def handle_exception(exc_type, exc_value, exc_traceback):
     logger.critical("Custom Uncaught exception",
                     exc_info=(exc_type, exc_value, exc_traceback))
 
-    breakpoint()
 
     sendmail(msg="Program ended wih exception. Check logs for more details")
     logger.critical("exiting! from sshook")

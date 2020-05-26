@@ -16,6 +16,7 @@ services:
             HOMEDATAPATH: ${HOMEDATAPATH}
             HOMEPATH: ${HOMEPATH}
             WORKER: 'true'
+            AZURESTORAGEKEY: "${AZURESTORAGEKEY}"
         deploy:
             resources:
                 limits:
@@ -28,7 +29,8 @@ services:
               source: .
               target: ${HOMEPATH}
     web:
-        image: 'henry2833/pydocs:latest'
+        image: henry2833/pydocs:latest
+        #Temporarily disable for debugging
         entrypoint: ['echo', 'Service disabled']
         environment:
             REDIS_PASSW: "${REDIS_PASSW}"
@@ -51,21 +53,22 @@ services:
             - type: bind
               source: .
               target: ${HOMEPATH}
-    sql:
-        image: 'henry2833/pydocs:latest'
-        environment:
-            REDIS_PASSW: "${REDIS_PASSW}"
-            SQL_CONN:  "${SQL_CONN}"
-            REDIS_HOST: "${REDIS_HOST}"
-            SQL_SERV: "true"
-            HOMEDATAPATH: "${HOMEDATAPATH}"
-            HOMEPATH: "${HOMEPATH}"
-            AZURESTORAGEKEY: "${AZURESTORAGEKEY}"
-        volumes:
-            - type: bind
-              source: .
-              target: ${HOMEPATH}
 
+              #    sql:
+              #        image: 'henry2833/pydocs:latest'
+              #        environment:
+              #            REDIS_PASSW: "${REDIS_PASSW}"
+              #            SQL_CONN:  "${SQL_CONN}"
+              #            REDIS_HOST: "${REDIS_HOST}"
+              #            SQL_SERV: "true"
+              #            HOMEDATAPATH: "${HOMEDATAPATH}"
+              #            HOMEPATH: "${HOMEPATH}"
+              #            AZURESTORAGEKEY: "${AZURESTORAGEKEY}"
+              #        volumes:
+              #            - type: bind
+              #              source: .
+              #              target: ${HOMEPATH}
+              #
 networks:
     default:
         external:
