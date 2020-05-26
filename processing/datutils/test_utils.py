@@ -20,8 +20,6 @@ if "FLASKDBG" in os.environ:
     SERVER_ADDR = "127.0.0.1"
 else:
     SERVER_ADDR = 'sql'
-
-
 """
 if (random.random() < 0.0):
     os.environ["PROFILE"] = "true"
@@ -49,10 +47,8 @@ class TestUtil:
 
     dbg_infos = []
 
-
     #Used for debugging purposes for measuring rate
     _prev_count = (0, time.time())
-
 
     info = Info()
 
@@ -112,14 +108,14 @@ class TestUtil:
 
             cur_count = len(cls.files) + cls.processedcount
 
-            rate = (cur_count - cls._prev_count[0])/(time.time() - cls._prev_count[1]) * 60
+            rate = (cur_count - cls._prev_count[0]) / (time.time() -
+                                                       cls._prev_count[1]) * 60
 
             logger.info("%s\n%d/%d discovered items \ndump count: %d; rate is %d per min", \
                     cls.workingPath,len(cls.files) + cls.processedcount, totsize \
                     ,cls.fileCounter, rate)
 
             cls._prev_count = (cur_count, time.time())
-
 
             _sleep_time = 15
             check_times = 10
@@ -129,7 +125,8 @@ class TestUtil:
                 if cur_count > cls.MAX_FILES:
                     #We have exceeded the max file limit. We set the endEvent so hopefully all the other workers will
                     #end too
-                    logger.info("cur_count %d is larger than max_files", cur_count)
+                    logger.info("cur_count %d is larger than max_files",
+                                cur_count)
                     endEvent.set()
                     break
 
@@ -186,19 +183,17 @@ class TestUtil:
         w.close()
         return True
 
-
-
     @classmethod
     async def send_socket(cls, info_packet):
 
         if not cls.sql_server_active:
-            cls.info = info_packet._replace(files = cls.info.files + info_packet.files)
+            cls.info = info_packet._replace(files=cls.info.files +
+                                            info_packet.files)
 
-            if info_packet.extra=='upload':
+            if info_packet.extra == 'upload':
                 logger.info("Uploading info")
                 pickle.dump(cls.info, open('info', 'wb'))
             return True
-
 
         return True
 

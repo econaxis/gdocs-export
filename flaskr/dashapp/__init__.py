@@ -15,7 +15,6 @@ from pprint import PrettyPrinter
 pp = PrettyPrinter(indent=3)
 
 
-
 def register_dashapp(flask_serv):
     from flaskr.dashapp.callbacks import register_callback
     from flaskr.dashapp.layout import layout
@@ -31,12 +30,9 @@ def register_dashapp(flask_serv):
                             external_stylesheets=external_stylesheets,
                             url_base_pathname="/dash/")
 
-
     with flask_serv.app_context():
         dashapp.layout = layout()
         register_callback(dashapp)
-
-
     """
     # Useful for hosting as an iframe, sets headers to allow origin to be *
     @dashapp.server.after_request
@@ -49,14 +45,13 @@ def register_dashapp(flask_serv):
 
     """
 
-
     if "FLASKDBG" in os.environ:
 
         #Calls run server immediately, so the thread blocks.
         #If we return normally (flaskdbg NOT in os.environ) then the parent caller
         #will call flask_serv.run
         print("starting run server")
-        dashapp.run_server(debug=True, threaded = False, processes = 1)
+        dashapp.run_server(debug=True, threaded=False, processes=1)
 
 
 if __name__ == "__main__":

@@ -13,13 +13,10 @@ from flaskr.flask_config import Config
 
 logger = logging.getLogger(__name__)
 
-
 scrt = secrets.token_urlsafe(7)
 token = datetime.now().strftime("%d-%H.%f") + scrt
 
-
 sessions = {}
-
 
 #TODO: check whether lock is truly necessary?
 sessions_lock = threading.Lock()
@@ -31,6 +28,7 @@ hdatapath = Config.HOMEDATAPATH
 az_driver = None
 
 import azure.common
+
 
 def setup_azure():
     global az_driver
@@ -112,7 +110,6 @@ def reload_engine(owner_id, create_new=False, download=False, lock=None):
 
         test_session = v_scoped_session()
 
-
         #Check that the database has at least some rows
         assert not create_new or test_session.query(test_session.query(Files).exists()).scalar(), \
                 "create_new is not true and the database does not have any rows"
@@ -145,7 +142,7 @@ def db_connect(func):
 
 
 @db_connect
-def load_clos(file_data, fileid_obj_map,  owner_id=None):
+def load_clos(file_data, fileid_obj_map, owner_id=None):
     assert owner_id != None, "Ownerid is none err"
 
     sess = reload_engine(owner_id)()
@@ -155,8 +152,7 @@ def load_clos(file_data, fileid_obj_map,  owner_id=None):
             if clos.parent[0] not in fileid_obj_map:
                 logger.debug("new element not found: %s", clos.parent[0])
 
-                fi = Files(fileId=clos.parent[0] + str(owner_id),
-                           isFile=False)
+                fi = Files(fileId=clos.parent[0] + str(owner_id), isFile=False)
 
                 fi.name = [Filename(files=fi, fileName=clos.parent[1])]
                 sess.add(fi)
@@ -167,8 +163,7 @@ def load_clos(file_data, fileid_obj_map,  owner_id=None):
             if clos.child[0] not in fileid_obj_map:
                 logger.debug("new element not found: %s", clos.child[0])
 
-                fi = Files(fileId=clos.child[0] + str(owner_id),
-                           isFile=False)
+                fi = Files(fileId=clos.child[0] + str(owner_id), isFile=False)
 
                 fi.name = [Filename(files=fi, fileName=clos.child[1])]
                 sess.add(fi)
@@ -189,9 +184,9 @@ def load_clos(file_data, fileid_obj_map,  owner_id=None):
                 #breakpoint()
                 raise e
             else:
-                if not sess.query(Closure).filter_by(
-                        parent=parent_id, child=child_id,
-                        depth=clos.depth).scalar():
+                if not sess.query(Closure).filter_by(parent=parent_id,
+                                                     child=child_id,
+                                                     depth=clos.depth).scalar():
                     cls = Closure(parent=parent_id,
                                   child=child_id,
                                   depth=clos.depth)
@@ -243,7 +238,7 @@ def start(*args, **kwargs):
         raise e
 
 
-def insert_sql(userid, files, upload=False, create_new = False):
+def insert_sql(userid, files, upload=False, create_new=False):
     #create_new must be True if this is the first time we are running
 
     logger.debug("Starting sql for userid %s", userid)
@@ -252,7 +247,7 @@ def insert_sql(userid, files, upload=False, create_new = False):
 
     fileid_obj_map, dict_lock = owner_manager(owner_id=userid)
 
-    sess = reload_engine(userid, create_new = True)()
+    sess = reload_engine(userid, create_new=True)()
 
     logger.info("Checked out owner object, fileid dict, and lock")
 
@@ -320,7 +315,6 @@ def insert_sql(userid, files, upload=False, create_new = False):
 
     with dict_lock:
         load_clos(files, fileid_obj_map, owner_id=userid)
-
 
     sess.commit()
     logger.warning("Done all for owner_id %s; processed files: %d", userid,

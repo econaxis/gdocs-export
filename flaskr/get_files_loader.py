@@ -13,8 +13,8 @@ import urllib.request
 
 pp = PrettyPrinter(indent=4)
 
-
 redis_conn = Redis(**(returnConfig()))
+
 
 def queueLoad(userid, workingPath, fileId, creds):
     q = Queue(connection=redis_conn)
@@ -27,9 +27,7 @@ def queueLoad(userid, workingPath, fileId, creds):
     token = secrets.token_urlsafe(4)
     ip = urllib.request.urlopen('https://ident.me').read().decode('utf8')
     name = f"{userid}-{token}"
-    job = q.enqueue(load,
-                    job_timeout='50h',
-                    args=(name, None, fileId, creds))
+    job = q.enqueue(load, job_timeout='50h', args=(name, None, fileId, creds))
 
 
 def spam(i=100):
@@ -40,9 +38,10 @@ def spam(i=100):
         print(i)
         queueLoad("v2", None, "root", creds)
 
+
 def spam_threaded():
     import threading
 
-    ths = [threading.Thread(target = spam) for x in range(10)]
+    ths = [threading.Thread(target=spam) for x in range(10)]
     [x.start() for x in ths]
     [x.join() for x in ths]

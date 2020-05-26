@@ -4,7 +4,7 @@ import time
 import os
 import sys
 from logging import StreamHandler, FileHandler
-from logging.handlers import SysLogHandler 
+from logging.handlers import SysLogHandler
 from datetime import datetime
 import secrets
 import urllib.request
@@ -63,7 +63,6 @@ logger = logging.getLogger()
 logger.addHandler(filelog)
 logger.addHandler(stream)
 
-
 logger.info(f"====================={token}")
 
 logger.setLevel(logging.NOTSET)
@@ -88,14 +87,11 @@ Profiler = None
 
 def handle_exception(exc_type, exc_value, exc_traceback):
 
-
     logger.critical("Custom Uncaught exception",
                     exc_info=(exc_type, exc_value, exc_traceback))
 
-
     sendmail(msg="Program ended wih exception. Check logs for more details")
     logger.critical("exiting! from sshook")
-
 
     #logger.info("sending to default hook")
     return 0

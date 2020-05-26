@@ -18,7 +18,6 @@ pprint = pprint.PrettyPrinter(indent=4).pprint
 
 timeout = aiohttp.ClientTimeout(total=15)
 
-
 SEED_ID = "root"
 
 workerInstances = 5
@@ -35,18 +34,16 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
                           files: asyncio.Queue, session: aiohttp.ClientSession,
                           headers, done_event):
 
-
     # This is the common data-dict to be passed into all our HTTP requests.
     # We need to fill out the q variable, depending on the folder id being requested
     data = dict(
-        q = "",
+        q="",
         corpora="allDrives",
         includeItemsFromAllDrives='true',
         supportsTeamDrives='true',
         fields=
         'files/mimeType, files/id, files/name, files/capabilities/canReadRevisions',
-        pageSize=1000
-    )
+        pageSize=1000)
     # Query to pass into Drive to find item
 
     while not done_event.is_set():
@@ -67,6 +64,7 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
 
         query = "((mimeType='application/vnd.google-apps.folder' or mimeType= 'application/vnd.google-apps.document') and  \
                 trashed = False)"
+
         #If "root" is used, then that is also accepted by the API
         #the restriction is that it doesn't apply to shared documents
         query += f"and ('{proc_file.id}' in parents)"
@@ -115,13 +113,14 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
                     continue
 
                 # First element id is not used for naming, only for api calls
-                if not resFile["capabilities"]["canReadRevisions"] or id in tot_folders:
+                if not resFile["capabilities"][
+                        "canReadRevisions"] or id in tot_folders:
                     continue
                 tot_folders[id] = True
                 await files.put(f)
 
-    logger.info("getid return, len %d:%d:%d", TestUtil.processedcount, files.qsize(),
-                len(TestUtil.files))
+    logger.info("getid return, len %d:%d:%d", TestUtil.processedcount,
+                files.qsize(), len(TestUtil.files))
 
 
 async def getRevision(files,
@@ -131,17 +130,19 @@ async def getRevision(files,
                       name='default'):
 
     # Await random amount for more staggered requesting, and to allow queryDriveActivity
-    # time to fill the files queue with jobs 
-    await asyncio.sleep(random.uniform(workerInstances*1, workerInstances * 1.5))
+    # time to fill the files queue with jobs
+    await asyncio.sleep(
+        random.uniform(workerInstances * 1, workerInstances * 1.5))
 
     while not endEvent.is_set():
-        proc_file = await tryGetQueue(files, name="getRevision", interval = 4)
+        proc_file = await tryGetQueue(files, name="getRevision", interval=4)
 
         if (proc_file == -1):
             logger.warning('getRevision task exiting')
             break
 
-        logger.debug("%s path: %s", proc_file.name, list(zip(*proc_file.path))[1])
+        logger.debug("%s path: %s", proc_file.name,
+                     list(zip(*proc_file.path))[1])
 
         gd = GDoc()
         await gd.async_init(proc_file.name, proc_file.id, session,
@@ -165,7 +166,6 @@ async def start():
     loop = asyncio.get_event_loop()
     loop.set_exception_handler(exchandler)
     #loop.set_debug(True)
-
     """
     #Debugging set at 0, we don't need the SQLSERVER
     socket_tries = 0
@@ -183,16 +183,11 @@ async def start():
     TestUtil.sql_server_active = bool(socket_tries)
     """
 
-    
     TestUtil.sql_server_active = False
-
-
 
     folders = asyncio.Queue()
     files = asyncio.Queue()
 
-
-    
     #Initialize the first folder to be put in.
     first_folder = temp_file(name='root',
                              id=SEED_ID,
@@ -217,14 +212,11 @@ async def start():
         # Generate Print Task that prints data every X seconds, useful for debugging and viewing progress
         printTask = loop.create_task(TestUtil.print_size(files, endEvent))
 
-
         # asyncio.gather is necessary for exception handling.
         # if we don't gather, then exceptions propagated in these three tasks will be swallowed
         await asyncio.gather(*revisionExplorer, *fileExplorers, printTask)
 
-
     await TestUtil.dump_files(upload=True)
-
 
     printTask.cancel()
     logger.info("start() task done")
@@ -258,14 +250,12 @@ async def shutdown(loop, signal=None):
 def loadFiles(USER_ID, _workingPath, fileId, _creds):
     #Program starting point
     logger.info("Start loadFiles, %s %s", USER_ID, fileId)
-    
+
     #_workingPath is deprecated, TODO: remove _workingPath
     _workingPath = os.environ["HOMEDATAPATH"]
 
-
     #Set the unique token for logging. This helps to differentiate between multiple simultaneous workers
     configlog.set_token(USER_ID)
-
 
     Path(_workingPath).mkdir(exist_ok=True)
 
@@ -279,7 +269,7 @@ def loadFiles(USER_ID, _workingPath, fileId, _creds):
         global SEED_ID
         SEED_ID = fileId
 
-        #TODO: query GDrive to find out the actual filename of the root fileId, to 
+        #TODO: query GDrive to find out the actual filename of the root fileId, to
         #be done in queryDriveActivity or start()?
         TestUtil.idmapper[SEED_ID] = 'root'
 
@@ -293,7 +283,10 @@ def loadFiles(USER_ID, _workingPath, fileId, _creds):
     if not TestUtil.sql_server_active:
         # Writing data to SQL
         import processing.sql
-        processing.sql.start(USER_ID, TestUtil.info.files, upload = True, create_new = True)
+        processing.sql.start(USER_ID,
+                             TestUtil.info.files,
+                             upload=True,
+                             create_new=True)
 
     open(_workingPath + 'done.txt', 'a+').write("DONE")
     configlog.sendmail(msg="program ended successfully")

@@ -21,8 +21,10 @@ timeout = aiohttp.ClientTimeout(total=10)
 
 Closure = namedtuple("Closure", ['parent', 'child', 'depth'])
 
-class Closure (namedtuple("Closure", ['parent', 'child', 'depth'])):
-    def __repr__ (self) :
+
+class Closure(namedtuple("Closure", ['parent', 'child', 'depth'])):
+
+    def __repr__(self):
         return 'p: {} c: {}\n'.format(self.parent[1], self.child[1])
 
 
@@ -100,9 +102,9 @@ class GDoc():
                 while not parent_conn.poll(0.01) and counter < 5:
                     counter += 1
                     logger.debug("sleeping from poll, waiting for %s, %d",
-                                fileId[0:5], counter)
-                    await asyncio.sleep(random.uniform(0.5 * counter,
-                                                       2 * counter))
+                                 fileId[0:5], counter)
+                    await asyncio.sleep(
+                        random.uniform(0.5 * counter, 2 * counter))
 
                 logger.debug("received goahead to receive %s", fileId[0:5])
 
@@ -110,7 +112,7 @@ class GDoc():
                     self.operations = parent_conn.recv()
                     if self.operations == []:
                         logger.debug("No content received for: %s, %s.",
-                                       self.fileId, self.name)
+                                     self.fileId, self.name)
                     parent_conn.send(f'success {fileId[0:5]}')
                     p.terminate()
                     p.join(0.01)
@@ -140,7 +142,7 @@ class GDoc():
                         return -1
                     logger.debug("can't get last revision, sleeping ")
                     await asyncio.sleep(random.uniform(5, 35))
-                    await self.get_last_revision(retry=retry+1)
+                    await self.get_last_revision(retry=retry + 1)
                     return 0
                 else:
                     rev = await response.text()
@@ -155,7 +157,8 @@ class GDoc():
 
         logger.debug("path: %s", list(zip(*self.path))[1])
 
-        assert self.path[-1][0] == self.fileId, f"Last path is not fileId? {self.path[-1]};{self.fileId}"
+        assert self.path[-1][
+            0] == self.fileId, f"Last path is not fileId? {self.path[-1]};{self.fileId}"
 
         for c, i in enumerate(self.path):
             for c1, i1 in enumerate(self.path[c:]):
@@ -188,7 +191,7 @@ class GDoc():
             except:
 
                 logger.debug("%s unable, sleeping up to %d", self.fileId[0:5],
-                            20 * i)
+                             20 * i)
                 time.sleep(random.uniform(0, 10))
                 continue
             text = response.text
@@ -236,11 +239,11 @@ class GDoc():
         while not pipe.poll(0.01):
 
             logger.debug("resending for %s, counter %d", self.fileId[0:5],
-                        counter)
+                         counter)
             pipe.send(operations)
             counter += 1
 
-            time.sleep(random.uniform(0, 3* counter))
+            time.sleep(random.uniform(0, 3 * counter))
 
             if counter > 5:
                 logger.debug("waited too long, not resending")
