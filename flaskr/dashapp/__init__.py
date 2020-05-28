@@ -9,7 +9,6 @@ TODO:
 """
 
 import os
-from flaskr.dashapp.callbacks import test
 import dash
 from pprint import PrettyPrinter
 
@@ -31,15 +30,11 @@ def register_dashapp(flask_serv):
                             external_stylesheets=external_stylesheets,
                             url_base_pathname="/dash/")
 
-    # DEbug params
-    test[
-        "workingPath"] = "/home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/"
-    test["userid"] = 2
-
     with flask_serv.app_context():
         dashapp.layout = layout()
         register_callback(dashapp)
-
+    """
+    # Useful for hosting as an iframe, sets headers to allow origin to be *
     @dashapp.server.after_request
     def add_header(response):
         print("setting response headers!")
@@ -48,8 +43,15 @@ def register_dashapp(flask_serv):
             'Content-Security-Policy'] = 'frame-src * data: blob: ;'
         return response
 
-    if "FLASKDBG" in os.environ and False:
-        dashapp.run_server(debug=True)
+    """
+
+    if "FLASKDBG" in os.environ:
+
+        #Calls run server immediately, so the thread blocks.
+        #If we return normally (flaskdbg NOT in os.environ) then the parent caller
+        #will call flask_serv.run
+        print("starting run server")
+        dashapp.run_server(debug=True, threaded=False, processes=1)
 
 
 if __name__ == "__main__":

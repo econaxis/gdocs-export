@@ -17,7 +17,7 @@ def create_flask_serv():
 
     import os
 
-    if "FLASKDBG" not in os.environ or True:
+    if "FLASKDBG" not in os.environ and False:
         flask_serv.register_blueprint(auth_bp)
         flask_serv.register_blueprint(server)
 

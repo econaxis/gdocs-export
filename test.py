@@ -395,7 +395,10 @@ if __name__ == '__main__':
 
 print("fdsf")
 
-import threading, requests, secrets, time, itertools
+import requests
+import secrets
+import threading
+import time
 
 url = "http://ip172-18-0-12-bqt1luaosm4g00dj0pm0-7379.direct.labs.play-with-docker.com/SET/{}/{}"
 g_url = "http://ip172-18-0-12-bqt1luaosm4g00dj0pm0-7379.direct.labs.play-with-docker.com/GET/{}"
@@ -412,7 +415,7 @@ def gt():
             counter += 1
             a0 = time.time()
             try:
-                s = requests.get(g_url.format(k)).content
+                requests.get(g_url.format(k)).content
             except:
                 print("err")
                 continue

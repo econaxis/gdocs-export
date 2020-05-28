@@ -1,17 +1,16 @@
 from types import SimpleNamespace
+import threading
 import logging
 from processing.sql import reload_engine
-from sqlalchemy.orm import aliased, joinedload
-from sqlalchemy.sql import func
 from datetime import datetime
 import plotly.graph_objects as go
 from dash.dependencies import Input, Output
-from flaskr.dashapp.dash_functions import gen_fListFig, namesList
+from flaskr.dashapp.dash_functions import namesList
 import flask
 import numpy as np
-from scipy.stats import binned_statistic
-import scipy.signal
-from processing.models import Dates, Files, Filename, Closure
+from processing.models import Dates, Files
+
+logger = logging.getLogger(__name__)
 
 times_tickf = {
     'day': '%H:%M',
@@ -20,22 +19,13 @@ times_tickf = {
     'year': '%m %d'
 }
 
-flask.session = dict(userid='testing1239KjMbA')
-
-import threading
-import shelve
-
-ms = shelve.open('selected_files')
-ms["sl"] = []
-ms.close()
-
-FNAME = 'selected_files.pickle'
-
-sel_lock = threading.Lock()
+# Small, med, large preexisting values of DB
+flask.session = dict(userid='med')
 
 sessions_lock = threading.Lock()
 
-
+sel_lock = threading.Lock()
+"""
 def get_sel(val):
     with shelve.open('selected_files', flag='r') as f:
         #print(f["sl"], val)
@@ -49,13 +39,10 @@ def add_sel(val):
             t.append(val)
             f["sl"] = t
             return len(f["sl"]) - 1
-
-
-logger = logging.getLogger(__name__)
+"""
 
 logger.info("DASH CALLBACKS IMPORTED")
 # Debug in place for flask.session
-test = {}
 
 traces = []
 
@@ -96,102 +83,6 @@ def aggregate_dates(timestamps, aggregate_by):
 dir_lock = threading.Lock()
 
 
-def direct_parent():
-
-    #Returns three lists: direct child id, direct parent id, child name
-    logger.info("userid: %s", flask.session["userid"])
-
-    db = reload_engine(flask.session["userid"],
-                       download=True,
-                       lock=sessions_lock)
-
-    try:
-        fn1, fn2 = aliased(Filename), aliased(Filename)
-
-        ds = db.query(Closure, fn1,
-                      fn2).join(fn1, fn1.fileId == Closure.parent).join(
-                          fn2, fn2.fileId == Closure.child).all()
-
-        for df in ds:
-            print(df[0].parent, df[0].child, df[1].fileId, df[2].fileId,
-                  df[1].fileName, df[2].fileName)
-
-        ds = db.query(Closure.depth.label('__d'),
-                    fn1.fileName.label('fn1_name'), fn1.fileId.label('fn1_id') ,
-                    fn2.fileName.label('fn2_name'), fn2.fileId.label('fn2_id')) \
-                    .join(fn1, fn1.fileId == Closure.parent).join(fn2, fn2.fileId == Closure.child).distinct().filter(Closure.depth==1).subquery()
-
-        sds = db.query(
-            Files.id.label('f_id'),
-            func.sum(Dates.adds).label('adds'),
-            func.sum(Dates.deletes).label("deletes")).join(Dates).group_by(
-                Files.id).subquery()
-
-        res = db.query(ds, sds).outerjoin(sds, sds.c.f_id == ds.c.fn2_id).all()
-
-        parents = [x.fn1_id for x in res]
-        children = [x.fn2_id for x in res]
-
-        values = [
-            x.adds + x.deletes if x.adds and x.deletes else 0 for x in res
-        ]
-        names = [x.fn2_name for x in res]
-
-        print(len(names), len(values), len(children), len(parents))
-
-        for i in range(len(res)):
-            if i < len(parents) and parents[i] == children[i]:
-                parents.pop(i)
-                children.pop(i)
-                values.pop(i)
-                names.pop(i)
-                i -= 1
-
-        parents.append("")
-        values.append(0)
-        names.append("root")
-        children.append(6)
-
-        fig = go.Figure(
-            go.Sunburst(
-                labels=[
-                    "Eve", "Cain", "Seth", "Enos", "Noam", "Abel", "Awan",
-                    "Enoch", "Azura"
-                ],
-                parents=[
-                    "", "Eve", "Eve", "Seth", "Seth", "Eve", "Eve", "Awan",
-                    "Eve"
-                ],
-                values=[10, 14, 12, 10, 2, 6, 6, 4, 4],
-            ))
-
-        return go.Figure(
-            data=[go.Sunburst(ids=children, labels=names, parents=parents)],
-            layout=dict(margin=dict(t=0, l=0, r=0, b=0)))
-
-
-
-        prim1 = db.query(Closure).filter(Closure.depth == 1) \
-                    .options(joinedload(Closure.parent_r).joinedload(Files.name)) \
-                    .options(joinedload(Closure.child_r).joinedload(Files.name)).distinct().all()
-
-        res = [(x.parent_r.name[0].fileName, x.child_r.name[0].fileName)
-               for x in prim1]
-
-        res = list(set(res))
-
-        [parent, child] = list(zip(*res))
-        breakpoint()
-    except:
-        logger.exception("e")
-        breakpoint()
-
-    print("=" * 10)
-    print(parent, child)
-
-    return parent, child
-
-
 #@lru_cache(maxsize=6)
 def query_db(files):
 
@@ -209,15 +100,7 @@ def query_db(files):
     else:
         results = db.query(Dates.adds, Dates.deletes, Dates.date).all()
 
-    #print(pformat(results))
-
     return results
-
-
-def gen_sunburst():
-    return direct_parent()
-
-    #fig["data"][0]["labels"] =
 
 
 def get_activity(files=None,
@@ -228,6 +111,8 @@ def get_activity(files=None,
                  aggregate_by='none',
                  filter_func=bool,
                  use_prev_bins=True):
+
+    from scipy.stats import binned_statistic
 
     #Returns histogram of adds/deletes
 
@@ -311,19 +196,6 @@ def get_activity(files=None,
     np.insert(deletes, 0, 0)
     np.insert(delete_dates, 0, delete_dates[0] - 1 * 24 * 3600)
 
-    dels = []
-    for c in range(len(adds)):
-        if abs(adds[c]) <= 0:
-            pass
-            #dels.append(c)
-
-    np.delete(adds, dels)
-    np.delete(add_dates, dels)
-    np.delete(deletes, dels)
-    np.delete(delete_dates, dels)
-
-    #print(adds, add_dates)
-
     prev_bins = add_dates
 
     adds[1:] = apply_smoothing(adds[1:], min(len(adds), window))
@@ -343,6 +215,7 @@ def get_activity(files=None,
 
 
 def apply_smoothing(data, window, poly_order=3, negative=False):
+    import scipy.signal
     window -= window % 2 + 1
 
     data = scipy.signal.savgol_filter(data, window, poly_order)
@@ -430,124 +303,16 @@ def get_traces(times,
 
     #Returns tuples of traces to add to figure["data"] property
     return add_trace1, delete_trace1, ret1
-    """
 
 
-    #Following is deprecated 
-
-
-    for count, i in enumerate(dates_uf):
-        #1 tuple of bin, value. Merge histogram by doing value = bin * weight
-        values[count] = i[0]
-        weights[count] = i[1]
-
-
-    global traces
-
-    bin_edges = np.histogram_bin_edges(concat_values, bins = 90, weights = concat_weights)
-
-
-    #histogram with timestamp instead of pydatetime for bins
-    hist_1 = list(np.histogram(values, bins = bin_edges, weights = weights))
-    hist_2  = [None, None]
-    #Convert timestamp to pydatetime
-    #Hist_2 is main hist, hist_1 is temporary
-    hist_2[1] = [datetime.fromtimestamp(float(x)) for x in hist_1[1]]
-    hist_2[0] = [int(x) for x in hist_1[0]]
-
-    bar_trace.append(go.Bar(x = hist_2[1], y = hist_2[0], opacity = 0.7))
-
-
-    bar_trace = list(reversed(bar_trace))
-
-
-
-    g_values = []
-    g_weights = []
-    global g_values, g_weights
-
-    g_values.append(values)
-    g_weights.append(weights)
-
-    bar_trace = []
-
-    concat_weights = list(itertools.chain.from_iterable(g_weights))
-    concat_values = list(itertools.chain.from_iterable(g_values))
-
-
-
-
-    '''
-    if(times):
-        # Times mode: set all the dates to be equal so Dash can make a
-        # proper time histogram
-        temp = [x.replace(year=2000, month=1, day=1) for x in hist_2[1]]
-        hist_2[1] = temp
-    '''
-
-
-    """
-
-
-def _updateBubbleChart(_n_clicks, selection):
-
-    logger.info("userid: %s", flask.session["userid"])
-
-    db = reload_engine(flask.session["userid"],
-                       download=True,
-                       lock=sessions_lock)
-
-    parentLabel = ""
-
-    #Should only be run at the beginning and when getting parents
-
-    # Return selected point in fileName
-    #selectedPointId = selection["points"][0]['customdata']
-
-    # Get subquery for immediate parent, returns folder name of immediate parent
-    # by searching for depth of 1 in closure table
-    #immediateParent = db.query(Closure.parent).filter(and_(Closure.depth == 1,
-    #Closure.child == selectedPointId, Closure.owner_id == test["userid"])).limit(1).subquery()
-    #try:
-    #parentLabel = db.query(Filename.fileName).join(immediateParent,  \
-    #Filename.fileId == immediateParent.c.parent).first()[0]
-    #except TypeError:
-    #parentLabel = "no parent"
-
-    # Query all Files.fileName that has the same parent value in the Closure table
-    # TODO: export sibs to cache a fileid list in case we want to construct a histogram, right now,
-    # to construct a histogram with selection, we query by filename, which is inefficient full text search
-    # using fileid would allow for quicker queries
-    #sibs = db.query(Files.id).join(Closure, Closure.child == Files.id) \
-    #.filter(and_(Files.parent_id == test["userid"], Closure.parent == immediateParent.c.parent)).distinct().all()
-
-    # Pts: array of indexes to select. Required by dash
-    # idIndexMapper is a dict that maps filenames to indexes
-    pts = []
-    #for i in sibs:
-    #id = i[0]
-    #if(id in idIndexMapper and idIndexMapper[id] not in pts):
-    #Explanation:
-    #sibs: list of 1-tuples that contains fileid
-    #idIndexMapper is a dictionary mapping fileid to index in plotly graph
-    #The pts list is then passed to figure generator to generate a new figure with all
-    #sibling points selected
-    #pts.append(idIndexMapper[id])
-
-    # Slpoints to indicate what points are being selected
-    #db is used as session
-
-    return gen_fListFig(db, test["userid"], slPoints=pts), parentLabel
-
-
-# Moved functions out of register_callback for profiling to work
 def register_callback(app):
 
     @app.callback(Output("sunburst", "figure"), [Input("url", "pathname")])
-    def sunburst(url):
-        dsf = gen_sunburst()
-        print(dsf)
-        return dsf
+    def gen_sunburst(url):
+        from flaskr.dashapp.sunburst import sunburst
+        sunburst_figure = sunburst()
+        logger.info(sunburst_figure)
+        return sunburst_figure
 
     """
 
