@@ -119,26 +119,22 @@ def sendmail(msg="", return_thread=False):
 
 
 
+try:
+    assert 1==0
+except (ImportError, AssertionError) as e:
+    from contextlib import contextmanager
+    import time
 
-TRACE = True;
+    class Tracer:
+        @contextmanager
+        def trace(id):
+            a0 = time.time()
+            try:
+                yield
+            finally:
+                logger.debug("TRACE TIME: %s %f", id, time.time() - a0)
 
-if TRACE:
-    from opencensus.trace.tracer import Tracer
-    from opencensus.ext.zipkin.trace_exporter import ZipkinExporter
-    from opencensus.trace.samplers import AlwaysOnSampler
-    # 1a. Setup the exporter
-    ze = ZipkinExporter(service_name="python-quickstart",
-                                    host_name='localhost',
-                                    port=9411,
-                                    endpoint='/api/v2/spans')
-    # 1b. Set the tracer to use the exporter
-    # 2. Configure 100% sample rate, otherwise, few traces will be sampled.
-    # 3. Get the global singleton Tracer object
-    tracer = Tracer(exporter=ze, sampler=AlwaysOnSampler())
-
-    #    with tracer.span(name="main") as span:
-    #        for i in range(0, 10):
-    #            doWork()
+    tracer = Tracer()
 
 
 

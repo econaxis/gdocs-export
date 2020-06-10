@@ -8,8 +8,6 @@ import os, functools, logging
 
 from processing.models import Files, Closure, Dates, Base, Filename
 
-from flaskr.flask_config import Config
-
 logger = logging.getLogger(__name__)
 
 scrt = secrets.token_urlsafe(7)
@@ -21,7 +19,7 @@ sessions = {}
 sessions_lock = threading.Lock()
 
 #Global variable for data path
-hdatapath = Config.HOMEDATAPATH
+hdatapath = os.environ["HOMEDATAPATH"]
 
 #Used to access files on Azure File Storage, defaults to None to prevent unnecessary connections unless called
 az_driver = None
