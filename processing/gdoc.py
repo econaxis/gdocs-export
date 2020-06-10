@@ -28,7 +28,7 @@ timeout = aiohttp.ClientTimeout(total=15)
 
 Closure = namedtuple("Closure", ['parent', 'child', 'depth'])
 
-threads = 20
+threads = 5
 
 
 lock = [Lock() for i in range(threads)]
