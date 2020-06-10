@@ -21,7 +21,7 @@ timeout = aiohttp.ClientTimeout(total=15)
 
 SEED_ID = "root"
 
-workerInstances = 8
+workerInstances = 25
 
 ACCEPTED_TYPES = {"application/vnd.google-apps.document"}
 
@@ -29,6 +29,8 @@ temp_file = namedtuple('temp_file', ['id', 'name', 'type', 'path', 'last_revisio
 
 #For managing duplicates
 tot_folders = {}
+
+
 
 
 def last_rev_callback(req_id, response, exc):

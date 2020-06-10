@@ -1,4 +1,5 @@
 import requests
+import certifi
 import pycurl
 import time
 from io import BytesIO
@@ -15,6 +16,9 @@ from multiprocessing import Pipe, Process
 from types import SimpleNamespace
 from collections import namedtuple
 
+
+from threading import Lock
+
 logger = logging.getLogger(__name__)
 
 base_url = 'https://docs.google.com/document/d/{file_id}/revisions/load?id={file_id}&start=1&end={end}'
@@ -24,7 +28,50 @@ timeout = aiohttp.ClientTimeout(total=15)
 
 Closure = namedtuple("Closure", ['parent', 'child', 'depth'])
 
-c = pycurl.Curl()
+threads = 20
+
+
+lock = [Lock() for i in range(threads)]
+c = [pycurl.Curl() for i in range(threads)]
+
+cur_inst = 0
+
+def curl(curl_inst, url, headers):
+    with tracer.span("download (thread pool)"):
+        it = zip(headers.keys(), headers.values())
+        curl_headers = [f"{k}: {v}" for k, v in it]
+        buffer = BytesIO()
+        curl_inst.setopt(curl_inst.CAINFO, certifi.where())
+        curl_inst.setopt(curl_inst.URL,url)
+        curl_inst.setopt(curl_inst.WRITEDATA, buffer)
+        curl_inst.setopt(pycurl.HTTPHEADER, curl_headers)
+        curl_inst.perform()
+        _a = buffer.getvalue().decode('iso-8859-1')
+    return _a
+
+def download(url, headers):
+    logger.info("thread submitted %s %s", url, headers)
+    curl_inst = None
+    for i in range(3):
+        for idx, l in enumerate(lock):
+            if(l.acquire(blocking = False)):
+                try:
+                    curl_inst = c[idx]
+                    res = curl(curl_inst, url, headers)
+                except:
+                    logger.exception("")
+                finally:
+                    l.release()
+                return res
+
+        time.sleep(i*5 + 5)
+
+
+    return ""
+
+
+
+
 
 
 class Closure(namedtuple("Closure", ['parent', 'child', 'depth'])):
@@ -49,6 +96,9 @@ def round_time(d, round_by=30):
 gd_condensed = namedtuple('gd_condensed',
                           ['name', 'path', 'operations', 'closure', 'fileId'])
 
+
+from concurrent.futures import ThreadPoolExecutor
+executor = ThreadPoolExecutor(max_workers = threads)
 
 class GDoc():
 
@@ -147,17 +197,14 @@ class GDoc():
                     await asyncio.sleep(random.uniform(0, 5))
                     continue
 
-        import certifi
-        with tracer.span('pycurl download'):
-            buffer = BytesIO()
-            c.setopt(c.CAINFO, certifi.where())
-            c.setopt(c.URL,url)
-            c.setopt(c.WRITEDATA, buffer)
-            c.setopt(pycurl.HTTPHEADER, ['authorization: '+ self.headers['authorization']])
-            c.perform()
-            _a = buffer.getvalue().decode('iso-8859-1')[5:]
-            revision_details = json.loads(_a)
-            logger.debug(_a)
+        with tracer.span('executor submit'):
+            job_handle = executor.submit(download, url, self.headers)
+
+            while not job_handle.done():
+                await asyncio.sleep(3)
+
+            revision_details = json.loads(job_handle.result()[5:])
+
 
         with tracer.span("processing"):
             tot_operations = []
