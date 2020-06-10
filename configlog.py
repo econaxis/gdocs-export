@@ -5,7 +5,6 @@ import sys
 from logging import StreamHandler, FileHandler
 from datetime import datetime
 import secrets
-from flaskr import flask_config
 
 token = secrets.token_urlsafe(4)
 
@@ -18,7 +17,7 @@ def set_token(tok):
 os.environ["TZ"] = "America/Vancouver"
 # time.tzset()
 
-logFile = os.path.join(flask_config.Config.HOMEDATAPATH , "logs/logs.txt")
+logFile = os.path.join(os.environ["HOMEDATAPATH"] , "logs/logs.txt")
 
 #syslog = SysLogHandler(address=('logs2.papertrailapp.com', 49905))
 filelog = FileHandler(logFile)
