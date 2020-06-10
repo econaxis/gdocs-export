@@ -168,8 +168,11 @@ async def getRevision(files,
     # time to fill the files queue with jobs
     await asyncio.sleep(random.uniform(workerInstances * 0.5, workerInstances * 1.5))
 
+    while files.empty():
+        await asyncio.sleep(random.uniform(3, 10))
+
     while not endEvent.is_set():
-        proc_file = await tryGetQueue(files, name="getRevision", interval=4)
+        proc_file = await tryGetQueue(files, name="getRevision", interval=4, repeatTimes = 3)
 
         if (proc_file == -1):
             logger.warning('getRevision task exiting')
