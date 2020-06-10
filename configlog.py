@@ -126,7 +126,7 @@ except (ImportError, AssertionError) as e:
 
     class Tracer:
         @contextmanager
-        def span(id):
+        def span(self, id):
             a0 = time.time()
             try:
                 yield
