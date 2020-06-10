@@ -21,7 +21,7 @@ timeout = aiohttp.ClientTimeout(total=15)
 
 SEED_ID = "root"
 
-workerInstances = 25
+workerInstances = 8
 
 ACCEPTED_TYPES = {"application/vnd.google-apps.document"}
 

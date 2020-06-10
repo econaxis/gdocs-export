@@ -42,7 +42,7 @@ class TestUtil:
     files = []
     idmapper = {}
     sql_server_active = False
-    MAX_FILES = 30
+    MAX_FILES = 3000
     userid = None
     workingPath = None
     processedcount = 0

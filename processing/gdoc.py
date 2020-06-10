@@ -28,7 +28,7 @@ timeout = aiohttp.ClientTimeout(total=15)
 
 Closure = namedtuple("Closure", ['parent', 'child', 'depth'])
 
-threads = 20
+threads = 3
 
 
 lock = [Lock() for i in range(threads)]
@@ -50,9 +50,9 @@ def curl(curl_inst, url, headers):
     return _a
 
 def download(url, headers):
-    logger.info("thread submitted %s %s", url, headers)
+    logger.debug("thread submitted %s %s", url, headers)
     curl_inst = None
-    for i in range(3):
+    for i in range(15):
         for idx, l in enumerate(lock):
             if(l.acquire(blocking = False)):
                 try:
@@ -194,7 +194,6 @@ class GDoc():
                 except:
                     logger.debug("%s unable, sleeping up to %d", self.fileId[0:5],
                                  20 * i)
-                    await asyncio.sleep(random.uniform(0, 5))
                     continue
 
         with tracer.span('executor submit'):
