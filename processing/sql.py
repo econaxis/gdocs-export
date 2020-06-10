@@ -27,11 +27,9 @@ hdatapath = Config.HOMEDATAPATH
 az_driver = None
 
 import azure.common
-
-
+from azure.storage.file import FileService
 def setup_azure():
     global az_driver
-    from azure.storage.file import FileService
 
     az_driver = FileService(account_name='pydocs',
                             account_key=os.environ["AZURESTORAGEKEY"])
@@ -39,6 +37,7 @@ def setup_azure():
 
 def az_download_dbs(owner_id, download_file):
     logger.info("requested az file: %s", owner_id)
+
     try:
         az_driver.get_file_to_path('def', 'data/dbs', f"{owner_id}.db", \
                download_file)
@@ -51,8 +50,8 @@ def az_upload_dbs(owner_id, from_file):
     upload_path = f"{owner_id}.db"
     try:
         az_driver.create_file_from_path('def', 'data/dbs', upload_path,
-                                        from_file)
-    except azure.common as e:
+                        from_file)
+    except Exception as e:
         logger.exception("canot upload file")
 
 
@@ -110,8 +109,8 @@ def reload_engine(owner_id, create_new=False, download=False, lock=None):
         test_session = v_scoped_session()
 
         #Check that the database has at least some rows
-        assert not create_new or test_session.query(test_session.query(Files).exists()).scalar(), \
-                "create_new is not true and the database does not have any rows"
+        #assert create_new or test_session.query(test_session.query(Files).exists()).scalar(), \
+                #"create_new is not true and the database does not have any rows"
 
         return v_scoped_session
 
@@ -192,8 +191,7 @@ def load_clos(file_data, fileid_obj_map, owner_id=None):
 
                     sess.add(cls)
                 else:
-                    print("Duplicate closure found, ", parent_id, child_id,
-                          clos.depth)
+                    logger.debug("Duplicate closure found, %f %f %f", parent_id, child_id, clos.depth)
 
 
 @db_connect
@@ -227,9 +225,7 @@ def load_from_dict(lt_files, dict_lock, owner_id=None):
 
 
 def start(*args, **kwargs):
-
     #The only purpose of this wrapper is to handle all errors and print them accordingly
-    import sys
     try:
         insert_sql(*args, **kwargs)
     except Exception as e:
@@ -237,8 +233,10 @@ def start(*args, **kwargs):
         raise e
 
 
-def insert_sql(userid, files, upload=False, create_new=False):
-    #create_new must be True if this is the first time we are running
+def insert_sql(userid, files, upload=False):
+
+    import pickle
+    pickle.dump(files, open('files', 'wb'))
 
     logger.debug("Starting sql for userid %s", userid)
 
@@ -316,7 +314,7 @@ def insert_sql(userid, files, upload=False, create_new=False):
         load_clos(files, fileid_obj_map, owner_id=userid)
 
     sess.commit()
-    logger.warning("Done all for owner_id %s; processed files: %d", userid,
+    logger.info("Done all for owner_id %s; processed files: %d", userid,
                    SZ_FILES)
 
     if upload:
@@ -326,10 +324,14 @@ def insert_sql(userid, files, upload=False, create_new=False):
 
     return
     """
-    import pickle
 
     files = pickle.load(open('/home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/1.pathed', 'rb'))
     userid = datetime.now().__str__()
 
     start(userid = userid, files = files)
     """
+
+if __name__ == "__main__":
+    import pickle
+    files = pickle.load(open('files', 'rb'))
+    start('sdfa', files, True)

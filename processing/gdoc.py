@@ -1,6 +1,9 @@
 import requests
+import pycurl
 import time
+from io import BytesIO
 from pprint import pformat
+from configlog import tracer
 import random
 import aiohttp
 import asyncio
@@ -17,13 +20,14 @@ logger = logging.getLogger(__name__)
 base_url = 'https://docs.google.com/document/d/{file_id}/revisions/load?id={file_id}&start=1&end={end}'
 url = 'https://www.googleapis.com/drive/v3/files/{}/revisions'
 
-timeout = aiohttp.ClientTimeout(total=10)
+timeout = aiohttp.ClientTimeout(total=15)
 
 Closure = namedtuple("Closure", ['parent', 'child', 'depth'])
 
+c = pycurl.Curl()
+
 
 class Closure(namedtuple("Closure", ['parent', 'child', 'depth'])):
-
     def __repr__(self):
         return 'p: {} c: {}\n'.format(self.parent[1], self.child[1])
 
@@ -66,82 +70,151 @@ class GDoc():
     def __init__(self):
         self.done = False
 
-    async def async_init(self, name, fileId, session, headers, path):
-        self.operations = []
-        self.closure = []
-        self.name = name
-        self.last_revision_id = 1
+    async def file_async_init(self, file, session, headers):
+        return await self.async_init(file.name, file.id, session, headers, file.path, file.last_revision_id)
 
-        logger.debug("async init called")
-        self.fileId = fileId
-        self.path = path
+    #@profile
+    async def async_init(self, name, fileId, session, headers, path, last_revision_id):
+        with tracer.span("gdoc"):
+            self.operations = []
+            self.closure = []
+            self.name = name
+            self.last_revision_id = 1
 
-        self.session = session
-        self.headers = headers
-        self.last_revision_id = 1
+            logger.debug("async init called")
+            self.fileId = fileId
+            self.path = path
 
-        await self.get_last_revision()
+            self.session = session
+            self.headers = headers
+            self.headers["pageSize"] = "1000"
+            self.headers["fields"] = "revisions(id)"
+            self.last_revision_id = last_revision_id
 
-        logger.debug("starting googledoc async_init for %s", fileId)
 
-        retries = 1
+#            with tracer.span("last rev id"):
+#                await self.get_last_revision()
 
-        while retries:
-            retries -= 1
+            logger.debug("starting googledoc async_init for %s", fileId)
 
-            parent_conn, child_conn = Pipe()
+            with tracer.span("download_details"):
+                self.operations = await self._download_details();
+            with tracer.span("compute_closure"):
+                self.compute_closure()
 
-            p = Process(target=self._download_details, args=(child_conn,))
+            if self.operations:
+                self.done = True
+            else:
+                self.done = False
+            logger.debug("Done computing gdoc for %s %s", self.name, self.fileId)
 
-            async with GDoc.sem:
-                p.start()
-                logger.debug("started process for %s", fileId[0:5])
-                await asyncio.sleep(1.5)
+    #@profile
+    def compute_closure(self):
 
-                counter = 0
-                while not parent_conn.poll(0.01) and counter < 5:
-                    counter += 1
-                    logger.debug("sleeping from poll, waiting for %s, %d",
-                                 fileId[0:5], counter)
-                    await asyncio.sleep(
-                        random.uniform(0.5 * counter, 2 * counter))
+        logger.debug("path: %s", list(zip(*self.path))[1])
 
-                logger.debug("received goahead to receive %s", fileId[0:5])
+        assert self.path[-1][0] == self.fileId, f"Last path is not fileId? {self.path[-1]};{self.fileId}"
 
-                if parent_conn.poll(0.01):
-                    self.operations = parent_conn.recv()
-                    if self.operations == []:
-                        logger.debug("No content received for: %s, %s.",
-                                     self.fileId, self.name)
-                    parent_conn.send(f'success {fileId[0:5]}')
-                    p.terminate()
-                    p.join(0.01)
-                    retries = 0
+        for c, i in enumerate(self.path):
+            for c1, i1 in enumerate(self.path[c:]):
+                self.closure.append(Closure(parent=i, child=i1, depth=c1))
+
+        return self.closure
+
+
+    async def _download_details(self):
+
+        logger.debug("received job for %s", self.fileId)
+
+        revision_details = dict(changelog=[])
+        url = base_url.format(file_id=self.fileId,
+                  end=self.last_revision_id)
+
+        #Slowest
+        with tracer.span("downloading"):
+            for i in range(0):
+                try:
+                    async with self.session.get(url=url,
+                                            headers=self.headers,
+                                            timeout=timeout) as response:
+                        assert response.status == 200
+                        text = await response.text()
+                    revision_details = json.loads(text[5:])
+                    break
+                except:
+                    logger.debug("%s unable, sleeping up to %d", self.fileId[0:5],
+                                 20 * i)
+                    await asyncio.sleep(random.uniform(0, 5))
+                    continue
+
+        import certifi
+        with tracer.span('pycurl download'):
+            buffer = BytesIO()
+            c.setopt(c.CAINFO, certifi.where())
+            c.setopt(c.URL,url)
+            c.setopt(c.WRITEDATA, buffer)
+            c.setopt(pycurl.HTTPHEADER, ['authorization: '+ self.headers['authorization']])
+            c.perform()
+            _a = buffer.getvalue().decode('iso-8859-1')[5:]
+            revision_details = json.loads(_a)
+            logger.debug(_a)
+
+        with tracer.span("processing"):
+            tot_operations = []
+
+            for count, x in enumerate(revision_details['changelog']):
+                try:
+                    if x[0]['ty'] not in {'is', 'ds', 'mlti'}:
+                        continue
+                except:
+                    print(x)
+
+                if x[0]['ty'] == 'mlti':
+                    for i in x[0]['mts']:
+                        revision_details['changelog'].append([i, x[1]])
+                    continue
+
+                if x[0]['ty'] == 'is':
+                    content = [len(x[0]['s']), 0]
+                elif x[0]['ty'] == 'ds':
+                    content = [0, x[0]['ei'] - x[0]['si'] + 1]
+
+                cur_op = Operation(date=x[1] / 1e3, content=content)
+                tot_operations.append(cur_op)
+
+            #Condense all operations into minute-operations
+            operation_condensed = {}
+            for o in tot_operations:
+                key = round_time(o.date)
+                if key not in operation_condensed:
+                    operation_condensed[key] = o
                 else:
-                    p.terminate()
-                    p.join(0.01)
-                parent_conn.close()
+                    operation_condensed[key].content[0] += o.content[0]
+                    operation_condensed[key].content[1] += o.content[1]
 
-        self.compute_closure()
+            operations = list(operation_condensed.values())
 
-        if self.operations:
-            self.done = True
-        else:
-            self.done = False
-        logger.debug("Done computing gdoc for %s %s", self.name, self.fileId)
+        return operations
 
+
+    def __repr__(self):
+        s = "GDoc Object\n\t%s\n\t%s" % (pformat(
+            self.operations), pformat(self.closure))
+        return s
+
+    #@profile
     async def get_last_revision(self, retry=0):
-
+        return
         try:
             async with self.session.get(url=url.format(self.fileId),
                                         headers=self.headers,
                                         timeout=timeout) as response:
                 code = response.status
                 if code != 200:
-                    if retry > 5:
+                    if retry > 2:
                         return -1
                     logger.debug("can't get last revision, sleeping ")
-                    await asyncio.sleep(random.uniform(5, 35))
+                    await asyncio.sleep(random.uniform(0, 10))
                     await self.get_last_revision(retry=retry + 1)
                     return 0
                 else:
@@ -153,114 +226,6 @@ class GDoc():
         except:
             logger.debug("cannot get last revision id")
 
-    def compute_closure(self):
-
-        logger.debug("path: %s", list(zip(*self.path))[1])
-
-        assert self.path[-1][
-            0] == self.fileId, f"Last path is not fileId? {self.path[-1]};{self.fileId}"
-
-        for c, i in enumerate(self.path):
-            for c1, i1 in enumerate(self.path[c:]):
-                child = i1
-                parent = i
-                depth = c1
-                self.closure.append(
-                    Closure(parent=parent, child=child, depth=depth))
-
-        return self.closure
-
-    def _download_details(self, pipe):
-
-        logger.debug("received job for %s", self.fileId)
-
-        revision_details = dict(changelog=[])
-
-        #Retries
-        for i in range(1, 3):
-            url = base_url.format(file_id=self.fileId,
-                                  end=self.last_revision_id)
-            response = SimpleNamespace(
-                text="Blank Filler. This will show when response is undefined")
-            try:
-                response = requests.get(url=url,
-                                        headers=self.headers,
-                                        timeout=15)
-
-                assert response.status_code == 200
-            except:
-
-                logger.debug("%s unable, sleeping up to %d", self.fileId[0:5],
-                             20 * i)
-                time.sleep(random.uniform(0, 10))
-                continue
-            text = response.text
-            revision_details = json.loads(text[5:])
-            break
-
-        tot_operations = []
-
-        for count, x in enumerate(revision_details['changelog']):
-            try:
-                if x[0]['ty'] not in {'is', 'ds', 'mlti'}:
-                    continue
-            except:
-                print(x)
-
-            if x[0]['ty'] == 'mlti':
-                for i in x[0]['mts']:
-                    revision_details['changelog'].append([i, x[1]])
-                continue
-
-            if x[0]['ty'] == 'is':
-                content = [len(x[0]['s']), 0]
-            elif x[0]['ty'] == 'ds':
-                content = [0, x[0]['ei'] - x[0]['si'] + 1]
-
-            cur_op = Operation(date=x[1] / 1e3, content=content)
-            tot_operations.append(cur_op)
-
-        #Condense all operations into minute-operations
-        operation_condensed = {}
-        for o in tot_operations:
-            key = round_time(o.date)
-            if key not in operation_condensed:
-                operation_condensed[key] = o
-            else:
-                operation_condensed[key].content[0] += o.content[0]
-                operation_condensed[key].content[1] += o.content[1]
-
-        operations = list(operation_condensed.values())
-
-        pipe.send(operations)
-        time.sleep(1)
-
-        counter = 1
-        while not pipe.poll(0.01):
-
-            logger.debug("resending for %s, counter %d", self.fileId[0:5],
-                         counter)
-            pipe.send(operations)
-            counter += 1
-
-            time.sleep(random.uniform(0, 3 * counter))
-
-            if counter > 5:
-                logger.debug("waited too long, not resending")
-                pipe.send(operations)
-                pipe.close()
-                return
-
-        logger.debug("pipe received: %s correct: %s after %d", pipe.recv(),
-                     self.fileId[0:5], counter)
-        pipe.close()
-
-        return
-
-    def __repr__(self):
-        s = "GDoc Object\n\t%s\n\t%s" % (pformat(
-            self.operations), pformat(self.closure))
-        return s
 
 
 if __name__ == '__main__':

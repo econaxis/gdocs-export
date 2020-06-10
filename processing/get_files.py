@@ -5,10 +5,12 @@ import aiohttp
 import pprint
 from pathlib import Path
 import logging
+import os
 import configlog
+from configlog import tracer
 
 # Imports TestUtil and corresponding functions
-from processing.datutils.test_utils import TestUtil, os, tryGetQueue
+from processing.datutils.test_utils import TestUtil,  tryGetQueue
 from processing.gdoc import GDoc
 
 logger = logging.getLogger(__name__)
@@ -19,14 +21,23 @@ timeout = aiohttp.ClientTimeout(total=15)
 
 SEED_ID = "root"
 
-workerInstances = 5
+workerInstances = 8
 
 ACCEPTED_TYPES = {"application/vnd.google-apps.document"}
 
-temp_file = namedtuple('temp_file', ['id', 'name', 'type', 'path'])
+temp_file = namedtuple('temp_file', ['id', 'name', 'type', 'path', 'last_revision_id'])
 
 #For managing duplicates
 tot_folders = {}
+
+
+def last_rev_callback(req_id, response, exc):
+    if exception is not None:
+        raise exception
+
+    response["revisions"][-1]["id"]
+
+
 
 
 async def getIdsRecursive(drive_url, folders: asyncio.Queue,
@@ -53,6 +64,11 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
         # Deprecated, do not need to throttle google drive api
         # await drThrottle.sem.acquire()
 
+        while (TestUtil.totsize - 20> TestUtil.MAX_FILES and not done_event.is_set()):
+            sleep_time = (TestUtil.totsize - TestUtil.MAX_FILES)/ 5
+            logger.info("getIds sleeping %f", sleep_time)
+            await asyncio.sleep(sleep_time)
+
         proc_file = await tryGetQueue(folders,
                                       name="getIds",
                                       interval=3,
@@ -61,12 +77,11 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
         if (proc_file == -1):
             break
 
-        query = "((mimeType='application/vnd.google-apps.folder' or mimeType= 'application/vnd.google-apps.document') and  \
-                trashed = False)"
 
         #If "root" is used, then that is also accepted by the API
         #the restriction is that it doesn't apply to shared documents
-        query += f"and ('{proc_file.id}' in parents)"
+        query = f"((mimeType='application/vnd.google-apps.folder' or mimeType= 'application/vnd.google-apps.document') and  \
+                trashed = False) and ('{proc_file.id}' in parents)"
 
         # We replace the existing data template with our own query.
         data["q"] = query
@@ -80,14 +95,20 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
                     #related to permissions. There is no need to process further
                     continue
         except:
-            #This should not throw an error because GDrive API limits are much higher, and
-            #there is no way we can exceed this limit
-            secs = random.uniform(5, 20)
-            logger.exception(
-                "connection closed prematurely with gdrive, sleeping for %d",
-                secs)
-            await asyncio.sleep(secs)
+            logger.exception("connection closed prematurely with gdrive ")
+            await asyncio.sleep(random.uniform(0, 20))
             continue
+
+        temp_docs = {}
+
+        batch_job = TestUtil.drive.new_batch_http_request()
+
+        def last_rev_callback(id, response, exc):
+            if exc:
+                raise exc
+            temp_docs[id] = temp_docs[id]._replace(last_revision_id = response["revisions"][-1]["id"])
+
+
 
         for resFile in resp["files"]:
             id = resFile["id"]
@@ -98,30 +119,43 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
             f = temp_file(name=ent_name,
                           id=id,
                           path=proc_file.path + [(id, ent_name)],
-                          type=resFile["mimeType"])
+                          type=resFile["mimeType"],
+                          last_revision_id = None)
 
             if (resFile["mimeType"] == "application/vnd.google-apps.folder"):
                 await folders.put(f)
             elif (resFile["mimeType"] in ACCEPTED_TYPES):
-
-                # DEBUGGING
-                # Testing paths, force all files to be part of SOME folder
 
                 if len(f.path) <= 2 and "FLASKDBG" in os.environ:
                     #There is no pathing, so we ignore. For debugging only
                     continue
 
                 # First element id is not used for naming, only for api calls
-                if not resFile["capabilities"][
-                        "canReadRevisions"] or id in tot_folders:
+                if not resFile["capabilities"]["canReadRevisions"] or id in tot_folders:
                     continue
-                tot_folders[id] = True
-                await files.put(f)
+                else:
+                    tot_folders[id] = True
+
+                temp_docs[f.id]=f
+                batch_job.add(TestUtil.drive.revisions().list(fileId = f.id, fields = "revisions(id)", pageSize = 1000), request_id = f.id,
+                        callback = last_rev_callback)
+        batch_succ = False
+        while not batch_succ:
+            try:
+                batch_job.execute()
+                batch_succ = True
+            except:
+                await asyncio.sleep(5)
+        [(await files.put(x)) for x in temp_docs.values()]
+            
+            
 
     logger.info("getid return, len %d:%d:%d", TestUtil.processedcount,
                 files.qsize(), len(TestUtil.files))
 
 
+
+#@profile
 async def getRevision(files,
                       session: aiohttp.ClientSession,
                       headers,
@@ -130,8 +164,7 @@ async def getRevision(files,
 
     # Await random amount for more staggered requesting, and to allow queryDriveActivity
     # time to fill the files queue with jobs
-    await asyncio.sleep(
-        random.uniform(workerInstances * 1, workerInstances * 1.5))
+    await asyncio.sleep(random.uniform(workerInstances * 0.5, workerInstances * 1.5))
 
     while not endEvent.is_set():
         proc_file = await tryGetQueue(files, name="getRevision", interval=4)
@@ -144,8 +177,8 @@ async def getRevision(files,
                      list(zip(*proc_file.path))[1])
 
         gd = GDoc()
-        await gd.async_init(proc_file.name, proc_file.id, session,
-                            TestUtil.headers, proc_file.path)
+        await gd.file_async_init(proc_file, session, TestUtil.headers)
+
 
         if gd.done and gd.operations:
             TestUtil.files.append(gd)
@@ -154,7 +187,9 @@ async def getRevision(files,
                 "not done but tried to append, prob because no operations found file: %s, %s %s %s",
                 gd.fileId, gd.name, gd.done, gd.operations)
 
+
     endEvent.set()
+
     logger.info("getrev return")
 
     return
@@ -165,23 +200,6 @@ async def start():
     loop = asyncio.get_event_loop()
     loop.set_exception_handler(exchandler)
     #loop.set_debug(True)
-    """
-    #Debugging set at 0, we don't need the SQLSERVER
-    socket_tries = 0
-    while socket_tries:
-        try:
-            ex = Info(extra="testing extra function from start()")
-            await TestUtil.test_server(ex)
-        except:
-            logger.info("Starting socket send failed, retrying after 2s")
-            socket_tries -=1
-            await asyncio.sleep(2)
-        else:
-            socket_tries = 1
-            break
-    TestUtil.sql_server_active = bool(socket_tries)
-    """
-
     TestUtil.sql_server_active = False
 
     folders = asyncio.Queue()
@@ -191,7 +209,8 @@ async def start():
     first_folder = temp_file(name='root',
                              id=SEED_ID,
                              type='',
-                             path=[('root', 'root')])
+                             path=[('root', 'root')],
+                             last_revision_id = None)
     await folders.put(first_folder)
 
     async with aiohttp.ClientSession(timeout=timeout) as session:
@@ -264,6 +283,9 @@ def loadFiles(USER_ID, _workingPath, fileId, _creds):
     TestUtil.workingPath = _workingPath
     TestUtil.userid = USER_ID
 
+
+
+
     if (fileId != None):
         global SEED_ID
         SEED_ID = fileId
@@ -279,13 +301,14 @@ def loadFiles(USER_ID, _workingPath, fileId, _creds):
 
     loop.run_until_complete(asyncio.gather(startTask))
 
+
     if not TestUtil.sql_server_active:
         # Writing data to SQL
         import processing.sql
         processing.sql.start(USER_ID,
                              TestUtil.info.files,
-                             upload=True,
-                             create_new=True)
+                             upload=True)
+                             
 
     open(_workingPath + 'done.txt', 'a+').write("DONE")
     configlog.sendmail(msg="program ended successfully")

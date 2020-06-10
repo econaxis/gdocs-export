@@ -1,10 +1,12 @@
 import collections
 import os
 import ujson as json
+from googleapiclient.discovery import build
+from google.auth.transport.requests import Request
 import sys
 #from memory_profiler import profile
 import gc
-import resource
+#import resource
 import tracemalloc
 import random
 from datetime import datetime
@@ -32,19 +34,19 @@ logger = logging.getLogger(__name__)
 
 class TestUtil:
 
+    totsize = 0
+    cur_count = 0
     fileCounter = 0
     creds = None
     headers = {}
     files = []
     idmapper = {}
     sql_server_active = False
-    MAX_FILES = 3000
+    MAX_FILES = 30
     userid = None
     workingPath = None
-    pickleIndex = []
     processedcount = 0
-
-    dbg_infos = []
+    drive = None
 
     #Used for debugging purposes for measuring rate
     _prev_count = (0, time.time())
@@ -63,6 +65,7 @@ class TestUtil:
                 raise "cls.creds not valid!"
 
         cls.creds.apply(cls.headers)
+        cls.drive = build('drive', 'v3', credentials = cls.creds)
         return cls.creds
 
     @classmethod
@@ -79,6 +82,7 @@ class TestUtil:
             headers=headers,
             url="https://driveactivity.googleapis.com/v2/activity:query")
 
+    #@profile
     @classmethod
     async def print_size(cls, files, endEvent):
         cls.starttime = time.time()
@@ -89,10 +93,11 @@ class TestUtil:
 
         while not endEvent.is_set():
             gc.collect()
-            logger.warning('\n\n%sMemory usage: %s (kb)%s%f mins since start',
-                           '-' * 15,
-                           resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,
-                           '-' * 15, (time.time() - cls.starttime) / 60)
+
+#            logger.warning('\n\n%sMemory usage: %s (kb)%s%f mins since start',
+#                           '-' * 15,
+#                           resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,
+#                           '-' * 15, (time.time() - cls.starttime) / 60)
 
             if ("PROFILE" in os.environ):
                 sns = tracemalloc.take_snapshot()
@@ -103,29 +108,28 @@ class TestUtil:
                     logger.info(i)
                 cls.snapshot = sns
 
-            totsize = files.qsize() + len(cls.files) + cls.processedcount
+            cls.totsize = files.qsize() + len(cls.files) + cls.processedcount
 
-            cur_count = len(cls.files) + cls.processedcount
+            cls.cur_count = len(cls.files) + cls.processedcount
 
-            rate = (cur_count - cls._prev_count[0]) / (time.time() -
+            rate = (cls.cur_count - cls._prev_count[0]) / (time.time() -
                                                        cls._prev_count[1]) * 60
 
-            logger.info("%s\n%d/%d discovered items \ndump count: %d; rate is %d per min", \
-                    cls.workingPath,len(cls.files) + cls.processedcount, totsize \
-                    ,cls.fileCounter, rate)
+            logger.info("%d/%d discovered items \ndump count: %d; rate is %d per min", \
+                    cls.cur_count, cls.totsize ,cls.fileCounter, rate)
 
-            cls._prev_count = (cur_count, time.time())
+            cls._prev_count = (cls.cur_count, time.time())
 
-            _sleep_time = 15
-            check_times = 10
+            _sleep_time = 10
+            check_times = 2
 
             for _ in range(check_times):
                 await asyncio.sleep(_sleep_time / check_times)
-                if cur_count > cls.MAX_FILES:
+                if cls.cur_count > cls.MAX_FILES:
                     #We have exceeded the max file limit. We set the endEvent so hopefully all the other workers will
                     #end too
                     logger.info("cur_count %d is larger than max_files",
-                                cur_count)
+                                cls.cur_count)
                     endEvent.set()
                     break
 
@@ -184,71 +188,14 @@ class TestUtil:
 
     @classmethod
     async def send_socket(cls, info_packet):
+        cls.info = info_packet._replace(files=cls.info.files +
+                                        info_packet.files)
 
-        if not cls.sql_server_active:
-            cls.info = info_packet._replace(files=cls.info.files +
-                                            info_packet.files)
-
-            if info_packet.extra == 'upload':
-                logger.info("Uploading info")
-                pickle.dump(cls.info, open('info', 'wb'))
-            return True
-
+        if info_packet.extra == 'upload':
+            logger.info("Uploading info")
+            pickle.dump(cls.info, open('info', 'wb'))
         return True
 
-        #The rest is deprecated code. We now handle SQL insertion by ourselves.
-
-        logger.info("connect working")
-
-        logger.info("server addr: %s", SERVER_ADDR)
-        r, w = await asyncio.open_connection(SERVER_ADDR, 8888)
-
-        message = b"request"
-
-        await adv_write(w, message)
-
-        m = await adv_read(r)
-        logger.info("received: %s", m)
-
-        if m != b'go':
-            return False
-
-        if m == b'go':
-            await adv_write(w, info_packet, to_pickle=True)
-        w.close()
-        return True
-
-    """
-    @classmethod
-    def _round_func(cls, x, round_by = None):
-
-        if round_by == None:
-            round_by = cls.ROUND_BY
-        return round_by * round(x/round_by)
-    @classmethod
-    def compute_hist(cls, data, bin_method = 'fd'):
-        #Data is a list of timestamps
-        values = []
-        bins = []
-        bin_width = cls.ROUND_BY
-        isTime = []
-        data = sorted(data, key = cls._round_func)
-        for key, group in groupby(data, cls._round_func):
-            bins.append(key)
-            values.append(len(list(group)))
-            isTime.append(False)
-        times = []
-        for x in data:
-            dt = datetime.fromtimestamp(x).replace(year = 2, month = 1, day =1).timestamp()
-            #Five second precision
-            times.append(cls._round_func(dt, round_by = 5))
-        for key, group in groupby(times):
-            bins.append(key)
-            values.append(len(list(group)))
-            isTime.append(True)
-        #Return list of values, bins
-        return [values, bins, isTime, bin_width]
-    """
 
     @classmethod
     async def handleResponse(cls, response, fileTuple=None, queue=None):
@@ -260,7 +207,7 @@ class TestUtil:
         except:
             sys.exc_info()[0]
             rev = await response.text()
-            logger.log(5, rev)
+            logger.debug("response error %s", rev)
 
             if (fileTuple and queue and fileTuple[-1] < 2):
                 fileTuple = list(fileTuple)

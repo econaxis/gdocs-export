@@ -31,10 +31,8 @@ def raise_timeout(signum, frame):
 app = create_flask_serv()
 
 logger.info("create_flask_serv done")
-app.logger.addHandler(configlog.syslog)
 app.logger.addHandler(configlog.stream)
 app.logger.setLevel(logging.DEBUG)
 
 if __name__ == '__main__':
-    pass
-    #app.run(debug=True, port=4000)
+    app.run(debug=True, port=4000)

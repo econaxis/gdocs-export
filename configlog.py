@@ -1,12 +1,10 @@
 import logging
 import smtplib
-import time
 import os
 import sys
 from logging import StreamHandler, FileHandler
 from datetime import datetime
 import secrets
-import urllib.request
 from flaskr import flask_config
 
 token = secrets.token_urlsafe(4)
@@ -18,9 +16,9 @@ def set_token(tok):
 
 
 os.environ["TZ"] = "America/Vancouver"
-time.tzset()
+# time.tzset()
 
-logFile = flask_config.Config.HOMEDATAPATH + "logs/logs.txt"
+logFile = os.path.join(flask_config.Config.HOMEDATAPATH , "logs/logs.txt")
 
 #syslog = SysLogHandler(address=('logs2.papertrailapp.com', 49905))
 filelog = FileHandler(logFile)
@@ -47,7 +45,7 @@ class bcolors:
     UNDERLINE = '\033[4m'
 
 
-myip = urllib.request.urlopen('https://ident.me').read().decode('utf8')
+myip = ""
 formatter = logging.Formatter(
     f"%(filename).8s:%(asctime)s:%(funcName)s:%(lineno)d:{token} -- %(message)s",
     "%d,%H:%M:%S")
@@ -117,6 +115,38 @@ def sendmail(msg="", return_thread=False):
     else:
         p.join()
         return
+
+
+
+
+
+TRACE = True;
+
+if TRACE:
+    from opencensus.trace.tracer import Tracer
+    from opencensus.ext.zipkin.trace_exporter import ZipkinExporter
+    from opencensus.trace.samplers import AlwaysOnSampler
+    # 1a. Setup the exporter
+    ze = ZipkinExporter(service_name="python-quickstart",
+                                    host_name='localhost',
+                                    port=9411,
+                                    endpoint='/api/v2/spans')
+    # 1b. Set the tracer to use the exporter
+    # 2. Configure 100% sample rate, otherwise, few traces will be sampled.
+    # 3. Get the global singleton Tracer object
+    tracer = Tracer(exporter=ze, sampler=AlwaysOnSampler())
+
+    #    with tracer.span(name="main") as span:
+    #        for i in range(0, 10):
+    #            doWork()
+
+
+
+if __name__ == "__main__":
+    main()
+
+
+
 
 
 def mp_sendmail(msg):

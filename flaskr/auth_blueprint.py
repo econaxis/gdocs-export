@@ -1,11 +1,15 @@
 import flask
 from flask import Blueprint
+import os
 from flask import current_app, redirect
 from pathlib import Path
 import pickle
 import google_auth_oauthlib.flow
 
 auth_bp = Blueprint('auth_bp', __name__)
+
+
+
 
 
 @auth_bp.route('/authorize')
@@ -24,10 +28,10 @@ def authorize():
 def glogin():
     # Expected point for start of authorization chain
     print("Starting authorization method")
-
+    creds_path = os.path.join(current_app.config["HOMEPATH"] , 'secret/credentials.json')
     # Use server secret file
     flow = google_auth_oauthlib.flow.Flow.from_client_secrets_file(
-        current_app.config["HOMEPATH"] + 'secret/credentials.json',
+        creds_path,
         current_app.config["SCOPES"])
 
     # Set redirect URI for when authentication starts
@@ -47,9 +51,9 @@ def oauth():
     # Second part of authorizatoin cycle
 
     state = flask.session['state']
-
+    creds_path = os.path.join(current_app.config["HOMEPATH"] , 'secret/credentials.json')
     flow = google_auth_oauthlib.flow.Flow.from_client_secrets_file(
-        current_app.config["HOMEPATH"] + 'secret/credentials.json',
+        creds_path,
         scopes=current_app.config["SCOPES"],
         state=state)
 
