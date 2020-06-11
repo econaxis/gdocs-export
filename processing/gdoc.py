@@ -28,7 +28,7 @@ timeout = aiohttp.ClientTimeout(total=15)
 
 Closure = namedtuple("Closure", ['parent', 'child', 'depth'])
 
-threads = 3
+threads = 2
 
 
 lock = [Lock() for i in range(threads)]
@@ -36,8 +36,10 @@ c = [pycurl.Curl() for i in range(threads)]
 
 cur_inst = 0
 
+
+
 def curl(curl_inst, url, headers):
-    with tracer.span("download (thread pool)"):
+    with tracer.span("curl "):
         it = zip(headers.keys(), headers.values())
         curl_headers = [f"{k}: {v}" for k, v in it]
         buffer = BytesIO()
@@ -49,6 +51,8 @@ def curl(curl_inst, url, headers):
         _a = buffer.getvalue().decode('iso-8859-1')
     return _a
 
+
+@profile
 def download(url, headers):
     logger.debug("thread submitted %s %s", url, headers)
     curl_inst = None
@@ -68,9 +72,6 @@ def download(url, headers):
 
 
     return ""
-
-
-
 
 
 
@@ -94,7 +95,7 @@ def round_time(d, round_by=30):
 
 
 gd_condensed = namedtuple('gd_condensed',
-                          ['name', 'path', 'operations', 'closure', 'fileId'])
+                  ['name', 'path', 'operations', 'closure', 'fileId'])
 
 
 from concurrent.futures import ThreadPoolExecutor
@@ -123,7 +124,7 @@ class GDoc():
     async def file_async_init(self, file, session, headers):
         return await self.async_init(file.name, file.id, session, headers, file.path, file.last_revision_id)
 
-    #@profile
+    @profile
     async def async_init(self, name, fileId, session, headers, path, last_revision_id):
         with tracer.span("gdoc"):
             self.operations = []
@@ -142,8 +143,6 @@ class GDoc():
             self.last_revision_id = last_revision_id
 
 
-#            with tracer.span("last rev id"):
-#                await self.get_last_revision()
 
             logger.debug("starting googledoc async_init for %s", fileId)
 
@@ -158,7 +157,6 @@ class GDoc():
                 self.done = False
             logger.debug("Done computing gdoc for %s %s", self.name, self.fileId)
 
-    #@profile
     def compute_closure(self):
 
         logger.debug("path: %s", list(zip(*self.path))[1])
@@ -171,7 +169,7 @@ class GDoc():
 
         return self.closure
 
-
+    @profile
     async def _download_details(self):
 
         logger.debug("received job for %s", self.fileId)
@@ -180,27 +178,16 @@ class GDoc():
         url = base_url.format(file_id=self.fileId,
                   end=self.last_revision_id)
 
-        #Slowest
-        with tracer.span("downloading"):
-            for i in range(0):
-                try:
-                    async with self.session.get(url=url,
-                                            headers=self.headers,
-                                            timeout=timeout) as response:
-                        assert response.status == 200
-                        text = await response.text()
-                    revision_details = json.loads(text[5:])
-                    break
-                except:
-                    logger.debug("%s unable, sleeping up to %d", self.fileId[0:5],
-                                 20 * i)
-                    continue
+        ev = asyncio.Event()
+
+        def notify(fds):
+            ev.set()
 
         with tracer.span('executor submit'):
             job_handle = executor.submit(download, url, self.headers)
+            job_handle.add_done_callback(notify)
 
-            while not job_handle.done():
-                await asyncio.sleep(3)
+            await ev.wait()
 
             revision_details = json.loads(job_handle.result()[5:])
 

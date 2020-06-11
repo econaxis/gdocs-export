@@ -3,28 +3,12 @@ import os
 import ujson as json
 from googleapiclient.discovery import build
 from google.auth.transport.requests import Request
-import sys
-#from memory_profiler import profile
-import gc
-#import resource
-import tracemalloc
-import random
+from configlog import tracer
 from datetime import datetime
 import asyncio
 import time
 import pickle
-from google.auth.transport.requests import Request
 import logging
-
-if "FLASKDBG" in os.environ:
-    print("flask debug in os environ")
-    SERVER_ADDR = "127.0.0.1"
-else:
-    SERVER_ADDR = 'sql'
-"""
-if (random.random() < 0.0):
-    os.environ["PROFILE"] = "true"
-"""
 
 Info = collections.namedtuple('Info', ['userid', 'files', 'extra'],
                               defaults=('default' + str(datetime.now()), [],
@@ -40,9 +24,7 @@ class TestUtil:
     creds = None
     headers = {}
     files = []
-    idmapper = {}
-    sql_server_active = False
-    MAX_FILES = 3000
+    MAX_FILES = 40
     userid = None
     workingPath = None
     processedcount = 0
@@ -52,6 +34,9 @@ class TestUtil:
     _prev_count = (0, time.time())
 
     info = Info()
+
+
+    gc_last_time = time.time()
 
     @classmethod
     def refresh_creds(cls, creds):
@@ -82,38 +67,28 @@ class TestUtil:
             headers=headers,
             url="https://driveactivity.googleapis.com/v2/activity:query")
 
-    #@profile
+    @classmethod
+    def gcollect(cls):
+        if time.time() - cls.gc_last_time < 30:
+            return
+        cls.gc_last_time = time.time()
+
+        import gc
+        gc.collect()
+
+
+
+    tracer.prof("print_size")
     @classmethod
     async def print_size(cls, files, endEvent):
-        cls.starttime = time.time()
-
-        if ("PROFILE" in os.environ):
-            tracemalloc.start()
-            cls.snapshot = tracemalloc.take_snapshot()
-
         while not endEvent.is_set():
-            gc.collect()
-
-#            logger.warning('\n\n%sMemory usage: %s (kb)%s%f mins since start',
-#                           '-' * 15,
-#                           resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,
-#                           '-' * 15, (time.time() - cls.starttime) / 60)
-
-            if ("PROFILE" in os.environ):
-                sns = tracemalloc.take_snapshot()
-                for i in sns.compare_to(cls.snapshot, 'lineno')[0:5]:
-                    logger.info(i)
-                logger.info('%s', '-' * 60)
-                for i in sns.statistics('lineno')[0:5]:
-                    logger.info(i)
-                cls.snapshot = sns
-
-            cls.totsize = files.qsize() + len(cls.files) + cls.processedcount
+            cls.gcollect()
 
             cls.cur_count = len(cls.files) + cls.processedcount
+            cls.totsize = files.qsize() + cls.cur_count
 
             rate = (cls.cur_count - cls._prev_count[0]) / (time.time() -
-                                                       cls._prev_count[1]) * 60
+                                   cls._prev_count[1]) * 60
 
             logger.info("%d/%d discovered items \ndump count: %d; rate is %d per min", \
                     cls.cur_count, cls.totsize ,cls.fileCounter, rate)
@@ -126,75 +101,22 @@ class TestUtil:
             for _ in range(check_times):
                 await asyncio.sleep(_sleep_time / check_times)
                 if cls.cur_count > cls.MAX_FILES:
-                    #We have exceeded the max file limit. We set the endEvent so hopefully all the other workers will
-                    #end too
-                    logger.info("cur_count %d is larger than max_files",
-                                cls.cur_count)
+                    logger.info("cur_count %d is larger than max_files", cls.cur_count)
                     endEvent.set()
                     break
 
         logger.warning("print task return")
 
     @classmethod
-    async def dump_files(cls, return_thread=False, upload=False):
-
-        if not upload:
-            return True
-
+    async def dump_files(cls):
         condensed_files = [x.return_condensed() for x in cls.files]
 
         info_packet = Info(userid=cls.userid,
                            files=condensed_files,
-                           extra='upload' if upload else None)
+                           extra='upload')
 
-        success = False
+        cls.info = info_packet
 
-        while not (await cls.send_socket(info_packet)):
-            logger.info("send socket not succeeded, sleeping 60")
-
-            #Blocks the event loop
-            time.sleep(random.randint(40, 70))
-
-        if success:
-            cls.fileCounter += 1
-            cls.processedcount += len(cls.files)
-            cls.files = []
-        else:
-            logger.warning("dump_files socket send denied")
-
-        return success
-
-    @classmethod
-    async def test_server(cls, info_packet):
-        logger.info("connect working")
-
-        logger.info("server addr: %s", SERVER_ADDR)
-        r, w = await asyncio.open_connection(SERVER_ADDR, 8888)
-
-        message = b"request"
-
-        await adv_write(w, message)
-
-        m = await adv_read(r)
-        logger.info("received: %s", m)
-
-        if m != b'go':
-            return False
-
-        if m == b'go':
-            await adv_write(w, info_packet, to_pickle=True)
-        w.close()
-        return True
-
-    @classmethod
-    async def send_socket(cls, info_packet):
-        cls.info = info_packet._replace(files=cls.info.files +
-                                        info_packet.files)
-
-        if info_packet.extra == 'upload':
-            logger.info("Uploading info")
-            pickle.dump(cls.info, open('info', 'wb'))
-        return True
 
 
     @classmethod
@@ -205,7 +127,6 @@ class TestUtil:
             assert response.status == 200, "Response not 200"
             return rev
         except:
-            sys.exc_info()[0]
             rev = await response.text()
             logger.debug("response error %s", rev)
 

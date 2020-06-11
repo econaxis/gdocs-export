@@ -1,3 +1,10 @@
+# download (thread pool) 0.512
+# executor submit 3.017
+# gdoc 3.126419
+
+
+
+
 import asyncio
 from collections import namedtuple
 import random
@@ -21,7 +28,7 @@ timeout = aiohttp.ClientTimeout(total=15)
 
 SEED_ID = "root"
 
-workerInstances = 8
+workerInstances = 6
 
 ACCEPTED_TYPES = {"application/vnd.google-apps.document"}
 
@@ -29,17 +36,6 @@ temp_file = namedtuple('temp_file', ['id', 'name', 'type', 'path', 'last_revisio
 
 #For managing duplicates
 tot_folders = {}
-
-
-
-
-def last_rev_callback(req_id, response, exc):
-    if exception is not None:
-        raise exception
-
-    response["revisions"][-1]["id"]
-
-
 
 
 async def getIdsRecursive(drive_url, folders: asyncio.Queue,
@@ -66,10 +62,12 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
         # Deprecated, do not need to throttle google drive api
         # await drThrottle.sem.acquire()
 
-        while (TestUtil.totsize - 20> TestUtil.MAX_FILES and not done_event.is_set()):
-            sleep_time = (TestUtil.totsize - TestUtil.MAX_FILES)/ 5
+        stop = lambda : (TestUtil.totsize - 10> TestUtil.MAX_FILES and not done_event.is_set())
+
+        if (stop()):
+            cond = asyncio.Condition
             logger.info("getIds sleeping %f", sleep_time)
-            await asyncio.sleep(sleep_time)
+            cond.wait_for(stop)
 
         proc_file = await tryGetQueue(folders,
                                       name="getIds",
@@ -82,12 +80,10 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
 
         #If "root" is used, then that is also accepted by the API
         #the restriction is that it doesn't apply to shared documents
-        query = f"((mimeType='application/vnd.google-apps.folder' or mimeType= 'application/vnd.google-apps.document') and  \
+        data["q"] = f"((mimeType='application/vnd.google-apps.folder' or mimeType= 'application/vnd.google-apps.document') and  \
                 trashed = False) and ('{proc_file.id}' in parents)"
 
-        # We replace the existing data template with our own query.
-        data["q"] = query
-
+        data["q"] = "({}) and modifiedTime > '2016-10-04T12:00:00'".format(data["q"])
         try:
             async with session.get(url=drive_url, params=data,
                                    headers=headers) as response:
@@ -97,13 +93,14 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
                     #related to permissions. There is no need to process further
                     continue
         except:
-            logger.exception("connection closed prematurely with gdrive ")
+            logger.debug("connection closed prematurely with gdrive ")
             await asyncio.sleep(random.uniform(0, 20))
             continue
 
         temp_docs = {}
 
         batch_job = TestUtil.drive.new_batch_http_request()
+
 
         def last_rev_callback(id, response, exc):
             if exc:
@@ -136,18 +133,23 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
                 if not resFile["capabilities"]["canReadRevisions"] or id in tot_folders:
                     continue
                 else:
+                    # Weird bug where each file would be processed more than once?
                     tot_folders[id] = True
 
                 temp_docs[f.id]=f
+                
                 batch_job.add(TestUtil.drive.revisions().list(fileId = f.id, fields = "revisions(id)", pageSize = 1000), request_id = f.id,
                         callback = last_rev_callback)
-        batch_succ = False
-        while not batch_succ:
+
+
+        while True:
             try:
                 batch_job.execute()
-                batch_succ = True
             except:
-                await asyncio.sleep(5)
+                await asyncio.sleep(20)
+            else:
+                break
+
         [(await files.put(x)) for x in temp_docs.values()]
             
             
@@ -157,7 +159,7 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
 
 
 
-#@profile
+@profile
 async def getRevision(files,
                       session: aiohttp.ClientSession,
                       headers,
@@ -177,20 +179,11 @@ async def getRevision(files,
         if (proc_file == -1):
             logger.warning('getRevision task exiting')
             break
-
-        logger.debug("%s path: %s", proc_file.name,
-                     list(zip(*proc_file.path))[1])
-
         gd = GDoc()
         await gd.file_async_init(proc_file, session, TestUtil.headers)
 
-
         if gd.done and gd.operations:
             TestUtil.files.append(gd)
-        else:
-            logger.debug(
-                "not done but tried to append, prob because no operations found file: %s, %s %s %s",
-                gd.fileId, gd.name, gd.done, gd.operations)
 
 
     endEvent.set()
@@ -204,8 +197,6 @@ async def start():
 
     loop = asyncio.get_event_loop()
     loop.set_exception_handler(exchandler)
-    #loop.set_debug(True)
-    TestUtil.sql_server_active = False
 
     folders = asyncio.Queue()
     files = asyncio.Queue()
@@ -216,6 +207,7 @@ async def start():
                              type='',
                              path=[('root', 'root')],
                              last_revision_id = None)
+
     await folders.put(first_folder)
 
     async with aiohttp.ClientSession(timeout=timeout) as session:
@@ -226,11 +218,17 @@ async def start():
         fileExplorers = [loop.create_task(getIdsRecursive("https://www.googleapis.com/drive/v3/files", \
                                          folders, files, session, TestUtil.headers, endEvent)) for i in range(1)]
 
-        revisionExplorer = [
-            loop.create_task(
-                getRevision(files, session, TestUtil.headers, endEvent))
-            for i in range(workerInstances)
-        ]
+        revisionExplorer = []
+
+        while files.qsize() < 10:
+            # Let the producer task have some leeway
+            await asyncio.sleep(3)
+
+        for i in range(workerInstances):
+            revisionExplorer.append(
+                loop.create_task(getRevision(files, session, TestUtil.headers, endEvent)))
+            await asyncio.sleep(1)
+
 
         # Generate Print Task that prints data every X seconds, useful for debugging and viewing progress
         printTask = loop.create_task(TestUtil.print_size(files, endEvent))
@@ -239,7 +237,7 @@ async def start():
         # if we don't gather, then exceptions propagated in these three tasks will be swallowed
         await asyncio.gather(*revisionExplorer, *fileExplorers, printTask)
 
-    await TestUtil.dump_files(upload=True)
+    await TestUtil.dump_files()
 
     printTask.cancel()
     logger.info("start() task done")
@@ -253,20 +251,12 @@ def exchandler(loop, context):
 
 
 async def shutdown(loop, signal=None):
-    """Cleanup tasks tied to the service's shutdown."""
-
-    from configlog import sendmail
     if signal:
         logging.info(f"Received exit signal {signal.name}...")
     tasks = [t for t in asyncio.all_tasks() if t is not asyncio.current_task()]
-
     [task.cancel() for task in tasks]
-
     logging.info(f"Cancelling {len(tasks)} outstanding tasks")
     await asyncio.gather(*tasks, return_exceptions=True)
-    logging.info("Emailing logs...")
-    sendmail()
-    logging.info("Stopping")
     loop.stop()
 
 
@@ -289,15 +279,12 @@ def loadFiles(USER_ID, _workingPath, fileId, _creds):
     TestUtil.userid = USER_ID
 
 
-
-
     if (fileId != None):
         global SEED_ID
         SEED_ID = fileId
 
         #TODO: query GDrive to find out the actual filename of the root fileId, to
         #be done in queryDriveActivity or start()?
-        TestUtil.idmapper[SEED_ID] = 'root'
 
     # Main loop
     loop = asyncio.get_event_loop()
@@ -307,16 +294,8 @@ def loadFiles(USER_ID, _workingPath, fileId, _creds):
     loop.run_until_complete(asyncio.gather(startTask))
 
 
-    if not TestUtil.sql_server_active:
-        # Writing data to SQL
-        import processing.sql
-        processing.sql.start(USER_ID,
-                             TestUtil.info.files,
-                             upload=True)
-                             
+    # Writing data to SQL
+    import processing.sql
+    processing.sql.start(USER_ID, TestUtil.info.files, upload=True)
 
-    open(_workingPath + 'done.txt', 'a+').write("DONE")
-    configlog.sendmail(msg="program ended successfully")
-
-    #pickle.dump(TestUtil.dbg_infos, open('dbg_infos', 'wb'))
     logger.info("Program ended successfully for userid %s", USER_ID)

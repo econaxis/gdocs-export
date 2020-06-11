@@ -133,6 +133,15 @@ except (ImportError, AssertionError) as e:
             finally:
                 logger.debug("TRACE TIME: %s %f", id, time.time() - a0)
 
+        def prof(self, id):
+            def wrap(f):
+                def wrapped_f(*args):
+                    a0 = time.time()
+                    f(*args)
+                    logger.debug("TRACE TIME: %s %f", id, time.time() - a0)
+                return wrapped_f
+            return wrap
+
     tracer = Tracer()
 
 
