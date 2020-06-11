@@ -17,30 +17,7 @@ RUN chmod +x ./installation/install.sh && \
     echo "Installation done!"
 
 
-#COPY . .
+COPY . .
 
-
-#EXPOSE 5000
-
-#ARG WORKER
-#ARG REDIS_PASSW
-#ARG REDIS_HOST
-#ARG SQL_PASS
-#ARG SQL_CONN
-#ARG AZURE 
-#
-#ENV AZURE=${AZURE} \
-#    WORKER=${WORKER} \
-#    REDIS_PASSW=${REDIS_PASSW} \
-#    REDIS_HOST=${REDIS_HOST} \
-###    SQL_PASS=${SQL_PASS} \
-#    SQL_CONN=${SQL_CONN} \
-#    RQ_NAME=default
-
-
-
-#RUN chmod +x ./boot.sh
-
-#RUN chmod -R 777 ./
 
 ENTRYPOINT ["./boot.sh"]
