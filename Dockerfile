@@ -12,8 +12,8 @@ COPY ./installation ./installation
 
 RUN ls -a && ls installation
 
-RUN chmod +x ./installation/instodbc.sh && \
-    ./installation/instodbc.sh && \
+RUN chmod +x ./installation/install.sh && \
+    ./installation/install.sh && \
     echo "Installation done!"
 
 
