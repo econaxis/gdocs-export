@@ -10,3 +10,7 @@ echo "===="
 pip install --upgrade pip && \
 pip install pyopenssl && \
 pip install -r installation/proc_reqs.txt
+
+
+mkdir -p data/logs
+mkdir -p data/dbs

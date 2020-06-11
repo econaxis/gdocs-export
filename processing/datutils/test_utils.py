@@ -1,4 +1,5 @@
 import collections
+import os
 import ujson as json
 import random
 from googleapiclient.discovery import build
@@ -24,7 +25,7 @@ class TestUtil:
     creds = None
     headers = {}
     files = []
-    MAX_FILES = 10
+    MAX_FILES = os.environ.get("MAX_FILES", 10)
     userid = None
     workingPath = None
     processedcount = 0
