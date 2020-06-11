@@ -1,6 +1,6 @@
 import collections
-import os
 import ujson as json
+import random
 from googleapiclient.discovery import build
 from google.auth.transport.requests import Request
 from configlog import tracer
@@ -34,7 +34,6 @@ class TestUtil:
     _prev_count = (0, time.time())
 
     info = Info()
-
 
     gc_last_time = time.time()
 
@@ -108,16 +107,14 @@ class TestUtil:
         logger.warning("print task return")
 
     @classmethod
-    async def dump_files(cls):
+    def dump_files(cls):
         condensed_files = [x.return_condensed() for x in cls.files]
 
         info_packet = Info(userid=cls.userid,
                            files=condensed_files,
                            extra='upload')
 
-        cls.info = info_packet
-
-
+        return info_packet
 
     @classmethod
     async def handleResponse(cls, response, fileTuple=None, queue=None):
@@ -138,21 +135,8 @@ class TestUtil:
             return -1
 
 
-def dr2_urlbuilder(id: str):
-    return "https://www.googleapis.com/drive/v2/files/" + id + "/revisions"
 
-
-async def API_RESET(seconds=6, throttle=None, decrease=False):
-
-    if throttle and decrease:
-        await throttle.decrease()
-    secs = random.randint(0, seconds)
-    logger.debug("Waiting for GDrive... %d", secs)
-    await asyncio.sleep(secs)
-    return
-
-
-async def tryGetQueue(queue: asyncio.Queue,
+async def tryGetQueue(queue,
                       repeatTimes: int = 2,
                       interval: float = 3,
                       name: str = ""):
@@ -160,9 +144,9 @@ async def tryGetQueue(queue: asyncio.Queue,
     timesWaited = 0
     while (output == None):
         try:
-            timesWaited += 1
             output = queue.get_nowait()
-        except:
+        except asyncio.queues.QueueEmpty:
+            timesWaited += 1
             if (timesWaited > repeatTimes):
                 return -1
             logger.info(name + "waiting %d %d", timesWaited, repeatTimes)
@@ -170,48 +154,44 @@ async def tryGetQueue(queue: asyncio.Queue,
     return output
 
 
-def mp_dump(info, filename):
-    pickle.dump(info, open(filename, 'wb'))
-
-
-async def adv_read(reader):
-    import struct
-    header = await reader.readexactly(9)
-    header = struct.unpack('!Q?', header)
-
-    to_pickle = header[1]
-    length = header[0]
-
-    data = []
-
-    per_read = 5000
-
-    while length > 0:
-        try:
-            data.append(await reader.readexactly(min(length, per_read)))
-        except asyncio.IncompleteReadError as e:
-            data.append(e.partial)
-            length -= len(e.partial)
-        else:
-            length -= min(length, per_read)
-
-    data = b"".join(data)
-
-    if to_pickle:
-        return pickle.loads(data)
-    else:
-        return data
-
-
-async def adv_write(writer, data, to_pickle=False):
-    import struct
-
-    if to_pickle:
-        data = pickle.dumps(data)
-
-    header = struct.pack('!Q?', len(data), to_pickle)
-    writer.write(header)
-    writer.write(data)
-    await writer.drain()
-
-    return
+#  async def adv_read(reader):
+#      import struct
+#      header = await reader.readexactly(9)
+#      header = struct.unpack('!Q?', header)
+#  
+#      to_pickle = header[1]
+#      length = header[0]
+#  
+#      data = []
+#  
+#      per_read = 5000
+#  
+#      while length > 0:
+#          try:
+#              data.append(await reader.readexactly(min(length, per_read)))
+#          except asyncio.IncompleteReadError as e:
+#              data.append(e.partial)
+#              length -= len(e.partial)
+#          else:
+#              length -= min(length, per_read)
+#  
+#      data = b"".join(data)
+#  
+#      if to_pickle:
+#          return pickle.loads(data)
+#      else:
+#          return data
+#  
+#  
+#  async def adv_write(writer, data, to_pickle=False):
+#      import struct
+#  
+#      if to_pickle:
+#          data = pickle.dumps(data)
+#  
+#      header = struct.pack('!Q?', len(data), to_pickle)
+#      writer.write(header)
+#      writer.write(data)
+#      await writer.drain()
+#  
+#      return

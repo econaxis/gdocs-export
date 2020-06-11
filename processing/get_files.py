@@ -14,7 +14,6 @@ from pathlib import Path
 import logging
 import os
 import configlog
-from configlog import tracer
 
 # Imports TestUtil and corresponding functions
 from processing.datutils.test_utils import TestUtil,  tryGetQueue
@@ -49,8 +48,7 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
         corpora="allDrives",
         includeItemsFromAllDrives='true',
         supportsTeamDrives='true',
-        fields=
-        'files/mimeType, files/id, files/name, files/capabilities/canReadRevisions',
+        fields='files/mimeType, files/id, files/name, files/capabilities/canReadRevisions',
         pageSize=1000)
     # Query to pass into Drive to find item
 
@@ -59,15 +57,14 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
         # Necessary if more than one workers all starting at the same time,
         # with only one seed ID to start
 
-        # Deprecated, do not need to throttle google drive api
-        # await drThrottle.sem.acquire()
-
-        stop = lambda : (TestUtil.totsize - 10> TestUtil.MAX_FILES and not done_event.is_set())
+        def stop():
+            if TestUtil.totsize - 10> TestUtil.MAX_FILES and not done_event.is_set():
+                return TestUtil.totsize -  TestUtil.MAX_FILES
 
         if (stop()):
-            cond = asyncio.Condition
+            sleep_time = stop() / 2
             logger.info("getIds sleeping %f", sleep_time)
-            cond.wait_for(stop)
+            await asyncio.sleep(sleep_time)
 
         proc_file = await tryGetQueue(folders,
                                       name="getIds",
@@ -237,7 +234,6 @@ async def start():
         # if we don't gather, then exceptions propagated in these three tasks will be swallowed
         await asyncio.gather(*revisionExplorer, *fileExplorers, printTask)
 
-    await TestUtil.dump_files()
 
     printTask.cancel()
     logger.info("start() task done")
@@ -296,6 +292,7 @@ def loadFiles(USER_ID, _workingPath, fileId, _creds):
 
     # Writing data to SQL
     import processing.sql
-    processing.sql.start(USER_ID, TestUtil.info.files, upload=True)
+    files =  TestUtil.dump_files()
+    processing.sql.start(USER_ID, files, upload=True)
 
     logger.info("Program ended successfully for userid %s", USER_ID)

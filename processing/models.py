@@ -1,4 +1,4 @@
-from sqlalchemy import create_engine, MetaData, Column, Integer, String, Table, DateTime, ForeignKey, PrimaryKeyConstraint, Boolean, \
+from sqlalchemy import Column, Integer, String, DateTime, ForeignKey, PrimaryKeyConstraint, Boolean, \
         PickleType, Float
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
@@ -19,7 +19,7 @@ class Files(Base):
     name = relationship("Filename", back_populates="files", lazy="select")
 
     def __repr__(self):
-        return f"Files\n"
+        return "Files"
 
 
 class Dates(Base):

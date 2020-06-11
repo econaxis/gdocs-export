@@ -1,4 +1,3 @@
-import requests
 import certifi
 import pycurl
 import time
@@ -11,9 +10,7 @@ import asyncio
 import ujson as json
 import logging
 
-from multiprocessing import Pipe, Process
 
-from types import SimpleNamespace
 from collections import namedtuple
 
 
@@ -148,8 +145,9 @@ class GDoc():
 
             with tracer.span("download_details"):
                 self.operations = await self._download_details();
-            with tracer.span("compute_closure"):
-                self.compute_closure()
+
+
+            self.compute_closure()
 
             if self.operations:
                 self.done = True
@@ -273,5 +271,4 @@ if __name__ == '__main__':
 
             closure.append((child, parent, depth))
 
-    from pprint import pformat
     print(pformat(closure))
