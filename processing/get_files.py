@@ -27,7 +27,7 @@ timeout = aiohttp.ClientTimeout(total=15)
 
 SEED_ID = "root"
 
-workerInstances = 6
+workerInstances = 4
 
 ACCEPTED_TYPES = {"application/vnd.google-apps.document"}
 
@@ -155,8 +155,8 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
                 files.qsize(), len(TestUtil.files))
 
 
-
-@profile
+shutdown_lock = asyncio.Lock()
+#@profile
 async def getRevision(files,
                       session: aiohttp.ClientSession,
                       headers,
@@ -165,10 +165,9 @@ async def getRevision(files,
 
     # Await random amount for more staggered requesting, and to allow queryDriveActivity
     # time to fill the files queue with jobs
-    await asyncio.sleep(random.uniform(workerInstances * 0.5, workerInstances * 1.5))
 
-    while files.empty():
-        await asyncio.sleep(random.uniform(3, 10))
+    while files.empty() and not endEvent.is_set():
+        await asyncio.sleep(random.uniform(0, 3))
 
     while not endEvent.is_set():
         proc_file = await tryGetQueue(files, name="getRevision", interval=4, repeatTimes = 3)
@@ -184,6 +183,17 @@ async def getRevision(files,
 
 
     endEvent.set()
+    logger.info("End event set")
+
+    if not shutdown_lock.locked():
+        await shutdown_lock.acquire()
+        await asyncio.sleep(5)
+
+        logger.info("Cancelling all tasks")
+        for task in asyncio.all_tasks():
+            if task == asyncio.current_task():
+                continue
+            task.cancel
 
     logger.info("getrev return")
 
@@ -212,19 +222,21 @@ async def start():
 
         endEvent = asyncio.Event()
 
+        logger.info("Creating tasks")
+
         fileExplorers = [loop.create_task(getIdsRecursive("https://www.googleapis.com/drive/v3/files", \
                                          folders, files, session, TestUtil.headers, endEvent)) for i in range(1)]
 
         revisionExplorer = []
 
-        while files.qsize() < 10:
+        while files.qsize() < 3:
             # Let the producer task have some leeway
-            await asyncio.sleep(3)
+            await asyncio.sleep(2)
 
         for i in range(workerInstances):
             revisionExplorer.append(
                 loop.create_task(getRevision(files, session, TestUtil.headers, endEvent)))
-            await asyncio.sleep(1)
+            await asyncio.sleep(0.5)
 
 
         # Generate Print Task that prints data every X seconds, useful for debugging and viewing progress
@@ -293,6 +305,6 @@ def loadFiles(USER_ID, _workingPath, fileId, _creds):
     # Writing data to SQL
     import processing.sql
     files =  TestUtil.dump_files()
-    processing.sql.start(USER_ID, files, upload=True)
+    processing.sql.start(USER_ID, files.files, upload=True)
 
     logger.info("Program ended successfully for userid %s", USER_ID)

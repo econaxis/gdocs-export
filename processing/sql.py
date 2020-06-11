@@ -24,6 +24,8 @@ hdatapath = os.environ["HOMEDATAPATH"]
 #Used to access files on Azure File Storage, defaults to None to prevent unnecessary connections unless called
 az_driver = None
 
+
+
 import azure.common
 from azure.storage.file import FileService
 def setup_azure():
@@ -241,8 +243,9 @@ def insert_sql(userid, files, upload=False):
 
     logger.debug("Starting sql for userid %s", userid)
 
-    from processing.sql_server import owner_manager
 
+    from processing.sql_owner import OwnerManager
+    owner_manager = OwnerManager()
     fileid_obj_map, dict_lock = owner_manager(owner_id=userid)
 
     sess = reload_engine(userid, create_new=True)()

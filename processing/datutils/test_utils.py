@@ -24,7 +24,7 @@ class TestUtil:
     creds = None
     headers = {}
     files = []
-    MAX_FILES = 40
+    MAX_FILES = 10
     userid = None
     workingPath = None
     processedcount = 0

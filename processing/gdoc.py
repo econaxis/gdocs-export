@@ -49,7 +49,7 @@ def curl(curl_inst, url, headers):
     return _a
 
 
-@profile
+#@profile
 def download(url, headers):
     logger.debug("thread submitted %s %s", url, headers)
     curl_inst = None
@@ -121,7 +121,7 @@ class GDoc():
     async def file_async_init(self, file, session, headers):
         return await self.async_init(file.name, file.id, session, headers, file.path, file.last_revision_id)
 
-    @profile
+    #@profile
     async def async_init(self, name, fileId, session, headers, path, last_revision_id):
         with tracer.span("gdoc"):
             self.operations = []
@@ -167,7 +167,7 @@ class GDoc():
 
         return self.closure
 
-    @profile
+    #@profile
     async def _download_details(self):
 
         logger.debug("received job for %s", self.fileId)
