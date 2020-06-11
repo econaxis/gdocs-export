@@ -1,4 +1,5 @@
 import asyncio
+import sys
 import secrets
 import os
 import time
@@ -213,10 +214,7 @@ def thread_pool():
 
 if __name__ == '__main__':
     logger.warning("STARTING SQL SERVER")
-
     try:
         thread_pool()
     except KeyboardInterrupt:
-        import sys
-        close_shelve()
         sys.exit(0)

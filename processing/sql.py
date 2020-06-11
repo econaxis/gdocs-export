@@ -39,7 +39,7 @@ def az_download_dbs(owner_id, download_file):
     try:
         az_driver.get_file_to_path('def', 'data/dbs', f"{owner_id}.db", \
                download_file)
-    except azure.common.AzureMissingResourceHttpError as e:
+    except azure.common.AzureMissingResourceHttpError:
         logger.exception("cannot download file")
         raise FileNotFoundError
 
@@ -49,7 +49,7 @@ def az_upload_dbs(owner_id, from_file):
     try:
         az_driver.create_file_from_path('def', 'data/dbs', upload_path,
                         from_file)
-    except Exception as e:
+    except Exception:
         logger.exception("canot upload file")
 
 
@@ -104,9 +104,8 @@ def reload_engine(owner_id, create_new=False, download=False, lock=None):
         logger.warning("set session for ownerid %s", owner_id)
         sessions[owner_id] = v_scoped_session
 
-        test_session = v_scoped_session()
-
         #Check that the database has at least some rows
+        #test_session = v_scoped_session()
         #assert create_new or test_session.query(test_session.query(Files).exists()).scalar(), \
                 #"create_new is not true and the database does not have any rows"
 
@@ -143,8 +142,12 @@ def load_clos(file_data, fileid_obj_map, owner_id=None):
 
     sess = reload_engine(owner_id)()
 
+    closures = set()
+
     for files in file_data:
-        for clos in files.closure:
+        closures.update(files.closure)
+
+    for clos in closures:
             if clos.parent[0] not in fileid_obj_map:
                 logger.debug("new element not found: %s", clos.parent[0])
 
@@ -154,7 +157,7 @@ def load_clos(file_data, fileid_obj_map, owner_id=None):
                 sess.add(fi)
                 fileid_obj_map[clos.parent[0]] = fi
 
-            sess.commit()
+                sess.commit()
 
             if clos.child[0] not in fileid_obj_map:
                 logger.debug("new element not found: %s", clos.child[0])
@@ -165,7 +168,7 @@ def load_clos(file_data, fileid_obj_map, owner_id=None):
                 sess.add(fi)
                 fileid_obj_map[clos.child[0]] = fi
 
-            sess.commit()
+                sess.commit()
             try:
                 sess.add(fileid_obj_map[clos.child[0]])
                 sess.add(fileid_obj_map[clos.parent[0]])
