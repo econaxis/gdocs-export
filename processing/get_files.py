@@ -18,6 +18,7 @@ import configlog
 # Imports TestUtil and corresponding functions
 from processing.datutils.test_utils import TestUtil,  tryGetQueue
 from processing.gdoc import GDoc
+from processing import gdoc
 pprint = pprint.PrettyPrinter(indent=4).pprint
 
 logger = logging.getLogger(__name__)
