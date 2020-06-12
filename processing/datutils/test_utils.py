@@ -106,7 +106,7 @@ class TestUtil:
                     logger.info("cur_count %d is larger than max_files", cls.cur_count)
                     endEvent.set()
                     break
-        await shutdown()
+        await stop_tasks()
         logger.warning("print task return")
 
     @classmethod
@@ -139,7 +139,7 @@ class TestUtil:
 
 
 shutdown_lock = asyncio.Lock()
-async def shutdown():
+async def stop_tasks():
     if not shutdown_lock.locked():
         await shutdown_lock.acquire()
         await asyncio.sleep(5)

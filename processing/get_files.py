@@ -16,7 +16,7 @@ import os
 import configlog
 
 # Imports TestUtil and corresponding functions
-from processing.datutils.test_utils import TestUtil,  tryGetQueue, shutdown
+from processing.datutils.test_utils import TestUtil,  tryGetQueue, stop_tasks
 from processing.gdoc import GDoc
 from processing import gdoc
 pprint = pprint.PrettyPrinter(indent=4).pprint
@@ -181,7 +181,7 @@ async def getRevision(files,
     endEvent.set()
     logger.info("End event set")
 
-    shutdown()
+    stop_tasks()
 
     logger.info("getrev return")
 
