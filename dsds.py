@@ -7,7 +7,17 @@ import secrets
 logger = logging.getLogger(__name__)
 
 
-def start():
+def start(gdoc_threads = None, workers = None):
+
+    print(gdoc_threads, workers)
+
+    if gdoc_threads:
+        from processing import gdoc
+        gdoc.threads = gdoc_threads
+    if workers:
+        from processing import get_files
+        get_files.workerInstances = workers
+
     logger.info('start')
 
     uid = "t" + secrets.token_urlsafe(3)
@@ -26,4 +36,8 @@ def start():
 
 
 if __name__ == '__main__':
-    start()
+    import sys
+    if len(sys.argv) == 3:
+        start(gdoc_threads = int(sys.argv[1]), workers = int(sys.argv[2]))
+    else:
+        start()

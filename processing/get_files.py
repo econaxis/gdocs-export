@@ -169,7 +169,7 @@ async def getRevision(files,
         await asyncio.sleep(random.uniform(0, 6))
 
     while not endEvent.is_set():
-        proc_file = await tryGetQueue(files, name="getRevision", interval=3, repeatTimes = 7)
+        proc_file = await tryGetQueue(files, name="getRevision", interval=6, repeatTimes = 7)
 
         if (proc_file == -1):
             logger.warning('getRevision task exiting')
@@ -238,14 +238,14 @@ async def start():
 
         revisionExplorer = []
 
-        while files.qsize() < 3:
+        while files.qsize() < 5:
             # Let the producer task have some leeway
             await asyncio.sleep(2)
 
         for i in range(workerInstances):
             revisionExplorer.append(
                 loop.create_task(getRevision(files, session, TestUtil.headers, endEvent)))
-            await asyncio.sleep(0.5)
+            await asyncio.sleep(1.5)
 
         # asyncio.gather is necessary for exception handling.
         # if we don't gather, then exceptions propagated in these three tasks will be swallowed

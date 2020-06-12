@@ -2,6 +2,7 @@ import dsds
 from processing import get_files
 from processing import gdoc
 from configlog import tracer
+import subprocess
 
 
 def main():
@@ -11,5 +12,5 @@ def main():
             get_files.workerInstances = workers
             with tracer.span("LARGE TEST threads: {} ;; workers {}".format(threads, workers)):
                 print("outside threads: {} ;; workers {}".format(threads, workers))
-                dsds.start()
+                subprocess.run(['python', 'dsds.py', str(threads), str(workers)])
 main()
