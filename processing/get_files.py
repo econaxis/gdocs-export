@@ -16,14 +16,13 @@ import os
 import configlog
 
 # Imports TestUtil and corresponding functions
-from processing.datutils.test_utils import TestUtil,  tryGetQueue
+from processing.datutils.test_utils import TestUtil,  tryGetQueue, shutdown
 from processing.gdoc import GDoc
 from processing import gdoc
 pprint = pprint.PrettyPrinter(indent=4).pprint
 
 logger = logging.getLogger(__name__)
 
-shutdown_lock = asyncio.Lock()
 
 
 timeout = aiohttp.ClientTimeout(total=15)
@@ -109,8 +108,6 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
                 raise exc
             temp_docs[id] = temp_docs[id]._replace(last_revision_id = response["revisions"][-1]["id"])
 
-
-
         for resFile in resp["files"]:
             id = resFile["id"]
 
@@ -184,15 +181,7 @@ async def getRevision(files,
     endEvent.set()
     logger.info("End event set")
 
-    if not shutdown_lock.locked():
-        await shutdown_lock.acquire()
-        await asyncio.sleep(5)
-
-        logger.info("Cancelling all tasks")
-        for task in asyncio.all_tasks():
-            if task == asyncio.current_task():
-                continue
-            task.cancel
+    shutdown()
 
     logger.info("getrev return")
 
