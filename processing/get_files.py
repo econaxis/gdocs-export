@@ -2,9 +2,6 @@
 # executor submit 3.017
 # gdoc 3.126419
 
-
-
-
 import asyncio
 from collections import namedtuple
 import random
@@ -115,7 +112,7 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
 
         temp_docs = {}
 
-        batch_job = [TestUtil.drive.new_batch_http_request()]
+        batch_job = {0: TestUtil.drive.new_batch_http_request() }
         jobs_added = 0
 
 
@@ -150,18 +147,24 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
                 
                 jobs_added += 1
 
-                batch_job.add(TestUtil.drive.revisions().list(fileId = f.id, fields = "revisions(id)", pageSize = 1000), request_id = f.id,
+                idx = int(jobs_added / 20)
+
+                if idx not in batch_job:
+                    batch_job[idx] = TestUtil.drive.new_batch_http_request() 
+
+                batch_job[idx].add(TestUtil.drive.revisions().list(fileId = f.id, fields = "revisions(id)", pageSize = 1000), request_id = f.id,
                         callback = last_rev_callback)
 
 
-        while True:
-            try:
-                batch_job.execute()
-            except:
-                logger.info("Batch job executio failed!")
-                await asyncio.sleep(20)
-            else:
-                break
+            for jobs in batch_job.values():
+                while True:
+                    try:
+                        jobs.execute()
+                        break
+                    except:
+                        logger.info("Batch job executio failed!")
+                        await asyncio.sleep(20)
+                        
 
         [(await files.put(x)) for x in temp_docs.values()]
             
