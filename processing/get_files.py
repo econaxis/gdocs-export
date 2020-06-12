@@ -38,10 +38,19 @@ temp_file = namedtuple('temp_file', ['id', 'name', 'type', 'path', 'last_revisio
 #For managing duplicates
 tot_folders = {}
 
+collection_done = asyncio.Event()
+
+async def getIdsWrapper(*args, **kwargs):
+    try:
+        await getIdsRecursive(*args, **kwargs)
+    except Exception as e:
+        logger.exception("Exception!")
+        shutdown(asyncio.get_event_loop())
+
 
 async def getIdsRecursive(drive_url, folders: asyncio.Queue,
                           files: asyncio.Queue, session: aiohttp.ClientSession,
-                          headers, done_event):
+                          headers, endEvent):
 
     # This is the common data-dict to be passed into all our HTTP requests.
     # We need to fill out the q variable, depending on the folder id being requested
@@ -54,26 +63,32 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
         pageSize=1000)
     # Query to pass into Drive to find item
 
-    while not done_event.is_set():
+    while not endEvent.is_set():
         # Wait for folders queue, with interval 6 seconds between each check
         # Necessary if more than one workers all starting at the same time,
         # with only one seed ID to start
 
-        def stop():
-            if TestUtil.totsize - 10> TestUtil.MAX_FILES and not done_event.is_set():
-                return TestUtil.totsize - TestUtil.MAX_FILES
+        def stop(method = None):
+            if TestUtil.totsize - 10> TestUtil.MAX_FILES and not endEvent.is_set():
+                # Return the diff
+                if method == "diff":
+                    return TestUtil.totsize - TestUtil.MAX_FILES
+                else:
+                    return True
             else:
-                return False
+                if method == "diff":
+                    return 0
 
         if (stop()):
-            sleep_time = stop() / 2
+            sleep_time = stop("diff") / 2
             logger.info("getIds sleeping %f", sleep_time)
             await asyncio.sleep(sleep_time)
 
         proc_file = await tryGetQueue(folders,
                                       name="getIds",
-                                      interval=3,
-                                      repeatTimes=5)
+                                      interval=5,
+                                      repeatTimes=8,
+                                      endEvent = endEvent)
 
         if (proc_file == -1):
             break
@@ -100,7 +115,8 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
 
         temp_docs = {}
 
-        batch_job = TestUtil.drive.new_batch_http_request()
+        batch_job = [TestUtil.drive.new_batch_http_request()]
+        jobs_added = 0
 
 
         def last_rev_callback(id, response, exc):
@@ -132,6 +148,8 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
 
                 temp_docs[f.id]=f
                 
+                jobs_added += 1
+
                 batch_job.add(TestUtil.drive.revisions().list(fileId = f.id, fields = "revisions(id)", pageSize = 1000), request_id = f.id,
                         callback = last_rev_callback)
 
@@ -140,7 +158,8 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
             try:
                 batch_job.execute()
             except:
-                await asyncio.sleep(30)
+                logger.info("Batch job executio failed!")
+                await asyncio.sleep(20)
             else:
                 break
 
@@ -148,6 +167,7 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
             
             
 
+    collection_done.set()
     logger.info("getid return, len %d:%d:%d", TestUtil.processedcount,
                 files.qsize(), len(TestUtil.files))
 
@@ -166,11 +186,15 @@ async def getRevision(files,
         await asyncio.sleep(random.uniform(0, 6))
 
     while not endEvent.is_set():
-        proc_file = await tryGetQueue(files, name="getRevision", interval=6, repeatTimes = 7)
+        proc_file = await tryGetQueue(files, name="getRevision", interval=10, repeatTimes = 3, endEvent = endEvent)
 
-        if (proc_file == -1):
-            logger.warning('getRevision task exiting')
-            break
+        if (proc_file == -1 ):
+            if not collection_done.is_set():
+                await asyncio.sleep(20)
+                continue
+            else:
+                logger.warning('getRevision task exiting')
+                break
         gd = GDoc()
         await gd.file_async_init(proc_file, session, TestUtil.headers)
 
@@ -181,7 +205,7 @@ async def getRevision(files,
     endEvent.set()
     logger.info("End event set")
 
-    stop_tasks()
+    await stop_tasks()
 
     logger.info("getrev return")
 
@@ -220,8 +244,8 @@ async def start():
 
         #asyncio.create_task(gat(printTask))
 
-        fileExplorers = [loop.create_task(getIdsRecursive("https://www.googleapis.com/drive/v3/files", \
-                                         folders, files, session, TestUtil.headers, endEvent)) for i in range(2)]
+        fileExplorers = [loop.create_task(getIdsWrapper("https://www.googleapis.com/drive/v3/files", \
+                                         folders, files, session, TestUtil.headers, endEvent)) for i in range(1)]
         #asyncio.create_task(gat(fileExplorers[0]))
 
 

@@ -143,7 +143,6 @@ async def stop_tasks():
     if not shutdown_lock.locked():
         await shutdown_lock.acquire()
         await asyncio.sleep(5)
-
         logger.info("Cancelling all tasks")
         for task in asyncio.all_tasks():
             if task == asyncio.current_task():
@@ -154,10 +153,13 @@ async def stop_tasks():
 async def tryGetQueue(queue,
                       repeatTimes: int = 2,
                       interval: float = 3,
-                      name: str = ""):
+                      name: str = "",
+                      endEvent = None):
     output = None
     timesWaited = 0
     while (output == None):
+        if endEvent and endEvent.is_set():
+            return -1
         try:
             output = queue.get_nowait()
         except asyncio.queues.QueueEmpty:
