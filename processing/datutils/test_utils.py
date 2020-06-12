@@ -28,7 +28,6 @@ class TestUtil:
     MAX_FILES = int(os.environ.get("MAX_FILES", 10))
     userid = None
     workingPath = None
-    processedcount = 0
     drive = None
 
     #Used for debugging purposes for measuring rate
@@ -81,11 +80,12 @@ class TestUtil:
     tracer.prof("print_size")
     @classmethod
     async def print_size(cls, files, endEvent):
+        cls.files_queue = files
+
         while not endEvent.is_set():
             cls.gcollect()
-
-            cls.cur_count = len(cls.files) + cls.processedcount
-            cls.totsize = files.qsize() + cls.cur_count
+            
+            cls.calc_totsize()
 
             diff_time = time.time() - cls._prev_count[1]
             rate = (cls.cur_count - cls._prev_count[0]) / (diff_time) * 60
@@ -106,8 +106,14 @@ class TestUtil:
                     logger.info("cur_count %d is larger than max_files", cls.cur_count)
                     endEvent.set()
                     break
-        await stop_tasks()
         logger.warning("print task return")
+    @classmethod
+    def calc_totsize(cls):
+        cls.cur_count = len(cls.files)
+        cls.totsize = cls.files_queue.qsize() + cls.cur_count
+
+        return cls.totsize
+
 
     @classmethod
     def dump_files(cls):
@@ -138,16 +144,6 @@ class TestUtil:
             return -1
 
 
-shutdown_lock = asyncio.Lock()
-async def stop_tasks():
-    if not shutdown_lock.locked():
-        await shutdown_lock.acquire()
-        await asyncio.sleep(5)
-        logger.info("Cancelling all tasks")
-        for task in asyncio.all_tasks():
-            if task == asyncio.current_task():
-                continue
-            task.cancel
 
 
 async def tryGetQueue(queue,

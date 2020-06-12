@@ -1,13 +1,8 @@
 version: '3.4'
 services:
     pydocs:
-        build:
-            dockerfile: Dockerfile
-            context: .
-            network: pydocs-net
-            args:
-                REQ_FILE: 'pydocs_reqs.txt'
         image: henry2833/pydocs:latest
+        entrypoint: ['/bin/bash']
         environment:
             REDIS_PASSW: "${REDIS_PASSW}"
             SQL_CONN:  "${SQL_CONN}"

@@ -76,3 +76,23 @@ def oauth():
     flask.session['signedin'] = True
 
     return flask.redirect(flask.url_for('server.formValidate'))
+
+
+def debug_auth(path = 'data/creds1.pickle'):
+    import pickle
+    import os.path
+    from googleapiclient.discovery import build
+    from google_auth_oauthlib.flow import InstalledAppFlow
+    from google.auth.transport.requests import Request
+
+    SCOPES = ['https://www.googleapis.com/auth/drive']
+    creds = None
+    if not creds or not creds.valid:
+        if creds and creds.expired and creds.refresh_token:
+            creds.refresh(Request())
+        else:
+            flow = InstalledAppFlow.from_client_secrets_file(
+                'secret/credentials.json', SCOPES)
+            creds = flow.run_local_server(port=5000)
+        with open('path', 'wb') as token:
+            pickle.dump(creds, token)

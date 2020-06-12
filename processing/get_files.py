@@ -13,7 +13,7 @@ import os
 import configlog
 
 # Imports TestUtil and corresponding functions
-from processing.datutils.test_utils import TestUtil,  tryGetQueue, stop_tasks
+from processing.datutils.test_utils import TestUtil,  tryGetQueue
 from processing.gdoc import GDoc
 from processing import gdoc
 pprint = pprint.PrettyPrinter(indent=4).pprint
@@ -33,7 +33,7 @@ ACCEPTED_TYPES = "application/vnd.google-apps.document"
 temp_file = namedtuple('temp_file', ['id', 'name', 'type', 'path', 'last_revision_id'])
 
 #For managing duplicates
-tot_folders = {}
+tot_files = {}
 
 collection_done = asyncio.Event()
 
@@ -66,15 +66,14 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
         # with only one seed ID to start
 
         def stop(method = None):
-            if TestUtil.totsize - 10> TestUtil.MAX_FILES and not endEvent.is_set():
+            if TestUtil.calc_totsize() - 10> TestUtil.MAX_FILES and not endEvent.is_set():
                 # Return the diff
                 if method == "diff":
                     return TestUtil.totsize - TestUtil.MAX_FILES
                 else:
                     return True
             else:
-                if method == "diff":
-                    return 0
+                return 0
 
         if (stop()):
             sleep_time = stop("diff") / 2
@@ -96,6 +95,9 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
         data["q"] = f"((mimeType='application/vnd.google-apps.folder' or mimeType= 'application/vnd.google-apps.document') and  \
                 trashed = False) and ('{proc_file.id}' in parents)"
 
+        # Enable shared drive finding
+        data["q"] = f"((mimeType='application/vnd.google-apps.folder' or mimeType= 'application/vnd.google-apps.document') and  \
+                trashed = False)"
         data["q"] = "({}) and modifiedTime > '2016-10-04T12:00:00'".format(data["q"])
         try:
             async with session.get(url=drive_url, params=data,
@@ -118,8 +120,15 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
 
         def last_rev_callback(id, response, exc):
             if exc:
+                logger.info("exception in callback", exc_info = exc)
                 raise exc
-            temp_docs[id] = temp_docs[id]._replace(last_revision_id = response["revisions"][-1]["id"])
+            try:
+                temp_docs[id] = temp_docs[id]._replace(last_revision_id = response["revisions"][-1]["id"])
+                if id not in tot_files:
+                    files.put_nowait(temp_docs[id])
+                tot_files[id] = True
+            except:
+                breakpoint()
 
         for resFile in resp["files"]:
             id = resFile["id"]
@@ -137,17 +146,16 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
                 await folders.put(f)
             elif (resFile["mimeType"] == ACCEPTED_TYPES):
                 # First element id is not used for naming, only for api calls
-                if not resFile["capabilities"]["canReadRevisions"] or id in tot_folders:
+                if not resFile["capabilities"]["canReadRevisions"] or id in tot_files:
                     continue
-                else:
-                    # Weird bug where each file would be processed more than once?
-                    tot_folders[id] = True
 
                 temp_docs[f.id]=f
                 
                 jobs_added += 1
 
                 idx = int(jobs_added / 20)
+                print("idx: ", idx)
+                print("fold size: ", folders.qsize())
 
                 if idx not in batch_job:
                     batch_job[idx] = TestUtil.drive.new_batch_http_request() 
@@ -156,17 +164,21 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
                         callback = last_rev_callback)
 
 
-            for jobs in batch_job.values():
-                while True:
-                    try:
-                        jobs.execute()
-                        break
-                    except:
-                        logger.info("Batch job executio failed!")
-                        await asyncio.sleep(20)
-                        
+        for jobs in batch_job.values():
+            i = 0
+            while True:
+                while stop():
+                    await asyncio.sleep(20)
+                i += 1
+                try:
+                    jobs.execute()
+                    logger.info("Batch job execution succeeded, going to next job")
+                    break
+                except Exception as e:
+                    logger.info("Batch job executio failed!")
+                    await asyncio.sleep(i*25)
+                    
 
-        [(await files.put(x)) for x in temp_docs.values()]
             
             
 
@@ -174,6 +186,14 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
     logger.info("getid return, len %d:%d:%d", TestUtil.processedcount,
                 files.qsize(), len(TestUtil.files))
 
+
+async def shutdown_task(endEvent):
+    await endEvent.wait()
+
+    logger.info("sleeping  before shutting down")
+    await asyncio.sleep(4)
+    await shutdown()
+    logger.info("shutting tasks done")
 
 #@profile
 async def getRevision(files,
@@ -203,19 +223,14 @@ async def getRevision(files,
 
         if gd.done and gd.operations:
             TestUtil.files.append(gd)
+            print("done proessed ", gd.name)
 
 
     endEvent.set()
-    logger.info("End event set")
-
-    await stop_tasks()
-
     logger.info("getrev return")
 
     return
 
-async def gat (task):
-    asyncio.gather(task)
 
 async def start():
 
@@ -251,6 +266,8 @@ async def start():
                                          folders, files, session, TestUtil.headers, endEvent)) for i in range(1)]
         #asyncio.create_task(gat(fileExplorers[0]))
 
+        loop.create_task(shutdown_task(endEvent))
+
 
         revisionExplorer = []
 
@@ -263,8 +280,6 @@ async def start():
                 loop.create_task(getRevision(files, session, TestUtil.headers, endEvent)))
             await asyncio.sleep(1.5)
 
-        # asyncio.gather is necessary for exception handling.
-        # if we don't gather, then exceptions propagated in these three tasks will be swallowed
         await asyncio.gather(*revisionExplorer, *fileExplorers, printTask)
 
 
@@ -279,14 +294,15 @@ def exchandler(loop, context):
     asyncio.create_task(shutdown(loop))
 
 
-async def shutdown(loop, signal=None):
+async def shutdown(loop = None, signal=None):
     if signal:
         logging.info(f"Received exit signal {signal.name}...")
     tasks = [t for t in asyncio.all_tasks() if t is not asyncio.current_task()]
     [task.cancel() for task in tasks]
     logging.info(f"Cancelling {len(tasks)} outstanding tasks")
     await asyncio.gather(*tasks, return_exceptions=True)
-    loop.stop()
+    if loop:
+        loop.stop()
 
 
 def loadFiles(USER_ID, _workingPath, fileId, _creds):
@@ -320,7 +336,10 @@ def loadFiles(USER_ID, _workingPath, fileId, _creds):
     loop.set_exception_handler(exchandler)
     startTask = loop.create_task(start())
 
-    loop.run_until_complete(asyncio.gather(startTask))
+    try:
+        loop.run_until_complete(asyncio.gather(startTask))
+    except asyncio.CancelledError:
+        pass
 
 
     # Writing data to SQL
