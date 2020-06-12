@@ -25,7 +25,7 @@ class TestUtil:
     creds = None
     headers = {}
     files = []
-    MAX_FILES = os.environ.get("MAX_FILES", 10)
+    MAX_FILES = int(os.environ.get("MAX_FILES", 10))
     userid = None
     workingPath = None
     processedcount = 0
@@ -87,16 +87,18 @@ class TestUtil:
             cls.cur_count = len(cls.files) + cls.processedcount
             cls.totsize = files.qsize() + cls.cur_count
 
-            rate = (cls.cur_count - cls._prev_count[0]) / (time.time() -
-                                   cls._prev_count[1]) * 60
+            diff_time = time.time() - cls._prev_count[1]
+            rate = (cls.cur_count - cls._prev_count[0]) / (diff_time) * 60
+            if diff_time > 20:
+                cls._prev_count = (cls.cur_count, time.time())
+
 
             logger.info("%d/%d discovered items \ndump count: %d; rate is %d per min", \
                     cls.cur_count, cls.totsize ,cls.fileCounter, rate)
 
-            cls._prev_count = (cls.cur_count, time.time())
 
-            _sleep_time = 10
-            check_times = 2
+            _sleep_time = 5
+            check_times = 10
 
             for _ in range(check_times):
                 await asyncio.sleep(_sleep_time / check_times)

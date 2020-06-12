@@ -25,47 +25,36 @@ timeout = aiohttp.ClientTimeout(total=15)
 
 Closure = namedtuple("Closure", ['parent', 'child', 'depth'])
 
-threads = 2
+threads = 3
 
 
 lock = [Lock() for i in range(threads)]
 c = [pycurl.Curl() for i in range(threads)]
 
-cur_inst = 0
-
-
-
-def curl(curl_inst, url, headers):
-    with tracer.span("curl "):
-        it = zip(headers.keys(), headers.values())
-        curl_headers = [f"{k}: {v}" for k, v in it]
-        buffer = BytesIO()
-        curl_inst.setopt(curl_inst.CAINFO, certifi.where())
-        curl_inst.setopt(curl_inst.URL,url)
-        curl_inst.setopt(curl_inst.WRITEDATA, buffer)
-        curl_inst.setopt(pycurl.HTTPHEADER, curl_headers)
-        curl_inst.perform()
-        _a = buffer.getvalue().decode('iso-8859-1')
-    return _a
-
 
 #@profile
 def download(url, headers):
     logger.debug("thread submitted %s %s", url, headers)
-    curl_inst = None
-    for i in range(15):
+    for _ in range(5):
         for idx, l in enumerate(lock):
             if(l.acquire(blocking = False)):
                 try:
-                    curl_inst = c[idx]
-                    res = curl(curl_inst, url, headers)
+                    it = zip(headers.keys(), headers.values())
+                    curl_headers = [f"{k}: {v}" for k, v in it]
+                    buffer = BytesIO()
+                    c[idx].setopt(c[idx].CAINFO, certifi.where())
+                    c[idx].setopt(c[idx].URL,url)
+                    c[idx].setopt(c[idx].WRITEDATA, buffer)
+                    c[idx].setopt(pycurl.HTTPHEADER, curl_headers)
+                    c[idx].perform()
+                    res = buffer.getvalue().decode('iso-8859-1')
                 except:
                     logger.exception("")
                 finally:
                     l.release()
                 return res
-
-        time.sleep(i*5 + 5)
+        logger.info("All curl instances in use")
+        time.sleep(5)
 
 
     return ""
@@ -181,49 +170,49 @@ class GDoc():
         def notify(fds):
             ev.set()
 
-        with tracer.span('executor submit'):
-            job_handle = executor.submit(download, url, self.headers)
-            job_handle.add_done_callback(notify)
+        job_handle = executor.submit(download, url, self.headers)
+        job_handle.add_done_callback(notify)
 
+        with tracer.span("waiting for curl to complete"):
             await ev.wait()
 
-            revision_details = json.loads(job_handle.result()[5:])
+        revision_details = json.loads(job_handle.result()[5:])
 
 
-        with tracer.span("processing"):
-            tot_operations = []
+        tot_operations = []
+        content = [0, 0]
 
-            for count, x in enumerate(revision_details['changelog']):
-                try:
-                    if x[0]['ty'] not in {'is', 'ds', 'mlti'}:
-                        continue
-                except:
-                    print(x)
-
-                if x[0]['ty'] == 'mlti':
-                    for i in x[0]['mts']:
-                        revision_details['changelog'].append([i, x[1]])
+        for x in revision_details['changelog']:
+            try:
+                if x[0]['ty'] not in {'is', 'ds', 'mlti'}:
                     continue
+            except:
+                pass
 
-                if x[0]['ty'] == 'is':
-                    content = [len(x[0]['s']), 0]
-                elif x[0]['ty'] == 'ds':
-                    content = [0, x[0]['ei'] - x[0]['si'] + 1]
+            if x[0]['ty'] == 'mlti':
+                for i in x[0]['mts']:
+                    revision_details['changelog'].append([i, x[1]])
+                continue
 
-                cur_op = Operation(date=x[1] / 1e3, content=content)
-                tot_operations.append(cur_op)
+            if x[0]['ty'] == 'is':
+                content = [len(x[0]['s']), 0]
+            elif x[0]['ty'] == 'ds':
+                content = [0, x[0]['ei'] - x[0]['si'] + 1]
 
-            #Condense all operations into minute-operations
-            operation_condensed = {}
-            for o in tot_operations:
-                key = round_time(o.date)
-                if key not in operation_condensed:
-                    operation_condensed[key] = o
-                else:
-                    operation_condensed[key].content[0] += o.content[0]
-                    operation_condensed[key].content[1] += o.content[1]
+            cur_op = Operation(date=x[1] / 1e3, content=content)
+            tot_operations.append(cur_op)
 
-            operations = list(operation_condensed.values())
+        #Condense all operations into minute-operations
+        operation_condensed = {}
+        for o in tot_operations:
+            key = round_time(o.date)
+            if key not in operation_condensed:
+                operation_condensed[key] = o
+            else:
+                operation_condensed[key].content[0] += o.content[0]
+                operation_condensed[key].content[1] += o.content[1]
+
+        operations = list(operation_condensed.values())
 
         return operations
 

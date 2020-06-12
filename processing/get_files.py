@@ -18,10 +18,12 @@ import configlog
 # Imports TestUtil and corresponding functions
 from processing.datutils.test_utils import TestUtil,  tryGetQueue
 from processing.gdoc import GDoc
+pprint = pprint.PrettyPrinter(indent=4).pprint
 
 logger = logging.getLogger(__name__)
 
-pprint = pprint.PrettyPrinter(indent=4).pprint
+shutdown_lock = asyncio.Lock()
+
 
 timeout = aiohttp.ClientTimeout(total=15)
 
@@ -29,7 +31,7 @@ SEED_ID = "root"
 
 workerInstances = 4
 
-ACCEPTED_TYPES = {"application/vnd.google-apps.document"}
+ACCEPTED_TYPES = "application/vnd.google-apps.document"
 
 temp_file = namedtuple('temp_file', ['id', 'name', 'type', 'path', 'last_revision_id'])
 
@@ -59,7 +61,9 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
 
         def stop():
             if TestUtil.totsize - 10> TestUtil.MAX_FILES and not done_event.is_set():
-                return TestUtil.totsize -  TestUtil.MAX_FILES
+                return TestUtil.totsize - TestUtil.MAX_FILES
+            else:
+                return False
 
         if (stop()):
             sleep_time = stop() / 2
@@ -120,12 +124,7 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
 
             if (resFile["mimeType"] == "application/vnd.google-apps.folder"):
                 await folders.put(f)
-            elif (resFile["mimeType"] in ACCEPTED_TYPES):
-
-                if len(f.path) <= 2 and "FLASKDBG" in os.environ:
-                    #There is no pathing, so we ignore. For debugging only
-                    continue
-
+            elif (resFile["mimeType"] == ACCEPTED_TYPES):
                 # First element id is not used for naming, only for api calls
                 if not resFile["capabilities"]["canReadRevisions"] or id in tot_folders:
                     continue
@@ -143,7 +142,7 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
             try:
                 batch_job.execute()
             except:
-                await asyncio.sleep(20)
+                await asyncio.sleep(30)
             else:
                 break
 
@@ -155,7 +154,6 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
                 files.qsize(), len(TestUtil.files))
 
 
-shutdown_lock = asyncio.Lock()
 #@profile
 async def getRevision(files,
                       session: aiohttp.ClientSession,
@@ -167,10 +165,10 @@ async def getRevision(files,
     # time to fill the files queue with jobs
 
     while files.empty() and not endEvent.is_set():
-        await asyncio.sleep(random.uniform(0, 3))
+        await asyncio.sleep(random.uniform(0, 6))
 
     while not endEvent.is_set():
-        proc_file = await tryGetQueue(files, name="getRevision", interval=4, repeatTimes = 3)
+        proc_file = await tryGetQueue(files, name="getRevision", interval=3, repeatTimes = 7)
 
         if (proc_file == -1):
             logger.warning('getRevision task exiting')
@@ -199,8 +197,12 @@ async def getRevision(files,
 
     return
 
+async def gat (task):
+    asyncio.gather(task)
 
 async def start():
+
+    logger.info("THREADS: {} WORKERS: {}".format(gdoc.threads, workerInstances))
 
     loop = asyncio.get_event_loop()
     loop.set_exception_handler(exchandler)
@@ -224,8 +226,14 @@ async def start():
 
         logger.info("Creating tasks")
 
+        printTask = loop.create_task(TestUtil.print_size(files, endEvent))
+
+        #asyncio.create_task(gat(printTask))
+
         fileExplorers = [loop.create_task(getIdsRecursive("https://www.googleapis.com/drive/v3/files", \
                                          folders, files, session, TestUtil.headers, endEvent)) for i in range(1)]
+        #asyncio.create_task(gat(fileExplorers[0]))
+
 
         revisionExplorer = []
 
@@ -237,10 +245,6 @@ async def start():
             revisionExplorer.append(
                 loop.create_task(getRevision(files, session, TestUtil.headers, endEvent)))
             await asyncio.sleep(0.5)
-
-
-        # Generate Print Task that prints data every X seconds, useful for debugging and viewing progress
-        printTask = loop.create_task(TestUtil.print_size(files, endEvent))
 
         # asyncio.gather is necessary for exception handling.
         # if we don't gather, then exceptions propagated in these three tasks will be swallowed
