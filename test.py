@@ -11,6 +11,4 @@ def main():
             get_files.workerInstances = workers
             with tracer.span("LARGE TEST threads: {} ;; workers {}".format(threads, workers)):
                 dsds.start()
-
-
 main()
