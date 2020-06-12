@@ -12,5 +12,5 @@ def main():
             get_files.workerInstances = workers
             with tracer.span("LARGE TEST threads: {} ;; workers {}".format(threads, workers)):
                 print("outside threads: {} ;; workers {}".format(threads, workers))
-                subprocess.run(['python', 'dsds.py', str(threads), str(workers)])
+                subprocess.run(['python3.8', 'dsds.py', str(threads), str(workers)])
 main()
