@@ -221,7 +221,7 @@ async def start():
         #asyncio.create_task(gat(printTask))
 
         fileExplorers = [loop.create_task(getIdsRecursive("https://www.googleapis.com/drive/v3/files", \
-                                         folders, files, session, TestUtil.headers, endEvent)) for i in range(1)]
+                                         folders, files, session, TestUtil.headers, endEvent)) for i in range(2)]
         #asyncio.create_task(gat(fileExplorers[0]))
 
 
