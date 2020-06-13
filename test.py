@@ -21,14 +21,13 @@ def main():
             mart = lambda: run(threads, workers, False)
             hen = lambda: run(threads, workers, True)
 
-            hent = threading.Thread(target = mart)
-            martt = threading.Thread(target= hen)
+            hent = [threading.Thread(target = mart) for i in range(3)]
+            martt = [threading.Thread(target= hen) for i in range(3) ]
 
-            hent.start()
-            martt.start()
-
-            hent.join()
-            martt.join()
+            [x.start() for x in hent]
+            [x.start() for x in martt]
+            [x.join() for x in hent]
+            [x.join() for x in martt]
 
 
             import time
