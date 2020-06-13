@@ -154,9 +154,6 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
                 jobs_added += 1
 
                 idx = int(jobs_added / 20)
-                print("idx: ", idx)
-                print("fold size: ", folders.qsize())
-
                 if idx not in batch_job:
                     batch_job[idx] = TestUtil.drive.new_batch_http_request() 
 
