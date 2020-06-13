@@ -173,7 +173,7 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
                     break
                 except Exception as e:
                     logger.info("Batch job executio failed!")
-                    await asyncio.sleep(i*25)
+                    await asyncio.sleep(i*10)
                     
 
             
