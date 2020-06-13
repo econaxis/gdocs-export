@@ -42,7 +42,7 @@ async def getIdsWrapper(*args, **kwargs):
         await getIdsRecursive(*args, **kwargs)
     except Exception as e:
         logger.exception("Exception!")
-        shutdown(asyncio.get_event_loop())
+        await shutdown(asyncio.get_event_loop())
 
 
 async def getIdsRecursive(drive_url, folders: asyncio.Queue,
@@ -153,7 +153,7 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
                 
                 jobs_added += 1
 
-                idx = int(jobs_added / 20)
+                idx = int(jobs_added / 10)
                 if idx not in batch_job:
                     batch_job[idx] = TestUtil.drive.new_batch_http_request() 
 
@@ -162,10 +162,13 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
 
 
         for jobs in batch_job.values():
+
+            if endEvent.is_set():
+                break
             i = 0
             while True:
                 while stop():
-                    await asyncio.sleep(20)
+                    await asyncio.sleep(10)
                 i += 1
                 try:
                     jobs.execute()
@@ -177,11 +180,8 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
                     
 
             
-            
-
     collection_done.set()
-    logger.info("getid return, len %d:%d:%d", TestUtil.processedcount,
-                files.qsize(), len(TestUtil.files))
+    logger.info("getid return, len %d:%d", files.qsize(), len(TestUtil.files))
 
 
 async def shutdown_task(endEvent):

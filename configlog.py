@@ -5,6 +5,8 @@ import sys
 from logging import StreamHandler, FileHandler
 from datetime import datetime
 import secrets
+from pathlib import Path
+
 
 token = secrets.token_urlsafe(4)
 
@@ -18,6 +20,8 @@ os.environ["TZ"] = "America/Vancouver"
 # time.tzset()
 
 logFile = os.path.join(os.environ["HOMEDATAPATH"] , "logs/logs.txt")
+Path(os.path.join(os.environ["HOMEDATAPATH"], "dbs")).mkdir(exist_ok=True)
+Path(os.path.join(os.environ["HOMEDATAPATH"], "logs")).mkdir(exist_ok=True)
 
 #syslog = SysLogHandler(address=('logs2.papertrailapp.com', 49905))
 filelog = FileHandler(logFile)
