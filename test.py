@@ -1,10 +1,13 @@
 import dsds
+import time
 from processing import get_files
 from processing import gdoc
 from configlog import tracer
 import subprocess
+import random
 
 def run(threads, workers, mart):
+    time.sleep(random.uniform(10, 30))
     with tracer.span("LARGE TEST threads: {} ;; workers {}".format(threads, workers)):
         if mart:
             subprocess.run(['python3.8', 'dsds.py', '-t {}'.format(str(threads)), '-w {}'.format( str(workers)), '-m'])
@@ -21,17 +24,16 @@ def main():
             mart = lambda: run(threads, workers, False)
             hen = lambda: run(threads, workers, True)
 
-            hent = [threading.Thread(target = mart) for i in range(3)]
-            martt = [threading.Thread(target= hen) for i in range(3) ]
+            hent = [threading.Thread(target = mart) for i in range(6)]
+            martt = [threading.Thread(target= hen) for i in range(6)]
 
             [x.start() for x in hent]
             [x.start() for x in martt]
             [x.join() for x in hent]
             [x.join() for x in martt]
 
-
-            import time
-            time.sleep(30)
+            print("sleeping")
+            time.sleep(15)
 
 
 main()
