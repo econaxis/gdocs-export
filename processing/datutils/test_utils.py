@@ -16,6 +16,7 @@ Info = collections.namedtuple('Info', ['userid', 'files', 'extra'],
                                         'task'))
 logger = logging.getLogger(__name__)
 
+queue_wait_time = 0
 
 class TestUtil:
 
@@ -93,8 +94,8 @@ class TestUtil:
                 cls._prev_count = (cls.cur_count, time.time())
 
 
-            logger.info("%d/%d discovered items \ndump count: %d; rate is %d per min", \
-                    cls.cur_count, cls.totsize ,cls.fileCounter, rate)
+            logger.info("%d/%d discovered items \ndump count: %d; rate is %d per min\n total queue wait time", \
+                    cls.cur_count, cls.totsize ,cls.fileCounter, rate, queue_wait_time)
 
 
             _sleep_time = 5
@@ -145,7 +146,6 @@ class TestUtil:
 
 
 
-
 async def tryGetQueue(queue,
                       repeatTimes: int = 2,
                       interval: float = 3,
@@ -163,7 +163,10 @@ async def tryGetQueue(queue,
             if (timesWaited > repeatTimes):
                 return -1
             logger.info(name + "waiting %d %d", timesWaited, repeatTimes)
-            await asyncio.sleep(random.uniform(0.8 * interval, 1.4 * interval))
+
+            if name == "getRevision":
+                queue_wait_time += timesWaited * 3
+                await asyncio.sleep(timesWaited * 3)
     return output
 
 

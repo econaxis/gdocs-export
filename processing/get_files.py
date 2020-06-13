@@ -220,7 +220,6 @@ async def getRevision(files,
 
         if gd.done and gd.operations:
             TestUtil.files.append(gd)
-            print("done proessed ", gd.name)
 
 
     endEvent.set()

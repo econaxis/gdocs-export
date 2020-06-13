@@ -50,9 +50,10 @@ def download(url, headers):
                     res = buffer.getvalue().decode('iso-8859-1')
                 except:
                     logger.exception("")
+                    return False
                 finally:
                     l.release()
-                return res
+                    return res
         logger.info("All curl instances in use")
         time.sleep(5)
 
@@ -170,13 +171,19 @@ class GDoc():
         def notify(fds):
             ev.set()
 
-        job_handle = executor.submit(download, url, self.headers)
-        job_handle.add_done_callback(notify)
-
-        with tracer.span("waiting for curl to complete"):
+        failed_counter = 0
+         
+        revision_details = None
+        for _ in range(3):
+            job_handle = executor.submit(download, url, self.headers)
+            job_handle.add_done_callback(notify)
             await ev.wait()
+            if job_handle.result()
+                revision_details = json.loads(job_handle.result()[5:])
 
-        revision_details = json.loads(job_handle.result()[5:])
+        if not revision_details:
+            return
+
 
 
         tot_operations = []
