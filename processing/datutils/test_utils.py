@@ -151,6 +151,7 @@ async def tryGetQueue(queue,
                       interval: float = 3,
                       name: str = "",
                       endEvent = None):
+    global queue_wait_time
     output = None
     timesWaited = 0
     while (output == None):

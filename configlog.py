@@ -123,7 +123,7 @@ def sendmail(msg="", return_thread=False):
 
 
 try:
-    assert 1==0
+    raise ImportError("debugging")
 except (ImportError, AssertionError) as e:
     from contextlib import contextmanager
     import time
