@@ -94,7 +94,7 @@ class TestUtil:
                 cls._prev_count = (cls.cur_count, time.time())
 
 
-            logger.info("%d/%d discovered items \ndump count: %d; rate is %d per min\n total queue wait time", \
+            logger.info("%d/%d discovered items \ndump count: %d; rate is %d per min\n total queue wait time %d", \
                     cls.cur_count, cls.totsize ,cls.fileCounter, rate, queue_wait_time)
 
 

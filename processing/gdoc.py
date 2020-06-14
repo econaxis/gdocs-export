@@ -178,7 +178,7 @@ class GDoc():
             job_handle = executor.submit(download, url, self.headers)
             job_handle.add_done_callback(notify)
             await ev.wait()
-            if job_handle.result()
+            if job_handle.result():
                 revision_details = json.loads(job_handle.result()[5:])
 
         if not revision_details:
