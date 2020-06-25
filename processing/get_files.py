@@ -26,7 +26,7 @@ timeout = aiohttp.ClientTimeout(total=15)
 
 SEED_ID = "root"
 
-workerInstances = 4
+workerInstances = 3
 
 ACCEPTED_TYPES = "application/vnd.google-apps.document"
 
@@ -123,9 +123,15 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
                 logger.info("exception in callback", exc_info = exc)
                 raise exc
             try:
-                temp_docs[id] = temp_docs[id]._replace(last_revision_id = response["revisions"][-1]["id"])
+                last_id = response["revisions"][-1]["id"]
+                logger.info("Adding %s, last rev id: %d", temp_docs[id]["name"],last_id)
+                temp_docs[id] = temp_docs[id]._replace(last_revision_id = last_id)
+
                 if id not in tot_files:
                     files.put_nowait(temp_docs[id])
+                else:
+                    logger.info("Id already in tot_files?")
+                    breakpoint()
                 tot_files[id] = True
             except:
                 breakpoint()
@@ -152,47 +158,41 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
                 temp_docs[f.id]=f
                 
                 jobs_added += 1
-
-                idx = int(jobs_added / 10)
+                idx = int(jobs_added / 40)
                 if idx not in batch_job:
                     batch_job[idx] = TestUtil.drive.new_batch_http_request() 
 
-                batch_job[idx].add(TestUtil.drive.revisions().list(fileId = f.id, fields = "revisions(id)", pageSize = 1000), request_id = f.id,
-                        callback = last_rev_callback)
+                batch_job[idx].add(TestUtil.drive.revisions().list(fileId = f.id, fields = "revisions(id)", pageSize = 1000), request_id = f.id, callback = last_rev_callback)
 
 
         for jobs in batch_job.values():
-
             if endEvent.is_set():
                 break
-            i = 0
             while True:
                 while stop():
                     await asyncio.sleep(10)
-                i += 1
                 try:
                     jobs.execute()
-                    logger.info("Batch job execution succeeded, going to next job")
+                    logger.info("Batch job execution succeeded, going to next job %d total: %d", folders.qsize(), len(batch_job))
                     break
                 except Exception as e:
-                    logger.info("Batch job executio failed!")
-                    await asyncio.sleep(i*10)
+                    logger.info("Batch job execution failed!")
+                    await asyncio.sleep(15)
                     
 
-            
     collection_done.set()
     logger.info("getid return, len %d:%d", files.qsize(), len(TestUtil.files))
 
 
 async def shutdown_task(endEvent):
     await endEvent.wait()
-
     logger.info("sleeping  before shutting down")
     await asyncio.sleep(4)
     await shutdown()
     logger.info("shutting tasks done")
 
-#@profile
+
+
 async def getRevision(files,
                       session: aiohttp.ClientSession,
                       headers,

@@ -1,5 +1,4 @@
 import certifi
-import pycurl
 import time
 from io import BytesIO
 from pprint import pformat
@@ -28,8 +27,14 @@ Closure = namedtuple("Closure", ['parent', 'child', 'depth'])
 threads = 3
 
 
-lock = [Lock() for i in range(threads)]
-c = [pycurl.Curl() for i in range(threads)]
+try:
+    import pycurl
+    lock = [Lock() for i in range(threads)]
+    c = [pycurl.Curl() for i in range(threads)]
+except ImportError as e:
+    # TODO: use requests as backup when pycurl is unavailable e.g. in repl.it
+    raise e
+    # import requests
 
 
 #@profile
