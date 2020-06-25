@@ -26,7 +26,7 @@ timeout = aiohttp.ClientTimeout(total=15)
 
 SEED_ID = "root"
 
-workerInstances = 4
+workerInstances = 3
 
 ACCEPTED_TYPES = "application/vnd.google-apps.document"
 
@@ -172,27 +172,26 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
                 i += 1
                 try:
                     jobs.execute()
-                    logger.info("Batch job execution succeeded, going to next job")
+                    logger.info("Batch job execution succeeded, going to next job %d", folders.qsize())
                     break
                 except Exception as e:
-                    logger.info("Batch job executio failed!")
+                    logger.info("Batch job execution failed!")
                     await asyncio.sleep(i*10)
                     
 
-            
     collection_done.set()
     logger.info("getid return, len %d:%d", files.qsize(), len(TestUtil.files))
 
 
 async def shutdown_task(endEvent):
     await endEvent.wait()
-
     logger.info("sleeping  before shutting down")
     await asyncio.sleep(4)
     await shutdown()
     logger.info("shutting tasks done")
 
-#@profile
+
+
 async def getRevision(files,
                       session: aiohttp.ClientSession,
                       headers,
