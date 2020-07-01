@@ -1,7 +1,7 @@
 #!/bin/bash
 
 apt-get update
-apt-get install -y gcc libldap2-dev libsasl2-dev libssl-dev libcurl4-openssl-dev
+apt-get install -y gcc libldap2-dev libsasl2-dev libssl-dev libcurl4-openssl-dev python3-dev
 
 
 # apk add curl-dev libcurl curl openldap-dev 
