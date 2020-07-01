@@ -37,10 +37,12 @@ tot_files = {}
 
 collection_done = asyncio.Event()
 
+done_folders = {}
+
 async def getIdsWrapper(*args, **kwargs):
     try:
         await getIdsRecursive(*args, **kwargs)
-    except Exception as e:
+    except Exception:
         logger.exception("Exception!")
         await shutdown(asyncio.get_event_loop())
 
@@ -81,13 +83,20 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
             await asyncio.sleep(sleep_time)
 
         proc_file = await tryGetQueue(folders,
-                                      name="getIds",
                                       interval=5,
                                       repeatTimes=8,
                                       endEvent = endEvent)
-
         if (proc_file == -1):
             break
+
+
+        if proc_file.id in tot_files:
+            continue
+
+        tot_files[proc_file.id] = True
+
+        logger.info(f"Exploring folder {proc_file.name} fodlers size: {folders.qsize()}")
+
 
 
         #If "root" is used, then that is also accepted by the API
@@ -95,9 +104,14 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
         data["q"] = f"((mimeType='application/vnd.google-apps.folder' or mimeType= 'application/vnd.google-apps.document') and  \
                 trashed = False) and ('{proc_file.id}' in parents)"
 
-        # Enable shared drive finding
-        data["q"] = f"((mimeType='application/vnd.google-apps.folder' or mimeType= 'application/vnd.google-apps.document') and  \
-                trashed = False)"
+        # If enabled, pathing will not work but it will allow us for shared drives
+        shared_drive_debug = False
+        if shared_drive_debug:
+            # Enable shared drive finding
+            data["q"] = "((mimeType='application/vnd.google-apps.folder' or mimeType= 'application/vnd.google-apps.document') and  \
+                    trashed = False)"
+
+
         data["q"] = "({}) and modifiedTime > '2016-10-04T12:00:00'".format(data["q"])
         try:
             async with session.get(url=drive_url, params=data,
@@ -114,27 +128,26 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
 
         temp_docs = {}
 
-        batch_job = {0: TestUtil.drive.new_batch_http_request() }
+        batch_job = {}
         jobs_added = 0
 
 
+        added_files = 0
+
         def last_rev_callback(id, response, exc):
+            nonlocal added_files
             if exc:
                 logger.info("exception in callback", exc_info = exc)
                 raise exc
             try:
                 last_id = response["revisions"][-1]["id"]
-                logger.info("Adding %s, last rev id: %d", temp_docs[id]["name"],last_id)
+                logger.info("Adding %s, path: %s", temp_docs[id].name,temp_docs[id].path)
                 temp_docs[id] = temp_docs[id]._replace(last_revision_id = last_id)
+                files.put_nowait(temp_docs[id])
+            except Exception:
+                logger.exception("fdsa")
 
-                if id not in tot_files:
-                    files.put_nowait(temp_docs[id])
-                else:
-                    logger.info("Id already in tot_files?")
-                    breakpoint()
-                tot_files[id] = True
-            except:
-                breakpoint()
+            added_files = added_files + 1
 
         for resFile in resp["files"]:
             id = resFile["id"]
@@ -149,20 +162,24 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
                           last_revision_id = None)
 
             if (resFile["mimeType"] == "application/vnd.google-apps.folder"):
-                await folders.put(f)
+                if f.id not in tot_files:
+                    await folders.put(f)
             elif (resFile["mimeType"] == ACCEPTED_TYPES):
                 # First element id is not used for naming, only for api calls
                 if not resFile["capabilities"]["canReadRevisions"] or id in tot_files:
                     continue
 
                 temp_docs[f.id]=f
+                tot_files[id] = True
                 
                 jobs_added += 1
-                idx = int(jobs_added / 40)
+                idx = int(jobs_added / 20)
+
                 if idx not in batch_job:
                     batch_job[idx] = TestUtil.drive.new_batch_http_request() 
 
                 batch_job[idx].add(TestUtil.drive.revisions().list(fileId = f.id, fields = "revisions(id)", pageSize = 1000), request_id = f.id, callback = last_rev_callback)
+                logger.info(f"Adding to batch job: {f.name}")
 
 
         for jobs in batch_job.values():
@@ -173,10 +190,10 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
                     await asyncio.sleep(10)
                 try:
                     jobs.execute()
-                    logger.info("Batch job execution succeeded, going to next job %d total: %d", folders.qsize(), len(batch_job))
+                    logger.info("Batch job execution succeeded %d %d total: %d", added_files, folders.qsize(), files.qsize())
                     break
-                except Exception as e:
-                    logger.info("Batch job execution failed!")
+                except Exception:
+                    logger.exception("Batch job execution failed!")
                     await asyncio.sleep(15)
                     
 
@@ -202,15 +219,18 @@ async def getRevision(files,
     # Await random amount for more staggered requesting, and to allow queryDriveActivity
     # time to fill the files queue with jobs
 
+    collection_done_invalid = 0
+
     while files.empty() and not endEvent.is_set():
-        await asyncio.sleep(random.uniform(0, 6))
+        await asyncio.sleep(random.uniform(3,5))
 
     while not endEvent.is_set():
         proc_file = await tryGetQueue(files, name="getRevision", interval=10, repeatTimes = 3, endEvent = endEvent)
 
         if (proc_file == -1 ):
-            if not collection_done.is_set():
-                await asyncio.sleep(20)
+            if not collection_done.is_set() and collection_done_invalid < 1:
+                collection_done_invalid+=1
+                await asyncio.sleep(10)
                 continue
             else:
                 logger.warning('getRevision task exiting')
@@ -341,6 +361,6 @@ def loadFiles(USER_ID, _workingPath, fileId, _creds):
     # Writing data to SQL
     import processing.sql
     files =  TestUtil.dump_files()
-    processing.sql.start(USER_ID, files.files, upload=True)
+    processing.sql.start(USER_ID, files.files)
 
     logger.info("Program ended successfully for userid %s", USER_ID)

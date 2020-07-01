@@ -29,7 +29,6 @@ def start(gdoc_threads = None, workers = None, alt = False):
         creds = pickle.load(open(os.path.join(data_path , 'creds1.pickle'), 'rb'))
     else:
         creds = pickle.load(open(os.path.join(data_path , 'creds.pickle'), 'rb'))
-    SCOPE = ['https://www.googleapis.com/auth/drive']
     loadFiles(uid, data_path, fileid, creds)
 
 

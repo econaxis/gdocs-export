@@ -1,14 +1,11 @@
 import collections
 import os
 import ujson as json
-import random
 from googleapiclient.discovery import build
 from google.auth.transport.requests import Request
-from configlog import tracer
 from datetime import datetime
 import asyncio
 import time
-import pickle
 import logging
 
 Info = collections.namedtuple('Info', ['userid', 'files', 'extra'],
@@ -78,7 +75,6 @@ class TestUtil:
 
 
 
-    tracer.prof("print_size")
     @classmethod
     async def print_size(cls, files, endEvent):
         cls.files_queue = files
@@ -171,44 +167,3 @@ async def tryGetQueue(queue,
     return output
 
 
-#  async def adv_read(reader):
-#      import struct
-#      header = await reader.readexactly(9)
-#      header = struct.unpack('!Q?', header)
-#  
-#      to_pickle = header[1]
-#      length = header[0]
-#  
-#      data = []
-#  
-#      per_read = 5000
-#  
-#      while length > 0:
-#          try:
-#              data.append(await reader.readexactly(min(length, per_read)))
-#          except asyncio.IncompleteReadError as e:
-#              data.append(e.partial)
-#              length -= len(e.partial)
-#          else:
-#              length -= min(length, per_read)
-#  
-#      data = b"".join(data)
-#  
-#      if to_pickle:
-#          return pickle.loads(data)
-#      else:
-#          return data
-#  
-#  
-#  async def adv_write(writer, data, to_pickle=False):
-#      import struct
-#  
-#      if to_pickle:
-#          data = pickle.dumps(data)
-#  
-#      header = struct.pack('!Q?', len(data), to_pickle)
-#      writer.write(header)
-#      writer.write(data)
-#      await writer.drain()
-#  
-#      return

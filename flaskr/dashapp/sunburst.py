@@ -70,11 +70,12 @@ def sunburst():
             f""" The arrays of names ,values, children, parents are not of equal length: 
             names: {names}\n values: {values} \n children: {children} \n parents: {parents}\n """
 
-    return go.Figure(data=[
+    return go.Figure(data=
+        [
         go.Sunburst(ids=children,
                     labels=names,
                     parents=parents,
                     values=values,
                     branchvalues='remainder')
-    ],
-                     layout=dict(margin=dict(t=0, l=0, r=0, b=0)))
+        ],
+        layout=dict(margin=dict(t=0, l=0, r=0, b=0)))

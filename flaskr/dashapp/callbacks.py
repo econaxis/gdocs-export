@@ -25,21 +25,6 @@ flask.session = dict(userid='med')
 sessions_lock = threading.Lock()
 
 sel_lock = threading.Lock()
-"""
-def get_sel(val):
-    with shelve.open('selected_files', flag='r') as f:
-        #print(f["sl"], val)
-        return f["sl"][val]
-
-
-def add_sel(val):
-    with sel_lock:
-        with shelve.open('selected_files', flag='w') as f:
-            t = f["sl"]
-            t.append(val)
-            f["sl"] = t
-            return len(f["sl"]) - 1
-"""
 
 logger.info("DASH CALLBACKS IMPORTED")
 # Debug in place for flask.session
@@ -47,6 +32,12 @@ logger.info("DASH CALLBACKS IMPORTED")
 traces = []
 
 prev_bins = []
+
+
+early_ret = SimpleNamespace(adds=[],
+                            deletes=[],
+                            add_dates=[],
+                            delete_dates=[])
 
 
 def aggregate_dates(timestamps, aggregate_by):
@@ -83,15 +74,12 @@ def aggregate_dates(timestamps, aggregate_by):
 dir_lock = threading.Lock()
 
 
-#@lru_cache(maxsize=6)
 def query_db(files):
 
     logger.warning("query_db called")
 
-    logger.warning("userid: %s", flask.session["userid"])
 
     db = reload_engine(flask.session["userid"],
-                       download=True,
                        lock=sessions_lock)
 
     if files:
@@ -104,22 +92,21 @@ def query_db(files):
 
 
 def get_activity(files=None,
-                 smooth=True,
-                 window=20,
-                 num_bins=70,
                  x_limits=None,
                  aggregate_by='none',
-                 filter_func=bool,
-                 use_prev_bins=True):
+                 filter_func=None,
+                 use_prev_bins=True,
+                 window=20,
+                 num_bins=70):
+
+    #Returns list of adds/deletes/corresponding dates as a namedtuple
 
     from scipy.stats import binned_statistic
 
-    #Returns histogram of adds/deletes
+    if use_prev_bins and len(prev_bins):
+        # Use the previous bins (as a list) if we are allowed to.
+        num_bins = prev_bins
 
-    early_ret = SimpleNamespace(adds=[],
-                                deletes=[],
-                                add_dates=[],
-                                delete_dates=[])
 
     results = query_db(tuple(files) if files else None)
 
@@ -130,18 +117,18 @@ def get_activity(files=None,
     try:
         [adds1, deletes1, timestamps1] = map(list, zip(*results))
     except ValueError:
-        logger.exception("cannot get results")
+        logger.warning("cannot get results")
         return early_ret
 
-    #TODO: fix
-    for c, i in enumerate(timestamps1):
-        if filter_func(i):
-            timestamps.append(timestamps1[c])
-            adds.append(adds1[c])
-            deletes.append(-1 * deletes1[c])
+    if filter_func:
+        for c, i in enumerate(timestamps1):
+            if filter_func(i):
+                timestamps.append(timestamps1[c])
+                adds.append(adds1[c])
+                deletes.append(-1 * deletes1[c])
 
     if not timestamps:
-        print("early exit")
+        # No dates were returned in the filter_func
         return early_ret
 
     timestamps = aggregate_dates(timestamps=timestamps,
@@ -153,22 +140,13 @@ def get_activity(files=None,
     add_dates = timestamps[:-1]
     delete_dates = timestamps[:-1]
 
+
     if not x_limits and aggregate_by == 'none':
         x_limits = [timestamps.min(), timestamps.max()]
 
-    #print("x_limits, ", x_limits)
-    """
-    if use_prev_bins and prev_bins:
-        #Previous bins existing and we are allowed to use, but don't know if range fits?
-        step_size = prev_bins[1] - prev_bins[0] #Only if prev_bin length > 2
-        num_bins = np.arange(x_limits[0], x_limits[1], step_size)
-        print("num_bins, step_size: ",num_bins, step_size)
-    """
 
     global prev_bins
 
-    if use_prev_bins and len(prev_bins):
-        num_bins = prev_bins
 
     if x_limits:
         dbg_x = list(map(datetime.fromtimestamp, x_limits))
@@ -184,11 +162,12 @@ def get_activity(files=None,
         bins=num_bins,
         range=x_limits)
 
-    deletes, delete_dates, bin_number = binned_statistic(timestamps,
-                                                         deletes,
-                                                         'sum',
-                                                         bins=num_bins,
-                                                         range=x_limits)
+    deletes, delete_dates, bin_number = binned_statistic(
+        timestamps,
+        deletes,
+        'sum',
+        bins=num_bins,
+        range=x_limits)
 
     np.insert(adds, 0, 0)
     np.insert(add_dates, 0, add_dates[0] - 1 * 24 * 3600)
@@ -224,7 +203,6 @@ def apply_smoothing(data, window, poly_order=3, negative=False):
         data = [0 if x > 0 else x for x in data]
     else:
         data = [0 if x < 0 else x for x in data]
-
     return data
 
 
@@ -271,7 +249,6 @@ def get_traces(times,
     smoothing = not cumalative
 
     ret1 = get_activity(selectedFiles,
-                        smooth=smoothing,
                         num_bins=bin_slider_value,
                         x_limits=x_limits,
                         window=window_slider_value,
@@ -543,7 +520,7 @@ def register_callback(app):
         return
         #Use this to download db from azure
         userid = flask.session["userid"]
-        reload_engine(userid, download=True, lock = sessions_lock)
+        reload_engine(userid, lock = sessions_lock)
 
         logger.warning("done download db and crete connectoin")
 

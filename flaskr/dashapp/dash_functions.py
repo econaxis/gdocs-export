@@ -1,6 +1,5 @@
 # For use with dash app.py
 import flask
-from pprint import PrettyPrinter
 from processing.models import Files, Filename
 from processing.sql import reload_engine
 
@@ -11,13 +10,11 @@ logger = logging.getLogger(__name__)
 #Maps fileid to index, TODO: global variable fix
 idIndexMapper = {}
 
-#maps index to fileid
-namesList = [None] * 5000
-
-pprint = PrettyPrinter(indent=4).pprint
+#maps index of the list used in Dash figure to fileid
+namesList = [None] * 10000
 
 
-##@cache.memoize()
+
 def genOptList(userid):
 
     logger.info("userid: %s", flask.session["userid"])

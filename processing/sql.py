@@ -56,14 +56,11 @@ def az_upload_dbs(owner_id, from_file):
 
 
 def get_db_path(owner_id):
-    return os.path.join(hdatapath, f'dbs/{owner_id}.db')
+    return os.path.join(hdatapath, 'dbs', f'{owner_id}.db')
 
 
-def reload_engine(owner_id, create_new=False, download=False, lock=None):
+def reload_engine(owner_id, create_new=False, lock=None):
     global sessions
-
-    if not lock:
-        lock = sessions_lock
 
     if owner_id in sessions:
         logger.info("found old engine")
@@ -72,46 +69,40 @@ def reload_engine(owner_id, create_new=False, download=False, lock=None):
     if not az_driver:
         setup_azure()
 
-    with lock:
-        #Check if the DB file already exists; if yes, then we load it,
-        #else, we download it from AZ file storage
+    
+    #Check if the DB file already exists; if yes, then we load it,
+    #else, we download it from AZ file storage
 
-        sqlite_owner_id = get_db_path(owner_id)
-        #Only download if the file doesn't exist
-        if download and not os.path.isfile(sqlite_owner_id):
+    sqlite_owner_id = get_db_path(owner_id)
+
+    #Only download if the file doesn't exist
+    if not create_new:
+        if not os.path.isfile(sqlite_owner_id):
             az_download_dbs(owner_id, sqlite_owner_id)
             logger.info("Downloaded db!")
         if not os.path.isfile(sqlite_owner_id):
-            logger.warning(f"SQLITE doesn't exist! {owner_id}")
+            raise RuntimeError(f"SQLITE doesn't exist! {owner_id}")
 
-        #if not create_new and not os.owner_id.isfile(sqlite_owner_id):
-        #az_download_dbs(owner_id = owner_id, download_file = sqlite_owner_id)
+    ENGINE = sqlal.create_engine(f'sqlite:////{sqlite_owner_id}',
+                     connect_args=dict(check_same_thread=False))
 
-        logger.warning("RELOADING ENGINE")
+    try:
+        Base.metadata.create_all(bind=ENGINE)
+    except Exception as e:
+        logger.warning("Exception when trying to load database %s", sqlite_owner_id)
+        raise e
 
-        logger.info("Init DB Conn at %s", sqlite_owner_id)
+    v_scoped_session = scoped_session(sessionmaker(bind=ENGINE))
 
-        ENGINE = sqlal.create_engine(f'sqlite:////{sqlite_owner_id}',
-                                     echo=False,
-                                     connect_args=dict(check_same_thread=False))
+    logger.warning("set session for ownerid %s", owner_id)
+    sessions[owner_id] = v_scoped_session
 
-        try:
-            Base.metadata.create_all(bind=ENGINE)
-        except Exception as e:
-            logger.exception("Exception when trying to load database")
-            raise e
+    #Check that the database has at least some rows
+    #test_session = v_scoped_session()
+    #assert create_new or test_session.query(test_session.query(Files).exists()).scalar(), \
+            #"create_new is not true and the database does not have any rows"
 
-        v_scoped_session = scoped_session(sessionmaker(bind=ENGINE))
-
-        logger.warning("set session for ownerid %s", owner_id)
-        sessions[owner_id] = v_scoped_session
-
-        #Check that the database has at least some rows
-        #test_session = v_scoped_session()
-        #assert create_new or test_session.query(test_session.query(Files).exists()).scalar(), \
-                #"create_new is not true and the database does not have any rows"
-
-        return v_scoped_session
+    return v_scoped_session
 
 
 def db_connect(func):
@@ -150,55 +141,55 @@ def load_clos(file_data, fileid_obj_map, owner_id=None):
         closures.update(files.closure)
 
     for clos in closures:
-            if clos.parent[0] not in fileid_obj_map:
-                logger.debug("new element not found: %s", clos.parent[0])
+        if clos.parent[0] not in fileid_obj_map:
+            logger.debug("new element not found: %s", clos.parent[0])
 
-                fi = Files(fileId=clos.parent[0] + str(owner_id), isFile=False)
+            fi = Files(fileId=clos.parent[0] + str(owner_id), isFile=False)
 
-                fi.name = [Filename(files=fi, fileName=clos.parent[1])]
-                sess.add(fi)
-                fileid_obj_map[clos.parent[0]] = fi
+            fi.name = [Filename(files=fi, fileName=clos.parent[1])]
+            sess.add(fi)
+            fileid_obj_map[clos.parent[0]] = fi
 
-                sess.commit()
+            sess.commit()
 
-            if clos.child[0] not in fileid_obj_map:
-                logger.debug("new element not found: %s", clos.child[0])
+        if clos.child[0] not in fileid_obj_map:
+            logger.debug("new element not found: %s", clos.child[0])
 
-                fi = Files(fileId=clos.child[0] + str(owner_id), isFile=False)
+            fi = Files(fileId=clos.child[0] + str(owner_id), isFile=False)
 
-                fi.name = [Filename(files=fi, fileName=clos.child[1])]
-                sess.add(fi)
-                fileid_obj_map[clos.child[0]] = fi
+            fi.name = [Filename(files=fi, fileName=clos.child[1])]
+            sess.add(fi)
+            fileid_obj_map[clos.child[0]] = fi
 
-                sess.commit()
-            try:
-                sess.add(fileid_obj_map[clos.child[0]])
-                sess.add(fileid_obj_map[clos.parent[0]])
+            sess.commit()
+        try:
+            sess.add(fileid_obj_map[clos.child[0]])
+            sess.add(fileid_obj_map[clos.parent[0]])
 
-                child_id = fileid_obj_map[clos.child[0]].id
-                parent_id = fileid_obj_map[clos.parent[0]].id
+            child_id = fileid_obj_map[clos.child[0]].id
+            parent_id = fileid_obj_map[clos.parent[0]].id
 
-                sess.commit()
-                sess.expunge_all()
-            except sqlal.exc.InvalidRequestError as e:
-                logger.exception("clos %s", '+' * 30)
-                #breakpoint()
-                raise e
+            sess.commit()
+            sess.expunge_all()
+        except sqlal.exc.InvalidRequestError as e:
+            logger.exception("clos %s", '+' * 30)
+            #breakpoint()
+            raise e
+        else:
+            if not sess.query(Closure).filter_by(parent=parent_id,
+                                                 child=child_id,
+                                                 depth=clos.depth).scalar():
+                cls = Closure(parent=parent_id,
+                              child=child_id,
+                              depth=clos.depth)
+
+                sess.add(cls)
             else:
-                if not sess.query(Closure).filter_by(parent=parent_id,
-                                                     child=child_id,
-                                                     depth=clos.depth).scalar():
-                    cls = Closure(parent=parent_id,
-                                  child=child_id,
-                                  depth=clos.depth)
-
-                    sess.add(cls)
-                else:
-                    logger.debug("Duplicate closure found, %f %f %f", parent_id, child_id, clos.depth)
+                logger.debug("Duplicate closure found, %f %f %f", parent_id, child_id, clos.depth)
 
 
 @db_connect
-def load_from_dict(lt_files, dict_lock, owner_id=None):
+def load_from_dict(lt_files,  owner_id=None):
     assert owner_id != None, "Ownerid is none err"
 
     sess = reload_engine(owner_id)()
@@ -236,26 +227,22 @@ def start(*args, **kwargs):
         raise e
 
 
-def insert_sql(userid, files, upload=False):
+def insert_sql(userid, files):
+    debug = True
+    if debug:
+        import pickle
+        pickle.dump(files, open('files', 'wb'))
 
-    import pickle
-    pickle.dump(files, open('files', 'wb'))
-
-    logger.debug("Starting sql for userid %s", userid)
 
 
-    from processing.sql_owner import OwnerManager
-    owner_manager = OwnerManager()
-    fileid_obj_map, dict_lock = owner_manager(owner_id=userid)
+    logger.info("Starting sql for userid %s", userid)
+
+    fileid_obj_map = {}
 
     sess = reload_engine(userid, create_new=True)()
 
-    logger.info("Checked out owner object, fileid dict, and lock")
-
     lt_files = Queue()
-    #fileid_obj_map maps gdrive fileids to file objects defined in models
 
-    #FILES
     for f in files:
         fileId = f.fileId
 
@@ -266,33 +253,36 @@ def insert_sql(userid, files, upload=False):
             logger.warning("Duplicated file id found: %s", fileId)
             continue
 
-        weighted_avg = 0
-        count_avg = 0
+        # Calculate the weighted average date by number of changes
+
+        weighted_sum = 0
+        counts = 0
 
         for o in f.operations:
-            weighted_avg += o.date * (o.content[0] + o.content[1])
-            count_avg += o.content[0] + o.content[1]
+            weighted_sum += o.date * (o.content[0] + o.content[1])
+            counts += o.content[0] + o.content[1]
 
-        if not count_avg or not weighted_avg:
+        if not counts or not weighted_sum:
             #Go to next file, this file has no data, and avoid division by zero error
             logger.warning("File content empty: %s, %s, operations: %s", f.name,
                            f.fileId, f.operations)
-            weighted_avg = None
-        else:
-            weighted_avg = float(weighted_avg / count_avg)
-            weighted_avg = datetime.fromtimestamp(weighted_avg)
+            weighted_sum = None
+            continue
+
+
+        weighted_sum = float(weighted_sum / counts)
+        weighted_sum = datetime.fromtimestamp(weighted_sum)
 
         file_obj = Files(fileId=f.fileId + ":" + token +
                          secrets.token_urlsafe(3),
-                         lastModDate=weighted_avg,
+                         lastModDate=weighted_sum,
                          isFile=True)
 
         file_name = Filename(files=file_obj, fileName=f.name)
 
         file_obj.name = [file_name]
 
-        with dict_lock:
-            fileid_obj_map[fileId] = file_obj
+        fileid_obj_map[fileId] = file_obj
 
         lt_files.put((file_obj, f))
 
@@ -301,41 +291,22 @@ def insert_sql(userid, files, upload=False):
                 SZ_FILES)
 
     if files:
-        p = [
-            threading.Thread(target=load_from_dict,
-                             args=(lt_files, dict_lock),
-                             kwargs=dict(owner_id=userid)) for i in range(1)
-        ]
-        for x in p:
-            x.start()
-        for x in p:
-            logger.info("joining threads load_from_dict")
-            x.join()
+        load_from_dict(lt_files,  owner_id = userid)
 
-    logger.info("starting load closures")
 
-    with dict_lock:
-        load_clos(files, fileid_obj_map, owner_id=userid)
+    load_clos(files, fileid_obj_map, owner_id=userid)
 
     sess.commit()
     logger.info("Done all for owner_id %s; processed files: %d", userid,
                    SZ_FILES)
 
-    if upload:
-        db_path = get_db_path(userid)
-        az_upload_dbs(owner_id=userid, from_file=db_path)
-        logger.warning("Uploaded db at %s", db_path)
+    db_path = get_db_path(userid)
+    az_upload_dbs(owner_id=userid, from_file=db_path)
+    logger.warning("Uploaded db at %s", db_path)
 
     return
-    """
-
-    files = pickle.load(open('/home/henry/pydocs/data/527e4afc-4598-400f-8536-afa5324f0ba4/1.pathed', 'rb'))
-    userid = datetime.now().__str__()
-
-    start(userid = userid, files = files)
-    """
 
 if __name__ == "__main__":
     import pickle
     files = pickle.load(open('files', 'rb'))
-    start('sdfa', files, True)
+    start('sdfa', files)

@@ -176,7 +176,6 @@ class GDoc():
         def notify(fds):
             ev.set()
 
-        failed_counter = 0
          
         revision_details = None
         for _ in range(3):
