@@ -145,7 +145,6 @@ def get_activity(files=None,
         x_limits = [timestamps.min(), timestamps.max()]
 
 
-    global prev_bins
 
 
     if x_limits:
