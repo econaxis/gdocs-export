@@ -69,7 +69,7 @@ def reload_engine(owner_id, create_new=False, lock=None):
     if not az_driver:
         setup_azure()
 
-    
+
     #Check if the DB file already exists; if yes, then we load it,
     #else, we download it from AZ file storage
 
@@ -80,12 +80,16 @@ def reload_engine(owner_id, create_new=False, lock=None):
         if not os.path.isfile(sqlite_owner_id):
             az_download_dbs(owner_id, sqlite_owner_id)
             logger.info("Downloaded db!")
-        if not os.path.isfile(sqlite_owner_id):
-            raise RuntimeError(f"SQLITE doesn't exist! {owner_id}")
+            if not os.path.isfile(sqlite_owner_id):
+                raise RuntimeError(f"SQLITE doesn't exist! {owner_id}")
 
-    ENGINE = sqlal.create_engine(f'sqlite:////{sqlite_owner_id}',
+    if(os.name=='nt'):
+        cnxn_string = f'sqlite:///{sqlite_owner_id}';
+    else:
+        cnxn_string = f'sqlite:////{sqlite_owner_id}';
+
+    ENGINE = sqlal.create_engine(cnxn_string,
                      connect_args=dict(check_same_thread=False))
-
     try:
         Base.metadata.create_all(bind=ENGINE)
     except Exception as e:

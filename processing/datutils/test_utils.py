@@ -16,14 +16,13 @@ logger = logging.getLogger(__name__)
 queue_wait_time = 0
 
 class TestUtil:
-
     totsize = 0
     cur_count = 0
     fileCounter = 0
     creds = None
     headers = {}
     files = []
-    MAX_FILES = int(os.environ.get("MAX_FILES", 10))
+    MAX_FILES = int(os.environ.get("MAX_FILES", 10000))
     userid = None
     workingPath = None
     drive = None
@@ -81,7 +80,7 @@ class TestUtil:
 
         while not endEvent.is_set():
             cls.gcollect()
-            
+
             cls.calc_totsize()
 
             diff_time = time.time() - cls._prev_count[1]
@@ -147,7 +146,6 @@ async def tryGetQueue(queue,
                       interval: float = 3,
                       name: str = "",
                       endEvent = None):
-    global queue_wait_time
     output = None
     timesWaited = 0
     while (output == None):

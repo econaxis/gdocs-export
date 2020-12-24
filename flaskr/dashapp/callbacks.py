@@ -4,11 +4,12 @@ import logging
 from processing.sql import reload_engine
 from datetime import datetime
 import plotly.graph_objects as go
-from dash.dependencies import Input, Output
+from dash.dependencies import Input, Output, State
 from flaskr.dashapp.dash_functions import namesList
 import flask
 import numpy as np
 from processing.models import Dates, Files
+from functools import partial
 
 logger = logging.getLogger(__name__)
 
@@ -96,8 +97,8 @@ def get_activity(files=None,
                  aggregate_by='none',
                  filter_func=None,
                  use_prev_bins=True,
-                 window=20,
-                 num_bins=70):
+                 window=5,
+                 num_bins=50):
 
     #Returns list of adds/deletes/corresponding dates as a namedtuple
 
@@ -290,7 +291,6 @@ def register_callback(app):
         logger.info(sunburst_figure)
         return sunburst_figure
 
-    """
 
     @app.callback(
         [Output("fList", "figure"),
@@ -346,7 +346,7 @@ def register_callback(app):
 
                 recalc_all = True
                 prev_bins = []
-            elif prop_id == 'fList.selectedData': 
+            elif prop_id == 'fList.selectedData':
                 #Only here can we add new traces
                 only_smoothen = False
                 hist_figure["layout"]["xaxis"]["autorange"]=True
@@ -407,10 +407,10 @@ def register_callback(app):
             hist_figure["data"][-2:] = [add_trace, delete_trace]
         elif times in {'none', None}:
             #Reconstruct the graph and set these as new traces, when times is not defined,
-            #Stack mode is not good with an unlimited time range 
+            #Stack mode is not good with an unlimited time range
             hist_figure["data"] = [add_trace, delete_trace]
         else:
-            #Add two new traces, only if the aggregate by is defined 
+            #Add two new traces, only if the aggregate by is defined
             hist_figure["data"].extend([add_trace, delete_trace])
 
 
@@ -430,11 +430,10 @@ def register_callback(app):
         State('day-all', 'figure')
     ])
     def get_all(_filler, year_fig, week_fig, day_fig):
-        return
 
         logger.warning("getting yearly traces")
 
-        #On loading, dash calls callbacks with None values. We want to filter this out to 
+        #On loading, dash calls callbacks with None values. We want to filter this out to
         #avoid duplicate calls to this function
         if not _filler:
             return year_fig, week_fig, day_fig
@@ -525,7 +524,6 @@ def register_callback(app):
 
         return genOptList(flask.session["userid"])
 
-    """
 
 
 def betw(_min, _max, val):

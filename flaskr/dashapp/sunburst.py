@@ -14,7 +14,7 @@ def sunburst():
     #Queries DB to get the parent of each file
     #Returns go.Figure with Sunburst component
 
-    db = reload_engine(flask.session["userid"], download=True)
+    db = reload_engine(flask.session["userid"])
 
     #Generate two aliases of the model Filename
     fn1, fn2 = aliased(Filename), aliased(Filename)
@@ -67,7 +67,7 @@ def sunburst():
     values.append(0)
 
     assert all(x==len(names) for x in [len(values), len(children), len(parents)]), \
-            f""" The arrays of names ,values, children, parents are not of equal length: 
+            f""" The arrays of names ,values, children, parents are not of equal length:
             names: {names}\n values: {values} \n children: {children} \n parents: {parents}\n """
 
     return go.Figure(data=

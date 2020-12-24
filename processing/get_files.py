@@ -95,7 +95,7 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
 
         tot_files[proc_file.id] = True
 
-        logger.info(f"Exploring folder {proc_file.name} fodlers size: {folders.qsize()}")
+        logger.info(f"Exploring folder {proc_file.name} folders size: {folders.qsize()}")
 
 
 
@@ -171,12 +171,12 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
 
                 temp_docs[f.id]=f
                 tot_files[id] = True
-                
+
                 jobs_added += 1
                 idx = int(jobs_added / 20)
 
                 if idx not in batch_job:
-                    batch_job[idx] = TestUtil.drive.new_batch_http_request() 
+                    batch_job[idx] = TestUtil.drive.new_batch_http_request()
 
                 batch_job[idx].add(TestUtil.drive.revisions().list(fileId = f.id, fields = "revisions(id)", pageSize = 1000), request_id = f.id, callback = last_rev_callback)
                 logger.info(f"Adding to batch job: {f.name}")
@@ -195,7 +195,7 @@ async def getIdsRecursive(drive_url, folders: asyncio.Queue,
                 except Exception:
                     logger.exception("Batch job execution failed!")
                     await asyncio.sleep(15)
-                    
+
 
     collection_done.set()
     logger.info("getid return, len %d:%d", files.qsize(), len(TestUtil.files))
