@@ -21,3 +21,5 @@ profile
 
 data/logs/**
 data/dbs/**
+*.pickle
+*.json
