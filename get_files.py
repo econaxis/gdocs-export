@@ -11,6 +11,8 @@ from requests.packages.urllib3.util.retry import Retry
 
 from datetime import datetime
 
+import sys
+
 # Replace here with your file ID
 GDOCS_FILE_ID = "1nOVrSDsk_kJG9u6SCvVlE6cLfRmGsAmHP2b2QjtsJh0"
 
@@ -42,7 +44,9 @@ def download_operations(file_id, token):
     revision_response = http.get(url=revision_data_url.format(file_id=file_id, end=last_rev_id),
                                  headers=auth_header).text[5:]
     revision_response = json.loads(revision_response)
+    return revision_response
 
+def process_operations(revision_response):
     operations = []
 
     for x in revision_response['changelog']:
@@ -88,17 +92,23 @@ def export_csv(name, operations):
 
 
 if __name__ == "__main__":
-    try:
-        creds = pickle.load(open("data/creds2.pickle", "rb"))
-    except FileNotFoundError:
-        creds = auth.run_auth_flow()
-        pickle.dump(creds, open('data/creds2.pickle', 'wb'))
-    if not creds or not creds.valid:
-        if creds and creds.expired and creds.refresh_token:
-            creds.refresh(Request())
-        else:
-            raise RuntimeError("creds not valid")
-    operations = download_operations(GDOCS_FILE_ID, creds.token)
+    if len(sys.argv) == 2:
+        with open(sys.argv[1], "r") as f:
+            revision_response_text = f.read()[5:]
+            revision_response = json.load(revision_response_text)
+    elif len(sys.argv) == 1:
+        try:
+            creds = pickle.load(open("data/creds2.pickle", "rb"))
+        except FileNotFoundError:
+            creds = auth.run_auth_flow()
+            pickle.dump(creds, open('data/creds2.pickle', 'wb'))
+        if not creds or not creds.valid:
+            if creds and creds.expired and creds.refresh_token:
+                creds.refresh(Request())
+            else:
+                raise RuntimeError("creds not valid")
+        revision_response = download_operations(GDOCS_FILE_ID, creds.token)
+    operations = process_operations(revision_response)
     export_csv('operations.csv', operations)
     print(operations[-1]["cur_string"])
     print(len(operations))
