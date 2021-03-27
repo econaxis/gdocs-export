@@ -4,3 +4,4 @@ drun.sh
 dockerbuild.sh
 __pycache_
 **/__pycache__
+.git

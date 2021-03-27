@@ -15,6 +15,7 @@ import sys
 
 # Replace here with your file ID
 GDOCS_FILE_ID = "1nOVrSDsk_kJG9u6SCvVlE6cLfRmGsAmHP2b2QjtsJh0"
+OAUTH_TOKEN = "ya29.a0AfH6SMAwdi_JiAq--Pum6sXhwjlu-jv-gOQcN3qNtxinqlFMbmz8OajCjZepGTRlMXlSIR0IO66BthPQpR5YA-VhV2eQQy5su_T9n8IPKdMZ2Hf3OnEX5nXEGfdmWbZXHS9Gp5Qmnp4xCyIzq6rl_PfNDyrW"
 
 retry_strategy = Retry(
     total=1,
@@ -66,7 +67,7 @@ def process_operations(revision_response):
 
         if content:
             operations.append(
-                dict(date=datetime.utcfromtimestamp(x[1] / 1e3), content=content, index=index, type=x[0]['ty']))
+                dict(date=x[1] / 1e3, content=content, index=index, type=x[0]['ty']))
 
     operations = sorted(operations, key=lambda k: k['date'])
 
@@ -77,8 +78,9 @@ def process_operations(revision_response):
             cur_string[x["index"]:x["index"]] = char_content
         elif x["type"] == "ds":
             cur_string[x["index"][0]:x["index"][1]] = []
-        x["cur_string"] = ''.join(cur_string)
+        # x["cur_string"] = ''.join(cur_string)
         x["word_count"] = cur_string.count(" ")
+        x["cur_string"] = ''
     return operations
 
 
@@ -91,24 +93,33 @@ def export_csv(name, operations):
             csvwriter.writerow(x)
 
 
+def process_file(id, oauth_token):
+    revision_response = download_operations(id, oauth_token)
+    operations = process_operations(revision_response)
+    return operations
+    json.dump(operations, open('../gdocs-website/static/test_data.json', 'w'))
+
 if __name__ == "__main__":
-    if len(sys.argv) == 2:
-        with open(sys.argv[1], "r") as f:
-            revision_response_text = f.read()[5:]
-            revision_response = json.load(revision_response_text)
-    elif len(sys.argv) == 1:
-        try:
-            creds = pickle.load(open("data/creds2.pickle", "rb"))
-        except FileNotFoundError:
-            creds = auth.run_auth_flow()
-            pickle.dump(creds, open('data/creds2.pickle', 'wb'))
-        if not creds or not creds.valid:
-            if creds and creds.expired and creds.refresh_token:
-                creds.refresh(Request())
-            else:
-                raise RuntimeError("creds not valid")
-        revision_response = download_operations(GDOCS_FILE_ID, creds.token)
+#
+#     if len(sys.argv) == 2:
+#         with open(sys.argv[1], "r") as f:
+#             revision_response_text = f.read()[5:]
+#             revision_response = json.load(revision_response_text)
+#     elif len(sys.argv) == 1:
+#         try:
+#             creds = pickle.load(open("data/creds2.pickle", "rb"))
+#         except FileNotFoundError:
+#             creds = auth.run_auth_flow()
+#             pickle.dump(creds, open('data/creds_mlreadonly.pickle', 'wb'))
+#         if not creds or not creds.valid:
+#             if creds and creds.expired and creds.refresh_token:
+#                 creds.refresh(Request())
+#             else:
+#                 raise RuntimeError("creds not valid")
+#         revision_response = download_operations(GDOCS_FILE_ID, creds.token)
+
+    revision_response = download_operations(GDOCS_FILE_ID, OAUTH_TOKEN)
     operations = process_operations(revision_response)
     export_csv('operations.csv', operations)
     print(operations[-1]["cur_string"])
-    print(len(operations))
+    json.dump(operations, open('../gdocs-website/static/test_data.json', 'w'))

@@ -1,20 +1,11 @@
-FROM python:3.8.2-slim AS compile
+FROM python:3.8.5-slim-buster
 
-COPY ./installation ./installation
+COPY requirements.txt requirements.txt
+RUN pip install --upgrade pip && \
+    pip install -r requirements.txt
 
-RUN chmod +x installation/install.sh && \
-    ./installation/install.sh && \
-    echo "Installation done!"
-
-FROM python:3.8.2-slim AS run
-COPY --from=compile /root/.local /root/.local
-COPY --from=compile /usr /usr
-COPY --from=compile /var /var
-COPY --from=compile /lib /lib
-
-WORKDIR /app/
-ENV PATH=/root/.local/bin:$PATH
-
+WORKDIR /app
 COPY . .
-
-ENTRYPOINT ["./boot.sh"]
+ENV FLASK_APP flask_api.py
+ENV FLASK_ENV development
+ENTRYPOINT ["flask", "run", "-p", "80", "--host=0.0.0.0"]

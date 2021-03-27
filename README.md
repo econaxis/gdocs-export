@@ -25,7 +25,7 @@ End revision number tells the API from what range (start to end) to load the rev
 
 The easiest way is to test numbers at increasing intervals. Ideally, we'd want to extract the longest range of revisions (from document creation to the present time), so test end revision numbers in increasing intervals 50, 100, 500, 1000, 2000, 3000, 5000 until there's an error ("Sorry, unable to open the file at present.  Please check the address and try again.").
 
-This means we've reached the revision limit for that particular document. Decrease the end revision number until you a file download ("json.txt" file)
+This means we've reached the revision limit for that particular document. Decrease the end revision number until you see a file download ("json.txt" file)
 
 This "json.txt" file contains all the revision history of a Google Docs.
 
