@@ -1,8 +1,10 @@
 import ujson as json
 import flask
+from flask_cors import CORS
 import get_files
 
 app = flask.Flask(__name__)
+CORS(app)
 # Get the data for specific user id
 
 def get_word_counts(session_id):
@@ -27,9 +29,4 @@ def start_processing_file():
 
     return json.dumps(operations)
 
-
-@app.after_request
-def after_request_cors(response):
-    response.headers['Access-Control-Allow-Origin'] = '*'
-    return response
 
