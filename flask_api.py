@@ -26,3 +26,10 @@ def start_processing_file():
     operations = get_files.process_file(request_parameters['file_id'], request_parameters['oauth_token'])
 
     return json.dumps(operations)
+
+
+@app.after_request
+def after_request_cors(response):
+    response.headers['Access-Control-Allow-Origin'] = '*'
+    return response
+
