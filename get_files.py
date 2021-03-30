@@ -1,17 +1,14 @@
 import requests
-import auth
+
 import csv
-import pickle
+
 import ujson as json
 
 from requests.adapters import HTTPAdapter
-from google.auth.transport.requests import Request
+
 
 from requests.packages.urllib3.util.retry import Retry
 
-from datetime import datetime
-
-import sys
 
 # Replace here with your file ID
 GDOCS_FILE_ID = "1nOVrSDsk_kJG9u6SCvVlE6cLfRmGsAmHP2b2QjtsJh0"
@@ -59,15 +56,15 @@ def process_operations(revision_response):
                 revision_response['changelog'].append([i, x[1]])
             continue
 
+        content = None
         if x[0]['ty'] == 'is':
             content = x[0]['s']
             index = x[0]['ibi'] - 1
         elif x[0]['ty'] == 'ds':
             index = [x[0]['si'], x[0]['ei'] + 1]
 
-        if content:
-            operations.append(
-                dict(date=x[1] / 1e3, content=content, index=index, type=x[0]['ty']))
+        operations.append(
+            dict(date=x[1] / 1e3, content=content, index=index, type=x[0]['ty']))
 
     operations = sorted(operations, key=lambda k: k['date'])
 
