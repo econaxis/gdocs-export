@@ -89,6 +89,7 @@ def build_strings_generator(operations):
         x["word_count"] = (
                 cur_string[last_count["index"]:].count(" ") + last_count["count"]
         )
+        x.pop('content')
 
         last_count.update({"index": len(cur_string) - 1, "count": x["word_count"]})
 
@@ -135,7 +136,7 @@ def write_zip(name):
     with zipfile.ZipFile(
             f"data/{name}.csv.zip", "w", compression=zipfile.ZIP_LZMA
     ) as zip:
-        zip.write(f"data/{name}.csv")
+        zip.write(f"{name}.csv")
     return f"{name}.csv.zip"
 
 
