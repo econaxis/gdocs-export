@@ -11,7 +11,6 @@ import os
 
 # Replace here with your file ID
 GDOCS_FILE_ID = "1nOVrSDsk_kJG9u6SCvVlE6cLfRmGsAmHP2b2QjtsJh0"
-OAUTH_TOKEN = os.environ["DEFAULT_OAUTH_TOKEN"]
 
 retry_strategy = Retry(
     total=3,
