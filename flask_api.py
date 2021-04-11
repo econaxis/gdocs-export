@@ -6,7 +6,7 @@ import get_files
 from datetime import datetime
 
 app = flask.Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}})
+CORS(app, resources={r"/*": {"origins": "*"}}, allow_headers = 'user-id')
 SERVER_START = datetime.now()
 
 
@@ -46,11 +46,19 @@ def start_processing_file():
     return response
 
 
-@app.route("/downloadcsv", methods=["POST"])
+@app.route("/downloadcsv", methods=["POST", "GET"])
 def download_zipped_csv():
-    if not flask.request.json or "user-id" not in flask.request.json:
-        return "user-id must be specified in the JSON request body"
-    user_id = flask.request.json["user-id"]
+    user_id = None
+    if flask.request.method == 'POST':
+        if not flask.request.json or "user-id" not in flask.request.json:
+            return "User id must be present in request body"
+        else:
+            user_id = flask.request.json["user-id"]
+    elif flask.request.method == 'GET':
+        if flask.request.args.get('user-id'):
+            user_id = flask.request.args.get('user-id')
+        else:
+            return "User id not present in URL params"
     return flask.send_from_directory(
         app.root_path + "/data", get_files.write_zip(user_id), as_attachment=True
     )
