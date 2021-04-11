@@ -9,8 +9,6 @@ from requests.adapters import HTTPAdapter
 from requests.packages.urllib3.util.retry import Retry
 import os
 
-# Replace here with your file ID
-GDOCS_FILE_ID = "1nOVrSDsk_kJG9u6SCvVlE6cLfRmGsAmHP2b2QjtsJh0"
 
 retry_strategy = Retry(
     total=3,
@@ -85,11 +83,11 @@ def build_strings_generator(operations):
             char_content = list(x["content"])
             cur_string[x["index"]: x["index"]] = char_content
         elif x["type"] == "ds":
+            x["content"] = "".join(cur_string[x["index"][0]: x["index"][1]]) 
             cur_string[x["index"][0]: x["index"][1]] = []
         x["word_count"] = (
-                cur_string[last_count["index"]:].count(" ") + last_count["count"]
+                cur_string[last_count["index"]:].count(" ")  + cur_string[last_count["index"]:].count("\n") + last_count["count"]
         )
-        x.pop('content')
 
         last_count.update({"index": len(cur_string) - 1, "count": x["word_count"]})
 
@@ -136,7 +134,7 @@ def write_zip(name):
     with zipfile.ZipFile(
             f"data/{name}.csv.zip", "w", compression=zipfile.ZIP_LZMA
     ) as zip:
-        zip.write(f"{name}.csv")
+        zip.write(f"data/{name}.csv", arcname = f"{name}.csv")
     return f"{name}.csv.zip"
 
 
@@ -148,13 +146,18 @@ def process_file(id, oauth_token):
 
 
 def default_process_file():
+    return json.load(open('data/default_data.txt', 'r'))
+
+def main_test():
     import pickle
     from google.auth.transport.requests import Request
-
-    creds = pickle.load(open("creds2.pickle", "rb"))
-    creds.refresh(Request())
-    return process_file(GDOCS_FILE_ID, creds.token)
-
+    token = pickle.load(open('creds2.pickle', 'rb'))
+    token.refresh(Request())
+    id = "127N5XfCjm2LLovl1l1ODxglo4HOatv_ox9qFHA-WP7I"
+    data = process_file(id, token.token)
+    json.dump(data, open('data/test.json', 'w'))
+    print(data)
 
 if __name__ == "__main__":
-    default_process_file()
+    
+    main_test()
