@@ -62,7 +62,7 @@ def process_operations(revision_response):
             content = x[0]["s"]
             index = x[0]["ibi"] - 1
         elif x[0]["ty"] == "ds":
-            index = [x[0]["si"], x[0]["ei"] + 1]
+            index = [x[0]["si"] - 1, x[0]["ei"]]
 
         operations.append(
             dict(date=x[1] / 1e3, content=content, index=index, type=x[0]["ty"])
@@ -81,26 +81,14 @@ def build_strings_generator(operations):
         yielded_row = {}
         if x["type"] == "is":
             char_content = list(x["content"])
-            cur_string[x["index"]: x["index"]] = char_content
+            cur_string[x["index"] : x["index"]] = char_content
         elif x["type"] == "ds":
-            x["content"] = "".join(cur_string[x["index"][0]: x["index"][1]]) 
-            cur_string[x["index"][0]: x["index"][1]] = []
-        x["word_count"] = (
-                cur_string[last_count["index"]:].count(" ")  + cur_string[last_count["index"]:].count("\n") + last_count["count"]
-        )
-
-        last_count.update({"index": len(cur_string) - 1, "count": x["word_count"]})
+            x["content"] = "".join(cur_string[x["index"][0] : x["index"][1]])
+            cur_string[x["index"][0] : x["index"][1]] = []
+        x["word_count"] = cur_string.count("\n") + cur_string.count(" ")
 
         yielded_row["word_count"] = x["word_count"]
-        yielded_row["cur_string"] = join_cache["str"] + "".join(
-            cur_string[join_cache["index"]:]
-        )
-        join_cache.update(
-            {
-                "index": len(yielded_row["cur_string"]) - 1,
-                "str": yielded_row["cur_string"],
-            }
-        )
+        yielded_row["cur_string"] = "".join(cur_string)
 
         yielded_row["date"] = str(datetime.fromtimestamp(x["date"]))
 
@@ -132,9 +120,9 @@ def write_zip(name):
     import zipfile
 
     with zipfile.ZipFile(
-            f"data/{name}.csv.zip", "w", compression=zipfile.ZIP_LZMA
+        f"data/{name}.csv.zip", "w", compression=zipfile.ZIP_LZMA
     ) as zip:
-        zip.write(f"data/{name}.csv", arcname = f"{name}.csv")
+        zip.write(f"data/{name}.csv", arcname=f"{name}.csv")
     return f"{name}.csv.zip"
 
 
@@ -146,18 +134,21 @@ def process_file(id, oauth_token):
 
 
 def default_process_file():
-    return json.load(open('data/default_data.txt', 'r'))
+    return json.load(open("data/default_data.txt", "r"))
+
 
 def main_test():
     import pickle
     from google.auth.transport.requests import Request
-    token = pickle.load(open('creds2.pickle', 'rb'))
+
+    token = pickle.load(open("creds2.pickle", "rb"))
     token.refresh(Request())
-    id = "127N5XfCjm2LLovl1l1ODxglo4HOatv_ox9qFHA-WP7I"
-    data = process_file(id, token.token)
-    json.dump(data, open('data/test.json', 'w'))
+    id = "1nOVrSDsk_kJG9u6SCvVlE6cLfRmGsAmHP2b2QjtsJh0"
+    id_abc = "127N5XfCjm2LLovl1l1ODxglo4HOatv_ox9qFHA-WP7I"
+    data = process_file(id_abc, token.token)
+    json.dump(data, open("data/test.json", "w"))
     print(data)
 
+
 if __name__ == "__main__":
-    
     main_test()
