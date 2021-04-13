@@ -116,6 +116,28 @@ def build_strings(name, operations):
                 multi_row_chunk.clear()
 
 
+def optimize_operations(operations):
+    index = 0
+    last_time = operations[0]["date"]
+    while index < len(operations) -1:
+        cur_op = operations[index]
+        next_op = operations[index + 1]
+        if (
+            next_op["type"] == cur_op["type"]
+            and next_op["date"] - cur_op["date"] < 10 * 1000
+            and cur_op["date"] - last_time < 30*1000
+        ):
+            if (
+                cur_op["type"] == "is"
+                and cur_op["index"] + len(cur_op["content"]) == next_op["index"]
+            ):
+                cur_op["content"] += next_op["content"]
+                operations.pop(index+1)
+                index-=1
+        else:
+            last_time = cur_op["date"]
+        index+=1
+
 def write_zip(name):
     import zipfile
 
@@ -129,6 +151,7 @@ def write_zip(name):
 def process_file(id, oauth_token):
     revision_response = download_operations(id, oauth_token)
     operations = process_operations(revision_response)
+    optimize_operations(operations)
     build_strings(f"{id}.csv", operations)
     return operations
 
@@ -145,7 +168,7 @@ def main_test():
     token.refresh(Request())
     id = "1nOVrSDsk_kJG9u6SCvVlE6cLfRmGsAmHP2b2QjtsJh0"
     id_abc = "127N5XfCjm2LLovl1l1ODxglo4HOatv_ox9qFHA-WP7I"
-    data = process_file(id_abc, token.token)
+    data = process_file(id, token.token)
     json.dump(data, open("data/test.json", "w"))
     print(data)
 
