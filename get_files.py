@@ -14,7 +14,7 @@ retry_strategy = Retry(
     total=3,
     status_forcelist=[413, 429, 500],
     allowed_methods=["HEAD", "GET", "PUT", "DELETE", "OPTIONS", "TRACE"],
-    backoff_factor=1.5,
+    backoff_factor=5,
 )
 adapter = HTTPAdapter(max_retries=retry_strategy)
 http = requests.Session()
@@ -27,7 +27,6 @@ revision_url = "https://www.googleapis.com/drive/v3/files/{}/revisions"
 
 def download_operations(file_id, token):
     auth_header = dict(authorization=f"Bearer {token}")
-    # auth_header = dict()
     rev_id_response = requests.get(
         url=revision_url.format(file_id), headers=auth_header
     )
@@ -111,17 +110,22 @@ def build_strings(name, operations):
         for x in build_strings_generator(operations):
             multi_row_chunk.append(x)
 
-            if len(multi_row_chunk) > 10:
+            if len(multi_row_chunk) > 20:
                 csvwriter.writerows(multi_row_chunk)
                 multi_row_chunk.clear()
 
 
+deletes_optimized = 0
+inserts_optimized = 0
 def optimize_operations(operations):
+    global deletes_optimized, inserts_optimized
     index = 0
     last_time = operations[0]["date"]
     while index < len(operations) -1:
         cur_op = operations[index]
         next_op = operations[index + 1]
+
+        # Coalesce multiple insert operations into one
         if (
             next_op["type"] == cur_op["type"]
             and next_op["date"] - cur_op["date"] < 10 * 1000
@@ -131,9 +135,19 @@ def optimize_operations(operations):
                 cur_op["type"] == "is"
                 and cur_op["index"] + len(cur_op["content"]) == next_op["index"]
             ):
+                inserts_optimized += 1
                 cur_op["content"] += next_op["content"]
                 operations.pop(index+1)
                 index-=1
+            
+            elif cur_op["type"] == "ds" and cur_op["index"][0] == next_op["index"][1]:
+                deletes_optimized += 1
+                cur_op["content"] = next_op["content"] + cur_op["content"]
+                cur_op["index"][0] = next_op["index"][0]
+                operations.pop(index+1)
+                index -=1
+
+
         else:
             last_time = cur_op["date"]
         index+=1
@@ -151,8 +165,8 @@ def write_zip(name):
 def process_file(id, oauth_token):
     revision_response = download_operations(id, oauth_token)
     operations = process_operations(revision_response)
-    optimize_operations(operations)
     build_strings(f"{id}.csv", operations)
+    optimize_operations(operations)
     return operations
 
 
@@ -163,14 +177,18 @@ def default_process_file():
 def main_test():
     import pickle
     from google.auth.transport.requests import Request
+    from datetime import datetime
 
     token = pickle.load(open("creds2.pickle", "rb"))
     token.refresh(Request())
     id = "1nOVrSDsk_kJG9u6SCvVlE6cLfRmGsAmHP2b2QjtsJh0"
     id_abc = "127N5XfCjm2LLovl1l1ODxglo4HOatv_ox9qFHA-WP7I"
     data = process_file(id, token.token)
-    json.dump(data, open("data/test.json", "w"))
-    print(data)
+
+    datestr = datetime.now().strftime("%d_%H_%M")
+    data = json.dumps(data)
+    open(f"/home/henry/gdocs-website/static/js/test_data_{datestr}.json", "w").write(data)
+    print(inserts_optimized, deletes_optimized)
 
 
 if __name__ == "__main__":
