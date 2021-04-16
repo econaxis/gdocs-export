@@ -59,12 +59,14 @@ def process_operations(revision_response):
         content = None
         if x[0]["ty"] == "is":
             content = x[0]["s"]
-            index = x[0]["ibi"] - 1
+            start_index = x[0]["ibi"] - 1
+            end_index = start_index + len(content)
         elif x[0]["ty"] == "ds":
-            index = [x[0]["si"] - 1, x[0]["ei"]]
+            start_index = x[0]["si"] - 1
+            end_index =  x[0]["ei"]
 
         operations.append(
-            dict(date=x[1] / 1e3, content=content, index=index, type=x[0]["ty"])
+            dict(date=x[1], content=content, start_index=start_index,end_index=end_index, type=x[0]["ty"])
         )
 
     operations = sorted(operations, key=lambda k: k["date"])
@@ -80,10 +82,10 @@ def build_strings_generator(operations):
         yielded_row = {}
         if x["type"] == "is":
             char_content = list(x["content"])
-            cur_string[x["index"] : x["index"]] = char_content
+            cur_string[x["start_index"] : x["start_index"]] = char_content
         elif x["type"] == "ds":
-            x["content"] = "".join(cur_string[x["index"][0] : x["index"][1]])
-            cur_string[x["index"][0] : x["index"][1]] = []
+            x["content"] = "".join(cur_string[x["start_index"]: x["end_index"]])
+            cur_string[x["start_index"] : x["end_index"]] = []
         x["word_count"] = cur_string.count("\n") + cur_string.count(" ")
 
         yielded_row["word_count"] = x["word_count"]
@@ -133,17 +135,17 @@ def optimize_operations(operations):
         ):
             if (
                 cur_op["type"] == "is"
-                and cur_op["index"] + len(cur_op["content"]) == next_op["index"]
+                and cur_op["start_index"] + len(cur_op["content"]) == next_op["start_index"]
             ):
                 inserts_optimized += 1
                 cur_op["content"] += next_op["content"]
                 operations.pop(index+1)
                 index-=1
             
-            elif cur_op["type"] == "ds" and cur_op["index"][0] == next_op["index"][1]:
+            elif cur_op["type"] == "ds" and cur_op["start_index"] == next_op["end_index"]:
                 deletes_optimized += 1
                 cur_op["content"] = next_op["content"] + cur_op["content"]
-                cur_op["index"][0] = next_op["index"][0]
+                cur_op["start_index"] = next_op["start_index"]
                 operations.pop(index+1)
                 index -=1
 
