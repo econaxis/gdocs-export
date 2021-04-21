@@ -9,6 +9,9 @@ from requests.adapters import HTTPAdapter
 from requests.packages.urllib3.util.retry import Retry
 import os
 
+import secrets
+
+GDOCS_FILE_ID = "1nOVrSDsk_kJG9u6SCvVlE6cLfRmGsAmHP2b2QjtsJh0"
 
 retry_strategy = Retry(
     total=3,
@@ -23,6 +26,7 @@ http.mount("http://", adapter)
 
 revision_data_url = "https://docs.google.com/document/d/{file_id}/revisions/load?id={file_id}&start=1&end={end}"
 revision_url = "https://www.googleapis.com/drive/v3/files/{}/revisions"
+
 
 
 def download_operations(file_id, token):
@@ -97,8 +101,8 @@ def build_strings_generator(operations):
 
 
 # Also exports to csv
-def build_strings(name, operations):
-    with open("data/" + name, "w") as f:
+def build_strings(filename, operations):
+    with open("data/" + filename + '.csv', "w") as f:
         csvwriter = csv.DictWriter(
             f,
             dialect="excel",
@@ -130,8 +134,8 @@ def optimize_operations(operations):
         # Coalesce multiple insert operations into one
         if (
             next_op["type"] == cur_op["type"]
-            and next_op["date"] - cur_op["date"] < 10 * 1000
-            and cur_op["date"] - last_time < 30*1000
+            and next_op["date"] - cur_op["date"] < 5 * 1000
+            and cur_op["date"] - last_time < 60*1000
         ):
             if (
                 cur_op["type"] == "is"
@@ -154,9 +158,12 @@ def optimize_operations(operations):
             last_time = cur_op["date"]
         index+=1
 
+
+def check_valid_file(name):
+    return os.path.exists(f"data/{name}.csv")
+
 def write_zip(name):
     import zipfile
-
     with zipfile.ZipFile(
         f"data/{name}.csv.zip", "w", compression=zipfile.ZIP_LZMA
     ) as zip:
@@ -165,15 +172,20 @@ def write_zip(name):
 
 
 def process_file(id, oauth_token):
+    secret_user_id = f"{id}-{secrets.token_urlsafe(128)}"
     revision_response = download_operations(id, oauth_token)
     operations = process_operations(revision_response)
-    build_strings(f"{id}.csv", operations)
+    build_strings(secret_user_id, operations)
     optimize_operations(operations)
-    return operations
+    return operations, secret_user_id
 
 
 def default_process_file():
-    return json.load(open("data/default_data.txt", "r"))
+    secret_user_id = f"default-{secrets.token_urlsafe(128)}"
+    operations= json.load(open("data/default_data.txt", "r"))
+    build_strings(secret_user_id, operations)
+    optimize_operations(operations)
+    return operations, secret_user_id
 
 
 def main_test():
