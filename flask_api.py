@@ -6,9 +6,8 @@ import get_files
 from datetime import datetime
 
 app = flask.Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}}, expose_headers =  'user-id')
+CORS(app, resources={r"/*": {"origins": "*"}}, expose_headers='user-id')
 SERVER_START = datetime.now()
-
 
 
 @app.route("/")
@@ -48,7 +47,8 @@ def download_zipped_csv():
 
     if get_files.check_valid_file(user_id):
         return flask.send_from_directory(
-            app.root_path + "/data", get_files.write_zip(user_id), as_attachment=True, attachment_filename = "gdocs-data.zip"
+            app.root_path + "/data", get_files.write_zip(user_id), as_attachment=True,
+            attachment_filename="gdocs-data.zip"
         )
     else:
         return flask.Response("User id " + user_id + " not found", 404)
